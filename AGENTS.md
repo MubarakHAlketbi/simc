@@ -223,6 +223,7 @@ This prevents repeated exploration and conserves tokens. The file includes a qui
 - **SimulationCraft GitHub**: Repository issues and discussions
 - **Class Discord Communities**: For nuanced mechanics (if accessible)
 - **project_structure.md**: ⭐ Essential codebase navigation guide - consult before any task
+- **ISSUE_TAGS.md**: Complete reference for GitHub issue tagging system (type, class, spec, status)
 
 ---
 *This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks. Use GitHub Discussions for coordination.*
