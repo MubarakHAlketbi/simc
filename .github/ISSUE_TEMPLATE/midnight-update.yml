@@ -1,7 +1,7 @@
 name: "Midnight Update Task"
 description: "Template for tracking Midnight expansion implementation tasks"
 title: "MIDNIGHT: "
-labels: ["midnight", "needs-review"]
+labels: ["expansion:midnight", "needs-data"]
 assignees: ''
 
 body:

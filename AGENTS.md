@@ -138,14 +138,19 @@ An agent should:
 - [ ] No regressions in existing specs (quick sanity checks)
 - [ ] Source data documented in code (Wowhead URLs and dates)
 
-**5. Communication: GitHub Discussions**
-- Use the repository's GitHub Discussions for:
+**5. Communication: GitHub Issues**
+- Use the repository's GitHub Issues for:
   - Questions about ambiguous mechanics
   - Requests for review before marking "Implemented"
   - Sharing partial implementations for collaboration
   - Reporting blockers or missing data
-- Tag discussions with labels: `midnight-update`, `agent-dev`, `needs-review`
-- Before starting a task, search existing discussions to avoid duplicate work
+- Tag issues with the appropriate labels from `ISSUE_TAGS.md`:
+  - Always: `expansion:midnight`
+  - Task type: `type:general-changes`, `type:apl`, `type:set-2pc`, `type:set-4pc`, `type:trinket`, `type:consumable`, `type:talent`
+  - Class/Spec: `class:<class>`, `spec:<spec>` (if applicable)
+  - Status: `status:nyi`, `status:in-progress`, `status:in-beta`, `status:implemented`, `status:blocked`
+  - Flags: `needs-review`, `needs-data`, `priority:high/medium/low`
+- Before starting a task, search existing issues to avoid duplicate work
 - After completing a task, post a summary with:
   - What was changed
   - Rows updated in `project_progress.md`
@@ -153,7 +158,7 @@ An agent should:
 
 **6. Error Handling & Edge Cases**
 - If Wowhead lacks data: mark as NYI and note "requires manual testing" in table
-- If mechanics are unclear: open a GitHub Discussion, label as `needs-clarification`
+- If mechanics are unclear: open a GitHub Issue, label as `needs-data` and add detailed questions
 - If code changes are risky: create a separate branch and request testing from maintainers
 
 **Status:**
@@ -162,6 +167,18 @@ An agent should:
 - `project_progress.md` accurately reflects current state
 - All code changes include source verification (Wowhead URLs)
 - No regression in existing Midnight-eligible specs
+
+## GitHub Issues Integration
+
+The project uses GitHub Issues to track individual implementation tasks. The relationship with `project_progress.md` is:
+
+1. **Issues reference specific rows** in `project_progress.md` (tracked via the "project_progress.md Reference" field in the issue template).
+2. **Each issue corresponds to one work item** (e.g., "Row 10: DK Unholy general changes" or "Rows 65-70: Raid trinkets").
+3. **When an issue is closed as completed**, the agent **must update the corresponding row(s)** in `project_progress.md` to reflect the new status (Implemented, In Beta, etc.).
+4. **The issue's labels** (especially `status:*`) should match the status in `project_progress.md`.
+5. For traceability, the issue number should be noted in the commit message and optionally in the `project_progress.md` notes column.
+
+This bidirectional linkage ensures the high-level dashboard stays current and provides a complete audit trail.
 
 ## Codebase Navigation Reference
 
@@ -209,21 +226,22 @@ This prevents repeated exploration and conserves tokens. The file includes a qui
 
 ## Notes
 
-- Follow existing code style and patterns in the codebase
+- **Code Formatting**: All C++ code must conform to the project's `.clang-format` style (Google-based with project-specific tweaks). Before committing, run `clang-format -i` on modified files or use `run-clang-format` if available. See `.clang-format` in the repository root for full configuration.
 - Maintain backward compatibility where possible
 - Use meaningful variable names and add comments for complex logic
 - Test thoroughly before submitting changes
-- Coordinate via GitHub Discussions for major architectural changes
+- Coordinate via GitHub Issues for major architectural changes
 - Wowhead as of build date 2026-03-15 is the reference; note if newer data differs
 
 ## Resources
 
 - **Wowhead Midnight Database**: https://www.wowhead.com/midnight
 - **Blizzard Patch Notes**: Official patch notes for Midnight expansion
-- **SimulationCraft GitHub**: Repository issues and discussions
+- **SimulationCraft GitHub**: GitHub Issues for tracking tasks
 - **Class Discord Communities**: For nuanced mechanics (if accessible)
 - **project_structure.md**: ⭐ Essential codebase navigation guide - consult before any task
 - **ISSUE_TAGS.md**: Complete reference for GitHub issue tagging system (type, class, spec, status)
+- **Label Setup**: Before using issues, create all required labels on GitHub as defined in `ISSUE_TAGS.md` (use `gh label create <name> --color <hex> --description "<desc>"`).
 
 ---
-*This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks. Use GitHub Discussions for coordination.*
+*This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks. Use GitHub Issues for coordination.*
