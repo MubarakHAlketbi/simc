@@ -76,7 +76,7 @@ Here is the data organized into Markdown tables.
 | Undreamt God's Oozing Vestige | In Beta | Midnight Versatility Flask | Implemented | Eversong Pudding | Implemented |
 | Vaelgor's Final Stare | In Beta | | | Farstrider Rations | Implemented |
 | Void-Reaper's Libram | In Beta | **Weapon Oils** | **Status** | Fel-Kissed Filet | Implemented |
-| Volatile Void Suffuser | NYI | Laced Zoomshots | In Beta | Felberry Figs | Implemented |
+| Volatile Void Suffuser | In Beta | Laced Zoomshots | In Beta | Felberry Figs | Implemented |
 | Withered Saptor's Paw | In Beta | Refulgent Weightstone | Implemented | Flora Frenzy | Implemented |
 | Wraps of Cosmic Madness | In Beta | Refulgent Whetstone | Implemented | Forager's Medley | Implemented |
 | | | Smuggler's Enchanted Edge | In Beta | Fried Bloomtail | Implemented |
@@ -129,10 +129,10 @@ Here is the data organized into Markdown tables.
 | Desecrated Chalice | In Beta | Darkmoon Sigil: Void | In Beta | | |
 | Drum of Renewed Bonds | NYI | Pigments of the Wind | NYI | | |
 | Empty Crate of Relics | NYI | Loa Worshiper's Band | In Beta | | |
-| Ever-collapsing Void Fissure | NYI | Signet of Azerothian Blessings | In Beta | | |
+| Ever-collapsing Void Fissure | In Beta | Signet of Azerothian Blessings | In Beta | | |
 | Fetid Dartfrog Idol | NYI | Thalassian Phoenix Torque | In Beta | | |
 | Gift of Light | NYI | Powerful Eversong Diamond | In Beta | | |
-| Glorious Crusader's Keepsake | NYI | Axe-Flingin' Bands | In Beta | | |
+| Glorious Crusader's Keepsake | In Beta | Axe-Flingin' Bands | In Beta | | |
 | Holy Retributor's Order | In Beta | Hexwoven Strand | In Beta | | |
 | Idol of the War God | In Beta | Ranger-General's Grips | In Beta | | |
 | Lost Idol of the Hash'ey | In Beta | Murder Row Materials | In Beta | | |
