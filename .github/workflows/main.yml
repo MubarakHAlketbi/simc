@@ -150,7 +150,8 @@ jobs:
         iterations=10 cleanup_threads=1 allow_experimental_specializations=1
       PLAYER_ARGS: load_default_gear=1
       MT_ARGS: desired_targets=10
-      DS_ARGS: fight_style=DungeonSlice
+      # enable_dungeon_slice=1 required for Demon Hunter; druid.enable_dungeon_slice_for_balance=1 for Balance
+      DS_ARGS: fight_style=DungeonSlice enable_dungeon_slice=1 druid.enable_dungeon_slice_for_balance=1
 
     steps:
       - uses: actions/checkout@v4
