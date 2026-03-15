@@ -15,17 +15,222 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Fast build + smoke test — runs on every push, gate for spec-test
   build:
-    uses: ./.github/workflows/build.yml
+    name: Build (gcc-14 + clang-18 ASan)
+    runs-on: ubuntu-24.04
+    env:
+      CCACHE_GENERATION: 0
 
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: gcc14-release-ccache-0-${{ github.sha }}
+          restore-keys: gcc14-release-ccache-0-
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache gcc-14 g++-14
+
+      - name: Configure (gcc-14 RelWithDebInfo)
+        run: |
+          cmake -S. -Bbuild -GNinja \
+            -DBUILD_GUI=OFF \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DCMAKE_CXX_COMPILER=g++-14 \
+            -DCMAKE_C_COMPILER=gcc-14 \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_STANDARD=17
+
+      - name: Build
+        env:
+          CCACHE_DIR: ~/.ccache
+          CCACHE_MAXSIZE: 192M
+        run: |
+          ccache -z
+          ninja -C build
+          ccache -s
+
+      - name: Smoke test
+        run: |
+          build/simc \
+            output=/dev/null html=/dev/null json=/dev/null \
+            iterations=5 cleanup_threads=1 \
+            warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
+            enable_all_item_effects=1 enable_all_sets=1
+
+  # clang-18 ASan build — catches memory bugs
+  asan-build:
+    name: Build (clang-18 ASan+UBSan)
+    runs-on: ubuntu-24.04
+    env:
+      CCACHE_GENERATION: 0
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: clang18-asan-ccache-0-${{ github.sha }}
+          restore-keys: clang18-asan-ccache-0-
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache clang-18 lld-18
+
+      - name: Configure (clang-18 Debug ASan)
+        run: |
+          cmake -S. -Bbuild_asan -GNinja \
+            -DBUILD_GUI=OFF \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_CXX_COMPILER=clang++-18 \
+            -DCMAKE_CXX_FLAGS="-Og -fno-omit-frame-pointer -fsanitize=address,undefined" \
+            -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld -fsanitize=address,undefined" \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_STANDARD=17
+
+      - name: Build
+        env:
+          CCACHE_DIR: ~/.ccache
+          CCACHE_MAXSIZE: 256M
+        run: |
+          ccache -z
+          ninja -C build_asan
+          ccache -s
+
+      - name: Smoke test with ASan
+        env:
+          UBSAN_OPTIONS: print_stacktrace=1
+          ASAN_OPTIONS: detect_leaks=0
+        run: |
+          build_asan/simc \
+            output=/dev/null html=/dev/null json=/dev/null \
+            iterations=5 cleanup_threads=1 \
+            warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
+            enable_all_item_effects=1 enable_all_sets=1
+
+  # Per-spec simulation tests — all specs, all effects, no crashes
   spec-test:
+    name: spec/${{ matrix.spec }}
     needs: build
-    uses: ./.github/workflows/spec_test.yml
-    with:
-      cache-key: ubuntu-gcc-14-release-${{ github.sha }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
 
-  ubuntu-test:
-    needs: build
-    uses: ./.github/workflows/ubuntu_test.yml
-    with:
-      cache-key: ubuntu-gcc-14-release-${{ github.sha }}
+    strategy:
+      fail-fast: false
+      matrix:
+        spec:
+          [
+            deathknight_blood, deathknight_frost, deathknight_unholy,
+            demonhunter_devourer, demonhunter_havoc, demonhunter_vengeance,
+            druid_balance, druid_feral, druid_guardian,
+            evoker_augmentation, evoker_devastation,
+            hunter_beast_mastery, hunter_marksmanship, hunter_survival,
+            mage_arcane, mage_fire, mage_frost,
+            monk_brewmaster, monk_windwalker,
+            paladin_protection, paladin_retribution,
+            priest_shadow,
+            rogue_assassination, rogue_outlaw, rogue_subtlety,
+            shaman_elemental, shaman_enhancement,
+            warlock_affliction, warlock_demonology, warlock_destruction,
+            warrior_arms, warrior_fury, warrior_protection,
+          ]
+
+    env:
+      CCACHE_GENERATION: 0
+      UBSAN_OPTIONS: print_stacktrace=1
+      SIMC_ARGS: >-
+        output=/dev/null threads=4 profileset_work_threads=2
+        iterations=10 cleanup_threads=1 allow_experimental_specializations=1
+      PLAYER_ARGS: load_default_gear=1
+      MT_ARGS: desired_targets=10
+      DS_ARGS: fight_style=DungeonSlice
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: gcc14-release-ccache-0-${{ github.sha }}
+          restore-keys: gcc14-release-ccache-0-
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache gcc-14 g++-14
+
+      - name: Configure
+        run: |
+          cmake -S. -Bbuild -GNinja \
+            -DBUILD_GUI=OFF \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DCMAKE_CXX_COMPILER=g++-14 \
+            -DCMAKE_C_COMPILER=gcc-14 \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_STANDARD=17
+
+      - name: Build
+        env:
+          CCACHE_DIR: ~/.ccache
+          CCACHE_MAXSIZE: 192M
+        run: ninja -C build
+
+      - name: Set class/spec env
+        env:
+          MATRIX_SPEC: ${{ matrix.spec }}
+        run: |
+          echo "CLASS=${MATRIX_SPEC%%_*}" >> "$GITHUB_ENV"
+          echo "SPEC=${MATRIX_SPEC#*_}" >> "$GITHUB_ENV"
+
+      - name: "All effects + sets: single target"
+        run: |
+          build/simc $SIMC_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
+            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
+
+      - name: "All effects + sets: multi target"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS $MT_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
+            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
+
+      - name: "All effects + sets: dungeon slice"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS $DS_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
+            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
+
+      - name: "Default talents + hero tree 1 + tier"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
+            load_default_talents=1 hero_talents=1 set_bonus=latest_2pc=1/latest_4pc=1
+
+      - name: "Default talents + hero tree 2 + tier"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
+            load_default_talents=1 hero_talents=2 set_bonus=latest_2pc=1/latest_4pc=1
+
+      - name: "Profileset test"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
+            profileset.base=load_default_talents=1 \
+            profileset.ht1=load_default_talents=1 profileset.ht1+=hero_talents=1 \
+            profileset.ht2=load_default_talents=1 profileset.ht2+=hero_talents=2 \
+            "profileset.ht1_4pc=load_default_talents=1" "profileset.ht1_4pc+=hero_talents=1" \
+            "profileset.ht1_4pc+=set_bonus=latest_2pc=1" "profileset.ht1_4pc+=set_bonus+=/latest_4pc=1"
+
+      - name: "HTML + JSON output"
+        if: always()
+        run: |
+          build/simc $SIMC_ARGS html=test.html json=test.json \
+            enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
+            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS

@@ -1,15 +1,26 @@
-name: build
+name: Build
 
 on:
-  workflow_call:
+  push:
+    branches: [midnight]
+    paths-ignore:
+      - "ActionPriorityLists/**"
+      - "SpellDataDump/**"
+      - "dbc_extract3/**"
+      - "casc_extract/**"
+      - "doc/**"
+      - "**.md"
+  pull_request:
+    branches: [midnight]
+  workflow_dispatch:
 
 env:
   CCACHE_GENERATION: 0
 
 jobs:
-  # Primary: gcc-14 RelWithDebInfo C++17 — binary reused by spec-test and ubuntu-test
-  ubuntu-gcc-release:
-    name: ubuntu-gcc-14-cpp17-release
+  # ── gcc-14 Release build ────────────────────────────────────────────────
+  gcc-build:
+    name: gcc-14 RelWithDebInfo
     runs-on: ubuntu-24.04
 
     steps:
@@ -17,18 +28,18 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ${{ runner.workspace }}/.ccache
-          key: ubuntu-gcc-14-release-ccache-${{ env.CCACHE_GENERATION }}-${{ github.sha }}
-          restore-keys: ubuntu-gcc-14-release-ccache-${{ env.CCACHE_GENERATION }}-
+          path: ~/.ccache
+          key: gcc14-release-ccache-${{ env.CCACHE_GENERATION }}-${{ github.sha }}
+          restore-keys: gcc14-release-ccache-${{ env.CCACHE_GENERATION }}-
 
       - name: Install deps
         run: |
-          sudo apt-get update
+          sudo apt-get update -q
           sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache gcc-14 g++-14
 
       - name: Configure
         run: |
-          cmake -H. -B'${{ runner.workspace }}/b/ninja' -GNinja \
+          cmake -S. -Bbuild_gcc -GNinja \
             -DBUILD_GUI=OFF \
             -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_CXX_COMPILER=g++-14 \
@@ -38,28 +49,30 @@ jobs:
 
       - name: Build
         env:
-          CCACHE_BASEDIR: ${{ runner.workspace }}
-          CCACHE_DIR: ${{ runner.workspace }}/.ccache
+          CCACHE_DIR: ~/.ccache
           CCACHE_MAXSIZE: 192M
         run: |
           ccache -z
-          ninja -C '${{ runner.workspace }}/b/ninja'
+          ninja -C build_gcc
           ccache -s
 
-      - name: Save binary for downstream jobs
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ runner.workspace }}/b/ninja/simc
-            profiles
-            tests
-            generate_profiles_ci.sh
-            .git
-          key: ubuntu-gcc-14-release-${{ github.sha }}
+      - name: Smoke test
+        run: |
+          build_gcc/simc \
+            output=/dev/null html=/dev/null json=/dev/null \
+            iterations=5 cleanup_threads=1 \
+            warrior=test spec=fury load_default_gear=1 load_default_talents=1
 
-  # Secondary: clang-18 Debug + ASan + UBSan — catches memory bugs in new code
-  ubuntu-clang-asan:
-    name: ubuntu-clang-18-cpp17-asan
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: simc-gcc14-${{ github.sha }}
+          path: build_gcc/simc
+          retention-days: 1
+
+  # ── clang-18 Debug + ASan + UBSan ──────────────────────────────────────
+  clang-asan:
+    name: clang-18 ASan+UBSan
     runs-on: ubuntu-24.04
 
     steps:
@@ -67,18 +80,18 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ${{ runner.workspace }}/.ccache
-          key: ubuntu-clang-18-asan-ccache-${{ env.CCACHE_GENERATION }}-${{ github.sha }}
-          restore-keys: ubuntu-clang-18-asan-ccache-${{ env.CCACHE_GENERATION }}-
+          path: ~/.ccache
+          key: clang18-asan-ccache-${{ env.CCACHE_GENERATION }}-${{ github.sha }}
+          restore-keys: clang18-asan-ccache-${{ env.CCACHE_GENERATION }}-
 
       - name: Install deps
         run: |
-          sudo apt-get update
+          sudo apt-get update -q
           sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache clang-18 lld-18
 
       - name: Configure
         run: |
-          cmake -H. -B'${{ runner.workspace }}/b/ninja' -GNinja \
+          cmake -S. -Bbuild_asan -GNinja \
             -DBUILD_GUI=OFF \
             -DCMAKE_BUILD_TYPE=Debug \
             -DCMAKE_CXX_COMPILER=clang++-18 \
@@ -89,20 +102,19 @@ jobs:
 
       - name: Build
         env:
-          CCACHE_BASEDIR: ${{ runner.workspace }}
-          CCACHE_DIR: ${{ runner.workspace }}/.ccache
+          CCACHE_DIR: ~/.ccache
           CCACHE_MAXSIZE: 256M
         run: |
           ccache -z
-          ninja -C '${{ runner.workspace }}/b/ninja'
+          ninja -C build_asan
           ccache -s
 
-      - name: Smoke test with ASan
+      - name: Smoke test with ASan (enable all item effects)
         env:
           UBSAN_OPTIONS: print_stacktrace=1
           ASAN_OPTIONS: detect_leaks=0
         run: |
-          ${{ runner.workspace }}/b/ninja/simc \
+          build_asan/simc \
             output=/dev/null html=/dev/null json=/dev/null \
             iterations=5 cleanup_threads=1 \
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
