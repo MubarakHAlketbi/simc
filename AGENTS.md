@@ -26,13 +26,69 @@ The "Midnight" expansion introduces significant changes including:
 - Item stats, set bonuses, and special effects
 - Class changes and ability updates
 
-**Procedure:**
+**General Procedure:**
 1. Always verify data against Wowhead's Midnight database
 2. Record the URL or build ID used for each piece of data
 3. Note the retrieval date (format: YYYY-MM-DD) in comments
 4. If Wowhead is unclear, cross-reference with official Blizzard patch notes
 
 Example: `# Source: https://www.wowhead.com/spell=123456&expand=1 (2026-03-15)`
+
+**Special Procedure for Trinkets and Gear with Special Effects:**
+
+Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. The item page shows a summary, but the full mechanics (including damage formulas and scaling coefficients) are defined in a separate spell page.
+
+**Steps:**
+1. On the item page, locate the spell ID linked in the "Item Effect" section (usually displayed as a spell icon or tooltip).
+2. Extract the item page data: base numbers, cooldown, description text.
+3. Navigate to the spell page (https://www.wowhead.com/spell=SPELL_ID) to get the detailed mechanics.
+4. If the spell page references another "Scaling Token" or "Dummy" spell, fetch that as well — it often contains the actual scaling multipliers (e.g., "+30% per additional enemy").
+5. Determine if the displayed numbers are static or item-level dependent. If the item has multiple item levels (e.g., normal/heroic), treat the number as item-level specific and derive a coefficient or formula for SimC's item level scaling.
+
+**Important:** Document both the item URL and the spell URL(s) in your code comments.
+
+## Task Dossier System
+
+**MANDATORY:** Before implementing any task, create a complete `task_dossier.md` that consolidates all necessary information. This dossier becomes the single source of truth for that task.
+
+### Why?
+- Prevents repeated web fetches that can cause misconfiguration
+- Ensures all data is documented and verified upfront
+- Provides a stable reference for code editing
+- Creates an audit trail for future maintenance
+
+### Process
+
+1. **Pick a task** from `project_progress.md` (reference row number)
+2. **Create a dossier** in `task_dossiers/` using `TASK_DOSSIER_TEMPLATE.md`
+   - Rename with descriptive name: `druid_balance_general_2026-03-15.md`
+3. **Fetch and populate** all ground truth data:
+   - Wowhead URLs for spells/items/talents
+   - Extract formulas, coefficients, descriptions
+   - For trinkets: follow item → spell → scaling token chain
+4. **Complete the dossier** including:
+   - Target file(s) from `project_structure.md`
+   - Verification checklist
+   - Code change plan (draft logic)
+5. **Edit code** based ONLY on the dossier contents
+6. **After completion**, add dossier to git and reference it in commit
+
+### Dossier Contents
+
+The template includes sections for:
+- Metadata (task reference, type, target files)
+- Spell/Item/Talent/Set details with full Wowhead citations
+- Profile requirements for testing
+- Implementation notes and interactions
+- Verification checklist
+- Code change plan (draft before coding)
+- Post-implementation info
+
+### Rule
+
+**Never start coding without a completed dossier.** If new information emerges during implementation, update the dossier first, then adjust code.
+
+All dossiers should be committed to the repository in `task_dossiers/` for future reference and to avoid re-fetching the same data.
 
 ## Project Tracking (Main Source)
 
@@ -100,12 +156,25 @@ An agent should:
 - If mechanics are unclear: open a GitHub Discussion, label as `needs-clarification`
 - If code changes are risky: create a separate branch and request testing from maintainers
 
-**7. Success Criteria**
+**Status:**
 - All classes listed as NYI moved to In Beta or Implemented
 - All gear/consumables marked Implemented or verified
 - `project_progress.md` accurately reflects current state
 - All code changes include source verification (Wowhead URLs)
 - No regression in existing Midnight-eligible specs
+
+## Codebase Navigation Reference
+
+**ALWAYS consult `project_structure.md` before starting any implementation task.** This comprehensive guide (740 lines) maps:
+
+- Issue types to specific files (e.g., "Midnight trinket" → `engine/player/unique_gear_midnight.cpp`)
+- Class modules, APL locations, and data pipelines
+- Build system requirements and conventions
+- Common patterns and registration mechanisms
+
+This prevents repeated exploration and conserves tokens. The file includes a quick reference table and detailed explanations of the SimulationCraft architecture tailored for Midnight development.
+
+**Core Principle:** Before touching any code, locate the appropriate target file using `project_structure.md`. If the mapping is unclear, update the document as you discover patterns.
 
 ## Key Tasks
 
@@ -153,6 +222,7 @@ An agent should:
 - **Blizzard Patch Notes**: Official patch notes for Midnight expansion
 - **SimulationCraft GitHub**: Repository issues and discussions
 - **Class Discord Communities**: For nuanced mechanics (if accessible)
+- **project_structure.md**: ⭐ Essential codebase navigation guide - consult before any task
 
 ---
 *This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks. Use GitHub Discussions for coordination.*
