@@ -1,63 +1,31 @@
 name: CI
 
 on:
-  pull_request:
-    branches: [midnight]
   push:
     branches: [midnight]
     paths-ignore:
       - "ActionPriorityLists/**"
-      - "SpellDataDump/*.txt"
+      - "SpellDataDump/**"
       - "dbc_extract3/**"
       - "casc_extract/**"
+      - "doc/**"
+      - "**.md"
+  pull_request:
+    branches: [midnight]
   workflow_dispatch:
-
-env:
-  SIMC_PROFILE: profiles/CI.simc
-  CCACHE_GENERATION: 0 # bump if you need to "clean" ccache
-
-# Most CI jobs only run if you are either:
-# - committing PR against default_branch
-# - committing or merging into default_branch
-# If PR CI is desired for other branches, chain additional `|| github.base_ref == 'branch name'`
 
 jobs:
   build:
     uses: ./.github/workflows/build.yml
-    with:
-      do-test: ${{ github.base_ref == github.event.repository.default_branch || github.ref_name == github.event.repository.default_branch || github.ref_name == 'midnight' }}
-
-  environment-configuration-info:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Report Environment Configuration Information
-        run: |
-          echo "${{github.event.repository.default_branch}} ${{github.ref}} ${{github.ref_name}} ${{github.base_ref}} ${{github.head_ref}} ${{github.sha}}"
 
   spec-test:
-    needs: [build]
-    if: github.base_ref == github.event.repository.default_branch || github.ref_name == github.event.repository.default_branch || github.ref_name == 'midnight'
+    needs: build
     uses: ./.github/workflows/spec_test.yml
     with:
-      cache-key: ubuntu-clang++-15-for_run-${{ github.sha }}-cpp-17
-      is-ptr: false
-
-  spec-test-ptr:
-    needs: [build]
-    if: false # Disabled as of build 12.0.1.66220. Re-enable when 12.0.5 PTR becomes publicly available
-    # if: github.base_ref == github.event.repository.default_branch || github.ref_name == github.event.repository.default_branch
-    uses: ./.github/workflows/spec_test.yml
-    with:
-      cache-key: ubuntu-clang++-15-for_run-${{ github.sha }}-cpp-17
-      is-ptr: true
+      cache-key: ubuntu-gcc-14-release-${{ github.sha }}
 
   ubuntu-test:
-    needs: [build]
-    if: github.base_ref == github.event.repository.default_branch || github.ref_name == github.event.repository.default_branch || github.ref_name == 'midnight'
+    needs: build
     uses: ./.github/workflows/ubuntu_test.yml
-
-  # this job will do bad things if enabled for non-default branch without additional work
-  update-generated-files:
-    needs: [build, spec-test] # requires spec-test as this job downloads files generated from spec-test
-    if: github.event_name == 'push' && ( success() || failure() ) && github.repository == 'simulationcraft/simc' && github.ref_name == github.event.repository.default_branch
-    uses: ./.github/workflows/generate_files.yml
+    with:
+      cache-key: ubuntu-gcc-14-release-${{ github.sha }}
