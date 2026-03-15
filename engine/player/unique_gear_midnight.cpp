@@ -2920,6 +2920,341 @@ void tangle_of_vibrant_vines( special_effect_t& effect )
 
   new dbc_proc_callback_t( effect.player, effect );
 }
+
+// Gloom-Spattered Dreadscale
+// 1260633 on-use driver (AoE Shadow damage + absorb 50% equal to damage done)
+// 1260627 damage values
+// 1263141 absorb buff
+// 1240903 scaling token (+30% per additional enemy, up to 150%)
+// Source: https://www.wowhead.com/item=249339/gloom-spattered-dreadscale (2026-03-16)
+// Source: https://www.wowhead.com/spell=1260633/gloom-spattered-dreadscale (2026-03-16)
+void gloom_spattered_dreadscale( special_effect_t& effect )
+{
+  struct gloom_spattered_dreadscale_t : public generic_aoe_proc_t
+  {
+    buff_t* absorb_buff;
+
+    gloom_spattered_dreadscale_t( const special_effect_t& e )
+      : generic_aoe_proc_t( e, "gloom_spattered_dreadscale", e.driver(), true )
+    {
+      base_dd_min = base_dd_max = e.driver()->effectN( 1 ).average( e );
+      split_aoe_damage          = true;
+      // +30% per additional enemy up to 150% bonus (scaling token 1240903)
+      base_aoe_multiplier = 1.3;
+
+      absorb_buff = create_buff<buff_t>( e.player, e.player->find_spell( 1263141 ) );
+    }
+
+    void execute() override
+    {
+      generic_aoe_proc_t::execute();
+      absorb_buff->trigger();
+    }
+  };
+
+  effect.execute_action = create_proc_action<gloom_spattered_dreadscale_t>( "gloom_spattered_dreadscale", effect );
+}
+
+// The Eternal Egg
+// 1256391 equip driver (~2 PPM)
+// 1264144 absorb shell buff (25% of max hp, 6 sec)
+// 1264150 Haste buff on shell expiry (12 sec)
+// Source: https://www.wowhead.com/item=249807/the-eternal-egg (2026-03-16)
+// Source: https://www.wowhead.com/spell=1256391/the-eternal-egg (2026-03-16)
+void the_eternal_egg( special_effect_t& effect )
+{
+  // For DPS purposes, model as haste proc that triggers when shell expires without breaking.
+  // Full simulation of absorb mechanics is not feasible in SimC's DPS model.
+  // We model as a Haste buff that procs at the same PPM rate, ignoring absorb.
+  auto haste_buff = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 1264150 ) )
+                      ->set_stat_from_effect_type( A_MOD_RATING, effect.driver()->effectN( 2 ).average( effect ) );
+
+  effect.custom_buff = haste_buff;
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
+
+// Rotting Globule
+// 1254641 on-use driver (2 min CD, 15 sec)
+// 1257925 absorb + eruption spell data
+// Each eruption (25% shield lost) deals AoE Plague damage
+// Final eruption deals bonus damage
+// Source: https://www.wowhead.com/item=252421/rotting-globule (2026-03-16)
+// Source: https://www.wowhead.com/spell=1254641/rotting-globule (2026-03-16)
+void rotting_globule( special_effect_t& effect )
+{
+  struct pustule_eruption_t : public generic_aoe_proc_t
+  {
+    double bonus_damage;
+
+    pustule_eruption_t( const special_effect_t& e )
+      : generic_aoe_proc_t( e, "pustule_eruption", e.player->find_spell( 1257925 ), true ), bonus_damage( 0.0 )
+    {
+      split_aoe_damage = true;
+      base_dd_min = base_dd_max = e.player->find_spell( 1257925 )->effectN( 3 ).average( e );
+      bonus_damage              = e.player->find_spell( 1257925 )->effectN( 4 ).average( e );
+    }
+  };
+
+  struct rotting_globule_t : public proc_spell_t
+  {
+    pustule_eruption_t* eruption;
+
+    rotting_globule_t( const special_effect_t& e )
+      : proc_spell_t( "rotting_globule", e.player, e.driver() )
+    {
+      eruption = new pustule_eruption_t( e );
+      add_child( eruption );
+    }
+
+    void execute() override
+    {
+      proc_spell_t::execute();
+      // Schedule 4 eruptions at equal intervals over the buff duration (15 sec)
+      auto duration = data().duration();
+      for ( int i = 1; i <= 4; i++ )
+      {
+        make_event( *sim, duration * i / 4.0, [ this ]() {
+          eruption->execute();
+        } );
+      }
+    }
+  };
+
+  effect.execute_action = create_proc_action<rotting_globule_t>( "rotting_globule", effect );
+}
+
+// Solar Core Igniter
+// 1254638 on-use driver (90 sec CD, 15 sec)
+// Absorbs 50% of incoming damage up to a cap
+// On expire: gain Versatility based on remaining power
+// 1257989 has max absorb (s1) and max Versatility (s3)
+// 1257988 Versatility buff duration
+// Source: https://www.wowhead.com/item=252418/solar-core-igniter (2026-03-16)
+// Source: https://www.wowhead.com/spell=1254638/solar-core-igniter (2026-03-16)
+void solar_core_igniter( special_effect_t& effect )
+{
+  // Model as Versatility buff (best case scenario - shield absorbs maximum, grants full Versatility)
+  // This is a simplification; true value depends on damage taken during buff.
+  auto vers_data   = effect.player->find_spell( 1257989 );
+  auto vers_buff   = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 1257988 ) )
+                       ->set_stat( STAT_VERSATILITY_RATING, vers_data->effectN( 3 ).average( effect ) );
+
+  effect.custom_buff = vers_buff;
+}
+
+// Bark of the Guardian Tree
+// 1265336 on-use driver (3 min CD, 10 sec absorb)
+// On expire: AoE Nature damage split among nearby enemies
+// Effect 1 (1277044): absorb amount
+// Effect 2 (1277045): AoE damage split
+// Has rolemult: tank/healer = 0.66, dps = 1.0
+// Source: https://www.wowhead.com/item=259896/bark-of-the-guardian-tree (2026-03-16)
+// Source: https://www.wowhead.com/spell=1265336/shield-of-the-guardian-tree (2026-03-16)
+void bark_of_the_guardian_tree( special_effect_t& effect )
+{
+  struct bark_burst_t : public generic_aoe_proc_t
+  {
+    bark_burst_t( const special_effect_t& e )
+      : generic_aoe_proc_t( e, "bark_of_the_guardian_tree_burst", e.driver(), true )
+    {
+      split_aoe_damage = true;
+      base_dd_min = base_dd_max = e.driver()->effectN( 2 ).average( e ) * role_mult( e );
+    }
+  };
+
+  struct bark_use_t : public proc_spell_t
+  {
+    bark_burst_t* burst;
+
+    bark_use_t( const special_effect_t& e )
+      : proc_spell_t( "bark_of_the_guardian_tree", e.player, e.driver() )
+    {
+      burst = new bark_burst_t( e );
+      add_child( burst );
+    }
+
+    void execute() override
+    {
+      proc_spell_t::execute();
+      // Schedule burst at end of shield duration (10 sec)
+      make_event( *sim, data().duration(), [ this ]() {
+        burst->execute();
+      } );
+    }
+  };
+
+  effect.execute_action = create_proc_action<bark_use_t>( "bark_of_the_guardian_tree", effect );
+}
+
+// Desecrated Chalice
+// 1253118 equip driver (stacks on damage taken, up to 10)
+// At 10 stacks: AoE Void DoT (1265325) for 10 sec + Versatility buff (1265327)
+// Effect 1 (1258646): Versatility amount
+// Effect 2 (1277029): AoE damage per sec
+// Stack buff: 1265323
+// Source: https://www.wowhead.com/item=251790/desecrated-chalice (2026-03-16)
+// Source: https://www.wowhead.com/spell=1253118/desecrated-chalice (2026-03-16)
+void desecrated_chalice( special_effect_t& effect )
+{
+  struct chalice_aoe_t : public generic_aoe_proc_t
+  {
+    chalice_aoe_t( const special_effect_t& e )
+      : generic_aoe_proc_t( e, "desecrated_chalice_void_mire", e.driver(), true )
+    {
+      split_aoe_damage = true;
+      base_td          = e.driver()->effectN( 2 ).average( e );
+      base_dd_min = base_dd_max = 0;
+      dot_duration  = e.player->find_spell( 1253118 )->effectN( 4 ).trigger()
+                          ? e.player->find_spell( 1253118 )->effectN( 4 ).trigger()->duration()
+                          : 10_s;
+      tick_zero    = false;
+    }
+  };
+
+  struct desecrated_chalice_cb_t : public dbc_proc_callback_t
+  {
+    buff_t* stack_buff;
+    buff_t* vers_buff;
+    chalice_aoe_t* aoe_action;
+    int max_stacks;
+
+    desecrated_chalice_cb_t( const special_effect_t& e )
+      : dbc_proc_callback_t( e.player, e )
+    {
+      max_stacks = e.player->find_spell( 1265323 )->max_stacks();
+      if ( max_stacks <= 0 )
+        max_stacks = 10;
+
+      stack_buff = create_buff<buff_t>( e.player, e.player->find_spell( 1265323 ) )
+                     ->set_max_stack( max_stacks )
+                     ->set_expire_at_max_stack( true );
+
+      vers_buff = create_buff<stat_buff_t>( e.player, e.player->find_spell( 1265327 ) )
+                    ->add_stat( STAT_VERSATILITY_RATING, e.driver()->effectN( 1 ).average( e ) );
+
+      aoe_action = new chalice_aoe_t( e );
+      aoe_action->stats = e.player->get_stats( "desecrated_chalice_void_mire", aoe_action );
+    }
+
+    void execute( action_t*, action_state_t* ) override
+    {
+      stack_buff->trigger();
+      if ( !stack_buff->check() )  // triggered expire_at_max_stack
+      {
+        aoe_action->execute();
+        vers_buff->trigger();
+      }
+    }
+  };
+
+  // Triggered by taking damage
+  effect.proc_flags_  = PF_DAMAGE_TAKEN;
+  effect.proc_flags2_ = PF2_ALL_HIT;
+
+  new desecrated_chalice_cb_t( effect );
+}
+
+// Holy Retributor's Order
+// 1253119 equip driver (4 PPM)
+// Attacks deal additional Holy damage + heal you
+// Effect 1 (1258647): Holy damage coeff ~13.3
+// Effect 2 (1269468): Heal amount coeff ~122.4
+// For SimC: model damage only (heals do not affect DPS)
+// Source: https://www.wowhead.com/item=251791/holy-retributors-order (2026-03-16)
+// Source: https://www.wowhead.com/spell=1253119/holy-retributors-order (2026-03-16)
+void holy_retributors_order( special_effect_t& effect )
+{
+  auto damage         = create_proc_action<generic_proc_t>( "holy_retributors_order", effect, effect.driver() );
+  damage->base_dd_min = damage->base_dd_max = effect.driver()->effectN( 1 ).average( effect );
+
+  effect.execute_action = damage;
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
+
+// Umbric's Channeling Focus
+// 1253327 equip driver "Looming Darkness" (2 PPM)
+// Increases highest secondary stat by X for 10 sec
+// Effect 2 (1259028): stat amount coeff -7
+// Buff spell 1253325
+// Source: https://www.wowhead.com/item=251883/umbrics-channeling-focus (2026-03-16)
+// Source: https://www.wowhead.com/spell=1253327/looming-darkness (2026-03-16)
+void umbrics_channeling_focus( special_effect_t& effect )
+{
+  struct umbrics_channeling_focus_buff_t : public stat_buff_t
+  {
+    double amount;
+
+    umbrics_channeling_focus_buff_t( player_t* p, std::string_view n, const spell_data_t* s, double amt )
+      : stat_buff_t( p, n, s ), amount( amt )
+    {}
+
+    void start( int stacks, double value, timespan_t duration ) override
+    {
+      // Pick highest secondary stat on each trigger
+      auto stat = util::highest_stat( player, secondary_ratings );
+      if ( !manual_stats_added )
+        add_stat( stat, amount );
+      stat_buff_t::start( stacks, value, duration );
+    }
+
+    void reset() override
+    {
+      stat_buff_t::reset();
+      stats.clear();
+      manual_stats_added = false;
+    }
+  };
+
+  effect.custom_buff = make_buff<umbrics_channeling_focus_buff_t>(
+      effect.player, "umbrics_channeling_focus", effect.player->find_spell( 1253325 ),
+      effect.driver()->effectN( 2 ).average( effect ) );
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
+
+// Repurposed Volatile Manacell
+// 1270337 equip driver (2 PPM)
+// Grants random secondary stat for 15 sec
+// Effect 1 (1282292): stat amount coeff -7
+// Buff spell 1270343
+// Source: https://www.wowhead.com/item=263282/repurposed-volatile-manacell (2026-03-16)
+// Source: https://www.wowhead.com/spell=1270337/repurposed-volatile-manacell (2026-03-16)
+void repurposed_volatile_manacell( special_effect_t& effect )
+{
+  struct repurposed_volatile_manacell_buff_t : public stat_buff_t
+  {
+    double amount;
+
+    repurposed_volatile_manacell_buff_t( player_t* p, std::string_view n, const spell_data_t* s, double amt )
+      : stat_buff_t( p, n, s ), amount( amt )
+    {}
+
+    void start( int stacks, double value, timespan_t duration ) override
+    {
+      // Pick a random secondary stat on each trigger
+      auto idx  = static_cast<size_t>( player->rng().range( 0.0, static_cast<double>( secondary_ratings.size() ) ) );
+      auto stat = secondary_ratings[ idx ];
+      if ( !manual_stats_added )
+        add_stat( stat, amount );
+      stat_buff_t::start( stacks, value, duration );
+    }
+
+    void reset() override
+    {
+      stat_buff_t::reset();
+      stats.clear();
+      manual_stats_added = false;
+    }
+  };
+
+  effect.custom_buff = make_buff<repurposed_volatile_manacell_buff_t>(
+      effect.player, "repurposed_volatile_manacell", effect.player->find_spell( 1270343 ),
+      effect.driver()->effectN( 1 ).average( effect ) );
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
 }  // namespace trinkets
 
 namespace weapons
@@ -3550,6 +3885,16 @@ void register_special_effects()
   register_special_effect( 1272693, trinkets::astalors_anguish_agitator );
   register_special_effect( 1272690, DISABLED_EFFECT ); // Astalors Anguish Agitator Passive Driver
   register_special_effect( 1247311, DISABLED_EFFECT ); // Drum of Renewed Bonds on use
+  register_special_effect( 1260633, trinkets::gloom_spattered_dreadscale );
+  register_special_effect( 1256391, trinkets::the_eternal_egg );
+  register_special_effect( 1254641, trinkets::rotting_globule );
+  register_special_effect( 1254638, trinkets::solar_core_igniter );
+  register_special_effect( 1265336, trinkets::bark_of_the_guardian_tree );
+  register_special_effect( 1253118, trinkets::desecrated_chalice );
+  register_special_effect( 1253119, trinkets::holy_retributors_order );
+  register_special_effect( 1253327, trinkets::umbrics_channeling_focus );
+  register_special_effect( 1270337, trinkets::repurposed_volatile_manacell );
+  register_special_effect( 1250596, DISABLED_EFFECT );  // Whisper of the Duskwraith (healer trinket)
   register_special_effect( 1253120, trinkets::glorious_crusaders_keepsake ); 
   register_special_effect( 1253112, trinkets::sylvan_wakrapuku );
   // Weapons
