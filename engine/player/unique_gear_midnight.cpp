@@ -2921,6 +2921,115 @@ void tangle_of_vibrant_vines( special_effect_t& effect )
   new dbc_proc_callback_t( effect.player, effect );
 }
 
+// ===== Batch 2 Trinkets =====
+
+// Manaheart's Binding Flame (item 250243)
+// 1250587 on-use driver: 90s CD, 10s shield absorbing 30% of incoming damage up to a cap,
+//         erupts as Fire AoE split damage on expiry/break.
+// Simplification: model as a generic AoE proc using the average absorb cap as the eruption value.
+// Source: https://www.wowhead.com/item=250243/manahearts-binding-flame (2026-03-16)
+// Source: https://www.wowhead.com/spell=1250587/binding-flame (2026-03-16)
+void binding_flame( special_effect_t& effect )
+{
+  struct binding_flame_t : public generic_aoe_proc_t
+  {
+    binding_flame_t( const special_effect_t& e )
+      : generic_aoe_proc_t( e, "binding_flame", e.driver(), true )
+    {
+      base_dd_min = base_dd_max = e.driver()->effectN( 1 ).average( e );
+      split_aoe_damage          = true;
+    }
+  };
+
+  effect.execute_action = create_proc_action<binding_flame_t>( "binding_flame", effect );
+}
+
+// Permafrost Essence (item 250244) — also called Permafrost Reservoir
+// 1250588 equip proc driver: ~8 PPM on taking damage, stacks up to 10 with Crit per stack (15s).
+//         Emergency trigger at <=25% HP: consume all stacks for Frost absorb shield.
+//         Simplified: model as a standard stacking stat_buff_t; emergency rupture not simulated
+//         as HP thresholds are not a reliable sim trigger.
+// Source: https://www.wowhead.com/item=250244/permafrost-essence (2026-03-16)
+// Source: https://www.wowhead.com/spell=1250588/permafrost-reservoir (2026-03-16)
+void permafrost_reservoir( special_effect_t& effect )
+{
+  // Driver 1250588 triggers Mark of Frost (1260316) on taking damage (~8 PPM, stacks to 10).
+  // Each stack grants Crit (effectN(1).average). Model as stacking stat_buff using trigger spell.
+  auto mark_spell = effect.player->find_spell( 1260316 );
+  auto buff = create_buff<stat_buff_t>( effect.player, mark_spell )
+    ->set_stat_from_effect_type( A_MOD_RATING, effect.driver()->effectN( 1 ).average( effect ) );
+
+  effect.custom_buff = buff;
+  // dbc_proc_callback_t not needed; passive driver handled by engine proc system.
+}
+
+// Drum of Renewed Bonds (item 248583)
+// 1247568 equip driver: ~1.5 PPM stat proc granting a secondary stat for 12s.
+// The active on-use (1247311) is already DISABLED_EFFECT — used only at Loa Shrines to swap stat.
+// Simplified as a standard stat_buff_t using the trigger's stat type.
+// Source: https://www.wowhead.com/item=248583/drum-of-renewed-bonds (2026-03-16)
+// Source: https://www.wowhead.com/spell=1247568 (2026-03-16)
+void drum_of_renewed_bonds( special_effect_t& effect )
+{
+  // Driver 1247568 triggers 1247577 (Akil'zon's Clarity, Crit for 12s).
+  // Use the trigger spell directly for the stat buff.
+  auto clarity_spell = effect.player->find_spell( 1247577 );
+  auto buff = create_buff<stat_buff_t>( effect.player, clarity_spell )
+    ->set_stat_from_effect_type( A_MOD_RATING, effect.driver()->effectN( 1 ).average( effect ) );
+
+  effect.custom_buff = buff;
+}
+
+// Empty Crate of Relics (item 251775)
+// 1253042 equip driver: ~1 PPM, grants a random secondary stat for 30s.
+// "Can Proc From Procs", "Only Proc From Class Abilities".
+// Spell 1253042 is not in the local DB; model as a haste buff using effect.item scaling.
+// Source: https://www.wowhead.com/item=251775/empty-crate-of-relics (2026-03-16)
+// Source: https://www.wowhead.com/spell=1253042 (2026-03-16)
+void empty_crate_of_relics( special_effect_t& effect )
+{
+  // Fallback: register as a buff using driver directly. Proc driver provides duration via item.
+  effect.custom_buff = create_buff<stat_buff_t>( effect.player, effect.driver(), effect.item )
+    ->add_stat( STAT_HASTE_RATING, effect.driver()->effectN( 1 ).average( effect ) );
+}
+
+// Fetid Dartfrog Idol (item 256326)
+// 1260244 equip driver ~2 PPM -> 1260522 summon area trigger (11yd radius, 3s) -> 1260734 periodic tick
+// Compound Nature damage: each tick doubles in potency.
+// Simplified: model as a generic_proc_t DoT using periodic tick damage. Compounding is server-side;
+//             we use average total damage across all 3 ticks for a representative single-hit value.
+// Source: https://www.wowhead.com/item=256326/fetid-dartfrog-idol (2026-03-16)
+// Source: https://www.wowhead.com/spell=1260244 (2026-03-16)
+void fetid_dartfrog_idol( special_effect_t& effect )
+{
+  // 1260244 driver triggers 1260522 (area trigger summon, 3s, 11yd radius).
+  // Actual periodic tick spell (1260734) is not in DB.
+  // Model as a generic AoE proc: total damage = effectN(2).average * 7 (tooltip formula: $s2*7).
+  // Use 1260522 as the proc action carrier; set base_dd from driver effectN(2) * 7.
+  auto proc = create_proc_action<generic_aoe_proc_t>( "fetid_dartfrog_idol", effect, 1260522, true );
+  proc->base_dd_min = proc->base_dd_max = effect.driver()->effectN( 2 ).average( effect ) * 7.0;
+
+  effect.execute_action = proc;
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
+
+// Shard of VoidStalker's Bracers (item 262753)
+// 1255277 equip driver ~1.5 PPM, 15s ICD -> 1255460 primary stat buff (fades on ability use, max 12s)
+// Simplified: model as stat_buff_t; decay-on-cast mechanic not simulated (too complex, uptime similar).
+// Source: https://www.wowhead.com/item=262753/shard-of-voidstalkers-bracers (2026-03-16)
+// Source: https://www.wowhead.com/spell=1255277 (2026-03-16)
+void shard_of_voidstalkers_bracers( special_effect_t& effect )
+{
+  // 1255277 driver (15s ICD, 1.5 PPM) triggers 1255460 (Aln-Bound Essence).
+  // Buff: primary stat per stack, max 8 stacks, fades one stack per ability cast (12s max).
+  // Simplified: model as a stacking stat_buff using trigger's scaling. The decay-on-cast
+  // mechanic means average uptime is intermediate; we accept the simplification.
+  auto buff = create_buff<stat_buff_t>( effect.player, effect.trigger(), effect.item );
+
+  effect.custom_buff = buff;
+}
+
 // Gloom-Spattered Dreadscale
 // 1260633 on-use driver (AoE Shadow damage split + absorb 50% equal to damage done, 2 min CD)
 // 1260627 token spell holding damage coefficient (coeff -8 ~= 590.8)
@@ -3906,7 +4015,14 @@ void register_special_effects()
   register_special_effect( 1258535, trinkets::volatile_void_suffuser );
   register_special_effect( 1272693, trinkets::astalors_anguish_agitator );
   register_special_effect( 1272690, DISABLED_EFFECT ); // Astalors Anguish Agitator Passive Driver
-  register_special_effect( 1247311, DISABLED_EFFECT ); // Drum of Renewed Bonds on use
+  register_special_effect( 1247311, DISABLED_EFFECT ); // Drum of Renewed Bonds on use (shrine swap)
+  register_special_effect( 1247568, trinkets::drum_of_renewed_bonds );  // Drum of Renewed Bonds equip proc
+  register_special_effect( 1250587, trinkets::binding_flame );           // Manaheart's Binding Flame on-use
+  register_special_effect( 1250588, trinkets::permafrost_reservoir );    // Permafrost Essence equip proc
+  register_special_effect( 1253042, trinkets::empty_crate_of_relics );   // Empty Crate of Relics equip proc
+  register_special_effect( 1260244, trinkets::fetid_dartfrog_idol );     // Fetid Dartfrog Idol equip proc
+  register_special_effect( 1253116, DISABLED_EFFECT );  // Gift of Light (healer trinket)
+  register_special_effect( 1255277, trinkets::shard_of_voidstalkers_bracers );  // Shard of VoidStalker's Bracers
   register_special_effect( 1260633, trinkets::gloom_spattered_dreadscale );
   register_special_effect( 1256391, trinkets::the_eternal_egg );
   register_special_effect( 1254641, trinkets::rotting_globule );
