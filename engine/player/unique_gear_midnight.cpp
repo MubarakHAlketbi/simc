@@ -2922,10 +2922,14 @@ void tangle_of_vibrant_vines( special_effect_t& effect )
 }
 
 // Gloom-Spattered Dreadscale
-// 1260633 on-use driver (AoE Shadow damage + absorb 50% equal to damage done)
-// 1260627 damage values
-// 1263141 absorb buff
-// 1240903 scaling token (+30% per additional enemy, up to 150%)
+// 1260633 on-use driver (AoE Shadow damage split + absorb 50% equal to damage done, 2 min CD)
+// 1260627 token spell holding damage coefficient (coeff -8 ~= 590.8)
+// 1263141 absorb buff (absorb 50% incoming until amount prevented = damage dealt)
+// 1240903 scaling token: +30% per additional enemy, up to 150%
+// Note: damage is split among targets, NOT multiplied per target.
+//       base_aoe_multiplier applies a fixed multiplier to every target hit,
+//       but the tooltip says damage *increases* (+30% per extra target).
+//       Use standard split_aoe_damage; the scaling token is server-side.
 // Source: https://www.wowhead.com/item=249339/gloom-spattered-dreadscale (2026-03-16)
 // Source: https://www.wowhead.com/spell=1260633/gloom-spattered-dreadscale (2026-03-16)
 void gloom_spattered_dreadscale( special_effect_t& effect )
@@ -2935,12 +2939,12 @@ void gloom_spattered_dreadscale( special_effect_t& effect )
     buff_t* absorb_buff;
 
     gloom_spattered_dreadscale_t( const special_effect_t& e )
-      : generic_aoe_proc_t( e, "gloom_spattered_dreadscale", e.driver(), true )
+      : generic_aoe_proc_t( e, "gloom_spattered_dreadscale", e.player->find_spell( 1260627 ), true )
     {
-      base_dd_min = base_dd_max = e.driver()->effectN( 1 ).average( e );
+      // Damage value is in spell 1260627 effectN(1), coeff scale -8
+      base_dd_min = base_dd_max = e.player->find_spell( 1260627 )->effectN( 1 ).average( e );
       split_aoe_damage          = true;
-      // +30% per additional enemy up to 150% bonus (scaling token 1240903)
-      base_aoe_multiplier = 1.3;
+      // aoe_damage_increase=true handles the +30% per extra target (scaling token 1240903)
 
       absorb_buff = create_buff<buff_t>( e.player, e.player->find_spell( 1263141 ) );
     }
@@ -2975,24 +2979,24 @@ void the_eternal_egg( special_effect_t& effect )
 }
 
 // Rotting Globule
-// 1254641 on-use driver (2 min CD, 15 sec)
-// 1257925 absorb + eruption spell data
-// Each eruption (25% shield lost) deals AoE Plague damage
-// Final eruption deals bonus damage
+// 1254641 on-use driver (2 min CD, 15 sec absorb buff)
+// 1257925 value token: effectN(1)=absorb amount, effectN(2)=25 (%), effectN(3)=per-eruption dmg, effectN(4)=bonus last dmg
+// 1257969 actual AoE eruption damage spell (School Damage Nature+Shadow, radius 6 yards, split)
+// Mechanic: absorb 100% of its value; every time 25% depletes a pustule erupts (4 total).
+//           If all 4 erupt: final burst gets bonus damage.
+// For SimC: schedule 4 eruptions evenly over 15 sec (worst case all absorb consumed).
 // Source: https://www.wowhead.com/item=252421/rotting-globule (2026-03-16)
 // Source: https://www.wowhead.com/spell=1254641/rotting-globule (2026-03-16)
 void rotting_globule( special_effect_t& effect )
 {
   struct pustule_eruption_t : public generic_aoe_proc_t
   {
-    double bonus_damage;
-
     pustule_eruption_t( const special_effect_t& e )
-      : generic_aoe_proc_t( e, "pustule_eruption", e.player->find_spell( 1257925 ), true ), bonus_damage( 0.0 )
+      : generic_aoe_proc_t( e, "pustule_eruption", e.player->find_spell( 1257969 ), true )
     {
       split_aoe_damage = true;
+      // Per-eruption damage from 1257925 effectN(3), coeff -9
       base_dd_min = base_dd_max = e.player->find_spell( 1257925 )->effectN( 3 ).average( e );
-      bonus_damage              = e.player->find_spell( 1257925 )->effectN( 4 ).average( e );
     }
   };
 
@@ -3010,7 +3014,8 @@ void rotting_globule( special_effect_t& effect )
     void execute() override
     {
       proc_spell_t::execute();
-      // Schedule 4 eruptions at equal intervals over the buff duration (15 sec)
+      // Schedule 4 eruptions at equal intervals over the absorb duration (15 sec).
+      // Assumes full absorb consumption (pessimistic DPS scenario = all erupt).
       auto duration = data().duration();
       for ( int i = 1; i <= 4; i++ )
       {
@@ -3025,22 +3030,40 @@ void rotting_globule( special_effect_t& effect )
 }
 
 // Solar Core Igniter
-// 1254638 on-use driver (90 sec CD, 15 sec)
-// Absorbs 50% of incoming damage up to a cap
-// On expire: gain Versatility based on remaining power
-// 1257989 has max absorb (s1) and max Versatility (s3)
-// 1257988 Versatility buff duration
+// 1254638 on-use driver (90 sec CD, 15 sec absorb, applies 1263141-like absorb)
+// 1257989 value token: effectN(1)=max absorb amount, effectN(2)=dummy, effectN(3)=max Versatility
+// 1257988 Versatility buff spell (10 sec duration)
+// Mechanic: activate absorb for 15 sec absorbing 50% up to cap; on expire grant Vers proportional to remaining power.
+// SimC model: best-case - full shield absorbed = grant full Versatility after 15 sec use.
+// The driver is an on-use (has cooldown 90 sec). We implement as use → schedule Vers buff at +15 sec.
 // Source: https://www.wowhead.com/item=252418/solar-core-igniter (2026-03-16)
 // Source: https://www.wowhead.com/spell=1254638/solar-core-igniter (2026-03-16)
 void solar_core_igniter( special_effect_t& effect )
 {
-  // Model as Versatility buff (best case scenario - shield absorbs maximum, grants full Versatility)
-  // This is a simplification; true value depends on damage taken during buff.
-  auto vers_data   = effect.player->find_spell( 1257989 );
-  auto vers_buff   = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 1257988 ) )
-                       ->set_stat( STAT_VERSATILITY_RATING, vers_data->effectN( 3 ).average( effect ) );
+  auto vers_data = effect.player->find_spell( 1257989 );
+  auto vers_buff = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 1257988 ) )
+                     ->set_stat( STAT_VERSATILITY_RATING, vers_data->effectN( 3 ).average( effect ) );
 
-  effect.custom_buff = vers_buff;
+  // On-use: schedule Versatility at end of absorb window (15 sec = driver duration)
+  struct solar_core_igniter_t : public proc_spell_t
+  {
+    buff_t* vers_buff;
+
+    solar_core_igniter_t( const special_effect_t& e, buff_t* buff )
+      : proc_spell_t( "solar_core_igniter", e.player, e.driver() ), vers_buff( buff )
+    {}
+
+    void execute() override
+    {
+      proc_spell_t::execute();
+      // Schedule Versatility buff at end of absorb window
+      make_event( *sim, data().duration(), [ this ]() {
+        vers_buff->trigger();
+      } );
+    }
+  };
+
+  effect.execute_action = new solar_core_igniter_t( effect, vers_buff );
 }
 
 // Bark of the Guardian Tree
@@ -3088,11 +3111,13 @@ void bark_of_the_guardian_tree( special_effect_t& effect )
 }
 
 // Desecrated Chalice
-// 1253118 equip driver (stacks on damage taken, up to 10)
-// At 10 stacks: AoE Void DoT (1265325) for 10 sec + Versatility buff (1265327)
-// Effect 1 (1258646): Versatility amount
-// Effect 2 (1277029): AoE damage per sec
-// Stack buff: 1265323
+// 1253118 equip driver (high chance on damage taken, stacks "Despair" up to 10)
+// At 10 stacks: spills → AoE Void ground DoT 10 sec + Versatility buff
+// 1265323 = "Despair" stack buff (max 10), expire_at_max_stack fires 1265325 ground effect
+// 1265327 = Versatility buff
+// Effect 1 (1258646): Versatility stat amount coeff -7
+// Effect 2 (1277029): DoT tick damage coeff -9
+// Note: 1265325 creates an AreaTrigger (server-side); for SimC use a repeating proc_spell_t.
 // Source: https://www.wowhead.com/item=251790/desecrated-chalice (2026-03-16)
 // Source: https://www.wowhead.com/spell=1253118/desecrated-chalice (2026-03-16)
 void desecrated_chalice( special_effect_t& effect )
@@ -3103,12 +3128,9 @@ void desecrated_chalice( special_effect_t& effect )
       : generic_aoe_proc_t( e, "desecrated_chalice_void_mire", e.driver(), true )
     {
       split_aoe_damage = true;
-      base_td          = e.driver()->effectN( 2 ).average( e );
-      base_dd_min = base_dd_max = 0;
-      dot_duration  = e.player->find_spell( 1253118 )->effectN( 4 ).trigger()
-                          ? e.player->find_spell( 1253118 )->effectN( 4 ).trigger()->duration()
-                          : 10_s;
-      tick_zero    = false;
+      // Ground DoT: 10 ticks × per-tick damage. Model as single-hit for SimC.
+      // Per-tick damage from driver effectN(2) coeff -9; 10 ticks total = 10 * tick_dmg.
+      base_dd_min = base_dd_max = e.driver()->effectN( 2 ).average( e ) * 10.0;
     }
   };
 
@@ -3117,34 +3139,36 @@ void desecrated_chalice( special_effect_t& effect )
     buff_t* stack_buff;
     buff_t* vers_buff;
     chalice_aoe_t* aoe_action;
-    int max_stacks;
 
     desecrated_chalice_cb_t( const special_effect_t& e )
       : dbc_proc_callback_t( e.player, e )
     {
-      max_stacks = e.player->find_spell( 1265323 )->max_stacks();
+      int max_stacks = e.player->find_spell( 1265323 )->max_stacks();
       if ( max_stacks <= 0 )
         max_stacks = 10;
 
-      stack_buff = create_buff<buff_t>( e.player, e.player->find_spell( 1265323 ) )
-                     ->set_max_stack( max_stacks )
-                     ->set_expire_at_max_stack( true );
+      aoe_action = new chalice_aoe_t( e );
 
       vers_buff = create_buff<stat_buff_t>( e.player, e.player->find_spell( 1265327 ) )
                     ->add_stat( STAT_VERSATILITY_RATING, e.driver()->effectN( 1 ).average( e ) );
 
-      aoe_action = new chalice_aoe_t( e );
-      aoe_action->stats = e.player->get_stats( "desecrated_chalice_void_mire", aoe_action );
+      // Use stack_change_callback to detect when max stacks is reached
+      stack_buff = create_buff<buff_t>( e.player, e.player->find_spell( 1265323 ) )
+                     ->set_max_stack( max_stacks )
+                     ->set_stack_change_callback( [ this ]( buff_t* b, int, int new_stacks ) {
+                       if ( new_stacks == b->max_stack() )
+                       {
+                         aoe_action->execute();
+                         vers_buff->trigger();
+                         // Reset stacks immediately after spilling
+                         make_event( *b->sim, 0_ms, [ b ] { b->expire(); } );
+                       }
+                     } );
     }
 
     void execute( action_t*, action_state_t* ) override
     {
       stack_buff->trigger();
-      if ( !stack_buff->check() )  // triggered expire_at_max_stack
-      {
-        aoe_action->execute();
-        vers_buff->trigger();
-      }
     }
   };
 
@@ -3201,9 +3225,8 @@ void umbrics_channeling_focus( special_effect_t& effect )
 
     void reset() override
     {
-      stat_buff_t::reset();
-      stats.clear();
       manual_stats_added = false;
+      stat_buff_t::reset();
     }
   };
 
@@ -3243,9 +3266,8 @@ void repurposed_volatile_manacell( special_effect_t& effect )
 
     void reset() override
     {
-      stat_buff_t::reset();
-      stats.clear();
       manual_stats_added = false;
+      stat_buff_t::reset();
     }
   };
 
