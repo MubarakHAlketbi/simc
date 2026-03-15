@@ -19,7 +19,7 @@ jobs:
       SIMC_ARGS: output=/dev/null html=/dev/null json=/dev/null cleanup_threads=1
 
     steps:
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache@v4
         with:
           path: |
             ${{ runner.workspace }}/b/ninja/simc

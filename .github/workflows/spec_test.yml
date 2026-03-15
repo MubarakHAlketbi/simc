@@ -68,7 +68,7 @@ jobs:
       DS_ARGS: fight_style=DungeonSlice
 
     steps:
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache@v4
         with:
           path: |
             ${{ runner.workspace }}/b/ninja/simc
