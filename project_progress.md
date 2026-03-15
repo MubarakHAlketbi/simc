@@ -90,7 +90,7 @@ Here is the data organized into Markdown tables.
 | Lightspire Core | In Beta | Bright Linen Spellthread | Implemented | Quick Sandwich | Implemented |
 | Mark of Light | In Beta | Farstrider's Hawkeye | Implemented | Rootland Celebration | Implemented |
 | Mindpiercer's Sigil | In Beta | Forest Hunter's Armor Kit | Implemented | Royal Roast | Implemented |
-| Permafrost Reservoir | NYI | Sunfire Silk Spellthread | Implemented | Silvermoon Parade | Implemented |
+| Permafrost Reservoir | In Beta | Sunfire Silk Spellthread | Implemented | Silvermoon Parade | Implemented |
 | Resonant Roarstone | In Beta | Thalassian Scout Armor Kit | Implemented | Silvermoon Standard | Implemented |
 | Rotting Globule | In Beta | Void-Touched Augment Rune | Implemented | Spellfire Filet | NYI |
 | Sapling of the Dawnroot | In Beta | Weapon - Acuity of the Ren'dorei | In Beta | Spiced Biscuits | Implemented |
@@ -98,7 +98,7 @@ Here is the data organized into Markdown tables.
 | Solar Core Igniter | In Beta | Weapon - Strength of the Halazzi | In Beta | Sunwell Delight | Implemented |
 | Solarflare Prism | In Beta | Weapon - Worldsoul Aegis | NYI | Tasty Smoked Tetra | Implemented |
 | Soulcatcher's Charm | In Beta | Chest - Mark of Nalorakk | Implemented | Twilight Angler's Medley | Implemented |
-| The Binding Flame | NYI | Chest - Mark of the Magister | Implemented | Void-Kissed Fish Rolls | Implemented |
+| The Binding Flame | In Beta | Chest - Mark of the Magister | Implemented | Void-Kissed Fish Rolls | Implemented |
 | Tumor of the Swarm | In Beta | Chest - Mark of the Rootwarden | Implemented | Warped Wise Wings | Implemented |
 | Vessel of Souls | In Beta | Chest - Mark of the Worldsoul | Implemented | Wise Tails | Implemented |
 | Void Execution Mandate | In Beta | Ring - Nature's Fury | Implemented | | |
@@ -127,11 +127,11 @@ Here is the data organized into Markdown tables.
 | Darkmoon Dominion: Rot | In Beta | Darkmoon Sigil: Hunt | In Beta | | |
 | Darkmoon Dominion: Void | In Beta | Darkmoon Sigil: Rot | In Beta | | |
 | Desecrated Chalice | In Beta | Darkmoon Sigil: Void | In Beta | | |
-| Drum of Renewed Bonds | NYI | Pigments of the Wind | NYI | | |
-| Empty Crate of Relics | NYI | Loa Worshiper's Band | In Beta | | |
+| Drum of Renewed Bonds | In Beta | Pigments of the Wind | NYI | | |
+| Empty Crate of Relics | In Beta | Loa Worshiper's Band | In Beta | | |
 | Ever-collapsing Void Fissure | In Beta | Signet of Azerothian Blessings | In Beta | | |
-| Fetid Dartfrog Idol | NYI | Thalassian Phoenix Torque | In Beta | | |
-| Gift of Light | NYI | Powerful Eversong Diamond | In Beta | | |
+| Fetid Dartfrog Idol | In Beta | Thalassian Phoenix Torque | In Beta | | |
+| Gift of Light | In Beta | Powerful Eversong Diamond | In Beta | | |
 | Glorious Crusader's Keepsake | In Beta | Axe-Flingin' Bands | In Beta | | |
 | Holy Retributor's Order | In Beta | Hexwoven Strand | In Beta | | |
 | Idol of the War God | In Beta | Ranger-General's Grips | In Beta | | |
@@ -141,8 +141,8 @@ Here is the data organized into Markdown tables.
 | Repurposed Volatile Manacell | In Beta | Knight-Commander's Palisade | NYI | | |
 | Sealed Chaos Urn | In Beta | Murder Row Fishhook | In Beta | | |
 | Shadow of the Empyrean Requiem | In Beta | Arcanoweave Trappings | In Beta | | |
-| Shard of VoidStalker's Bracers | NYI | Arcanoweave Cord | In Beta | | |
+| Shard of VoidStalker's Bracers | In Beta | Arcanoweave Cord | In Beta | | |
 | Sylvan Wakrapuku | In Beta | Sunfire Silk Trappings | In Beta | | |
 | Tangle of Vibrant Vines | In Beta | Blessed Pango Charm | In Beta | | |
 | Umbric's Channeling Focus | In Beta | | | | |
-| Void Pearl of Haste | NYI | | | | |
+| Void Pearl of Haste | In Beta | | | | |
