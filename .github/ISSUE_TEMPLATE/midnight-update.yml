@@ -1,0 +1,95 @@
+name: "Midnight Update Task"
+description: "Template for tracking Midnight expansion implementation tasks"
+title: "MIDNIGHT: "
+labels: ["midnight", "needs-review"]
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Midnight Expansion Update Task
+
+        This issue tracks implementation of a specific feature for the Midnight expansion. Please fill out the sections below.
+
+  - type: input
+    id: task_type
+    attributes:
+      label: Task Type
+      description: "What type of update is this? (e.g., Class General Changes, APL, Set Bonus, Trinket, etc.)"
+      placeholder: "Class General Changes"
+    validations:
+      required: true
+
+  - type: input
+    id: class_spec
+    attributes:
+      label: Class / Spec / Item
+      description: "Which class, spec, or item is this issue for?"
+      placeholder: "Death Knight - Unholy"
+    validations:
+      required: true
+
+  - type: input
+    id: project_progress_row
+    attributes:
+      label: project_progress.md Reference
+      description: "Which row(s) in project_progress.md does this correspond to? Include the line number if possible."
+      placeholder: "Row 10 (Unholy) or rows 65-70 (trinkets)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Data Sources
+      description: |
+        List all Wowhead URLs (or other sources) used for this implementation.
+        Format: [Description](URL) (YYYY-MM-DD)
+      placeholder: |
+        - [Unholy Death Knight Talents](https://www.wowhead.com/midnight/talent-calc/death-knight/unholy) (2026-03-15)
+        - [Spell 12345](https://www.wowhead.com/spell=12345) (2026-03-15)
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_details
+    attributes:
+      label: Implementation Details
+      description: "Briefly describe what needs to be implemented, which files to modify, and any special mechanics to consider."
+      placeholder: |
+        - Add new spell "Shadow Explosion" to spell_data.cpp
+        - Update DKUnholy.cpp: implement new talent "Unholy Blight"
+        - Modify APL in profiles for proper priority
+        - Watch for interaction with "Virulent Plague" refresh mechanics
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Validation Checklist
+      description: "Check off items as they are completed"
+      options:
+        - label: Code compiles without errors
+        - label: Simulation runs without crashes
+        - label: Profile loads and simulates at least 1 iteration
+        - label: Results are reasonable (no zero DPS, within expected range)
+        - label: Talent/ability interactions verified
+        - label: Set bonuses trigger correctly (if applicable)
+        - label: No regression in other specs/classes
+        - label: Wowhead data sources documented in code comments
+        - label: project_progress.md updated
+        - label: Ready for review
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: "Any other notes, questions, or blockers"
+      placeholder: "Need clarification on whether the new talent stacks with existing buff X..."
+
+  - type: textarea
+    id: pr_info
+    attributes:
+      label: Pull Request Information
+      description: "Once a PR is created, link it here"
+      placeholder: "PR #123 - https://github.com/..."
