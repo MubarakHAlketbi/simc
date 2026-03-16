@@ -890,6 +890,8 @@ public:
     struct subtlety_talents_t
     {
       player_talent_t find_weakness;
+      // Source: https://www.wowhead.com/beta/spell=382512 — amplifies Find Weakness armor pen (2026-03-16)
+      player_talent_t improved_find_weakness;  // ID 382512 — likely rank-2 passive, amplifies armor ignore %
 
       player_talent_t improved_backstab;
       player_talent_t shadow_blades;
@@ -9681,6 +9683,8 @@ void rogue_t::init_spells()
   talent.subtlety.fade_to_nothing = find_talent_spell( talent_tree::SPECIALIZATION, "Fade to Nothing" );
   talent.subtlety.finality = find_talent_spell( talent_tree::SPECIALIZATION, "Finality" );
   talent.subtlety.find_weakness = find_talent_spell( talent_tree::SPECIALIZATION, "Find Weakness" );
+  // Source: https://www.wowhead.com/beta/spell=382512 — amplifies Find Weakness armor pen (2026-03-16)
+  talent.subtlety.improved_find_weakness = find_talent_spell( talent_tree::SPECIALIZATION, "Improved Find Weakness" ); // Should be ID 382512
   talent.subtlety.gloomblade = find_talent_spell( talent_tree::SPECIALIZATION, "Gloomblade" );
   talent.subtlety.goremaws_bite = find_talent_spell( talent_tree::SPECIALIZATION, "Goremaw's Bite" );
   talent.subtlety.improved_backstab = find_talent_spell( talent_tree::SPECIALIZATION, "Improved Backstab" );

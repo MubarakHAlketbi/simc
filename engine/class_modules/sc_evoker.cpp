@@ -1251,6 +1251,19 @@ struct evoker_t : public player_t
     player_talent_t time_spiral;
     player_talent_t spatial_paradox;
     player_talent_t zephyr;
+    // Midnight class tree additions (2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=387787 — defensive only
+    player_talent_t regenerative_magic;   // ID 387787 — healing defensive, utility only
+    // Source: https://www.wowhead.com/beta/spell=387341 — melee hit modifier
+    player_talent_t walloping_blow;       // ID 387341 — Devastation/Aug: melee hit modifier
+    // Source: https://www.wowhead.com/beta/spell=1267206 — Glide speed+height +10% (utility/mobility)
+    player_talent_t strike_from_above;    // ID 1267206 — Glide enhancement, mostly utility
+    // Source: https://www.wowhead.com/beta/spell=418101 — mana regen buff
+    player_talent_t potent_mana;          // ID 418101 — mana regen, minimal DPS impact
+    // Source: https://www.wowhead.com/beta/spell=1268881 — Defy Fate healing +100%, CD -1min (Aug)
+    player_talent_t improved_defy_fate;   // ID 1268881 — Augmentation: enhances Defy Fate
+    // Source: https://www.wowhead.com/beta/spell=431715 — Prescience CD -2s, +1% crit (Devast/Aug)
+    player_talent_t nozdormu_adept;       // ID 431715 — Prescience enhancement for Devast+Aug
 
     // Devastation Traits
     player_talent_t pyre;                // row 1
@@ -9572,6 +9585,19 @@ void evoker_t::init_spells()
   talent.aerial_mastery       = CT( "Aerial Mastery" );
   talent.overawe              = CT( "Overawe" );
   talent.time_spiral          = CT( "Time Spiral" );  // Row 10
+  // Midnight class tree additions (2026-03-16)
+  // Source: https://www.wowhead.com/beta/spell=387787 — healing defensive, utility only
+  talent.regenerative_magic   = CT( "Regenerative Magic" );  // Should be ID 387787
+  // Source: https://www.wowhead.com/beta/spell=387341 — melee hit modifier (Devast/Aug)
+  talent.walloping_blow       = CT( "Walloping Blow" );       // Should be ID 387341
+  // Source: https://www.wowhead.com/beta/spell=1267206 — Glide speed+height +10%
+  talent.strike_from_above    = CT( "Strike from Above" );    // Should be ID 1267206
+  // Source: https://www.wowhead.com/beta/spell=418101 — mana regen buff
+  talent.potent_mana          = CT( "Potent Mana" );          // Should be ID 418101
+  // Source: https://www.wowhead.com/beta/spell=1268881 — Defy Fate +100% healing, CD -1min (Aug)
+  talent.improved_defy_fate   = CT( "Improved Defy Fate" );   // Should be ID 1268881
+  // Source: https://www.wowhead.com/beta/spell=431715 — Prescience CD -2s, +1% crit (Devast+Aug)
+  talent.nozdormu_adept       = CT( "Nozdormu Adept" );       // Should be ID 431715
   // Devastation Traits
   talent.pyre                         = ST( "Pyre" );                // Row 1
   talent.ruby_essence_burst           = ST( "Ruby Essence Burst" );  // Row 2

@@ -60,6 +60,49 @@ namespace warlock
     talents.soulburn = find_talent_spell( talent_tree::CLASS, "Soulburn" ); // Should be ID 385899
     talents.soulburn_buff = conditional_spell_lookup( talents.soulburn.ok(), 387626 );
 
+    // Class Tree — DPS-relevant talents (Midnight 12.0, 2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=1270701 — Drain Life 100% faster channel+heal
+    talents.gorefiends_avarice = find_talent_spell( talent_tree::CLASS, "Gorefiend's Avarice" ); // Should be ID 1270701
+    // Source: https://www.wowhead.com/beta/spell=1270690 — +2% Leech
+    talents.pact_of_the_nathrezim = find_talent_spell( talent_tree::CLASS, "Pact of the Nathrezim" ); // Should be ID 1270690
+    // Source: https://www.wowhead.com/beta/spell=1270255 — Shadowfury CD -15s, radius +2 yds
+    talents.oppressive_darkness = find_talent_spell( talent_tree::CLASS, "Oppressive Darkness" ); // Should be ID 1270255
+    // Source: https://www.wowhead.com/beta/spell=386689 — Demonic Healthstone multiple-use
+    talents.pact_of_gluttony = find_talent_spell( talent_tree::CLASS, "Pact of Gluttony" ); // Should be ID 386689
+    // Source: https://www.wowhead.com/beta/spell=385881 — Pet ability enhancements per spec
+    talents.teachings_of_the_black_harvest = find_talent_spell( talent_tree::CLASS, "Teachings of the Black Harvest" ); // Should be ID 385881
+    // Source: https://www.wowhead.com/beta/spell=389367 — Soul Leech heals self 8% + pet 25%
+    talents.fel_synergy = find_talent_spell( talent_tree::CLASS, "Fel Synergy" ); // Should be ID 389367
+    // Source: https://www.wowhead.com/beta/spell=1265810 — Drain Life heals primary demon 400%
+    talents.infernal_beneficiary = find_talent_spell( talent_tree::CLASS, "Infernal Beneficiary" ); // Should be ID 1265810
+    // Source: https://www.wowhead.com/beta/spell=108416 — Sacrifice 20% HP for 200% absorb shield (20s, 1min CD)
+    talents.dark_pact = find_talent_spell( talent_tree::CLASS, "Dark Pact" ); // Should be ID 108416
+    // Source: https://www.wowhead.com/beta/spell=1271689 — Increases Drain Life damage coefficient
+    talents.empowered_drain_life = find_talent_spell( talent_tree::CLASS, "Empowered Drain Life" ); // Should be ID 1271689
+
+    // Class Tree — Utility talents (Midnight 12.0, 2026-03-16)
+    talents.soul_leech          = find_talent_spell( talent_tree::CLASS, "Soul Leech" );          // Should be ID 108370
+    talents.burning_rush        = find_talent_spell( talent_tree::CLASS, "Burning Rush" );        // Should be ID 111400
+    talents.fel_pact            = find_talent_spell( talent_tree::CLASS, "Fel Pact" );            // Should be ID 386113
+    talents.demon_skin          = find_talent_spell( talent_tree::CLASS, "Demon Skin" );          // Should be ID 219272
+    talents.fel_armor           = find_talent_spell( talent_tree::CLASS, "Fel Armor" );           // Should be ID 386124
+    talents.fiendish_stride     = find_talent_spell( talent_tree::CLASS, "Fiendish Stride" );     // Should be ID 386110
+    talents.fel_domination      = find_talent_spell( talent_tree::CLASS, "Fel Domination" );      // Should be ID 333889
+    talents.banish              = find_talent_spell( talent_tree::CLASS, "Banish" );              // Should be ID 710
+    talents.curse_of_exhaustion = find_talent_spell( talent_tree::CLASS, "Curse of Exhaustion" ); // Should be ID 334275
+    talents.curse_of_tongues    = find_talent_spell( talent_tree::CLASS, "Curse of Tongues" );    // Should be ID 1714
+    talents.mortal_coil         = find_talent_spell( talent_tree::CLASS, "Mortal Coil" );         // Should be ID 6789
+    talents.demonic_circle      = find_talent_spell( talent_tree::CLASS, "Demonic Circle" );      // Should be ID 268358
+    talents.improved_mortal_coil    = find_talent_spell( talent_tree::CLASS, "Improved Mortal Coil" );    // Should be ID 1265816
+    talents.foul_mouth              = find_talent_spell( talent_tree::CLASS, "Foul Mouth" );              // Should be ID 1265813
+    talents.empowered_healthstone   = find_talent_spell( talent_tree::CLASS, "Empowered Healthstone" );   // Should be ID 1271699
+    talents.abyss_walker            = find_talent_spell( talent_tree::CLASS, "Abyss Walker" );            // Should be ID 389609
+    talents.fortified_soul          = find_talent_spell( talent_tree::CLASS, "Fortified Soul" );          // Should be ID 1271694
+    talents.demonic_gateway         = find_talent_spell( talent_tree::CLASS, "Demonic Gateway" );         // Should be ID 111771
+    talents.swift_artifice          = find_talent_spell( talent_tree::CLASS, "Swift Artifice" );          // Should be ID 452902
+    talents.frequent_traveler       = find_talent_spell( talent_tree::CLASS, "Frequent Traveler" );       // Should be ID 1265801
+    talents.demonic_resilience      = find_talent_spell( talent_tree::CLASS, "Demonic Resilience" );      // Should be ID 389590
+
     talents.summoners_embrace = find_talent_spell( talent_tree::SPECIALIZATION, "Summoner's Embrace" ); // Should be ID 453105
 
     talents.grimoire_of_sacrifice = find_talent_spell( talent_tree::SPECIALIZATION, "Grimoire of Sacrifice" ); // Aff/Destro only. Should be ID 108503

@@ -1640,6 +1640,11 @@ public:
     player_talent_t creation_core; // TODO: NYI
     player_talent_t call_of_the_elements;
     player_talent_t instinctive_imbuements;
+    // Midnight class tree additions (2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=383010 — Elemental Orbit: +1 Elemental Shield; Earth Shield on self+ally simultaneously
+    player_talent_t elemental_orbit;          // ID 383010 — DPS-relevant: affects shield uptime/proc
+    // Source: https://www.wowhead.com/beta/spell=1279819 — Primordial Bond: stat bonus in combat
+    player_talent_t primordial_bond;          // ID 1279819 — Possible stat bonus
 
     // Spec - Shared
     player_talent_t ancestral_wolf_affinity; // TODO: NYI
@@ -10901,6 +10906,11 @@ void shaman_t::init_spells()
   talent.creation_core           = _CT( "Creation Core" );
   talent.call_of_the_elements = _CT( "Call of the Elements" );
   talent.instinctive_imbuements  = _CT( "Instinctive Imbuements" );
+  // Midnight class tree additions (2026-03-16)
+  // Source: https://www.wowhead.com/beta/spell=383010 — DPS-relevant: extra Elemental Shield stack
+  talent.elemental_orbit         = _CT( "Elemental Orbit" );   // Should be ID 383010
+  // Source: https://www.wowhead.com/beta/spell=1279819 — Possible stat bonus in combat
+  talent.primordial_bond         = _CT( "Primordial Bond" );   // Should be ID 1279819
 
   // Spec - Shared
   talent.ancestral_wolf_affinity = _ST( "Ancestral Wolf Affinity" );

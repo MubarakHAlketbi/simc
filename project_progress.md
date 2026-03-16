@@ -172,8 +172,8 @@ Here is the data organized into Markdown tables.
 | Feral | 92 | 92 | 0 | Complete | No action needed |
 | Guardian | 90 | 90 | 0 | Complete | No action needed |
 | **Evoker** | | | | | |
-| Devastation | 96 | 92 | 4 | Needs Work | Add: Walloping Blow (387341), Strike from Above (1267206), Potent Mana (418101); verify Regenerative Magic |
-| Augmentation | 97 | 91 | 6 | Needs Work | Above 4 + Improved Defy Fate (1268881), Nozdormu Adept (431715) |
+| Devastation   | 96 | 96 | 0 | In Beta | walloping_blow, strike_from_above, potent_mana, regenerative_magic added to class tree struct+init (2026-03-16) |
+| Augmentation  | 97 | 97 | 0 | In Beta | Above 4 + improved_defy_fate (1268881) + nozdormu_adept (431715) all registered (2026-03-16) |
 | **Hunter** | | | | | |
 | Beast Mastery | 87 | 87 | 0 | Complete | No action needed |
 | Marksmanship | 82 | 82 | 0 | Complete | No action needed |
@@ -193,14 +193,14 @@ Here is the data organized into Markdown tables.
 | **Rogue** | | | | | |
 | Assassination | 82 | 82 | 0 | Complete | No action needed |
 | Outlaw | 82 | 82 | 0 | Complete | No action needed |
-| Subtlety | 83 | 82 | 1 | Minor | Verify Improved Find Weakness (382512) — may amplify armor pen |
+| Subtlety | 83 | 83 | 0 | In Beta | improved_find_weakness (382512) added to subtlety_talents_t struct + init (2026-03-16). Armor pen modifier integration pending verification. |
 | **Shaman** | | | | | |
-| Elemental | 83 | 68 | 15 | Needs Work | Add Elemental Orbit (383010) — DPS proc. Primordial Bond (1279819) — verify. Other 13 are utility/N/A |
-| Enhancement | 84 | 69 | 15 | Needs Work | Same 15 Shaman class tree missing as Elemental |
+| Elemental    | 83 | 70 | 13 | In Beta | elemental_orbit (383010) + primordial_bond (1279819) added to class tree struct+init (2026-03-16). Remaining 13 are utility/N/A |
+| Enhancement  | 84 | 71 | 13 | In Beta | Same 15 Shaman class tree — elemental_orbit + primordial_bond now registered (2026-03-16). Remaining 13 N/A |
 | **Warlock** | | | | | |
-| Affliction | 82 | 51 | 31 | Needs Work | Entire Warlock class tree missing. Priority DPS: Gorefiend's Avarice (1270701), Pact of Nathrezim (1270690), Oppressive Darkness (1270255), Pact of Gluttony (386689), Teachings of the Black Harvest (385881), Fel Synergy (389367), Infernal Beneficiary (1265810), Dark Pact (108416), Empowered Drain Life (1271689) |
-| Demonology | 84 | 53 | 31 | Needs Work | Same 31 Warlock class tree missing |
-| Destruction | 80 | 49 | 31 | Needs Work | Same 31 Warlock class tree missing |
+| Affliction  | 82 | 82 | 0 | In Beta | All 31 Warlock class tree talents now registered in sc_warlock.hpp + sc_warlock_init.cpp (2026-03-16). Full implementation of DPS mechanics pending. |
+| Demonology  | 84 | 84 | 0 | In Beta | Same 31 class tree — all registered (2026-03-16). Full DPS mechanic implementation pending. |
+| Destruction | 80 | 80 | 0 | In Beta | Same 31 class tree — all registered (2026-03-16). Full DPS mechanic implementation pending. |
 | **Warrior** | | | | | |
 | Arms | 67 | 67 | 0 | Complete | No action needed |
 | Fury | 83 | 83 | 0 | Complete | No action needed |

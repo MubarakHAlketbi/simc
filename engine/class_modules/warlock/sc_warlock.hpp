@@ -345,6 +345,70 @@ public:
     player_talent_t soulburn;
     const spell_data_t* soulburn_buff; // This buff is applied after using Soulburn and prevents another usage unless cleared
 
+    // Class Tree — DPS-relevant (Midnight, 2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=1270701 (Gorefiend's Avarice)
+    player_talent_t gorefiends_avarice;       // ID 1270701 — Drain Life 100% faster channel + heal
+    // Source: https://www.wowhead.com/beta/spell=1270690 (Pact of the Nathrezim)
+    player_talent_t pact_of_the_nathrezim;    // ID 1270690 — +2% Leech (minor but registered)
+    // Source: https://www.wowhead.com/beta/spell=1270255 (Oppressive Darkness)
+    player_talent_t oppressive_darkness;      // ID 1270255 — Shadowfury CD -15s, radius +2 yds
+    // Source: https://www.wowhead.com/beta/spell=386689 (Pact of Gluttony)
+    player_talent_t pact_of_gluttony;         // ID 386689 — Demonic Healthstone multiple-use
+    // Source: https://www.wowhead.com/beta/spell=385881 (Teachings of the Black Harvest)
+    player_talent_t teachings_of_the_black_harvest; // ID 385881 — pet ability enhancements
+    // Source: https://www.wowhead.com/beta/spell=389367 (Fel Synergy)
+    player_talent_t fel_synergy;              // ID 389367 — Soul Leech heals self+pet
+    // Source: https://www.wowhead.com/beta/spell=1265810 (Infernal Beneficiary)
+    player_talent_t infernal_beneficiary;     // ID 1265810 — Drain Life heals primary demon 400%
+    // Source: https://www.wowhead.com/beta/spell=108416 (Dark Pact)
+    player_talent_t dark_pact;                // ID 108416 — Sacrifice 20% HP for 200% absorb shield
+    // Source: https://www.wowhead.com/beta/spell=1271689 (Empowered Drain Life)
+    player_talent_t empowered_drain_life;     // ID 1271689 — Increases Drain Life damage coefficient
+
+    // Class Tree — Utility (lower priority, registered for completeness, 2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=108370
+    player_talent_t soul_leech;               // ID 108370 — Passive absorb on damage
+    // Source: https://www.wowhead.com/beta/spell=111400
+    player_talent_t burning_rush;             // ID 111400 — Movement speed (HP drain)
+    // Source: https://www.wowhead.com/beta/spell=386113
+    player_talent_t fel_pact;                 // ID 386113 — Healthstone CD reduction
+    // Source: https://www.wowhead.com/beta/spell=219272
+    player_talent_t demon_skin;               // ID 219272 — Passive damage reduction
+    // Source: https://www.wowhead.com/beta/spell=386124
+    player_talent_t fel_armor;                // ID 386124 — Armor bonus
+    // Source: https://www.wowhead.com/beta/spell=386110
+    player_talent_t fiendish_stride;          // ID 386110 — Burning Rush enhancement
+    // Source: https://www.wowhead.com/beta/spell=333889
+    player_talent_t fel_domination;           // ID 333889 — Pet summon CD reduction
+    // Source: https://www.wowhead.com/beta/spell=710
+    player_talent_t banish;                   // ID 710 — CC
+    // Source: https://www.wowhead.com/beta/spell=334275
+    player_talent_t curse_of_exhaustion;      // ID 334275 — CC slow
+    // Source: https://www.wowhead.com/beta/spell=1714
+    player_talent_t curse_of_tongues;         // ID 1714 — CC cast speed
+    // Source: https://www.wowhead.com/beta/spell=6789
+    player_talent_t mortal_coil;              // ID 6789 — Horror + self heal
+    // Source: https://www.wowhead.com/beta/spell=268358
+    player_talent_t demonic_circle;           // ID 268358 — Teleport
+    // Source: https://www.wowhead.com/beta/spell=1265816
+    player_talent_t improved_mortal_coil;     // ID 1265816 — Mortal Coil enhancement
+    // Source: https://www.wowhead.com/beta/spell=1265813
+    player_talent_t foul_mouth;               // ID 1265813 — Curse enhancement
+    // Source: https://www.wowhead.com/beta/spell=1271699
+    player_talent_t empowered_healthstone;    // ID 1271699 — Healthstone buff
+    // Source: https://www.wowhead.com/beta/spell=389609
+    player_talent_t abyss_walker;             // ID 389609 — Demonic Circle buff
+    // Source: https://www.wowhead.com/beta/spell=1271694
+    player_talent_t fortified_soul;           // ID 1271694 — HP buff
+    // Source: https://www.wowhead.com/beta/spell=111771
+    player_talent_t demonic_gateway;          // ID 111771 — Raid utility portal
+    // Source: https://www.wowhead.com/beta/spell=452902
+    player_talent_t swift_artifice;           // ID 452902 — Summoning speed
+    // Source: https://www.wowhead.com/beta/spell=1265801
+    player_talent_t frequent_traveler;        // ID 1265801 — Gateway buff
+    // Source: https://www.wowhead.com/beta/spell=389590
+    player_talent_t demonic_resilience;       // ID 389590 — Damage reduction
+
     // Specializations
 
     // Shared
