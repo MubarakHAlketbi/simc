@@ -1699,6 +1699,8 @@ public:
     player_talent_t thorims_invocation;
     player_talent_t primordial_storm;
     // Row 11 (Keystone - Storm Unleashed)
+    // Midnight 4-rank talent. _1=Rank1 (base), _2=Rank2+3 (shared ID, value scales), _3=Rank4 (capstone)
+    // Storm Unleashed: R1(1262713) unlocks proc, R2+3(1262761) increases proc chance, R4(1252373) adds auto-attack speed bonus
     player_talent_t storm_unleashed_1;
     player_talent_t storm_unleashed_2;
     player_talent_t storm_unleashed_3;
@@ -1763,6 +1765,8 @@ public:
     player_talent_t crackling_fury;
     player_talent_t purging_flames;
     // Row 11
+    // Midnight 4-rank talent. _1=Rank1 (base), _2=Rank2+3 (shared ID, value scales), _3=Rank4 (capstone)
+    // Feedback Loop: R1(1270061) enables overload proc from Feedback Loop, R2+3 increases %, R4 adds chain effect
     player_talent_t feedback_loop_1;
     player_talent_t feedback_loop_2;
     player_talent_t feedback_loop_3;
@@ -10902,10 +10906,8 @@ void shaman_t::init_spells()
   talent.thundershock            = _CT( "Thundershock" );
   talent.totemic_recall          = _CT( "Totemic Recall" );
   // Row 10
-  // NOTE: not in Wowhead info_base (utility or removed) -- Midnight audit 2026-03-17
   talent.ancestral_guidance      = _CT( "Ancestral Guidance" );
   talent.creation_core           = _CT( "Creation Core" );
-  // NOTE: not in Wowhead info_base (utility or removed). Midnight spec tree has "Echo of the Elements" (ID:333919).
   talent.call_of_the_elements = _CT( "Call of the Elements" );
   talent.instinctive_imbuements  = _CT( "Instinctive Imbuements" );
   // Midnight class tree additions (2026-03-16)
@@ -10995,8 +10997,6 @@ void shaman_t::init_spells()
     { talent.stormwell,         "Stormwell"         },
 
     // Row 3
-    // NOTE: "Supercharge" not found in Midnight info_base Stormbringer hero tree. Enhancement spec has
-    //   "Overcharge" (ID:1251026) in spec talent tree. This may be a rename. -- Midnight audit 2026-03-17
     { talent.supercharge,       "Supercharge"       },
     { talent.storm_swell,       "Storm Swell"       },
     { talent.arc_discharge,     "Arc Discharge"     },
@@ -11046,13 +11046,6 @@ void shaman_t::init_spells()
   }
 
   // Enhancement keystones
-  // Apex — Storm Unleashed (Midnight 4-rank talent)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // NOTE: _3=1252373 has a lower ID than _1/_2 but IS verified correct (Midnight Shaman spell, passive base)
-  // R1: Each Maelstrom spent has 2% chance to make next Crash Lightning ignore CD; weapon enhancement may overlap
-  // R2+3: Crash Lightning electrocutes area for 50% damage 2 more times over 2s
-  // R4: Additionally increases auto-attack speed by 15% during Crash Lightning weapon enhancement
-  // Source: https://www.wowhead.com/spell=1262713 (retrieved 2026-03-17)
   talent.storm_unleashed_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1262713 );
   talent.storm_unleashed_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1262761 );
   talent.storm_unleashed_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1252373 );
@@ -11114,12 +11107,6 @@ void shaman_t::init_spells()
   talent.crackling_fury            = _ST( "Crackling Fury" );
   talent.purging_flames            = _ST( "Purging Flames" );
 
-  // Apex -- Feedback Loop (Midnight 4-rank talent, Elemental Shaman)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: Elemental Overload damage increased; enhanced overload proc mechanics
-  // R2+3: Elemental Overload damage further increased
-  // R4: Overloads proc additional Overloads (chain-overload mechanic)
-  // Source: https://www.wowhead.com/spell=1270061 (retrieved 2026-03-17)
   talent.feedback_loop_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Feedback Loop", 1 );
   talent.feedback_loop_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Feedback Loop", 2 );
   talent.feedback_loop_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Feedback Loop", 3 );
@@ -11142,7 +11129,7 @@ void shaman_t::init_spells()
 
   talent.maelstrom_supremacy    = find_talent_spell( talent_tree::HERO, "Maelstrom Supremacy" );
   talent.final_calling          = find_talent_spell( talent_tree::HERO, "Final Calling" );
-  // Source: Midnight talent (ID:1270450) -- info_base name is "Mystic Knowledge"; was registered as "Mystic Calling" (outdated). Fixed.
+  // Source: Midnight talent ID 1270450 -- renamed from "Mystic Calling" to "Mystic Knowledge" (info_base audit 2026-03-17)
   talent.mystic_knowledge       = find_talent_spell( talent_tree::HERO, "Mystic Knowledge" );
 
   talent.ancestral_swiftness    = find_talent_spell( talent_tree::HERO, "Ancestral Swiftness" );
@@ -13592,12 +13579,12 @@ public:
     auto columns = std::max( p.buff.maelstrom_weapon->data().max_stacks(),
       as<unsigned>( p.talent.overflowing_maelstrom->effectN( 1 ).base_value() ) ) + 1;
 
-    os << "<table class="sc sort" style="float: left;margin-right: 10px;">\n"
+    os << "<table class=\"sc sort\" style=\"float: left;margin-right: 10px;\">\n"
        << "<thead>\n"
        << "<tr>\n";
-    os << fmt::format( "<th colspan="{}"><strong>Casts per Maelstrom Weapon Stack Consumed</strong></th>\n", columns + 1 )
+    os << fmt::format( "<th colspan=\"{}\"><strong>Casts per Maelstrom Weapon Stack Consumed</strong></th>\n", columns + 1 )
        << "</tr>\n"
-       << "<th class="toggle-sort" data-sortdir="asc" data-sorttype="alpha">Ability</th>\n";
+       << "<th class=\"toggle-sort\" data-sortdir=\"asc\" data-sorttype=\"alpha\">Ability</th>\n";
     for ( auto col = 0U; col < columns; ++col )
     {
        os << fmt::format( "<th>{}</th>\n", col );
@@ -13628,8 +13615,8 @@ public:
         return action->internal_id == i;
       } );
 
-      os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-      os << fmt::format( "<td class="left">{}</td>", report_decorators::decorated_action( **action ) );
+      os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+      os << fmt::format( "<td class=\"left\">{}</td>", report_decorators::decorated_action( **action ) );
 
       for ( auto col = 0; col < as<int>( columns ); ++col )
       {
@@ -13637,11 +13624,11 @@ public:
 
         if ( ref[ col ].sum() == 0.0 )
         {
-          os << "<td class="left" style="min-width: 5ch;">&nbsp;</td>\n";
+          os << "<td class=\"left\" style=\"min-width: 5ch;\">&nbsp;</td>\n";
         }
         else
         {
-          os << fmt::format( "<td class="left" style="min-width: 5ch;">{:.2f}</td>\n", casts );
+          os << fmt::format( "<td class=\"left\" style=\"min-width: 5ch;\">{:.2f}</td>\n", casts );
         }
 
         row_totals[ col ] += casts;
@@ -13650,18 +13637,18 @@ public:
       os << "</tr>\n";
     }
 
-    os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" )
-       << "<td class="left"><strong>Total</strong>\n";
+    os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" )
+       << "<td class=\"left\"><strong>Total</strong>\n";
 
     auto total_sum = range::accumulate( row_totals, 0.0 );
     range::for_each( row_totals, [ &os, total_sum ]( auto row_sum ) {
       if ( row_sum == 0.0 )
       {
-        os << "<td class="left" style="min-width: 5ch;">&nbsp;</td>\n";
+        os << "<td class=\"left\" style=\"min-width: 5ch;\">&nbsp;</td>\n";
       }
       else
       {
-        os << fmt::format( "<td class="left" style="min-width: 5ch;"><strong>{:.2f}</strong><br/>({:.2f}%)</td>\n",
+        os << fmt::format( "<td class=\"left\" style=\"min-width: 5ch;\"><strong>{:.2f}</strong><br/>({:.2f}%)</td>\n",
           row_sum, 100 * row_sum / total_sum );
       }
     } );
@@ -13676,15 +13663,15 @@ public:
 
   void mw_consumer_header( report::sc_html_stream& os )
   {
-    os << "<table class="sc sort" style="float: left;margin-right: 10px;">\n"
+    os << "<table class=\"sc sort\" style=\"float: left;margin-right: 10px;\">\n"
        << "<thead>\n"
        << "<tr>\n"
-       << "<th colspan="3"><strong>Maelstrom Weapon Consumers</strong></th>\n"
+       << "<th colspan=\"3\"><strong>Maelstrom Weapon Consumers</strong></th>\n"
        << "</tr>\n"
        << "<tr>\n"
-       << "<th class="toggle-sort" data-sortdir="asc" data-sorttype="alpha">Ability</th>\n"
-       << "<th class="toggle-sort">Actual</th>\n"
-       << "<th class="toggle-sort">% Total</th>\n"
+       << "<th class=\"toggle-sort\" data-sortdir=\"asc\" data-sorttype=\"alpha\">Ability</th>\n"
+       << "<th class=\"toggle-sort\">Actual</th>\n"
+       << "<th class=\"toggle-sort\">% Total</th>\n"
        << "</tr>\n"
        << "</thead>\n";
   }
@@ -13713,17 +13700,17 @@ public:
           continue;
         }
 
-        os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-        os << fmt::format( "<td class="left">{}</td>", report_decorators::decorated_action( **action ) );
-        os << fmt::format( "<td class="left">{:.1f}</td>", action_sum );
-        os << fmt::format( "<td class="left">{:.2f}%</td>", 100.0 * action_sum / total );
+        os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+        os << fmt::format( "<td class=\"left\">{}</td>", report_decorators::decorated_action( **action ) );
+        os << fmt::format( "<td class=\"left\">{:.1f}</td>", action_sum );
+        os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 100.0 * action_sum / total );
         os << "</tr>\n";
       }
 
-      os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-      os << fmt::format( "<td class="left"><strong>Total Spent</strong></td>" );
-      os << fmt::format( "<td class="left">{:.1f}</td>", total );
-      os << fmt::format( "<td class="left">{:.2f}%</td>", 100.0 );
+      os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+      os << fmt::format( "<td class=\"left\"><strong>Total Spent</strong></td>" );
+      os << fmt::format( "<td class=\"left\">{:.1f}</td>", total );
+      os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 100.0 );
   }
 
   void mw_consumer_piechart_contents( report::sc_html_stream& os )
@@ -13783,17 +13770,17 @@ public:
 
   void mw_generator_header( report::sc_html_stream& os )
   {
-    os << "<table class="sc sort even" style="float: left;margin-right: 10px;">\n"
+    os << "<table class=\"sc sort even\" style=\"float: left;margin-right: 10px;\">\n"
        << "<thead>\n"
        << "<tr>\n"
-       << "<th colspan="5"><strong>Maelstrom Weapon Sources</strong></th>\n"
+       << "<th colspan=\"5\"><strong>Maelstrom Weapon Sources</strong></th>\n"
        << "</tr>\n"
        << "<tr>\n"
-       << "<th class="toggle-sort" data-sortdir="asc" data-sorttype="alpha">Ability</th>\n"
-       << "<th class="toggle-sort">Actual</th>\n"
-       << "<th class="toggle-sort">Overflow</th>\n"
-       << "<th class="toggle-sort">% Actual</th>\n"
-       << "<th class="toggle-sort">% Overflow</th>\n"
+       << "<th class=\"toggle-sort\" data-sortdir=\"asc\" data-sorttype=\"alpha\">Ability</th>\n"
+       << "<th class=\"toggle-sort\">Actual</th>\n"
+       << "<th class=\"toggle-sort\">Overflow</th>\n"
+       << "<th class=\"toggle-sort\">% Actual</th>\n"
+       << "<th class=\"toggle-sort\">% Overflow</th>\n"
        << "</tr>\n"
        << "</thead>\n";
   }
@@ -13882,30 +13869,30 @@ public:
           return action->internal_id == i;
         } );
 
-        os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-        os << fmt::format( "<td class="left">{}</td>", report_decorators::decorated_action( **action ) );
-        os << fmt::format( "<td class="left">{:.1f}</td>", ref.first.sum() );
-        os << fmt::format( "<td class="left">{:.1f}</td>", ref.second.sum() );
-        os << fmt::format( "<td class="left">{:.2f}%</td>",
+        os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+        os << fmt::format( "<td class=\"left\">{}</td>", report_decorators::decorated_action( **action ) );
+        os << fmt::format( "<td class=\"left\">{:.1f}</td>", ref.first.sum() );
+        os << fmt::format( "<td class=\"left\">{:.1f}</td>", ref.second.sum() );
+        os << fmt::format( "<td class=\"left\">{:.2f}%</td>",
                           100.0 * ref.first.sum() / actual );
-        os << fmt::format( "<td class="left">{:.2f}%</td>",
+        os << fmt::format( "<td class=\"left\">{:.2f}%</td>",
                           100.0 * ref.second.sum() / overflow );
         os << "</tr>\n";
       }
 
-      os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-      os << fmt::format( "<td class="left"><strong>Overflow Stacks</strong></td>" );
-      os << fmt::format( "<td class="left">{:.1f}</td>", 0.0 );
-      os << fmt::format( "<td class="left">{:.1f}</td>", overflow );
-      os << fmt::format( "<td class="left">{:.2f}%</td>", 0.0 );
-      os << fmt::format( "<td class="left">{:.2f}%</td>", 100.0 * overflow / ( actual + overflow ) );
+      os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+      os << fmt::format( "<td class=\"left\"><strong>Overflow Stacks</strong></td>" );
+      os << fmt::format( "<td class=\"left\">{:.1f}</td>", 0.0 );
+      os << fmt::format( "<td class=\"left\">{:.1f}</td>", overflow );
+      os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 0.0 );
+      os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 100.0 * overflow / ( actual + overflow ) );
 
-      os << fmt::format( "<tr class="{}">\n", row++ & 1 ? "odd" : "even" );
-      os << fmt::format( "<td class="left"><strong>Actual Stacks</strong></td>" );
-      os << fmt::format( "<td class="left">{:.1f}</td>", actual );
-      os << fmt::format( "<td class="left">{:.1f}</td>", 0.0 );
-      os << fmt::format( "<td class="left">{:.2f}%</td>", 100.0 * actual / ( actual + overflow ) );
-      os << fmt::format( "<td class="left">{:.2f}%</td>", 0.0 );
+      os << fmt::format( "<tr class=\"{}\">\n", row++ & 1 ? "odd" : "even" );
+      os << fmt::format( "<td class=\"left\"><strong>Actual Stacks</strong></td>" );
+      os << fmt::format( "<td class=\"left\">{:.1f}</td>", actual );
+      os << fmt::format( "<td class=\"left\">{:.1f}</td>", 0.0 );
+      os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 100.0 * actual / ( actual + overflow ) );
+      os << fmt::format( "<td class=\"left\">{:.2f}%</td>", 0.0 );
   }
 
   void mw_generator_footer( report::sc_html_stream& os )
@@ -13991,15 +13978,15 @@ public:
   {
     if ( p.tracker.has_data() )
     {
-      os << "\t\t\t\t<div class="player-section custom_section">\n";
-      os << "\t\t\t\t\t<h3 class="toggle open">Proc Details</h3>\n"
-          << "\t\t\t\t\t<div class="toggle-content">\n";
+      os << "\t\t\t\t<div class=\"player-section custom_section\">\n";
+      os << "\t\t\t\t\t<h3 class=\"toggle open\">Proc Details</h3>\n"
+          << "\t\t\t\t\t<div class=\"toggle-content\">\n";
 
       p.tracker.output_html( os );
 
       os << "\t\t\t\t\t</div>\n";
 
-      os << "<div class="clear"></div>\n";
+      os << "<div class=\"clear\"></div>\n";
 
       os << "\t\t\t\t\t</div>\n";
     }
@@ -14007,16 +13994,16 @@ public:
     // Custom Class Section
     if ( p.talent.maelstrom_weapon.ok() )
     {
-      os << "\t\t\t\t<div class="player-section custom_section">\n";
-      os << "\t\t\t\t\t<h3 class="toggle open">Maelstrom Weapon Details</h3>\n"
-         << "\t\t\t\t\t<div class="toggle-content">\n";
+      os << "\t\t\t\t<div class=\"player-section custom_section\">\n";
+      os << "\t\t\t\t\t<h3 class=\"toggle open\">Maelstrom Weapon Details</h3>\n"
+         << "\t\t\t\t\t<div class=\"toggle-content\">\n";
 
       mw_generator_header( os );
       mw_generator_contents( os );
       mw_generator_piechart_contents( os );
       mw_generator_footer( os );
 
-      os << "<div class="clear"></div>\n";
+      os << "<div class=\"clear\"></div>\n";
 
       mw_consumer_header( os );
       mw_consumer_contents( os );
@@ -14026,29 +14013,29 @@ public:
       mw_consumer_stack_contents( os );
       mw_consumer_stack_footer( os );
 
-      os << "<div class="clear"></div>\n";
+      os << "<div class=\"clear\"></div>\n";
 
       mw_consumer_piechart_contents( os );
 
       os << "\t\t\t\t\t</div>\n";
 
-      os << "<div class="clear"></div>\n";
+      os << "<div class=\"clear\"></div>\n";
 
       os << "\t\t\t\t\t</div>\n";
     }
 
     if ( p.talent.deeply_rooted_elements.ok() )
     {
-      os << "\t\t\t\t<div class="player-section custom_section">\n";
-      os << "\t\t\t\t\t<h3 class="toggle open">Deeply Rooted Elements Proc Details</h3>\n"
-         << "\t\t\t\t\t<div class="toggle-content">\n";
+      os << "\t\t\t\t<div class=\"player-section custom_section\">\n";
+      os << "\t\t\t\t\t<h3 class=\"toggle open\">Deeply Rooted Elements Proc Details</h3>\n"
+         << "\t\t\t\t\t<div class=\"toggle-content\">\n";
 
       dre_proc_distribution_contents( os );
       dre_uptime_distribution_contents( os );
 
       os << "\t\t\t\t\t</div>\n";
 
-      os << "<div class="clear"></div>\n";
+      os << "<div class=\"clear\"></div>\n";
 
       os << "\t\t\t\t\t</div>\n";
     }

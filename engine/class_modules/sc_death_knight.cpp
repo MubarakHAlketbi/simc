@@ -14634,12 +14634,6 @@ void death_knight_t::init_spells()
   talent.blood.carnage         = find_talent_spell( talent_tree::SPECIALIZATION, "Carnage" );
   talent.blood.umbilicus_eternus = find_talent_spell( talent_tree::SPECIALIZATION, "Umbilicus Eternus" );
   // Apex
-  // Apex -- Dance of Midnight (Midnight 4-rank talent, Blood DK)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: While Dancing Rune Weapon active, parrying has ~20% chance to empower next Heart Strike (rune cost reduction)
-  // R2+3: Each active Dancing Rune Weapon increases dmg by 3% and reduces dmg taken by 4% (up to 6 stacks)
-  // R4: Spending a rune has a chance to spawn an additional Dancing Rune Weapon for 6s
-  // Source: https://www.wowhead.com/spell=1264506 (retrieved 2026-03-17)
   talent.blood.dance_of_midnight_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Dance of Midnight", 1 );
   talent.blood.dance_of_midnight_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Dance of Midnight", 2 );
   talent.blood.dance_of_midnight_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Dance of Midnight", 3 );
@@ -14695,12 +14689,6 @@ void death_knight_t::init_spells()
   talent.frost.frostbane            = find_talent_spell( talent_tree::SPECIALIZATION, "Frostbane" );
   talent.frost.breath_of_sindragosa = find_talent_spell( talent_tree::SPECIALIZATION, "Breath of Sindragosa" );
   // Apex
-  // Apex -- Chosen of Frostbrood (Midnight 4-rank talent, Frost DK)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: Frostwyrm's Fury grants a Haste buff on cast and deals extra damage to one target
-  // R2+3: Frostwyrm's Fury extends active Pillar of Frost; buffs Enduring Strength
-  // R4: Additional Frostwyrm's Fury / Pillar of Frost capstone synergy
-  // Source: https://www.wowhead.com/spell=1265632 (retrieved 2026-03-17)
   talent.frost.chosen_of_frostbrood_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Chosen of Frostbrood", 1 );
   talent.frost.chosen_of_frostbrood_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Chosen of Frostbrood", 2 );
   talent.frost.chosen_of_frostbrood_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Chosen of Frostbrood", 3 );
@@ -14757,12 +14745,6 @@ void death_knight_t::init_spells()
   talent.unholy.reanimation = find_talent_spell( talent_tree::SPECIALIZATION, "Reanimation" );
   talent.unholy.outnumber   = find_talent_spell( talent_tree::SPECIALIZATION, "Outnumber" );
   // Apex
-  // Apex -- Forbidden Knowledge (Midnight 4-rank talent, Unholy DK)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: Army of the Dead cast replaces Death Coil with Necrotic Coil and Epidemic with Graveyard for 30s
-  // R2+3: Putrefied Ghouls grant Lesser Ghoul stacks + Forbidden Sacrifice Mastery buff
-  // R4: Each Magus of the Dead increases Necrotic Coil / Graveyard dmg by 8%; Dread Plague summons ghoul
-  // Source: https://www.wowhead.com/spell=1242158 (retrieved 2026-03-17)
   talent.unholy.forbidden_knowledge_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Forbidden Knowledge", 1 );
   talent.unholy.forbidden_knowledge_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Forbidden Knowledge", 2 );
   talent.unholy.forbidden_knowledge_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Forbidden Knowledge", 3 );

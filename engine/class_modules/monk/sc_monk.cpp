@@ -5455,12 +5455,6 @@ void monk_t::init_spells()
     talent.brewmaster.stormstouts_last_keg             = _ST( "Stormstout's Last Keg" );
     talent.brewmaster.heart_of_the_ox                  = _ST( "Heart of the Ox" );
     talent.brewmaster.mighty_stomp                     = _ST( "Mighty Stomp" );
-    // Apex -- Bring Me Another (Midnight 4-rank talent)
-    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-    // R1: Empty Barrel buff: Breath of Fire generates an Empty Barrel; triggers extra Keg Smash effects
-    // R2+3: Keg Smash CD reduced while Empty Barrel active; damage scaling
-    // R4: Empty Barrel also has a chance to Refreshing Drink (self-heal)
-    // Source: https://www.wowhead.com/spell=1265129 (retrieved 2026-03-17)
     talent.brewmaster.bring_me_another_1               = _ST( "Bring Me Another" );
     talent.brewmaster.bring_me_another_2               = _STID( 1265138 );
     talent.brewmaster.bring_me_another_3               = _STID( 1265141 );
@@ -5547,12 +5541,6 @@ void monk_t::init_spells()
     talent.windwalker.hurricanes_vault               = _ST( "Hurricane's Vault" );
     talent.windwalker.path_of_jade                   = _ST( "Path of Jade" );
     talent.windwalker.singularly_focused_jade        = _ST( "Singularly Focused Jade" );
-    // Apex -- Tigereye Brew (Midnight 4-rank talent)
-    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-    // R1: Tigereye Brew unlocked; auto-attacks grant stacking Crit/Haste buff charges
-    // R2+3: Consuming Tigereye Brew increases damage done; buff value scales per rank
-    // R4: On crit auto-attack, briefly gain a powerful Tigereye Brew 3 damage buff
-    // Source: https://www.wowhead.com/spell=1261703 (retrieved 2026-03-17)
     talent.windwalker.tigereye_brew_1      = find_talent_spell( talent_tree::SPECIALIZATION, "Tigereye Brew", 1 );
     talent.windwalker.tigereye_brew_1_buff = find_spell( 1261724 );
     talent.windwalker.tigereye_brew_2      = find_talent_spell( talent_tree::SPECIALIZATION, "Tigereye Brew", 2 );

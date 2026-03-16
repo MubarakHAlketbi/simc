@@ -5988,12 +5988,7 @@ void mage_t::init_spells()
   talents.arcane_echo             = find_talent_spell( talent_tree::SPECIALIZATION, "Arcane Echo"           );
   talents.resonance               = find_talent_spell( talent_tree::SPECIALIZATION, "Resonance"             );
   talents.impetus                 = find_talent_spell( talent_tree::SPECIALIZATION, "Impetus"               );
-  // Row 8 — Touch of the Archmage (Midnight 4-rank talent)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: Touch of the Magi also applies a stacking debuff amplifying damage
-  // R2+3: Debuff value scales with rank
-  // R4: On expiry, Touch of the Magi explosion deals additional burst damage from debuff stacks
-  // Source: https://www.wowhead.com/spell=1257942 (retrieved 2026-03-17)
+  // Row 8
   talents.touch_of_the_archmage_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1257942                 );
   talents.evocation               = find_talent_spell( talent_tree::SPECIALIZATION, "Evocation"             );
   talents.mana_adept              = find_talent_spell( talent_tree::SPECIALIZATION, "Mana Adept"            );
@@ -6048,13 +6043,7 @@ void mage_t::init_spells()
   talents.spontaneous_combustion = find_talent_spell( talent_tree::SPECIALIZATION, "Spontaneous Combustion" );
   talents.molten_fury            = find_talent_spell( talent_tree::SPECIALIZATION, "Molten Fury"            );
   talents.inflame                = find_talent_spell( talent_tree::SPECIALIZATION, "Inflame"                );
-  // Row 8 — Fired Up (Midnight 4-rank talent)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // NOTE: _3 (1257348) has a lower ID than _2 (1257349) — this is expected, IDs are verified correct
-  // R1: Fire Blast grants Fired Up charges; Combustion increases Fire Blast proc chance
-  // R2+3: Gaining Fired Up reduces Fire Blast cooldown by 2.5s; all Fire damage +3% (+3/6% per rank)
-  // R4: Combustion significantly increases Fired Up proc chance; Fired Up extends Combustion by 1s
-  // Source: https://www.wowhead.com/spell=1257343 (retrieved 2026-03-17)
+  // Row 8
   talents.fired_up_1             = find_talent_spell( talent_tree::SPECIALIZATION, 1257343                  );
   talents.wildfire               = find_talent_spell( talent_tree::SPECIALIZATION, "Wildfire"               );
   talents.fevered_incantation    = find_talent_spell( talent_tree::SPECIALIZATION, "Fevered Incantation"    );
@@ -6111,12 +6100,7 @@ void mage_t::init_spells()
   talents.deep_shatter           = find_talent_spell( talent_tree::SPECIALIZATION, "Deep Shatter"           );
   talents.white_out              = find_talent_spell( talent_tree::SPECIALIZATION, "White Out"              );
   talents.wintertide             = find_talent_spell( talent_tree::SPECIALIZATION, "Wintertide"             );
-  // Row 8 — Hand of Frost (Midnight 4-rank talent)
-  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
-  // R1: Frost's signature new apex - initial mechanic enabling Hand of Frost procs
-  // R2+3: Increased proc frequency / value scaling
-  // R4: Rain of Fire ticks every 2nd tick trigger Hand of Frost against targets
-  // Source: https://www.wowhead.com/spell=1262935 (retrieved 2026-03-17)
+  // Row 8
   talents.hand_of_frost_1        = find_talent_spell( talent_tree::SPECIALIZATION, 1262935                  );
   talents.glacial_attunement     = find_talent_spell( talent_tree::SPECIALIZATION, "Glacial Attunement"     );
   talents.heart_of_ice           = find_talent_spell( talent_tree::SPECIALIZATION, "Heart of Ice"           );
