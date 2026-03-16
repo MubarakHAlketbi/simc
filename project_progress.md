@@ -362,13 +362,13 @@ No DPS impact. Registered as player_talent_t for completeness. No further action
 
 ---
 
-#### 11. Shaman Elemental Orbit Mechanics (MEDIUM)
-elemental_orbit (383010) is registered but its gameplay effect (extra Elemental Shield + Earth
-Shield on self AND ally simultaneously) has no mechanical wiring yet. The effect is a Dummy aura.
-In a pure DPS context, an extra Earth Shield stack on self provides minor passive healing.
-For Elemental/Enhancement the impact is low in patchwork sims but non-zero.
-Action: Implement elemental_orbit buff interaction in sc_shaman.cpp if earth_shield proc
-  provides measurable DPS (through Resurgence/mana or similar). Otherwise mark N/A for DPS.
+#### 11. Shaman Elemental Orbit Mechanics — CLOSED N/A (LOW)
+elemental_orbit (383010) is a Dummy aura. Effect: +1 Elemental Shield slot (allows Lightning
+Shield + Earth Shield simultaneously) and Earth Shield on self + ally at same time.
+Assessment (2026-03-16): Earth Shield is healing-only. Lightning Shield in SimC is modeled as
+on/off (1 stack) gating lightning_capacitor proc — the extra shield slot does not change
+lightning_shield_damage proc behavior. No numeric DPS coefficient in spell data.
+Verdict: No DPS mechanic needed. Talent registered correctly. Closed 2026-03-16.
 
 ---
 
@@ -401,5 +401,5 @@ Action: File GitHub issue tagged needs-data; leave as In Beta.
 | 5 | Verify Midnight item scaling curve covers MID1 ilevels (289 range) | MEDIUM | Audit sc_item_data.cpp |
 | 6 | Audit Druid NYI talents for DPS-relevance (aessinas_renewal, perfectlyhoned_instincts, etc.) | MEDIUM | Fetch spell pages, triage |
 | 7 | Demonology Warlock Apex Talent name (1264137) — re-fetch when Wowhead updates | LOW | Monitor Wowhead |
-| 8 | Shaman Elemental Orbit gameplay hook | LOW | Assess DPS impact |
+|| 8 | Shaman Elemental Orbit gameplay hook — CLOSED N/A (2026-03-16) | LOW | Done |
 || 9 | Evoker Improved Defy Fate — CLOSED N/A for DPS (2026-03-16) | LOW | Done |
