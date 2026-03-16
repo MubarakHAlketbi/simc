@@ -1389,16 +1389,16 @@ public:
       player_talent_t on_a_paler_horse;  // NYI
       player_talent_t death_charge;      // NYI
       player_talent_t mograines_might;
-      player_talent_t horsemens_aid;
-      player_talent_t pact_of_the_apocalypse;  // NYI
+      player_talent_t horsemens_aid;             // NOTE: not in info_base.md talent table (minor utility node)
+      player_talent_t pact_of_the_apocalypse;  // NYI — NOTE: not in info_base.md talent table
       player_talent_t ride_or_die;
       player_talent_t whitemanes_famine;
       player_talent_t nazgrims_conquest;
       player_talent_t trollbanes_icy_fury;
       player_talent_t let_terror_reign;
       player_talent_t hungering_thirst;
-      player_talent_t fury_of_the_horsemen;
-      player_talent_t a_feast_of_souls;
+      player_talent_t fury_of_the_horsemen;  // NOTE: not in info_base.md talent table
+      player_talent_t a_feast_of_souls;      // NOTE: not in info_base.md talent table
       player_talent_t mawsworn_menace;
       player_talent_t unholy_armaments;
       player_talent_t apocalypse_now;

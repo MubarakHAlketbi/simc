@@ -2096,7 +2096,8 @@ void priest_t::init_spells_shadow()
   talents.shadow.vision_of_nzoth_buff   = find_spell( 1243114 );  // Idol of N'Zoth 100 stack buff
   talents.shadow.idol_of_nzoth          = ST( "Idol of N'Zoth" );
   talents.shadow.idol_of_yoggsaron      = ST( "Idol of Yogg-Saron" );
-  talents.shadow.idol_of_cthun          = ST( "Idol of C'Thun" );
+  talents.shadow.idol_of_cthun          = ST( \"Idol of C'Thun\" );
+  // TODO: implement — "Death" (ID 1240364) new Midnight Shadow talent; missing from code entirely
   // Apex
   talents.shadow.void_apparitions_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1264096 );
   talents.shadow.void_apparitions_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1264104 );
