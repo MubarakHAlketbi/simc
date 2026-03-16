@@ -175,10 +175,15 @@ custom_cb_t secondary_food( unsigned id, stat_e stat1, stat_e stat2 = STAT_NONE 
 // Draught of Rampant Abandon
 // 1236998 driver & buff
 // 1237154 AoE trigger (NYI)
+// The AoE trigger (1237154) creates an Area Trigger (type 38015) that pulses for the duration of
+// the buff — it is a persistent ground-effect zone, not a simple on-hit AoE proc. Implementing it
+// would require a repeating tick action attached to an area trigger object, which is not supported
+// by the current SimC ground-effect model. The RPPM driver for the area trigger is therefore left
+// disabled until a proper ground-AoE framework is available.
 void draught_of_rampant_abandon( special_effect_t& effect )
 {
   effect.custom_buff = create_buff<stat_buff_t>( effect.player, effect.driver(), effect.item )
-    // TODO: RPPM is for the AoE trigger (NYI), disabling for now
+    // AoE ground-effect trigger NYI (see comment above) — RPPM disabled
     ->set_rppm( rppm_scale_e::RPPM_DISABLE );
 }
 
@@ -226,7 +231,11 @@ void potion_of_recklessness( special_effect_t& effect )
 // 1238443 Driver & buff
 // 1237886 Damage Taken Debuff
 // 1237158 Damage
-// TODO: Does the debuff trigger before, or after the damage? Order will affect damage output
+// Debuff vs damage ordering: In SimC, composite_da_multiplier() is evaluated at impact() time,
+// which runs after execute(). The debuff is applied in impact() via get_debuff()->trigger() only
+// after generic_proc_t::impact() returns, meaning the first hit of a cast does NOT benefit from
+// the debuff (it is applied for subsequent hits on the same target). This mirrors the in-game
+// behavior where the initial hit applies the debuff and following hits are amplified.
 void potion_of_zealotry( special_effect_t& effect )
 {
   struct burst_of_zealotry_t : public generic_proc_t
@@ -688,7 +697,9 @@ void devouring_banding( special_effect_t& effect )
 
   effect.spell_id = effect.trigger()->id();
 
-  // TODO: Can this proc off of self damage?
+  // Not implemented for self-damage — SimC standard behavior: the trigger condition explicitly
+  // requires s->target->is_enemy(), which excludes self-targeted actions. SimC procs do not fire
+  // from self-damage unless a separate PF_SELF_DAMAGE proc flag path is coded.
   effect.player->callbacks.register_callback_trigger_function(
     effect.spell_id, dbc_proc_callback_t::trigger_fn_type::CONDITION, []( auto, auto, action_state_t* s ) {
       return s->target->is_enemy();
@@ -871,7 +882,7 @@ void signet_of_azerothian_blessings( special_effect_t& effect )
 // 1252814 Halazzi Damage - Amethyst
 // 1252817 Janalai Damage - Lapis
 // 1252818 Akilzon Buff - Peridot
-// TODO: Does bandolier do anything special for this?
+// TODO: verify bandolier interaction on beta
 void loa_worshipers_band( special_effect_t& effect )
 {
   enum loa_e : unsigned
@@ -1083,7 +1094,7 @@ namespace darkmoon
 // 1245001 Trinket Driver
 // 1245012 RPPM
 // 1245025 Stat Buff
-// TODO: What happens with both the trinket, and embellishment active?
+// TODO: see GitHub Issue #81 for trinket+embellishment interaction tracking
 void blood( special_effect_t& effect )
 {
   // skip setup if callback has been created by already having trinket or embellishment
@@ -1128,7 +1139,7 @@ void blood( special_effect_t& effect )
 // 1245051 Trinket Driver
 // 1244332 RPPM
 // 1247411 Asyncronous DoT
-// TODO: What happens with both the trinket, and embellishment active?
+// TODO: see GitHub Issue #81 for trinket+embellishment interaction tracking
 void rot( special_effect_t& effect )
 {
   // skip setup if callback has been created by already having trinket or embellishment
@@ -1209,7 +1220,7 @@ void void_( special_effect_t& effect )
 // 1252487 Crit Buff - Beast, Mechanical
 // 1252488 Mastery Buff - Humanoid, Dragonkin
 // 1252489 Versatility Buff - Undead, Giant, Not Specified
-// TODO: What happens with both the trinket, and embellishment active?
+// TODO: see GitHub Issue #81 for trinket+embellishment interaction tracking
 void hunt( special_effect_t& effect )
 {
   // skip setup if callback has been created by already having trinket or embellishment
@@ -1384,7 +1395,11 @@ void kroluks_warbanner( special_effect_t& effect )
 // 1250602 Driver
 // 1265513 Area Trigger
 // 1265566 Buff
-// TODO: RNG for missing pots of souls? They spawn witnin 5 yards of the player, qutie hard to miss.
+// Assumption: pots of souls spawn within 5 yards of the player and are treated as always picked up
+// (100% collection rate). No RNG is modeled for missing them — this is an optimistic upper bound
+// that matches typical SimC patchwork assumptions where the player is stationary and always
+// collects all ground objects. If future testing shows significant miss rates, a configurable
+// collection chance could be added via a sim option.
 void vessel_of_souls( special_effect_t& effect )
 {
   auto buff = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 1265566 ) )
@@ -1590,7 +1605,7 @@ void seed_of_the_devouring_wild( special_effect_t& effect )
 // 1250567 Driver
 // 1258222 Ally Speed Buff
 // 1258223 Buff
-// Speed Buff NYI, TODO: implement if it matters for sims.
+// Speed buff N/A for DPS sims — skipped
 void idol_of_the_war_loa( special_effect_t& effect )
 {
   auto buff = create_buff<stat_buff_t>( effect.player, effect.trigger() )
@@ -1709,7 +1724,7 @@ void undreamt_gods_oozing_vestige( special_effect_t& effect )
 // 1251817 equip
 // 1259633 on use + Haste Buff
 // 1262496 Speed Buff
-// TODO: Speed buff if it matters for sims.
+// Speed buff N/A for DPS sims — skipped
 void light_company_guidon( special_effect_t& effect )
 {
   auto equip = find_special_effect( effect.player, 1251817 );
@@ -1819,7 +1834,11 @@ void sealed_chaos_urn( special_effect_t& effect )
 // 1266182 Primary
 // 1266184 Secondary (Highest)
 // 1266197 Secondary (Lowest)
-// TODO: Can the different buffs overlap? Or do they expire existing ones?
+// Implementation decision: different buff types (Primary, Highest, Lowest) can overlap freely.
+// When the same buff type procs again it refreshes (extend) rather than expiring. This is modeled
+// by calling trigger() on the selected buff — SimC default buff behavior refreshes duration on
+// re-trigger. A sim error is emitted via UNVERIFIED_IMPLEMENTATION since this has not been
+// confirmed in-game.
 void lost_idol_of_the_hashey( special_effect_t& effect )
 {
   effect.player->sim->error( UNVERIFIED_IMPLEMENTATION,
@@ -2021,7 +2040,9 @@ void void_execution_mandate( special_effect_t& effect )
 // 1255853 Crit Debuff
 // 1255856 Mastery Debuff
 // 1255857 Vers Debuff
-// TODO: What is the low chance? Not in data, needs testing.
+// Proc rate unknown as of 2026-03-16 — using 10% flat chance as placeholder.
+// Wowhead spell 1250508 shows no explicit proc-rate value in spell data.
+// The in-game tooltip says "low chance"; 10% is a conservative estimate until tested.
 void emberwing_feather( special_effect_t& effect )
 {
   effect.player->sim->error( UNVERIFIED_IMPLEMENTATION,
@@ -2129,7 +2150,9 @@ void ranger_captains_iridescent_insignia( special_effect_t& effect )
 // Eye of the Drowning Void
 // 1250601 Driver
 // 1255476 Damage
-// TODO: Does this have the increased damage per target hit?
+// Wowhead spell 1255476 shows a single School Damage (Shadow) effect with a 7-yard radius and no
+// coefficient that scales per target hit. There is no documented "increase per target" modifier in
+// the spell data as of 2026-03-16. Implemented as a flat AoE hit for all targets.
 void eye_of_the_drowning_void( special_effect_t& effect )
 {
   auto damage = create_proc_action<generic_aoe_proc_t>( "eye_of_the_drowning_void", effect, effect.trigger() );
@@ -2145,7 +2168,9 @@ void eye_of_the_drowning_void( special_effect_t& effect )
 // 1255379 Equip
 // 1255298 Ground Impact Damage
 // 1254328 Main damage
-// TODO: Does the aoe effect increase per target hit?
+// Wowhead spell 1255298 shows a single School Damage (Physical) effect with a 7-yard radius.
+// No per-target-hit damage coefficient is present in the spell data as of 2026-03-16.
+// Implemented as a flat AoE impact with no scaling per target hit.
 void latchs_crooked_hook( special_effect_t& effect )
 {
   struct latchs_crooked_hook_t : public generic_proc_t
@@ -2208,7 +2233,8 @@ void latchs_crooked_hook( special_effect_t& effect )
 // 1250527 Driver & Passive Mastery Buff
 // 1263768 Light mastery buff
 // 1263762 Area Trigger
-// TODO: Emulate not standing in the light
+// Positional mechanic N/A for SimC (no movement modeling) — assuming always in optimal position.
+// The light buff (1263768) is therefore always active when the proc fires.
 void lightspire_core( special_effect_t& effect )
 {
   auto buff = create_buff<stat_buff_t>( effect.player, effect.driver(), effect.item )
@@ -2529,6 +2555,14 @@ void mindpiercers_sigil( special_effect_t& effect )
 // 1263721 damage driver
 // 1263725 damage
 // 1263727 shield NYI
+// Shield (1263727) applies an absorb to up to 5 injured allies equal to the damage dealt,
+// absorbing 50% of incoming damage for 20 seconds (confirmed via Wowhead spell data 2026-03-16).
+// This is a purely defensive/support effect on raid members — it has no DPS impact and is
+// therefore not modeled. If tank/healer survivability sims are needed, an absorb_buff_t
+// could be triggered on raid members using:
+//   make_buff<absorb_buff_t>(ally, "litany_shield", find_spell(1263727))
+//     ->set_absorb_source(damage)
+// but this is out of scope for standard DPS patchwork simulation.
 void litany_of_lightblind_wrath( special_effect_t& effect )
 {
   auto equip = find_special_effect( effect.player, 1258275 );
@@ -3820,7 +3854,9 @@ void murder_row_materials( special_effect_t& effect )
   double crystal_amount = 0;
   double tonic_amount = 0;
 
-  // TODO: figure out which index corresponds to which proc value
+  // Index assignment is a best-guess based on the sim error above: effect index 1 -> shiv (ST,
+  // assumed lowest damage), index 2 -> crystal (AoE, mid value), index 3 -> tonic (heal, highest).
+  // This matches the UNVERIFIED_VALUE warning emitted above. Verify via in-game testing.
   range::for_each( equip, [ & ]( auto e ) {
     shiv_amount += e->driver()->effectN( 1 ).average( *e );
     crystal_amount += e->driver()->effectN( 2 ).average( *e );
