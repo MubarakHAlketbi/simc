@@ -172,8 +172,8 @@ Here is the data organized into Markdown tables.
 | Feral | 92 | 92 | 0 | Complete | No action needed |
 | Guardian | 90 | 90 | 0 | Complete | No action needed |
 | **Evoker** | | | | | |
-| Devastation   | 96 | 96 | 0 | In Beta | walloping_blow, strike_from_above, potent_mana, regenerative_magic added to class tree struct+init (2026-03-16) |
-| Augmentation  | 97 | 97 | 0 | In Beta | Above 4 + improved_defy_fate (1268881) + nozdormu_adept (431715) all registered (2026-03-16) |
+| Devastation   | 96 | 96 | 0 | In Beta | All 4 registered; nozdormu_adept: Prescience CD -2s + crit% wired in prescience_t + composite_player_target_crit_chance (2026-03-16). walloping_blow N/A (utility knockback). |
+| Augmentation  | 97 | 97 | 0 | In Beta | Same as Devastation; improved_defy_fate + nozdormu_adept registered (2026-03-16). nozdormu_adept mechanics wired. |
 | **Hunter** | | | | | |
 | Beast Mastery | 87 | 87 | 0 | Complete | No action needed |
 | Marksmanship | 82 | 82 | 0 | Complete | No action needed |
@@ -193,14 +193,14 @@ Here is the data organized into Markdown tables.
 | **Rogue** | | | | | |
 | Assassination | 82 | 82 | 0 | Complete | No action needed |
 | Outlaw | 82 | 82 | 0 | Complete | No action needed |
-| Subtlety | 83 | 83 | 0 | In Beta | improved_find_weakness (382512) added to subtlety_talents_t struct + init (2026-03-16). Armor pen modifier integration pending verification. |
+| Subtlety | 83 | 83 | 0 | In Beta | improved_find_weakness (382512): registered + armor pen % added to composite_player_target_armor() (2026-03-16). |
 | **Shaman** | | | | | |
 | Elemental    | 83 | 70 | 13 | In Beta | elemental_orbit (383010) + primordial_bond (1279819) added to class tree struct+init (2026-03-16). Remaining 13 are utility/N/A |
 | Enhancement  | 84 | 71 | 13 | In Beta | Same 15 Shaman class tree — elemental_orbit + primordial_bond now registered (2026-03-16). Remaining 13 N/A |
 | **Warlock** | | | | | |
-| Affliction  | 82 | 82 | 0 | In Beta | All 31 Warlock class tree talents now registered in sc_warlock.hpp + sc_warlock_init.cpp (2026-03-16). Full implementation of DPS mechanics pending. |
-| Demonology  | 84 | 84 | 0 | In Beta | Same 31 class tree — all registered (2026-03-16). Full DPS mechanic implementation pending. |
-| Destruction | 80 | 80 | 0 | In Beta | Same 31 class tree — all registered (2026-03-16). Full DPS mechanic implementation pending. |
+| Affliction  | 82 | 82 | 0 | In Beta | All 31 class tree talents registered + DPS mechanics wired (2026-03-16): Gorefiend's Avarice (tick speed), Empowered Drain Life (ta_multiplier), Dark Pact (absorb action), Pact of Nathrezim (leech). |
+| Demonology  | 84 | 84 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (2026-03-16). |
+| Destruction | 80 | 80 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (2026-03-16). |
 | **Warrior** | | | | | |
 | Arms | 67 | 67 | 0 | Complete | No action needed |
 | Fury | 83 | 83 | 0 | Complete | No action needed |

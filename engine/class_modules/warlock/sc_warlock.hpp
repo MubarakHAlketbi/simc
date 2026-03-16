@@ -1175,6 +1175,8 @@ public:
   void init_finished() override;
   void invalidate_cache( cache_e c ) override;
   double composite_mastery() const override;
+  // Pact of the Nathrezim: +2% Leech — Source: https://www.wowhead.com/beta/spell=1270690 (2026-03-16)
+  double composite_leech() const override;
   std::unique_ptr<expr_t> create_expression( util::string_view name_str ) override;
   std::string default_potion() const override { return warlock_apl::potion( this ); }
   std::string default_flask() const override { return warlock_apl::flask( this ); }

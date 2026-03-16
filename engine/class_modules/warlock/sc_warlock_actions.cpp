@@ -685,12 +685,67 @@ using namespace helpers;
     }
   };
 
+  // Custom state for Drain Life — snapshots Gorefiend's Avarice tick-speed modifier
+  // Source: https://www.wowhead.com/beta/spell=1270701 (Gorefiend's Avarice, 2026-03-16)
+  struct drain_life_state_t : public action_state_t
+  {
+    double tick_time_multiplier;
+
+    drain_life_state_t( action_t* action, player_t* target )
+      : action_state_t( action, target ), tick_time_multiplier( 1.0 )
+    { }
+
+    void initialize() override
+    {
+      action_state_t::initialize();
+      tick_time_multiplier = 1.0;
+    }
+
+    void copy_state( const action_state_t* s ) override
+    {
+      action_state_t::copy_state( s );
+      tick_time_multiplier = debug_cast<const drain_life_state_t*>( s )->tick_time_multiplier;
+    }
+  };
+
   struct drain_life_t : public warlock_spell_t
   {
     drain_life_t( warlock_t* p, util::string_view options_str )
       : warlock_spell_t( "Drain Life", p, p->warlock_base.drain_life, options_str )
     {
       channeled = true;
+    }
+
+    action_state_t* new_state() override
+    { return new drain_life_state_t( this, target ); }
+
+    // Gorefiend's Avarice: snapshot tick-time multiplier at cast
+    // "channels 100% faster" = half the tick time (2x tick rate)
+    // Source: https://www.wowhead.com/beta/spell=1270701 (2026-03-16)
+    void snapshot_state( action_state_t* s, result_amount_type rt ) override
+    {
+      auto* dl_state = debug_cast<drain_life_state_t*>( s );
+      dl_state->tick_time_multiplier = 1.0;
+      if ( p()->talents.gorefiends_avarice.ok() )
+        dl_state->tick_time_multiplier *= 0.5;  // 100% faster = half tick time
+      warlock_spell_t::snapshot_state( s, rt );
+    }
+
+    double tick_time_pct_multiplier( const action_state_t* s ) const override
+    {
+      auto m = warlock_spell_t::tick_time_pct_multiplier( s );
+      m *= debug_cast<const drain_life_state_t*>( s )->tick_time_multiplier;
+      return m;
+    }
+
+    // Empowered Drain Life: increases tick damage coefficient
+    // Source: https://www.wowhead.com/beta/spell=1271689 (2026-03-16)
+    double composite_ta_multiplier( const action_state_t* s ) const override
+    {
+      double m = warlock_spell_t::composite_ta_multiplier( s );
+      if ( p()->talents.empowered_drain_life.ok() )
+        m *= 1.0 + p()->talents.empowered_drain_life->effectN( 1 ).percent();
+      return m;
     }
 
     void execute() override
@@ -997,6 +1052,45 @@ using namespace helpers;
         return false;
 
       return spell_t::target_ready( candidate_target );
+    }
+  };
+
+  // Dark Pact: sacrifice 20% current HP to gain 200% of that as absorb shield (20s, 1min CD)
+  // Source: https://www.wowhead.com/beta/spell=108416 (2026-03-16)
+  struct dark_pact_t : public warlock_spell_t
+  {
+    propagate_const<absorb_buff_t*> shield;
+
+    dark_pact_t( warlock_t* p, util::string_view options_str )
+      : warlock_spell_t( "dark_pact", p, p->talents.dark_pact, options_str ),
+        shield( nullptr )
+    {
+      harmful      = false;
+      may_miss     = false;
+      use_off_gcd  = true;
+      target       = p;
+    }
+
+    void init_finished() override
+    {
+      warlock_spell_t::init_finished();
+      shield = make_buff<absorb_buff_t>( p(), "dark_pact_shield", p()->talents.dark_pact )
+               ->set_absorb_source( p()->get_stats( "dark_pact" ) );
+    }
+
+    void execute() override
+    {
+      warlock_spell_t::execute();
+      // Sacrifice a fraction of current HP — effectN(1) should be ~0.20 (20%)
+      double hp_fraction = p()->talents.dark_pact->effectN( 1 ).percent();
+      if ( hp_fraction <= 0.0 ) hp_fraction = 0.20;  // fallback if spell data absent
+      double hp_cost = p()->resources.current[ RESOURCE_HEALTH ] * hp_fraction;
+      p()->resource_loss( RESOURCE_HEALTH, hp_cost, nullptr, this );
+      // Grant absorb = effectN(2) * sacrificed HP — should be ~2.0 (200%)
+      double absorb_mult = p()->talents.dark_pact->effectN( 2 ).percent();
+      if ( absorb_mult <= 0.0 ) absorb_mult = 2.0;  // fallback if spell data absent
+      double absorb_amount = hp_cost * absorb_mult;
+      shield->trigger( 1, absorb_amount );
     }
   };
 
@@ -4911,6 +5005,9 @@ using namespace helpers;
       return new interrupt_t( action_name, this, options_str );
     if ( action_name == "soulburn" )
       return new soulburn_t( this, options_str );
+    // Dark Pact: sacrifice HP for absorb shield — Source: https://www.wowhead.com/beta/spell=108416 (2026-03-16)
+    if ( action_name == "dark_pact" )
+      return new dark_pact_t( this, options_str );
 
     return nullptr;
   }

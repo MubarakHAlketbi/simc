@@ -350,6 +350,18 @@ double warlock_t::composite_mastery() const
   return m;
 }
 
+// Pact of the Nathrezim: grants +2% Leech passively
+// Source: https://www.wowhead.com/beta/spell=1270690 (2026-03-16)
+double warlock_t::composite_leech() const
+{
+  double l = parse_player_effects_t::composite_leech();
+
+  if ( talents.pact_of_the_nathrezim.ok() )
+    l += talents.pact_of_the_nathrezim->effectN( 1 ).percent();
+
+  return l;
+}
+
 // Used to determine how many Wild Imps are waiting to be spawned from Hand of Guldan
 int warlock_t::get_spawning_imp_count()
 { return as<int>( wild_imp_spawns.size() ); }

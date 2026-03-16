@@ -7182,6 +7182,11 @@ public:
 
     may_crit = true;
 
+    // Nozdormu Adept: Prescience cooldown reduced by 2 seconds
+    // Source: https://www.wowhead.com/beta/spell=431715 (2026-03-16)
+    if ( p->talent.nozdormu_adept.ok() )
+      cooldown->duration -= p->talent.nozdormu_adept->effectN( 1 ).time_value();
+
     add_option( opt_bool( "use_auto", use_auto ) );
     parse_options( options_str );
   }
@@ -10635,6 +10640,11 @@ double evoker_t::composite_player_target_crit_chance( player_t* target ) const
       m += talent.flameshaper.conduit_of_flame->effectN( 1 ).percent();
     }
   }
+
+  // Nozdormu Adept: +1% critical strike chance (Devastation + Augmentation)
+  // Source: https://www.wowhead.com/beta/spell=431715 (2026-03-16)
+  if ( talent.nozdormu_adept.ok() )
+    m += talent.nozdormu_adept->effectN( 2 ).percent();
 
   return m;
 }

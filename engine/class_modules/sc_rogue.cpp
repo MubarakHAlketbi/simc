@@ -8788,7 +8788,15 @@ double rogue_t::composite_player_target_armor( player_t* target ) const
 {
   double a = player_t::composite_player_target_armor( target );
 
-  a *= 1.0 - buffs.find_weakness->value();
+  if ( buffs.find_weakness->check() )
+  {
+    double pen = buffs.find_weakness->value();
+    // Improved Find Weakness: amplifies armor penetration beyond the baseline value
+    // Source: https://www.wowhead.com/beta/spell=382512 (2026-03-16)
+    if ( talent.subtlety.improved_find_weakness.ok() )
+      pen += talent.subtlety.improved_find_weakness->effectN( 1 ).percent();
+    a *= 1.0 - pen;
+  }
 
   return a;
 }
