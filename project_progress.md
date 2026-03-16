@@ -198,9 +198,9 @@ Here is the data organized into Markdown tables.
 | Elemental    | 83 | 70 | 13 | In Beta | elemental_orbit (383010) + primordial_bond (1279819) added to class tree struct+init (2026-03-16). Remaining 13 are utility/N/A |
 | Enhancement  | 84 | 71 | 13 | In Beta | Same 15 Shaman class tree — elemental_orbit + primordial_bond now registered (2026-03-16). Remaining 13 N/A |
 | **Warlock** | | | | | |
-| Affliction  | 82 | 82 | 0 | In Beta | All 31 class tree talents registered + DPS mechanics wired (2026-03-16): Gorefiend's Avarice (tick speed), Empowered Drain Life (ta_multiplier), Dark Pact (absorb action), Pact of Nathrezim (leech). |
-| Demonology  | 84 | 84 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (2026-03-16). |
-| Destruction | 80 | 80 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (2026-03-16). |
+| Affliction  | 82 | 82 | 0 | In Beta | All 31 class tree talents registered + DPS mechanics wired: Gorefiend's Avarice (tick speed), Empowered Drain Life (ta_multiplier), Dark Pact (absorb action), Pact of Nathrezim (leech), Infernal Beneficiary (pet heal 400% of caster heal in drain_life tick). |
+| Demonology  | 84 | 84 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (includes Infernal Beneficiary 2026-03-16). |
+| Destruction | 80 | 80 | 0 | In Beta | Same as Affliction — shared class tree mechanics implemented (includes Infernal Beneficiary 2026-03-16). |
 | **Warrior** | | | | | |
 | Arms | 67 | 67 | 0 | Complete | No action needed |
 | Fury | 83 | 83 | 0 | Complete | No action needed |

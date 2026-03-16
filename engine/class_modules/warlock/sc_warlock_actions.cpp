@@ -748,6 +748,23 @@ using namespace helpers;
       return m;
     }
 
+    // Infernal Beneficiary: Drain Life heals primary demon at 400% of caster heal
+    // Source: https://www.wowhead.com/beta/spell=1265810 (2026-03-16)
+    void tick( dot_t* d ) override
+    {
+      warlock_spell_t::tick( d );
+
+      if ( p()->talents.infernal_beneficiary.ok() && p()->warlock_pet_list.active )
+      {
+        double leech_pct = composite_leech( d->state );
+        if ( leech_pct > 0.0 )
+        {
+          double pet_heal = d->state->result_amount * leech_pct * 4.0;
+          p()->warlock_pet_list.active->resource_gain( RESOURCE_HEALTH, pet_heal, nullptr, this );
+        }
+      }
+    }
+
     void execute() override
     {
       warlock_spell_t::execute();
