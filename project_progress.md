@@ -46,7 +46,7 @@ Here is the data organized into Markdown tables.
 | Outlaw | In Beta | In Beta | In Beta | In Beta |
 | Subtlety | In Beta | In Beta | In Beta | In Beta |
 | **Shaman** | | | | |
-| Elemental | NYI | NYI | NYI | NYI |
+| Elemental | Implemented | Implemented | Implemented | Implemented |
 | Enhancement | Implemented | Implemented | Implemented | Implemented |
 | Restoration | N/A | N/A | N/A | N/A |
 | **Warlock** | | | | |

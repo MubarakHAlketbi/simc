@@ -1373,6 +1373,7 @@ public:
     buff_t* thunderstrike_ward;
     buff_t* purging_flames;
     buff_t* mid1_ele_2pc;
+    // 4pc: buffed during stormkeeper window via set_bonus check
 
     buff_t* storms_eye;
 
@@ -3190,7 +3191,10 @@ struct shaman_spell_t : public shaman_spell_base_t<spell_t>
 
     if ( affected_by_stormkeeper_damage_tier && p()->buff.stormkeeper->up() && !p()->sk_during_cast && !background)
     {
-      m *= 1.0 + p()->buff.stormkeeper->data().effectN(4).percent();
+      // Source: wowhead.com/spell=1264863 (2026-03-16)
+      // MID1 4pc: +25% damage to Lightning Bolt and Chain Lightning during Stormkeeper
+      if ( p()->sets->has_set_bonus( SHAMAN_ELEMENTAL, MID1, B4 ) )
+        m *= 1.0 + p()->sets->set( SHAMAN_ELEMENTAL, MID1, B4 )->effectN( 2 ).percent();
     }
 
     return m;
@@ -8506,8 +8510,16 @@ struct stormkeeper_t : public shaman_spell_t
     }
 
     p()->summon_ancestor();
-    p()->buff.stormkeeper->trigger( data().effectN( 5 ).base_value() );
+    // Source: wowhead.com/spell=1264863 (2026-03-16)
+    // MID1 4pc: Stormkeeper grants 1 additional stack (+1 to base 2 stacks)
+    int sk_stacks = as<int>( data().effectN( 5 ).base_value() )
+      + ( p()->sets->has_set_bonus( SHAMAN_ELEMENTAL, MID1, B4 )
+          ? as<int>( p()->sets->set( SHAMAN_ELEMENTAL, MID1, B4 )->effectN( 3 ).base_value() )
+          : 0 );
+    p()->buff.stormkeeper->trigger( sk_stacks );
 
+    // Source: wowhead.com/spell=1264862 (2026-03-16)
+    // MID1 2pc: Casting Stormkeeper grants 15% haste for 10 sec
     p()->buff.mid1_ele_2pc->trigger();
 
     if ( reset_maelstrom_gain )
