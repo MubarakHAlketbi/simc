@@ -50,9 +50,9 @@ Here is the data organized into Markdown tables.
 | Enhancement | Implemented | Implemented | Implemented | Implemented |
 | Restoration | NYI | NYI | NYI | NYI |
 | **Warlock** | | | | |
-| Affliction | NYI | NYI | NYI | NYI |
-| Demonology | NYI | NYI | NYI | NYI |
-| Destruction | NYI | NYI | NYI | NYI |
+| Affliction | In Beta | NYI | In Beta | In Beta |
+| Demonology | In Beta | NYI | In Beta | In Beta |
+| Destruction | In Beta | NYI | In Beta | In Beta |
 | **Warrior** | | | | |
 | Arms | Implemented | In Beta | Implemented | Implemented |
 | Fury | Implemented | In Beta | Implemented | Implemented |

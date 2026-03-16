@@ -162,6 +162,9 @@ using namespace helpers;
         parse_effects( p()->buffs.nightfall, effect_mask_t( true ).disable( 3 ) ); // 264571/1260279 // Effect #3 is handled in a custom action_state
         parse_effects( p()->buffs.darkglare_presence ); // 1280663
         parse_effects( p()->buffs.shard_instability ); // 1260269
+        // MID1 Set Bonuses
+        parse_effects( p()->tier.wl_affliction_12_0_class_set_2pc ); // 1264869 - UA and SoC +10% damage
+        parse_effects( p()->tier.wl_affliction_12_0_class_set_4pc, effect_mask_t( true ).disable( 1 ) ); // 1264870 - Agony +20% periodic (Effect #1 initial stacks handled in agony_t)
       }
 
       // Demonology
@@ -170,6 +173,8 @@ using namespace helpers;
         parse_effects( p()->warlock_base.master_demonologist ); // 77219
         parse_effects( p()->buffs.demonic_core ); // 264173
         parse_effects( p()->buffs.power_siphon ); // 334581
+        // MID1 Set Bonuses
+        parse_effects( p()->tier.wl_demonology_12_0_class_set_2pc ); // 1264871 - Hand of Gul'dan +15% damage
       }
 
       // Destruction
@@ -182,6 +187,9 @@ using namespace helpers;
         parse_effects( p()->buffs.conflagration_of_chaos_sb ); // 387110
         parse_effects( p()->buffs.crashing_chaos ); // 417282 // RoF is dummy
         parse_effects( p()->buffs.alythesss_ire ); // 1244947
+        // MID1 Set Bonuses
+        parse_effects( p()->tier.wl_destruction_12_0_class_set_2pc ); // 1264873 - Chaos Bolt and Rain of Fire +5% damage
+        parse_effects( p()->tier.wl_destruction_12_0_class_set_4pc, effect_mask_t( true ).disable( 1 ) ); // 1264874 - Conflagrate +10% damage (Effect #1 extra shards handled in conflagrate_t)
       }
 
       // Diabolist
@@ -2920,7 +2928,12 @@ using namespace helpers;
       const timespan_t& delay = delay_dur_adjusts.first;
       const timespan_t& dur_adjust = delay_dur_adjusts.second;
 
-      auto dogs = p()->warlock_pet_list.dreadstalkers.spawn( p()->talents.call_dreadstalkers_2->duration() + dur_adjust, count );
+      timespan_t spawn_duration = p()->talents.call_dreadstalkers_2->duration() + dur_adjust;
+      // MID1 4pc: Dreadstalkers last 3 additional seconds
+      if ( p()->active_4pc<MID1>() )
+        spawn_duration += p()->tier.wl_demonology_12_0_class_set_4pc->effectN( 2 ).time_value();
+
+      auto dogs = p()->warlock_pet_list.dreadstalkers.spawn( spawn_duration, count );
 
       for ( auto d : dogs )
       {
@@ -3750,6 +3763,9 @@ using namespace helpers;
       energize_type = action_energize::PER_HIT;
       energize_resource = RESOURCE_SOUL_SHARD;
       energize_amount = ( p->talents.conflagrate_2->effectN( 1 ).base_value() ) / 10.0;
+      // MID1 4pc: Conflagrate generates 2 additional Soul Shard fragments
+      if ( p->sets->has_set_bonus( WARLOCK_DESTRUCTION, MID1, B4 ) )
+        energize_amount += p->tier.wl_destruction_12_0_class_set_4pc->effectN( 1 ).base_value() / 10.0;
 
       cooldown->hasted = true;
 
