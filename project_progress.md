@@ -243,7 +243,7 @@ Here is the data organized into Markdown tables.
 | Elemental Shaman | Feedback Loop | 1270061 | Yes | Overload+35%; crit+5%; 25% double Overload |
 | Enhancement Shaman | Storm Unleashed | 1262713 | Yes | Maelstrom→Crash Lightning ignore CD; CL electrocute 2x |
 | Affliction Warlock | Shadow of Nathreza | 1261984 | Yes | Haunt→demonic soul DoT+AoE; Wrath of Nathreza(1262028) proc |
-| Demonology Warlock | (1264137 — incomplete) | 1264137 | Yes | Soulkeeper+Willbreaker(1264367); guide data incomplete |
+| Demonology Warlock | Dominion of Argus | 1276163 | Yes | Portal to Argus 15s; every 2x HoGuldan summons demon+refunds shard; 3 ranks (1276163/1276190/1276222) fully implemented 2026-03-16 |
 | Destruction Warlock | Embers of Nihilam | 1265770 | Yes | Incinerate→Echo of Sargeras(1265884); CB/SB/RoF also proc |
 | Arms Warrior | Master of Warfare | 1269391 | Yes | Overpower→Heroic Strike(1269383)+armor pen stacks |
 | Fury Warrior | Rampaging Berserker | 1269308 | Yes | Rampage→Berserk+Str stacks; Recklessness+3 Berserk+50% duration |
@@ -401,6 +401,6 @@ GitHub Issue #81 filed 2026-03-16 (needs-data). Leave as In Beta until tested on
 | 4 | Resolve NYI in unique_gear_midnight.cpp (Draught AoE, Vessel shield, Emberwing proc rate) | MEDIUM | Code + testing |
 | 5 | Verify Midnight item scaling curve covers MID1 ilevels (289 range) | MEDIUM | Audit sc_item_data.cpp |
 | 6 | Audit Druid NYI talents for DPS-relevance (aessinas_renewal, perfectlyhoned_instincts, etc.) | MEDIUM | Fetch spell pages, triage |
-| 7 | Demonology Warlock Apex Talent name (1264137) — re-fetch when Wowhead updates | LOW | Monitor Wowhead |
+|| 7 | Demonology Warlock Apex = Dominion of Argus (1276163) — fully implemented, old ID 1264137 removed from beta | LOW | DONE 2026-03-16 |
 || 8 | Shaman Elemental Orbit gameplay hook — CLOSED N/A (2026-03-16) | LOW | Done |
 || 9 | Evoker Improved Defy Fate — CLOSED N/A for DPS (2026-03-16) | LOW | Done |
