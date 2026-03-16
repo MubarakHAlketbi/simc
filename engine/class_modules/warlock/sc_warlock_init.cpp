@@ -102,6 +102,8 @@ namespace warlock
     talents.swift_artifice          = find_talent_spell( talent_tree::CLASS, "Swift Artifice" );          // Should be ID 452902
     talents.frequent_traveler       = find_talent_spell( talent_tree::CLASS, "Frequent Traveler" );       // Should be ID 1265801
     talents.demonic_resilience      = find_talent_spell( talent_tree::CLASS, "Demonic Resilience" );      // Should be ID 389590
+    // NOTE: not in info_base.md — Soul Link (ID 108415) is in info_base.md as a class talent but is NOT registered here.
+    // Soul Link is a passive utility/survivability talent (splits 10% damage to your demon pet); no direct DPS relevance per audit rules.
 
     talents.summoners_embrace = find_talent_spell( talent_tree::SPECIALIZATION, "Summoner's Embrace" ); // Should be ID 453105
 
