@@ -334,8 +334,8 @@ When a new spec is added to the game or needs to be audited:
 - The talent calculator pages are ~200-350KB each after JS execution.
 - Wowhead sometimes uses `/beta/spell=` and sometimes `/spell=` in hrefs on the same page — the regex handles both.
 - Some aria-labels are truncated at apostrophes or special characters (e.g. "Hunter" instead of "Hunter's Avoidance"). Cross-reference with the slug when the name looks wrong.
-- The Demonology Warlock Apex Talent (spell 1264137) has incomplete data in the guide as of 2026-03-16 — the guide comment section confirms this is a known Wowhead error.
+- The Demonology Warlock Apex Talent was previously listed as spell 1264137 (incomplete/removed). As of 2026-03-16 re-audit, the correct talent is **Dominion of Argus** (ranks: 1276163 / 1276190 / 1276222), fully implemented in SimC. The old ID no longer exists in the beta database.
 
 ---
 
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-16 (caveat updated: Demo Warlock Apex resolved)*

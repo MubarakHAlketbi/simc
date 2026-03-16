@@ -1,6 +1,6 @@
 # AGENTS.md - SimulationCraft Midnight Expansion Update
 
-**Last Updated: March 16, 2026**
+**Last Updated: March 16, 2026 (Talent Data Extraction section expanded with mandatory Firecrawl guidance)**
 
 ## Objective
 
@@ -210,7 +210,44 @@ This bidirectional linkage ensures the high-level dashboard stays current and pr
 
 ## Talent Data Extraction
 
-When working on talent-related tasks — whether implementing missing talents, auditing spec trees, or verifying Apex Talent mechanics — use the methodology documented in **`talent_extraction.md`**.
+> **MANDATORY:** Any time you need to fetch, verify, or audit talent data from Wowhead — whether
+> implementing missing talents, auditing spec trees, verifying Apex Talent mechanics, or checking
+> spell IDs — you **MUST** use the methodology in **`talent_extraction.md`** rather than plain
+> HTTP fetches or `web_extract`. The Wowhead talent calculator is a React SPA that returns an
+> empty shell without JavaScript execution. Only Firecrawl (which runs JS) returns the actual
+> talent tree data. `web_extract` and `web_search` are suitable for individual spell pages
+> (https://www.wowhead.com/beta/spell=XXXXX) but NOT for the talent calculator pages.
+
+### Quick Reference: Which Tool for Which Job
+
+| Task | Tool to use |
+|------|-------------|
+| Fetch a spec's full talent tree | Firecrawl + `talent_extraction.md` methodology |
+| Look up a single spell by ID | `web_extract("https://www.wowhead.com/beta/spell=XXXXX")` |
+| Audit all missing talents in a spec | Firecrawl → parse DOM → diff vs SimC (see `talent_extraction.md` §3–5) |
+| Re-run full 33-spec audit | `/tmp/fetch_batch.py` + `/tmp/compare_talents.py` (see §6) |
+| Fetch Apex Talents guide | `web_extract("https://www.wowhead.com/guide/midnight/apex-talents-overview")` |
+| Find a talent's spell ID by name | Firecrawl on the talent-calc page, or `web_search` + confirm on spell page |
+
+### Using Firecrawl in Code
+
+```python
+import os
+from firecrawl import Firecrawl
+
+app = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
+
+# Talent calculator page (React SPA — MUST use Firecrawl, not web_extract)
+url = "https://www.wowhead.com/talent-calc/warlock/affliction/hellcaller"
+result = app.scrape(url=url, formats=["html"])
+html = result.html  # ~200-350KB, fully rendered DOM
+
+# Individual spell page (static — web_extract works fine here)
+# web_extract(["https://www.wowhead.com/beta/spell=1270701"])
+```
+
+The `FIRECRAWL_API_KEY` environment variable is set in the agent environment. Each talent-calc
+page costs ~1 Firecrawl credit. The full 33-spec audit costs ~33 credits.
 
 ### What talent_extraction.md covers
 
@@ -225,26 +262,28 @@ When working on talent-related tasks — whether implementing missing talents, a
 - **Known false negatives** and how to handle them
 - **Step-by-step instructions** for auditing a new spec or re-running the full audit
 
-### Talent Audit Status (2026-03-16)
+### Talent Audit Status (updated 2026-03-16)
 
 A full audit of all 33 DPS/tank specs has been completed and documented. Results:
 
-- **Coverage: 94.7%** (2,644 / 2,792 Wowhead talents found in SimC)
-- **Complete (0 missing):** DH (all 3), Druid (all 3), Hunter (all 3), Mage (all 3), Paladin (2), Rogue (all 3), Warrior (all 3), Shadow Priest
-- **Needs work:** Warlock all specs (31 missing — class tree), Shaman (15 missing — class tree), Evoker Augmentation (6 missing)
-- **Minor gaps:** DK all specs (3), Monk (2), Subtlety Rogue (1), Devastation Evoker (4)
+- **Coverage: ~100%** (all previously missing talents now registered or closed as N/A)
+- **All specs Complete:** DH, Druid, Hunter, Mage, Paladin, Rogue (incl. Subtlety IFW wired),
+  Warrior, Shadow Priest, Shaman (Elemental Orbit closed N/A), DK (Blood Bond/Death Notes/Death
+  Defiance registered N/A), Monk (Reinvigoration/Silent Sanctuary registered N/A), Evoker
+  (Nozdormu Adept + improved_defy_fate wired/closed), Warlock (all 31 class tree talents wired)
+- **Apex Talents:** All 33 specs fully implemented. Demo Warlock = Dominion of Argus (1276163).
 
-Full findings and implementation priority queue: `task_dossiers/talent_audit_wowhead_2026-03-16.md`
+Full findings: `task_dossiers/talent_audit_wowhead_2026-03-16.md`
 
 ### Priority Queue for Remaining Talent Work
 
-Before picking up any talent implementation task, check this order:
+All previously identified talent gaps have been resolved as of 2026-03-16. If new gaps are
+found via a fresh Firecrawl audit, work them in this order:
 
-1. **Warlock class tree DPS passives** — Gorefiend's Avarice (1270701), Pact of Nathrezim (1270690), Oppressive Darkness (1270255), Pact of Gluttony (386689), Teachings of the Black Harvest (385881), Fel Synergy (389367), Infernal Beneficiary (1265810), Dark Pact (108416), Empowered Drain Life (1271689)
-2. **Shaman Elemental Orbit** (383010) — new Midnight DPS proc talent, affects both Elemental and Enhancement
-3. **Evoker:** Strike from Above (1267206), Nozdormu Adept (431715), Improved Defy Fate (1268881)
-4. **Subtlety Rogue:** Improved Find Weakness (382512) — verify armor pen modifier
-5. **DK class tree:** Blood Bond (1267028), Death Notes (1266819), Death Defiance (1266818) — verify DPS impact first
+1. Any talent with a direct numeric DPS effect (damage %, haste %, crit %)
+2. Any talent that gates or modifies a core rotational ability
+3. Resource-modifying talents (energy regen, cooldown reduction on damaging spells)
+4. Defensive/utility talents — register with `// N/A for DPS` comment, no mechanic needed
 
 ### Apex Talents
 
@@ -253,6 +292,9 @@ All Apex Talent nodes for all 33 DPS/tank specs are **already present in SimC**.
 - `talent_extraction.md` (how to re-fetch from the guide if data needs refreshing)
 
 The Apex Talent guide URL: `https://www.wowhead.com/guide/midnight/apex-talents-overview`
+
+**Demonology Warlock Apex:** Dominion of Argus — 3 ranks (1276163 / 1276190 / 1276222), fully
+implemented in `sc_warlock_init.cpp`. Old placeholder ID 1264137 no longer exists in beta.
 
 ---
 
@@ -318,7 +360,7 @@ This prevents repeated exploration and conserves tokens. The file includes a qui
 | `AGENTS.md` | This file — agent workflow, rules, and reference index |
 | `project_progress.md` | ⭐ Master status tracker — all specs, gear, talents, Apex Talents |
 | `project_structure.md` | ⭐ Codebase navigation — maps tasks to source files (740 lines) |
-| `talent_extraction.md` | ⭐ How to extract talent data from Wowhead talent calculator and diff against SimC |
+| `talent_extraction.md` | ⭐ **MANDATORY for any talent work** — Firecrawl methodology, DOM structure, extraction scripts, SimC comparison. Use this instead of web_extract for talent-calc pages (React SPA). |
 | `TASK_DOSSIER_TEMPLATE.md` | Template for creating new task dossiers |
 | `ISSUE_TAGS.md` | All GitHub issue labels with colors and descriptions |
 | `task_dossiers/talent_audit_wowhead_2026-03-16.md` | Full talent audit results — 33 specs, missing talents, priority queue |
