@@ -248,3 +248,158 @@ Here is the data organized into Markdown tables.
 | Arms Warrior | Master of Warfare | 1269391 | Yes | Overpower→Heroic Strike(1269383)+armor pen stacks |
 | Fury Warrior | Rampaging Berserker | 1269308 | Yes | Rampage→Berserk+Str stacks; Recklessness+3 Berserk+50% duration |
 | Prot Warrior | Phalanx | 1269311 | Yes | Thunder Clap→Shield Slam wave 198% AP; Shield Block→SS+10%+20% crit |
+
+---
+
+### Expansion Transition Gap Analysis (2026-03-16)
+
+Systematic review of everything that could be missed or wrong when transitioning SimC to the Midnight expansion.
+
+---
+
+#### SEVERITY KEY
+- HIGH   — silently produces wrong DPS numbers
+- MEDIUM — affects some builds / some specs
+- LOW    — cosmetic, minor, or edge case
+
+---
+
+#### 1. Missing Player Profiles (MEDIUM)
+The following specs have APL files but NO corresponding MID1 profile in profiles/MID1/:
+- Balance Druid (APL exists: druid_balance.simc) — no MID1_Druid_Balance.simc
+- Augmentation Evoker (APL exists: evoker_augmentation.simc) — no MID1_Evoker_Augmentation.simc
+- Assassination Rogue (APL exists: rogue_assassination.simc) — no MID1_Rogue_Assassination.simc
+- Warlock Demonology base (only hero variant MID1_Warlock_Demonology_Soul_Harvester.simc exists)
+Action: Create base MID1 profiles for these 4 specs so CI spec-tests can cover them.
+
+---
+
+#### 2. APL Readiness — Not All Specs Validated (MEDIUM-HIGH)
+All APLs are "In Beta." The following are highest-risk because their general changes are also In Beta:
+- DK Unholy, all Druid specs, all Evoker specs, all Mage specs, all Monk specs,
+  Paladin Prot/Ret, all Rogue specs, all Warlock specs.
+The new talents wired this session (Gorefiend's Avarice, Dark Pact, Improved Find Weakness,
+Nozdormu Adept) are NOT referenced in any APL yet — players cannot use them in sims.
+Action: Add dark_pact, drain_life (if Gorefiend's Avarice talented), etc. to warlock APLs.
+
+---
+
+#### 3. Unique Gear NYI Items in unique_gear_midnight.cpp (MEDIUM)
+19 TODO/NYI markers found. Known open items:
+- Draught of Rampant Abandon: AoE trigger (spell 1237154) NYI — RPPM disabled
+- Kroluk's Warbanner / similar: speed buff (spell 1258222/1258223) NYI
+- Vessel of Souls: shield component (spell 1263727) NYI
+- Volatile Void Suffuser: AoE per-hit increase unclear (TODO)
+- Emberwing Feather: low-chance proc — proc rate unknown, needs testing
+- Several trinkets: questions about interaction when both trinket and embellishment are active
+These affect all trinket In Beta rows — they are correctly marked In Beta.
+
+---
+
+#### 4. Class-Level NYI Talents (MEDIUM)
+Found explicit TODO: NYI markers still in class modules:
+- Druid: aessinas_renewal, perfectlyhoned_instincts, symbiotic_relationship,
+  wellhoned_instincts, ursols_warding, entangling_vortex, durability_of_nature, moondust,
+  and multiple Restoration talents (N/A for DPS sims but still flagged)
+- Monk Windwalker: ascension effect#2 (energy regen) NYI
+- Warrior: interpose, field_dressing NYI (utility, low DPS impact)
+- Rogue: deaths_arrival NYI-in-game
+Action: Verify which are DPS-relevant; file GitHub issues for any that affect DPS.
+
+---
+
+#### 5. Hero Talent Tree Coverage (MEDIUM)
+Warlock hero trees Diabolist, Hellcaller, Soul Harvester are implemented in code.
+Missing: Warlock Demonology base profile (only Soul Harvester variant exists).
+Missing: any hero tree variants for Balance Druid, Augmentation Evoker, Assassination Rogue.
+Check: Demonology Warlock Apex Talent (spell 1264137) has incomplete guide data — name unknown,
+  only Willbreaker(1264367) proc documented. Should be revisited when Wowhead updates.
+
+---
+
+#### 6. Midnight Item Scaling Curve (MEDIUM)
+The Midnight item squish curve (ItemSquishEra.db2) is partially implemented in
+sc_item_data.cpp (has_midnight_scaling flag, get_midnight_scaling_values).
+Verify: All MID1 items use ilevel=289 in profiles. Check combat_rating_multiplier tables
+are populated for the Midnight ilevel range. If base_ilevel or req_level from the midnight
+squish is wrong, ALL stat calculations will be off for Midnight gear.
+Files to audit: engine/dbc/sc_item_data.cpp lines 189-291, engine/dbc/sc_const_data.cpp.
+
+---
+
+#### 7. Secondary Stat DR Curves (HIGH if changed)
+Secondary stat diminishing returns curves (haste/crit/mastery/vers) are expansion-specific
+and stored in DBC data. These were last extracted for TWW. If Midnight changed the DR breakpoints
+or softcaps, all secondary stat calculations will be silently wrong.
+Action: Verify dbc_t::combat_rating_multiplier() tables cover Midnight ilevel/level range.
+Verify with a known stat calculator (Wowhead character planner) for level 90 char.
+
+---
+
+#### 8. Base Stats at Level 90 (HIGH if wrong)
+Level cap changed to 90 (confirmed: profiles use level=90, Apex Talents unlock at 81/84/90).
+Base stat tables (strength, agi, int, stamina by class/level) must be populated up to level 90.
+If the DBC extraction missed level 86-90 entries, base stat calculations will be wrong.
+Action: Simulate a naked level-90 character and verify primary stats match Wowhead character
+  planner for each class at level 90.
+
+---
+
+#### 9. New Talents Wired But Not In APLs (MEDIUM)
+The following talents implemented in commit f96ef79 have no APL entries yet:
+- dark_pact (Warlock all specs) — defensive cooldown, should be in APL if DPS-relevant
+- drain_life with gorefiends_avarice — APL should adjust drain_life priority when talented
+- improved_find_weakness (Rogue Subtlety) — passive, no APL change needed
+- nozdormu_adept (Evoker) — passive prescience CD reduction, may affect prescience APL timing
+Action: Update warlock_affliction.simc, warlock_demonology.simc, warlock_destruction.simc APLs
+  to include dark_pact. Review evoker_augmentation.simc for prescience timing with shorter CD.
+
+---
+
+#### 10. Walloping Blow Confirmed N/A (LOW)
+Spell 387341 only modifies Wing Buffet (label 1425) and Tail Swipe (label 1523) knockback/daze.
+No DPS impact. Registered as player_talent_t for completeness. No further action needed.
+
+---
+
+#### 11. Shaman Elemental Orbit Mechanics (MEDIUM)
+elemental_orbit (383010) is registered but its gameplay effect (extra Elemental Shield + Earth
+Shield on self AND ally simultaneously) has no mechanical wiring yet. The effect is a Dummy aura.
+In a pure DPS context, an extra Earth Shield stack on self provides minor passive healing.
+For Elemental/Enhancement the impact is low in patchwork sims but non-zero.
+Action: Implement elemental_orbit buff interaction in sc_shaman.cpp if earth_shield proc
+  provides measurable DPS (through Resurgence/mana or similar). Otherwise mark N/A for DPS.
+
+---
+
+#### 12. Evoker improved_defy_fate Mechanics (LOW)
+Improves Defy Fate healing +100% and reduces CD by 1 min. Defy Fate is a healing/defensive CD
+for Augmentation. In DPS-context sims the healing component is irrelevant. The CD reduction
+could marginally affect uptime but Augmentation's DPS is driven by Ebon Might/Breath of Eons.
+Action: No DPS mechanic needed; registered correctly. Close this item.
+
+---
+
+#### 13. Trinket Interaction Questions (LOW-MEDIUM)
+Multiple TODOs about behavior when trinket + embellishment are both active:
+- Locus-Walker's Ribbon + embellishment
+- Ranger-Captain's Iridescent Insignia + embellishment
+- Resonant Roarstone + embellishment
+These affect specific gearset sim accuracy but are edge cases outside default profiles.
+Action: File GitHub issue tagged needs-data; leave as In Beta.
+
+---
+
+#### Summary: Remaining Work Priority
+
+| Priority | Item | Severity | Action |
+| :---: | :--- | :--- | :--- |
+| 1 | Create missing profiles: Balance Druid, Aug Evoker, Assassination Rogue, Demo Warlock base | MEDIUM | Add profiles/MID1/ files |
+| 2 | Verify secondary stat DR curves / base stats at level 90 | HIGH | Run naked sim + compare to Wowhead |
+| 3 | Add dark_pact to warlock APLs; review prescience timing for nozdormu_adept | MEDIUM | Edit APL .simc files |
+| 4 | Resolve NYI in unique_gear_midnight.cpp (Draught AoE, Vessel shield, Emberwing proc rate) | MEDIUM | Code + testing |
+| 5 | Verify Midnight item scaling curve covers MID1 ilevels (289 range) | MEDIUM | Audit sc_item_data.cpp |
+| 6 | Audit Druid NYI talents for DPS-relevance (aessinas_renewal, perfectlyhoned_instincts, etc.) | MEDIUM | Fetch spell pages, triage |
+| 7 | Demonology Warlock Apex Talent name (1264137) — re-fetch when Wowhead updates | LOW | Monitor Wowhead |
+| 8 | Shaman Elemental Orbit gameplay hook | LOW | Assess DPS impact |
+| 9 | Evoker Improved Defy Fate — close as N/A for DPS | LOW | Update progress table |
