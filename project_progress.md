@@ -300,11 +300,12 @@ These affect all trinket In Beta rows — they are correctly marked In Beta.
 Found explicit TODO: NYI markers still in class modules:
 - Druid: aessinas_renewal, perfectlyhoned_instincts, symbiotic_relationship,
   wellhoned_instincts, ursols_warding, entangling_vortex, durability_of_nature, moondust,
-  and multiple Restoration talents (N/A for DPS sims but still flagged)
-- Monk Windwalker: ascension effect#2 (energy regen) NYI
-- Warrior: interpose, field_dressing NYI (utility, low DPS impact)
-- Rogue: deaths_arrival NYI-in-game
-Action: Verify which are DPS-relevant; file GitHub issues for any that affect DPS.
+  and multiple Restoration talents (N/A for DPS sims but still flagged) — see Item 6 (medium)
+- Monk Windwalker: ascension effect#2 (energy regen) NYI — see Item med3
+- Warrior: interpose (protect ally, utility N/A), field_dressing (ally bandage heal, N/A) — both
+  registered, no DPS mechanic needed. CLOSED N/A 2026-03-16.
+- Rogue: deaths_arrival NYI-in-game (spell does not exist in current beta build). CLOSED as
+  in-game NYI — no action until Blizzard adds the spell. 2026-03-16.
 
 ---
 
@@ -380,13 +381,13 @@ sc_evoker.cpp (ID 1268881). No DPS mechanic implementation needed. Closed 2026-0
 
 ---
 
-#### 13. Trinket Interaction Questions (LOW-MEDIUM)
+#### 13. Trinket Interaction Questions (LOW-MEDIUM) — GitHub Issue #81
 Multiple TODOs about behavior when trinket + embellishment are both active:
 - Locus-Walker's Ribbon + embellishment
 - Ranger-Captain's Iridescent Insignia + embellishment
 - Resonant Roarstone + embellishment
 These affect specific gearset sim accuracy but are edge cases outside default profiles.
-Action: File GitHub issue tagged needs-data; leave as In Beta.
+GitHub Issue #81 filed 2026-03-16 (needs-data). Leave as In Beta until tested on beta server.
 
 ---
 
