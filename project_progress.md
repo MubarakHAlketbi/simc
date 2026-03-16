@@ -308,22 +308,71 @@ All DPS-relevant NYIs resolved 2026-03-16:
 
 ---
 
-#### 5. Hero Talent Tree Coverage (MEDIUM)
+#### 5. Hero Talent Tree Coverage — AUDITED 2026-03-16 (MEDIUM)
 Warlock hero trees Diabolist, Hellcaller, Soul Harvester are implemented in code.
-Missing: Warlock Demonology base profile (only Soul Harvester variant exists).
-Missing: any hero tree variants for Balance Druid, Augmentation Evoker, Assassination Rogue.
-Check: Demonology Warlock Apex Talent (spell 1264137) has incomplete guide data — name unknown,
-  only Willbreaker(1264367) proc documented. Should be revisited when Wowhead updates.
+Warlock Demonology base profile created (commit 6b8e643). Demo Apex = Dominion of Argus (1276163) DONE.
+
+Balance Druid hero trees (HERO_KEEPER_OF_THE_GROVE=23, HERO_ELUNES_CHOSEN=24):
+  Code: FULLY IMPLEMENTED in sc_druid.cpp — all HT() registrations present for both trees
+  (harmony_of_the_grove, groves_inspiration, treants_of_the_moon, control_of_the_dream, etc.
+  for Keeper; elunes_grace, the_light_of_elune, atmospheric_exposure, etc. for Elune's Chosen).
+  APL: balance_apl_ptr.inc references hero_tree.keeper_of_the_grove with kotg_st sub-list.
+  Profile: MID1_Druid_Balance.simc exists (base, no hero tree variant profile).
+  Gap: No hero tree variant profile (e.g. MID1_Druid_Balance_Keeper.simc) — low priority
+  since the APL already branches on hero_tree.keeper_of_the_grove internally.
+
+Augmentation Evoker hero trees (HERO_CHRONOWARDEN=38, HERO_FLAMESHAPER=37, HERO_SCALECOMMANDER=36):
+  Code: ALL THREE fully implemented in sc_evoker.cpp — talent structs chronowarden_t,
+  flameshaper_t, scalecommander_t with complete effect wiring (temporal_burst, chrono_flame,
+  enkindle, twin_flame, melt_armor, mass_disintegrate, extended_battle, command_squadron, etc.)
+  Profile: MID1_Evoker_Augmentation.simc exists (base, no hero tree variant profile).
+  Gap: No hero tree variant profiles — same note as Balance; APL branching covers hero trees.
+
+Assassination Rogue hero trees (HERO_FATEBOUND=52, HERO_DEATHSTALKER=53):
+  Code: BOTH fully implemented in sc_rogue.cpp — fatebound_talents_t struct (delivered_doom,
+  fatebound coin flip/heads/tails mechanics, fatebound_lucky_coin) and deathstalker_talents_t
+  struct (deathstalkers_mark, follow_the_blood, momentum_of_despair, unshakeable_drive).
+  Profile: MID1_Rogue_Assassination.simc exists (base, no hero tree variant profile).
+  Compare: MID1_Rogue_Outlaw_Trickster.simc exists as a hero tree variant for Outlaw.
+  Gap: No hero tree variant profiles for Assassination — low priority.
+
+Summary: All three previously-flagged specs have hero tree CODE fully implemented.
+The only gaps are missing hero tree VARIANT PROFILES (separate .simc files per hero tree).
+This is low priority since the default profiles exercise the base spec and APLs branch internally.
 
 ---
 
-#### 6. Midnight Item Scaling Curve (MEDIUM)
-The Midnight item squish curve (ItemSquishEra.db2) is partially implemented in
-sc_item_data.cpp (has_midnight_scaling flag, get_midnight_scaling_values).
-Verify: All MID1 items use ilevel=289 in profiles. Check combat_rating_multiplier tables
-are populated for the Midnight ilevel range. If base_ilevel or req_level from the midnight
-squish is wrong, ALL stat calculations will be off for Midnight gear.
-Files to audit: engine/dbc/sc_item_data.cpp lines 189-291, engine/dbc/sc_const_data.cpp.
+#### 6. Midnight Item Scaling Curve — VERIFIED 2026-03-16 (MEDIUM)
+The Midnight item squish curve is FULLY IMPLEMENTED and working correctly.
+
+Squish curve implementation (sc_item_data.cpp lines 185-306):
+  ITEM_BONUS_SQUISH_CURVE (type 48): applies SQUISH_CURVE_MIDNIGHT (92181) when value_3==1.
+  ITEM_BONUS_SCALE_CONFIG (type 49): also applies squish curve for items with player_level<=80.
+  ITEM_BONUS_POST_SQUISH_ITEM_LEVEL (type 53): fine-tunes ilevel post-squish.
+  has_midnight_scaling flag set correctly; blocks duplicate ITEM_BONUS_ILEVEL overrides.
+
+Squish curve data (item_scaling.inc): 54 entries for curve 92181 covering squished ilevels
+  1..1300 input → 10..170+ output. The mapping correctly handles the Midnight ilevel range.
+  Entries verified: curve[1]=10 (minimum), up to curve[53]=1300→170 (cap).
+
+Combat rating multiplier tables (sc_scale_data.inc):
+  __combat_ratings_mult_by_ilvl[][1300] — array covers all 1300 ilevels (MAX_ILEVEL=1300).
+  Ilevel 289 verified present: value ≈ 0.996836 (armor row at index 288). Non-zero — GOOD.
+  Ilevel 285-290 all populated with non-zero values confirming full Midnight ilevel coverage.
+
+Profile bonus_ids audit (MID1_Druid_Feral.simc as sample):
+  13574/13575 (type=16 in bonus.inc): These are ITEM_BONUS_ADD_RANK-style entries pointing
+    to item effects (Loom of Fate effect chain) — handled by ITEM_BONUS_ADD_ITEM_EFFECT path.
+  4795: Not found in item_bonus.inc (bonus_id not registered) — indicates item uses
+    static ilevel=289 from profile, no dynamic scaling needed; works correctly.
+  1808/8790/8960/12214 etc.: Crafted item bonuses (MOD type), handled by existing code.
+
+Engine sanity check: ./engine/simc profiles/MID1/MID1_Druid_Feral.simc iterations=1
+  Result: CLEAN RUN — no errors, 7770 events, 300s fight simulated successfully.
+  Feral Wildstalker profile completed with "Waiting: 6.32%" (normal GCD cap behavior).
+
+Verdict: Midnight item scaling curve is COMPLETE and correct for ilevel 289 MID1 gear.
+  No gaps found in squish curve data, combat rating multiplier tables, or bonus_id handling.
 
 ---
 
