@@ -1,0 +1,90 @@
+druid="MID1_Druid_Guardian_Druid_of_the_Claw"
+source=default
+spec=guardian
+level=90
+race=night_elf
+timeofday=night
+role=tank
+position=front
+
+# Default consumables
+potion=lights_potential_2
+flask=flask_of_the_magisters_2
+food=harandar_celebration
+augmentation=void_touched
+temporary_enchant=main_hand:thalassian_phoenix_oil_2
+
+# This default action priority list is automatically created based on your character.
+# It is a attempt to provide you with a action list that is both simple and practicable,
+# while resulting in a meaningful and good simulation. It may not result in the absolutely highest possible dps.
+# Feel free to edit, adapt and improve it to your own needs.
+# SimulationCraft is always looking for updates and improvements to the default action lists.
+
+# Guardian APL can be found at https://github.com/dreamgrove/dreamgrove/blob/master/sims/bear/guardian.txt
+
+# Executed before combat begins. Accepts non-harmful actions only.
+actions.precombat=bear_form,if=buff.bear_form.down
+actions.precombat+=/snapshot_stats
+
+# Executed every time the actor is available.
+actions=call_action_list,name=cooldowns
+actions+=/call_action_list,name=bear
+
+actions.bear=bear_form,if=!buff.bear_form.up
+actions.bear+=/maul,if=buff.ravage.up&rage>=40&!talent.killing_blow.enabled
+actions.bear+=/maul,if=buff.ravage.up&rage>=60&talent.killing_blow.enabled
+actions.bear+=/mangle,if=dot.red_moon.ticking
+actions.bear+=/rake,if=!buff.cat_form.up&talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&active_enemies<=5&rage<30
+actions.bear+=/cat_form,if=!buff.cat_form.up&!talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&active_enemies<=5&rage<30
+actions.bear+=/moonkin_form,if=!buff.moonkin_form.up&cooldown.heart_of_the_wild.up&active_enemies>=6
+actions.bear+=/thrash,target_if=refreshable|(dot.thrash.stack<5&talent.flashing_claws.rank=2|dot.thrash.stack<4&talent.flashing_claws.rank=1|dot.thrash.stack<3&!talent.flashing_claws.enabled)
+actions.bear+=/ironfur,if=!buff.ironfur.up&!buff.ravage.up&!target.cooldown.pause_action.remains
+actions.bear+=/ferocious_bite,if=(buff.cat_form.up&buff.feline_potential.up&(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!dot.rip.refreshable)
+actions.bear+=/rip,if=(buff.cat_form.up&buff.feline_potential.up)
+actions.bear+=/red_moon,if=cooldown.mangle.up&!dot.red_moon.ticking
+actions.bear+=/mangle,if=((buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&buff.feline_potential_counter.stack<6&talent.wildpower_surge.enabled)
+actions.bear+=/shred,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&!dot.rake.refreshable&talent.fluid_form.enabled)
+actions.bear+=/rake,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&talent.fluid_form.enabled)
+actions.bear+=/maul,if=!buff.ravage.up&rage>=90&talent.fount_of_strength.enabled
+actions.bear+=/maul,if=!(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!buff.ravage.up&rage>=40&!talent.killing_blow.enabled
+actions.bear+=/maul,if=!buff.ravage.up&rage>=60&!talent.fount_of_strength.enabled
+actions.bear+=/maul,if=!(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!buff.ravage.up&rage>=60&talent.killing_blow.enabled&talent.fount_of_strength.enabled
+actions.bear+=/thrash,if=talent.lunar_calling.enabled
+actions.bear+=/mangle,if=(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)|talent.red_moon.enabled&(cooldown.red_moon.remains>3&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)))
+actions.bear+=/mangle,if=!talent.red_moon.enabled&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled))
+actions.bear+=/thrash
+actions.bear+=/moonfire,if=buff.galactic_guardian.up&buff.bear_form.up&talent.boundless_moonlight.enabled&!talent.red_moon.enabled
+actions.bear+=/swipe_bear,if=(talent.lunation.enabled&active_enemies>4)|!talent.lunation.enabled|talent.lunation.enabled&talent.red_moon.enabled
+actions.bear+=/moonfire,if=(talent.lunation.enabled)&buff.bear_form.up&!talent.red_moon.enabled
+
+actions.cooldowns=use_items
+actions.cooldowns+=/potion,if=buff.lunar_beam.up
+actions.cooldowns+=/blood_fury
+actions.cooldowns+=/berserking
+actions.cooldowns+=/fireblood
+actions.cooldowns+=/ancestral_call
+actions.cooldowns+=/heart_of_the_wild,if=(talent.heart_of_the_wild.enabled)&buff.cat_form.up&active_enemies<=5|(talent.heart_of_the_wild.enabled)&buff.moonkin_form.up&active_enemies>=6
+actions.cooldowns+=/bristling_fur,if=!target.cooldown.pause_action.remains&cooldown.mangle.remains&cooldown.thrash.remains&(rage<60&talent.killing_blow.enabled|rage<40&!talent.killing_blow.enabled)&!buff.ravage.up
+actions.cooldowns+=/barkskin,if=buff.bear_form.up
+actions.cooldowns+=/lunar_beam,if=(cooldown.incarnation_guardian_of_ursoc.up|cooldown.berserk.up)|((cooldown.incarnation_guardian_of_ursoc.remains>60|cooldown.berserk.remains>60)&!talent.lunation.enabled|(cooldown.incarnation_guardian_of_ursoc.remains>30|cooldown.berserk.remains>30)&talent.lunation.enabled)
+
+head=luminant_verdicts_headgear,id=250023,bonus_id=13575,ilevel=289,gem_id=240983,enchant_id=8017
+neck=eternal_voidsong_chain,id=249368,bonus_id=12806/13577/13668,gem_id=240908
+shoulders=luminant_verdicts_shoulderguards,id=250024,bonus_id=13575,ilevel=289,enchant_id=8001
+back=defiant_defenders_drape,id=260312,bonus_id=4795,ilevel=289
+chest=luminant_verdicts_thoraxguard,id=250022,bonus_id=13575,ilevel=289,enchant_id=7987
+wrists=voidshaper_bracers,id=251208,bonus_id=12806/13577,gem_id=240908
+hands=luminant_verdicts_grips,id=250025,bonus_id=13574,ilevel=289
+waist=scornscarred_shulkas_belt,id=249374,bonus_id=1808/4795,ilevel=289,gem_id=240892
+legs=phloemwraps_of_the_luminous_bloom,id=250023,bonus_id=13575,ilevel=289,enchant_id=8159
+feet=canopy_walkers_footwraps,id=249382,ilevel=289,enchant_id=7993
+finger1=eye_of_midnight,id=249920,bonus_id=12806/13577/13668,gem_id=240890/240890,enchant_id=7967
+finger2=sindorei_band_of_hope,id=249919,bonus_id=12806/13577/13668,gem_id=240890,enchant_id=7967
+trinket1=gaze_of_the_alnseer,id=249343,ilevel=289
+trinket2=emberwing_feather,id=250144,ilevel=289
+main_hand=roostwardens_bough,id=251077,ilevel=289,enchant_id=8039
+
+# Gear Summary
+# gear_ilvl=288.47
+# set_bonus=midnight_season_1_2pc=1
+# set_bonus=midnight_season_1_4pc=1

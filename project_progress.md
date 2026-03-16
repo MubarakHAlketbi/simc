@@ -15,8 +15,8 @@ Here is the data organized into Markdown tables.
 | **Druid** | | | | |
 | Balance | In Beta | In Beta | In Beta | In Beta |
 | Feral | In Beta | In Beta | In Beta | In Beta |
-| Guardian | In Beta | NYI | In Beta | In Beta |
-| Restoration | NYI | NYI | NYI | NYI |
+| Guardian | In Beta | In Beta | In Beta | In Beta |
+| Restoration | N/A | N/A | N/A | N/A |
 | **Evoker** | | | | |
 | Devestation | In Beta | In Beta | Implemented | Implemented |
 | Preservation | N/A | N/A | N/A | N/A |
@@ -48,11 +48,11 @@ Here is the data organized into Markdown tables.
 | **Shaman** | | | | |
 | Elemental | NYI | NYI | NYI | NYI |
 | Enhancement | Implemented | Implemented | Implemented | Implemented |
-| Restoration | NYI | NYI | NYI | NYI |
+| Restoration | N/A | N/A | N/A | N/A |
 | **Warlock** | | | | |
-| Affliction | In Beta | NYI | In Beta | In Beta |
-| Demonology | In Beta | NYI | In Beta | In Beta |
-| Destruction | In Beta | NYI | In Beta | In Beta |
+| Affliction | In Beta | In Beta | In Beta | In Beta |
+| Demonology | In Beta | In Beta | In Beta | In Beta |
+| Destruction | In Beta | In Beta | In Beta | In Beta |
 | **Warrior** | | | | |
 | Arms | Implemented | In Beta | Implemented | Implemented |
 | Fury | Implemented | In Beta | Implemented | Implemented |
