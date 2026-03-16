@@ -372,11 +372,11 @@ Action: Implement elemental_orbit buff interaction in sc_shaman.cpp if earth_shi
 
 ---
 
-#### 12. Evoker improved_defy_fate Mechanics (LOW)
+#### 12. Evoker improved_defy_fate Mechanics — CLOSED N/A (LOW)
 Improves Defy Fate healing +100% and reduces CD by 1 min. Defy Fate is a healing/defensive CD
-for Augmentation. In DPS-context sims the healing component is irrelevant. The CD reduction
-could marginally affect uptime but Augmentation's DPS is driven by Ebon Might/Breath of Eons.
-Action: No DPS mechanic needed; registered correctly. Close this item.
+for Augmentation. In DPS-context sims the healing component is irrelevant. CD reduction does not
+affect Ebon Might/Breath of Eons uptime (the primary Aug DPS drivers). Talent registered in
+sc_evoker.cpp (ID 1268881). No DPS mechanic implementation needed. Closed 2026-03-16.
 
 ---
 
@@ -402,4 +402,4 @@ Action: File GitHub issue tagged needs-data; leave as In Beta.
 | 6 | Audit Druid NYI talents for DPS-relevance (aessinas_renewal, perfectlyhoned_instincts, etc.) | MEDIUM | Fetch spell pages, triage |
 | 7 | Demonology Warlock Apex Talent name (1264137) — re-fetch when Wowhead updates | LOW | Monitor Wowhead |
 | 8 | Shaman Elemental Orbit gameplay hook | LOW | Assess DPS impact |
-| 9 | Evoker Improved Defy Fate — close as N/A for DPS | LOW | Update progress table |
+|| 9 | Evoker Improved Defy Fate — CLOSED N/A for DPS (2026-03-16) | LOW | Done |
