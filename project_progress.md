@@ -38,8 +38,8 @@ Here is the data organized into Markdown tables.
 | Holy | N/A | N/A | N/A | N/A |
 | Retribution | In Beta | NYI | In Beta | In Beta |
 | **Priest** | | | | |
-| Discipline | NYI | NYI | NYI | NYI |
-| Holy | NYI | NYI | NYI | NYI |
+| Discipline | N/A | N/A | N/A | N/A |
+| Holy | N/A | N/A | N/A | N/A |
 | Shadow | In Beta | In Beta | Implemented | Implemented |
 | **Rogue** | | | | |
 | Assassination | In Beta | In Beta | In Beta | In Beta |
