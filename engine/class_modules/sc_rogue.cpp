@@ -885,6 +885,8 @@ public:
       player_talent_t gravedigger_2;
       player_talent_t gravedigger_3;
 
+      // TODO: NYI - Grand Melee (ID:1259469) -- Outlaw spec talent in Midnight info_base. DPS-relevant finisher modifier.
+
     } outlaw;
 
     struct subtlety_talents_t

@@ -7199,10 +7199,12 @@ void warrior_t::init_spells()
   talents.warrior.one_handed_weapon_specialization = find_talent_spell( talent_tree::CLASS, "One-Handed Weapon Specialization", specialization() );
   talents.warrior.wild_strikes                     = find_talent_spell( talent_tree::CLASS, "Wild Strikes" );
   // Row 10
-  talents.warrior.anger_management                 = find_talent_spell( talent_tree::CLASS, "Anger Management", specialization() );
-  talents.warrior.champions_spear                  = find_talent_spell( talent_tree::CLASS, "Champion's Spear" );
-  talents.warrior.stance_mastery                   = find_talent_spell( talent_tree::CLASS, "Stance Mastery" );
-  talents.warrior.battlefield_commander            = find_talent_spell( talent_tree::CLASS, "Battlefield Commander" );
+  talents.warrior.anger_management                 = find_talent_spell( talent_tree::CLASS, \"Anger Management\", specialization() );
+  talents.warrior.champions_spear                  = find_talent_spell( talent_tree::CLASS, \"Champion's Spear\" );
+  // TODO: NYI - Champion (ID:376079) -- listed separately in Midnight info_base as class talent.
+  //   Distinct from Champion's Spear. Verify if it's a gate node or DPS talent.
+  talents.warrior.stance_mastery                   = find_talent_spell( talent_tree::CLASS, \"Stance Mastery\" );
+  talents.warrior.battlefield_commander            = find_talent_spell( talent_tree::CLASS, \"Battlefield Commander\" );
 
   // Arms Talents
   // Row 1
@@ -7303,12 +7305,15 @@ void warrior_t::init_spells()
   talents.fury.frenzy                = find_talent_spell( talent_tree::SPECIALIZATION, "Frenzy" );
   talents.fury.critical_thinking     = find_talent_spell( talent_tree::SPECIALIZATION, "Critical Thinking", WARRIOR_FURY );
   //Row 9
-  talents.fury.vicious_contempt      = find_talent_spell( talent_tree::SPECIALIZATION, "Vicious Contempt" );
-  talents.fury.odyns_fury            = find_talent_spell( talent_tree::SPECIALIZATION, "Odyn's Fury" );
-  talents.fury.bloodborne            = find_talent_spell( talent_tree::SPECIALIZATION, "Bloodborne", WARRIOR_FURY );
-  talents.fury.surge_of_adrenaline   = find_talent_spell( talent_tree::SPECIALIZATION, "Surge of Adrenaline" );
+  talents.fury.vicious_contempt      = find_talent_spell( talent_tree::SPECIALIZATION, \"Vicious Contempt\" );
+  // NOTE: Midnight info_base lists "Odyn" (ID:385059) -- likely truncated name for "Odyn's Fury". Keeping as-is.
+  talents.fury.odyns_fury            = find_talent_spell( talent_tree::SPECIALIZATION, \"Odyn's Fury\" );
+  talents.fury.bloodborne            = find_talent_spell( talent_tree::SPECIALIZATION, \"Bloodborne\", WARRIOR_FURY );
+  talents.fury.surge_of_adrenaline   = find_talent_spell( talent_tree::SPECIALIZATION, \"Surge of Adrenaline\" );
   // Row 10
-  talents.fury.executioners_wrath    = find_talent_spell( talent_tree::SPECIALIZATION, "Executioner's Wrath" );
+  // NOTE: Midnight info_base lists "Executioner" (ID:1265570) for Fury -- possible rename from "Executioner's Wrath".
+  // Keeping current name pending in-game spell name verification. -- Midnight audit 2026-03-17
+  talents.fury.executioners_wrath    = find_talent_spell( talent_tree::SPECIALIZATION, \"Executioner's Wrath\" );
   talents.fury.reckless_abandon      = find_talent_spell( talent_tree::SPECIALIZATION, "Reckless Abandon" );
   talents.fury.avatar                = find_talent_spell( talent_tree::SPECIALIZATION, "Avatar", WARRIOR_FURY );
   talents.fury.bladestorm            = find_talent_spell( talent_tree::SPECIALIZATION, "Bladestorm", WARRIOR_FURY );

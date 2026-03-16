@@ -10902,10 +10902,12 @@ void shaman_t::init_spells()
   talent.thundershock            = _CT( "Thundershock" );
   talent.totemic_recall          = _CT( "Totemic Recall" );
   // Row 10
-  talent.ancestral_guidance      = _CT( "Ancestral Guidance" );
-  talent.creation_core           = _CT( "Creation Core" );
-  talent.call_of_the_elements = _CT( "Call of the Elements" );
-  talent.instinctive_imbuements  = _CT( "Instinctive Imbuements" );
+  // NOTE: not in Wowhead info_base (utility or removed) -- Midnight audit 2026-03-17
+  talent.ancestral_guidance      = _CT( \"Ancestral Guidance\" );
+  talent.creation_core           = _CT( \"Creation Core\" );
+  // NOTE: not in Wowhead info_base (utility or removed). Midnight spec tree has "Echo of the Elements" (ID:333919).
+  talent.call_of_the_elements = _CT( \"Call of the Elements\" );
+  talent.instinctive_imbuements  = _CT( \"Instinctive Imbuements\" );
   // Midnight class tree additions (2026-03-16)
   // Source: https://www.wowhead.com/beta/spell=383010 — DPS-relevant: extra Elemental Shield stack
   talent.elemental_orbit         = _CT( "Elemental Orbit" );   // Should be ID 383010
@@ -10993,7 +10995,9 @@ void shaman_t::init_spells()
     { talent.stormwell,         "Stormwell"         },
 
     // Row 3
-    { talent.supercharge,       "Supercharge"       },
+    // NOTE: "Supercharge" not found in Midnight info_base Stormbringer hero tree. Enhancement spec has
+    //   "Overcharge" (ID:1251026) in spec talent tree. This may be a rename. -- Midnight audit 2026-03-17
+    { talent.supercharge,       \"Supercharge\"       },
     { talent.storm_swell,       "Storm Swell"       },
     { talent.arc_discharge,     "Arc Discharge"     },
     { talent.rolling_thunder,   "Rolling Thunder"   },
@@ -11123,9 +11127,10 @@ void shaman_t::init_spells()
   talent.spiritwalkers_momentum = find_talent_spell( talent_tree::HERO, "Spiritwalker's Momentum" );
   talent.windspeaker            = find_talent_spell( talent_tree::HERO, "Windspeaker" );
 
-  talent.maelstrom_supremacy    = find_talent_spell( talent_tree::HERO, "Maelstrom Supremacy" );
-  talent.final_calling          = find_talent_spell( talent_tree::HERO, "Final Calling" );
-  talent.mystic_knowledge       = find_talent_spell( talent_tree::HERO, "Mystic Calling" );
+  talent.maelstrom_supremacy    = find_talent_spell( talent_tree::HERO, \"Maelstrom Supremacy\" );
+  talent.final_calling          = find_talent_spell( talent_tree::HERO, \"Final Calling\" );
+  // Source: Midnight talent (ID:1270450) -- info_base name is "Mystic Knowledge"; was registered as "Mystic Calling" (outdated). Fixed.
+  talent.mystic_knowledge       = find_talent_spell( talent_tree::HERO, \"Mystic Knowledge\" );
 
   talent.ancestral_swiftness    = find_talent_spell( talent_tree::HERO, "Ancestral Swiftness" );
 
