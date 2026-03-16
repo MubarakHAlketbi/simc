@@ -1,6 +1,6 @@
 # AGENTS.md - SimulationCraft Midnight Expansion Update
 
-**Last Updated: March 15, 2026**
+**Last Updated: March 16, 2026**
 
 ## Objective
 
@@ -49,7 +49,7 @@ Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. 
 
 ## Task Dossier System
 
-**MANDATORY:** Before implementing any task, create a complete `task_dossier.md` that consolidates all necessary information. This dossier becomes the single source of truth for that task.
+**MANDATORY:** Before implementing any task, create a complete dossier in `task_dossiers/` that consolidates all necessary information. This dossier becomes the single source of truth for that task.
 
 ### Why?
 - Prevents repeated web fetches that can cause misconfiguration
@@ -61,11 +61,12 @@ Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. 
 
 1. **Pick a task** from `project_progress.md` (reference row number)
 2. **Create a dossier** in `task_dossiers/` using `TASK_DOSSIER_TEMPLATE.md`
-   - Rename with descriptive name: `druid_balance_general_2026-03-15.md`
+   - Name it descriptively: `druid_balance_general_2026-03-15.md`
 3. **Fetch and populate** all ground truth data:
    - Wowhead URLs for spells/items/talents
    - Extract formulas, coefficients, descriptions
    - For trinkets: follow item → spell → scaling token chain
+   - For talent audits: use the methodology in `talent_extraction.md`
 4. **Complete the dossier** including:
    - Target file(s) from `project_structure.md`
    - Verification checklist
@@ -75,20 +76,44 @@ Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. 
 
 ### Dossier Contents
 
-The template includes sections for:
-- Metadata (task reference, type, target files)
+The template (`TASK_DOSSIER_TEMPLATE.md`) includes sections for:
+- Metadata (task reference, type, target files, Wowhead build date)
 - Spell/Item/Talent/Set details with full Wowhead citations
 - Profile requirements for testing
 - Implementation notes and interactions
 - Verification checklist
 - Code change plan (draft before coding)
-- Post-implementation info
+- Post-implementation info (commit message, files modified, rows updated)
+
+### Dossier Types and Naming
+
+| Task Type | Example filename |
+|-----------|-----------------|
+| Class general changes | `dk_unholy_general_2026-03-16.md` |
+| APL work | `warrior_arms_apl_2026-03-16.md` |
+| Tier set bonuses | `mage_mid1_sets_2026-03-16.md` |
+| Trinket/gear | `trinket_void_reaper_libram_2026-03-16.md` |
+| Talent audit (full sweep) | `talent_audit_wowhead_2026-03-16.md` |
+| Talent implementation | `warlock_class_tree_2026-03-16.md` |
+
+### Existing Dossiers
+
+The following dossiers are already committed in `task_dossiers/` and must not be re-created:
+
+| File | Scope |
+|------|-------|
+| `rogue_general_2026-03-16.md` | Rogue Assassination/Outlaw/Subtlety general changes |
+| `shaman_elemental_2026-03-16.md` | Elemental Shaman general changes + APL |
+| `warlock_general_2026-03-16.md` | Warlock Affliction/Demo/Destro general changes |
+| `talent_audit_wowhead_2026-03-16.md` | Full talent audit: all 33 specs vs Wowhead — 94.7% coverage, missing talent classifications, priority queue |
+
+Before starting any talent-related task, **read `talent_audit_wowhead_2026-03-16.md` first** — it contains the complete list of missing talents per spec, spell IDs, DPS-relevance classification, and implementation priority order.
 
 ### Rule
 
 **Never start coding without a completed dossier.** If new information emerges during implementation, update the dossier first, then adjust code.
 
-All dossiers should be committed to the repository in `task_dossiers/` for future reference and to avoid re-fetching the same data.
+All dossiers must be committed to `task_dossiers/` so future agents can reference them without re-fetching Wowhead.
 
 ## Project Tracking (Main Source)
 
@@ -124,7 +149,10 @@ This project is developed by autonomous agents. The following workflow ensures c
 **3. Task Selection Protocol**
 An agent should:
 - Read `AGENTS.md` and `project_progress.md` at start
+- For talent work: also read `talent_extraction.md` and `task_dossiers/talent_audit_wowhead_2026-03-16.md`
+- Check `task_dossiers/` for an existing dossier covering the task before creating a new one
 - Prioritize: NYI → In Beta → Implemented (for verification)
+- For talent gaps: follow the priority queue in the Talent Data Extraction section above
 - Focus on one class/spec or gear category at a time
 - Prefer tasks with clear dependencies met (e.g., finish core class before set bonuses)
 
@@ -179,6 +207,54 @@ The project uses GitHub Issues to track individual implementation tasks. The rel
 5. For traceability, the issue number should be noted in the commit message and optionally in the `project_progress.md` notes column.
 
 This bidirectional linkage ensures the high-level dashboard stays current and provides a complete audit trail.
+
+## Talent Data Extraction
+
+When working on talent-related tasks — whether implementing missing talents, auditing spec trees, or verifying Apex Talent mechanics — use the methodology documented in **`talent_extraction.md`**.
+
+### What talent_extraction.md covers
+
+- **Wowhead talent calculator URL format:** `https://www.wowhead.com/talent-calc/{class}/{spec}/{hero}`
+- **Why plain HTTP fails** (React SPA) and how to use Firecrawl to get the rendered DOM
+- **DOM structure:** the `data-class-spec="{class}-{spec}"` container and how talent nodes are structured
+- **Extraction regex** for pulling spell IDs, names, and ranks from the HTML
+- **Batch extraction scripts** at `/tmp/fetch_batch.py` and `/tmp/compare_talents.py`
+- **Apex Talents guide** URL and extraction approach
+- **SimC comparison methodology** (3-tier: spell ID → slug → name string)
+- **Which SimC files to search** per class
+- **Known false negatives** and how to handle them
+- **Step-by-step instructions** for auditing a new spec or re-running the full audit
+
+### Talent Audit Status (2026-03-16)
+
+A full audit of all 33 DPS/tank specs has been completed and documented. Results:
+
+- **Coverage: 94.7%** (2,644 / 2,792 Wowhead talents found in SimC)
+- **Complete (0 missing):** DH (all 3), Druid (all 3), Hunter (all 3), Mage (all 3), Paladin (2), Rogue (all 3), Warrior (all 3), Shadow Priest
+- **Needs work:** Warlock all specs (31 missing — class tree), Shaman (15 missing — class tree), Evoker Augmentation (6 missing)
+- **Minor gaps:** DK all specs (3), Monk (2), Subtlety Rogue (1), Devastation Evoker (4)
+
+Full findings and implementation priority queue: `task_dossiers/talent_audit_wowhead_2026-03-16.md`
+
+### Priority Queue for Remaining Talent Work
+
+Before picking up any talent implementation task, check this order:
+
+1. **Warlock class tree DPS passives** — Gorefiend's Avarice (1270701), Pact of Nathrezim (1270690), Oppressive Darkness (1270255), Pact of Gluttony (386689), Teachings of the Black Harvest (385881), Fel Synergy (389367), Infernal Beneficiary (1265810), Dark Pact (108416), Empowered Drain Life (1271689)
+2. **Shaman Elemental Orbit** (383010) — new Midnight DPS proc talent, affects both Elemental and Enhancement
+3. **Evoker:** Strike from Above (1267206), Nozdormu Adept (431715), Improved Defy Fate (1268881)
+4. **Subtlety Rogue:** Improved Find Weakness (382512) — verify armor pen modifier
+5. **DK class tree:** Blood Bond (1267028), Death Notes (1266819), Death Defiance (1266818) — verify DPS impact first
+
+### Apex Talents
+
+All Apex Talent nodes for all 33 DPS/tank specs are **already present in SimC**. Apex Talent spell IDs and full mechanics are documented in:
+- `task_dossiers/talent_audit_wowhead_2026-03-16.md` (Apex Talent table with all 54 spell refs)
+- `talent_extraction.md` (how to re-fetch from the guide if data needs refreshing)
+
+The Apex Talent guide URL: `https://www.wowhead.com/guide/midnight/apex-talents-overview`
+
+---
 
 ## Codebase Navigation Reference
 
@@ -235,13 +311,41 @@ This prevents repeated exploration and conserves tokens. The file includes a qui
 
 ## Resources
 
-- **Wowhead Midnight Database**: https://www.wowhead.com/midnight
+### Project Files (read these before starting any task)
+
+| File | Purpose |
+|------|---------|
+| `AGENTS.md` | This file — agent workflow, rules, and reference index |
+| `project_progress.md` | ⭐ Master status tracker — all specs, gear, talents, Apex Talents |
+| `project_structure.md` | ⭐ Codebase navigation — maps tasks to source files (740 lines) |
+| `talent_extraction.md` | ⭐ How to extract talent data from Wowhead talent calculator and diff against SimC |
+| `TASK_DOSSIER_TEMPLATE.md` | Template for creating new task dossiers |
+| `ISSUE_TAGS.md` | All GitHub issue labels with colors and descriptions |
+| `task_dossiers/talent_audit_wowhead_2026-03-16.md` | Full talent audit results — 33 specs, missing talents, priority queue |
+
+### Wowhead URLs
+
+| Resource | URL |
+|----------|-----|
+| Midnight home | https://www.wowhead.com/midnight |
+| Talent calculator | `https://www.wowhead.com/talent-calc/{class}/{spec}/{hero}` |
+| Apex Talents guide | https://www.wowhead.com/guide/midnight/apex-talents-overview |
+| Spell lookup | `https://www.wowhead.com/spell=SPELL_ID` |
+| Beta spell lookup | `https://www.wowhead.com/beta/spell=SPELL_ID` |
+| Item lookup | `https://www.wowhead.com/item=ITEM_ID` |
+
+### External
+
 - **Blizzard Patch Notes**: Official patch notes for Midnight expansion
 - **SimulationCraft GitHub**: GitHub Issues for tracking tasks
 - **Class Discord Communities**: For nuanced mechanics (if accessible)
-- **project_structure.md**: ⭐ Essential codebase navigation guide - consult before any task
-- **ISSUE_TAGS.md**: Complete reference for GitHub issue tagging system (type, class, spec, status)
-- **Label Setup**: Before using issues, create all required labels on GitHub as defined in `ISSUE_TAGS.md` (use `gh label create <name> --color <hex> --description "<desc>"`).
+
+### Label Setup
+
+Before using GitHub Issues, create all required labels as defined in `ISSUE_TAGS.md`:
+```bash
+gh label create <name> --color <hex> --description "<desc>"
+```
 
 ---
 *This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks. Use GitHub Issues for coordination.*
