@@ -2900,8 +2900,8 @@ void priest_t::init_spells()
   talents.twin_disciplines   = CT( "Twin Disciplines" );
   talents.dark_enlightenment = CT( "Dark Enlightenment" );  // NYI
   talents.false_autonomy     = CT( "False Autonomy" );      // NYI
-  // NOTE: renamed "Shackle Undead" -> "Shackle Horror" in Midnight (info_base.md ID 9484)
-  talents.shackle_undead     = CT( \"Shackle Horror\" );      // NYI
+  // NOTE: renamed in Midnight -- "Shackle Undead" -> "Shackle Horror" (info_base ID 9484)
+  talents.shackle_undead     = CT( "Shackle Horror" );      // NYI
   // Row 6
   talents.inspiration                   = CT( "Inspiration" );    // NYI
   talents.binding_heals                 = CT( "Binding Heals" );  // NYI
@@ -2915,17 +2915,15 @@ void priest_t::init_spells()
   talents.tithe_evasion      = CT( "Tithe Evasion" );
   talents.fade               = CT( "Fade" );
   // Row 8
-  // NOTE: info_base.md lists this as "Angel" (ID 238100) — truncated; Angel's Mercy is the correct full lookup name
-  talents.angels_mercy          = CT( \"Angel's Mercy\" );
-  talents.protective_light      = CT( \"Protective Light\" );
+  talents.angels_mercy          = CT( "Angel's Mercy" );      // NOTE: info_base lists as "Angel" (ID 238100) — truncated name; Angel's Mercy is correct
+  talents.protective_light      = CT( "Protective Light" );
   talents.protective_light_buff = find_spell( 193065 );
   talents.mindpierce            = CT( "Mindpierce" );         // NYI
   talents.spectral_illusion     = CT( "Spectral Illusion" );  // NYI
   talents.improved_fade         = CT( "Improved Fade" );
   // Row 9
-  // NOTE: info_base.md lists this as "Light" (ID 373450) — truncated; Light's Inspiration is the correct full lookup name
-  talents.lights_inspiration = CT( \"Light's Inspiration\" );
-  talents.unwavering_will    = CT( \"Unwavering Will\" );
+  talents.lights_inspiration = CT( "Light's Inspiration" );  // NOTE: info_base lists as "Light" (ID 373450) — truncated name; Light's Inspiration is correct
+  talents.unwavering_will    = CT( "Unwavering Will" );
   talents.spell_warding      = CT( "Spell Warding" );  // NYI
   talents.phantasm           = CT( "Phantasm" );       // NYI
   // Row 10
