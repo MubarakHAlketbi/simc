@@ -160,9 +160,9 @@ Here is the data organized into Markdown tables.
 | Class / Spec | WH Talents | In SimC | Missing | Audit Status | Action |
 | :--- | :---: | :---: | :---: | :--- | :--- |
 | **Death Knight** | | | | | |
-| Blood | 93 | 90 | 3 | Audited | Verify Blood Bond / Death Notes / Death Defiance (spells 1267028, 1266819, 1266818) |
-| Frost | 81 | 78 | 3 | Audited | Same 3 DK class tree missing |
-| Unholy | 90 | 87 | 3 | Audited | Same 3 DK class tree missing |
+| Blood | 93 | 93 | 0 | Complete | Blood Bond (1267028) healing-only N/A; Death Notes (1266819) utility N/A; Death Defiance (1266818) defensive N/A — all 3 registered 2026-03-16 |
+| Frost | 81 | 81 | 0 | Complete | Same 3 DK class tree talents registered 2026-03-16 — all N/A for DPS |
+| Unholy | 90 | 90 | 0 | Complete | Same 3 DK class tree talents registered 2026-03-16 — all N/A for DPS |
 | **Demon Hunter** | | | | | |
 | Devourer | 74 | 74 | 0 | Complete | No action needed |
 | Havoc | 84 | 84 | 0 | Complete | No action needed |

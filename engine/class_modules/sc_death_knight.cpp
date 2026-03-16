@@ -1201,6 +1201,10 @@ public:
     player_talent_t unyielding_will;
     player_talent_t deaths_echo;
     player_talent_t vestigial_shell;  // NYI
+    // Midnight additions — defensive/utility, N/A for DPS
+    player_talent_t blood_bond;      // ID 1267028 — below-50% Ghoul heals caster; healing only
+    player_talent_t death_notes;     // ID 1266819 — Raise Ally RP cost -30; utility only
+    player_talent_t death_defiance;  // ID 1266818 — Death Pact CD -30s + healing absorb buff; defensive only
 
     // Blood
     struct
@@ -14568,6 +14572,13 @@ void death_knight_t::init_spells()
   talent.unyielding_will = find_talent_spell( talent_tree::CLASS, "Unyielding Will" );
   talent.deaths_echo     = find_talent_spell( talent_tree::CLASS, "Death's Echo" );
   talent.vestigial_shell = find_talent_spell( talent_tree::CLASS, "Vestigial Shell" );
+  // Midnight additions — defensive/utility, N/A for DPS
+  // Source: https://www.wowhead.com/beta/spell=1267028 (2026-03-16)
+  // Source: https://www.wowhead.com/beta/spell=1266819 (2026-03-16)
+  // Source: https://www.wowhead.com/beta/spell=1266818 (2026-03-16)
+  talent.blood_bond     = find_talent_spell( talent_tree::CLASS, "Blood Bond" );     // ID 1267028
+  talent.death_notes    = find_talent_spell( talent_tree::CLASS, "Death Notes" );    // ID 1266819
+  talent.death_defiance = find_talent_spell( talent_tree::CLASS, "Death Defiance" ); // ID 1266818
 
   //////// Blood
   // Row 1
