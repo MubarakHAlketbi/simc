@@ -154,6 +154,7 @@ void affliction( player_t* p )
   ogcd->add_action( "blood_fury,if=!talent.summon_darkglare|pet.darkglare.active|fight_remains<17" );
   ogcd->add_action( "fireblood,if=!talent.summon_darkglare|pet.darkglare.active|fight_remains<10" );
   ogcd->add_action( "ancestral_call,if=!talent.summon_darkglare|pet.darkglare.active|fight_remains<17" );
+  ogcd->add_action( "dark_pact,if=talent.dark_pact.enabled&health.pct<50" );
 
   items->add_action( "use_item,use_off_gcd=1,slot=trinket1,if=variable.cds_active" );
   items->add_action( "use_item,use_off_gcd=1,slot=trinket2,if=variable.cds_active" );
@@ -204,6 +205,7 @@ void demonology( player_t* p )
   racials->add_action( "blood_fury" );
   racials->add_action( "fireblood" );
   racials->add_action( "ancestral_call" );
+  racials->add_action( "dark_pact,if=talent.dark_pact.enabled&health.pct<50" );
 
   variables->add_action( "variable,name=next_tyrant_cd,op=set,value=cooldown.summon_demonic_tyrant.remains_expected" );
   variables->add_action( "variable,name=in_opener,op=set,value=0,if=pet.demonic_tyrant.active" );
@@ -314,6 +316,7 @@ void destruction( player_t* p )
   ogcd->add_action( "blood_fury,if=variable.infernal_active|!talent.summon_infernal|(fight_remains<cooldown.summon_infernal.remains_expected+10+cooldown.blood_fury.duration&fight_remains>cooldown.blood_fury.duration)|fight_remains<cooldown.summon_infernal.remains" );
   ogcd->add_action( "fireblood,if=variable.infernal_active|!talent.summon_infernal|(fight_remains<cooldown.summon_infernal.remains_expected+10+cooldown.fireblood.duration&fight_remains>cooldown.fireblood.duration)|fight_remains<cooldown.summon_infernal.remains_expected" );
   ogcd->add_action( "ancestral_call,if=variable.infernal_active|!talent.summon_infernal|(fight_remains<(cooldown.summon_infernal.remains_expected+cooldown.berserking.duration)&(fight_remains>cooldown.berserking.duration))|fight_remains<cooldown.summon_infernal.remains_expected" );
+  ogcd->add_action( "dark_pact,if=talent.dark_pact.enabled&health.pct<50" );
 
 
   variables->add_action( "variable,name=infernal_active,op=set,value=pet.infernal.active|(cooldown.summon_infernal.duration-cooldown.summon_infernal.remains)<20" );

@@ -1,0 +1,91 @@
+# Created 2026-03-16 — Balance Druid MID1 base profile
+druid="MID1_Druid_Balance"
+source=default
+spec=balance
+level=90
+race=night_elf
+timeofday=night
+role=attack
+position=ranged_back
+talents=CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtFPwyMbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA
+
+# Default consumables
+potion=lights_potential_2
+flask=flask_of_the_magisters_2
+food=blooming_feast
+augmentation=void_touched
+temporary_enchant=main_hand:thalassian_phoenix_oil_2
+
+# This default action priority list is automatically created based on your character.
+# It is a attempt to provide you with a action list that is both simple and practicable,
+# while resulting in a meaningful and good simulation. It may not result in the absolutely highest possible dps.
+# Feel free to edit, adapt and improve it to your own needs.
+# SimulationCraft is always looking for updates and improvements to the default action lists.
+
+# Executed before combat begins. Accepts non-harmful actions only.
+# Snapshot raid buffed stats before combat begins and pre-potting is done.
+actions.precombat=snapshot_stats
+actions.precombat+=/moonkin_form
+actions.precombat+=/wrath
+
+# Executed every time the actor is available.
+actions=potion,if=buff.ca_inc.up|fight_remains<32
+actions+=/invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
+actions+=/berserking,if=buff.ca_inc.up
+actions+=/blood_fury,if=buff.ca_inc.up
+actions+=/ancestral_call,if=buff.ca_inc.up
+actions+=/fireblood,if=buff.ca_inc.up
+actions+=/use_item,slot=trinket1,if=buff.ca_inc.up
+actions+=/use_item,slot=trinket2,if=buff.ca_inc.up
+actions+=/celestial_alignment,if=!talent.incarnation_chosen_of_elune&(!talent.fury_of_elune|cooldown.fury_of_elune.remains<5)
+actions+=/incarnation_chosen_of_elune,if=(!talent.fury_of_elune|cooldown.fury_of_elune.remains<5)
+actions+=/fury_of_elune,if=eclipse.in_any&buff.ca_inc.up
+actions+=/full_moon,if=buff.ca_inc.up|charges>1
+actions+=/half_moon,if=buff.ca_inc.up|charges>1
+actions+=/new_moon,if=buff.ca_inc.up|charges>1
+actions+=/starfall,if=talent.starweaver&buff.starweaver_da.up&spell_targets>1
+actions+=/starsurge,if=talent.starweaver&buff.starweaver_st.up
+actions+=/sunfire,target_if=min:remains,if=refreshable&eclipse.in_any
+actions+=/moonfire,target_if=min:remains,if=refreshable&eclipse.in_any
+actions+=/stellar_flare,target_if=min:remains,if=talent.stellar_flare&refreshable
+actions+=/starfall,if=buff.starlord.stack<3&spell_targets>1
+actions+=/starsurge,if=buff.starlord.stack<3&spell_targets=1
+actions+=/force_of_nature
+actions+=/starfall,if=eclipse.in_lunar&spell_targets>1
+actions+=/starsurge,if=eclipse.in_solar|eclipse.in_both
+actions+=/starfall,if=spell_targets>1
+actions+=/starsurge,if=buff.eclipse_solar.up|buff.eclipse_lunar.up
+actions+=/sunfire,target_if=min:remains,if=refreshable
+actions+=/moonfire,target_if=min:remains,if=refreshable
+actions+=/wrath,if=eclipse.in_solar|eclipse.in_both|(eclipse.in_lunar&talent.umbral_embrace)
+actions+=/starfire
+
+head=branches_of_the_luminous_bloom,id=250024,bonus_id=1808/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,gem_id=240983,enchant_id=8017
+neck=amulet_of_the_abyssal_hymn,id=250247,bonus_id=12806/13577/13668,ilevel=289,gem_id=240892/240892
+shoulders=fallen_grunts_mantle,id=251092,bonus_id=4795,ilevel=289,enchant_id=8001
+back=defiant_defenders_drape,id=260312,bonus_id=4795,ilevel=289
+chest=trunk_of_the_luminous_bloom,id=250027,bonus_id=13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,enchant_id=7987
+wrists=silvermoon_agents_deflectors,id=244576,bonus_id=1808/8790/8960/12214/12214/12214/12214/12214/12214/12214/12214/12384,ilevel=285,gem_id=240892,crafted_stats=32/49
+hands=arbortenders_of_the_luminous_bloom,id=250025,bonus_id=13574/13574/13574/13574/13574/13574/13574/13574/13574/13574/13574/13574,ilevel=289
+waist=scornscarred_shulkas_belt,id=249374,bonus_id=1808/4795,ilevel=289,gem_id=240892
+legs=phloemwraps_of_the_luminous_bloom,id=250023,bonus_id=13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,enchant_id=8159
+feet=canopy_walkers_footwraps,id=249382,ilevel=289,enchant_id=7993
+finger1=eye_of_midnight,id=249920,bonus_id=40/12806/13335/13534,ilevel=289,gem_id=240892/240892,enchant_id=7967
+finger2=loa_worshipers_band,id=251513,bonus_id=8960/8960/12066/12214/12214/9627,ilevel=285,gem_id=240892,enchant_id=7967
+trinket1=algethar_puzzle_box,id=193701,ilevel=289
+trinket2=gaze_of_the_alnseer,id=249343,ilevel=289
+main_hand=roostwardens_bough,id=251077,ilevel=289,enchant_id=8039
+
+# Gear Summary
+# gear_ilvl=288.47
+# gear_intellect=1246
+# gear_stamina=17604
+# gear_crit_rating=526
+# gear_haste_rating=943
+# gear_mastery_rating=1037
+# gear_versatility_rating=37
+# gear_leech_rating=28
+# gear_avoidance_rating=200
+# gear_armor=875
+# set_bonus=midnight_season_1_2pc=1
+# set_bonus=midnight_season_1_4pc=1
