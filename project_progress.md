@@ -446,8 +446,8 @@ GitHub Issue #81 filed 2026-03-16 (needs-data). Leave as In Beta until tested on
 || 1 | Create missing profiles: Balance Druid, Aug Evoker, Assassination Rogue, Demo Warlock base — DONE 2026-03-16 (commit 6b8e643) | MEDIUM | Done |
 | 2 | Verify secondary stat DR curves / base stats at level 90 | HIGH | Run naked sim + compare to Wowhead |
 || 3 | Add dark_pact to warlock APLs; review prescience timing for nozdormu_adept — dark_pact DONE 2026-03-16 (commit 6b8e643); prescience APL timing reviewed (nozdormu_adept is passive, no APL change needed) | MEDIUM | Done |
-| 4 | Resolve NYI in unique_gear_midnight.cpp (Draught AoE, Vessel shield, Emberwing proc rate) | MEDIUM | Code + testing |
-| 5 | Verify Midnight item scaling curve covers MID1 ilevels (289 range) | MEDIUM | Audit sc_item_data.cpp |
+|| 4 | Resolve NYI in unique_gear_midnight.cpp — DONE 2026-03-16 (commit 69fe8b2): all 13 items documented/resolved; speed buffs N/A, shield N/A DPS, proc rates documented, AoE ordering explained | MEDIUM | Done |
+|| 5 | Verify Midnight item scaling curve covers MID1 ilevels — VERIFIED 2026-03-16 (commit 50e548d): squish curve 92181 has 54 data points complete; combat_rating_multiplier covers ilevel 289; engine sanity check passed | MEDIUM | Done |
 || 6 | Audit Druid NYI talents for DPS-relevance — DONE 2026-03-16 (commit d3772f8): all N/A, comments updated. Monk Ascension energy regen implemented (commit ceebf16) | MEDIUM | Done |
 || 7 | Demonology Warlock Apex = Dominion of Argus (1276163) — fully implemented, old ID 1264137 removed from beta | LOW | DONE 2026-03-16 |
 || 8 | Shaman Elemental Orbit gameplay hook — CLOSED N/A (2026-03-16) | LOW | Done |
