@@ -42,9 +42,9 @@ Here is the data organized into Markdown tables.
 | Holy | NYI | NYI | NYI | NYI |
 | Shadow | In Beta | In Beta | Implemented | Implemented |
 | **Rogue** | | | | |
-| Assassination | NYI | NYI | NYI | NYI |
-| Outlaw | NYI | NYI | NYI | NYI |
-| Subtlety | NYI | NYI | NYI | NYI |
+| Assassination | In Beta | In Beta | In Beta | In Beta |
+| Outlaw | In Beta | In Beta | In Beta | In Beta |
+| Subtlety | In Beta | In Beta | In Beta | In Beta |
 | **Shaman** | | | | |
 | Elemental | NYI | NYI | NYI | NYI |
 | Enhancement | Implemented | Implemented | Implemented | Implemented |

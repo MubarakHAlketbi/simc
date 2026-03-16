@@ -3930,6 +3930,15 @@ struct blade_rush_t : public rogue_attack_t
       else if ( p()->buffs.blade_flurry->up() )
         m *= 1.0 + p()->talent.outlaw.blade_rush->effectN( 1 ).percent();
 
+      // MID1 2pc: Blade Rush damage increased by 30% to all targets,
+      // plus an additional 15% to the primary target
+      if ( p()->set_bonuses.mid1_outlaw_2pc->ok() )
+      {
+        m *= 1.0 + p()->set_bonuses.mid1_outlaw_2pc->effectN( 1 ).percent();
+        if ( state->target == state->action->target )
+          m *= 1.0 + p()->set_bonuses.mid1_outlaw_2pc->effectN( 3 ).percent();
+      }
+
       return m;
     }
 
@@ -4361,12 +4370,18 @@ struct garrote_t : public rogue_attack_t
       m *= 1.0 + p()->spec.improved_garrote_buff->effectN( 2 ).percent();
     }
 
+    // MID1 2pc: Garrote damage increased by 30% (applies to both direct and periodic)
+    if ( p()->set_bonuses.mid1_assassination_2pc->ok() )
+    {
+      m *= 1.0 + p()->set_bonuses.mid1_assassination_2pc->effectN( 1 ).percent();
+    }
+
     return m;
   }
 
   double composite_poison_flat_modifier( const action_state_t* s ) const override
   {
-    // Set bonus guarantees application of poisons on cast, rather than the normal rate
+    // MID1 2pc: Garrote also applies weapon poisons with guaranteed application
     if ( p()->set_bonuses.mid1_assassination_2pc->ok() )
     {
       return 1.0;
@@ -10388,6 +10403,18 @@ void rogue_t::create_buffs()
       if ( new_ == 0 )
         buffs.lingering_darkness->trigger();
     } );
+  // MID1 4pc: Shadow Blades duration +4s (effectN(1)) and +6% bonus shadow damage (effectN(2))
+  // Duration extension applied directly; damage bonus value overrides the default_value_from_effect(1).
+  if ( set_bonuses.mid1_subtlety_4pc->ok() )
+  {
+    // Update the default value (shadow damage %) by adding the 4pc bonus to base Shadow Blades effect 1
+    // Note: set_default_value_from_effect already set effect_idx=1, so we use effect_idx=1 here to avoid assertion
+    buffs.shadow_blades->set_default_value(
+      talent.subtlety.shadow_blades->effectN( 1 ).percent() +
+      set_bonuses.mid1_subtlety_4pc->effectN( 2 ).percent(), 1 );
+    // Extend buff duration by 4s from effectN(1)
+    buffs.shadow_blades->modify_duration( timespan_t::from_seconds( set_bonuses.mid1_subtlety_4pc->effectN( 1 ).base_value() ) );
+  }
 
   buffs.shadow_dance = new buffs::shadow_dance_t( this );
   if ( talent.subtlety.warning_signs->ok() )
