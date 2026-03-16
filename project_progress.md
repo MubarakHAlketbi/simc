@@ -146,3 +146,105 @@ Here is the data organized into Markdown tables.
 | Tangle of Vibrant Vines | In Beta | Blessed Pango Charm | In Beta | | |
 | Umbric's Channeling Focus | In Beta | | | | |
 | Void Pearl of Haste | In Beta | | | | |
+
+---
+
+### Talent Audit — Wowhead Midnight vs SimC (2026-03-16)
+
+**Method:** Firecrawl HTML extraction from `https://www.wowhead.com/talent-calc/{class}/{spec}/{hero}`
+**DOM selector:** `div[data-class-spec="{class}-{spec}"]`
+**Scope:** 33 DPS/tank specs, 2,792 total Wowhead talents
+**Result:** 2,644 found in SimC — **94.7% coverage**
+**Dossier:** `task_dossiers/talent_audit_wowhead_2026-03-16.md`
+
+| Class / Spec | WH Talents | In SimC | Missing | Audit Status | Action |
+| :--- | :---: | :---: | :---: | :--- | :--- |
+| **Death Knight** | | | | | |
+| Blood | 93 | 90 | 3 | Audited | Verify Blood Bond / Death Notes / Death Defiance (spells 1267028, 1266819, 1266818) |
+| Frost | 81 | 78 | 3 | Audited | Same 3 DK class tree missing |
+| Unholy | 90 | 87 | 3 | Audited | Same 3 DK class tree missing |
+| **Demon Hunter** | | | | | |
+| Devourer | 74 | 74 | 0 | Complete | No action needed |
+| Havoc | 84 | 84 | 0 | Complete | No action needed |
+| Vengeance | 90 | 90 | 0 | Complete | No action needed |
+| **Druid** | | | | | |
+| Balance | 88 | 88 | 0 | Complete | No action needed |
+| Feral | 92 | 92 | 0 | Complete | No action needed |
+| Guardian | 90 | 90 | 0 | Complete | No action needed |
+| **Evoker** | | | | | |
+| Devastation | 96 | 92 | 4 | Needs Work | Add: Walloping Blow (387341), Strike from Above (1267206), Potent Mana (418101); verify Regenerative Magic |
+| Augmentation | 97 | 91 | 6 | Needs Work | Above 4 + Improved Defy Fate (1268881), Nozdormu Adept (431715) |
+| **Hunter** | | | | | |
+| Beast Mastery | 87 | 87 | 0 | Complete | No action needed |
+| Marksmanship | 82 | 82 | 0 | Complete | No action needed |
+| Survival | 82 | 82 | 0 | Complete | No action needed |
+| **Mage** | | | | | |
+| Arcane | 79 | 79 | 0 | Complete | No action needed |
+| Fire | 83 | 83 | 0 | Complete | No action needed |
+| Frost | 78 | 78 | 0 | Complete | No action needed |
+| **Monk** | | | | | |
+| Brewmaster | 78 | 76 | 2 | Minor | Verify Reinvigoration (1266740) for energy regen; Silent Sanctuary (1266719) likely utility |
+| Windwalker | 97 | 95 | 2 | Minor | Same 2 Monk class tree missing |
+| **Paladin** | | | | | |
+| Protection | 79 | 79 | 0 | Complete | No action needed |
+| Retribution | 86 | 86 | 0 | Complete | No action needed |
+| **Priest** | | | | | |
+| Shadow | 94 | 93 | 1 | Complete | Shackle Horror (9484) is pure CC — N/A |
+| **Rogue** | | | | | |
+| Assassination | 82 | 82 | 0 | Complete | No action needed |
+| Outlaw | 82 | 82 | 0 | Complete | No action needed |
+| Subtlety | 83 | 82 | 1 | Minor | Verify Improved Find Weakness (382512) — may amplify armor pen |
+| **Shaman** | | | | | |
+| Elemental | 83 | 68 | 15 | Needs Work | Add Elemental Orbit (383010) — DPS proc. Primordial Bond (1279819) — verify. Other 13 are utility/N/A |
+| Enhancement | 84 | 69 | 15 | Needs Work | Same 15 Shaman class tree missing as Elemental |
+| **Warlock** | | | | | |
+| Affliction | 82 | 51 | 31 | Needs Work | Entire Warlock class tree missing. Priority DPS: Gorefiend's Avarice (1270701), Pact of Nathrezim (1270690), Oppressive Darkness (1270255), Pact of Gluttony (386689), Teachings of the Black Harvest (385881), Fel Synergy (389367), Infernal Beneficiary (1265810), Dark Pact (108416), Empowered Drain Life (1271689) |
+| Demonology | 84 | 53 | 31 | Needs Work | Same 31 Warlock class tree missing |
+| Destruction | 80 | 49 | 31 | Needs Work | Same 31 Warlock class tree missing |
+| **Warrior** | | | | | |
+| Arms | 67 | 67 | 0 | Complete | No action needed |
+| Fury | 83 | 83 | 0 | Complete | No action needed |
+| Protection | 82 | 82 | 0 | Complete | No action needed |
+
+---
+
+### Apex Talents — All Specs (2026-03-16)
+
+**Source:** https://www.wowhead.com/guide/midnight/apex-talents-overview (fetched 2026-03-16)
+**System:** 3-node path, 4 points total (1+2+1), unlocked at levels 81/84/90, requires 20 spec tree points
+
+| Spec | Apex Talent Name | Primary Spell ID | SimC Code Present | Notes |
+| :--- | :--- | :---: | :---: | :--- |
+| Blood DK | Dance of Midnight | 1264506 | Yes | DRW parry proc + free Heart Strike |
+| Frost DK | Chosen of Frostbrood | 1265632 | Yes | FWF haste + PoF extension + recall |
+| Unholy DK | Forbidden Knowledge | 1242158 | Yes | Army→Necrotic Coil(1242174)+Graveyard(383269) |
+| Devourer DH | Midnight | 1242486 | Yes | Collapsing Star always crits |
+| Havoc DH | Eternal Hunt | 1270898 | Yes | The Hunt empowers Eye Beam |
+| Vengeance DH | Untethered Rage | 1270444 | Yes | SC/SB proc free Meta |
+| Balance Druid | Ascendant Eclipses | 1261564 | Yes | Eclipse→Solar(1261573)/Lunar(1263137) Bolt |
+| Feral Druid | Unseen Predator | 1263657 | Yes | Ferocious Bite→Unseen Slash(1263827)/Swipe(1263902) |
+| Guardian Druid | Wild Guardian | 1269614 | Yes | Post-Berserk echo Ironfur/Maul/FR |
+| Devastation Evoker | Rising Fury | 1271687 | Yes | Dragonrage haste stacks→Risen Fury |
+| Augmentation Evoker | Duplicate | 1259173 | Yes | Breath of Eons→future-you clone |
+| BM Hunter | Nature's Ally | 1273043 | Yes | Bestial Wrath→Animal Companion |
+| MM Hunter | Take Aim | 1273132 | Yes | Rapid Fire reduces Aimed Shot CD; Aimed always crits |
+| Survival Hunter | Raptor Swipe | 1259003 | Yes | Raptor Strike→100% Raptor Swipe |
+| Arcane Mage | Touch of the Archmage | 1257942 | Yes | TotM+15% dmg taken; pulsing rune on explode |
+| Fire Mage | Fired Up | 1257343 | Yes | Hot Streak→stacking Fire% buff |
+| Frost Mage | Hand of Frost | 1262769 | Yes | Shatter proc Hand of Frost; RoF→4 Hands |
+| Brewmaster Monk | Bring Me Another | 1265129 | Yes | Brew→Empty Barrel→Keg Smash ricochet |
+| Windwalker Monk | Tigereye Brew | 1261703 | Yes | In-combat crit stacks for Zenith |
+| Prot Paladin | Glory of the Vanguard | 1267203 | Yes | Judgment→Vanguard→AS echo bolt line |
+| Ret Paladin | Light Within | 1261113 | Yes | Art of War→BoJ+150%; BoJ Holy wave |
+| Shadow Priest | Void Apparitions | 1264096 | Yes | Idol→Void Apparitions+Void Bolt(1264177) |
+| Assassination Rogue | Implacable | 1265385 | Yes | Envenom+10%; post-expiry energy regen; post-Kingsbane 5 strikes |
+| Outlaw Rogue | Gravedigger | 1265861 | Yes | BtE stacks; Dispatch→Scoundrel Strike; bullet sleeve mechanic |
+| Subtlety Rogue | Ancient Arts | 1268932 | Yes | Shadow Techniques→Shadow Clone at 50% |
+| Elemental Shaman | Feedback Loop | 1270061 | Yes | Overload+35%; crit+5%; 25% double Overload |
+| Enhancement Shaman | Storm Unleashed | 1262713 | Yes | Maelstrom→Crash Lightning ignore CD; CL electrocute 2x |
+| Affliction Warlock | Shadow of Nathreza | 1261984 | Yes | Haunt→demonic soul DoT+AoE; Wrath of Nathreza(1262028) proc |
+| Demonology Warlock | (1264137 — incomplete) | 1264137 | Yes | Soulkeeper+Willbreaker(1264367); guide data incomplete |
+| Destruction Warlock | Embers of Nihilam | 1265770 | Yes | Incinerate→Echo of Sargeras(1265884); CB/SB/RoF also proc |
+| Arms Warrior | Master of Warfare | 1269391 | Yes | Overpower→Heroic Strike(1269383)+armor pen stacks |
+| Fury Warrior | Rampaging Berserker | 1269308 | Yes | Rampage→Berserk+Str stacks; Recklessness+3 Berserk+50% duration |
+| Prot Warrior | Phalanx | 1269311 | Yes | Thunder Clap→Shield Slam wave 198% AP; Shield Block→SS+10%+20% crit |
