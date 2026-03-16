@@ -1,6 +1,6 @@
 # AGENTS.md - SimulationCraft Midnight Expansion Update
 
-**Last Updated: March 16, 2026 (Talent Data Extraction section expanded with mandatory Firecrawl guidance)**
+**Last Updated: March 17, 2026 (Wowhead Knowledge Base section added)**
 
 ## Objective
 
@@ -46,6 +46,123 @@ Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. 
 5. Determine if the displayed numbers are static or item-level dependent. If the item has multiple item levels (e.g., normal/heroic), treat the number as item-level specific and derive a coefficient or formula for SimC's item level scaling.
 
 **Important:** Document both the item URL and the spell URL(s) in your code comments.
+
+---
+
+## Wowhead Knowledge Base (`wowhead/` folder)
+
+A pre-fetched, structured knowledge base lives in the `wowhead/` directory at the repo root.
+It covers all 33 DPS/tank specs and was built on **2026-03-17** from live Wowhead Midnight data.
+
+### Folder Layout
+
+```
+wowhead/
+  {class}/
+    {spec}/
+      info_links.md   — canonical Wowhead URLs for this spec (guides + talent-calc)
+      info_base.md    — comprehensive pre-fetched information base (see below)
+```
+
+Examples:
+```
+wowhead/warlock/affliction/info_base.md
+wowhead/death-knight/frost/info_base.md
+wowhead/monk/windwalker/info_links.md
+```
+
+Class and spec names use lowercase hyphenated slugs matching Wowhead URL conventions
+(e.g. `beast-mastery`, `death-knight`, `conduit-of-the-celestials`).
+
+### What `info_base.md` Contains
+
+Each file is a self-contained reference document with these sections:
+
+| Section | Contents |
+|---------|----------|
+| **Sources** | All URLs used — guide pages and talent-calc pages |
+| **Overview** | Role, playstyle identity, strengths/weaknesses from Wowhead guide |
+| **Stat Priority** | Exact stat ranking, often broken down per hero talent variant |
+| **Core Abilities** | Key spells and resource mechanics from the basics guide |
+| **Abilities & Talents Detail** | Full ability list with descriptions from the talents guide |
+| **Rotation / Priority** | ST opener, priority list, AoE rotation, cooldown usage |
+| **Enchants, Gems, Consumables** | Recommended enchants per slot, gems, potions, food |
+| **Talent Tree — Class & Spec** | Complete table: Spell ID \| Name \| Max Rank \| Wowhead link |
+| **Hero Talent Tree 1** | Complete table for first hero tree |
+| **Hero Talent Tree 2** | Complete table for second hero tree |
+| **SimC Implementation Notes** | Callouts for mechanically complex talents needing code attention |
+
+Talent trees were extracted from the Wowhead Midnight talent calculator via Firecrawl
+(React SPA — plain HTTP returns an empty shell). Each talent row includes the Wowhead
+spell ID, which is the authoritative reference for `find_spell()` calls in SimC.
+
+### When to Use the Knowledge Base
+
+**Use `info_base.md` as your first stop** before fetching Wowhead directly. It is faster,
+costs no Firecrawl credits, and prevents stale-data bugs from repeated fetches.
+
+| Task | Action |
+|------|--------|
+| Implementing a spec's talent tree | Read `wowhead/{class}/{spec}/info_base.md` → Talent Tree section |
+| Writing or tuning an APL | Read Rotation section in `info_base.md` |
+| Verifying a spell ID | Check Talent Tree table in `info_base.md` — spell ID is the `href` value |
+| Looking up stat weights | Read Stat Priority section |
+| Finding enchant/consumable recommendations | Read Enchants, Gems, Consumables section |
+| Checking what hero talents exist | Read Hero Talent Tree sections |
+| Getting a Wowhead URL to fetch fresh data | See Sources section at top of file |
+
+### When to Re-Fetch from Wowhead
+
+The knowledge base reflects Wowhead data as of **2026-03-17**. Re-fetch only when:
+
+1. You suspect a spell was patched after that date (check the spell page's "Updated" date).
+2. A talent is missing from the table and not explained by known false negatives.
+3. You need a stat or coefficient not captured in the guide text (e.g. an exact damage
+   formula from a spell's effect data — follow the spell page chain described above).
+
+To refresh a single spec's `info_base.md`, re-run `/tmp/build_info_bases_v2.py` with
+`--force` for that spec index, or fetch its guide pages via Firecrawl manually and update
+the relevant section.
+
+### Talent Count Summary (2026-03-17)
+
+| Class / Spec | Class+Spec | Hero 1 | Hero 2 |
+|--------------|-----------|--------|--------|
+| DK Blood | 82 | 11 Deathbringer | 10 San'layn |
+| DK Frost | 81 | 11 Deathbringer | 11 Rider of the Apocalypse |
+| DK Unholy | 79 | 11 Rider of the Apocalypse | 10 San'layn |
+| DH Devourer | 74 | 12 Annihilator | 11 Void Scarred |
+| DH Havoc | 73 | 11 Aldrachi Reaver | 11 Fel Scarred |
+| DH Vengeance | 79 | 11 Aldrachi Reaver | 12 Annihilator |
+| Druid Balance | 77 | 11 Elune's Chosen | 10 Keeper of the Grove |
+| Druid Feral | 81 | 11 Druid of the Claw | 10 Wildstalker |
+| Druid Guardian | 79 | 11 Druid of the Claw | 11 Elune's Chosen |
+| Evoker Augmentation | 85 | 12 Chronowarden | 11 Scalecommander |
+| Evoker Devastation | 85 | 11 Flameshaper | 11 Scalecommander |
+| Hunter Beast Mastery | 76 | 11 Dark Ranger | 11 Pack Leader |
+| Hunter Marksmanship | 71 | 11 Dark Ranger | 11 Sentinel |
+| Hunter Survival | 71 | 11 Pack Leader | 11 Sentinel |
+| Mage Arcane | 68 | 11 Spellslinger | 11 Sunfury |
+| Mage Fire | 72 | 11 Frostfire | 11 Sunfury |
+| Mage Frost | 67 | 11 Frostfire | 11 Spellslinger |
+| Monk Brewmaster | 78 | 10 Master of Harmony | 11 Shado-pan |
+| Monk Windwalker | 86 | 11 Conduit of the Celestials | 11 Shado-pan |
+| Paladin Protection | 79 | 10 Lightsmith | 11 Templar |
+| Paladin Retribution | 75 | 11 Herald of the Sun | 11 Templar |
+| Priest Shadow | 83 | 10 Archon | 11 Voidweaver |
+| Rogue Assassination | 70 | 10 Deathstalker | 11 Fatebound |
+| Rogue Outlaw | 70 | 11 Fatebound | 10 Trickster |
+| Rogue Subtlety | 71 | 10 Deathstalker | 10 Trickster |
+| Shaman Elemental | 72 | 11 Farseer | 11 Stormbringer |
+| Shaman Enhancement | 72 | 11 Stormbringer | 10 Totemic |
+| Warlock Affliction | 71 | 11 Hellcaller | 11 Soul Harvester |
+| Warlock Demonology | 73 | 11 Diabolist | 11 Soul Harvester |
+| Warlock Destruction | 69 | 11 Diabolist | 11 Hellcaller |
+| Warrior Arms | 67 | 11 Colossus | 11 Slayer |
+| Warrior Fury | 71 | 10 Mountain Thane | 11 Slayer |
+| Warrior Protection | 71 | 11 Colossus | 10 Mountain Thane |
+
+---
 
 ## Task Dossier System
 
@@ -149,6 +266,7 @@ This project is developed by autonomous agents. The following workflow ensures c
 **3. Task Selection Protocol**
 An agent should:
 - Read `AGENTS.md` and `project_progress.md` at start
+- For any class/spec work: read `wowhead/{class}/{spec}/info_base.md` — it has pre-fetched talent spell IDs, rotation, and stat data; no live Wowhead fetch needed for most tasks
 - For talent work: also read `talent_extraction.md` and `task_dossiers/talent_audit_wowhead_2026-03-16.md`
 - Check `task_dossiers/` for an existing dossier covering the task before creating a new one
 - Prioritize: NYI → In Beta → Implemented (for verification)
@@ -222,12 +340,14 @@ This bidirectional linkage ensures the high-level dashboard stays current and pr
 
 | Task | Tool to use |
 |------|-------------|
-| Fetch a spec's full talent tree | Firecrawl + `talent_extraction.md` methodology |
+| Look up spell IDs / talents for a spec | **First:** read `wowhead/{class}/{spec}/info_base.md` (pre-fetched, free) |
+| Fetch a spec's full talent tree (live) | Firecrawl + `talent_extraction.md` methodology |
 | Look up a single spell by ID | `web_extract("https://www.wowhead.com/beta/spell=XXXXX")` |
 | Audit all missing talents in a spec | Firecrawl → parse DOM → diff vs SimC (see `talent_extraction.md` §3–5) |
 | Re-run full 33-spec audit | `/tmp/fetch_batch.py` + `/tmp/compare_talents.py` (see §6) |
 | Fetch Apex Talents guide | `web_extract("https://www.wowhead.com/guide/midnight/apex-talents-overview")` |
-| Find a talent's spell ID by name | Firecrawl on the talent-calc page, or `web_search` + confirm on spell page |
+| Find a talent's spell ID by name | Check `info_base.md` talent table first, then Firecrawl if not found |
+| Refresh stale `info_base.md` | Run `/tmp/build_info_bases_v2.py --force {index}` from simc root |
 
 ### Using Firecrawl in Code
 
@@ -356,11 +476,11 @@ This prevents repeated exploration and conserves tokens. The file includes a qui
 ### Project Files (read these before starting any task)
 
 | File | Purpose |
-|------|---------|
-| `AGENTS.md` | This file — agent workflow, rules, and reference index |
+|------|---------|\n| `AGENTS.md` | This file — agent workflow, rules, and reference index |
 | `project_progress.md` | ⭐ Master status tracker — all specs, gear, talents, Apex Talents |
 | `project_structure.md` | ⭐ Codebase navigation — maps tasks to source files (740 lines) |
 | `talent_extraction.md` | ⭐ **MANDATORY for any talent work** — Firecrawl methodology, DOM structure, extraction scripts, SimC comparison. Use this instead of web_extract for talent-calc pages (React SPA). |
+| `wowhead/{class}/{spec}/info_base.md` | ⭐ **Pre-fetched spec knowledge base** — talents (spell IDs + max ranks), stat priority, rotation, enchants. Read this BEFORE fetching Wowhead live. See Wowhead Knowledge Base section above. |
 | `TASK_DOSSIER_TEMPLATE.md` | Template for creating new task dossiers |
 | `ISSUE_TAGS.md` | All GitHub issue labels with colors and descriptions |
 | `task_dossiers/talent_audit_wowhead_2026-03-16.md` | Full talent audit results — 33 specs, missing talents, priority queue |
