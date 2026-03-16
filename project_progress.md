@@ -65,7 +65,7 @@ Here is the data organized into Markdown tables.
 | Raid Trinkets | Status | Potions | Status | Food Buffs | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Gaze of the Alnseer | In Beta | Draught of Rampant Abandon | In Beta | Arcano Cutlets | Implemented |
-| Gloom-Spattered Dreadscale | In Beta | Light's Potential | Implemented | Baked Lucky Loa | NYI |
+| Gloom-Spattered Dreadscale | In Beta | Light's Potential | Implemented | Baked Lucky Loa | In Beta |
 | Heart of Ancient Hunger | In Beta | Potion of Recklessness | In Beta | Bloodthistle-wrapped Cutlets | Implemented |
 | Light Company Guidon | In Beta | Potion of Zealotry | In Beta | Bloom Skewers | Implemented |
 | Litany of Lightblind Wrath | In Beta | | | Blooming Feast | Implemented |
@@ -83,7 +83,7 @@ Here is the data organized into Markdown tables.
 | **Dungeon Trinkets** | **Status** | Smuggler's Lynxeye | In Beta | Glitter Skewers | Implemented |
 | Emberwing Feather | In Beta | Thalassian Phoenix Oil | Implemented | Hearthflame Supper | Implemented |
 | Eye of the Drowning Void | In Beta | Weighted Boomshots | In Beta | Impossibly Royal Roast | Implemented |
-| Freightrunner's Flask | Implemented | | | Mana-Infused Stew | NYI |
+| Freightrunner's Flask | Implemented | | | Mana-Infused Stew | In Beta |
 | Heart of Wind | In Beta | **Enchants** | **Status** | Null and Void Plate | Implemented |
 | Kroluk's Warbanner | In Beta | Arcanoweave Spellthread | Implemented | Portable Snack | Implemented |
 | Latch's Crooked Hook | In Beta | Blood Knight's Armor Kit | Implemented | Quel'dorei Medley | Implemented |
@@ -92,23 +92,23 @@ Here is the data organized into Markdown tables.
 | Mindpiercer's Sigil | In Beta | Forest Hunter's Armor Kit | Implemented | Royal Roast | Implemented |
 | Permafrost Reservoir | In Beta | Sunfire Silk Spellthread | Implemented | Silvermoon Parade | Implemented |
 | Resonant Roarstone | In Beta | Thalassian Scout Armor Kit | Implemented | Silvermoon Standard | Implemented |
-| Rotting Globule | In Beta | Void-Touched Augment Rune | Implemented | Spellfire Filet | NYI |
+| Rotting Globule | In Beta | Void-Touched Augment Rune | Implemented | Spellfire Filet | In Beta |
 | Sapling of the Dawnroot | In Beta | Weapon - Acuity of the Ren'dorei | In Beta | Spiced Biscuits | Implemented |
 | Seed of the Devouring Wild | In Beta | Weapon - Flames of the Sin'dorei | In Beta | Sun-Seared Lumifin | Implemented |
 | Solar Core Igniter | In Beta | Weapon - Strength of the Halazzi | In Beta | Sunwell Delight | Implemented |
-| Solarflare Prism | In Beta | Weapon - Worldsoul Aegis | NYI | Tasty Smoked Tetra | Implemented |
+| Solarflare Prism | In Beta | Weapon - Worldsoul Aegis | In Beta | Tasty Smoked Tetra | Implemented |
 | Soulcatcher's Charm | In Beta | Chest - Mark of Nalorakk | Implemented | Twilight Angler's Medley | Implemented |
 | The Binding Flame | In Beta | Chest - Mark of the Magister | Implemented | Void-Kissed Fish Rolls | Implemented |
 | Tumor of the Swarm | In Beta | Chest - Mark of the Rootwarden | Implemented | Warped Wise Wings | Implemented |
 | Vessel of Souls | In Beta | Chest - Mark of the Worldsoul | Implemented | Wise Tails | Implemented |
 | Void Execution Mandate | In Beta | Ring - Nature's Fury | Implemented | | |
 | Whisper of the Duskwraith | In Beta | Ring - Silvermoon's Alacrity | Implemented | **Special Effect Gear** | **Status** |
-| Algeth'ar Puzzle Box | In Beta | Ring - Silvermoon's Tenacity | Implemented | Voidclaw Gauntlets | NYI |
-| Emerald Coach's Whistle | In Beta | Ring - Zul'jin's Mastery | Implemented | Umbra-Weaver's Portent 3 set | NYI |
-| Dragon Games Equipment | In Beta | Weapon - Arcane Mastery | In Beta | Pauldrons of the Void Hunter | NYI |
+| Algeth'ar Puzzle Box | In Beta | Ring - Silvermoon's Tenacity | Implemented | Voidclaw Gauntlets | In Beta |
+| Emerald Coach's Whistle | In Beta | Ring - Zul'jin's Mastery | Implemented | Umbra-Weaver's Portent 3 set | In Beta |
+| Dragon Games Equipment | In Beta | Weapon - Arcane Mastery | In Beta | Pauldrons of the Void Hunter | In Beta |
 | Void Stalker's Contract | In Beta | Weapon - Berserker's Rage | In Beta | Voidlight Bindings | In Beta |
 | Reality Breacher | In Beta | Weapon - Jan'alai's Precision | In Beta | Eternal Voidsong Chain | In Beta |
-| Ampoule of Pure Void | NYI | Weapon - Worldsoul Tenacity | In Beta | Torments Duality | In Beta |
+| Ampoule of Pure Void | In Beta | Weapon - Worldsoul Tenacity | In Beta | Torments Duality | In Beta |
 | | | Ring - Amani Mastery | Implemented | | |
 | **PvP Trinkets** | **Status** | Ring - Nature's Wrath | Implemented | **Misc** | **Status** |
 | Galactic Aspirant's Badge of Ferocity | In Beta | Ring - Thalassian Versatility | Implemented | Void-Touched Augment Rune | Implemented |
@@ -122,12 +122,12 @@ Here is the data organized into Markdown tables.
 | Darkmoon Deck: Hunt | In Beta | Sunfire Silk Lining | In Beta | | |
 | Darkmoon Deck: Rot | In Beta | Prismatic Focusing Iris | In Beta | | |
 | Darkmoon Deck: Void | In Beta | B0P, Curator of Booms | In Beta | | |
-| Darkmoon Dominion: Blood | In Beta | M0LL1, Atomic Anomaly | NYI | | |
+| Darkmoon Dominion: Blood | In Beta | M0LL1, Atomic Anomaly | In Beta | | |
 | Darkmoon Dominion: Hunt | In Beta | Darkmoon Sigil: Blood | In Beta | | |
 | Darkmoon Dominion: Rot | In Beta | Darkmoon Sigil: Hunt | In Beta | | |
 | Darkmoon Dominion: Void | In Beta | Darkmoon Sigil: Rot | In Beta | | |
 | Desecrated Chalice | In Beta | Darkmoon Sigil: Void | In Beta | | |
-| Drum of Renewed Bonds | In Beta | Pigments of the Wind | NYI | | |
+| Drum of Renewed Bonds | In Beta | Pigments of the Wind | In Beta | | |
 | Empty Crate of Relics | In Beta | Loa Worshiper's Band | In Beta | | |
 | Ever-collapsing Void Fissure | In Beta | Signet of Azerothian Blessings | In Beta | | |
 | Fetid Dartfrog Idol | In Beta | Thalassian Phoenix Torque | In Beta | | |
@@ -138,7 +138,7 @@ Here is the data organized into Markdown tables.
 | Lost Idol of the Hash'ey | In Beta | Murder Row Materials | In Beta | | |
 | Midnight Alchemist Stone | In Beta | Root Warden's Regalia | In Beta | | |
 | Refueling Orb | In Beta | World Tree Rootwraps | In Beta | | |
-| Repurposed Volatile Manacell | In Beta | Knight-Commander's Palisade | NYI | | |
+| Repurposed Volatile Manacell | In Beta | Knight-Commander's Palisade | In Beta | | |
 | Sealed Chaos Urn | In Beta | Murder Row Fishhook | In Beta | | |
 | Shadow of the Empyrean Requiem | In Beta | Arcanoweave Trappings | In Beta | | |
 | Shard of VoidStalker's Bracers | In Beta | Arcanoweave Cord | In Beta | | |

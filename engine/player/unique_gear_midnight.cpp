@@ -480,6 +480,34 @@ void farstriders_hawkeye( special_effect_t& effect )
 
   new dbc_proc_callback_t( effect.player, effect );
 }
+
+// Weapon - Worldsoul Aegis
+// 1236737 rank 1 enchant driver / 1236738 rank 2 enchant driver (passive, reg via {})
+// 1241725 RPPM proc driver: ~3 PPM (haste multiplier), fires on damage taken
+// 1242032 absorb shield buff (8s, all-school absorb)
+// 1242035 AoE explosion when shield expires/depletes (Nature, split, 12yd)
+// Source: https://www.wowhead.com/spell=1241725 (2026-03-16)
+void worldsoul_aegis( special_effect_t& effect )
+{
+  // Skip duplicate setup (both ranks share the same proc driver)
+  if ( effect.player->find_spell( effect.trigger()->id() )->ok() &&
+       buff_t::find( effect.player, "worldsoul_aegis_shield" ) )
+    return;
+
+  auto explosion_spell = effect.player->find_spell( 1242035 );
+  auto explosion = create_proc_action<generic_aoe_proc_t>( "worldsoul_aegis_eruption", effect, explosion_spell, true );
+  explosion->base_dd_min = explosion->base_dd_max = effect.driver()->effectN( 1 ).average( effect );
+  explosion->split_aoe_damage = true;
+
+  auto shield = create_buff<buff_t>( effect.player, "worldsoul_aegis_shield", effect.player->find_spell( 1242032 ) )
+    ->set_expire_callback( [ explosion ]( buff_t*, int, timespan_t ) {
+        if ( explosion->target )
+          explosion->execute_on_target( explosion->target );
+      } );
+
+  effect.custom_buff = shield;
+  new dbc_proc_callback_t( effect.player, effect );
+}
 }  // namespace enchants
 
 namespace embellishments
@@ -2921,6 +2949,62 @@ void tangle_of_vibrant_vines( special_effect_t& effect )
   new dbc_proc_callback_t( effect.player, effect );
 }
 
+// ===== Batch 3 Items =====
+
+// Ampoule of Pure Void (item 151312, Legion legacy in Midnight M+)
+// 250765 on-use driver (90s CD, 10s duration, creates area trigger at feet)
+// 250766 periodic AoE leech: Shadow damage to enemies within 5 yd, heals player for 300% of damage
+// Haste affects tick rate (Melee Haste Affects Periodic flag).
+// Model as on-use ground AoE: use 250766 as the periodic proc action, base_td from scaling.
+// Source: https://www.wowhead.com/item=151312/ampoule-of-pure-void (2026-03-16)
+// Source: https://www.wowhead.com/spell=250766/pool-of-pure-void (2026-03-16)
+void ampoule_of_pure_void( special_effect_t& effect )
+{
+  auto pool = create_proc_action<generic_proc_t>( "pool_of_pure_void", effect, effect.player->find_spell( 250766 ) );
+  // effectN(1) is the health leech (damage + heal). base_td drives periodic output.
+  pool->base_td = effect.player->find_spell( 250766 )->effectN( 1 ).average( effect );
+
+  effect.execute_action = pool;
+}
+
+// M0LL1, Atomic Anomaly (crafted embellishment)
+// 1261971 passive driver (RPPM via embedded BGW proc 388069): triggers 388083 (Arcane split AoE)
+// effectN(2) scaled value holds the damage coefficient (~1166.8 at level cap).
+// Reuses Bronzed Grip Wrappings proc chain; model as generic AoE with AP coefficient.
+// Source: https://www.wowhead.com/spell=1261971 (2026-03-16)
+void m0ll1_atomic_anomaly( special_effect_t& effect )
+{
+  auto proc_spell = effect.player->find_spell( 388083 );
+  auto proc = create_proc_action<generic_aoe_proc_t>( "m0ll1_atomic_anomaly", effect, proc_spell, true );
+  proc->base_dd_min = proc->base_dd_max = effect.driver()->effectN( 2 ).average( effect );
+  proc->split_aoe_damage = true;
+
+  effect.execute_action = proc;
+}
+
+// Voidclaw Gauntlets (special effect gloves)
+// 253793 passive driver: ~5 PPM haste-scaled, melee autoattack proc only
+// 253797 triggered spell: Shadow melee damage to current target
+// Source: https://www.wowhead.com/spell=253793 (2026-03-16)
+void voidclaw_gauntlets( special_effect_t& effect )
+{
+  auto proc = create_proc_action<generic_proc_t>( "voidclaw", effect, effect.player->find_spell( 253797 ) );
+  proc->base_dd_min = proc->base_dd_max = effect.player->find_spell( 253797 )->effectN( 1 ).average( effect );
+
+  effect.execute_action = proc;
+}
+
+// Umbra-Weaver's Portent 3-piece set bonus
+// 253807 proc driver: ~1 PPM, fires on taking Shadow damage -> 253808 Leech stat buff (12s)
+// Source: https://www.wowhead.com/spell=253807 (2026-03-16)
+void umbra_weavers_portent( special_effect_t& effect )
+{
+  auto buff = create_buff<stat_buff_t>( effect.player, effect.player->find_spell( 253808 ) )
+    ->set_stat_from_effect_type( A_MOD_RATING, effect.driver()->effectN( 1 ).average( effect ) );
+
+  effect.custom_buff = buff;
+}
+
 // ===== Batch 2 Trinkets =====
 
 // Manaheart's Binding Flame (item 250243)
@@ -3924,6 +4008,13 @@ void register_special_effects()
   unique_gear::register_special_effect( 1232907, consumables::secondary_food( 1232490, STAT_CRIT_RATING, STAT_SPEED_RATING ) ); // sun-seared lumifin
   unique_gear::register_special_effect( 1232249, consumables::secondary_food( 1233401, STAT_CRIT_RATING, STAT_HASTE_RATING ) ); // portable snack
   unique_gear::register_special_effect( 1232484, consumables::secondary_food( 1233405, STAT_VERSATILITY_RATING, STAT_HASTE_RATING ) ); // sunwell delight
+  // Batch 3 foods: primary stat foods
+  // Baked Lucky Loa: major primary stat (level 90 req) - Source: wowhead.com/spell=1232913 (2026-03-16)
+  unique_gear::register_special_effect( 1232913, consumables::primary_food( 1219179, STAT_STR_AGI_INT ) );  // baked lucky loa
+  // Mana-Infused Stew: non-major primary stat (level 80 req) - Source: wowhead.com/spell=1232256 (2026-03-16)
+  unique_gear::register_special_effect( 1232256, consumables::primary_food( 1219179, STAT_STR_AGI_INT, 3, false ) );  // mana-infused stew
+  // Spellfire Filet: major primary stat (level 90 req) - Source: wowhead.com/spell=1232488 (2026-03-16)
+  unique_gear::register_special_effect( 1232488, consumables::primary_food( 1219179, STAT_STR_AGI_INT ) );  // spellfire filet
   // Flasks
   // Potions
   register_special_effect( 1236998, consumables::draught_of_rampant_abandon );
@@ -3946,6 +4037,8 @@ void register_special_effects()
   register_special_effect( { 1236700, 1236701 }, enchants::eyes_of_the_eagle, false, true );
   register_special_effect( { 1262295, 1262298 }, enchants::smugglers_lynxeye );
   register_special_effect( { 1262337, 1262339 }, enchants::farstriders_hawkeye );
+  register_special_effect( 1241725, enchants::worldsoul_aegis );   // Weapon - Worldsoul Aegis proc
+  register_special_effect( { 1236737, 1236738 }, DISABLED_EFFECT ); // Worldsoul Aegis enchant drivers
   // Embellishments & Tinkers
   register_special_effect( 1283697, embellishments::arcanoweave_lining );
   register_special_effect( 1241711, embellishments::sunfire_silk_lining );
@@ -3959,6 +4052,12 @@ void register_special_effects()
   register_special_effect( 1251904, embellishments::loa_worshipers_band );
   register_special_effect( 1261968, embellishments::b0p_curator_of_booms );
   register_special_effect( 1246309, embellishments::b1p_scorcher_of_souls );
+  register_special_effect( 1261971, trinkets::m0ll1_atomic_anomaly );     // M0LL1, Atomic Anomaly
+  register_special_effect( 1245621, DISABLED_EFFECT );                    // Pigments of the Wind (spell not in DB)
+  register_special_effect( 253793, trinkets::voidclaw_gauntlets );        // Voidclaw Gauntlets
+  register_special_effect( 253807, trinkets::umbra_weavers_portent );     // Umbra-Weaver's Portent 3-set
+  register_special_effect( 253802, DISABLED_EFFECT );                     // Pauldrons of the Void Hunter (race-specific AP, not sim-relevant)
+  register_special_effect( 250765, trinkets::ampoule_of_pure_void );      // Ampoule of Pure Void on-use
   // Darkmoon Trinkets & Embellishments
   register_special_effect( { 1245001, 1245053 }, darkmoon::blood );
   register_special_effect( { 1245055, 1245051 }, darkmoon::rot );
