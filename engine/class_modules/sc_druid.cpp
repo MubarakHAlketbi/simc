@@ -866,7 +866,7 @@ struct druid_t final : public parse_player_effects_t
   struct talents_t
   {
     // Class tree
-    player_talent_t aessinas_renewal;  // TODO: NYI
+    player_talent_t aessinas_renewal;  // N/A for DPS — healing proc when taking large hit
     player_talent_t astral_influence;
     player_talent_t circle_of_the_heavens;
     player_talent_t circle_of_the_wild;
@@ -902,7 +902,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t natural_recovery;
     player_talent_t nurturing_instinct;
     player_talent_t oakskin;
-    player_talent_t perfectlyhoned_instincts;  // TODO: NYI
+    player_talent_t perfectlyhoned_instincts;  // N/A for DPS — reduces Well-Honed Instincts (healing) cooldown
     player_talent_t primal_fury;
     player_talent_t rake;
     player_talent_t rejuvenation;
@@ -916,7 +916,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t starsurge;
     player_talent_t sunfire;
     player_talent_t swipe;
-    player_talent_t symbiotic_relationship;  // TODO: NYI
+    player_talent_t symbiotic_relationship;  // N/A for DPS — heal-sharing bond with ally
     player_talent_t thick_hide;
     player_talent_t tiger_dash;
     player_talent_t typhoon;
@@ -924,7 +924,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t ursocs_spirit;
     player_talent_t ursols_vortex;
     player_talent_t verdant_heart;
-    player_talent_t wellhoned_instincts;  // TODO: NYI
+    player_talent_t wellhoned_instincts;  // N/A for DPS — defensive proc: auto-cast Frenzied Regeneration below 40% HP
     player_talent_t wild_charge;
     player_talent_t wild_growth;
 
@@ -1069,7 +1069,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t ursocs_endurance;
     player_talent_t ursocs_fury;
     player_talent_t ursocs_guidance;
-    player_talent_t ursols_warding;  // TODO: NYI
+    player_talent_t ursols_warding;  // N/A for DPS — magical damage reduction based on armor
     player_talent_t vulnerable_flesh;
     player_talent_t waking_nightmare;
     player_talent_t ward_of_the_forest;
@@ -1153,7 +1153,7 @@ struct druid_t final : public parse_player_effects_t
     // Wildstalker
     player_talent_t bond_with_nature;
     player_talent_t bursting_growth;
-    player_talent_t entangling_vortex;
+    player_talent_t entangling_vortex;  // N/A for DPS — roots enemies pulled into Ursol's Vortex (CC)
     player_talent_t flower_walk;
     player_talent_t green_thumb;
     player_talent_t harmonious_constitution;
@@ -1176,7 +1176,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t cenarius_might;
     player_talent_t control_of_the_dream;
     player_talent_t dream_surge;
-    player_talent_t durability_of_nature;
+    player_talent_t durability_of_nature;  // N/A for DPS — increases treant/Grove Guardian health/duration (pet health partially applied)
     player_talent_t dryads_dance;
     player_talent_t early_spring;
     player_talent_t expansiveness;
@@ -1201,7 +1201,7 @@ struct druid_t final : public parse_player_effects_t
     player_talent_t lunar_calling;
     player_talent_t lunar_insight;
     player_talent_t lunation;
-    player_talent_t moondust;
+    player_talent_t moondust;  // N/A for DPS — slows enemies affected by Moonfire (movement debuff)
     player_talent_t moon_guardian;
     player_talent_t penumbral_swell;
     player_talent_t star_cascade;
@@ -10078,7 +10078,7 @@ void druid_t::init_spells()
 
   // Class tree
   sim->print_debug( "Initializing class talents..." );
-  talent.aessinas_renewal               = CT( "Aessina's Renewal" );  // TODO: NYI
+  talent.aessinas_renewal               = CT( "Aessina's Renewal" );  // N/A for DPS — healing proc when taking large hit
   talent.astral_influence               = CT( "Astral Influence" );
   talent.circle_of_the_heavens          = CT( "Circle of the Heavens" );
   talent.circle_of_the_wild             = CT( "Circle of the Wild" );
@@ -10114,7 +10114,7 @@ void druid_t::init_spells()
   talent.natural_recovery               = CT( "Natural Recovery" );
   talent.nurturing_instinct             = CT( "Nurturing Instinct" );
   talent.oakskin                        = CT( "Oakskin" );
-  talent.perfectlyhoned_instincts       = CT( "Perfectly-Honed Instincts" );  // TODO: NYI
+  talent.perfectlyhoned_instincts       = CT( "Perfectly-Honed Instincts" );  // N/A for DPS — reduces Well-Honed Instincts (healing) cooldown
   talent.primal_fury                    = CT( "Primal Fury" );
   talent.rake                           = CT( "Rake" );
   talent.rejuvenation                   = CT( "Rejuvenation" );
@@ -10128,14 +10128,14 @@ void druid_t::init_spells()
   talent.starsurge                      = CT( "Starsurge" );
   talent.sunfire                        = CT( "Sunfire" );
   talent.swipe                          = CT( "Swipe" );
-  talent.symbiotic_relationship         = CT( "Symbiotic Relationship" );  // TODO: NYI
+  talent.symbiotic_relationship         = CT( "Symbiotic Relationship" );  // N/A for DPS — heal-sharing bond with ally
   talent.thick_hide                     = CT( "Thick Hide" );
   talent.typhoon                        = CT( "Typhoon" );
   talent.ursine_vigor                   = CT( "Ursine Vigor" );
   talent.ursocs_spirit                  = CT( "Ursoc's Spirit" );
   talent.ursols_vortex                  = CT( "Ursol's Vortex" );
   talent.verdant_heart                  = CT( "Verdant Heart" );
-  talent.wellhoned_instincts            = CT( "Well-Honed Instincts" );
+  talent.wellhoned_instincts            = CT( "Well-Honed Instincts" );  // N/A for DPS — defensive proc: auto-cast Frenzied Regeneration below 40% HP
   talent.wild_charge                    = CT( "Wild Charge" );
   talent.wild_growth                    = CT( "Wild Growth" );
 
@@ -10285,7 +10285,7 @@ void druid_t::init_spells()
   talent.ursocs_endurance               = ST( "Ursoc's Endurance" );
   talent.ursocs_fury                    = ST( "Ursoc's Fury" );
   talent.ursocs_guidance                = ST( "Ursoc's Guidance" );
-  talent.ursols_warding                 = ST( "Ursol's Warding" );  // TODO: NYI
+  talent.ursols_warding                 = ST( "Ursol's Warding" );  // N/A for DPS — magical damage reduction based on armor
   talent.vulnerable_flesh               = ST( "Vulnerable Flesh" );
   talent.waking_nightmare               = ST( "Waking Nightmare" );
   talent.ward_of_the_forest             = ST( "Ward of the Forest" );
@@ -10371,7 +10371,7 @@ void druid_t::init_spells()
   // Wildstalker
   talent.bond_with_nature               = HT( "Bond with Nature" );
   talent.bursting_growth                = HT( "Bursting Growth" );
-  talent.entangling_vortex              = HT( "Entangling Vortex" );  // NYI
+  talent.entangling_vortex              = HT( "Entangling Vortex" );  // N/A for DPS — roots enemies pulled into Ursol's Vortex (CC)
   talent.flower_walk                    = HT( "Flower Walk" );  // TODO: heal NYI
   talent.green_thumb                    = HT( "Green Thumb" );
   talent.harmonious_constitution        = HT( "Harmonious Constitution" );
@@ -10394,7 +10394,7 @@ void druid_t::init_spells()
   talent.cenarius_might                 = HT( "Cenarius' Might" );
   talent.control_of_the_dream           = HT( "Control of the Dream" );
   talent.dream_surge                    = HT( "Dream Surge" );  // TODO: heal NYI
-  talent.durability_of_nature           = HT( "Durability of Nature" );  // TODO: NYI
+  talent.durability_of_nature           = HT( "Durability of Nature" );  // N/A for DPS — increases treant/Grove Guardian health/duration (pet health partially applied)
   talent.dryads_dance                   = HT( "Dryad's Dance" );
   talent.early_spring                   = HT( "Early Spring" );
   talent.expansiveness                  = HT( "Expansiveness" );
@@ -10419,7 +10419,7 @@ void druid_t::init_spells()
   talent.lunar_calling                  = HT( "Lunar Calling" );
   talent.lunar_insight                  = HT( "Lunar Insight" );
   talent.lunation                       = HT( "Lunation" );
-  talent.moondust                       = HT( "Moondust" );  // TODO: NYI
+  talent.moondust                       = HT( "Moondust" );  // N/A for DPS — slows enemies affected by Moonfire (movement debuff)
   talent.moon_guardian                  = HT( "Moon Guardian" );
   talent.penumbral_swell                = HT( "Penumbral Swell" );
   talent.star_cascade                   = HT( "Star Cascade" );
