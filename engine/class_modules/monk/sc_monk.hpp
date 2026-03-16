@@ -772,6 +772,9 @@ public:
       player_talent_t transcendence_linked_spirits;
       player_talent_t fatal_touch;
       player_talent_t rushing_reflexes;
+      // Midnight additions — utility/healing, N/A for DPS
+      player_talent_t reinvigoration;   // ID 1266740 — Detox ally → +30% move speed; utility N/A
+      player_talent_t silent_sanctuary; // ID 1266719 — heal 300% SP/3s when no enemies nearby; healing N/A
     } monk;
 
     // Brewmaster

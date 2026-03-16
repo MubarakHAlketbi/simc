@@ -5368,6 +5368,11 @@ void monk_t::init_spells()
     talent.monk.transcendence_linked_spirits = _CT( "Transcendence: Linked Spirits" );
     talent.monk.fatal_touch                  = _CT( "Fatal Touch" );
     talent.monk.rushing_reflexes             = _CT( "Rushing Reflexes" );
+    // Midnight additions — utility/healing, N/A for DPS
+    // Source: https://www.wowhead.com/beta/spell=1266740 (2026-03-16)
+    // Source: https://www.wowhead.com/beta/spell=1266719 (2026-03-16)
+    talent.monk.reinvigoration   = _CT( "Reinvigoration" );   // ID 1266740
+    talent.monk.silent_sanctuary = _CT( "Silent Sanctuary" ); // ID 1266719
   }
 
   // monk_t::talent::brewmaster

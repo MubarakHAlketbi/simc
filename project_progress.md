@@ -183,8 +183,8 @@ Here is the data organized into Markdown tables.
 | Fire | 83 | 83 | 0 | Complete | No action needed |
 | Frost | 78 | 78 | 0 | Complete | No action needed |
 | **Monk** | | | | | |
-| Brewmaster | 78 | 76 | 2 | Minor | Verify Reinvigoration (1266740) for energy regen; Silent Sanctuary (1266719) likely utility |
-| Windwalker | 97 | 95 | 2 | Minor | Same 2 Monk class tree missing |
+| Brewmaster | 78 | 78 | 0 | Complete | Reinvigoration (1266740) utility N/A; Silent Sanctuary (1266719) healing N/A — both registered 2026-03-16 |
+| Windwalker | 97 | 97 | 0 | Complete | Same 2 Monk class tree talents registered 2026-03-16 — all N/A for DPS |
 | **Paladin** | | | | | |
 | Protection | 79 | 79 | 0 | Complete | No action needed |
 | Retribution | 86 | 86 | 0 | Complete | No action needed |
