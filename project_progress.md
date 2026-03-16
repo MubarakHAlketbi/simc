@@ -30,13 +30,13 @@ Here is the data organized into Markdown tables.
 | Fire | In Beta | In Beta | Implemented | Implemented |
 | Frost | In Beta | In Beta | Implemented | Implemented |
 | **Monk** | | | | |
-| Brewmaster | In Beta | NYI | Implemented | Implemented |
+| Brewmaster | In Beta | In Beta | Implemented | Implemented |
 | Mistweaver | N/A | N/A | N/A | N/A |
-| Windwalker | In Beta | NYI | Implemented | Implemented |
+| Windwalker | In Beta | In Beta | Implemented | Implemented |
 | **Paladin** | | | | |
-| Protection | In Beta | NYI | Implemented | In Beta |
+| Protection | In Beta | In Beta | Implemented | In Beta |
 | Holy | N/A | N/A | N/A | N/A |
-| Retribution | In Beta | NYI | In Beta | In Beta |
+| Retribution | In Beta | In Beta | In Beta | In Beta |
 | **Priest** | | | | |
 | Discipline | N/A | N/A | N/A | N/A |
 | Holy | N/A | N/A | N/A | N/A |

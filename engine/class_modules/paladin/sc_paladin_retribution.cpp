@@ -554,11 +554,10 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
         has_echo = true;
       }
     }
-    // ToDo Fluttershy: If this ever gets sensible results, move to impact
+    // MID1 4pc: Divine Storm applies Expurgation at 50% effectiveness (from spell effect #2)
     if ( !background && p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
     {
-      // ToDo Fluttershy: Rewrite to spell data later
-      double mult  = .5;
+      double mult = p()->spells.mid1_ret_4pc->effectN( 2 ).base_value() / 100.0;
       if ( has_echo )
         mult *= 2;
       if ( p()->talents.tempest_of_the_lightbringer->ok() )
@@ -653,13 +652,15 @@ struct templars_verdict_t : public holy_power_consumer_t<paladin_melee_attack_t>
     }
 
     
+    // MID1 4pc: Templar's Verdict/Final Verdict applies Expurgation at 100% effectiveness (from spell effect #1)
     if ( !background && p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
     {
-      // ToDo Fluttershy: Rewrite to spell data later
-      double mult = 1.0;
+      double mult = p()->spells.mid1_ret_4pc->effectN( 1 ).base_value() / 100.0;
       if ( p()->buffs.empyrean_legacy->up() )
       {
-        mult = p()->talents.tempest_of_the_lightbringer->ok() ? 1.6875 : 1.625;
+        // Empyrean Legacy procs Divine Storm alongside TV, so add the DS portion too
+        double ds_mult = p()->spells.mid1_ret_4pc->effectN( 2 ).base_value() / 100.0;
+        mult += ds_mult * ( p()->talents.tempest_of_the_lightbringer->ok() ? 1.2 : 1.0 );
       }
       p()->trigger_expurgation( execute_state->target, mult );
     }
@@ -1193,6 +1194,7 @@ void paladin_t::init_spells_retribution()
   spells.hammer_of_wrath_ret       = find_spell( 24275 );
   spells.hammer_of_wrath_ret_dt    = find_spell( 1279408 );
   spells.crusading_strikes_data    = find_spell( 406834 );
+  spells.mid1_ret_4pc              = sets->set( PALADIN_RETRIBUTION, MID1, B4 );
 }
 
 // Action Priority List Generation

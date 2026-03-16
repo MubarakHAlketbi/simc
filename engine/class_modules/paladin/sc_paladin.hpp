@@ -434,6 +434,9 @@ public:
     const spell_data_t* judgment_ret_dt;
     const spell_data_t* hammer_of_wrath_ret;
     const spell_data_t* hammer_of_wrath_ret_dt;
+
+    // MID1 set bonus spell data
+    const spell_data_t* mid1_ret_4pc; // Paladin Retribution 12.0 Class Set 4pc
   } spells;
 
   struct rppms_t {
