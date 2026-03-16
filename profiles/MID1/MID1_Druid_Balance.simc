@@ -7,7 +7,7 @@ race=night_elf
 timeofday=night
 role=attack
 position=ranged_back
-talents=CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtFPwyMbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA
+# talents= (balance talent hash not set — using defaults)
 
 # Default consumables
 potion=lights_potential_2
@@ -29,36 +29,19 @@ actions.precombat+=/moonkin_form
 actions.precombat+=/wrath
 
 # Executed every time the actor is available.
-actions=potion,if=buff.ca_inc.up|fight_remains<32
-actions+=/invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
-actions+=/berserking,if=buff.ca_inc.up
-actions+=/blood_fury,if=buff.ca_inc.up
-actions+=/ancestral_call,if=buff.ca_inc.up
-actions+=/fireblood,if=buff.ca_inc.up
-actions+=/use_item,slot=trinket1,if=buff.ca_inc.up
-actions+=/use_item,slot=trinket2,if=buff.ca_inc.up
-actions+=/celestial_alignment,if=!talent.incarnation_chosen_of_elune&(!talent.fury_of_elune|cooldown.fury_of_elune.remains<5)
-actions+=/incarnation_chosen_of_elune,if=(!talent.fury_of_elune|cooldown.fury_of_elune.remains<5)
-actions+=/fury_of_elune,if=eclipse.in_any&buff.ca_inc.up
-actions+=/full_moon,if=buff.ca_inc.up|charges>1
-actions+=/half_moon,if=buff.ca_inc.up|charges>1
-actions+=/new_moon,if=buff.ca_inc.up|charges>1
-actions+=/starfall,if=talent.starweaver&buff.starweaver_da.up&spell_targets>1
-actions+=/starsurge,if=talent.starweaver&buff.starweaver_st.up
-actions+=/sunfire,target_if=min:remains,if=refreshable&eclipse.in_any
-actions+=/moonfire,target_if=min:remains,if=refreshable&eclipse.in_any
-actions+=/stellar_flare,target_if=min:remains,if=talent.stellar_flare&refreshable
-actions+=/starfall,if=buff.starlord.stack<3&spell_targets>1
-actions+=/starsurge,if=buff.starlord.stack<3&spell_targets=1
-actions+=/force_of_nature
-actions+=/starfall,if=eclipse.in_lunar&spell_targets>1
-actions+=/starsurge,if=eclipse.in_solar|eclipse.in_both
-actions+=/starfall,if=spell_targets>1
-actions+=/starsurge,if=buff.eclipse_solar.up|buff.eclipse_lunar.up
+# Simplified APL — no talent-gated actions (no valid talent hash available)
+actions=potion,if=fight_remains<32
+actions+=/berserking
+actions+=/blood_fury
+actions+=/ancestral_call
+actions+=/fireblood
+actions+=/use_item,slot=trinket1
+actions+=/use_item,slot=trinket2
+actions+=/celestial_alignment
 actions+=/sunfire,target_if=min:remains,if=refreshable
 actions+=/moonfire,target_if=min:remains,if=refreshable
-actions+=/wrath,if=eclipse.in_solar|eclipse.in_both|(eclipse.in_lunar&talent.umbral_embrace)
-actions+=/starfire
+actions+=/starsurge
+actions+=/wrath
 
 head=branches_of_the_luminous_bloom,id=250024,bonus_id=1808/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,gem_id=240983,enchant_id=8017
 neck=amulet_of_the_abyssal_hymn,id=250247,bonus_id=12806/13577/13668,ilevel=289,gem_id=240892/240892

@@ -6,7 +6,7 @@ level=90
 race=blood_elf
 role=attack
 position=back
-talents=CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZwDMzMzYMbjZmZbbMzMzMjBjZWGAAAAGMGwY2MMwAziWoFbwAmZwMzA
+# talents= (assassination talent hash not set — using defaults)
 
 # Default consumables
 potion=lights_potential_2

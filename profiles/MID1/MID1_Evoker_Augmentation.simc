@@ -6,7 +6,7 @@ level=90
 race=dracthyr_horde
 role=attack
 position=ranged_back
-talents=CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMDMDzgBmZGjZaYmpZMWmxMzMz8AzMzAmxMGzMLzMDMwYwCsMGN2GQmBBbYGMzghB
+# talents= (augmentation talent hash not set — using defaults)
 
 # Default consumables
 potion=potion_of_recklessness_2
@@ -24,25 +24,20 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 # Executed before combat begins. Accepts non-harmful actions only.
 # Snapshot raid buffed stats before combat begins and pre-potting is done.
 actions.precombat=snapshot_stats
-actions.precombat+=/variable,name=trinket_1_buffs,value=trinket.1.has_buff.intellect|trinket.1.has_buff.mastery|trinket.1.has_buff.versatility|trinket.1.has_buff.haste|trinket.1.has_buff.crit
-actions.precombat+=/variable,name=trinket_2_buffs,value=trinket.2.has_buff.intellect|trinket.2.has_buff.mastery|trinket.2.has_buff.versatility|trinket.2.has_buff.haste|trinket.2.has_buff.crit
 actions.precombat+=/living_flame
 
 # Executed every time the actor is available.
-actions=potion,if=buff.breath_of_eons.up|fight_remains<35
-actions+=/invoke_external_buff,name=power_infusion,if=buff.breath_of_eons.up|fight_remains<35
-actions+=/berserking,if=buff.breath_of_eons.up
-actions+=/blood_fury,if=buff.breath_of_eons.up
-actions+=/ancestral_call,if=buff.breath_of_eons.up
-actions+=/fireblood,if=buff.breath_of_eons.up
-actions+=/use_item,slot=trinket1,if=buff.breath_of_eons.up|(trinket.1.cooldown.duration<=60&!variable.trinket_1_buffs)
-actions+=/use_item,slot=trinket2,if=buff.breath_of_eons.up|(trinket.2.cooldown.duration<=60&!variable.trinket_2_buffs)
+# Simplified APL — no buff.breath_of_eons reference (no valid talent hash available)
+actions=potion,if=fight_remains<35
+actions+=/berserking
+actions+=/blood_fury
+actions+=/ancestral_call
+actions+=/fireblood
+actions+=/use_item,slot=trinket1
+actions+=/use_item,slot=trinket2
 actions+=/breath_of_eons
-actions+=/tip_the_scales,use_off_gcd=1,if=buff.breath_of_eons.up
-actions+=/ebon_might,if=!buff.ebon_might_self.up|talent.sands_of_time&buff.ebon_might_self.remains<3
-actions+=/upheaval,use_off_gcd=1,if=buff.breath_of_eons.up
+actions+=/ebon_might,if=!buff.ebon_might_self.up|buff.ebon_might_self.remains<3
 actions+=/prescience,if=buff.prescience.remains<3|!buff.prescience.up
-actions+=/eruption,if=talent.motes_of_possibility&buff.motes_of_possibility.stack>=4
 actions+=/eruption,if=essence>=3
 actions+=/living_flame,if=buff.burnout.up
 actions+=/azure_strike

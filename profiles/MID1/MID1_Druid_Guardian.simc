@@ -73,7 +73,7 @@ neck=eternal_voidsong_chain,id=249368,bonus_id=12806/13577/13668,gem_id=240908
 shoulders=luminant_verdicts_shoulderguards,id=250024,bonus_id=13575,ilevel=289,enchant_id=8001
 back=defiant_defenders_drape,id=260312,bonus_id=4795,ilevel=289
 chest=luminant_verdicts_thoraxguard,id=250022,bonus_id=13575,ilevel=289,enchant_id=7987
-wrists=voidshaper_bracers,id=251208,bonus_id=12806/13577,gem_id=240908
+wrists=silvermoon_agents_deflectors,id=244576,bonus_id=1808/8790/8960/12214/12214/12214/12214/12214/12214/12214/12214/12384,ilevel=285,gem_id=240892,crafted_stats=32/49
 hands=luminant_verdicts_grips,id=250025,bonus_id=13574,ilevel=289
 waist=scornscarred_shulkas_belt,id=249374,bonus_id=1808/4795,ilevel=289,gem_id=240892
 legs=phloemwraps_of_the_luminous_bloom,id=250023,bonus_id=13575,ilevel=289,enchant_id=8159
