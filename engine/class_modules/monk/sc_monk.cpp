@@ -5475,7 +5475,7 @@ void monk_t::init_spells()
     talent.windwalker.touch_of_the_tiger              = _ST( "Touch of the Tiger" );
     talent.windwalker.ferociousness                   = _ST( "Ferociousness" );
     talent.windwalker.hardened_soles                  = _ST( "Hardened Soles" );
-    talent.windwalker.ascension                       = _ST( "Ascension" );  // TODO: NYI: EFFECT 2 ENERGY REGEN
+    talent.windwalker.ascension                       = _ST( "Ascension" );  // Effect 1: +1 max Chi (applied); Effect 2: +10% energy regen (implemented in resource_regen_per_second)
     talent.windwalker.dual_threat                     = _ST( "Dual Threat" );
     talent.windwalker.dual_threat_damage              = find_spell( 451839 );
     talent.windwalker.teachings_of_the_monastery      = _ST( "Teachings of the Monastery" );
@@ -6667,6 +6667,16 @@ double monk_t::composite_player_target_armor( player_t *target ) const
   double armor = player_t::composite_player_target_armor( target );
 
   return armor;
+}
+
+double monk_t::resource_regen_per_second( resource_e r ) const
+{
+  double reg = base_t::resource_regen_per_second( r );
+
+  if ( r == RESOURCE_ENERGY && talent.windwalker.ascension.ok() )
+    reg *= 1.0 + talent.windwalker.ascension->effectN( 2 ).percent();
+
+  return reg;
 }
 
 void monk_t::invalidate_cache( cache_e c )

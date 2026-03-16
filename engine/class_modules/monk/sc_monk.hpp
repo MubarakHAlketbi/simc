@@ -1184,6 +1184,7 @@ public:
   double composite_attack_power_multiplier() const override;
   double composite_dodge() const override;
   double composite_player_target_armor( player_t *target ) const override;
+  double resource_regen_per_second( resource_e ) const override;
 
   // Other
   bool wowv_l( wowv_t value ) const;
