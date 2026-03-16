@@ -13,14 +13,14 @@ Here is the data organized into Markdown tables.
 | Havoc | Implemented | In Beta | Implemented | Implemented |
 | Vengeance | Implemented | Implemented | Implemented | Implemented |
 | **Druid** | | | | |
-| Balance | In Beta | In Beta | In Beta | In Beta |
+| Balance | In Beta | In Beta | In Beta | In Beta | MID1_Druid_Balance.simc profile created 2026-03-16; NYI talents audited (all N/A) |
 | Feral | In Beta | In Beta | In Beta | In Beta |
 | Guardian | In Beta | In Beta | In Beta | In Beta |
 | Restoration | N/A | N/A | N/A | N/A |
 | **Evoker** | | | | |
 | Devestation | In Beta | In Beta | Implemented | Implemented |
 | Preservation | N/A | N/A | N/A | N/A |
-| Augmentation | In Beta | In Beta | Implemented | Implemented |
+| Augmentation | In Beta | In Beta | Implemented | Implemented | MID1_Evoker_Augmentation.simc profile created 2026-03-16 |
 | **Hunter** | | | | |
 | Beast Mastery | Implemented | In Beta | Implemented | Implemented |
 | Marksmanship | Implemented | In Beta | Implemented | Implemented |
@@ -42,7 +42,7 @@ Here is the data organized into Markdown tables.
 | Holy | N/A | N/A | N/A | N/A |
 | Shadow | In Beta | In Beta | Implemented | Implemented |
 | **Rogue** | | | | |
-| Assassination | In Beta | In Beta | In Beta | In Beta |
+| Assassination | In Beta | In Beta | In Beta | In Beta | MID1_Rogue_Assassination.simc profile created 2026-03-16 |
 | Outlaw | In Beta | In Beta | In Beta | In Beta |
 | Subtlety | In Beta | In Beta | In Beta | In Beta |
 | **Shaman** | | | | |
@@ -50,9 +50,9 @@ Here is the data organized into Markdown tables.
 | Enhancement | Implemented | Implemented | Implemented | Implemented |
 | Restoration | N/A | N/A | N/A | N/A |
 | **Warlock** | | | | |
-| Affliction | In Beta | In Beta | In Beta | In Beta |
-| Demonology | In Beta | In Beta | In Beta | In Beta |
-| Destruction | In Beta | In Beta | In Beta | In Beta |
+| Affliction | In Beta | In Beta | In Beta | In Beta | dark_pact added to APL (health.pct<50) 2026-03-16 |
+| Demonology | In Beta | In Beta | In Beta | In Beta | dark_pact added to APL; MID1_Warlock_Demonology.simc created 2026-03-16 |
+| Destruction | In Beta | In Beta | In Beta | In Beta | dark_pact added to APL 2026-03-16 |
 | **Warrior** | | | | |
 | Arms | Implemented | In Beta | Implemented | Implemented |
 | Fury | Implemented | In Beta | Implemented | Implemented |
@@ -264,23 +264,22 @@ Systematic review of everything that could be missed or wrong when transitioning
 
 ---
 
-#### 1. Missing Player Profiles (MEDIUM)
-The following specs have APL files but NO corresponding MID1 profile in profiles/MID1/:
-- Balance Druid (APL exists: druid_balance.simc) — no MID1_Druid_Balance.simc
-- Augmentation Evoker (APL exists: evoker_augmentation.simc) — no MID1_Evoker_Augmentation.simc
-- Assassination Rogue (APL exists: rogue_assassination.simc) — no MID1_Rogue_Assassination.simc
-- Warlock Demonology base (only hero variant MID1_Warlock_Demonology_Soul_Harvester.simc exists)
-Action: Create base MID1 profiles for these 4 specs so CI spec-tests can cover them.
+#### 1. Missing Player Profiles — DONE (MEDIUM)
+All 4 missing MID1 profiles created 2026-03-16 (commit 6b8e643):
+- profiles/MID1/MID1_Druid_Balance.simc — spec=balance, level=90, night_elf, with Eclipse APL
+- profiles/MID1/MID1_Evoker_Augmentation.simc — spec=augmentation, level=90, dracthyr, with Ebon Might/prescience APL
+- profiles/MID1/MID1_Rogue_Assassination.simc — spec=assassination, level=90, blood_elf, with Deathmark/Garrote APL
+- profiles/MID1/MID1_Warlock_Demonology.simc — spec=demonology, level=90, Orc, base (no hero tree)
 
 ---
 
-#### 2. APL Readiness — Not All Specs Validated (MEDIUM-HIGH)
-All APLs are "In Beta." The following are highest-risk because their general changes are also In Beta:
-- DK Unholy, all Druid specs, all Evoker specs, all Mage specs, all Monk specs,
-  Paladin Prot/Ret, all Rogue specs, all Warlock specs.
-The new talents wired this session (Gorefiend's Avarice, Dark Pact, Improved Find Weakness,
-Nozdormu Adept) are NOT referenced in any APL yet — players cannot use them in sims.
-Action: Add dark_pact, drain_life (if Gorefiend's Avarice talented), etc. to warlock APLs.
+#### 2. APL Readiness — Partially Updated (MEDIUM-HIGH)
+dark_pact added to Warlock APLs (all 3 specs) 2026-03-16 (commit 6b8e643):
+  condition: talent.dark_pact.enabled&health.pct<50 in ogcd/racials list.
+Remaining: APLs for DK Unholy, all Druid specs, all Evoker specs, all Mage specs, all Monk
+  specs, Paladin Prot/Ret, all Rogue specs, all Warlock specs are still "In Beta" pending full
+  rotation validation. drain_life with gorefiends_avarice talent still not in APL.
+Next action: Full APL validation pass (HIGH priority item) — see Item 8/9 in summary table.
 
 ---
 
@@ -296,16 +295,16 @@ These affect all trinket In Beta rows — they are correctly marked In Beta.
 
 ---
 
-#### 4. Class-Level NYI Talents (MEDIUM)
-Found explicit TODO: NYI markers still in class modules:
-- Druid: aessinas_renewal, perfectlyhoned_instincts, symbiotic_relationship,
-  wellhoned_instincts, ursols_warding, entangling_vortex, durability_of_nature, moondust,
-  and multiple Restoration talents (N/A for DPS sims but still flagged) — see Item 6 (medium)
-- Monk Windwalker: ascension effect#2 (energy regen) NYI — see Item med3
-- Warrior: interpose (protect ally, utility N/A), field_dressing (ally bandage heal, N/A) — both
-  registered, no DPS mechanic needed. CLOSED N/A 2026-03-16.
-- Rogue: deaths_arrival NYI-in-game (spell does not exist in current beta build). CLOSED as
-  in-game NYI — no action until Blizzard adds the spell. 2026-03-16.
+#### 4. Class-Level NYI Talents — DONE (MEDIUM)
+All DPS-relevant NYIs resolved 2026-03-16:
+- Druid: aessinas_renewal, perfectlyhoned_instincts, symbiotic_relationship, wellhoned_instincts,
+  ursols_warding, entangling_vortex, durability_of_nature, moondust — all audited via Wowhead,
+  all are healing/CC/utility N/A for DPS. Comments updated to '// N/A for DPS' (commit d3772f8).
+  Restoration tree talents also N/A — comments updated.
+- Monk Windwalker ascension effect#2: energy regen (+10%) now implemented via
+  resource_regen_per_second() override in sc_monk.cpp (commit ceebf16).
+- Warrior interpose/field_dressing: CLOSED N/A 2026-03-16.
+- Rogue deaths_arrival: CLOSED in-game NYI 2026-03-16.
 
 ---
 
@@ -395,12 +394,12 @@ GitHub Issue #81 filed 2026-03-16 (needs-data). Leave as In Beta until tested on
 
 | Priority | Item | Severity | Action |
 | :---: | :--- | :--- | :--- |
-| 1 | Create missing profiles: Balance Druid, Aug Evoker, Assassination Rogue, Demo Warlock base | MEDIUM | Add profiles/MID1/ files |
+|| 1 | Create missing profiles: Balance Druid, Aug Evoker, Assassination Rogue, Demo Warlock base — DONE 2026-03-16 (commit 6b8e643) | MEDIUM | Done |
 | 2 | Verify secondary stat DR curves / base stats at level 90 | HIGH | Run naked sim + compare to Wowhead |
-| 3 | Add dark_pact to warlock APLs; review prescience timing for nozdormu_adept | MEDIUM | Edit APL .simc files |
+|| 3 | Add dark_pact to warlock APLs; review prescience timing for nozdormu_adept — dark_pact DONE 2026-03-16 (commit 6b8e643); prescience APL timing reviewed (nozdormu_adept is passive, no APL change needed) | MEDIUM | Done |
 | 4 | Resolve NYI in unique_gear_midnight.cpp (Draught AoE, Vessel shield, Emberwing proc rate) | MEDIUM | Code + testing |
 | 5 | Verify Midnight item scaling curve covers MID1 ilevels (289 range) | MEDIUM | Audit sc_item_data.cpp |
-| 6 | Audit Druid NYI talents for DPS-relevance (aessinas_renewal, perfectlyhoned_instincts, etc.) | MEDIUM | Fetch spell pages, triage |
+|| 6 | Audit Druid NYI talents for DPS-relevance — DONE 2026-03-16 (commit d3772f8): all N/A, comments updated. Monk Ascension energy regen implemented (commit ceebf16) | MEDIUM | Done |
 || 7 | Demonology Warlock Apex = Dominion of Argus (1276163) — fully implemented, old ID 1264137 removed from beta | LOW | DONE 2026-03-16 |
 || 8 | Shaman Elemental Orbit gameplay hook — CLOSED N/A (2026-03-16) | LOW | Done |
 || 9 | Evoker Improved Defy Fate — CLOSED N/A for DPS (2026-03-16) | LOW | Done |
