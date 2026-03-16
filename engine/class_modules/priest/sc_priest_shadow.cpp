@@ -2096,9 +2096,15 @@ void priest_t::init_spells_shadow()
   talents.shadow.vision_of_nzoth_buff   = find_spell( 1243114 );  // Idol of N'Zoth 100 stack buff
   talents.shadow.idol_of_nzoth          = ST( "Idol of N'Zoth" );
   talents.shadow.idol_of_yoggsaron      = ST( "Idol of Yogg-Saron" );
-  talents.shadow.idol_of_cthun          = ST( \"Idol of C'Thun\" );
+  talents.shadow.idol_of_cthun          = ST( "Idol of C'Thun" );
   // TODO: implement — "Death" (ID 1240364) new Midnight Shadow talent; missing from code entirely
   // Apex
+  // Apex -- Void Apparitions (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Void Apparitions base mechanic -- apparitions spawn on DoT ticks
+  // R2+3: Apparition proc chance and damage increased (same ID, effectN scales per rank)
+  // R4: Void Apparitions procs also trigger Idol of C'thun / Horrific Vision effects
+  // Source: https://www.wowhead.com/spell=1264096 (retrieved 2026-03-17)
   talents.shadow.void_apparitions_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1264096 );
   talents.shadow.void_apparitions_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1264104 );
   talents.shadow.void_apparition    = find_spell( 1264175 );

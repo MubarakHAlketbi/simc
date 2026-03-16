@@ -7469,6 +7469,12 @@ void hunter_t::init_spells()
     talents.bloody_frenzy_buff                = talents.bloody_frenzy.ok() ? find_spell( 1265063 ) : spell_data_t::not_found();
     talents.piercing_fangs                    = find_talent_spell( talent_tree::SPECIALIZATION, "Piercing Fangs", HUNTER_BEAST_MASTERY );
 
+    // Apex -- Nature's Ally (Midnight 4-rank talent, Beast Mastery Hunter)
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Summon a Nature's Ally beast companion (ID 1282474) to assist in combat
+    // R2+3: Nature's Ally attack power / ability scaling increased
+    // R4: Nature's Ally grants a buff (ID 1276720) on attacks
+    // Source: https://www.wowhead.com/spell=TODO (retrieved 2026-03-17)
     talents.natures_ally_1                    = find_talent_spell( talent_tree::SPECIALIZATION, "Nature's Ally", 1 );
     talents.natures_ally_1_summon             = talents.natures_ally_1.ok() ? find_spell( 1282474 ) : spell_data_t::not_found();
     talents.natures_ally_2                    = find_talent_spell( talent_tree::SPECIALIZATION, "Nature's Ally", 2 );
@@ -7556,6 +7562,12 @@ void hunter_t::init_spells()
     talents.shrapnel_shot                     = find_talent_spell( talent_tree::SPECIALIZATION, "Shrapnel Shot", HUNTER_MARKSMANSHIP );
     talents.unload                            = find_talent_spell( talent_tree::SPECIALIZATION, "Unload", HUNTER_MARKSMANSHIP );
 
+    // Apex -- Take Aim (Midnight 4-rank talent, Marksmanship Hunter)
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Aimed Shot and Rapid Fire deal increased damage when target is above 70% HP (execute-up)
+    // R2+3: Damage bonus value scaled per rank
+    // R4: Aimed Shot can now Windrunner Quiver -- additional arrow volley
+    // Source: https://www.wowhead.com/spell=1273132 (retrieved 2026-03-17)
     talents.take_aim_1                        = find_talent_spell( talent_tree::SPECIALIZATION, "Take Aim", 1 );
     talents.take_aim_2                        = find_talent_spell( talent_tree::SPECIALIZATION, "Take Aim", 2 );
     talents.take_aim_3                        = find_talent_spell( talent_tree::SPECIALIZATION, "Take Aim", 3 );
@@ -7578,6 +7590,12 @@ void hunter_t::init_spells()
     talents.raptor_strike                     = find_talent_spell( talent_tree::SPECIALIZATION, "Raptor Strike", HUNTER_SURVIVAL );
     talents.raptor_strike_eagle               = talents.raptor_strike.ok() ? find_spell( 265189 ) : spell_data_t::not_found();
 
+    // Apex -- Raptor Swipe (Midnight 4-rank talent, Survival Hunter)
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Mongoose Bite / Raptor Strike proc Raptor Swipe cleave
+    // R2+3: Raptor Swipe damage increased; also grants Raptor Swipe Buff (ID 1273155)
+    // R4: Raptor Swipe Buff enhances next attack
+    // Source: https://www.wowhead.com/spell=1259003 (retrieved 2026-03-17)
     talents.raptor_swipe_1                    = find_talent_spell( talent_tree::SPECIALIZATION, "Raptor Swipe", 1 );
     talents.raptor_swipe_2                    = find_talent_spell( talent_tree::SPECIALIZATION, "Raptor Swipe", 2 );
     talents.raptor_swipe_3                    = find_talent_spell( talent_tree::SPECIALIZATION, "Raptor Swipe", 3 );

@@ -10146,6 +10146,12 @@ void druid_t::init_spells()
 
   // Balance
   sim->print_debug( "Initializing balance talents..." );
+  // Apex -- Ascendant Eclipses (Midnight 4-rank talent, Balance Druid)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Eclipse activation makes next Wrath/Starfire instant + buffs next 3 Starsurge/Starfall
+  // R2+3: Crits during Eclipse apply stacking DoT dealing 12/24% of damage for 6s
+  // R4: Eclipse activation also shoots Solar Bolt (ST) or Lunar Bolt (AoE) as guaranteed crits
+  // Source: https://www.wowhead.com/spell=1261564 (retrieved 2026-03-17)
   talent.ascendant_eclipses_1           = ST( "Ascendant Eclipses", 1 );
   talent.ascendant_eclipses_2           = ST( "Ascendant Eclipses", 2 );
   talent.ascendant_eclipses_3           = ST( "Ascendant Eclipses", 3 );
@@ -10236,6 +10242,12 @@ void druid_t::init_spells()
   talent.tigers_fury                    = ST( "Tiger's Fury" );
   talent.tigers_tenacity                = ST( "Tiger's Tenacity" );
   talent.tireless_energy                = ST( "Tireless Energy" );
+  // Apex -- Unseen Predator (Midnight 4-rank talent, Feral Druid)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Ferocious Bite has a chance to proc Unseen Predator abilities based on target count
+  // R2+3: Unseen Predator procs increase your damage briefly after each proc
+  // R4: Rip and Unseen Predator damage increased; Tiger's Fury causes next 2 generators to proc it
+  // Source: https://www.wowhead.com/spell=1263657 (retrieved 2026-03-17)
   talent.unseen_predator_1              = ST( "Unseen Predator", 1 );
   talent.unseen_predator_2              = ST( "Unseen Predator", 2 );
   talent.unseen_predator_3              = ST( "Unseen Predator", 3 );
@@ -10289,6 +10301,12 @@ void druid_t::init_spells()
   talent.vulnerable_flesh               = ST( "Vulnerable Flesh" );
   talent.waking_nightmare               = ST( "Waking Nightmare" );
   talent.ward_of_the_forest             = ST( "Ward of the Forest" );
+  // Apex -- Wild Guardian (Midnight 4-rank talent, Guardian Druid)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Berserk/Incarnation empowers next 2 casts of Ironfur/Maul/Frenzied Regen, echoing at 50%
+  // R2+3: Mastery increased; Maul always empowered and deals DoT damage
+  // R4: Gain 2 Dream Guide charges on Wild Guardian cast; echoes at 150% and echo 2 more times over 8s
+  // Source: https://www.wowhead.com/spell=1269614 (retrieved 2026-03-17)
   talent.wild_guardian_1                = ST( "Wild Guardian", 1 );
   talent.wild_guardian_2                = ST( "Wild Guardian", 2 );
   talent.wild_guardian_3                = ST( "Wild Guardian", 3 );
@@ -10302,6 +10320,12 @@ void druid_t::init_spells()
   talent.dream_of_cenarius_tree         = ST( "Dream of Cenarius", DRUID_RESTORATION );  // TODO: NYI
   talent.efflorescence                  = ST( "Efflorescence" );
   talent.embrace_of_the_dream           = ST( "Embrace of the Dream" );  // TODO: NYI
+  // Apex -- Everbloom (Midnight 4-rank talent, Restoration Druid)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Healing spells have a chance to bloom flowers that AoE heal
+  // R2+3: Bloom healing value increased
+  // R4: Everbloom capstone: blooms also apply regenerative HoT
+  // Source: https://www.wowhead.com/spell=TODO (retrieved 2026-03-17)
   talent.everbloom_1                    = ST( "Everbloom", 1 );
   talent.everbloom_2                    = ST( "Everbloom", 2 );
   talent.everbloom_3                    = ST( "Everbloom", 3 );

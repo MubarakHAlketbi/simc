@@ -1014,6 +1014,12 @@ void paladin_t::init_spells_protection()
   talents.final_stand                    = find_talent_spell( talent_tree::SPECIALIZATION, "Final Stand" );
   talents.righteous_protector            = find_talent_spell( talent_tree::SPECIALIZATION, "Righteous Protector" );
 
+  // Apex -- Glory of the Vanguard (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Judgment has a chance to grant Vanguard; next Avenger's Shield leaves 300% AP Holy bolt line
+  // R2+3: Vanguard proc chance / damage increased (same ID, effectN scales per rank)
+  // R4: Enhanced Vanguard capstone effect
+  // Source: https://www.wowhead.com/spell=1267203 (retrieved 2026-03-17)
   talents.glory_of_the_vanguard_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1267203 );
   talents.glory_of_the_vanguard_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1267211 );
   talents.glory_of_the_vanguard_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1267215 );

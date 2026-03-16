@@ -7259,7 +7259,12 @@ void warrior_t::init_spells()
   talents.arms.master_tactician          = find_talent_spell( talent_tree::SPECIALIZATION, "Master Tactician" );
   talents.arms.mortal_wounds             = find_talent_spell( talent_tree::SPECIALIZATION, "Mortal Wounds" );
   talents.arms.avatar                    = find_talent_spell( talent_tree::SPECIALIZATION, "Avatar", WARRIOR_ARMS );
-  // Apex
+  // Apex — Master of Warfare (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Single-target melee abilities have a chance to upgrade Slam to Heroic Strike (600% AP, grants armor-pen stacks)
+  // R2+3: Heroic Strike damage increased by 10%/20%
+  // R4: While Colossus Smash is active, each Heroic Strike deals additional damage per Master of Warfare stack
+  // Source: https://www.wowhead.com/spell=1269314 (retrieved 2026-03-17)
   talents.arms.master_of_warfare_1       = find_talent_spell( talent_tree::SPECIALIZATION, 1269314 );
   talents.arms.master_of_warfare_2       = find_talent_spell( talent_tree::SPECIALIZATION, 1269306 );
   talents.arms.master_of_warfare_3       = find_talent_spell( talent_tree::SPECIALIZATION, 1269307 );
@@ -7314,7 +7319,12 @@ void warrior_t::init_spells()
   talents.fury.reckless_abandon      = find_talent_spell( talent_tree::SPECIALIZATION, "Reckless Abandon" );
   talents.fury.avatar                = find_talent_spell( talent_tree::SPECIALIZATION, "Avatar", WARRIOR_FURY );
   talents.fury.bladestorm            = find_talent_spell( talent_tree::SPECIALIZATION, "Bladestorm", WARRIOR_FURY );
-  // Apex
+  // Apex — Rampaging Berserker (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Recklessness causes Rampage to deal additional hits; auto-attack speed increased during Recklessness
+  // R2+3: Recklessness grants additional Rage-generation bonuses (Mod Damage Done scaling)
+  // R4: At the start and end of Recklessness, all Rampage hits deal AoE damage
+  // Source: https://www.wowhead.com/spell=1269308 (retrieved 2026-03-17)
   talents.fury.rampaging_berserker_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1269308 );
   talents.fury.rampaging_berserker_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1269309 );
   talents.fury.rampaging_berserker_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1269310 );
@@ -7374,7 +7384,12 @@ void warrior_t::init_spells()
   talents.protection.battle_scarred_veteran = find_talent_spell( talent_tree::SPECIALIZATION, "Battle-Scarred Veteran" );
   talents.protection.whirling_blade         = find_talent_spell( talent_tree::SPECIALIZATION, "Whirling Blade", WARRIOR_PROTECTION );
   talents.protection.ravager                = find_talent_spell( talent_tree::SPECIALIZATION, "Ravager", WARRIOR_PROTECTION );
-  // Apex
+  // Apex — Phalanx (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Thunder Clap causes next Shield Slam to unleash a wave (198% AP to enemies in front), -5% dmg taken debuff
+  // R2+3: Shield Slam wave damage increased by 10%/20%
+  // R4: Shield Block also buffs your next Shield Slam wave damage
+  // Source: https://www.wowhead.com/spell=1269311 (retrieved 2026-03-17)
   talents.protection.phalanx_1              = find_talent_spell( talent_tree::SPECIALIZATION, 1269311 );
   talents.protection.phalanx_2              = find_talent_spell( talent_tree::SPECIALIZATION, 1269312 );
   talents.protection.phalanx_3              = find_talent_spell( talent_tree::SPECIALIZATION, 1269313 );

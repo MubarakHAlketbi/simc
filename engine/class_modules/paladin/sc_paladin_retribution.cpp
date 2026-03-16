@@ -1164,6 +1164,12 @@ void paladin_t::init_spells_retribution()
 
   talents.healing_hands  = find_talent_spell( talent_tree::CLASS, "Healing Hands" );
 
+  // Apex -- Light Within (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: [Righteous Cause / Art of War] increases next Blade of Justice by 75%/150%
+  // R2+3: Avenging Wrath further increases Final Verdict / Divine Storm by 10%/20% (same ID, scales)
+  // R4: Additional Avenging Wrath / Light Within capstone interaction
+  // Source: https://www.wowhead.com/spell=1261113 (retrieved 2026-03-17)
   talents.light_within_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1261113 );
   talents.light_within_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1261111 );
   talents.light_within_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1261159 );

@@ -264,6 +264,12 @@ namespace warlock
     talents.sow_the_seeds = find_talent_spell( talent_tree::SPECIALIZATION, "Sow the Seeds" ); // Should be ID 196226
 
     // Affliction Apex
+    // Apex -- Shadow of Nathreza (Midnight 4-rank talent)
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Agony / Corruption ticks have a chance to apply Shadow of Nathreza DoT
+    // R2+3: Shadow of Nathreza DoT damage increased (same ID, effectN scales)
+    // R4: Triggers Wrath of Nathreza -- a powerful AoE shadow explosion
+    // Source: https://www.wowhead.com/spell=1261984 (retrieved 2026-03-17)
     talents.shadow_of_nathreza_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Shadow of Nathreza", 1 ); // Should be ID 1261984 (I)
     talents.shadow_of_nathreza_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Shadow of Nathreza", 2 ); // Should be ID 1261990 (II)
     talents.shadow_of_nathreza_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Shadow of Nathreza", 3 ); // Should be ID 1261992 (III)
@@ -392,6 +398,12 @@ namespace warlock
     talents.infernal_presence = conditional_spell_lookup( talents.mark_of_fharg.ok(), 428453 );
     talents.infernal_presence_dmg = conditional_spell_lookup( talents.mark_of_fharg.ok(), 428455 );
 
+    // Apex -- Dominion of Argus (Midnight 4-rank talent) [already verified]
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Tyrant rotation summons Argus demons (Inquisitor / Jailer); grants Dominion of Argus buff
+    // R2+3: Increased demon stats / proc values
+    // R4: Gain Soul Shard on Dominion of Argus demon kill
+    // Source: https://www.wowhead.com/spell=1276163 (retrieved 2026-03-17)
     talents.dominion_of_argus_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Dominion of Argus", 1 ); // Should be ID 1276163 (I)
     talents.dominion_of_argus_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Dominion of Argus", 2 ); // Should be ID 1276190 (II)
     talents.dominion_of_argus_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Dominion of Argus", 3 ); // Should be ID 1276222 (III)
@@ -544,6 +556,12 @@ namespace warlock
 
     talents.raging_demonfire = find_talent_spell( talent_tree::SPECIALIZATION, "Raging Demonfire" ); // Should be ID 387166
 
+    // Apex -- Embers of Nihilam (Midnight 4-rank talent)
+    // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+    // R1: Enables Echo of Sargeras proc on Immolate / Chaos Bolt
+    // R2+3: Vision of Nihilam: Havoc now generates a delayed AoE explosion
+    // R4: Echo of Sargeras gains an internal cooldown (see embers_of_nihilam_3->internal_cooldown())
+    // Source: https://www.wowhead.com/spell=1265770 (retrieved 2026-03-17)
     talents.embers_of_nihilam_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Embers of Nihilam", 1 ); // Should be ID 1265770 (I)
     talents.embers_of_nihilam_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Embers of Nihilam", 2 ); // Should be ID 1265772 (II)
     talents.embers_of_nihilam_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Embers of Nihilam", 3 ); // Should be ID 1265774 (III)

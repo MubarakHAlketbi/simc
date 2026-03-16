@@ -10648,6 +10648,12 @@ void demon_hunter_t::init_spells()
   talent.devourer.eradicate    = find_talent_spell( talent_tree::SPECIALIZATION, "Eradicate" );
 
   // Devouer Apex Talents
+  // Apex -- Midnight (Midnight 4-rank talent, Devourer DH)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Collapsing Star always critically strikes during Void Metamorphosis
+  // R2+3: Critical strikes during Void Meta deal additional damage
+  // R4: Additional capstone enhancing Collapsing Star / Void Metamorphosis synergy
+  // Source: https://www.wowhead.com/spell=1242486 (retrieved 2026-03-17)
   talent.devourer.midnight1 = find_talent_spell( talent_tree::SPECIALIZATION, "Midnight", 1 );
   talent.devourer.midnight2 = find_talent_spell( talent_tree::SPECIALIZATION, "Midnight", 2 );
   talent.devourer.midnight3 = find_talent_spell( talent_tree::SPECIALIZATION, "Midnight", 3 );
@@ -10709,6 +10715,12 @@ void demon_hunter_t::init_spells()
   talent.havoc.screaming_brutality = find_talent_spell( talent_tree::SPECIALIZATION, "Screaming Brutality" );
   talent.havoc.a_fire_inside       = find_talent_spell( talent_tree::SPECIALIZATION, "A Fire Inside" );
 
+  // Apex -- Eternal Hunt (Midnight 4-rank talent, Havoc DH)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: The Hunt grants 12s buff causing next Eye Beam to have wider hitbox and deal 100% increased dmg
+  // R2+3: The Hunt cooldown -30s, damage +30%, DoT applies to 4 additional enemies
+  // R4: Blade Dance damage +20%; fully channeling Eye Beam resets Blade Dance CD
+  // Source: https://www.wowhead.com/spell=1270898 (retrieved 2026-03-17)
   talent.havoc.eternal_hunt_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Eternal Hunt", 1 );
   talent.havoc.eternal_hunt_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Eternal Hunt", 2 );
   talent.havoc.eternal_hunt_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Eternal Hunt", 3 );
@@ -10771,6 +10783,12 @@ void demon_hunter_t::init_spells()
   talent.vengeance.down_in_flames = find_talent_spell( talent_tree::SPECIALIZATION, "Down in Flames" );
 
   // Vengeance Apex Talents
+  // Apex -- Untethered Rage (Midnight 4-rank talent, Vengeance DH)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Soul Cleave / Spirit Bomb have a chance per Soul Fragment consumed to grant a free short Metamorphosis
+  // R2+3: Increased proc chance / Metamorphosis duration
+  // R4: Additional capstone Metamorphosis synergy
+  // Source: https://www.wowhead.com/spell=1270444 (retrieved 2026-03-17)
   talent.vengeance.untethered_rage_1 = find_talent_spell( talent_tree::SPECIALIZATION, "Untethered Rage", 1 );
   talent.vengeance.untethered_rage_2 = find_talent_spell( talent_tree::SPECIALIZATION, "Untethered Rage", 2 );
   talent.vengeance.untethered_rage_3 = find_talent_spell( talent_tree::SPECIALIZATION, "Untethered Rage", 3 );

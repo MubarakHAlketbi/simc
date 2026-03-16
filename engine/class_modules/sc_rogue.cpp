@@ -9629,6 +9629,12 @@ void rogue_t::init_spells()
   talent.assassination.venomous_wounds = find_talent_spell( talent_tree::SPECIALIZATION, "Venomous Wounds" );
   talent.assassination.zoldyck_recipe = find_talent_spell( talent_tree::SPECIALIZATION, "Zoldyck Recipe" );
 
+  // Apex — Implacable (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Garrote and Rupture ticks have a chance to grant Energy; tracker buff mechanics
+  // R2+3: Increased Energy restoration value
+  // R4: Implacable procs also trigger an additional Physical + Nature damage strike
+  // Source: https://www.wowhead.com/spell=1265385 (retrieved 2026-03-17)
   talent.assassination.implacable_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1265385 );
   talent.assassination.implacable_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1265386 );
   talent.assassination.implacable_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1265387 );
@@ -9675,6 +9681,12 @@ void rogue_t::init_spells()
   talent.outlaw.thiefs_versatility = find_talent_spell( talent_tree::SPECIALIZATION, "Thief's Versatility" );
   talent.outlaw.zero_in = find_talent_spell( talent_tree::SPECIALIZATION, "Zero In" );
 
+  // Apex — Gravedigger (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Between the Eyes has a chance to trigger extra BtE hit
+  // R2+3: Dispatch triggers Scoundrel Strike dispatch procs
+  // R4: Dispatch per CP spent has chance to trigger Palmed Bullets buff
+  // Source: https://www.wowhead.com/spell=1265861 (retrieved 2026-03-17)
   talent.outlaw.gravedigger_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1265861 );
   talent.outlaw.gravedigger_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1265862 );
   talent.outlaw.gravedigger_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1265863 );
@@ -9727,6 +9739,12 @@ void rogue_t::init_spells()
   talent.subtlety.warning_signs = find_talent_spell( talent_tree::SPECIALIZATION, "Warning Signs" );
   talent.subtlety.weaponmaster = find_talent_spell( talent_tree::SPECIALIZATION, "Weaponmaster", ROGUE_SUBTLETY );
 
+  // Apex — Ancient Arts (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Shadow Techniques base mechanic enabled
+  // R2+3: Shadow Techniques and Secret Technique clones have % chance to proc shadow techniques buff
+  // R4: Shadow Techniques energy gain enhanced
+  // Source: https://www.wowhead.com/spell=1268932 (retrieved 2026-03-17)
   talent.subtlety.ancient_arts_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1268932 );
   talent.subtlety.ancient_arts_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1268936 );
   talent.subtlety.ancient_arts_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1268939 );

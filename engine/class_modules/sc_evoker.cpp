@@ -9650,6 +9650,12 @@ void evoker_t::init_spells()
   talent.iridescence                  = ST( "Iridescence" );
   talent.strafing_run                 = ST( "Strafing Run" );
   talent.strafing_run_buff            = find_spell( 1266165 );
+  // Apex -- Rising Fury (Midnight 4-rank talent)
+  // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
+  // R1: Dragonrage grants stacking Haste buff for duration
+  // R2+3: At max Rising Fury stacks, also grants a damage buff
+  // R4: After Dragonrage expires, gain Risen Fury: damage + Haste + periodic Essence Burst procs
+  // Source: https://www.wowhead.com/spell=1271687 (retrieved 2026-03-17)
   talent.rising_fury_1                = find_talent_spell( talent_tree::SPECIALIZATION, 1271687 );
   talent.rising_fury_buff             = find_spell( 1271783 );
   talent.rising_fury_2                = find_talent_spell( talent_tree::SPECIALIZATION, 1271796 );
