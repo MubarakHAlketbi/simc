@@ -165,7 +165,7 @@ jobs:
           :: 1. Removed vcpkg toolchain
           :: 2. Added CMAKE_PREFIX_PATH to point to your Qt installation
           :: CHANGE 6.x.x TO YOUR ACTUAL QT VERSION (e.g., 6.8.0)
-          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:\Qt\6.10.2\msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DQt6_DIR="C:/Qt/6.10.2/msvc2022_64/lib/cmake/Qt6" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           cmake --build build_gui --parallel
 
       - name: Smoke test GUI
