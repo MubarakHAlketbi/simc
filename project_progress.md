@@ -518,3 +518,32 @@ All previously-identified items are DONE or CLOSED as of 2026-03-16. Residual op
 | **OPEN** | drain_life priority with gorefiends_avarice in Warlock APL | LOW | Pending (cosmetic for beta) |
 | **OPEN** | Hero tree variant profiles (Balance/Aug/Assassination) with valid talent hashes | LOW | Pending — needs optimal build strings |
 | **OPEN** | Trinket+embellishment interactions (Locus-Walker, Ranger-Captain, Resonant Roarstone) | LOW | Blocked on beta data — GitHub Issue #81 |
+
+---
+
+#### 14. Warlock Class Tree Mechanics — DONE (2026-03-17)
+Verified all mechanics from task_dossiers/warlock_class_tree_mechanics_2026-03-16.md are implemented.
+
+Warlock (sc_warlock_actions.cpp + sc_warlock.cpp):
+- Gorefiends_Avarice: drain_life tick_time * 0.5 via drain_life_state_t snapshot — DONE
+- Empowered Drain Life: composite_ta_multiplier += effectN(1).percent() on drain_life_t — DONE
+- Infernal Beneficiary: drain_life tick triggers pet heal at 400% — DONE
+- Dark Pact: dark_pact_t action struct with absorb_buff_t shield + HP sacrifice — DONE (registered in create_action)
+- Pact of the Nathrezim: composite_leech() override in warlock_t (+2% leech) — DONE
+
+Rogue (sc_rogue.cpp):
+- Improved Find Weakness: composite_player_target_armor() amended — pen += improved_find_weakness->effectN(1).percent() when find_weakness buff is active — DONE
+
+Evoker (sc_evoker.cpp):
+- Nozdormu Adept: Prescience cooldown->duration -= effectN(1).time_value() — DONE
+- Nozdormu Adept: composite_spell_crit_chance() += effectN(2).percent() — DONE
+- Walloping Blow: confirmed N/A (Wing Buffet/Tail Swipe knockback only, no DPS) — CLOSED
+
+---
+
+#### 15. APL Guide Added — docs/APL_GUIDE.md (2026-03-17)
+Comprehensive 901-line APL authoring reference committed in docs/APL_GUIDE.md (commit a715895).
+Covers: priority system, file locations, full conditions reference, action modifiers, variable system,
+call_action_list vs run_action_list, building APLs in C++, Affliction Warlock walkthrough,
+common patterns (trinket sync, cooldown pooling, AoE/ST switching, channels), testing commands,
+Midnight-specific conditions (hero_tree.X, talent.X.rank, dark_pact, gorefiends_avarice TODO).
