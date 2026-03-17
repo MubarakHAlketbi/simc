@@ -16,7 +16,6 @@ on:
 
 env:
   CCACHE_GENERATION: 0
-  VCVARS_PATH: "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat"
 
 jobs:
   # ── gcc-14 Release build ────────────────────────────────────────────────
@@ -121,7 +120,7 @@ jobs:
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
 
-  # ── Windows MSVC x64 — CLI (no Qt) ─────────────────────────────────────
+# ── Windows MSVC x64 — CLI (no Qt) ─────────────────────────────────────
   windows-cli:
     name: Windows MSVC x64 CLI
     runs-on: self-hosted
@@ -131,8 +130,8 @@ jobs:
       - name: Configure and Build CLI
         shell: pwsh
         run: |
-          & "${{ env.VCVARS_PATH }}" x64
-          cmake -S . -B build_cli -G "Visual Studio 17 2022" -A x64 -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          # Removed -G and -A flags so CMake auto-detects VS 2026
+          cmake -S . -B build_cli -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           cmake --build build_cli --config Release --parallel
 
       - name: Smoke test CLI
@@ -160,8 +159,8 @@ jobs:
       - name: Configure and Build GUI
         shell: pwsh
         run: |
-          & "${{ env.VCVARS_PATH }}" x64
-          cmake -S . -B build_gui -G "Visual Studio 17 2022" -A x64 -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          # Removed -G and -A flags so CMake auto-detects VS 2026
+          cmake -S . -B build_gui -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           cmake --build build_gui --config Release --parallel
 
       - name: Smoke test CLI
@@ -175,8 +174,8 @@ jobs:
       - name: Deploy Qt runtime (windeployqt)
         shell: pwsh
         run: |
-          # Need MSVC environment for windeployqt to find correct DLLs
-          & "${{ env.VCVARS_PATH }}" x64
+          # Note: vcvarsall.bat call removed here because it was doing nothing in PowerShell.
+          # windeployqt usually finds the compiler via vswhere/registry automatically.
           $qt_bin = (Get-Item "C:\vcpkg\installed\x64-windows\tools\Qt6\bin" -ErrorAction SilentlyContinue)
           if (-not $qt_bin) {
             $qt_bin = Get-ChildItem "C:\vcpkg\installed\x64-windows\tools" -Recurse -Filter "windeployqt.exe" |
