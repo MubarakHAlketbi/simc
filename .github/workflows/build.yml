@@ -161,11 +161,15 @@ jobs:
       - name: Configure and Build GUI
         shell: cmd
         run: |
+          :: 1. Delete the poisoned cache from previous failed runs!
+          if exist build_gui rmdir /s /q build_gui
+          
           call "%VCVARS_PATH%" x64
-          :: 1. Removed vcpkg toolchain
-          :: 2. Added CMAKE_PREFIX_PATH to point to your Qt installation
-          :: CHANGE 6.x.x TO YOUR ACTUAL QT VERSION (e.g., 6.8.0)
-          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DQt6_DIR="C:/Qt/6.10.2/msvc2022_64/lib/cmake/Qt6" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          
+          :: 2. Configure with a completely fresh build directory
+          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          
+          :: 3. Build
           cmake --build build_gui --parallel
 
       - name: Smoke test GUI
@@ -179,9 +183,7 @@ jobs:
       - name: Deploy Qt runtime (windeployqt)
         shell: pwsh
         run: |
-          # Removed the vcpkg search logic. 
-          # We just add the Qt bin folder to the PATH so windeployqt works natively.
-          # CHANGE 6.x.x TO YOUR ACTUAL QT VERSION (e.g., 6.8.0)
+          # Add your exact Qt bin folder to the PATH so windeployqt works natively
           $env:PATH = "C:\Qt\6.10.2\msvc2022_64\bin;$env:PATH"
           
           New-Item -ItemType Directory -Force -Path dist_gui
