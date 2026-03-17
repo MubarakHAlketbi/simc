@@ -128,18 +128,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cache vcpkg packages
-        uses: actions/cache@v4
-        with:
-          path: C:\vcpkg\installed
-          key: vcpkg-curl-x64-windows-${{ hashFiles('**/CMakeLists.txt') }}
-          restore-keys: vcpkg-curl-x64-windows-
-
       - name: Install libcurl via vcpkg
         shell: pwsh
         run: |
-          vcpkg install curl:x64-windows
-          vcpkg integrate install
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install curl:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
 
       - name: Configure (CLI only, no Qt)
         shell: pwsh
@@ -149,7 +142,7 @@ jobs:
             -DBUILD_GUI=OFF `
             -DCMAKE_BUILD_TYPE=Release `
             -DCMAKE_CXX_STANDARD=17 `
-            -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
+            -DCMAKE_TOOLCHAIN_FILE="C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/vcpkg/scripts/buildsystems/vcpkg.cmake" `
             -DVCPKG_TARGET_TRIPLET=x64-windows
 
       - name: Build CLI
@@ -179,20 +172,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cache vcpkg packages
-        uses: actions/cache@v4
-        with:
-          path: C:\vcpkg\installed
-          key: vcpkg-qt6-x64-windows-${{ hashFiles('**/CMakeLists.txt') }}
-          restore-keys: vcpkg-qt6-x64-windows-
-
       - name: Install dependencies via vcpkg
         shell: pwsh
         run: |
-          vcpkg install curl:x64-windows
-          vcpkg install qtbase:x64-windows
-          vcpkg install qtwebengine:x64-windows
-          vcpkg integrate install
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install curl:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install qtbase:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install qtwebengine:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
 
       - name: Configure (GUI + CLI)
         shell: pwsh
@@ -202,7 +188,7 @@ jobs:
             -DBUILD_GUI=ON `
             -DCMAKE_BUILD_TYPE=Release `
             -DCMAKE_CXX_STANDARD=17 `
-            -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
+            -DCMAKE_TOOLCHAIN_FILE="C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/vcpkg/scripts/buildsystems/vcpkg.cmake" `
             -DVCPKG_TARGET_TRIPLET=x64-windows
 
       - name: Build GUI + CLI
