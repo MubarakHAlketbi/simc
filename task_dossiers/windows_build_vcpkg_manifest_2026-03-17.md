@@ -50,8 +50,8 @@ Triplet: `x64-windows`
 
 ## Post-Implementation
 
-**Commit Message:** [Midnight] Add vcpkg manifest for Windows builds  
-**Files Modified:** `vcpkg.json` (new), `.github/workflows/build.yml` (updated)  
+**Commit Message:** [Midnight] Add builtin-baseline to vcpkg manifest  
+**Files Modified:** `vcpkg.json` (updated), `.github/workflows/build.yml` (updated in previous commit), `task_dossiers/windows_build_vcpkg_manifest_2026-03-17.md` (updated)  
 **project_progress.md Rows Updated:** None (build infrastructure)  
 **Date Completed:** 2026-03-17
 
