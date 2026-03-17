@@ -16,6 +16,7 @@ on:
 
 env:
   CCACHE_GENERATION: 0
+  VCVARS_PATH: "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat"
 
 jobs:
   # ── gcc-14 Release build ────────────────────────────────────────────────
@@ -120,11 +121,6 @@ jobs:
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
 
-# ── Helper for MSVC ─────────────────────────────────────────────────────
-  # We use this environment variable to keep the path DRY
-  env:
-    VCVARS_PATH: "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat"
-
   # ── Windows MSVC x64 — CLI (no Qt) ─────────────────────────────────────
   windows-cli:
     name: Windows MSVC x64 CLI
@@ -190,7 +186,10 @@ jobs:
           New-Item -ItemType Directory -Force -Path dist_gui
           Copy-Item build_gui\Release\SimulationCraft.exe dist_gui\
           Copy-Item build_gui\Release\simc.exe dist_gui\
-          # ... (rest of your copy commands)
+          Copy-Item qt\Welcome.html dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\Welcome.png dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\Error.html dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\locale dist_gui\ -Recurse -ErrorAction SilentlyContinue
           windeployqt --release --no-translations dist_gui\SimulationCraft.exe
 
       - name: Package GUI as zip
