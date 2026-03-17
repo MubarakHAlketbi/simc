@@ -31,7 +31,7 @@ Triplet: `x64-windows`
 
 ## Implementation Plan
 
-1. Create `vcpkg.json` at repository root with the dependencies (curl, qtbase, qtwebengine).
+1. Create `vcpkg.json` at repository root with the dependencies (curl, qtbase, qtwebengine) **and include `"builtin-baseline": "master"`** to satisfy vcpkg's reproducibility requirement.
 2. **Update `.github/workflows/build.yml`** to use manifest mode:
    - Change `vcpkg install curl:x64-windows` to `vcpkg install --triplet x64-windows`
    - Change multiple `vcpkg install ...` lines to a single `vcpkg install --triplet x64-windows`
