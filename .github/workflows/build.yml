@@ -120,9 +120,9 @@ jobs:
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
 
-  # ── Windows MSVC x64 Release build ─────────────────────────────────────
-  windows-msvc:
-    name: Windows MSVC x64 Release
+  # ── Windows MSVC x64 — CLI (no Qt) ─────────────────────────────────────
+  windows-cli:
+    name: Windows MSVC x64 CLI
     runs-on: windows-2022
 
     steps:
@@ -132,8 +132,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: C:\vcpkg\installed
-          key: vcpkg-curl-windows-${{ hashFiles('**/CMakeLists.txt') }}
-          restore-keys: vcpkg-curl-windows-
+          key: vcpkg-curl-x64-windows-${{ hashFiles('**/CMakeLists.txt') }}
+          restore-keys: vcpkg-curl-x64-windows-
 
       - name: Install libcurl via vcpkg
         shell: pwsh
@@ -141,10 +141,10 @@ jobs:
           vcpkg install curl:x64-windows
           vcpkg integrate install
 
-      - name: Configure (MSVC x64)
+      - name: Configure (CLI only, no Qt)
         shell: pwsh
         run: |
-          cmake -S . -B build_msvc `
+          cmake -S . -B build_cli `
             -G "Visual Studio 17 2022" -A x64 `
             -DBUILD_GUI=OFF `
             -DCMAKE_BUILD_TYPE=Release `
@@ -152,22 +152,169 @@ jobs:
             -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
             -DVCPKG_TARGET_TRIPLET=x64-windows
 
-      - name: Build
+      - name: Build CLI
         shell: pwsh
-        run: |
-          cmake --build build_msvc --config Release --parallel
+        run: cmake --build build_cli --config Release --parallel
 
-      - name: Smoke test
+      - name: Smoke test CLI
         shell: pwsh
         run: |
-          build_msvc\Release\simc.exe `
+          build_cli\Release\simc.exe `
             output=nul html=nul json=nul `
             iterations=5 cleanup_threads=1 `
             warrior=test spec=fury load_default_gear=1 load_default_talents=1
 
-      - name: Upload binary
+      - name: Upload CLI binary
         uses: actions/upload-artifact@v4
         with:
-          name: simc-windows-msvc-${{ github.sha }}
-          path: build_msvc\Release\simc.exe
+          name: simc-windows-cli-${{ github.sha }}
+          path: build_cli\Release\simc.exe
           retention-days: 7
+
+  # ── Windows MSVC x64 — GUI (Qt6 + WebEngine) ────────────────────────────
+  windows-gui:
+    name: Windows MSVC x64 GUI
+    runs-on: windows-2022
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache vcpkg packages
+        uses: actions/cache@v4
+        with:
+          path: C:\vcpkg\installed
+          key: vcpkg-qt6-x64-windows-${{ hashFiles('**/CMakeLists.txt') }}
+          restore-keys: vcpkg-qt6-x64-windows-
+
+      - name: Install dependencies via vcpkg
+        shell: pwsh
+        run: |
+          vcpkg install curl:x64-windows
+          vcpkg install qtbase:x64-windows
+          vcpkg install qtwebengine:x64-windows
+          vcpkg integrate install
+
+      - name: Configure (GUI + CLI)
+        shell: pwsh
+        run: |
+          cmake -S . -B build_gui `
+            -G "Visual Studio 17 2022" -A x64 `
+            -DBUILD_GUI=ON `
+            -DCMAKE_BUILD_TYPE=Release `
+            -DCMAKE_CXX_STANDARD=17 `
+            -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
+            -DVCPKG_TARGET_TRIPLET=x64-windows
+
+      - name: Build GUI + CLI
+        shell: pwsh
+        run: cmake --build build_gui --config Release --parallel
+
+      - name: Smoke test CLI
+        shell: pwsh
+        run: |
+          build_gui\Release\simc.exe `
+            output=nul html=nul json=nul `
+            iterations=5 cleanup_threads=1 `
+            warrior=test spec=fury load_default_gear=1 load_default_talents=1
+
+      - name: Deploy Qt runtime (windeployqt)
+        shell: pwsh
+        run: |
+          $qt_bin = (Get-Item "C:\vcpkg\installed\x64-windows\tools\Qt6\bin" -ErrorAction SilentlyContinue)
+          if (-not $qt_bin) {
+            $qt_bin = Get-ChildItem "C:\vcpkg\installed\x64-windows\tools" -Recurse -Filter "windeployqt.exe" |
+                      Select-Object -First 1 | Split-Path
+          }
+          $env:PATH = "$qt_bin;$env:PATH"
+          New-Item -ItemType Directory -Force -Path dist_gui
+          Copy-Item build_gui\Release\SimulationCraft.exe dist_gui\
+          Copy-Item build_gui\Release\simc.exe dist_gui\
+          Copy-Item qt\Welcome.html dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\Welcome.png dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\Error.html dist_gui\ -ErrorAction SilentlyContinue
+          Copy-Item qt\locale dist_gui\ -Recurse -ErrorAction SilentlyContinue
+          windeployqt --release --no-translations dist_gui\SimulationCraft.exe
+
+      - name: Package GUI as zip
+        shell: pwsh
+        run: Compress-Archive -Path dist_gui\* -DestinationPath simc-windows-gui.zip
+
+      - name: Upload GUI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: simc-windows-gui-${{ github.sha }}
+          path: simc-windows-gui.zip
+          retention-days: 7
+
+  # ── GitHub Release (on version tags v*) ─────────────────────────────────
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-24.04
+    needs: [gcc-build, clang-asan, windows-cli, windows-gui]
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Linux CLI binary
+        uses: actions/download-artifact@v4
+        with:
+          name: simc-gcc14-${{ github.sha }}
+          path: release-artifacts/linux
+
+      - name: Download Windows CLI binary
+        uses: actions/download-artifact@v4
+        with:
+          name: simc-windows-cli-${{ github.sha }}
+          path: release-artifacts/windows-cli
+
+      - name: Download Windows GUI zip
+        uses: actions/download-artifact@v4
+        with:
+          name: simc-windows-gui-${{ github.sha }}
+          path: release-artifacts/windows-gui
+
+      - name: Rename artifacts for release
+        run: |
+          TAG="${{ github.ref_name }}"
+          mv release-artifacts/linux/simc         release-artifacts/simc-${TAG}-linux-x64
+          mv release-artifacts/windows-cli/simc.exe release-artifacts/simc-${TAG}-windows-x64-cli.exe
+          mv release-artifacts/windows-gui/simc-windows-gui.zip release-artifacts/simc-${TAG}-windows-x64-gui.zip
+          chmod +x release-artifacts/simc-${TAG}-linux-x64
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: SimulationCraft Midnight ${{ github.ref_name }}
+          body: |
+            ## SimulationCraft — Midnight Expansion ${{ github.ref_name }}
+
+            ### Downloads
+
+            | Platform | File | Description |
+            |----------|------|-------------|
+            | Linux x64 | `simc-${{ github.ref_name }}-linux-x64` | CLI binary (gcc-14, RelWithDebInfo) |
+            | Windows x64 | `simc-${{ github.ref_name }}-windows-x64-cli.exe` | CLI binary (MSVC Release) |
+            | Windows x64 | `simc-${{ github.ref_name }}-windows-x64-gui.zip` | GUI + CLI bundle (Qt6 + windeployqt) |
+
+            ### What's included in the GUI zip
+            - `SimulationCraft.exe` — Qt6 GUI application
+            - `simc.exe` — CLI binary
+            - Qt runtime DLLs (deployed by windeployqt)
+            - `locale/` — translation files
+            - `Welcome.html`, `Welcome.png`, `Error.html`
+
+            ### Usage
+            **CLI:** `simc.exe profile.simc iterations=10000`
+            **GUI:** Extract the zip and run `SimulationCraft.exe`
+
+            Built from commit ${{ github.sha }} on ${{ github.ref_name }}.
+          files: |
+            release-artifacts/simc-${{ github.ref_name }}-linux-x64
+            release-artifacts/simc-${{ github.ref_name }}-windows-x64-cli.exe
+            release-artifacts/simc-${{ github.ref_name }}-windows-x64-gui.zip
+          draft: false
+          prerelease: ${{ contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc') }}
