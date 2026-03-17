@@ -128,10 +128,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install libcurl via vcpkg
+      - name: Install dependencies via vcpkg (manifest mode)
         shell: pwsh
         run: |
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install curl:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install --triplet x64-windows
           & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
 
       - name: Configure (CLI only, no Qt)
@@ -172,12 +172,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies via vcpkg
+      - name: Install dependencies via vcpkg (manifest mode)
         shell: pwsh
         run: |
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install curl:x64-windows
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install qtbase:x64-windows
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install qtwebengine:x64-windows
+          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install --triplet x64-windows
           & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
 
       - name: Configure (GUI + CLI)

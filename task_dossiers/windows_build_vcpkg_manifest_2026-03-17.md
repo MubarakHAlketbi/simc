@@ -31,23 +31,12 @@ Triplet: `x64-windows`
 
 ## Implementation Plan
 
-1. Create `vcpkg.json` at repository root with the following content:
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/docs/config/vcpkg.schema.json",
-  "name": "simulationcraft",
-  "version": "0.0.1",
-  "dependencies": [
-    "curl",
-    "qtbase",
-    "qtwebengine"
-  ]
-}
-```
-
-2. No changes to `build.yml` are strictly required; the manifest will satisfy vcpkg's lookup. The existing manual `vcpkg install` steps will still work (they will install the packages as requested, and the manifest provides a fallback).
-
-3. Commit the new file with a clear message: "[Midnight] Add vcpkg manifest for Windows builds"
+1. Create `vcpkg.json` at repository root with the dependencies (curl, qtbase, qtwebengine).
+2. **Update `.github/workflows/build.yml`** to use manifest mode:
+   - Change `vcpkg install curl:x64-windows` to `vcpkg install --triplet x64-windows`
+   - Change multiple `vcpkg install ...` lines to a single `vcpkg install --triplet x64-windows`
+   - Keep `vcpkg integrate install` as is.
+3. Commit both changes with a clear message.
 
 ---
 
@@ -62,7 +51,7 @@ Triplet: `x64-windows`
 ## Post-Implementation
 
 **Commit Message:** [Midnight] Add vcpkg manifest for Windows builds  
-**Files Modified:** `vcpkg.json` (new)  
+**Files Modified:** `vcpkg.json` (new), `.github/workflows/build.yml` (updated)  
 **project_progress.md Rows Updated:** None (build infrastructure)  
 **Date Completed:** 2026-03-17
 
