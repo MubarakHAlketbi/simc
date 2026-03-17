@@ -16,27 +16,20 @@
 
 ## Problem Analysis
 
-The Windows build workflow (`.github/workflows/build.yml`) uses the Visual Studio vcpkg toolchain. The self-hosted runner or vcpkg version appears to enforce manifest mode, requiring a `vcpkg.json` in the repository root or a parent directory. The current repository has no `vcpkg.json`, causing the build to fail.
+The Windows build workflow (`.github/workflows/build.yml`) uses vcpkg to install dependencies. However, vcpkg's manifest mode requires a `builtin-baseline`, and the vcpkg version on the self-hosted runner enforces this. Trying to satisfy this requirement leads to complexity.
 
-### Required Dependencies
-
-Based on the existing workflow:
-- `curl` (needed for both CLI and GUI builds; networking library)
-- `qtbase` (Qt6 base libraries for GUI)
-- `qtwebengine` (Qt6 WebEngine for GUI)
-
-Triplet: `x64-windows`
+**Simpler solution:** Use the Qt installation already present on the Windows machine. SimulationCraft on Windows uses WinINet (built-in) for networking, so **no external dependencies are needed at all** for the CLI build. The GUI build only needs Qt, which is installed.
 
 ---
 
 ## Implementation Plan
 
-1. Create `vcpkg.json` at repository root with the dependencies (curl, qtbase, qtwebengine) **and include `"builtin-baseline": "master"`** to satisfy vcpkg's reproducibility requirement.
-2. **Update `.github/workflows/build.yml`** to use manifest mode:
-   - Change `vcpkg install curl:x64-windows` to `vcpkg install --triplet x64-windows`
-   - Change multiple `vcpkg install ...` lines to a single `vcpkg install --triplet x64-windows`
-   - Keep `vcpkg integrate install` as is.
-3. Commit both changes with a clear message.
+1. Remove all vcpkg-related steps from both Windows jobs (CLI and GUI) in `.github/workflows/build.yml`:
+   - Delete the "Install dependencies via vcpkg" steps.
+   - Remove `-DCMAKE_TOOLCHAIN_FILE=.../vcpkg.cmake` and `-DVCPKG_TARGET_TRIPLET=x64-windows` from CMake configure commands.
+2. Keep the rest of the workflow as-is.
+3. Ensure the self-hosted runner has Qt installed and in PATH (per `how_to_build.md`).
+4. Commit and push changes.
 
 ---
 
