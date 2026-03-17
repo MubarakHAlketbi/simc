@@ -162,13 +162,15 @@ jobs:
         shell: cmd
         run: |
           call "%VCVARS_PATH%" x64
-          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          :: 1. Removed vcpkg toolchain
+          :: 2. Added CMAKE_PREFIX_PATH to point to your Qt installation
+          :: CHANGE 6.x.x TO YOUR ACTUAL QT VERSION (e.g., 6.8.0)
+          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\msvc2019_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           cmake --build build_gui --parallel
 
       - name: Smoke test GUI
         shell: pwsh
         run: |
-          # Use .\ in PowerShell, and note Ninja outputs directly to build_gui (no Release folder)
           .\build_gui\simc.exe `
             output=nul html=nul json=nul `
             iterations=5 cleanup_threads=1 `
@@ -177,15 +179,13 @@ jobs:
       - name: Deploy Qt runtime (windeployqt)
         shell: pwsh
         run: |
-          $qt_bin = (Get-Item "C:\vcpkg\installed\x64-windows\tools\Qt6\bin" -ErrorAction SilentlyContinue)
-          if (-not $qt_bin) {
-            $qt_bin = Get-ChildItem "C:\vcpkg\installed\x64-windows\tools" -Recurse -Filter "windeployqt.exe" |
-                      Select-Object -First 1 | Split-Path
-          }
-          $env:PATH = "$qt_bin;$env:PATH"
+          # Removed the vcpkg search logic. 
+          # We just add the Qt bin folder to the PATH so windeployqt works natively.
+          # CHANGE 6.x.x TO YOUR ACTUAL QT VERSION (e.g., 6.8.0)
+          $env:PATH = "C:\Qt\6.x.x\msvc2019_64\bin;$env:PATH"
+          
           New-Item -ItemType Directory -Force -Path dist_gui
           
-          # Removed \Release\ from these paths as well
           Copy-Item build_gui\SimulationCraft.exe dist_gui\
           Copy-Item build_gui\simc.exe dist_gui\
           Copy-Item qt\Welcome.html dist_gui\ -ErrorAction SilentlyContinue
