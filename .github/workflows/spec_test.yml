@@ -17,7 +17,7 @@ on:
 jobs:
   spec-test:
     name: ${{ matrix.spec }}
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     needs: []
 

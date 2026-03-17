@@ -18,7 +18,7 @@ jobs:
   # Fast build + smoke test — runs on every push, gate for spec-test
   build:
     name: Build (gcc-14 + clang-18 ASan)
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     env:
       CCACHE_GENERATION: 0
 
@@ -66,7 +66,7 @@ jobs:
   # clang-18 ASan build — catches memory bugs
   asan-build:
     name: Build (clang-18 ASan+UBSan)
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     env:
       CCACHE_GENERATION: 0
 
@@ -119,7 +119,7 @@ jobs:
   spec-test:
     name: spec/${{ matrix.spec }}
     needs: build
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
 
     strategy:
