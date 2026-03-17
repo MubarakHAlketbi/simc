@@ -33,22 +33,22 @@ std::string flask_havoc( const player_t* p )
 
 std::string flask_vengeance( const player_t* p )
 {
-  return ( p->true_level > 80 ) ? "flask_of_the_magisters_2" : "flask_of_alchemical_chaos_3";
+  return ( p->true_level > 80 ) ? "flask_of_the_blood_knights_2" : "flask_of_alchemical_chaos_3";
 }
 
 std::string food_devourer( const player_t* p )
 {
-  return ( p->true_level > 80 ) ? "blooming_feast" : "feast_of_the_divine_day";
+  return ( p->true_level > 80 ) ? "silvermoon_parade" : "feast_of_the_divine_day";
 }
 
 std::string food_havoc( const player_t* p )
 {
-  return ( p->true_level > 80 ) ? "blooming_feast" : "feast_of_the_divine_day";
+  return ( p->true_level > 80 ) ? "royal_roast" : "feast_of_the_divine_day";
 }
 
 std::string food_vengeance( const player_t* p )
 {
-  return ( p->true_level > 80 ) ? "silvermoon_parade" : "feast_of_the_divine_day";
+  return ( p->true_level > 80 ) ? "harandar_celebration" : "feast_of_the_divine_day";
 }
 
 std::string rune( const player_t* p )
@@ -111,6 +111,7 @@ void devourer( player_t* p )
   default_->add_action( "metamorphosis,if=buff.eradicate.up|!talent.eradicate|active_enemies=1" );
   default_->add_action( "call_action_list,name=reaps,if=talent.moment_of_craving&action.reap.souls_consumed>=4&buff.metamorphosis.up&!talent.voidfall&cooldown.void_ray.remains<=gcd.max&((buff.collapsing_star_stacking.stack+action.reap.souls_consumed)<=buff.collapsing_star_stacking.max_stack|!variable.should_use_star)" );
   default_->add_action( "void_ray,if=!buff.eradicate.up|active_enemies=1", "Do not waste Eradicate on AOE." );
+  default_->add_action( "reap,if=!talent.voidfall&full_recharge_time<=gcd.max*2&!buff.metamorphosis.up", "Reap on CD outside Meta to avoid charge cap (Wowhead priority #3)" );
   default_->add_action( "voidblade,if=buff.moment_of_craving.up&(buff.collapsing_star_stacking.at_max_stacks|buff.collapsing_star_stacking.stack+soul_fragments>=buff.collapsing_star_stacking.max_stack)&talent.devourers_bite" );
   default_->add_action( "collapsing_star,if=(!cooldown.predators_wake.up&talent.voidrush&!buff.hungering_slash.up&cooldown.voidblade.remains>=6|!talent.voidrush)&variable.should_use_star", "Use CStar after Predators Wake for VS, do not waste Voidblade CDR if possible." );
   default_->add_action( "call_action_list,name=reaps,if=(action.reap.souls_consumed>=4&buff.metamorphosis.up|full_recharge_time<=gcd.max)&!talent.voidfall", "Meta Cull Line" );

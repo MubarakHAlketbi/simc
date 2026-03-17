@@ -5,12 +5,15 @@ namespace hunter_apl {
 
 std::string potion( const player_t* p )
 {
-  // Spec-specific logic for Level 90 Potions
+  // Spec-specific logic for Level 90 Potions (Midnight Season 1)
+  // BM: draught_of_rampant_abandon_2 (agility on-use potion aligned with Bestial Wrath)
+  // MM: lights_potential_2 (aligned with Trueshot + Bloodlust per Wowhead guide)
+  // SV: lights_potential_2 (aligned with Takedown cooldown)
   std::string lvl90_potion = ( p -> specialization() == HUNTER_SURVIVAL )      ? "lights_potential_2" :
                              ( p -> specialization() == HUNTER_MARKSMANSHIP )  ? "lights_potential_2" :
                              "draught_of_rampant_abandon_2"; // Beast Mastery
 
-  return ( p -> true_level > 80 ) ? lvl90_potion :
+  return ( p -> true_level > 89 ) ? lvl90_potion :
          ( p -> true_level > 70 ) ? "tempered_potion_3" : 
          ( p -> true_level > 60 ) ? "elemental_potion_of_ultimate_power_3" : 
          ( p -> true_level > 50 ) ? "spectral_agility" :
@@ -25,7 +28,7 @@ std::string flask( const player_t* p )
                             ( p -> specialization() == HUNTER_MARKSMANSHIP )  ? "flask_of_the_shattered_sun_2" :
                             "flask_of_the_magisters_2"; // Beast Mastery
 
-  return ( p -> true_level > 80 ) ? lvl90_flask :
+  return ( p -> true_level > 89 ) ? lvl90_flask :
          ( p -> true_level > 70 ) ? "flask_of_alchemical_chaos_3" : 
          ( p -> true_level > 60 ) ? "iced_phial_of_corrupting_rage_3" : 
          ( p -> true_level > 50 ) ? "spectral_flask_of_power" :
@@ -35,7 +38,8 @@ std::string flask( const player_t* p )
 
 std::string food( const player_t* p )
 {
-  return ( p -> true_level > 80 ) ? "silvermoon_parade" :
+  // Midnight Season 1: silvermoon_parade feast confirmed for all Hunter specs from Wowhead guides
+  return ( p -> true_level > 89 ) ? "silvermoon_parade" :
          ( p -> true_level > 70 ) ? "the_sushi_special" : 
          ( p -> true_level > 60 ) ? "fated_fortune_cookie" : 
          ( p -> true_level > 50 ) ? "feast_of_gluttonous_hedonism" :
@@ -45,7 +49,7 @@ std::string food( const player_t* p )
 
 std::string rune( const player_t* p )
 {
-  return ( p -> true_level > 80 ) ? "void_touched" :
+  return ( p -> true_level > 89 ) ? "void_touched" :
          ( p -> true_level > 70 ) ? "crystallized" : 
          ( p -> true_level > 60 ) ? "draconic" :
          ( p -> true_level > 50 ) ? "veiled" :

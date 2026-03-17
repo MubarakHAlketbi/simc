@@ -8,11 +8,11 @@ position=back
 talents=CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAsMjZMWWmBmZ2GLzMzMMWGzAAYAGzMxMDAMGA
 
 # Default consumables
-potion=lights_potential_2
+potion=draught_of_rampant_abandon_2
 flask=flask_of_the_shattered_sun_2
 food=harandar_celebration
 augmentation=void_touched
-temporary_enchant=disabled
+temporary_enchant=main_hand:thalassian_phoenix_oil_2
 
 # This default action priority list is automatically created based on your character.
 # It is a attempt to provide you with a action list that is both simple and practicable,
@@ -49,6 +49,7 @@ actions.aoe+=/ascendance,if=ti_chain_lightning
 actions.aoe+=/call_action_list,name=buffs
 actions.aoe+=/sundering,if=talent.surging_elements.enabled|buff.whirling_earth.up
 actions.aoe+=/lava_lash,if=buff.whirling_fire.up
+# Stormbringer CD: doom_winds on cooldown in AoE.
 actions.aoe+=/doom_winds
 actions.aoe+=/crash_lightning,if=talent.thorims_invocation.enabled&buff.whirling_air.up&(buff.doom_winds.up|buff.ascendance.up)
 actions.aoe+=/windstrike,if=talent.thorims_invocation.enabled&buff.whirling_air.up
@@ -105,15 +106,19 @@ actions.single_sb+=/stormstrike,if=buff.doom_winds.up&talent.thorims_invocation.
 actions.single_sb+=/crash_lightning,if=buff.doom_winds.up&talent.thorims_invocation.enabled
 actions.single_sb+=/tempest,if=buff.maelstrom_weapon.stack=10
 actions.single_sb+=/lightning_bolt,if=buff.maelstrom_weapon.stack=10
+# Stormstrike prioritized by charges (includes proc windows).
 actions.single_sb+=/stormstrike,if=charges_fractional>=1.8
-actions.single_sb+=/lava_lash
+actions.single_sb+=/lava_lash,if=buff.hot_hand.up
 actions.single_sb+=/stormstrike
 actions.single_sb+=/voltaic_blaze
 actions.single_sb+=/sundering
 actions.single_sb+=/lightning_bolt,if=buff.maelstrom_weapon.stack>=8
 actions.single_sb+=/crash_lightning
 actions.single_sb+=/lightning_bolt,if=buff.maelstrom_weapon.stack>=5
+# Flame Shock maintenance filler.
 actions.single_sb+=/flame_shock
+# Frost Shock as last-resort filler.
+actions.single_sb+=/frost_shock
 
 # Single target action priority list for the Totemic hero talent tree
 actions.single_totemic=voltaic_blaze,if=dot.flame_shock.remains=0
@@ -137,7 +142,10 @@ actions.single_totemic+=/stormstrike
 actions.single_totemic+=/voltaic_blaze
 actions.single_totemic+=/crash_lightning
 actions.single_totemic+=/lightning_bolt,if=buff.maelstrom_weapon.stack>=5
+# Flame Shock maintenance filler.
 actions.single_totemic+=/flame_shock
+# Frost Shock as last-resort filler.
+actions.single_totemic+=/frost_shock
 
 head=locus_of_the_primal_core,id=249979,bonus_id=1808/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,gem_id=240983,enchant=enchant_helm__empowered_rune_of_avoidance_2
 neck=amulet_of_the_abyssal_hymn,id=250247,bonus_id=12806/13577/13668,gem_id=240892/240892

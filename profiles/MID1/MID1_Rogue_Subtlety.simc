@@ -44,6 +44,7 @@ actions+=/call_action_list,name=fill,if=!variable.stealth
 
 actions.build=shuriken_storm,if=prev.shadow_dance&buff.premeditation.up&talent.danse_macabre
 actions.build+=/shadowstrike,if=!debuff.deathstalkers_mark.up&talent.deathstalkers_mark&!buff.darkest_night.up|variable.targets<=2|variable.priority_rotation
+# NOTE: Shuriken Tornado is a passive talent (triggers shuriken_storm procs), not an APL action
 actions.build+=/shuriken_storm,if=variable.targets>1
 actions.build+=/goremaws_bite,if=combo_points.deficit>=3
 actions.build+=/gloomblade,if=variable.targets<2

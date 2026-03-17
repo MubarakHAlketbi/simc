@@ -7,8 +7,10 @@ namespace mage_apl {
 
 std::string potion( const player_t* p )
 {
-  return p->true_level >= 90 ? "lights_potential_2"
-       : p->true_level >= 80 ? "tempered_potion_3"    
+  // Frost uses a crit/mastery-oriented potion; Arcane and Fire use intellect potion
+  if ( p->true_level >= 90 )
+    return p->specialization() == MAGE_FROST ? "potion_of_recklessness_2" : "lights_potential_2";
+  return p->true_level >= 80 ? "tempered_potion_3"
        : p->true_level >= 70 ? "elemental_potion_of_ultimate_power_3"
        : p->true_level >= 60 ? "spectral_intellect"
        : p->true_level >= 50 ? "superior_battle_potion_of_intellect"
@@ -17,8 +19,17 @@ std::string potion( const player_t* p )
 
 std::string flask( const player_t* p )
 {
-  return p->true_level >= 90 ? "flask_of_thalassian_resistance_2"
-       : p->true_level >= 80 ? "flask_of_alchemical_chaos_3"    
+  if ( p->true_level >= 90 )
+  {
+    // Arcane: mastery flask; Fire: haste flask; Frost: crit/mastery flask
+    if ( p->specialization() == MAGE_ARCANE )
+      return "flask_of_thalassian_resistance_2";
+    if ( p->specialization() == MAGE_FIRE )
+      return "flask_of_the_magisters_2";
+    // MAGE_FROST
+    return "flask_of_the_shattered_sun_2";
+  }
+  return p->true_level >= 80 ? "flask_of_alchemical_chaos_3"
        : p->true_level >= 70 ? "phial_of_tepid_versatility_3"
        : p->true_level >= 60 ? "spectral_flask_of_power"
        : p->true_level >= 50 ? "greater_flask_of_endless_fathoms"
@@ -27,8 +38,17 @@ std::string flask( const player_t* p )
 
 std::string food( const player_t* p )
 {
-  return p->true_level >= 90 ? "silvermoon_parade"
-       : p->true_level >= 80 ? "feast_of_the_midnight_masquerade"    
+  if ( p->true_level >= 90 )
+  {
+    // Arcane: mastery food; Fire: haste food; Frost: crit food
+    if ( p->specialization() == MAGE_ARCANE )
+      return "silvermoon_parade";
+    if ( p->specialization() == MAGE_FIRE )
+      return "queldorei_medley";
+    // MAGE_FROST
+    return "harandar_celebration";
+  }
+  return p->true_level >= 80 ? "feast_of_the_midnight_masquerade"
        : p->true_level >= 70 ? "fated_fortune_cookie"
        : p->true_level >= 60 ? "feast_of_gluttonous_hedonism"
        : p->true_level >= 50 ? "famine_evaluator_and_snack_table"
@@ -38,7 +58,7 @@ std::string food( const player_t* p )
 std::string rune( const player_t* p )
 {
   return p->true_level >= 90 ? "void_touched"
-       : p->true_level >= 80 ? "crystallized"    
+       : p->true_level >= 80 ? "crystallized"
        : p->true_level >= 70 ? "draconic"
        : p->true_level >= 60 ? "veiled"
        : p->true_level >= 50 ? "battle_scarred"

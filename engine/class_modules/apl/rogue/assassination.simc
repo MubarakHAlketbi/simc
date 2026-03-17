@@ -26,13 +26,13 @@ actions+=/call_action_list,name=generate,if=!buff.darkest_night.up&combo_points<
 actions+=/call_action_list,name=spend,if=!buff.darkest_night.up&combo_points>=5|buff.darkest_night.up&combo_points.deficit=0
 
 # Cooldown list
-# Deathmark if bleeds are active, kingsbane is ready, and we have envenom TODO:check envenom buff requirement when apex talents are fixed
+# Deathmark if bleeds are active, kingsbane is ready, and we have envenom
 actions.cds=deathmark,if=dot.garrote.ticking&dot.rupture.ticking&cooldown.kingsbane.remains<=2&buff.envenom.up
 # Check for on-use trinket usage
 actions.cds+=/call_action_list,name=items
-# Check for Racial abilties, potions, and any other misc cooldowns
+# Check for Racial abilities, potions, and any other misc cooldowns
 actions.cds+=/call_action_list,name=misc_cds
-# Kingsbane if bleeds are active and Deathmark is either on cooldown or active. TODO:check envenom buff requirement when apex talents are fixed
+# Kingsbane if bleeds are active and Deathmark is either on cooldown or active.
 actions.cds+=/kingsbane,if=dot.garrote.ticking&dot.rupture.ticking&(dot.deathmark.ticking|cooldown.deathmark.remains>52)
 # Vanish conditions for Improved Garrote
 actions.cds+=/call_action_list,name=vanish,if=!stealthed.rogue
@@ -46,9 +46,9 @@ actions.vanish+=/vanish,if=!variable.single_target&talent.improved_garrote&dot.g
 # DoT list
 # Garrote for improved garrote when applicable
 actions.core_dot=garrote,if=(buff.improved_garrote.up|stealthed.rogue)&(pmultiplier<=1|remains<=14+6*talent.razor_wire+4*!variable.single_target)
-# Normal Garrote Maintanence
+# Normal Garrote Maintenance
 actions.core_dot+=/garrote,if=combo_points.deficit>=1&(pmultiplier<=1|!variable.single_target)&refreshable&target.time_to_die-remains>12
-# Normal Rupture Maintanence, making sure to not waste Darkest Night
+# Normal Rupture Maintenance, making sure to not waste Darkest Night
 actions.core_dot+=/rupture,if=combo_points>=5&refreshable&target.time_to_die-remains>12&(!buff.darkest_night.up|!dot.rupture.ticking)
 
 # Generator List
@@ -64,14 +64,17 @@ actions.generate+=/mutilate,if=spell_targets.fan_of_knives<=1+talent.blindside
 actions.generate+=/fan_of_knives,if=spell_targets.fan_of_knives>1+talent.blindside
 
 # Spend List
-# Envenom if we are not at max stacks of the Apex talent
-actions.spend=envenom,if=buff.implacable_tracker.stack<4
-# Envenom if we are going to overcap on energy
+# Hero tree branching: Deathstalker uses Darkest Night + Envenom flows; Fatebound tracks Implacable stacks
+# Envenom if Implacable tracker is not at max stacks (Fatebound) or no tracker (Deathstalker)
+actions.spend=envenom,if=buff.implacable_tracker.stack<4|!talent.implacable
+# Envenom if we are going to overcap on energy (energy pooling management per Wowhead Implacable guide)
 actions.spend+=/envenom,if=energy.pct>70
+# AoE finisher: Crimson Tempest to maintain bleed spread at 4+ targets when spending
+actions.spend+=/crimson_tempest,if=!variable.single_target&spell_targets.fan_of_knives>=4&refreshable
 
 # Special Case Trinkets
 actions.items=variable,name=base_trinket_condition,value=dot.rupture.ticking&cooldown.deathmark.remains<2&!cooldown.deathmark.ready|dot.deathmark.ticking|fight_remains<=22
-actions.items+=/use_item,name=astral_gladiators_badge_of_ferocity,use_off_gcd=1,if=dot.kingsbane.ticking|dot.deathmkark.ticking|(cooldown.kingsbane.remains>60|cooldown.deathmark.remains>60)
+actions.items+=/use_item,name=astral_gladiators_badge_of_ferocity,use_off_gcd=1,if=dot.kingsbane.ticking|dot.deathmark.ticking|(cooldown.kingsbane.remains>60|cooldown.deathmark.remains>60)
 actions.items+=/use_item,name=treacherous_transmitter,use_off_gcd=1,if=variable.base_trinket_condition
 actions.items+=/use_item,name=unyielding_netherprism,use_off_gcd=1,if=dot.deathmark.ticking&(buff.latent_energy.stack>=16|fight_remains<=90|(!trinket.2.cooldown.ready|!trinket.1.cooldown.ready))|fight_remains<=20
 actions.items+=/use_item,name=mad_queens_mandate,if=cooldown.deathmark.remains>=30&!dot.deathmark.ticking|fight_remains<=3

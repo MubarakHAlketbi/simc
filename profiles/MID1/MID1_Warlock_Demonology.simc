@@ -56,6 +56,7 @@ actions.racials=berserking,use_off_gcd=1
 actions.racials+=/blood_fury
 actions.racials+=/fireblood
 actions.racials+=/ancestral_call
+actions.racials+=/dark_pact,if=talent.dark_pact.enabled&health.pct<50
 
 actions.variables=variable,name=next_tyrant_cd,op=set,value=cooldown.summon_demonic_tyrant.remains_expected
 actions.variables+=/variable,name=in_opener,op=set,value=0,if=pet.demonic_tyrant.active

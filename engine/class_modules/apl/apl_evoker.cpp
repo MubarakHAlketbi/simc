@@ -16,15 +16,19 @@ std::string potion( const player_t* p )
 
 std::string flask( const player_t* p )
 {
-  return ( p->true_level > 89 ) ? "flask_of_the_blood_knights_2" : "flask_of_alchemical_chaos_3";
+  // Midnight Season 1: Flask of the Shattered Sun is the primary flask for all Evoker specs
+  // (confirmed from Wowhead Devastation guide 2026-03-01; Augmentation uses same intellect flasks)
+  return ( p->true_level > 89 ) ? "flask_of_the_shattered_sun_2" : "flask_of_alchemical_chaos_3";
 }
 
 std::string food( const player_t* p )
 {
+  // Midnight Season 1: Quel'dorei Medley and Harandar Celebration feasts are equivalent
+  // per Wowhead Devastation guide; using queldorei_medley as the default feast
   if ( p->specialization() == EVOKER_AUGMENTATION )
-    return ( p->true_level > 89 ) ? "silvermoon_parade" : "feast_of_the_divine_day";
+    return ( p->true_level > 89 ) ? "queldorei_medley" : "feast_of_the_divine_day";
 
-  return ( p->true_level > 89 ) ? "blooming_feast" : "feast_of_the_divine_day";
+  return ( p->true_level > 89 ) ? "queldorei_medley" : "feast_of_the_divine_day";
 }
 
 std::string rune( const player_t* p )
@@ -215,19 +219,26 @@ void augmentation( player_t* p )
   default_->add_action( "variable,name=eons_remains,op=setif,value=cooldown.allied_virtual_cd_time.remains,value_else=cooldown.breath_of_eons.remains,condition=variable.enforce_timings,if=talent.breath_of_eons" );
   default_->add_action( "cancel_buff,name=tip_the_scales,if=cooldown.upheaval.remains>0&(talent.energy_cycles|talent.temporal_burst)" );
   default_->add_action( "hover,use_off_gcd=1,if=gcd.remains>=0.5&(!raid_event.movement.exists|raid_event.movement.in<=6)" );
+  // Wowhead priority: Maintain Ebon Might first, then Prescience, then cooldowns (BoE/TtS), then empowers, then Eruption, then fillers
   default_->add_action( "ebon_might,if=((buff.ebon_might_self.remains-cast_time)<=buff.ebon_might_self.duration*variable.ebon_might_pandemic_threshold)&(active_enemies>0|raid_event.adds.in<=3)&(buff.ebon_might_self.value<=0.05|(buff.ebon_might_self.remains-cast_time)<=buff.ebon_might_self.duration*0.3)" );
   default_->add_action( "prescience,target_if=min:(debuff.prescience.remains-200*(target.role.attack|target.role.spell|target.role.dps)+50*target.spec.augmentation),if=debuff.prescience.remains<gcd.max*2&time<=8" );
   default_->add_action( "potion,if=variable.eons_remains<=0|cooldown.breath_of_eons.remains>=90|fight_remains<=30&!fight_style.dungeonroute" );
   default_->add_action( "call_action_list,name=items" );
   default_->add_action( "fury_of_the_aspects,if=talent.time_convergence&!buff.time_convergence_intellect.up&(essence>=2|buff.essence_burst.react)&variable.eons_remains>=8" );
+  // Tip the Scales: with Molten Embers pair with Upheaval; without can pair with either empower
   default_->add_action( "tip_the_scales,if=!cooldown.breath_of_eons.up&(buff.duplicate.up|!talent.energy_cycles)&(action.upheaval.usable_in<action.fire_breath.usable_in|!talent.molten_embers)|talent.energy_cycles&(action.upheaval.usable_in<action.fire_breath.usable_in|!talent.molten_embers|action.upheaval.usable_in>gcd.max*2)&!cooldown.breath_of_eons.up" );
   default_->add_action( "deep_breath,cancel_if=gcd.remains<=0" );
+  // Breath of Eons: use on cooldown targeting allies' burst windows
   default_->add_action( "breath_of_eons,if=target.time_to_die>=20&!variable.enforce_timings|variable.enforce_timings&(evoker.allied_cds_up>0|cooldown.allied_virtual_cd_time.up),cancel_if=gcd.remains<=0" );
+  // Fire Breath: highest priority empower (Rank 1 with Molten Embers, max rank otherwise), only while Ebon Might is up
   default_->add_action( "call_action_list,name=fb,if=(raid_event.adds.remains>6|raid_event.adds.in>20|evoker.allied_cds_up>0|!raid_event.adds.exists)&(!cooldown.breath_of_eons.up|!talent.temporal_burst)&(!buff.tip_the_scales.up|!talent.molten_embers)" );
+  // Upheaval: Rank 1 in single target, higher ranks for AoE radius; only while Ebon Might is up
   default_->add_action( "upheaval,target_if=target.time_to_die>duration+0.2,empower_to=1,if=buff.ebon_might_self.remains>duration&(raid_event.adds.remains>10|evoker.allied_cds_up>0|!raid_event.adds.exists|raid_event.adds.in>20)" );
   default_->add_action( "prescience,target_if=min:(debuff.prescience.remains-200*(target.role.attack|target.role.spell|target.role.dps)+50*target.spec.augmentation),if=debuff.prescience.remains<gcd.max*2&(!talent.anachronism|buff.essence_burst.stack<buff.essence_burst.max_stack)" );
+  // Time Skip: use after first set of empowers in opener; subsequently on cooldown
   default_->add_action( "time_skip,if=!talent.chronoboon|cooldown.tip_the_scales.remains>=6&!buff.tip_the_scales.up" );
   default_->add_action( "emerald_blossom,if=talent.dream_of_spring&buff.essence_burst.react&(variable.spam_heal=2|variable.spam_heal=1&!buff.ancient_flame.up&talent.ancient_flame)&(buff.ebon_might_self.up|essence.deficit=0|buff.essence_burst.stack=buff.essence_burst.max_stack&cooldown.ebon_might.remains>4)" );
+  // Eruption: spend resources while Ebon Might is up; avoid capping Essence Burst
   default_->add_action( "eruption,target_if=min:debuff.bombardments.remains,if=buff.ebon_might_self.remains>execute_time|essence.deficit=0|buff.essence_burst.stack=buff.essence_burst.max_stack&cooldown.ebon_might.remains>4" );
   default_->add_action( "run_action_list,name=filler" );
 

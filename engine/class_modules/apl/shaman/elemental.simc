@@ -38,6 +38,8 @@ actions+=/run_action_list,name=single_target
 actions.aoe=stormkeeper,if=cooldown.ascendance.remains>10|cooldown.ascendance.remains<gcd|fight_remains<20
 actions.aoe+=/voltaic_blaze,if=time<3&talent.purging_flames
 actions.aoe+=/ancestral_swiftness
+# Summon Fire Elemental on cooldown.
+actions.aoe+=/fire_elemental
 # Ascendance on CD, unless SK can be sync'd with it.
 actions.aoe+=/ascendance,if=cooldown.stormkeeper.remains>15|fight_remains<20
 
@@ -74,6 +76,8 @@ actions.aoe+=/frost_shock,moving=1
 # Stormkeeper on CD, unless sub 10s hold for Asc or the fight is about to end.
 actions.single_target=stormkeeper,if=cooldown.ascendance.remains>10|cooldown.ascendance.remains<gcd|fight_remains<20
 actions.single_target+=/ancestral_swiftness
+# Summon Fire Elemental on cooldown.
+actions.single_target+=/fire_elemental
 # Ascendance on CD, unless SK can be sync'd with it.
 actions.single_target+=/ascendance,if=cooldown.stormkeeper.remains>15|fight_remains<20
 

@@ -40,6 +40,7 @@ actions+=/drain_soul,if=buff.nightfall.react&(buff.nightfall.react=buff.nightfal
 actions+=/shadow_bolt,if=buff.nightfall.react&(buff.nightfall.react=buff.nightfall.max_stack|buff.nightfall.remains<execute_time*buff.nightfall.max_stack)
 actions+=/malefic_grasp,chain=1,early_chain_if=buff.nightfall.react,if=pet.darkglare.active
 actions+=/drain_soul,chain=1,early_chain_if=buff.nightfall.react,interrupt_if=tick_time>0.5
+actions+=/drain_life,if=talent.gorefiends_avarice
 actions+=/shadow_bolt
 
 actions.HC_aoe=haunt,if=cooldown.haunt.ready

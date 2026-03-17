@@ -72,6 +72,7 @@ void affliction( player_t* p )
   default_->add_action( "shadow_bolt,if=buff.nightfall.react&(buff.nightfall.react=buff.nightfall.max_stack|buff.nightfall.remains<execute_time*buff.nightfall.max_stack)" );
   default_->add_action( "malefic_grasp,chain=1,early_chain_if=buff.nightfall.react,if=pet.darkglare.active" );
   default_->add_action( "drain_soul,chain=1,early_chain_if=buff.nightfall.react,interrupt_if=tick_time>0.5" );
+  default_->add_action( "drain_life,if=talent.gorefiends_avarice" );
   default_->add_action( "shadow_bolt" );
 
   soul_harvester->add_action( "call_action_list,name=SH_st,if=active_enemies=1" );

@@ -66,7 +66,6 @@ void default_apl( monk_t* player )
   def->add_action( "keg_smash,if=buff.aspect_of_harmony_spender.up&buff.empty_barrel.up" );
   def->add_action( "breath_of_fire,if=talent.wisdom_of_the_wall.enabled&buff.invoke_niuzao_the_black_ox.up" );
   def->add_action( "keg_smash,if=talent.wisdom_of_the_wall.enabled&buff.invoke_niuzao_the_black_ox.up" );
-  def->add_action( "blackout_kick,if=talent.blackout_combo.enabled&!buff.blackout_combo.up" );
   def->add_action( "celestial_brew,if=!(apex.3&buff.empty_barrel.up)&buff.aspect_of_harmony_accumulator.value>0.95*health.max" );
   def->add_action( "celestial_brew,if=!(apex.3&buff.empty_barrel.up)&target.time_to_die<15&buff.aspect_of_harmony_accumulator.value>0.2*health.max" );
   def->add_action( "purifying_brew,if=!(apex.1&buff.empty_barrel.up)" );
@@ -76,19 +75,17 @@ void default_apl( monk_t* player )
   def->add_action( "empty_the_cellar,if=talent.aspect_of_harmony.enabled&cooldown.celestial_brew.remains>15" );
   def->add_action( "empty_the_cellar,if=!talent.aspect_of_harmony.enabled&buff.empty_the_cellar.remains<1.5" );
   def->add_action( "invoke_niuzao" );
-  def->add_action( "breath_of_fire,if=cooldown.blackout_kick.remains>1.5&!buff.empty_barrel.up&cooldown.keg_smash.charges<1+talent.stormstouts_last_keg.enabled" );
-  def->add_action( "tiger_palm,if=buff.blackout_combo.up" );
+  def->add_action( "breath_of_fire,if=cooldown.blackout_kick.remains>1.5&!buff.empty_barrel.up&cooldown.keg_smash.charges<1" );
   def->add_action( "celestial_brew,if=talent.flurry_strikes.enabled&!(apex.3&buff.empty_barrel.up)" );
   def->add_action( "keg_smash,if=talent.flurry_strikes.enabled" );
-  def->add_action( "keg_smash,if=talent.scalding_brew.enabled" );
   def->add_action( "keg_smash,if=buff.empty_barrel.up" );
-  def->add_action( "keg_smash,if=cooldown.keg_smash.charges=1+talent.stormstouts_last_keg.enabled" );
+  def->add_action( "keg_smash,if=cooldown.keg_smash.charges=1" );
   def->add_action( "breath_of_fire" );
   def->add_action( "empty_the_cellar" );
   def->add_action( "rushing_jade_wind" );
   def->add_action( "keg_smash" );
   def->add_action( "blackout_kick" );
-  def->add_action( "tiger_palm,if=talent.aspect_of_harmony.enabled&energy>50-energy.regen*2" );
+  def->add_action( "tiger_palm,if=buff.aspect_of_harmony_spender.up&energy>50-energy.regen*2" );
   def->add_action( "tiger_palm,if=energy>65-energy.regen" );
   def->add_action( "expel_harm" );
 

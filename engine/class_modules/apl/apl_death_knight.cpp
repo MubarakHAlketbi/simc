@@ -10,11 +10,11 @@ namespace death_knight_apl
 
 std::string potion( const player_t* p )
 {
-  std::string frost_potion = ( p->true_level >= 81 ) ? "potion_of_recklessness_2" : "tempered_potion_3";
+  std::string frost_potion = ( p->true_level >= 81 ) ? "lights_potential_2" : "tempered_potion_3";
 
   std::string unholy_potion = ( p->true_level >= 81 ) ? "potion_of_recklessness_2" : "tempered_potion_3";
 
-  std::string blood_potion = ( p->true_level >= 81 ) ? "draught_of_rampant_abandon_2" : "tempered_potion_3";
+  std::string blood_potion = ( p->true_level >= 81 ) ? "potion_of_recklessness_2" : "tempered_potion_3";
 
   switch ( p->specialization() )
   {
@@ -54,9 +54,9 @@ std::string food( const player_t* p )
 
   if ( p->true_level >= 81 )
   {
-    frost_food = "silvermoon_parade";
+    frost_food = "royal_roast";
     unholy_food = "silvermoon_parade";
-    blood_food = "silvermoon_parade";
+    blood_food = "blooming_feast";
   }
   else
   {
@@ -137,14 +137,17 @@ void blood( player_t* p )
   high_prio_actions->add_action( "dancing_rune_weapon,if=!buff.exterminate.up&!debuff.reapers_mark_debuff.up&!buff.dancing_rune_weapon.up&(fight_remains>95|fight_remains<25|time>300)" );
 
   deathbringer->add_action( "death_strike,if=(runic_power.deficit<20|(runic_power.deficit<26&buff.dancing_rune_weapon.up))" );
+  deathbringer->add_action( "deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5)&rune<4" );
+  deathbringer->add_action( "marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5" );
   deathbringer->add_action( "death_and_decay,if=!buff.death_and_decay.up" );
   deathbringer->add_action( "reapers_mark" );
   deathbringer->add_action( "marrowrend,if=buff.exterminate.up" );
-  deathbringer->add_action( "deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<6)&rune<4" );
-  deathbringer->add_action( "marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<6" );
+  deathbringer->add_action( "blood_boil,if=buff.dancing_rune_weapon.up&!dot.blood_plague.ticking" );
+  deathbringer->add_action( "blood_boil,if=charges=2" );
   deathbringer->add_action( "death_strike" );
-  deathbringer->add_action( "blood_boil" );
+  deathbringer->add_action( "blood_boil,if=buff.boiling_point.up" );
   deathbringer->add_action( "consumption,empower_to=1,if=!buff.dancing_rune_weapon.up" );
+  deathbringer->add_action( "blood_boil" );
   deathbringer->add_action( "heart_strike" );
   deathbringer->add_action( "consumption,empower_to=1" );
   deathbringer->add_action( "arcane_torrent,if=runic_power.deficit>20" );
@@ -159,17 +162,16 @@ void blood( player_t* p )
   san_gift->add_action( "heart_strike" );
   san_gift->add_action( "blood_boil" );
 
-  sanlayn->add_action( "deaths_caress,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<=1" );
-  sanlayn->add_action( "blood_boil,if=dot.blood_plague.remains<3" );
-  sanlayn->add_action( "heart_strike,if=(buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains&buff.vampiric_strike.remains)" );
   sanlayn->add_action( "death_strike,if=runic_power.deficit<20" );
-  sanlayn->add_action( "deaths_caress,if=buff.bone_shield.stack<6" );
-  sanlayn->add_action( "marrowrend,if=buff.bone_shield.stack<6" );
+  sanlayn->add_action( "deaths_caress,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<5" );
+  sanlayn->add_action( "marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<5" );
+  sanlayn->add_action( "blood_boil,if=!dot.blood_plague.ticking" );
   sanlayn->add_action( "any_dnd,if=buff.crimson_scourge.remains" );
+  sanlayn->add_action( "consumption,empower_to=1" );
+  sanlayn->add_action( "blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up" );
   sanlayn->add_action( "heart_strike,if=buff.vampiric_strike.up" );
   sanlayn->add_action( "death_strike" );
-  sanlayn->add_action( "blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up" );
-  sanlayn->add_action( "consumption,empower_to=1" );
+  sanlayn->add_action( "blood_boil,if=charges=2" );
   sanlayn->add_action( "heart_strike,if=rune>=2" );
   sanlayn->add_action( "blood_boil" );
   sanlayn->add_action( "heart_strike" );
@@ -243,6 +245,8 @@ void frost( player_t* p )
   single_target->add_action( "howling_blast,if=buff.rime.react&talent.frostbound_will" );
   single_target->add_action( "frost_strike,target_if=max:(talent.shattering_blade&debuff.razorice.react=5),if=debuff.razorice.react=5&talent.shattering_blade&!variable.rp_pooling" );
   single_target->add_action( "howling_blast,if=buff.rime.react" );
+  single_target->add_action( "obliterate,if=buff.exterminate.up" );
+  single_target->add_action( "howling_blast,if=buff.frostbane.react" );
   single_target->add_action( "frost_strike,if=!talent.shattering_blade&!variable.rp_pooling&runic_power.deficit<30" );
   single_target->add_action( "obliterate,if=buff.killing_machine.react&!variable.rune_pooling" );
   single_target->add_action( "frost_strike,if=!variable.rp_pooling" );
@@ -254,6 +258,9 @@ void frost( player_t* p )
   aoe->add_action( "frostscythe,if=buff.killing_machine.react&rune>=3&active_enemies>=variable.frostscythe_priority" );
   aoe->add_action( "obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.killing_machine.react=2|(buff.killing_machine.react&rune>=3)" );
   aoe->add_action( "howling_blast,if=buff.rime.react&talent.frostbound_will|!dot.frost_fever.ticking" );
+  aoe->add_action( "frostscythe,if=buff.exterminate.up&active_enemies>=variable.frostscythe_priority" );
+  aoe->add_action( "obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.exterminate.up" );
+  aoe->add_action( "howling_blast,if=buff.frostbane.react" );
   aoe->add_action( "frost_strike,target_if=max:(talent.shattering_blade&debuff.razorice.react=5),if=debuff.razorice.react=5&talent.shattering_blade&active_enemies<5&!variable.rp_pooling&!talent.frostbane" );
   aoe->add_action( "frostscythe,if=buff.killing_machine.react&!variable.rune_pooling&active_enemies>=variable.frostscythe_priority" );
   aoe->add_action( "obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.killing_machine.react&!variable.rune_pooling" );
@@ -343,7 +350,8 @@ void unholy( player_t* p )
   racials->add_action( "fireblood,if=variable.cds_active" );
   racials->add_action( "lights_judgment,if=runic_power<20&rune<2" );
 
-  single_target->add_action( "festering_strike,if=talent.festering_scythe&(buff.festering_scythe.up&(buff.festering_scythe.remains<=3|debuff.festering_scythe_debuff.remains<3)|!buff.festering_scythe.up&debuff.festering_scythe_debuff.remains<3)", "Single Target Rotation" );
+  single_target->add_action( "soul_reaper,if=target.health.pct<=35", "Single Target Rotation" );
+  single_target->add_action( "festering_strike,if=talent.festering_scythe&(buff.festering_scythe.up&(buff.festering_scythe.remains<=3|debuff.festering_scythe_debuff.remains<3)|!buff.festering_scythe.up&debuff.festering_scythe_debuff.remains<3)" );
   single_target->add_action( "death_coil,if=variable.spending_rp" );
   single_target->add_action( "festering_strike,if=buff.lesser_ghoul_ready.stack=0" );
   single_target->add_action( "scourge_strike,if=buff.lesser_ghoul_ready.stack>=1" );

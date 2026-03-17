@@ -8,9 +8,9 @@ position=front
 talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmZmZmhZbmZmmZxMjxMGAAAAYmZmZGmZGzMjBAMzMzAAAYMbDMglglhJwwCgZYGAAzMAgB
 
 # Default consumables
-potion=draught_of_rampant_abandon_2
+potion=potion_of_recklessness_2
 flask=flask_of_the_shattered_sun_2
-food=silvermoon_parade
+food=blooming_feast
 augmentation=void_touched
 temporary_enchant=main_hand:thalassian_phoenix_oil_2
 
@@ -39,14 +39,17 @@ actions+=/run_action_list,name=san_gift,if=hero_tree.sanlayn&buff.gift_of_the_sa
 actions+=/run_action_list,name=sanlayn,if=hero_tree.sanlayn
 
 actions.deathbringer=death_strike,if=(runic_power.deficit<20|(runic_power.deficit<26&buff.dancing_rune_weapon.up))
+actions.deathbringer+=/deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5)&rune<4
+actions.deathbringer+=/marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5
 actions.deathbringer+=/death_and_decay,if=!buff.death_and_decay.up
 actions.deathbringer+=/reapers_mark
 actions.deathbringer+=/marrowrend,if=buff.exterminate.up
-actions.deathbringer+=/deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<6)&rune<4
-actions.deathbringer+=/marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<6
+actions.deathbringer+=/blood_boil,if=buff.dancing_rune_weapon.up&!dot.blood_plague.ticking
+actions.deathbringer+=/blood_boil,if=charges=2
 actions.deathbringer+=/death_strike
-actions.deathbringer+=/blood_boil
+actions.deathbringer+=/blood_boil,if=buff.boiling_point.up
 actions.deathbringer+=/consumption,empower_to=1,if=!buff.dancing_rune_weapon.up
+actions.deathbringer+=/blood_boil
 actions.deathbringer+=/heart_strike
 actions.deathbringer+=/consumption,empower_to=1
 actions.deathbringer+=/arcane_torrent,if=runic_power.deficit>20

@@ -8,9 +8,9 @@ position=back
 talents=CsPAAAAAAAAAAAAAAAAAAAAAAMDwMjZMmZY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAwY2mFzyMMWYYZmtphmxGmZMzMwMAGmZwMzMgB
 
 # Default consumables
-potion=potion_of_recklessness_2
+potion=lights_potential_2
 flask=flask_of_the_shattered_sun_2
-food=silvermoon_parade
+food=royal_roast
 augmentation=void_touched
 temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix_oil_2
 
@@ -52,6 +52,9 @@ actions.aoe+=/frost_strike,target_if=max:(talent.shattering_blade&debuff.razoric
 actions.aoe+=/frostscythe,if=buff.killing_machine.react&rune>=3&active_enemies>=variable.frostscythe_priority
 actions.aoe+=/obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.killing_machine.react=2|(buff.killing_machine.react&rune>=3)
 actions.aoe+=/howling_blast,if=buff.rime.react&talent.frostbound_will|!dot.frost_fever.ticking
+actions.aoe+=/frostscythe,if=buff.exterminate.up&active_enemies>=variable.frostscythe_priority
+actions.aoe+=/obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.exterminate.up
+actions.aoe+=/howling_blast,if=buff.frostbane.react
 actions.aoe+=/frost_strike,target_if=max:(talent.shattering_blade&debuff.razorice.react=5),if=debuff.razorice.react=5&talent.shattering_blade&active_enemies<5&!variable.rp_pooling&!talent.frostbane
 actions.aoe+=/frostscythe,if=buff.killing_machine.react&!variable.rune_pooling&active_enemies>=variable.frostscythe_priority
 actions.aoe+=/obliterate,target_if=max:(hero_tree.rider_of_the_apocalypse&debuff.chains_of_ice_trollbane_slow.react),if=buff.killing_machine.react&!variable.rune_pooling
