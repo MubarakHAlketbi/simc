@@ -128,12 +128,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies via vcpkg (manifest mode)
-        shell: pwsh
-        run: |
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install --triplet x64-windows
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
-
       - name: Configure (CLI only, no Qt)
         shell: pwsh
         run: |
@@ -141,9 +135,7 @@ jobs:
             -G "Visual Studio 17 2022" -A x64 `
             -DBUILD_GUI=OFF `
             -DCMAKE_BUILD_TYPE=Release `
-            -DCMAKE_CXX_STANDARD=17 `
-            -DCMAKE_TOOLCHAIN_FILE="C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/vcpkg/scripts/buildsystems/vcpkg.cmake" `
-            -DVCPKG_TARGET_TRIPLET=x64-windows
+            -DCMAKE_CXX_STANDARD=17
 
       - name: Build CLI
         shell: pwsh
@@ -172,12 +164,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies via vcpkg (manifest mode)
-        shell: pwsh
-        run: |
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" install --triplet x64-windows
-          & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\vcpkg\vcpkg.exe" integrate install
-
       - name: Configure (GUI + CLI)
         shell: pwsh
         run: |
@@ -185,9 +171,7 @@ jobs:
             -G "Visual Studio 17 2022" -A x64 `
             -DBUILD_GUI=ON `
             -DCMAKE_BUILD_TYPE=Release `
-            -DCMAKE_CXX_STANDARD=17 `
-            -DCMAKE_TOOLCHAIN_FILE="C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/vcpkg/scripts/buildsystems/vcpkg.cmake" `
-            -DVCPKG_TARGET_TRIPLET=x64-windows
+            -DCMAKE_CXX_STANDARD=17
 
       - name: Build GUI + CLI
         shell: pwsh
