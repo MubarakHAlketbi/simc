@@ -119,3 +119,55 @@ jobs:
             iterations=5 cleanup_threads=1 \
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
+
+  # ── Windows MSVC x64 Release build ─────────────────────────────────────
+  windows-msvc:
+    name: Windows MSVC x64 Release
+    runs-on: windows-2022
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache vcpkg packages
+        uses: actions/cache@v4
+        with:
+          path: C:\vcpkg\installed
+          key: vcpkg-curl-windows-${{ hashFiles('**/CMakeLists.txt') }}
+          restore-keys: vcpkg-curl-windows-
+
+      - name: Install libcurl via vcpkg
+        shell: pwsh
+        run: |
+          vcpkg install curl:x64-windows
+          vcpkg integrate install
+
+      - name: Configure (MSVC x64)
+        shell: pwsh
+        run: |
+          cmake -S . -B build_msvc `
+            -G "Visual Studio 17 2022" -A x64 `
+            -DBUILD_GUI=OFF `
+            -DCMAKE_BUILD_TYPE=Release `
+            -DCMAKE_CXX_STANDARD=17 `
+            -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
+            -DVCPKG_TARGET_TRIPLET=x64-windows
+
+      - name: Build
+        shell: pwsh
+        run: |
+          cmake --build build_msvc --config Release --parallel
+
+      - name: Smoke test
+        shell: pwsh
+        run: |
+          build_msvc\Release\simc.exe `
+            output=nul html=nul json=nul `
+            iterations=5 cleanup_threads=1 `
+            warrior=test spec=fury load_default_gear=1 load_default_talents=1
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: simc-windows-msvc-${{ github.sha }}
+          path: build_msvc\Release\simc.exe
+          retention-days: 7
