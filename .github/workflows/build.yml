@@ -187,7 +187,7 @@ jobs:
           New-Item -ItemType Directory -Force -Path dist_gui
           
           # Notice the \Release\ added to the two lines below
-          Copy-Item build_gui\Release\SimulationCraft.exe dist_gui\
+          Copy-Item build_gui\qt\Release\SimulationCraft.exe dist_gui\
           Copy-Item build_gui\Release\simc.exe dist_gui\
           
           # The rest remains the same
