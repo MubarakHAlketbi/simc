@@ -1,2261 +1,1723 @@
-# Talent Names in SimC Code NOT Found in info_base.md
+# Talent Names / IDs in SimC Code NOT Found in info_base.md
 
-Generated: 2026-03-17
-These `player_talent_t` field names or `find_talent_spell()` strings appear in the
-SimC class module but have no matching entry (by normalized slug) in any info_base.md.
+Generated: 2026-03-21
+Detection: find_talent_spell(ID/"Name") + lambda + initializer-list patterns.
+An entry is flagged when it has no match (by ID or name) in any Wowhead talent table.
 
-They may be: utility talents correctly omitted from SimC's talent tables,
-renamed talents, old expansion leftovers, or proc/helper ability names.
+Common causes:
+  - Utility/CC/defensive abilities not listed in DPS-focused info_base.md
+  - Old-expansion talents removed in Midnight (stale SimC code)
+  - Internal proc/helper spells that aren't real talent tree nodes
+  - Renamed talents where SimC still uses the old string
+  - Shared class baseline abilities registered for buff-tracking purposes
 
-Action: Look up each on Wowhead. If still valid in Midnight, verify the name matches.
-If removed/renamed, update the code. If utility, leave with a // N/A comment.
+Action: Verify on Wowhead. Stale → update SimC. Utility → leave with // N/A.
+
+**Names not in Wowhead: 1539**  |  **IDs not in Wowhead: 42**
 
 ---
 
-## Death Knight (226 entries)
+## Death Knight (197 entries)
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `a_feast_of_souls` | sc_death_knight.cpp | 1401 | _(look up)_ |
-| `abomination_limb` | sc_death_knight.cpp | 1235 | _(look up)_ |
-| `all_will_serve` | sc_death_knight.cpp | 1364 | _(look up)_ |
-| `ancient_power` | sc_death_knight.cpp | 1371 | _(look up)_ |
-| `antimagic_barrier` | sc_death_knight.cpp | 1162 | _(look up)_ |
-| `antimagic_zone` | sc_death_knight.cpp | 1177 | _(look up)_ |
-| `apocalypse_now` | sc_death_knight.cpp | 1404 | _(look up)_ |
-| `arctic_assault` | sc_death_knight.cpp | 1282 | _(look up)_ |
-| `army_of_the_dead` | sc_death_knight.cpp | 1354 | _(look up)_ |
-| `asphyxiate` | sc_death_knight.cpp | 1182 | _(look up)_ |
-| `assimilation` | sc_death_knight.cpp | 1183 | _(look up)_ |
-| `avalanche` | sc_death_knight.cpp | 1308 | _(look up)_ |
-| `bind_in_darkness` | sc_death_knight.cpp | 1413 | _(look up)_ |
-| `biting_cold` | sc_death_knight.cpp | 1286 | _(look up)_ |
-| `blightburst` | sc_death_knight.cpp | 1366 | _(look up)_ |
-| `blightfall` | sc_death_knight.cpp | 1359 | _(look up)_ |
-| `blinding_sleet` | sc_death_knight.cpp | 1161 | _(look up)_ |
-| `blood_boil` | sc_death_knight.cpp | 1216 | _(look up)_ |
-| `blood_bond` | sc_death_knight.cpp | 1205 | _(look up)_ |
-| `blood_draw` | sc_death_knight.cpp | 1194 | _(look up)_ |
-| `blood_feast` | sc_death_knight.cpp | 1245 | _(look up)_ |
-| `blood_mist` | sc_death_knight.cpp | 1253 | _(look up)_ |
-| `blood_scent` | sc_death_knight.cpp | 1188 | _(look up)_ |
-| `bloodied_blade` | sc_death_knight.cpp | 1250 | _(look up)_ |
-| `bloodshot` | sc_death_knight.cpp | 1255 | _(look up)_ |
-| `bloodsoaked_ground` | sc_death_knight.cpp | 1435 | _(look up)_ |
-| `bloodworms` | sc_death_knight.cpp | 1232 | _(look up)_ |
-| `bloody_fortitude` | sc_death_knight.cpp | 1438 | _(look up)_ |
-| `bloody_reflection` | sc_death_knight.cpp | 1248 | _(look up)_ |
-| `boiling_point` | sc_death_knight.cpp | 1241 | _(look up)_ |
-| `bone_collector` | sc_death_knight.cpp | 1219 | _(look up)_ |
-| `bonegrinder` | sc_death_knight.cpp | 1306 | _(look up)_ |
-| `breath_of_sindragosa` | sc_death_knight.cpp | 1319 | _(look up)_ |
-| `brittle` | sc_death_knight.cpp | 1173 | _(look up)_ |
-| `carnage` | sc_death_knight.cpp | 1261 | _(look up)_ |
-| `chosen_of_frostbrood_1` | sc_death_knight.cpp | 1321 | _(look up)_ |
-| `chosen_of_frostbrood_2` | sc_death_knight.cpp | 1322 | _(look up)_ |
-| `chosen_of_frostbrood_3` | sc_death_knight.cpp | 1323 | _(look up)_ |
-| `clawing_shadows` | sc_death_knight.cpp | 1335 | _(look up)_ |
-| `cleaving_strikes` | sc_death_knight.cpp | 1158 | _(look up)_ |
-| `coagulopathy` | sc_death_knight.cpp | 1251 | _(look up)_ |
-| `coil_of_devastation` | sc_death_knight.cpp | 1353 | _(look up)_ |
-| `coldthirst` | sc_death_knight.cpp | 1168 | _(look up)_ |
-| `commander_of_the_dead` | sc_death_knight.cpp | 1374 | _(look up)_ |
-| `consumption` | sc_death_knight.cpp | 1256 | _(look up)_ |
-| `control_undead` | sc_death_knight.cpp | 1165 | _(look up)_ |
-| `cryogenic_chamber` | sc_death_knight.cpp | 1300 | _(look up)_ |
-| `dance_of_midnight_1` | sc_death_knight.cpp | 1264 | _(look up)_ |
-| `dance_of_midnight_2` | sc_death_knight.cpp | 1265 | _(look up)_ |
-| `dance_of_midnight_3` | sc_death_knight.cpp | 1266 | _(look up)_ |
-| `dancing_rune_weapon` | sc_death_knight.cpp | 1229 | _(look up)_ |
-| `dark_talons` | sc_death_knight.cpp | 1421 | _(look up)_ |
-| `dark_transformation` | sc_death_knight.cpp | 1342 | _(look up)_ |
-| `deadly_reach` | sc_death_knight.cpp | 1238 | _(look up)_ |
-| `death_charge` | sc_death_knight.cpp | 1390 | _(look up)_ |
-| `death_defiance` | sc_death_knight.cpp | 1207 | _(look up)_ |
-| `death_notes` | sc_death_knight.cpp | 1206 | _(look up)_ |
-| `death_pact` | sc_death_knight.cpp | 1172 | _(look up)_ |
-| `death_strike` | sc_death_knight.cpp | 1153 | _(look up)_ |
-| `deathly_blows` | sc_death_knight.cpp | 1419 | _(look up)_ |
-| `deaths_echo` | sc_death_knight.cpp | 1202 | _(look up)_ |
-| `deaths_messenger` | sc_death_knight.cpp | 1423 | _(look up)_ |
-| `deaths_reach` | sc_death_knight.cpp | 1174 | _(look up)_ |
-| `desecrate` | sc_death_knight.cpp | 1436 | _(look up)_ |
-| `doomed_bidding` | sc_death_knight.cpp | 1337 | _(look up)_ |
-| `ebon_fever` | sc_death_knight.cpp | 1351 | _(look up)_ |
-| `echoing_fury` | sc_death_knight.cpp | 1425 | _(look up)_ |
-| `empower_rune_weapon` | sc_death_knight.cpp | 1279 | _(look up)_ |
-| `enduring_strength` | sc_death_knight.cpp | 1295 | _(look up)_ |
-| `enfeeble` | sc_death_knight.cpp | 1166 | _(look up)_ |
-| `everfrost` | sc_death_knight.cpp | 1303 | _(look up)_ |
-| `everlasting_bond` | sc_death_knight.cpp | 1243 | _(look up)_ |
-| `expelling_shield` | sc_death_knight.cpp | 1424 | _(look up)_ |
-| `exterminate` | sc_death_knight.cpp | 1426 | _(look up)_ |
-| `festering_scythe` | sc_death_knight.cpp | 1345 | _(look up)_ |
-| `forbidden_knowledge_1` | sc_death_knight.cpp | 1380 | _(look up)_ |
-| `forbidden_knowledge_2` | sc_death_knight.cpp | 1381 | _(look up)_ |
-| `forbidden_knowledge_3` | sc_death_knight.cpp | 1382 | _(look up)_ |
-| `foul_bulwark` | sc_death_knight.cpp | 1228 | _(look up)_ |
-| `foul_infections` | sc_death_knight.cpp | 1339 | _(look up)_ |
-| `frenzied_bloodthirst` | sc_death_knight.cpp | 1441 | _(look up)_ |
-| `frigid_executioner` | sc_death_knight.cpp | 1297 | _(look up)_ |
-| `frigid_resolve` | sc_death_knight.cpp | 1414 | _(look up)_ |
-| `frost_strike` | sc_death_knight.cpp | 1273 | _(look up)_ |
-| `frostbane` | sc_death_knight.cpp | 1318 | _(look up)_ |
-| `frostbound_will` | sc_death_knight.cpp | 1284 | _(look up)_ |
-| `frostreaper` | sc_death_knight.cpp | 1288 | _(look up)_ |
-| `frostscythe` | sc_death_knight.cpp | 1280 | _(look up)_ |
-| `frostwyrms_fury` | sc_death_knight.cpp | 1296 | _(look up)_ |
-| `frozen_dominion` | sc_death_knight.cpp | 1302 | _(look up)_ |
-| `fury_of_the_horsemen` | sc_death_knight.cpp | 1400 | _(look up)_ |
-| `gathering_storm` | sc_death_knight.cpp | 1291 | _(look up)_ |
-| `ghoulish_frenzy` | sc_death_knight.cpp | 1357 | _(look up)_ |
-| `gift_of_the_sanlayn` | sc_death_knight.cpp | 1449 | _(look up)_ |
-| `gloom_ward` | sc_death_knight.cpp | 1181 | _(look up)_ |
-| `gorefiends_grasp` | sc_death_knight.cpp | 1234 | _(look up)_ |
-| `grave_mastery` | sc_death_knight.cpp | 1341 | _(look up)_ |
-| `grim_reaper` | sc_death_knight.cpp | 1416 | _(look up)_ |
-| `grip_of_the_dead` | sc_death_knight.cpp | 1185 | _(look up)_ |
-| `harbinger_of_doom` | sc_death_knight.cpp | 1360 | _(look up)_ |
-| `heart_strike` | sc_death_knight.cpp | 1213 | _(look up)_ |
-| `heartbreaker` | sc_death_knight.cpp | 1227 | _(look up)_ |
-| `hemostasis` | sc_death_knight.cpp | 1230 | _(look up)_ |
-| `horsemens_aid` | sc_death_knight.cpp | 1392 | _(look up)_ |
-| `howling_blades` | sc_death_knight.cpp | 1293 | _(look up)_ |
-| `howling_blast` | sc_death_knight.cpp | 1276 | _(look up)_ |
-| `hungering_thirst` | sc_death_knight.cpp | 1399 | _(look up)_ |
-| `hyperpyrexia` | sc_death_knight.cpp | 1314 | _(look up)_ |
-| `ice_prison` | sc_death_knight.cpp | 1180 | _(look up)_ |
-| `icebound_fortitude` | sc_death_knight.cpp | 1152 | _(look up)_ |
-| `icebreaker` | sc_death_knight.cpp | 1309 | _(look up)_ |
-| `icy_death_torrent` | sc_death_knight.cpp | 1312 | _(look up)_ |
-| `icy_onslaught` | sc_death_knight.cpp | 1290 | _(look up)_ |
-| `icy_talons` | sc_death_knight.cpp | 1176 | _(look up)_ |
-| `improved_bone_shield` | sc_death_knight.cpp | 1236 | _(look up)_ |
-| `improved_death_strike` | sc_death_knight.cpp | 1157 | _(look up)_ |
-| `improved_heart_strike` | sc_death_knight.cpp | 1223 | _(look up)_ |
-| `improved_vampiric_blood` | sc_death_knight.cpp | 1222 | _(look up)_ |
-| `incite_terror` | sc_death_knight.cpp | 1445 | _(look up)_ |
-| `inevitable` | sc_death_knight.cpp | 1444 | _(look up)_ |
-| `inexorable_assault` | sc_death_knight.cpp | 1294 | _(look up)_ |
-| `infected_claws` | sc_death_knight.cpp | 1349 | _(look up)_ |
-| `infliction_of_sorrow` | sc_death_knight.cpp | 1440 | _(look up)_ |
-| `insatiable_blade` | sc_death_knight.cpp | 1237 | _(look up)_ |
-| `insidious_chill` | sc_death_knight.cpp | 1192 | _(look up)_ |
-| `iron_heart` | sc_death_knight.cpp | 1249 | _(look up)_ |
-| `killing_machine` | sc_death_knight.cpp | 1278 | _(look up)_ |
-| `killing_streak` | sc_death_knight.cpp | 1316 | _(look up)_ |
-| `leeching_strike` | sc_death_knight.cpp | 1226 | _(look up)_ |
-| `let_terror_reign` | sc_death_knight.cpp | 1398 | _(look up)_ |
-| `lifeblood` | sc_death_knight.cpp | 1242 | _(look up)_ |
-| `magus_of_the_dead` | sc_death_knight.cpp | 1348 | _(look up)_ |
-| `march_of_darkness` | sc_death_knight.cpp | 1163 | _(look up)_ |
-| `march_of_madness` | sc_death_knight.cpp | 1347 | _(look up)_ |
-| `marrowrend` | sc_death_knight.cpp | 1215 | _(look up)_ |
-| `mawsworn_menace` | sc_death_knight.cpp | 1402 | _(look up)_ |
-| `menacing_magus` | sc_death_knight.cpp | 1356 | _(look up)_ |
-| `mindfreeze` | sc_death_knight.cpp | 1160 | _(look up)_ |
-| `mograines_might` | sc_death_knight.cpp | 1391 | _(look up)_ |
-| `morbidity` | sc_death_knight.cpp | 1344 | _(look up)_ |
-| `murderous_efficiency` | sc_death_knight.cpp | 1299 | _(look up)_ |
-| `nazgrims_conquest` | sc_death_knight.cpp | 1396 | _(look up)_ |
-| `necromancers_cunning` | sc_death_knight.cpp | 1368 | _(look up)_ |
-| `newly_turned` | sc_death_knight.cpp | 1433 | _(look up)_ |
-| `northwinds` | sc_death_knight.cpp | 1304 | _(look up)_ |
-| `null_magic` | sc_death_knight.cpp | 1200 | _(look up)_ |
-| `obliterate` | sc_death_knight.cpp | 1275 | _(look up)_ |
-| `obliteration` | sc_death_knight.cpp | 1311 | _(look up)_ |
-| `on_a_paler_horse` | sc_death_knight.cpp | 1389 | _(look up)_ |
-| `osmosis` | sc_death_knight.cpp | 1191 | _(look up)_ |
-| `ossuary` | sc_death_knight.cpp | 1221 | _(look up)_ |
-| `outbreak` | sc_death_knight.cpp | 1330 | _(look up)_ |
-| `outnumber` | sc_death_knight.cpp | 1378 | _(look up)_ |
-| `pact_of_the_apocalypse` | sc_death_knight.cpp | 1393 | _(look up)_ |
-| `pact_of_the_deathbringer` | sc_death_knight.cpp | 1417 | _(look up)_ |
-| `pact_of_the_sanlayn` | sc_death_knight.cpp | 1446 | _(look up)_ |
-| `permafrost` | sc_death_knight.cpp | 1170 | _(look up)_ |
-| `perseverance_of_the_ebon_blade` | sc_death_knight.cpp | 1231 | _(look up)_ |
-| `pestilence` | sc_death_knight.cpp | 1376 | _(look up)_ |
-| `pillar_of_frost` | sc_death_knight.cpp | 1289 | _(look up)_ |
-| `plague_infusion` | sc_death_knight.cpp | 1247 | _(look up)_ |
-| `plague_mastery` | sc_death_knight.cpp | 1340 | _(look up)_ |
-| `proliferating_chill` | sc_death_knight.cpp | 1169 | _(look up)_ |
-| `purgatory` | sc_death_knight.cpp | 1260 | _(look up)_ |
-| `putrefy` | sc_death_knight.cpp | 1336 | _(look up)_ |
-| `putrid_echoes` | sc_death_knight.cpp | 1363 | _(look up)_ |
-| `rage_of_the_frozen_champion` | sc_death_knight.cpp | 1301 | _(look up)_ |
-| `raise_abomination` | sc_death_knight.cpp | 1361 | _(look up)_ |
-| `raise_dead` | sc_death_knight.cpp | 1154 | _(look up)_ |
-| `rapid_decomposition` | sc_death_knight.cpp | 1239 | _(look up)_ |
-| `reanimation` | sc_death_knight.cpp | 1377 | _(look up)_ |
-| `reapers_mark` | sc_death_knight.cpp | 1410 | _(look up)_ |
-| `reapers_onslaught` | sc_death_knight.cpp | 1422 | _(look up)_ |
-| `reaping` | sc_death_knight.cpp | 1372 | _(look up)_ |
-| `red_thirst` | sc_death_knight.cpp | 1257 | _(look up)_ |
-| `relish_in_blood` | sc_death_knight.cpp | 1224 | _(look up)_ |
-| `ride_or_die` | sc_death_knight.cpp | 1394 | _(look up)_ |
-| `riders_champion` | sc_death_knight.cpp | 1388 | _(look up)_ |
-| `rune_carved_plates` | sc_death_knight.cpp | 1418 | _(look up)_ |
-| `rune_mastery` | sc_death_knight.cpp | 1196 | _(look up)_ |
-| `runic_attenuation` | sc_death_knight.cpp | 1156 | _(look up)_ |
-| `runic_command` | sc_death_knight.cpp | 1285 | _(look up)_ |
-| `runic_overflow` | sc_death_knight.cpp | 1283 | _(look up)_ |
-| `runic_protection` | sc_death_knight.cpp | 1193 | _(look up)_ |
-| `sanguinary_burst` | sc_death_knight.cpp | 1259 | _(look up)_ |
-| `sanguine_ground` | sc_death_knight.cpp | 1254 | _(look up)_ |
-| `sanguine_scent` | sc_death_knight.cpp | 1447 | _(look up)_ |
-| `scourge_strike` | sc_death_knight.cpp | 1332 | _(look up)_ |
-| `scourging` | sc_death_knight.cpp | 1370 | _(look up)_ |
-| `scythe_of_decay` | sc_death_knight.cpp | 1352 | _(look up)_ |
-| `shattering_blade` | sc_death_knight.cpp | 1313 | _(look up)_ |
-| `smothering_offense` | sc_death_knight.cpp | 1307 | _(look up)_ |
-| `soul_reaper` | sc_death_knight.cpp | 1367 | _(look up)_ |
-| `soul_rupture` | sc_death_knight.cpp | 1415 | _(look up)_ |
-| `subduing_grasp` | sc_death_knight.cpp | 1197 | _(look up)_ |
-| `sudden_doom` | sc_death_knight.cpp | 1333 | _(look up)_ |
-| `summon_gargoyle` | sc_death_knight.cpp | 1362 | _(look up)_ |
-| `superstrain` | sc_death_knight.cpp | 1346 | _(look up)_ |
-| `suppression` | sc_death_knight.cpp | 1187 | _(look up)_ |
-| `swift_and_painful` | sc_death_knight.cpp | 1420 | _(look up)_ |
-| `the_blood_is_life` | sc_death_knight.cpp | 1442 | _(look up)_ |
-| `the_long_winter` | sc_death_knight.cpp | 1317 | _(look up)_ |
-| `thrill_of_blood` | sc_death_knight.cpp | 1439 | _(look up)_ |
-| `transfusion` | sc_death_knight.cpp | 1448 | _(look up)_ |
-| `trollbanes_icy_fury` | sc_death_knight.cpp | 1397 | _(look up)_ |
-| `umbilicus_eternus` | sc_death_knight.cpp | 1262 | _(look up)_ |
-| `unholy_armaments` | sc_death_knight.cpp | 1403 | _(look up)_ |
-| `unholy_aura` | sc_death_knight.cpp | 1373 | _(look up)_ |
-| `unholy_bond` | sc_death_knight.cpp | 1178 | _(look up)_ |
-| `unholy_devotion` | sc_death_knight.cpp | 1355 | _(look up)_ |
-| `unholy_endurance` | sc_death_knight.cpp | 1189 | _(look up)_ |
-| `unholy_momentum` | sc_death_knight.cpp | 1164 | _(look up)_ |
-| `unyielding_will` | sc_death_knight.cpp | 1201 | _(look up)_ |
-| `vampiric_aura` | sc_death_knight.cpp | 1437 | _(look up)_ |
-| `vampiric_blood` | sc_death_knight.cpp | 1218 | _(look up)_ |
-| `vampiric_speed` | sc_death_knight.cpp | 1434 | _(look up)_ |
-| `vampiric_strike` | sc_death_knight.cpp | 1432 | _(look up)_ |
-| `vestigial_shell` | sc_death_knight.cpp | 1203 | _(look up)_ |
-| `veteran_of_the_third_war` | sc_death_knight.cpp | 1171 | _(look up)_ |
-| `visceral_strength` | sc_death_knight.cpp | 1443 | _(look up)_ |
-| `voracious` | sc_death_knight.cpp | 1244 | _(look up)_ |
-| `wave_of_souls` | sc_death_knight.cpp | 1411 | _(look up)_ |
-| `whitemanes_famine` | sc_death_knight.cpp | 1395 | _(look up)_ |
-| `will_of_the_necropolis` | sc_death_knight.cpp | 1198 | _(look up)_ |
-| `wither_away` | sc_death_knight.cpp | 1412 | _(look up)_ |
-| `wraith_walk` | sc_death_knight.cpp | 1184 | _(look up)_ |
+**By Name:**
 
-## Demon Hunter (232 entries)
+| Talent Name | File |
+|-------------|------|
+| `A Feast of Souls` | sc_death_knight.cpp |
+| `Abomination Limb` | sc_death_knight.cpp |
+| `All Will Serve` | sc_death_knight.cpp |
+| `Ancient Power` | sc_death_knight.cpp |
+| `Anti-magic Barrier` | sc_death_knight.cpp |
+| `Anti-magic Zone` | sc_death_knight.cpp |
+| `Apocalypse Now` | sc_death_knight.cpp |
+| `Arctic Assault` | sc_death_knight.cpp |
+| `Army of the Dead` | sc_death_knight.cpp |
+| `Asphyxiate` | sc_death_knight.cpp |
+| `Assimilation` | sc_death_knight.cpp |
+| `Avalanche` | sc_death_knight.cpp |
+| `Bind in Darkness` | sc_death_knight.cpp |
+| `Biting Cold` | sc_death_knight.cpp |
+| `Blightburst` | sc_death_knight.cpp |
+| `Blightfall` | sc_death_knight.cpp |
+| `Blood Boil` | sc_death_knight.cpp |
+| `Blood Bond` | sc_death_knight.cpp |
+| `Blood Draw` | sc_death_knight.cpp |
+| `Blood Feast` | sc_death_knight.cpp |
+| `Blood Mist` | sc_death_knight.cpp |
+| `Blood Scent` | sc_death_knight.cpp |
+| `Blood-soaked Ground` | sc_death_knight.cpp |
+| `Bloodied Blade` | sc_death_knight.cpp |
+| `Bloodworms` | sc_death_knight.cpp |
+| `Bloody Fortitude` | sc_death_knight.cpp |
+| `Bloody Reflection` | sc_death_knight.cpp |
+| `Boiling Point` | sc_death_knight.cpp |
+| `Bone Collector` | sc_death_knight.cpp |
+| `Bonegrinder` | sc_death_knight.cpp |
+| `Breath of Sindragosa` | sc_death_knight.cpp |
+| `Brittle` | sc_death_knight.cpp |
+| `Carnage` | sc_death_knight.cpp |
+| `Chosen of Frostbrood` | sc_death_knight.cpp |
+| `Clawing Shadows` | sc_death_knight.cpp |
+| `Coagulopathy` | sc_death_knight.cpp |
+| `Coil of Devastation` | sc_death_knight.cpp |
+| `Coldthirst` | sc_death_knight.cpp |
+| `Commander of the Dead` | sc_death_knight.cpp |
+| `Consumption` | sc_death_knight.cpp |
+| `Control Undead` | sc_death_knight.cpp |
+| `Cryogenic Chamber` | sc_death_knight.cpp |
+| `Dance of Midnight` | sc_death_knight.cpp |
+| `Dancing Rune Weapon` | sc_death_knight.cpp |
+| `Dark Talons` | sc_death_knight.cpp |
+| `Dark Transformation` | sc_death_knight.cpp |
+| `Deadly Reach` | sc_death_knight.cpp |
+| `Desecrate` | sc_death_knight.cpp |
+| `Doomed Bidding` | sc_death_knight.cpp |
+| `Ebon Fever` | sc_death_knight.cpp |
+| `Echoing Fury` | sc_death_knight.cpp |
+| `Empower Rune Weapon` | sc_death_knight.cpp |
+| `Enduring Strength` | sc_death_knight.cpp |
+| `Enfeeble` | sc_death_knight.cpp |
+| `Everfrost` | sc_death_knight.cpp |
+| `Everlasting Bond` | sc_death_knight.cpp |
+| `Expelling Shield` | sc_death_knight.cpp |
+| `Exterminate` | sc_death_knight.cpp |
+| `Festering Scythe` | sc_death_knight.cpp |
+| `Forbidden Knowledge` | sc_death_knight.cpp |
+| `Foul Bulwark` | sc_death_knight.cpp |
+| `Foul Infections` | sc_death_knight.cpp |
+| `Frigid Executioner` | sc_death_knight.cpp |
+| `Frigid Resolve` | sc_death_knight.cpp |
+| `Frost Strike` | sc_death_knight.cpp |
+| `Frostreaper` | sc_death_knight.cpp |
+| `Frostscythe` | sc_death_knight.cpp |
+| `Frostwyrm's Fury` | sc_death_knight.cpp |
+| `Fury of the Horsemen` | sc_death_knight.cpp |
+| `Gathering Storm` | sc_death_knight.cpp |
+| `Ghoulish Frenzy` | sc_death_knight.cpp |
+| `Gloom Ward` | sc_death_knight.cpp |
+| `Grave Mastery` | sc_death_knight.cpp |
+| `Grim Reaper` | sc_death_knight.cpp |
+| `Grip of the Dead` | sc_death_knight.cpp |
+| `Harbinger of Doom` | sc_death_knight.cpp |
+| `Heart Strike` | sc_death_knight.cpp |
+| `Heartbreaker` | sc_death_knight.cpp |
+| `Hemostasis` | sc_death_knight.cpp |
+| `Horsemen's Aid` | sc_death_knight.cpp |
+| `Howling Blades` | sc_death_knight.cpp |
+| `Howling Blast` | sc_death_knight.cpp |
+| `Hungering Thirst` | sc_death_knight.cpp |
+| `Hyperpyrexia` | sc_death_knight.cpp |
+| `Ice Prison` | sc_death_knight.cpp |
+| `Icebound Fortitude` | sc_death_knight.cpp |
+| `Icebreaker` | sc_death_knight.cpp |
+| `Icy Death Torrent` | sc_death_knight.cpp |
+| `Icy Onslaught` | sc_death_knight.cpp |
+| `Icy Talons` | sc_death_knight.cpp |
+| `Improved Bone Shield` | sc_death_knight.cpp |
+| `Improved Death Strike` | sc_death_knight.cpp |
+| `Improved Heart Strike` | sc_death_knight.cpp |
+| `Improved Vampiric Blood` | sc_death_knight.cpp |
+| `Incite Terror` | sc_death_knight.cpp |
+| `Inevitable` | sc_death_knight.cpp |
+| `Inexorable Assault` | sc_death_knight.cpp |
+| `Infected Claws` | sc_death_knight.cpp |
+| `Infliction of Sorrow` | sc_death_knight.cpp |
+| `Insatiable Blade` | sc_death_knight.cpp |
+| `Iron Heart` | sc_death_knight.cpp |
+| `Killing Machine` | sc_death_knight.cpp |
+| `Killing Streak` | sc_death_knight.cpp |
+| `Let Terror Reign` | sc_death_knight.cpp |
+| `Lifeblood` | sc_death_knight.cpp |
+| `Magus of the Dead` | sc_death_knight.cpp |
+| `March of Darkness` | sc_death_knight.cpp |
+| `March of Madness` | sc_death_knight.cpp |
+| `Marrowrend` | sc_death_knight.cpp |
+| `Mawsworn Menace` | sc_death_knight.cpp |
+| `Menacing Magus` | sc_death_knight.cpp |
+| `Mind Freeze` | sc_death_knight.cpp |
+| `Mograine's Might` | sc_death_knight.cpp |
+| `Morbidity` | sc_death_knight.cpp |
+| `Murderous Efficiency` | sc_death_knight.cpp |
+| `Nazgrim's Conquest` | sc_death_knight.cpp |
+| `Necromancer's Cunning` | sc_death_knight.cpp |
+| `Newly Turned` | sc_death_knight.cpp |
+| `Northwinds` | sc_death_knight.cpp |
+| `Null Magic` | sc_death_knight.cpp |
+| `Obliterate` | sc_death_knight.cpp |
+| `Obliteration` | sc_death_knight.cpp |
+| `On a Paler Horse` | sc_death_knight.cpp |
+| `Osmosis` | sc_death_knight.cpp |
+| `Ossuary` | sc_death_knight.cpp |
+| `Outbreak` | sc_death_knight.cpp |
+| `Outnumber` | sc_death_knight.cpp |
+| `Pact of the Apocalypse` | sc_death_knight.cpp |
+| `Pact of the Deathbringer` | sc_death_knight.cpp |
+| `Perseverance of the Ebon Blade` | sc_death_knight.cpp |
+| `Pestilence` | sc_death_knight.cpp |
+| `Pillar of Frost` | sc_death_knight.cpp |
+| `Plague Infusion` | sc_death_knight.cpp |
+| `Plague Mastery` | sc_death_knight.cpp |
+| `Proliferating Chill` | sc_death_knight.cpp |
+| `Purgatory` | sc_death_knight.cpp |
+| `Putrefy` | sc_death_knight.cpp |
+| `Putrid Echoes` | sc_death_knight.cpp |
+| `Rage of the Frozen Champion` | sc_death_knight.cpp |
+| `Raise Abomination` | sc_death_knight.cpp |
+| `Raise Dead` | sc_death_knight.cpp |
+| `Rapid Decomposition` | sc_death_knight.cpp |
+| `Reanimation` | sc_death_knight.cpp |
+| `Reaper's Mark` | sc_death_knight.cpp |
+| `Reaper's Onslaught` | sc_death_knight.cpp |
+| `Reaping` | sc_death_knight.cpp |
+| `Red Thirst` | sc_death_knight.cpp |
+| `Relish in Blood` | sc_death_knight.cpp |
+| `Ride or Die!` | sc_death_knight.cpp |
+| `Rider's Champion` | sc_death_knight.cpp |
+| `Rune Carved Plates` | sc_death_knight.cpp |
+| `Rune Mastery` | sc_death_knight.cpp |
+| `Runic Attenuation` | sc_death_knight.cpp |
+| `Runic Command` | sc_death_knight.cpp |
+| `Runic Overflow` | sc_death_knight.cpp |
+| `Runic Protection` | sc_death_knight.cpp |
+| `Sanguinary Burst` | sc_death_knight.cpp |
+| `Sanguine Ground` | sc_death_knight.cpp |
+| `Sanguine Scent` | sc_death_knight.cpp |
+| `Scourge Strike` | sc_death_knight.cpp |
+| `Scourging` | sc_death_knight.cpp |
+| `Scythe of Decay` | sc_death_knight.cpp |
+| `Shattering Blade` | sc_death_knight.cpp |
+| `Smothering Offense` | sc_death_knight.cpp |
+| `Soul Reaper` | sc_death_knight.cpp |
+| `Soul Rupture` | sc_death_knight.cpp |
+| `Subduing Grasp` | sc_death_knight.cpp |
+| `Sudden Doom` | sc_death_knight.cpp |
+| `Summon Gargoyle` | sc_death_knight.cpp |
+| `Superstrain` | sc_death_knight.cpp |
+| `Suppression` | sc_death_knight.cpp |
+| `The Blood is Life` | sc_death_knight.cpp |
+| `The Long Winter` | sc_death_knight.cpp |
+| `Thrill of Blood` | sc_death_knight.cpp |
+| `Transfusion` | sc_death_knight.cpp |
+| `Trollbane's Icy Fury` | sc_death_knight.cpp |
+| `Umbilicus Eternus` | sc_death_knight.cpp |
+| `Unholy Armaments` | sc_death_knight.cpp |
+| `Unholy Aura` | sc_death_knight.cpp |
+| `Unholy Bond` | sc_death_knight.cpp |
+| `Unholy Devotion` | sc_death_knight.cpp |
+| `Unholy Endurance` | sc_death_knight.cpp |
+| `Unholy Momentum` | sc_death_knight.cpp |
+| `Unyielding Will` | sc_death_knight.cpp |
+| `Vampiric Aura` | sc_death_knight.cpp |
+| `Vampiric Blood` | sc_death_knight.cpp |
+| `Vampiric Speed` | sc_death_knight.cpp |
+| `Vampiric Strike` | sc_death_knight.cpp |
+| `Vestigial Shell` | sc_death_knight.cpp |
+| `Veteran of the Third War` | sc_death_knight.cpp |
+| `Visceral Strength` | sc_death_knight.cpp |
+| `Voracious` | sc_death_knight.cpp |
+| `Wave of Souls` | sc_death_knight.cpp |
+| `Whitemane's Famine` | sc_death_knight.cpp |
+| `Will of the Necropolis` | sc_death_knight.cpp |
+| `Wither Away` | sc_death_knight.cpp |
+| `Wraith Walk` | sc_death_knight.cpp |
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `a_fire_inside` | sc_demon_hunter.cpp | 591 | _(look up)_ |
-| `accelerated_blade` | sc_demon_hunter.cpp | 547 | _(look up)_ |
-| `agonizing_flames` | sc_demon_hunter.cpp | 617 | _(look up)_ |
-| `aldrachi_design` | sc_demon_hunter.cpp | 439 | _(look up)_ |
-| `aldrachi_tactics` | sc_demon_hunter.cpp | 668 | _(look up)_ |
-| `army_unto_oneself` | sc_demon_hunter.cpp | 669 | _(look up)_ |
-| `art_of_the_glaive` | sc_demon_hunter.cpp | 660 | _(look up)_ |
-| `ascending_flame` | sc_demon_hunter.cpp | 607 | _(look up)_ |
-| `aura_of_pain` | sc_demon_hunter.cpp | 447 | _(look up)_ |
-| `bladecraft` | sc_demon_hunter.cpp | 677 | _(look up)_ |
-| `blazing_path` | sc_demon_hunter.cpp | 445 | _(look up)_ |
-| `blind_focus` | sc_demon_hunter.cpp | 726 | _(look up)_ |
-| `blind_fury` | sc_demon_hunter.cpp | 562 | _(look up)_ |
-| `bouncing_glaives` | sc_demon_hunter.cpp | 431 | _(look up)_ |
-| `broken_spirit` | sc_demon_hunter.cpp | 666 | _(look up)_ |
-| `burn_it_out` | sc_demon_hunter.cpp | 454 | _(look up)_ |
-| `burning_alive` | sc_demon_hunter.cpp | 640 | _(look up)_ |
-| `burning_blades` | sc_demon_hunter.cpp | 717 | _(look up)_ |
-| `burning_blood` | sc_demon_hunter.cpp | 619 | _(look up)_ |
-| `burning_hatred` | sc_demon_hunter.cpp | 542 | _(look up)_ |
-| `burning_wound` | sc_demon_hunter.cpp | 572 | _(look up)_ |
-| `calamitous` | sc_demon_hunter.cpp | 524 | _(look up)_ |
-| `calcified_spikes` | sc_demon_hunter.cpp | 610 | _(look up)_ |
-| `catastrophe` | sc_demon_hunter.cpp | 689 | _(look up)_ |
-| `celestial_echoes` | sc_demon_hunter.cpp | 697 | _(look up)_ |
-| `chains_of_anger` | sc_demon_hunter.cpp | 635 | _(look up)_ |
-| `champion_of_the_glaive` | sc_demon_hunter.cpp | 443 | _(look up)_ |
-| `chaos_nova` | sc_demon_hunter.cpp | 435 | _(look up)_ |
-| `chaos_theory` | sc_demon_hunter.cpp | 575 | _(look up)_ |
-| `chaotic_disposition` | sc_demon_hunter.cpp | 584 | _(look up)_ |
-| `chaotic_transformation` | sc_demon_hunter.cpp | 563 | _(look up)_ |
-| `charred_flesh` | sc_demon_hunter.cpp | 645 | _(look up)_ |
-| `charred_warblades` | sc_demon_hunter.cpp | 433 | _(look up)_ |
-| `collapsing_star` | sc_demon_hunter.cpp | 494 | _(look up)_ |
-| `collective_anguish` | sc_demon_hunter.cpp | 589 | _(look up)_ |
-| `consume_magic` | sc_demon_hunter.cpp | 438 | _(look up)_ |
-| `critical_chaos` | sc_demon_hunter.cpp | 541 | _(look up)_ |
-| `cycle_of_binding` | sc_demon_hunter.cpp | 641 | _(look up)_ |
-| `cycle_of_hatred` | sc_demon_hunter.cpp | 583 | _(look up)_ |
-| `dancing_with_fate` | sc_demon_hunter.cpp | 564 | _(look up)_ |
-| `dark_matter` | sc_demon_hunter.cpp | 701 | _(look up)_ |
-| `darkglare_boon` | sc_demon_hunter.cpp | 650 | _(look up)_ |
-| `darkness` | sc_demon_hunter.cpp | 470 | _(look up)_ |
-| `dash_of_chaos` | sc_demon_hunter.cpp | 544 | _(look up)_ |
-| `deflecting_dance` | sc_demon_hunter.cpp | 552 | _(look up)_ |
-| `demon_hide` | sc_demon_hunter.cpp | 548 | _(look up)_ |
-| `demon_muzzle` | sc_demon_hunter.cpp | 471 | _(look up)_ |
-| `demonic` | sc_demon_hunter.cpp | 557 | _(look up)_ |
-| `demonic_instinct` | sc_demon_hunter.cpp | 516 | _(look up)_ |
-| `demonic_intensity` | sc_demon_hunter.cpp | 730 | _(look up)_ |
-| `demonic_resilience` | sc_demon_hunter.cpp | 477 | _(look up)_ |
-| `demonsurge` | sc_demon_hunter.cpp | 709 | _(look up)_ |
-| `desperate_instincts` | sc_demon_hunter.cpp | 550 | _(look up)_ |
-| `devourers_bite` | sc_demon_hunter.cpp | 522 | _(look up)_ |
-| `devourers_edge` | sc_demon_hunter.cpp | 517 | _(look up)_ |
-| `disrupting_fury` | sc_demon_hunter.cpp | 444 | _(look up)_ |
-| `doomsayer` | sc_demon_hunter.cpp | 695 | _(look up)_ |
-| `down_in_flames` | sc_demon_hunter.cpp | 651 | _(look up)_ |
-| `duty_eternal` | sc_demon_hunter.cpp | 493 | _(look up)_ |
-| `emptiness` | sc_demon_hunter.cpp | 528 | _(look up)_ |
-| `enduring_torment` | sc_demon_hunter.cpp | 719 | _(look up)_ |
-| `entropy` | sc_demon_hunter.cpp | 498 | _(look up)_ |
-| `eradicate` | sc_demon_hunter.cpp | 530 | _(look up)_ |
-| `erratic_felheart` | sc_demon_hunter.cpp | 468 | _(look up)_ |
-| `essence_break` | sc_demon_hunter.cpp | 586 | _(look up)_ |
-| `eternal_hunt_1` | sc_demon_hunter.cpp | 593 | _(look up)_ |
-| `eternal_hunt_2` | sc_demon_hunter.cpp | 594 | _(look up)_ |
-| `eternal_hunt_3` | sc_demon_hunter.cpp | 595 | _(look up)_ |
-| `evasive_action` | sc_demon_hunter.cpp | 663 | _(look up)_ |
-| `exergy` | sc_demon_hunter.cpp | 567 | _(look up)_ |
-| `eye_beam` | sc_demon_hunter.cpp | 539 | _(look up)_ |
-| `fallout` | sc_demon_hunter.cpp | 624 | _(look up)_ |
-| `feast_of_souls` | sc_demon_hunter.cpp | 490 | _(look up)_ |
-| `feed_the_demon` | sc_demon_hunter.cpp | 618 | _(look up)_ |
-| `fel_devastation` | sc_demon_hunter.cpp | 600 | _(look up)_ |
-| `fel_flame_fortification` | sc_demon_hunter.cpp | 629 | _(look up)_ |
-| `felblade` | sc_demon_hunter.cpp | 422 | _(look up)_ |
-| `felbound` | sc_demon_hunter.cpp | 459 | _(look up)_ |
-| `felfire_fist` | sc_demon_hunter.cpp | 614 | _(look up)_ |
-| `felfire_haste` | sc_demon_hunter.cpp | 452 | _(look up)_ |
-| `fiery_brand` | sc_demon_hunter.cpp | 603 | _(look up)_ |
-| `fiery_demise` | sc_demon_hunter.cpp | 634 | _(look up)_ |
-| `final_breath` | sc_demon_hunter.cpp | 469 | _(look up)_ |
-| `final_hour` | sc_demon_hunter.cpp | 699 | _(look up)_ |
-| `first_blood` | sc_demon_hunter.cpp | 546 | _(look up)_ |
-| `first_in_last_out` | sc_demon_hunter.cpp | 466 | _(look up)_ |
-| `flamebound` | sc_demon_hunter.cpp | 723 | _(look up)_ |
-| `focused_cleave` | sc_demon_hunter.cpp | 637 | _(look up)_ |
-| `focused_hatred` | sc_demon_hunter.cpp | 713 | _(look up)_ |
-| `focused_ire` | sc_demon_hunter.cpp | 441 | _(look up)_ |
-| `focused_ray` | sc_demon_hunter.cpp | 512 | _(look up)_ |
-| `frailty` | sc_demon_hunter.cpp | 622 | _(look up)_ |
-| `furious` | sc_demon_hunter.cpp | 464 | _(look up)_ |
-| `furious_gaze` | sc_demon_hunter.cpp | 570 | _(look up)_ |
-| `furious_throws` | sc_demon_hunter.cpp | 558 | _(look up)_ |
-| `fury_of_the_aldrachi` | sc_demon_hunter.cpp | 662 | _(look up)_ |
-| `gift_of_the_void` | sc_demon_hunter.cpp | 497 | _(look up)_ |
-| `glaive_tempest` | sc_demon_hunter.cpp | 587 | _(look up)_ |
-| `growing_inferno` | sc_demon_hunter.cpp | 565 | _(look up)_ |
-| `guile` | sc_demon_hunter.cpp | 460 | _(look up)_ |
-| `harness_the_cosmos` | sc_demon_hunter.cpp | 696 | _(look up)_ |
-| `hungering_slash` | sc_demon_hunter.cpp | 510 | _(look up)_ |
-| `illidari_knowledge` | sc_demon_hunter.cpp | 458 | _(look up)_ |
-| `impending_apocalypse` | sc_demon_hunter.cpp | 523 | _(look up)_ |
-| `imprison` | sc_demon_hunter.cpp | 432 | _(look up)_ |
-| `improved_chaos_strike` | sc_demon_hunter.cpp | 545 | _(look up)_ |
-| `improved_consume` | sc_demon_hunter.cpp | 506 | _(look up)_ |
-| `improved_disrupt` | sc_demon_hunter.cpp | 437 | _(look up)_ |
-| `improved_sigil_of_misery` | sc_demon_hunter.cpp | 429 | _(look up)_ |
-| `improved_soul_rending` | sc_demon_hunter.cpp | 715 | _(look up)_ |
-| `incisive_blade` | sc_demon_hunter.cpp | 674 | _(look up)_ |
-| `incorruptible_spirit` | sc_demon_hunter.cpp | 670 | _(look up)_ |
-| `inertia` | sc_demon_hunter.cpp | 568 | _(look up)_ |
-| `infernal_armor` | sc_demon_hunter.cpp | 453 | _(look up)_ |
-| `initiative` | sc_demon_hunter.cpp | 555 | _(look up)_ |
-| `inner_demon` | sc_demon_hunter.cpp | 576 | _(look up)_ |
-| `internal_struggle` | sc_demon_hunter.cpp | 463 | _(look up)_ |
-| `isolated_prey` | sc_demon_hunter.cpp | 569 | _(look up)_ |
-| `keen_edge` | sc_demon_hunter.cpp | 672 | _(look up)_ |
-| `keen_engagement` | sc_demon_hunter.cpp | 675 | _(look up)_ |
-| `know_your_enemy` | sc_demon_hunter.cpp | 582 | _(look up)_ |
-| `last_resort` | sc_demon_hunter.cpp | 649 | _(look up)_ |
-| `live_by_the_glaive` | sc_demon_hunter.cpp | 448 | _(look up)_ |
-| `long_night` | sc_demon_hunter.cpp | 475 | _(look up)_ |
-| `lost_in_darkness` | sc_demon_hunter.cpp | 456 | _(look up)_ |
-| `mass_acceleration` | sc_demon_hunter.cpp | 694 | _(look up)_ |
-| `master_of_the_glaive` | sc_demon_hunter.cpp | 442 | _(look up)_ |
-| `meteoric_fall` | sc_demon_hunter.cpp | 700 | _(look up)_ |
-| `meteoric_rise` | sc_demon_hunter.cpp | 688 | _(look up)_ |
-| `midnight1` | sc_demon_hunter.cpp | 532 | _(look up)_ |
-| `midnight2` | sc_demon_hunter.cpp | 533 | _(look up)_ |
-| `midnight3` | sc_demon_hunter.cpp | 534 | _(look up)_ |
-| `moment_of_craving` | sc_demon_hunter.cpp | 495 | _(look up)_ |
-| `monster_rising` | sc_demon_hunter.cpp | 724 | _(look up)_ |
-| `mortal_dance` | sc_demon_hunter.cpp | 553 | _(look up)_ |
-| `netherwalk` | sc_demon_hunter.cpp | 551 | _(look up)_ |
-| `otherworldly_focus` | sc_demon_hunter.cpp | 702 | _(look up)_ |
-| `painbringer` | sc_demon_hunter.cpp | 632 | _(look up)_ |
-| `path_to_oblivion` | sc_demon_hunter.cpp | 692 | _(look up)_ |
-| `perfectly_balanced_glaive` | sc_demon_hunter.cpp | 605 | _(look up)_ |
-| `phase_shift` | sc_demon_hunter.cpp | 690 | _(look up)_ |
-| `pitch_black` | sc_demon_hunter.cpp | 476 | _(look up)_ |
-| `predators_thirst` | sc_demon_hunter.cpp | 485 | _(look up)_ |
-| `preemptive_strike` | sc_demon_hunter.cpp | 676 | _(look up)_ |
-| `pursuit` | sc_demon_hunter.cpp | 450 | _(look up)_ |
-| `pursuit_of_angriness` | sc_demon_hunter.cpp | 712 | _(look up)_ |
-| `quickened_sigils` | sc_demon_hunter.cpp | 606 | _(look up)_ |
-| `ragefire` | sc_demon_hunter.cpp | 580 | _(look up)_ |
-| `reavers_mark` | sc_demon_hunter.cpp | 665 | _(look up)_ |
-| `relentless_onslaught` | sc_demon_hunter.cpp | 578 | _(look up)_ |
-| `remorseless` | sc_demon_hunter.cpp | 465 | _(look up)_ |
-| `retaliation` | sc_demon_hunter.cpp | 613 | _(look up)_ |
-| `revel_in_pain` | sc_demon_hunter.cpp | 620 | _(look up)_ |
-| `roaring_fire` | sc_demon_hunter.cpp | 611 | _(look up)_ |
-| `rolling_torment` | sc_demon_hunter.cpp | 519 | _(look up)_ |
-| `ruinous_bulwark` | sc_demon_hunter.cpp | 625 | _(look up)_ |
-| `scars_of_suffering` | sc_demon_hunter.cpp | 556 | _(look up)_ |
-| `screaming_brutality` | sc_demon_hunter.cpp | 590 | _(look up)_ |
-| `scythes_embrace` | sc_demon_hunter.cpp | 492 | _(look up)_ |
-| `second_helping` | sc_demon_hunter.cpp | 504 | _(look up)_ |
-| `serrated_glaive` | sc_demon_hunter.cpp | 571 | _(look up)_ |
-| `set_fire_to_the_pain` | sc_demon_hunter.cpp | 714 | _(look up)_ |
-| `shattered_destiny` | sc_demon_hunter.cpp | 588 | _(look up)_ |
-| `shattered_restoration` | sc_demon_hunter.cpp | 428 | _(look up)_ |
-| `sigil_of_chains` | sc_demon_hunter.cpp | 633 | _(look up)_ |
-| `sigil_of_misery` | sc_demon_hunter.cpp | 424 | _(look up)_ |
-| `sigil_of_silence` | sc_demon_hunter.cpp | 612 | _(look up)_ |
-| `sigil_of_spite` | sc_demon_hunter.cpp | 616 | _(look up)_ |
-| `singed_spirit` | sc_demon_hunter.cpp | 502 | _(look up)_ |
-| `singular_strikes` | sc_demon_hunter.cpp | 515 | _(look up)_ |
-| `soul_barrier` | sc_demon_hunter.cpp | 627 | _(look up)_ |
-| `soul_carver` | sc_demon_hunter.cpp | 648 | _(look up)_ |
-| `soul_cleanse` | sc_demon_hunter.cpp | 455 | _(look up)_ |
-| `soul_glutton` | sc_demon_hunter.cpp | 529 | _(look up)_ |
-| `soul_immolation` | sc_demon_hunter.cpp | 484 | _(look up)_ |
-| `soul_rending` | sc_demon_hunter.cpp | 451 | _(look up)_ |
-| `soul_sigils` | sc_demon_hunter.cpp | 628 | _(look up)_ |
-| `soul_splitter` | sc_demon_hunter.cpp | 472 | _(look up)_ |
-| `soulcrush` | sc_demon_hunter.cpp | 647 | _(look up)_ |
-| `soulforged_blades` | sc_demon_hunter.cpp | 514 | _(look up)_ |
-| `soulmonger` | sc_demon_hunter.cpp | 638 | _(look up)_ |
-| `soulscar` | sc_demon_hunter.cpp | 579 | _(look up)_ |
-| `soulshaper` | sc_demon_hunter.cpp | 500 | _(look up)_ |
-| `spirit_bomb` | sc_demon_hunter.cpp | 602 | _(look up)_ |
-| `spontaneous_immolation` | sc_demon_hunter.cpp | 488 | _(look up)_ |
-| `star_fragments` | sc_demon_hunter.cpp | 525 | _(look up)_ |
-| `state_of_matter` | sc_demon_hunter.cpp | 693 | _(look up)_ |
-| `stoke_the_flames` | sc_demon_hunter.cpp | 639 | _(look up)_ |
-| `student_of_suffering` | sc_demon_hunter.cpp | 722 | _(look up)_ |
-| `swallowed_anger` | sc_demon_hunter.cpp | 446 | _(look up)_ |
-| `sweet_release` | sc_demon_hunter.cpp | 507 | _(look up)_ |
-| `sweet_suffering` | sc_demon_hunter.cpp | 503 | _(look up)_ |
-| `swift_erasure` | sc_demon_hunter.cpp | 687 | _(look up)_ |
-| `tactical_retreat` | sc_demon_hunter.cpp | 561 | _(look up)_ |
-| `tempered_soul` | sc_demon_hunter.cpp | 487 | _(look up)_ |
-| `tempered_steel` | sc_demon_hunter.cpp | 609 | _(look up)_ |
-| `the_hunt` | sc_demon_hunter.cpp | 527 | _(look up)_ |
-| `thrill_of_the_fight` | sc_demon_hunter.cpp | 680 | _(look up)_ |
-| `trail_of_ruin` | sc_demon_hunter.cpp | 559 | _(look up)_ |
-| `umbral_blade` | sc_demon_hunter.cpp | 505 | _(look up)_ |
-| `unbound_chaos` | sc_demon_hunter.cpp | 574 | _(look up)_ |
-| `undying_embers` | sc_demon_hunter.cpp | 727 | _(look up)_ |
-| `unhindered_assault` | sc_demon_hunter.cpp | 664 | _(look up)_ |
-| `unrestrained_fury` | sc_demon_hunter.cpp | 427 | _(look up)_ |
-| `untethered_fury` | sc_demon_hunter.cpp | 721 | _(look up)_ |
-| `untethered_rage_1` | sc_demon_hunter.cpp | 653 | _(look up)_ |
-| `untethered_rage_2` | sc_demon_hunter.cpp | 654 | _(look up)_ |
-| `untethered_rage_3` | sc_demon_hunter.cpp | 655 | _(look up)_ |
-| `vengeful_beast` | sc_demon_hunter.cpp | 644 | _(look up)_ |
-| `vengeful_bonds` | sc_demon_hunter.cpp | 426 | _(look up)_ |
-| `vengeful_retreat` | sc_demon_hunter.cpp | 421 | _(look up)_ |
-| `violent_transformation` | sc_demon_hunter.cpp | 718 | _(look up)_ |
-| `void_metamorphosis` | sc_demon_hunter.cpp | 489 | _(look up)_ |
-| `void_nova` | sc_demon_hunter.cpp | 436 | _(look up)_ |
-| `void_ray` | sc_demon_hunter.cpp | 482 | _(look up)_ |
-| `void_reaver` | sc_demon_hunter.cpp | 631 | _(look up)_ |
-| `voidblade` | sc_demon_hunter.cpp | 423 | _(look up)_ |
-| `voidfall` | sc_demon_hunter.cpp | 685 | _(look up)_ |
-| `voidglare_boon` | sc_demon_hunter.cpp | 518 | _(look up)_ |
-| `voidpurge` | sc_demon_hunter.cpp | 508 | _(look up)_ |
-| `voidrage` | sc_demon_hunter.cpp | 511 | _(look up)_ |
-| `voidrush` | sc_demon_hunter.cpp | 521 | _(look up)_ |
-| `volatile_flameblood` | sc_demon_hunter.cpp | 626 | _(look up)_ |
-| `volatile_instinct` | sc_demon_hunter.cpp | 728 | _(look up)_ |
-| `vulnerability` | sc_demon_hunter.cpp | 643 | _(look up)_ |
-| `warblades_hunger` | sc_demon_hunter.cpp | 678 | _(look up)_ |
-| `waste_not` | sc_demon_hunter.cpp | 499 | _(look up)_ |
-| `wave_of_debilitation` | sc_demon_hunter.cpp | 711 | _(look up)_ |
-| `will_of_the_illidari` | sc_demon_hunter.cpp | 461 | _(look up)_ |
-| `wings_of_wrath` | sc_demon_hunter.cpp | 474 | _(look up)_ |
-| `world_killer` | sc_demon_hunter.cpp | 704 | _(look up)_ |
-| `wounded_quarry` | sc_demon_hunter.cpp | 671 | _(look up)_ |
+## Druid (270 entries)
 
-## Druid (324 entries)
+**By Name:**
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `abundance` | sc_druid.cpp | 1081 | _(look up)_ |
-| `aessinas_renewal` | sc_druid.cpp | 869 | _(look up)_ |
-| `aetherial_kindling` | sc_druid.cpp | 939 | _(look up)_ |
-| `after_the_wildfire` | sc_druid.cpp | 1031 | _(look up)_ |
-| `aggravate_wounds` | sc_druid.cpp | 1135 | _(look up)_ |
-| `apex_predators_craving` | sc_druid.cpp | 985 | _(look up)_ |
-| `arcane_affinity` | sc_druid.cpp | 1194 | _(look up)_ |
-| `ascendant_eclipses_1` | sc_druid.cpp | 936 | _(look up)_ |
-| `ascendant_eclipses_2` | sc_druid.cpp | 937 | _(look up)_ |
-| `ascendant_eclipses_3` | sc_druid.cpp | 938 | _(look up)_ |
-| `ashamanes_guidance` | sc_druid.cpp | 986 | _(look up)_ |
-| `astral_communion` | sc_druid.cpp | 940 | _(look up)_ |
-| `astral_influence` | sc_druid.cpp | 870 | _(look up)_ |
-| `astral_insight` | sc_druid.cpp | 1195 | _(look up)_ |
-| `atmospheric_exposure` | sc_druid.cpp | 1196 | _(look up)_ |
-| `balance_of_all_things` | sc_druid.cpp | 941 | _(look up)_ |
-| `bask_in_moonlight` | sc_druid.cpp | 1197 | _(look up)_ |
-| `berserk_bear` | sc_druid.cpp | 1032 | _(look up)_ |
-| `berserk_cat` | sc_druid.cpp | 987 | _(look up)_ |
-| `berserk_heart_of_the_lion` | sc_druid.cpp | 988 | _(look up)_ |
-| `bestial_strength` | sc_druid.cpp | 1136 | _(look up)_ |
-| `blood_frenzy` | sc_druid.cpp | 1033 | _(look up)_ |
-| `blood_spattered` | sc_druid.cpp | 989 | _(look up)_ |
-| `blooming_infusion` | sc_druid.cpp | 1174 | _(look up)_ |
-| `bond_with_nature` | sc_druid.cpp | 1154 | _(look up)_ |
-| `boundless_moonlight` | sc_druid.cpp | 1198 | _(look up)_ |
-| `bounteous_bloom` | sc_druid.cpp | 1175 | _(look up)_ |
-| `brambles` | sc_druid.cpp | 1034 | _(look up)_ |
-| `bristling_fur` | sc_druid.cpp | 1035 | _(look up)_ |
-| `bursting_growth` | sc_druid.cpp | 1155 | _(look up)_ |
-| `call_of_the_elder_druid` | sc_druid.cpp | 1082 | _(look up)_ |
-| `carnivorous_instinct` | sc_druid.cpp | 990 | _(look up)_ |
-| `celestial_alignment` | sc_druid.cpp | 942 | _(look up)_ |
-| `celestial_fire` | sc_druid.cpp | 943 | _(look up)_ |
-| `cenarius_guidance` | sc_druid.cpp | 1083 | _(look up)_ |
-| `cenarius_might` | sc_druid.cpp | 1176 | _(look up)_ |
-| `chomp` | sc_druid.cpp | 991 | _(look up)_ |
-| `circle_of_life_and_death` | sc_druid.cpp | 992 | _(look up)_ |
-| `circle_of_the_heavens` | sc_druid.cpp | 871 | _(look up)_ |
-| `circle_of_the_wild` | sc_druid.cpp | 872 | _(look up)_ |
-| `claw_rampage` | sc_druid.cpp | 1137 | _(look up)_ |
-| `coiled_to_spring` | sc_druid.cpp | 993 | _(look up)_ |
-| `control_of_the_dream` | sc_druid.cpp | 1177 | _(look up)_ |
-| `convoke_the_spirits` | sc_druid.cpp | 932 | _(look up)_ |
-| `cosmic_rapidity` | sc_druid.cpp | 944 | _(look up)_ |
-| `cultivation` | sc_druid.cpp | 1084 | _(look up)_ |
-| `cyclone` | sc_druid.cpp | 873 | _(look up)_ |
-| `denizen_of_the_dream` | sc_druid.cpp | 945 | _(look up)_ |
-| `doubleclawed_rake` | sc_druid.cpp | 994 | _(look up)_ |
-| `dreadful_bleeding` | sc_druid.cpp | 995 | _(look up)_ |
-| `dreadful_wound` | sc_druid.cpp | 1138 | _(look up)_ |
-| `dream_guide` | sc_druid.cpp | 1036 | _(look up)_ |
-| `dream_of_cenarius_bear` | sc_druid.cpp | 1037 | _(look up)_ |
-| `dream_of_cenarius_tree` | sc_druid.cpp | 1085 | _(look up)_ |
-| `dream_surge` | sc_druid.cpp | 1178 | _(look up)_ |
-| `dryads_dance` | sc_druid.cpp | 1180 | _(look up)_ |
-| `durability_of_nature` | sc_druid.cpp | 1179 | _(look up)_ |
-| `early_spring` | sc_druid.cpp | 1181 | _(look up)_ |
-| `eclipse` | sc_druid.cpp | 946 | _(look up)_ |
-| `efflorescence` | sc_druid.cpp | 1086 | _(look up)_ |
-| `elunes_challenge` | sc_druid.cpp | 947 | _(look up)_ |
-| `elunes_favored` | sc_druid.cpp | 1038 | _(look up)_ |
-| `elunes_grace` | sc_druid.cpp | 1199 | _(look up)_ |
-| `elunes_guidance` | sc_druid.cpp | 948 | _(look up)_ |
-| `embrace_of_the_dream` | sc_druid.cpp | 1087 | _(look up)_ |
-| `empowered_shapeshifting` | sc_druid.cpp | 1139 | _(look up)_ |
-| `entangling_vortex` | sc_druid.cpp | 1156 | _(look up)_ |
-| `everbloom_1` | sc_druid.cpp | 1088 | _(look up)_ |
-| `everbloom_2` | sc_druid.cpp | 1089 | _(look up)_ |
-| `everbloom_3` | sc_druid.cpp | 1090 | _(look up)_ |
-| `exacerbating_wounds` | sc_druid.cpp | 1140 | _(look up)_ |
-| `expansiveness` | sc_druid.cpp | 1182 | _(look up)_ |
-| `feline_swiftness` | sc_druid.cpp | 874 | _(look up)_ |
-| `feral_frenzy` | sc_druid.cpp | 996 | _(look up)_ |
-| `flashing_claws` | sc_druid.cpp | 1039 | _(look up)_ |
-| `flourish` | sc_druid.cpp | 1091 | _(look up)_ |
-| `flower_walk` | sc_druid.cpp | 1157 | _(look up)_ |
-| `fluid_form` | sc_druid.cpp | 875 | _(look up)_ |
-| `focused_frenzy` | sc_druid.cpp | 997 | _(look up)_ |
-| `force_of_nature` | sc_druid.cpp | 949 | _(look up)_ |
-| `forestwalk` | sc_druid.cpp | 876 | _(look up)_ |
-| `fount_of_strength` | sc_druid.cpp | 1141 | _(look up)_ |
-| `frantic_frenzy` | sc_druid.cpp | 998 | _(look up)_ |
-| `frantic_momentum` | sc_druid.cpp | 999 | _(look up)_ |
-| `frenzied_regeneration` | sc_druid.cpp | 877 | _(look up)_ |
-| `front_of_the_pack` | sc_druid.cpp | 1040 | _(look up)_ |
-| `fury_of_elune` | sc_druid.cpp | 950 | _(look up)_ |
-| `fury_of_nature` | sc_druid.cpp | 1041 | _(look up)_ |
-| `galactic_guardian` | sc_druid.cpp | 1042 | _(look up)_ |
-| `gale_winds` | sc_druid.cpp | 880 | _(look up)_ |
-| `germination` | sc_druid.cpp | 1092 | _(look up)_ |
-| `gift_of_an_ancient_guardian` | sc_druid.cpp | 1043 | _(look up)_ |
-| `gift_of_the_wild` | sc_druid.cpp | 881 | _(look up)_ |
-| `glistening_fur` | sc_druid.cpp | 1200 | _(look up)_ |
-| `gore` | sc_druid.cpp | 1044 | _(look up)_ |
-| `gory_fur` | sc_druid.cpp | 1045 | _(look up)_ |
-| `green_thumb` | sc_druid.cpp | 1158 | _(look up)_ |
-| `grievous_wounds` | sc_druid.cpp | 882 | _(look up)_ |
-| `grove_guardians` | sc_druid.cpp | 1093 | _(look up)_ |
-| `groves_inspiration` | sc_druid.cpp | 1183 | _(look up)_ |
-| `guardian_of_elune` | sc_druid.cpp | 1046 | _(look up)_ |
-| `hail_of_stars` | sc_druid.cpp | 952 | _(look up)_ |
-| `harmonious_blooming` | sc_druid.cpp | 1094 | _(look up)_ |
-| `harmonious_constitution` | sc_druid.cpp | 1159 | _(look up)_ |
-| `harmony_of_the_grove` | sc_druid.cpp | 1184 | _(look up)_ |
-| `harmony_of_the_heavens` | sc_druid.cpp | 951 | _(look up)_ |
-| `harnessed_rage` | sc_druid.cpp | 1047 | _(look up)_ |
-| `heart_of_the_wild` | sc_druid.cpp | 878 | _(look up)_ |
-| `hibernate` | sc_druid.cpp | 879 | _(look up)_ |
-| `hunger_for_battle` | sc_druid.cpp | 1000 | _(look up)_ |
-| `hunt_beneath_the_open_skies` | sc_druid.cpp | 1160 | _(look up)_ |
-| `implant` | sc_druid.cpp | 1161 | _(look up)_ |
-| `improved_barkskin` | sc_druid.cpp | 883 | _(look up)_ |
-| `improved_eclipse` | sc_druid.cpp | 953 | _(look up)_ |
-| `improved_ironbark` | sc_druid.cpp | 1095 | _(look up)_ |
-| `improved_natures_cure` | sc_druid.cpp | 884 | _(look up)_ |
-| `improved_regrowth` | sc_druid.cpp | 1096 | _(look up)_ |
-| `improved_stampeding_roar` | sc_druid.cpp | 885 | _(look up)_ |
-| `improved_swiftmend` | sc_druid.cpp | 1097 | _(look up)_ |
-| `improved_wild_growth` | sc_druid.cpp | 1098 | _(look up)_ |
-| `incapacitating_roar` | sc_druid.cpp | 886 | _(look up)_ |
-| `incarnation_bear` | sc_druid.cpp | 1048 | _(look up)_ |
-| `incarnation_cat` | sc_druid.cpp | 1001 | _(look up)_ |
-| `incarnation_moonkin` | sc_druid.cpp | 954 | _(look up)_ |
-| `incarnation_tree` | sc_druid.cpp | 1099 | _(look up)_ |
-| `incessant_tempest` | sc_druid.cpp | 887 | _(look up)_ |
-| `infected_wounds_bear` | sc_druid.cpp | 1049 | _(look up)_ |
-| `infected_wounds_cat` | sc_druid.cpp | 1002 | _(look up)_ |
-| `innate_resolve` | sc_druid.cpp | 1050 | _(look up)_ |
-| `inner_peace` | sc_druid.cpp | 1100 | _(look up)_ |
-| `innervate` | sc_druid.cpp | 888 | _(look up)_ |
-| `instincts_of_the_claw` | sc_druid.cpp | 889 | _(look up)_ |
-| `intensity` | sc_druid.cpp | 1101 | _(look up)_ |
-| `ironbark` | sc_druid.cpp | 1102 | _(look up)_ |
-| `ironfur` | sc_druid.cpp | 890 | _(look up)_ |
-| `killer_instinct` | sc_druid.cpp | 891 | _(look up)_ |
-| `killing_blow` | sc_druid.cpp | 1051 | _(look up)_ |
-| `killing_strikes` | sc_druid.cpp | 1142 | _(look up)_ |
-| `lacerating_claws` | sc_druid.cpp | 1003 | _(look up)_ |
-| `lethal_preservation` | sc_druid.cpp | 1162 | _(look up)_ |
-| `lifebloom` | sc_druid.cpp | 1103 | _(look up)_ |
-| `lifetreading` | sc_druid.cpp | 1104 | _(look up)_ |
-| `light_of_the_sun` | sc_druid.cpp | 892 | _(look up)_ |
-| `limb_from_limb` | sc_druid.cpp | 1143 | _(look up)_ |
-| `lingering_healing` | sc_druid.cpp | 893 | _(look up)_ |
-| `liveliness` | sc_druid.cpp | 1105 | _(look up)_ |
-| `lore_of_the_grove` | sc_druid.cpp | 894 | _(look up)_ |
-| `lunar_beam` | sc_druid.cpp | 1052 | _(look up)_ |
-| `lunar_calling` | sc_druid.cpp | 1201 | _(look up)_ |
-| `lunar_insight` | sc_druid.cpp | 1202 | _(look up)_ |
-| `lunar_inspiration` | sc_druid.cpp | 1004 | _(look up)_ |
-| `lunation` | sc_druid.cpp | 1203 | _(look up)_ |
-| `lycaras_inspiration` | sc_druid.cpp | 895 | _(look up)_ |
-| `lycaras_teachings` | sc_druid.cpp | 896 | _(look up)_ |
-| `maim` | sc_druid.cpp | 897 | _(look up)_ |
-| `mass_entanglement` | sc_druid.cpp | 899 | _(look up)_ |
-| `master_shapeshifter` | sc_druid.cpp | 1106 | _(look up)_ |
-| `matted_fur` | sc_druid.cpp | 898 | _(look up)_ |
-| `maul` | sc_druid.cpp | 1053 | _(look up)_ |
-| `memory_of_ysera` | sc_druid.cpp | 1054 | _(look up)_ |
-| `merciless_claws` | sc_druid.cpp | 1005 | _(look up)_ |
-| `meteor_storm` | sc_druid.cpp | 955 | _(look up)_ |
-| `meteorites` | sc_druid.cpp | 956 | _(look up)_ |
-| `mighty_bash` | sc_druid.cpp | 900 | _(look up)_ |
-| `moment_of_clarity` | sc_druid.cpp | 1006 | _(look up)_ |
-| `moon_guardian` | sc_druid.cpp | 1205 | _(look up)_ |
-| `moondust` | sc_druid.cpp | 1204 | _(look up)_ |
-| `moonkin_form` | sc_druid.cpp | 901 | _(look up)_ |
-| `moonless_night` | sc_druid.cpp | 1055 | _(look up)_ |
-| `natural_recovery` | sc_druid.cpp | 902 | _(look up)_ |
-| `natural_resilience` | sc_druid.cpp | 1056 | _(look up)_ |
-| `natures_balance` | sc_druid.cpp | 957 | _(look up)_ |
-| `natures_bounty` | sc_druid.cpp | 1107 | _(look up)_ |
-| `natures_grace` | sc_druid.cpp | 958 | _(look up)_ |
-| `natures_splendor` | sc_druid.cpp | 1108 | _(look up)_ |
-| `natures_swiftness` | sc_druid.cpp | 1109 | _(look up)_ |
-| `new_moon` | sc_druid.cpp | 959 | _(look up)_ |
-| `nurturing_dormancy` | sc_druid.cpp | 1110 | _(look up)_ |
-| `nurturing_instinct` | sc_druid.cpp | 903 | _(look up)_ |
-| `oakskin` | sc_druid.cpp | 904 | _(look up)_ |
-| `omen_of_clarity_cat` | sc_druid.cpp | 1007 | _(look up)_ |
-| `omen_of_clarity_tree` | sc_druid.cpp | 1111 | _(look up)_ |
-| `orbit_breaker` | sc_druid.cpp | 960 | _(look up)_ |
-| `orbital_strike` | sc_druid.cpp | 961 | _(look up)_ |
-| `packs_endurance` | sc_druid.cpp | 1144 | _(look up)_ |
-| `panthers_guile` | sc_druid.cpp | 1008 | _(look up)_ |
-| `passing_seasons` | sc_druid.cpp | 1112 | _(look up)_ |
-| `patient_custodian` | sc_druid.cpp | 1163 | _(look up)_ |
-| `penumbral_swell` | sc_druid.cpp | 1206 | _(look up)_ |
-| `perfectlyhoned_instincts` | sc_druid.cpp | 905 | _(look up)_ |
-| `persistence` | sc_druid.cpp | 1057 | _(look up)_ |
-| `photosynthesis` | sc_druid.cpp | 1113 | _(look up)_ |
-| `potent_enchantments` | sc_druid.cpp | 1185 | _(look up)_ |
-| `pouncing_strikes` | sc_druid.cpp | 1009 | _(look up)_ |
-| `power_of_goldrinn` | sc_druid.cpp | 962 | _(look up)_ |
-| `power_of_nature` | sc_druid.cpp | 1186 | _(look up)_ |
-| `power_of_the_archdruid` | sc_druid.cpp | 1114 | _(look up)_ |
-| `power_of_the_dream` | sc_druid.cpp | 1187 | _(look up)_ |
-| `predator` | sc_druid.cpp | 1010 | _(look up)_ |
-| `primal_fury` | sc_druid.cpp | 906 | _(look up)_ |
-| `primal_wrath` | sc_druid.cpp | 1011 | _(look up)_ |
-| `prosperity` | sc_druid.cpp | 1115 | _(look up)_ |
-| `protective_growth` | sc_druid.cpp | 1188 | _(look up)_ |
-| `radiant_moonlight` | sc_druid.cpp | 963 | _(look up)_ |
-| `raging_fury` | sc_druid.cpp | 1012 | _(look up)_ |
-| `rake` | sc_druid.cpp | 907 | _(look up)_ |
-| `rampancy` | sc_druid.cpp | 1164 | _(look up)_ |
-| `rampant_ferocity` | sc_druid.cpp | 1013 | _(look up)_ |
-| `rampant_growth` | sc_druid.cpp | 1116 | _(look up)_ |
-| `rattle_the_stars` | sc_druid.cpp | 964 | _(look up)_ |
-| `ravage` | sc_druid.cpp | 1145 | _(look up)_ |
-| `raze` | sc_druid.cpp | 1058 | _(look up)_ |
-| `red_moon` | sc_druid.cpp | 1059 | _(look up)_ |
-| `reforestation` | sc_druid.cpp | 1117 | _(look up)_ |
-| `regenerative_heartwood` | sc_druid.cpp | 1118 | _(look up)_ |
-| `regenesis` | sc_druid.cpp | 1119 | _(look up)_ |
-| `reinforced_fur` | sc_druid.cpp | 1060 | _(look up)_ |
-| `reinvigoration` | sc_druid.cpp | 1061 | _(look up)_ |
-| `rejuvenation` | sc_druid.cpp | 908 | _(look up)_ |
-| `remove_corruption` | sc_druid.cpp | 909 | _(look up)_ |
-| `rend_and_tear` | sc_druid.cpp | 1062 | _(look up)_ |
-| `renewing_surge` | sc_druid.cpp | 1120 | _(look up)_ |
-| `resilient_flourishing` | sc_druid.cpp | 1165 | _(look up)_ |
-| `rip` | sc_druid.cpp | 910 | _(look up)_ |
-| `rip_and_tear` | sc_druid.cpp | 1014 | _(look up)_ |
-| `root_network` | sc_druid.cpp | 1166 | _(look up)_ |
-| `ruthless_aggression` | sc_druid.cpp | 1146 | _(look up)_ |
-| `saber_jaws` | sc_druid.cpp | 1015 | _(look up)_ |
-| `sabertooth` | sc_druid.cpp | 1016 | _(look up)_ |
-| `savage_fury` | sc_druid.cpp | 1017 | _(look up)_ |
-| `scintillating_moonlight` | sc_druid.cpp | 1063 | _(look up)_ |
-| `sculpt_the_stars` | sc_druid.cpp | 965 | _(look up)_ |
-| `shooting_stars` | sc_druid.cpp | 966 | _(look up)_ |
-| `skull_bash` | sc_druid.cpp | 911 | _(look up)_ |
-| `solar_beam` | sc_druid.cpp | 967 | _(look up)_ |
-| `solstice` | sc_druid.cpp | 968 | _(look up)_ |
-| `soothe` | sc_druid.cpp | 912 | _(look up)_ |
-| `soul_of_the_forest_bear` | sc_druid.cpp | 1064 | _(look up)_ |
-| `soul_of_the_forest_cat` | sc_druid.cpp | 1018 | _(look up)_ |
-| `soul_of_the_forest_owl` | sc_druid.cpp | 969 | _(look up)_ |
-| `soul_of_the_forest_tree` | sc_druid.cpp | 1121 | _(look up)_ |
-| `spirit_of_the_thicket` | sc_druid.cpp | 1189 | _(look up)_ |
-| `stampeding_roar` | sc_druid.cpp | 913 | _(look up)_ |
-| `star_cascade` | sc_druid.cpp | 1207 | _(look up)_ |
-| `starfire` | sc_druid.cpp | 914 | _(look up)_ |
-| `starlight_conduit` | sc_druid.cpp | 915 | _(look up)_ |
-| `starlord` | sc_druid.cpp | 970 | _(look up)_ |
-| `starsurge` | sc_druid.cpp | 916 | _(look up)_ |
-| `starweaver` | sc_druid.cpp | 971 | _(look up)_ |
-| `stellar_amplification` | sc_druid.cpp | 972 | _(look up)_ |
-| `stellar_command` | sc_druid.cpp | 1208 | _(look up)_ |
-| `stonebark` | sc_druid.cpp | 1122 | _(look up)_ |
-| `strategic_infusion` | sc_druid.cpp | 1167 | _(look up)_ |
-| `strike_for_the_heart` | sc_druid.cpp | 1147 | _(look up)_ |
-| `sudden_ambush` | sc_druid.cpp | 1019 | _(look up)_ |
-| `sundered_firmament` | sc_druid.cpp | 973 | _(look up)_ |
-| `sundering_roar` | sc_druid.cpp | 1065 | _(look up)_ |
-| `sunfire` | sc_druid.cpp | 917 | _(look up)_ |
-| `sunseeker_mushroom` | sc_druid.cpp | 974 | _(look up)_ |
-| `survival_instincts` | sc_druid.cpp | 933 | _(look up)_ |
-| `survival_of_the_fittest` | sc_druid.cpp | 1066 | _(look up)_ |
-| `swiftmend` | sc_druid.cpp | 1123 | _(look up)_ |
-| `swipe` | sc_druid.cpp | 918 | _(look up)_ |
-| `sylvan_beckoning` | sc_druid.cpp | 1190 | _(look up)_ |
-| `symbiotic_relationship` | sc_druid.cpp | 919 | _(look up)_ |
-| `taste_for_blood` | sc_druid.cpp | 1020 | _(look up)_ |
-| `tear_down_the_mighty` | sc_druid.cpp | 1148 | _(look up)_ |
-| `the_eternal_moon` | sc_druid.cpp | 1209 | _(look up)_ |
-| `the_light_of_elune` | sc_druid.cpp | 1210 | _(look up)_ |
-| `thick_hide` | sc_druid.cpp | 920 | _(look up)_ |
-| `thriving_growth` | sc_druid.cpp | 1168 | _(look up)_ |
-| `thriving_vegetation` | sc_druid.cpp | 1124 | _(look up)_ |
-| `tiger_dash` | sc_druid.cpp | 921 | _(look up)_ |
-| `tigers_fury` | sc_druid.cpp | 1021 | _(look up)_ |
-| `tigers_tenacity` | sc_druid.cpp | 1022 | _(look up)_ |
-| `tireless_energy` | sc_druid.cpp | 1023 | _(look up)_ |
-| `total_eclipse` | sc_druid.cpp | 975 | _(look up)_ |
-| `touch_the_cosmos` | sc_druid.cpp | 976 | _(look up)_ |
-| `tranquil_mind` | sc_druid.cpp | 1125 | _(look up)_ |
-| `tranquility` | sc_druid.cpp | 1126 | _(look up)_ |
-| `treants_of_the_moon` | sc_druid.cpp | 1191 | _(look up)_ |
-| `twin_claw` | sc_druid.cpp | 1149 | _(look up)_ |
-| `twin_moonfire` | sc_druid.cpp | 1067 | _(look up)_ |
-| `twin_moons` | sc_druid.cpp | 977 | _(look up)_ |
-| `twin_sprouts` | sc_druid.cpp | 1169 | _(look up)_ |
-| `typhoon` | sc_druid.cpp | 922 | _(look up)_ |
-| `umbral_embrace` | sc_druid.cpp | 978 | _(look up)_ |
-| `umbral_intensity` | sc_druid.cpp | 979 | _(look up)_ |
-| `unseen_predator_1` | sc_druid.cpp | 1024 | _(look up)_ |
-| `unseen_predator_2` | sc_druid.cpp | 1025 | _(look up)_ |
-| `unseen_predator_3` | sc_druid.cpp | 1026 | _(look up)_ |
-| `unstoppable_growth` | sc_druid.cpp | 1127 | _(look up)_ |
-| `untamed_savagery` | sc_druid.cpp | 1068 | _(look up)_ |
-| `ursine_vigor` | sc_druid.cpp | 923 | _(look up)_ |
-| `ursocs_endurance` | sc_druid.cpp | 1069 | _(look up)_ |
-| `ursocs_fury` | sc_druid.cpp | 1070 | _(look up)_ |
-| `ursocs_guidance` | sc_druid.cpp | 1071 | _(look up)_ |
-| `ursocs_spirit` | sc_druid.cpp | 924 | _(look up)_ |
-| `ursols_vortex` | sc_druid.cpp | 925 | _(look up)_ |
-| `ursols_warding` | sc_druid.cpp | 1072 | _(look up)_ |
-| `veinripper` | sc_druid.cpp | 1027 | _(look up)_ |
-| `verdancy` | sc_druid.cpp | 1128 | _(look up)_ |
-| `verdant_heart` | sc_druid.cpp | 926 | _(look up)_ |
-| `verdant_infusion` | sc_druid.cpp | 1129 | _(look up)_ |
-| `vigorous_creepers` | sc_druid.cpp | 1170 | _(look up)_ |
-| `vulnerable_flesh` | sc_druid.cpp | 1073 | _(look up)_ |
-| `waking_dream` | sc_druid.cpp | 1130 | _(look up)_ |
-| `waking_nightmare` | sc_druid.cpp | 1074 | _(look up)_ |
-| `ward_of_the_forest` | sc_druid.cpp | 1075 | _(look up)_ |
-| `wellhoned_instincts` | sc_druid.cpp | 927 | _(look up)_ |
-| `whirling_stars` | sc_druid.cpp | 980 | _(look up)_ |
-| `wild_charge` | sc_druid.cpp | 928 | _(look up)_ |
-| `wild_growth` | sc_druid.cpp | 929 | _(look up)_ |
-| `wild_guardian_1` | sc_druid.cpp | 1076 | _(look up)_ |
-| `wild_guardian_2` | sc_druid.cpp | 1077 | _(look up)_ |
-| `wild_guardian_3` | sc_druid.cpp | 1078 | _(look up)_ |
-| `wild_mushroom` | sc_druid.cpp | 981 | _(look up)_ |
-| `wild_slashes` | sc_druid.cpp | 1028 | _(look up)_ |
-| `wild_surges` | sc_druid.cpp | 982 | _(look up)_ |
-| `wild_synthesis` | sc_druid.cpp | 1131 | _(look up)_ |
-| `wildpower_surge` | sc_druid.cpp | 1150 | _(look up)_ |
-| `wildshape_mastery` | sc_druid.cpp | 1151 | _(look up)_ |
-| `wildstalkers_power` | sc_druid.cpp | 1171 | _(look up)_ |
-| `yseras_gift` | sc_druid.cpp | 1132 | _(look up)_ |
+| Talent Name | File |
+|-------------|------|
+| `Abundance` | sc_druid.cpp |
+| `Aessina's Renewal` | sc_druid.cpp |
+| `Aetherial Kindling` | sc_druid.cpp |
+| `After the Wildfire` | sc_druid.cpp |
+| `Aggravate Wounds` | sc_druid.cpp |
+| `Apex Predator's Craving` | sc_druid.cpp |
+| `Ashamane's Guidance` | sc_druid.cpp |
+| `Astral Communion` | sc_druid.cpp |
+| `Astral Influence` | sc_druid.cpp |
+| `Astral Insight` | sc_druid.cpp |
+| `Atmospheric Exposure` | sc_druid.cpp |
+| `Balance of All Things` | sc_druid.cpp |
+| `Bask in Moonlight` | sc_druid.cpp |
+| `Berserk: Heart of the Lion` | sc_druid.cpp |
+| `Bestial Strength` | sc_druid.cpp |
+| `Blood Frenzy` | sc_druid.cpp |
+| `Blood Spattered` | sc_druid.cpp |
+| `Blooming Infusion` | sc_druid.cpp |
+| `Bond with Nature` | sc_druid.cpp |
+| `Boundless Moonlight` | sc_druid.cpp |
+| `Bounteous Bloom` | sc_druid.cpp |
+| `Brambles` | sc_druid.cpp |
+| `Bristling Fur` | sc_druid.cpp |
+| `Bursting Growth` | sc_druid.cpp |
+| `Call of the Elder Druid` | sc_druid.cpp |
+| `Carnivorous Instinct` | sc_druid.cpp |
+| `Celestial Alignment` | sc_druid.cpp |
+| `Celestial Fire` | sc_druid.cpp |
+| `Cenarius' Guidance` | sc_druid.cpp |
+| `Cenarius' Might` | sc_druid.cpp |
+| `Chomp` | sc_druid.cpp |
+| `Circle of Life and Death` | sc_druid.cpp |
+| `Circle of the Heavens` | sc_druid.cpp |
+| `Circle of the Wild` | sc_druid.cpp |
+| `Claw Rampage` | sc_druid.cpp |
+| `Coiled to Spring` | sc_druid.cpp |
+| `Control of the Dream` | sc_druid.cpp |
+| `Convoke the Spirits` | sc_druid.cpp |
+| `Cosmic Rapidity` | sc_druid.cpp |
+| `Cultivation` | sc_druid.cpp |
+| `Cyclone` | sc_druid.cpp |
+| `Denizen of the Dream` | sc_druid.cpp |
+| `Dreadful Bleeding` | sc_druid.cpp |
+| `Dreadful Wound` | sc_druid.cpp |
+| `Dream Guide` | sc_druid.cpp |
+| `Dream Surge` | sc_druid.cpp |
+| `Dream of Cenarius` | sc_druid.cpp |
+| `Dryad's Dance` | sc_druid.cpp |
+| `Durability of Nature` | sc_druid.cpp |
+| `Early Spring` | sc_druid.cpp |
+| `Eclipse` | sc_druid.cpp |
+| `Efflorescence` | sc_druid.cpp |
+| `Elune's Challenge` | sc_druid.cpp |
+| `Elune's Favored` | sc_druid.cpp |
+| `Elune's Grace` | sc_druid.cpp |
+| `Elune's Guidance` | sc_druid.cpp |
+| `Embrace of the Dream` | sc_druid.cpp |
+| `Empowered Shapeshifting` | sc_druid.cpp |
+| `Entangling Vortex` | sc_druid.cpp |
+| `Everbloom` | sc_druid.cpp |
+| `Exacerbating Wounds` | sc_druid.cpp |
+| `Expansiveness` | sc_druid.cpp |
+| `Feline Swiftness` | sc_druid.cpp |
+| `Feral Frenzy` | sc_druid.cpp |
+| `Flashing Claws` | sc_druid.cpp |
+| `Flourish` | sc_druid.cpp |
+| `Flower Walk` | sc_druid.cpp |
+| `Fluid Form` | sc_druid.cpp |
+| `Force of Nature` | sc_druid.cpp |
+| `Forestwalk` | sc_druid.cpp |
+| `Fount of Strength` | sc_druid.cpp |
+| `Frantic Frenzy` | sc_druid.cpp |
+| `Frantic Momentum` | sc_druid.cpp |
+| `Front of the Pack` | sc_druid.cpp |
+| `Fury of Elune` | sc_druid.cpp |
+| `Fury of Nature` | sc_druid.cpp |
+| `Galactic Guardian` | sc_druid.cpp |
+| `Gale Winds` | sc_druid.cpp |
+| `Germination` | sc_druid.cpp |
+| `Gift of an Ancient Guardian` | sc_druid.cpp |
+| `Glistening Fur` | sc_druid.cpp |
+| `Gory Fur` | sc_druid.cpp |
+| `Green Thumb` | sc_druid.cpp |
+| `Grievous Wounds` | sc_druid.cpp |
+| `Grove Guardians` | sc_druid.cpp |
+| `Grove's Inspiration` | sc_druid.cpp |
+| `Guardian of Elune` | sc_druid.cpp |
+| `Hail of Stars` | sc_druid.cpp |
+| `Harmonious Blooming` | sc_druid.cpp |
+| `Harmonious Constitution` | sc_druid.cpp |
+| `Harmony of the Grove` | sc_druid.cpp |
+| `Harmony of the Heavens` | sc_druid.cpp |
+| `Harnessed Rage` | sc_druid.cpp |
+| `Hibernate` | sc_druid.cpp |
+| `Hunger for Battle` | sc_druid.cpp |
+| `Hunt Beneath the Open Skies` | sc_druid.cpp |
+| `Implant` | sc_druid.cpp |
+| `Improved Barkskin` | sc_druid.cpp |
+| `Improved Eclipse` | sc_druid.cpp |
+| `Improved Ironbark` | sc_druid.cpp |
+| `Improved Nature's Cure` | sc_druid.cpp |
+| `Improved Regrowth` | sc_druid.cpp |
+| `Improved Stampeding Roar` | sc_druid.cpp |
+| `Improved Swiftmend` | sc_druid.cpp |
+| `Improved Wild Growth` | sc_druid.cpp |
+| `Incapacitating Roar` | sc_druid.cpp |
+| `Incarnation: Avatar of Ashamane` | sc_druid.cpp |
+| `Incarnation: Chosen of Elune` | sc_druid.cpp |
+| `Incarnation: Guardian of Ursoc` | sc_druid.cpp |
+| `Incarnation: Tree of Life` | sc_druid.cpp |
+| `Incessant Tempest` | sc_druid.cpp |
+| `Infected Wounds` | sc_druid.cpp |
+| `Innate Resolve` | sc_druid.cpp |
+| `Innervate` | sc_druid.cpp |
+| `Instincts of the Claw` | sc_druid.cpp |
+| `Intensity` | sc_druid.cpp |
+| `Ironbark` | sc_druid.cpp |
+| `Ironfur` | sc_druid.cpp |
+| `Killing Blow` | sc_druid.cpp |
+| `Killing Strikes` | sc_druid.cpp |
+| `Lifebloom` | sc_druid.cpp |
+| `Lifetreading` | sc_druid.cpp |
+| `Limb from Limb` | sc_druid.cpp |
+| `Lingering Healing` | sc_druid.cpp |
+| `Liveliness` | sc_druid.cpp |
+| `Lore of the Grove` | sc_druid.cpp |
+| `Lunar Beam` | sc_druid.cpp |
+| `Lunar Calling` | sc_druid.cpp |
+| `Lunar Insight` | sc_druid.cpp |
+| `Lunar Inspiration` | sc_druid.cpp |
+| `Lunation` | sc_druid.cpp |
+| `Lycara's Inspiration` | sc_druid.cpp |
+| `Lycara's Teachings` | sc_druid.cpp |
+| `Maim` | sc_druid.cpp |
+| `Mass Entanglement` | sc_druid.cpp |
+| `Master Shapeshifter` | sc_druid.cpp |
+| `Matted Fur` | sc_druid.cpp |
+| `Maul` | sc_druid.cpp |
+| `Memory of Ysera` | sc_druid.cpp |
+| `Merciless Claws` | sc_druid.cpp |
+| `Mighty Bash` | sc_druid.cpp |
+| `Moment of Clarity` | sc_druid.cpp |
+| `Moon Guardian` | sc_druid.cpp |
+| `Moondust` | sc_druid.cpp |
+| `Moonkin Form` | sc_druid.cpp |
+| `Moonless Night` | sc_druid.cpp |
+| `New Moon` | sc_druid.cpp |
+| `Nurturing Dormancy` | sc_druid.cpp |
+| `Nurturing Instinct` | sc_druid.cpp |
+| `Oakskin` | sc_druid.cpp |
+| `Omen of Clarity` | sc_druid.cpp |
+| `Orbit Breaker` | sc_druid.cpp |
+| `Orbital Strike` | sc_druid.cpp |
+| `Pack's Endurance` | sc_druid.cpp |
+| `Panther's Guile` | sc_druid.cpp |
+| `Passing Seasons` | sc_druid.cpp |
+| `Patient Custodian` | sc_druid.cpp |
+| `Penumbral Swell` | sc_druid.cpp |
+| `Perfectly-Honed Instincts` | sc_druid.cpp |
+| `Persistence` | sc_druid.cpp |
+| `Photosynthesis` | sc_druid.cpp |
+| `Potent Enchantments` | sc_druid.cpp |
+| `Pouncing Strikes` | sc_druid.cpp |
+| `Power of Goldrinn` | sc_druid.cpp |
+| `Power of Nature` | sc_druid.cpp |
+| `Power of the Archdruid` | sc_druid.cpp |
+| `Power of the Dream` | sc_druid.cpp |
+| `Predator` | sc_druid.cpp |
+| `Primal Fury` | sc_druid.cpp |
+| `Primal Wrath` | sc_druid.cpp |
+| `Prosperity` | sc_druid.cpp |
+| `Protective Growth` | sc_druid.cpp |
+| `Radiant Moonlight` | sc_druid.cpp |
+| `Raging Fury` | sc_druid.cpp |
+| `Rake` | sc_druid.cpp |
+| `Rattle the Stars` | sc_druid.cpp |
+| `Ravage` | sc_druid.cpp |
+| `Raze` | sc_druid.cpp |
+| `Red Moon` | sc_druid.cpp |
+| `Reforestation` | sc_druid.cpp |
+| `Regenerative Heartwood` | sc_druid.cpp |
+| `Regenesis` | sc_druid.cpp |
+| `Reinforced Fur` | sc_druid.cpp |
+| `Rejuvenation` | sc_druid.cpp |
+| `Remove Corruption` | sc_druid.cpp |
+| `Rend and Tear` | sc_druid.cpp |
+| `Renewing Surge` | sc_druid.cpp |
+| `Resilient Flourishing` | sc_druid.cpp |
+| `Rip` | sc_druid.cpp |
+| `Rip and Tear` | sc_druid.cpp |
+| `Root Network` | sc_druid.cpp |
+| `Ruthless Aggression` | sc_druid.cpp |
+| `Saber Jaws` | sc_druid.cpp |
+| `Sabertooth` | sc_druid.cpp |
+| `Scintillating Moonlight` | sc_druid.cpp |
+| `Sculpt the Stars` | sc_druid.cpp |
+| `Shooting Stars` | sc_druid.cpp |
+| `Skull Bash` | sc_druid.cpp |
+| `Solar Beam` | sc_druid.cpp |
+| `Solstice` | sc_druid.cpp |
+| `Soothe` | sc_druid.cpp |
+| `Soul of the Forest` | sc_druid.cpp |
+| `Stampeding Roar` | sc_druid.cpp |
+| `Star Cascade` | sc_druid.cpp |
+| `Starfire` | sc_druid.cpp |
+| `Starlight Conduit` | sc_druid.cpp |
+| `Starlord` | sc_druid.cpp |
+| `Starsurge` | sc_druid.cpp |
+| `Starweaver` | sc_druid.cpp |
+| `Stellar Amplification` | sc_druid.cpp |
+| `Stellar Command` | sc_druid.cpp |
+| `Stonebark` | sc_druid.cpp |
+| `Strike for the Heart` | sc_druid.cpp |
+| `Sudden Ambush` | sc_druid.cpp |
+| `Sunseeker Mushroom` | sc_druid.cpp |
+| `Survival Instincts` | sc_druid.cpp |
+| `Swiftmend` | sc_druid.cpp |
+| `Swipe` | sc_druid.cpp |
+| `Sylvan Beckoning` | sc_druid.cpp |
+| `Symbiotic Relationship` | sc_druid.cpp |
+| `Taste for Blood` | sc_druid.cpp |
+| `Tear Down the Mighty` | sc_druid.cpp |
+| `The Eternal Moon` | sc_druid.cpp |
+| `The Light of Elune` | sc_druid.cpp |
+| `Thick Hide` | sc_druid.cpp |
+| `Thriving Growth` | sc_druid.cpp |
+| `Thriving Vegetation` | sc_druid.cpp |
+| `Tireless Energy` | sc_druid.cpp |
+| `Total Eclipse` | sc_druid.cpp |
+| `Touch the Cosmos` | sc_druid.cpp |
+| `Tranquil Mind` | sc_druid.cpp |
+| `Tranquility` | sc_druid.cpp |
+| `Treants of the Moon` | sc_druid.cpp |
+| `Twin Claw` | sc_druid.cpp |
+| `Twin Moonfire` | sc_druid.cpp |
+| `Twin Moons` | sc_druid.cpp |
+| `Twin Sprouts` | sc_druid.cpp |
+| `Typhoon` | sc_druid.cpp |
+| `Umbral Intensity` | sc_druid.cpp |
+| `Unseen Predator` | sc_druid.cpp |
+| `Unstoppable Growth` | sc_druid.cpp |
+| `Untamed Savagery` | sc_druid.cpp |
+| `Ursine Vigor` | sc_druid.cpp |
+| `Ursoc's Endurance` | sc_druid.cpp |
+| `Ursoc's Fury` | sc_druid.cpp |
+| `Ursoc's Guidance` | sc_druid.cpp |
+| `Ursoc's Spirit` | sc_druid.cpp |
+| `Ursol's Vortex` | sc_druid.cpp |
+| `Ursol's Warding` | sc_druid.cpp |
+| `Veinripper` | sc_druid.cpp |
+| `Verdancy` | sc_druid.cpp |
+| `Verdant Heart` | sc_druid.cpp |
+| `Verdant Infusion` | sc_druid.cpp |
+| `Vulnerable Flesh` | sc_druid.cpp |
+| `Waking Dream` | sc_druid.cpp |
+| `Waking Nightmare` | sc_druid.cpp |
+| `Ward of the Forest` | sc_druid.cpp |
+| `Well-Honed Instincts` | sc_druid.cpp |
+| `Whirling Stars` | sc_druid.cpp |
+| `Wild Charge` | sc_druid.cpp |
+| `Wild Growth` | sc_druid.cpp |
+| `Wild Guardian` | sc_druid.cpp |
+| `Wild Mushroom` | sc_druid.cpp |
+| `Wild Slashes` | sc_druid.cpp |
+| `Wild Surges` | sc_druid.cpp |
+| `Wild Synthesis` | sc_druid.cpp |
+| `Wildpower Surge` | sc_druid.cpp |
+| `Wildshape Mastery` | sc_druid.cpp |
+| `Wildstalker's Power` | sc_druid.cpp |
+| `Ysera's Gift` | sc_druid.cpp |
 
-## Evoker (185 entries)
+## Evoker (167 entries)
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `accretion` | sc_evoker.cpp | 1371 | _(look up)_ |
-| `aerial_mastery` | sc_evoker.cpp | 1246 | _(look up)_ |
-| `afterimage` | sc_evoker.cpp | 1414 | _(look up)_ |
-| `anachronism` | sc_evoker.cpp | 1372 | _(look up)_ |
-| `ancient_flame` | sc_evoker.cpp | 1236 | _(look up)_ |
-| `animosity` | sc_evoker.cpp | 1284 | _(look up)_ |
-| `arcane_intensity` | sc_evoker.cpp | 1282 | _(look up)_ |
-| `arcane_reach` | sc_evoker.cpp | 1350 | _(look up)_ |
-| `ashes_in_motion` | sc_evoker.cpp | 1440 | _(look up)_ |
-| `attuned_to_the_dream` | sc_evoker.cpp | 1225 | _(look up)_ |
-| `azure_celerity` | sc_evoker.cpp | 1308 | _(look up)_ |
-| `azure_essence_burst` | sc_evoker.cpp | 1271 | _(look up)_ |
-| `azure_sweep` | sc_evoker.cpp | 1279 | _(look up)_ |
-| `blast_furnace` | sc_evoker.cpp | 1231 | _(look up)_ |
-| `blistering_scales` | sc_evoker.cpp | 1347 | _(look up)_ |
-| `bombardments` | sc_evoker.cpp | 1457 | _(look up)_ |
-| `bountiful_bloom` | sc_evoker.cpp | 1230 | _(look up)_ |
-| `breath_of_eons` | sc_evoker.cpp | 1336 | _(look up)_ |
-| `burning_adrenaline` | sc_evoker.cpp | 1428 | _(look up)_ |
-| `burnout` | sc_evoker.cpp | 1301 | _(look up)_ |
-| `catalyze` | sc_evoker.cpp | 1292 | _(look up)_ |
-| `causality` | sc_evoker.cpp | 1313 | _(look up)_ |
-| `cauterizing_flame` | sc_evoker.cpp | 1221 | _(look up)_ |
-| `charged_blast` | sc_evoker.cpp | 1294 | _(look up)_ |
-| `chrono_flame` | sc_evoker.cpp | 1394 | _(look up)_ |
-| `chronoboon` | sc_evoker.cpp | 1415 | _(look up)_ |
-| `clairvoyant` | sc_evoker.cpp | 1374 | _(look up)_ |
-| `clobbering_sweep` | sc_evoker.cpp | 1219 | _(look up)_ |
-| `command_squadron` | sc_evoker.cpp | 1477 | _(look up)_ |
-| `concentrated_power` | sc_evoker.cpp | 1479 | _(look up)_ |
-| `conduit_of_flame` | sc_evoker.cpp | 1427 | _(look up)_ |
-| `consume_flame` | sc_evoker.cpp | 1435 | _(look up)_ |
-| `deep_exhalation` | sc_evoker.cpp | 1441 | _(look up)_ |
-| `diverted_power` | sc_evoker.cpp | 1470 | _(look up)_ |
-| `double_time` | sc_evoker.cpp | 1407 | _(look up)_ |
-| `draconic_instincts` | sc_evoker.cpp | 1434 | _(look up)_ |
-| `draconic_legacy` | sc_evoker.cpp | 1227 | _(look up)_ |
-| `dragonrage` | sc_evoker.cpp | 1278 | _(look up)_ |
-| `dream_of_spring` | sc_evoker.cpp | 1358 | _(look up)_ |
-| `duplicate1` | sc_evoker.cpp | 1383 | _(look up)_ |
-| `duplicate2` | sc_evoker.cpp | 1388 | _(look up)_ |
-| `duplicate3` | sc_evoker.cpp | 1389 | _(look up)_ |
-| `ebon_might` | sc_evoker.cpp | 1325 | _(look up)_ |
-| `echoing_strike` | sc_evoker.cpp | 1334 | _(look up)_ |
-| `energy_cycles` | sc_evoker.cpp | 1417 | _(look up)_ |
-| `engulfing_blaze` | sc_evoker.cpp | 1286 | _(look up)_ |
-| `enkindle` | sc_evoker.cpp | 1425 | _(look up)_ |
-| `enkindled` | sc_evoker.cpp | 1214 | _(look up)_ |
-| `eruption` | sc_evoker.cpp | 1328 | _(look up)_ |
-| `essence_attunement` | sc_evoker.cpp | 1285 | _(look up)_ |
-| `essence_burst` | sc_evoker.cpp | 1329 | _(look up)_ |
-| `essence_well` | sc_evoker.cpp | 1442 | _(look up)_ |
-| `eternity_surge` | sc_evoker.cpp | 1275 | _(look up)_ |
-| `eternitys_span` | sc_evoker.cpp | 1289 | _(look up)_ |
-| `event_horizon` | sc_evoker.cpp | 1291 | _(look up)_ |
-| `expanded_lungs` | sc_evoker.cpp | 1430 | _(look up)_ |
-| `expunge` | sc_evoker.cpp | 1207 | _(look up)_ |
-| `extended_battle` | sc_evoker.cpp | 1469 | _(look up)_ |
-| `extended_flight` | sc_evoker.cpp | 1229 | _(look up)_ |
-| `exuberance` | sc_evoker.cpp | 1234 | _(look up)_ |
-| `eye_of_infinity` | sc_evoker.cpp | 1290 | _(look up)_ |
-| `fan_the_flames` | sc_evoker.cpp | 1429 | _(look up)_ |
-| `fate_mirror` | sc_evoker.cpp | 1379 | _(look up)_ |
-| `feed_the_flames` | sc_evoker.cpp | 1297 | _(look up)_ |
-| `fire_torrent` | sc_evoker.cpp | 1446 | _(look up)_ |
-| `fire_within` | sc_evoker.cpp | 1249 | _(look up)_ |
-| `foci_of_life` | sc_evoker.cpp | 1248 | _(look up)_ |
-| `font_of_magic` | sc_evoker.cpp | 1306 | _(look up)_ |
-| `forger_of_mountains` | sc_evoker.cpp | 1211 | _(look up)_ |
-| `fulminous_roar` | sc_evoker.cpp | 1431 | _(look up)_ |
-| `golden_opportunity` | sc_evoker.cpp | 1412 | _(look up)_ |
-| `hardened_scales` | sc_evoker.cpp | 1467 | _(look up)_ |
-| `heat_wave` | sc_evoker.cpp | 1287 | _(look up)_ |
-| `heavy_wingbeats` | sc_evoker.cpp | 1218 | _(look up)_ |
-| `hoarded_power` | sc_evoker.cpp | 1362 | _(look up)_ |
-| `honed_aggression` | sc_evoker.cpp | 1288 | _(look up)_ |
-| `ignition_rush` | sc_evoker.cpp | 1341 | _(look up)_ |
-| `imminent_destruction` | sc_evoker.cpp | 1305 | _(look up)_ |
-| `imposing_presence` | sc_evoker.cpp | 1273 | _(look up)_ |
-| `improved_defy_fate` | sc_evoker.cpp | 1264 | _(look up)_ |
-| `infernos_blessing` | sc_evoker.cpp | 1367 | _(look up)_ |
-| `inherent_resistance` | sc_evoker.cpp | 1228 | _(look up)_ |
-| `innate_magic` | sc_evoker.cpp | 1212 | _(look up)_ |
-| `inner_radiance` | sc_evoker.cpp | 1274 | _(look up)_ |
-| `instability_matrix` | sc_evoker.cpp | 1413 | _(look up)_ |
-| `instinctive_arcana` | sc_evoker.cpp | 1223 | _(look up)_ |
-| `interwoven_threads` | sc_evoker.cpp | 1377 | _(look up)_ |
-| `iridescence` | sc_evoker.cpp | 1315 | _(look up)_ |
-| `landslide` | sc_evoker.cpp | 1205 | _(look up)_ |
-| `lay_waste` | sc_evoker.cpp | 1272 | _(look up)_ |
-| `leaping_flames` | sc_evoker.cpp | 1244 | _(look up)_ |
-| `legacy_of_the_lifebinder` | sc_evoker.cpp | 1422 | _(look up)_ |
-| `lifecinders` | sc_evoker.cpp | 1433 | _(look up)_ |
-| `lush_growth` | sc_evoker.cpp | 1242 | _(look up)_ |
-| `maneuverability` | sc_evoker.cpp | 1473 | _(look up)_ |
-| `mass_disintegrate` | sc_evoker.cpp | 1451 | _(look up)_ |
-| `mass_eruption` | sc_evoker.cpp | 1453 | _(look up)_ |
-| `master_of_destiny` | sc_evoker.cpp | 1411 | _(look up)_ |
-| `melt_armor` | sc_evoker.cpp | 1462 | _(look up)_ |
-| `menacing_presence` | sc_evoker.cpp | 1468 | _(look up)_ |
-| `might_of_the_black_dragonflight` | sc_evoker.cpp | 1456 | _(look up)_ |
-| `molten_blood` | sc_evoker.cpp | 1354 | _(look up)_ |
-| `molten_embers` | sc_evoker.cpp | 1382 | _(look up)_ |
-| `momentum_shift` | sc_evoker.cpp | 1366 | _(look up)_ |
-| `motes_of_acceleration` | sc_evoker.cpp | 1404 | _(look up)_ |
-| `motes_of_possibility` | sc_evoker.cpp | 1373 | _(look up)_ |
-| `natural_convergence` | sc_evoker.cpp | 1208 | _(look up)_ |
-| `nimble_flyer` | sc_evoker.cpp | 1471 | _(look up)_ |
-| `nozdormu_adept` | sc_evoker.cpp | 1266 | _(look up)_ |
-| `obsidian_bulwark` | sc_evoker.cpp | 1213 | _(look up)_ |
-| `obsidian_scales` | sc_evoker.cpp | 1206 | _(look up)_ |
-| `onslaught` | sc_evoker.cpp | 1461 | _(look up)_ |
-| `onyx_legacy` | sc_evoker.cpp | 1302 | _(look up)_ |
-| `oppressing_roar` | sc_evoker.cpp | 1240 | _(look up)_ |
-| `overawe` | sc_evoker.cpp | 1245 | _(look up)_ |
-| `overclock` | sc_evoker.cpp | 1416 | _(look up)_ |
-| `overlord` | sc_evoker.cpp | 1378 | _(look up)_ |
-| `panacea` | sc_evoker.cpp | 1232 | _(look up)_ |
-| `permeating_chill` | sc_evoker.cpp | 1209 | _(look up)_ |
-| `plot_the_future` | sc_evoker.cpp | 1357 | _(look up)_ |
-| `potent_mana` | sc_evoker.cpp | 1262 | _(look up)_ |
-| `power_nexus` | sc_evoker.cpp | 1277 | _(look up)_ |
-| `power_swell` | sc_evoker.cpp | 1309 | _(look up)_ |
-| `prescience` | sc_evoker.cpp | 1363 | _(look up)_ |
-| `primacy` | sc_evoker.cpp | 1405 | _(look up)_ |
-| `protracted_talons` | sc_evoker.cpp | 1239 | _(look up)_ |
-| `pupil_of_alexstrasza` | sc_evoker.cpp | 1333 | _(look up)_ |
-| `pyre` | sc_evoker.cpp | 1269 | _(look up)_ |
-| `quell` | sc_evoker.cpp | 1216 | _(look up)_ |
-| `reactive_hide` | sc_evoker.cpp | 1360 | _(look up)_ |
-| `recall` | sc_evoker.cpp | 1217 | _(look up)_ |
-| `refined_essence` | sc_evoker.cpp | 1480 | _(look up)_ |
-| `regenerative_chitin` | sc_evoker.cpp | 1353 | _(look up)_ |
-| `regenerative_magic` | sc_evoker.cpp | 1256 | _(look up)_ |
-| `renewing_blaze` | sc_evoker.cpp | 1243 | _(look up)_ |
-| `rescue` | sc_evoker.cpp | 1241 | _(look up)_ |
-| `reverberations` | sc_evoker.cpp | 1400 | _(look up)_ |
-| `ricocheting_pyroclast` | sc_evoker.cpp | 1331 | _(look up)_ |
-| `rising_fury_1` | sc_evoker.cpp | 1316 | _(look up)_ |
-| `rising_fury_2` | sc_evoker.cpp | 1318 | _(look up)_ |
-| `rising_fury_3` | sc_evoker.cpp | 1319 | _(look up)_ |
-| `roar_of_exhilaration` | sc_evoker.cpp | 1222 | _(look up)_ |
-| `ruby_embers` | sc_evoker.cpp | 1283 | _(look up)_ |
-| `ruby_essence_burst` | sc_evoker.cpp | 1270 | _(look up)_ |
-| `rumbling_earth` | sc_evoker.cpp | 1381 | _(look up)_ |
-| `scarlet_adaptation` | sc_evoker.cpp | 1215 | _(look up)_ |
-| `scintillation` | sc_evoker.cpp | 1314 | _(look up)_ |
-| `scorching_embers` | sc_evoker.cpp | 1312 | _(look up)_ |
-| `shape_of_flame` | sc_evoker.cpp | 1424 | _(look up)_ |
-| `shattering_stars` | sc_evoker.cpp | 1295 | _(look up)_ |
-| `sleep_walk` | sc_evoker.cpp | 1226 | _(look up)_ |
-| `slipstream` | sc_evoker.cpp | 1472 | _(look up)_ |
-| `source_of_magic` | sc_evoker.cpp | 1235 | _(look up)_ |
-| `spatial_paradox` | sc_evoker.cpp | 1252 | _(look up)_ |
-| `spellweavers_dominance` | sc_evoker.cpp | 1303 | _(look up)_ |
-| `star_salvo` | sc_evoker.cpp | 1304 | _(look up)_ |
-| `strafing_run` | sc_evoker.cpp | 1310 | _(look up)_ |
-| `strike_from_above` | sc_evoker.cpp | 1260 | _(look up)_ |
-| `tailwind` | sc_evoker.cpp | 1220 | _(look up)_ |
-| `tectonic_locus` | sc_evoker.cpp | 1352 | _(look up)_ |
-| `temporal_burst` | sc_evoker.cpp | 1398 | _(look up)_ |
-| `temporality` | sc_evoker.cpp | 1402 | _(look up)_ |
-| `terror_of_the_skies` | sc_evoker.cpp | 1250 | _(look up)_ |
-| `time_convergence` | sc_evoker.cpp | 1408 | _(look up)_ |
-| `time_skip` | sc_evoker.cpp | 1370 | _(look up)_ |
-| `time_spiral` | sc_evoker.cpp | 1251 | _(look up)_ |
-| `tip_the_scales` | sc_evoker.cpp | 1224 | _(look up)_ |
-| `titanic_precision` | sc_evoker.cpp | 1432 | _(look up)_ |
-| `titanic_wrath` | sc_evoker.cpp | 1307 | _(look up)_ |
-| `tomorrow_today` | sc_evoker.cpp | 1376 | _(look up)_ |
-| `trailblazer` | sc_evoker.cpp | 1423 | _(look up)_ |
-| `twin_flame` | sc_evoker.cpp | 1443 | _(look up)_ |
-| `twin_guardian` | sc_evoker.cpp | 1247 | _(look up)_ |
-| `tyranny` | sc_evoker.cpp | 1293 | _(look up)_ |
-| `unravel` | sc_evoker.cpp | 1237 | _(look up)_ |
-| `unrelenting_siege` | sc_evoker.cpp | 1465 | _(look up)_ |
-| `unyielding_domain` | sc_evoker.cpp | 1351 | _(look up)_ |
-| `upheaval` | sc_evoker.cpp | 1335 | _(look up)_ |
-| `verdant_embrace` | sc_evoker.cpp | 1210 | _(look up)_ |
-| `volatility` | sc_evoker.cpp | 1276 | _(look up)_ |
-| `volcanism` | sc_evoker.cpp | 1342 | _(look up)_ |
-| `walloping_blow` | sc_evoker.cpp | 1258 | _(look up)_ |
-| `warp` | sc_evoker.cpp | 1397 | _(look up)_ |
-| `wingleader` | sc_evoker.cpp | 1464 | _(look up)_ |
-| `zephyr` | sc_evoker.cpp | 1253 | _(look up)_ |
+**By Name:**
 
-## Mage (205 entries)
+| Talent Name | File |
+|-------------|------|
+| `Accretion` | sc_evoker.cpp |
+| `Aerial Mastery` | sc_evoker.cpp |
+| `Anachronism` | sc_evoker.cpp |
+| `Ancient Flame` | sc_evoker.cpp |
+| `Animosity` | sc_evoker.cpp |
+| `Ashes in Motion` | sc_evoker.cpp |
+| `Attuned to the Dream` | sc_evoker.cpp |
+| `Azure Celerity` | sc_evoker.cpp |
+| `Azure Essence Burst` | sc_evoker.cpp |
+| `Azure Sweep` | sc_evoker.cpp |
+| `Blast Furnace` | sc_evoker.cpp |
+| `Blistering Scales` | sc_evoker.cpp |
+| `Bombardments` | sc_evoker.cpp |
+| `Bountiful Bloom` | sc_evoker.cpp |
+| `Breath of Eons` | sc_evoker.cpp |
+| `Breath of Sindragosa` | sc_evoker.cpp |
+| `Burning Adrenaline` | sc_evoker.cpp |
+| `Catalyze` | sc_evoker.cpp |
+| `Causality` | sc_evoker.cpp |
+| `Celestial Alignment` | sc_evoker.cpp |
+| `Chrono Flame` | sc_evoker.cpp |
+| `Chronoboon` | sc_evoker.cpp |
+| `Clairvoyant` | sc_evoker.cpp |
+| `Command Squadron` | sc_evoker.cpp |
+| `Commander of the Dead` | sc_evoker.cpp |
+| `Conduit of Flame` | sc_evoker.cpp |
+| `Consume Flame` | sc_evoker.cpp |
+| `Coordinated Assault` | sc_evoker.cpp |
+| `Dark Ascension` | sc_evoker.cpp |
+| `Dark Transformation` | sc_evoker.cpp |
+| `Deep Exhalation` | sc_evoker.cpp |
+| `Defile` | sc_evoker.cpp |
+| `Diverted Power` | sc_evoker.cpp |
+| `Draconic Instincts` | sc_evoker.cpp |
+| `Draconic Legacy` | sc_evoker.cpp |
+| `Dragonrage` | sc_evoker.cpp |
+| `Dream of Spring` | sc_evoker.cpp |
+| `Ebon Might` | sc_evoker.cpp |
+| `Echoing Strike` | sc_evoker.cpp |
+| `Empower Rune Weapon` | sc_evoker.cpp |
+| `Energy Cycles` | sc_evoker.cpp |
+| `Engulfing Blaze` | sc_evoker.cpp |
+| `Enkindle` | sc_evoker.cpp |
+| `Enkindled` | sc_evoker.cpp |
+| `Eruption` | sc_evoker.cpp |
+| `Essence Attunement` | sc_evoker.cpp |
+| `Essence Burst` | sc_evoker.cpp |
+| `Essence Well` | sc_evoker.cpp |
+| `Eternity Surge` | sc_evoker.cpp |
+| `Eternity's Span` | sc_evoker.cpp |
+| `Event Horizon` | sc_evoker.cpp |
+| `Expanded Lungs` | sc_evoker.cpp |
+| `Expunge` | sc_evoker.cpp |
+| `Extended Battle` | sc_evoker.cpp |
+| `Extended Flight` | sc_evoker.cpp |
+| `Exuberance` | sc_evoker.cpp |
+| `Eye of Infinity` | sc_evoker.cpp |
+| `Fan the Flames` | sc_evoker.cpp |
+| `Fate Mirror` | sc_evoker.cpp |
+| `Feed the Flames` | sc_evoker.cpp |
+| `Fire Torrent` | sc_evoker.cpp |
+| `Font of Magic` | sc_evoker.cpp |
+| `Forger of Mountains` | sc_evoker.cpp |
+| `Fulminous Roar` | sc_evoker.cpp |
+| `Golden Opportunity` | sc_evoker.cpp |
+| `Hardened Scales` | sc_evoker.cpp |
+| `Heat Wave` | sc_evoker.cpp |
+| `Honed Aggression` | sc_evoker.cpp |
+| `Icy Veins` | sc_evoker.cpp |
+| `Imminent Destruction` | sc_evoker.cpp |
+| `Imposing Presence` | sc_evoker.cpp |
+| `Improved Defy Fate` | sc_evoker.cpp |
+| `Incarnation: Chosen of Elune` | sc_evoker.cpp |
+| `Inherent Resistance` | sc_evoker.cpp |
+| `Innate Magic` | sc_evoker.cpp |
+| `Instability Matrix` | sc_evoker.cpp |
+| `Instinctive Arcana` | sc_evoker.cpp |
+| `Interwoven Threads` | sc_evoker.cpp |
+| `Iridescence` | sc_evoker.cpp |
+| `Landslide` | sc_evoker.cpp |
+| `Lay Waste` | sc_evoker.cpp |
+| `Leaping Flames` | sc_evoker.cpp |
+| `Legacy of the Lifebinder` | sc_evoker.cpp |
+| `Lifecinders` | sc_evoker.cpp |
+| `Lush Growth` | sc_evoker.cpp |
+| `Maneuverability` | sc_evoker.cpp |
+| `Mass Eruption` | sc_evoker.cpp |
+| `Master of Destiny` | sc_evoker.cpp |
+| `Melt Armor` | sc_evoker.cpp |
+| `Menacing Presence` | sc_evoker.cpp |
+| `Might of the Black Dragonflight` | sc_evoker.cpp |
+| `Molten Blood` | sc_evoker.cpp |
+| `Molten Embers` | sc_evoker.cpp |
+| `Momentum Shift` | sc_evoker.cpp |
+| `Motes of Acceleration` | sc_evoker.cpp |
+| `Motes of Possibility` | sc_evoker.cpp |
+| `Nimble Flyer` | sc_evoker.cpp |
+| `Nozdormu Adept` | sc_evoker.cpp |
+| `Obsidian Bulwark` | sc_evoker.cpp |
+| `Obsidian Scales` | sc_evoker.cpp |
+| `Onslaught` | sc_evoker.cpp |
+| `Onyx Legacy` | sc_evoker.cpp |
+| `Oppressing Roar` | sc_evoker.cpp |
+| `Overawe` | sc_evoker.cpp |
+| `Overclock` | sc_evoker.cpp |
+| `Overlord` | sc_evoker.cpp |
+| `Panacea` | sc_evoker.cpp |
+| `Pillar of Frost` | sc_evoker.cpp |
+| `Plot the Future` | sc_evoker.cpp |
+| `Potent Mana` | sc_evoker.cpp |
+| `Power Nexus` | sc_evoker.cpp |
+| `Power Swell` | sc_evoker.cpp |
+| `Prescience` | sc_evoker.cpp |
+| `Primacy` | sc_evoker.cpp |
+| `Protracted Talons` | sc_evoker.cpp |
+| `Pupil of Alexstrasza` | sc_evoker.cpp |
+| `Pyre` | sc_evoker.cpp |
+| `Quell` | sc_evoker.cpp |
+| `Reactive Hide` | sc_evoker.cpp |
+| `Refined Essence` | sc_evoker.cpp |
+| `Regenerative Chitin` | sc_evoker.cpp |
+| `Regenerative Magic` | sc_evoker.cpp |
+| `Ricocheting Pyroclast` | sc_evoker.cpp |
+| `Roar of Exhilaration` | sc_evoker.cpp |
+| `Ruby Embers` | sc_evoker.cpp |
+| `Ruby Essence Burst` | sc_evoker.cpp |
+| `Scarlet Adaptation` | sc_evoker.cpp |
+| `Scintillation` | sc_evoker.cpp |
+| `Serenity` | sc_evoker.cpp |
+| `Shadow Dance` | sc_evoker.cpp |
+| `Shape of flame` | sc_evoker.cpp |
+| `Shattering Stars` | sc_evoker.cpp |
+| `Slipstream` | sc_evoker.cpp |
+| `Spellweaver's Dominance` | sc_evoker.cpp |
+| `Star Salvo` | sc_evoker.cpp |
+| `Strafing Run` | sc_evoker.cpp |
+| `Strike from Above` | sc_evoker.cpp |
+| `Tailwind` | sc_evoker.cpp |
+| `Tectonic Locus` | sc_evoker.cpp |
+| `Temporal Burst` | sc_evoker.cpp |
+| `Temporality` | sc_evoker.cpp |
+| `Time Convergence` | sc_evoker.cpp |
+| `Time Skip` | sc_evoker.cpp |
+| `Time Spiral` | sc_evoker.cpp |
+| `Tip the Scales` | sc_evoker.cpp |
+| `Titanic Precision` | sc_evoker.cpp |
+| `Titanic Wrath` | sc_evoker.cpp |
+| `Tomorrow, Today` | sc_evoker.cpp |
+| `Trailblazer` | sc_evoker.cpp |
+| `Twin Flame` | sc_evoker.cpp |
+| `Unholy Assault` | sc_evoker.cpp |
+| `Unravel` | sc_evoker.cpp |
+| `Unrelenting Siege` | sc_evoker.cpp |
+| `Unyielding Domain` | sc_evoker.cpp |
+| `Verdant Embrace` | sc_evoker.cpp |
+| `Void Eruption` | sc_evoker.cpp |
+| `Volatility` | sc_evoker.cpp |
+| `Volcanism` | sc_evoker.cpp |
+| `Walloping Blow` | sc_evoker.cpp |
+| `Wingleader` | sc_evoker.cpp |
+| `upheaval` | sc_evoker.cpp |
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `aegwynns_technique` | sc_mage.cpp | 578 | _(look up)_ |
-| `aether_attunement` | sc_mage.cpp | 577 | _(look up)_ |
-| `amplification` | sc_mage.cpp | 551 | _(look up)_ |
-| `arcane_echo` | sc_mage.cpp | 579 | _(look up)_ |
-| `arcane_familiar` | sc_mage.cpp | 565 | _(look up)_ |
-| `arcane_missiles` | sc_mage.cpp | 544 | _(look up)_ |
-| `arcane_orb` | sc_mage.cpp | 558 | _(look up)_ |
-| `arcane_pulse` | sc_mage.cpp | 556 | _(look up)_ |
-| `arcane_salvo` | sc_mage.cpp | 548 | _(look up)_ |
-| `arcane_singularity` | sc_mage.cpp | 595 | _(look up)_ |
-| `arcane_surge` | sc_mage.cpp | 557 | _(look up)_ |
-| `arcane_tempo` | sc_mage.cpp | 576 | _(look up)_ |
-| `archmages_wrath` | sc_mage.cpp | 789 | _(look up)_ |
-| `arcing_cleave` | sc_mage.cpp | 553 | _(look up)_ |
-| `ashes_of_inspiration` | sc_mage.cpp | 819 | _(look up)_ |
-| `attuned_familiar` | sc_mage.cpp | 777 | _(look up)_ |
-| `augury_abounds` | sc_mage.cpp | 774 | _(look up)_ |
-| `blast_radius` | sc_mage.cpp | 762 | _(look up)_ |
-| `blast_zone` | sc_mage.cpp | 639 | _(look up)_ |
-| `blazing_barrier` | sc_mage.cpp | 469 | _(look up)_ |
-| `blizzard_1` | sc_mage.cpp | 677 | _(look up)_ |
-| `blizzard_2` | sc_mage.cpp | 678 | _(look up)_ |
-| `brain_freeze` | sc_mage.cpp | 692 | _(look up)_ |
-| `burden_of_power` | sc_mage.cpp | 805 | _(look up)_ |
-| `burn_it_all` | sc_mage.cpp | 666 | _(look up)_ |
-| `burnout` | sc_mage.cpp | 664 | _(look up)_ |
-| `cauterize` | sc_mage.cpp | 624 | _(look up)_ |
-| `charged_missiles` | sc_mage.cpp | 599 | _(look up)_ |
-| `charged_orb` | sc_mage.cpp | 566 | _(look up)_ |
-| `cinderstorm` | sc_mage.cpp | 669 | _(look up)_ |
-| `codex_of_the_sunstriders` | sc_mage.cpp | 811 | _(look up)_ |
-| `cold_snap` | sc_mage.cpp | 687 | _(look up)_ |
-| `combustion` | sc_mage.cpp | 619 | _(look up)_ |
-| `comet_storm` | sc_mage.cpp | 737 | _(look up)_ |
-| `concentrated_power` | sc_mage.cpp | 547 | _(look up)_ |
-| `cone_of_frost` | sc_mage.cpp | 706 | _(look up)_ |
-| `conflagration` | sc_mage.cpp | 642 | _(look up)_ |
-| `consortiums_bauble` | sc_mage.cpp | 575 | _(look up)_ |
-| `controlled_destruction` | sc_mage.cpp | 637 | _(look up)_ |
-| `controlled_instincts` | sc_mage.cpp | 783 | _(look up)_ |
-| `critical_mass` | sc_mage.cpp | 631 | _(look up)_ |
-| `crystalline_refraction` | sc_mage.cpp | 726 | _(look up)_ |
-| `deep_impact` | sc_mage.cpp | 632 | _(look up)_ |
-| `deep_shatter` | sc_mage.cpp | 711 | _(look up)_ |
-| `dragons_breath` | sc_mage.cpp | 492 | _(look up)_ |
-| `dualcasting_adept` | sc_mage.cpp | 756 | _(look up)_ |
-| `duality` | sc_mage.cpp | 750 | _(look up)_ |
-| `elemental_affinity` | sc_mage.cpp | 748 | _(look up)_ |
-| `elemental_conduit` | sc_mage.cpp | 763 | _(look up)_ |
-| `energized_familiar` | sc_mage.cpp | 571 | _(look up)_ |
-| `enlightened` | sc_mage.cpp | 587 | _(look up)_ |
-| `eureka` | sc_mage.cpp | 594 | _(look up)_ |
-| `everlasting_frost` | sc_mage.cpp | 695 | _(look up)_ |
-| `evocation` | sc_mage.cpp | 585 | _(look up)_ |
-| `expanded_mind` | sc_mage.cpp | 572 | _(look up)_ |
-| `explosive_potential` | sc_mage.cpp | 812 | _(look up)_ |
-| `feel_the_burn` | sc_mage.cpp | 665 | _(look up)_ |
-| `fervent_flickering` | sc_mage.cpp | 623 | _(look up)_ |
-| `fevered_incantation` | sc_mage.cpp | 651 | _(look up)_ |
-| `fiery_rush` | sc_mage.cpp | 658 | _(look up)_ |
-| `fingers_of_frost` | sc_mage.cpp | 679 | _(look up)_ |
-| `fire_blast` | sc_mage.cpp | 612 | _(look up)_ |
-| `fired_up_1` | sc_mage.cpp | 649 | _(look up)_ |
-| `fired_up_2` | sc_mage.cpp | 655 | _(look up)_ |
-| `fired_up_3` | sc_mage.cpp | 663 | _(look up)_ |
-| `fires_ire` | sc_mage.cpp | 652 | _(look up)_ |
-| `firestarter` | sc_mage.cpp | 613 | _(look up)_ |
-| `flame_accelerant` | sc_mage.cpp | 659 | _(look up)_ |
-| `flame_and_frost` | sc_mage.cpp | 749 | _(look up)_ |
-| `flame_on` | sc_mage.cpp | 629 | _(look up)_ |
-| `flamestrike_1` | sc_mage.cpp | 614 | _(look up)_ |
-| `flamestrike_2` | sc_mage.cpp | 615 | _(look up)_ |
-| `flash_freeze` | sc_mage.cpp | 701 | _(look up)_ |
-| `flash_freezeburn` | sc_mage.cpp | 761 | _(look up)_ |
-| `flurry` | sc_mage.cpp | 686 | _(look up)_ |
-| `focusing_crystal` | sc_mage.cpp | 588 | _(look up)_ |
-| `force_of_will` | sc_mage.cpp | 775 | _(look up)_ |
-| `fractured_frost` | sc_mage.cpp | 709 | _(look up)_ |
-| `freezing_cold` | sc_mage.cpp | 524 | _(look up)_ |
-| `freezing_rain` | sc_mage.cpp | 705 | _(look up)_ |
-| `freezing_winds` | sc_mage.cpp | 723 | _(look up)_ |
-| `frigid_focus` | sc_mage.cpp | 702 | _(look up)_ |
-| `from_the_ashes` | sc_mage.cpp | 657 | _(look up)_ |
-| `frostbite` | sc_mage.cpp | 682 | _(look up)_ |
-| `frostfire_bolt` | sc_mage.cpp | 742 | _(look up)_ |
-| `frostfire_empowerment` | sc_mage.cpp | 747 | _(look up)_ |
-| `frostfire_infusion` | sc_mage.cpp | 760 | _(look up)_ |
-| `frozen_orb` | sc_mage.cpp | 689 | _(look up)_ |
-| `frozen_touch` | sc_mage.cpp | 699 | _(look up)_ |
-| `fuel_the_fire` | sc_mage.cpp | 620 | _(look up)_ |
-| `glacial_assault` | sc_mage.cpp | 725 | _(look up)_ |
-| `glacial_attunement` | sc_mage.cpp | 717 | _(look up)_ |
-| `glacial_bulwark` | sc_mage.cpp | 688 | _(look up)_ |
-| `glacial_chill` | sc_mage.cpp | 729 | _(look up)_ |
-| `glacial_shatter` | sc_mage.cpp | 730 | _(look up)_ |
-| `glaciate` | sc_mage.cpp | 736 | _(look up)_ |
-| `glorious_incandescence` | sc_mage.cpp | 806 | _(look up)_ |
-| `hailstones` | sc_mage.cpp | 731 | _(look up)_ |
-| `hand_of_frost_1` | sc_mage.cpp | 716 | _(look up)_ |
-| `hand_of_frost_2` | sc_mage.cpp | 722 | _(look up)_ |
-| `hand_of_frost_3` | sc_mage.cpp | 734 | _(look up)_ |
-| `heart_of_ice` | sc_mage.cpp | 718 | _(look up)_ |
-| `heat_shimmer` | sc_mage.cpp | 635 | _(look up)_ |
-| `heat_sink` | sc_mage.cpp | 753 | _(look up)_ |
-| `high_voltage` | sc_mage.cpp | 600 | _(look up)_ |
-| `ice_barrier` | sc_mage.cpp | 470 | _(look up)_ |
-| `ice_lance` | sc_mage.cpp | 674 | _(look up)_ |
-| `ice_nova` | sc_mage.cpp | 525 | _(look up)_ |
-| `ice_ward` | sc_mage.cpp | 507 | _(look up)_ |
-| `icicles` | sc_mage.cpp | 683 | _(look up)_ |
-| `ignition` | sc_mage.cpp | 618 | _(look up)_ |
-| `illuminated_thoughts` | sc_mage.cpp | 589 | _(look up)_ |
-| `imbued_warding` | sc_mage.cpp | 745 | _(look up)_ |
-| `impetus` | sc_mage.cpp | 581 | _(look up)_ |
-| `improved_blazing_barrier` | sc_mage.cpp | 537 | _(look up)_ |
-| `improved_blink` | sc_mage.cpp | 499 | _(look up)_ |
-| `improved_clearcasting` | sc_mage.cpp | 552 | _(look up)_ |
-| `improved_flurry` | sc_mage.cpp | 724 | _(look up)_ |
-| `improved_frost_nova` | sc_mage.cpp | 508 | _(look up)_ |
-| `improved_ice_barrier` | sc_mage.cpp | 538 | _(look up)_ |
-| `improved_prismatic_barrier` | sc_mage.cpp | 539 | _(look up)_ |
-| `improved_shatter` | sc_mage.cpp | 710 | _(look up)_ |
-| `inflame` | sc_mage.cpp | 646 | _(look up)_ |
-| `infused_splinters` | sc_mage.cpp | 786 | _(look up)_ |
-| `intensifying_flame` | sc_mage.cpp | 643 | _(look up)_ |
-| `intuition` | sc_mage.cpp | 569 | _(look up)_ |
-| `invocation_arcane_phoenix` | sc_mage.cpp | 804 | _(look up)_ |
-| `isothermic_core` | sc_mage.cpp | 766 | _(look up)_ |
-| `kindling` | sc_mage.cpp | 630 | _(look up)_ |
-| `lessons_in_debilitation` | sc_mage.cpp | 813 | _(look up)_ |
-| `lonely_winter` | sc_mage.cpp | 727 | _(look up)_ |
-| `look_again` | sc_mage.cpp | 781 | _(look up)_ |
-| `mana_adept` | sc_mage.cpp | 586 | _(look up)_ |
-| `mana_bomb` | sc_mage.cpp | 564 | _(look up)_ |
-| `mana_cascade` | sc_mage.cpp | 803 | _(look up)_ |
-| `mass_polymorph` | sc_mage.cpp | 527 | _(look up)_ |
-| `master_of_flame` | sc_mage.cpp | 656 | _(look up)_ |
-| `meltdown` | sc_mage.cpp | 746 | _(look up)_ |
-| `memory_of_alar` | sc_mage.cpp | 824 | _(look up)_ |
-| `merely_a_setback` | sc_mage.cpp | 809 | _(look up)_ |
-| `meteor` | sc_mage.cpp | 625 | _(look up)_ |
-| `molten_chill` | sc_mage.cpp | 757 | _(look up)_ |
-| `molten_fury` | sc_mage.cpp | 645 | _(look up)_ |
-| `mote_of_flame` | sc_mage.cpp | 638 | _(look up)_ |
-| `orb_barrage` | sc_mage.cpp | 604 | _(look up)_ |
-| `orb_mastery` | sc_mage.cpp | 603 | _(look up)_ |
-| `overflowing_insight` | sc_mage.cpp | 601 | _(look up)_ |
-| `overpowered_missiles` | sc_mage.cpp | 602 | _(look up)_ |
-| `permafrost_lances` | sc_mage.cpp | 696 | _(look up)_ |
-| `phantasmal_image` | sc_mage.cpp | 784 | _(look up)_ |
-| `piercing_cold` | sc_mage.cpp | 693 | _(look up)_ |
-| `polished_focus` | sc_mage.cpp | 792 | _(look up)_ |
-| `presence_of_mind` | sc_mage.cpp | 562 | _(look up)_ |
-| `prismatic_barrier` | sc_mage.cpp | 471 | _(look up)_ |
-| `prodigious_savant` | sc_mage.cpp | 593 | _(look up)_ |
-| `pyroblast` | sc_mage.cpp | 609 | _(look up)_ |
-| `pyroclasm` | sc_mage.cpp | 668 | _(look up)_ |
-| `pyrocosm` | sc_mage.cpp | 814 | _(look up)_ |
-| `pyromaniac` | sc_mage.cpp | 660 | _(look up)_ |
-| `ray_of_frost` | sc_mage.cpp | 694 | _(look up)_ |
-| `reactive_barrier` | sc_mage.cpp | 785 | _(look up)_ |
-| `reflection` | sc_mage.cpp | 535 | _(look up)_ |
-| `remove_curse` | sc_mage.cpp | 494 | _(look up)_ |
-| `resonance` | sc_mage.cpp | 580 | _(look up)_ |
-| `reverberate` | sc_mage.cpp | 561 | _(look up)_ |
-| `rimecaster` | sc_mage.cpp | 719 | _(look up)_ |
-| `ring_of_frost` | sc_mage.cpp | 528 | _(look up)_ |
-| `rondurmancy` | sc_mage.cpp | 820 | _(look up)_ |
-| `savor_the_moment` | sc_mage.cpp | 817 | _(look up)_ |
-| `scald` | sc_mage.cpp | 636 | _(look up)_ |
-| `scorch` | sc_mage.cpp | 628 | _(look up)_ |
-| `severe_temperatures` | sc_mage.cpp | 754 | _(look up)_ |
-| `shifting_shards` | sc_mage.cpp | 778 | _(look up)_ |
-| `shimmer` | sc_mage.cpp | 500 | _(look up)_ |
-| `signature_spell` | sc_mage.cpp | 790 | _(look up)_ |
-| `slippery_slinging` | sc_mage.cpp | 782 | _(look up)_ |
-| `slipstream` | sc_mage.cpp | 563 | _(look up)_ |
-| `slow_burn` | sc_mage.cpp | 667 | _(look up)_ |
-| `spatial_manipulation` | sc_mage.cpp | 536 | _(look up)_ |
-| `spellfire_salvo` | sc_mage.cpp | 821 | _(look up)_ |
-| `spellfire_spheres` | sc_mage.cpp | 800 | _(look up)_ |
-| `spellfrost_teachings` | sc_mage.cpp | 791 | _(look up)_ |
-| `splintering_orbs` | sc_mage.cpp | 776 | _(look up)_ |
-| `splintering_ray` | sc_mage.cpp | 703 | _(look up)_ |
-| `splintering_sorcery` | sc_mage.cpp | 771 | _(look up)_ |
-| `splinterstorm` | sc_mage.cpp | 795 | _(look up)_ |
-| `splitting_ice` | sc_mage.cpp | 700 | _(look up)_ |
-| `spontaneous_combustion` | sc_mage.cpp | 644 | _(look up)_ |
-| `summon_water_elemental` | sc_mage.cpp | 728 | _(look up)_ |
-| `sunfury_execution` | sc_mage.cpp | 818 | _(look up)_ |
-| `supernova` | sc_mage.cpp | 493 | _(look up)_ |
-| `temporal_realignment` | sc_mage.cpp | 478 | _(look up)_ |
-| `thermal_conditioning` | sc_mage.cpp | 755 | _(look up)_ |
-| `thermal_void` | sc_mage.cpp | 735 | _(look up)_ |
-| `time_twist` | sc_mage.cpp | 810 | _(look up)_ |
-| `time_walk` | sc_mage.cpp | 479 | _(look up)_ |
-| `touch_of_the_archmage_1` | sc_mage.cpp | 584 | _(look up)_ |
-| `touch_of_the_archmage_2` | sc_mage.cpp | 592 | _(look up)_ |
-| `touch_of_the_archmage_3` | sc_mage.cpp | 598 | _(look up)_ |
-| `touch_of_the_magi` | sc_mage.cpp | 570 | _(look up)_ |
-| `white_out` | sc_mage.cpp | 712 | _(look up)_ |
-| `wildfire` | sc_mage.cpp | 650 | _(look up)_ |
-| `winters_blessing` | sc_mage.cpp | 704 | _(look up)_ |
-| `winters_protection` | sc_mage.cpp | 481 | _(look up)_ |
-| `wintertide` | sc_mage.cpp | 713 | _(look up)_ |
+**By ID (ID-only registration, no name in Wowhead):**
 
-## Monk (178 entries)
+| Spell ID | File |
+|----------|------|
+| 1259173 | sc_evoker.cpp |
+| 1259174 | sc_evoker.cpp |
+| 1259175 | sc_evoker.cpp |
+| 1271687 | sc_evoker.cpp |
+| 1271788 | sc_evoker.cpp |
+| 1271796 | sc_evoker.cpp |
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `airborne_rhythm` | sc_monk.hpp | 965 | _(look up)_ |
-| `anvil_and_stave` | sc_monk.hpp | 847 | _(look up)_ |
-| `ascension` | sc_monk.hpp | 896 | _(look up)_ |
-| `aspect_of_harmony` | sc_monk.hpp | 1031 | _(look up)_ |
-| `august_blessing` | sc_monk.hpp | 790 | _(look up)_ |
-| `awakening_spirit` | sc_monk.hpp | 853 | _(look up)_ |
-| `balanced_stratagem` | sc_monk.hpp | 1043 | _(look up)_ |
-| `black_ox_brew` | sc_monk.hpp | 831 | _(look up)_ |
-| `blackout_combo` | sc_monk.hpp | 846 | _(look up)_ |
-| `bob_and_weave` | sc_monk.hpp | 830 | _(look up)_ |
-| `brawlers_intensity` | sc_monk.hpp | 912 | _(look up)_ |
-| `breath_of_fire` | sc_monk.hpp | 819 | _(look up)_ |
-| `bring_me_another_1` | sc_monk.hpp | 872 | _(look up)_ |
-| `bring_me_another_2` | sc_monk.hpp | 873 | _(look up)_ |
-| `bring_me_another_3` | sc_monk.hpp | 874 | _(look up)_ |
-| `celerity` | sc_monk.hpp | 730 | _(look up)_ |
-| `celestial_brew` | sc_monk.hpp | 808 | _(look up)_ |
-| `celestial_conduit` | sc_monk.hpp | 1009 | _(look up)_ |
-| `celestial_flames` | sc_monk.hpp | 812 | _(look up)_ |
-| `celestial_infusion` | sc_monk.hpp | 809 | _(look up)_ |
-| `charred_passions` | sc_monk.hpp | 840 | _(look up)_ |
-| `chi_burst` | sc_monk.hpp | 722 | _(look up)_ |
-| `chi_torpedo` | sc_monk.hpp | 731 | _(look up)_ |
-| `chi_wave` | sc_monk.hpp | 717 | _(look up)_ |
-| `chijis_swiftness` | sc_monk.hpp | 997 | _(look up)_ |
-| `clarity_of_purpose` | sc_monk.hpp | 1062 | _(look up)_ |
-| `coalescence` | sc_monk.hpp | 1065 | _(look up)_ |
-| `combat_stance` | sc_monk.hpp | 1084 | _(look up)_ |
-| `combat_wisdom` | sc_monk.hpp | 888 | _(look up)_ |
-| `combo_breaker` | sc_monk.hpp | 921 | _(look up)_ |
-| `communion_with_wind` | sc_monk.hpp | 937 | _(look up)_ |
-| `counterstrike` | sc_monk.hpp | 848 | _(look up)_ |
-| `courage_of_the_white_tiger` | sc_monk.hpp | 988 | _(look up)_ |
-| `crane_vortex` | sc_monk.hpp | 906 | _(look up)_ |
-| `crashing_fists` | sc_monk.hpp | 916 | _(look up)_ |
-| `crashing_momentum` | sc_monk.hpp | 701 | _(look up)_ |
-| `cyclones_drift` | sc_monk.hpp | 915 | _(look up)_ |
-| `dance_of_chiji` | sc_monk.hpp | 924 | _(look up)_ |
-| `disable` | sc_monk.hpp | 702 | _(look up)_ |
-| `dragonfire_brew` | sc_monk.hpp | 838 | _(look up)_ |
-| `drinking_horn_cover` | sc_monk.hpp | 917 | _(look up)_ |
-| `dual_threat` | sc_monk.hpp | 898 | _(look up)_ |
-| `echo_technique` | sc_monk.hpp | 939 | _(look up)_ |
-| `elixir_of_determination` | sc_monk.hpp | 793 | _(look up)_ |
-| `elusive_footwork` | sc_monk.hpp | 816 | _(look up)_ |
-| `empty_the_cellar` | sc_monk.hpp | 863 | _(look up)_ |
-| `endless_draught` | sc_monk.hpp | 1053 | _(look up)_ |
-| `energy_burst` | sc_monk.hpp | 932 | _(look up)_ |
-| `escape_from_reality` | sc_monk.hpp | 771 | _(look up)_ |
-| `expeditious_fortification` | sc_monk.hpp | 759 | _(look up)_ |
-| `exploding_keg` | sc_monk.hpp | 850 | _(look up)_ |
-| `face_palm` | sc_monk.hpp | 836 | _(look up)_ |
-| `ferociousness` | sc_monk.hpp | 894 | _(look up)_ |
-| `fists_of_fury` | sc_monk.hpp | 884 | _(look up)_ |
-| `flowing_wisdom` | sc_monk.hpp | 1017 | _(look up)_ |
-| `fluidity_of_motion` | sc_monk.hpp | 815 | _(look up)_ |
-| `flurry_of_xuen` | sc_monk.hpp | 962 | _(look up)_ |
-| `fortifying_brew_determination` | sc_monk.hpp | 829 | _(look up)_ |
-| `fuel_on_the_fire` | sc_monk.hpp | 860 | _(look up)_ |
-| `gai_plins_imperial_brew` | sc_monk.hpp | 821 | _(look up)_ |
-| `gift_of_the_ox` | sc_monk.hpp | 798 | _(look up)_ |
-| `glory_of_the_dawn` | sc_monk.hpp | 903 | _(look up)_ |
-| `hardened_soles` | sc_monk.hpp | 895 | _(look up)_ |
-| `harmonic_combo` | sc_monk.hpp | 961 | _(look up)_ |
-| `harmonic_gambit` | sc_monk.hpp | 1042 | _(look up)_ |
-| `harmonic_surge` | sc_monk.hpp | 1046 | _(look up)_ |
-| `hasty_provocation` | sc_monk.hpp | 735 | _(look up)_ |
-| `heart_of_the_jade_serpent` | sc_monk.hpp | 994 | _(look up)_ |
-| `heart_of_the_ox` | sc_monk.hpp | 869 | _(look up)_ |
-| `high_impact` | sc_monk.hpp | 1077 | _(look up)_ |
-| `high_tolerance` | sc_monk.hpp | 842 | _(look up)_ |
-| `hit_combo` | sc_monk.hpp | 910 | _(look up)_ |
-| `hurricanes_vault` | sc_monk.hpp | 967 | _(look up)_ |
-| `improved_blackout_kick` | sc_monk.hpp | 795 | _(look up)_ |
-| `initiators_edge` | sc_monk.hpp | 1085 | _(look up)_ |
-| `inner_compass` | sc_monk.hpp | 1013 | _(look up)_ |
-| `inner_peace` | sc_monk.hpp | 933 | _(look up)_ |
-| `invoke_niuzao_the_black_ox` | sc_monk.hpp | 856 | _(look up)_ |
-| `invoke_xuen_the_white_tiger` | sc_monk.hpp | 982 | _(look up)_ |
-| `ironshell_brew` | sc_monk.hpp | 758 | _(look up)_ |
-| `jade_flash` | sc_monk.hpp | 807 | _(look up)_ |
-| `jade_ignition` | sc_monk.hpp | 914 | _(look up)_ |
-| `jade_sanctuary` | sc_monk.hpp | 1007 | _(look up)_ |
-| `jadefire_stomp` | sc_monk.hpp | 954 | _(look up)_ |
-| `keg_smash` | sc_monk.hpp | 784 | _(look up)_ |
-| `keg_volley` | sc_monk.hpp | 867 | _(look up)_ |
-| `knowledge_of_the_broken_temple` | sc_monk.hpp | 951 | _(look up)_ |
-| `light_brewing` | sc_monk.hpp | 823 | _(look up)_ |
-| `manifestation` | sc_monk.hpp | 1038 | _(look up)_ |
-| `mantra_of_purity` | sc_monk.hpp | 1054 | _(look up)_ |
-| `mantra_of_tenacity` | sc_monk.hpp | 1055 | _(look up)_ |
-| `martial_agility` | sc_monk.hpp | 964 | _(look up)_ |
-| `meditative_focus` | sc_monk.hpp | 1063 | _(look up)_ |
-| `memory_of_the_monastery` | sc_monk.hpp | 941 | _(look up)_ |
-| `meridian_strikes` | sc_monk.hpp | 907 | _(look up)_ |
-| `mighty_stomp` | sc_monk.hpp | 870 | _(look up)_ |
-| `momentum_boost` | sc_monk.hpp | 886 | _(look up)_ |
-| `niuzaos_protection` | sc_monk.hpp | 1006 | _(look up)_ |
-| `niuzaos_resolve` | sc_monk.hpp | 810 | _(look up)_ |
-| `obsidian_spiral` | sc_monk.hpp | 919 | _(look up)_ |
-| `one_with_the_wind` | sc_monk.hpp | 817 | _(look up)_ |
-| `overwhelming_force` | sc_monk.hpp | 1058 | _(look up)_ |
-| `ox_stance` | sc_monk.hpp | 851 | _(look up)_ |
-| `path_of_jade` | sc_monk.hpp | 968 | _(look up)_ |
-| `path_of_resurgence` | sc_monk.hpp | 1060 | _(look up)_ |
-| `path_of_the_falling_star` | sc_monk.hpp | 1002 | _(look up)_ |
-| `potential_energy` | sc_monk.hpp | 1056 | _(look up)_ |
-| `predictive_training` | sc_monk.hpp | 1088 | _(look up)_ |
-| `press_the_advantage` | sc_monk.hpp | 843 | _(look up)_ |
-| `pretense_of_instability` | sc_monk.hpp | 825 | _(look up)_ |
-| `pride_of_pandaria` | sc_monk.hpp | 1076 | _(look up)_ |
-| `profound_rebuttal` | sc_monk.hpp | 754 | _(look up)_ |
-| `purified_spirit` | sc_monk.hpp | 1039 | _(look up)_ |
-| `purifying_brew` | sc_monk.hpp | 786 | _(look up)_ |
-| `quick_footed` | sc_monk.hpp | 734 | _(look up)_ |
-| `quick_sip` | sc_monk.hpp | 792 | _(look up)_ |
-| `restore_balance` | sc_monk.hpp | 992 | _(look up)_ |
-| `revolving_whirl` | sc_monk.hpp | 938 | _(look up)_ |
-| `ring_of_peace` | sc_monk.hpp | 737 | _(look up)_ |
-| `rising_star` | sc_monk.hpp | 908 | _(look up)_ |
-| `rising_sun_kick` | sc_monk.hpp | 696 | _(look up)_ |
-| `roar_from_the_heavens` | sc_monk.hpp | 1052 | _(look up)_ |
-| `rushing_jade_wind` | sc_monk.hpp | 804 | _(look up)_ |
-| `rushing_wind_kick` | sc_monk.hpp | 944 | _(look up)_ |
-| `salsalabims_strength` | sc_monk.hpp | 828 | _(look up)_ |
-| `scalding_brew` | sc_monk.hpp | 827 | _(look up)_ |
-| `sequenced_strikes` | sc_monk.hpp | 935 | _(look up)_ |
-| `shadowboxing_treads` | sc_monk.hpp | 814 | _(look up)_ |
-| `sharp_reflexes` | sc_monk.hpp | 891 | _(look up)_ |
-| `shuffle` | sc_monk.hpp | 787 | _(look up)_ |
-| `singularly_focused_jade` | sc_monk.hpp | 969 | _(look up)_ |
-| `skyfire_heel` | sc_monk.hpp | 958 | _(look up)_ |
-| `slicing_winds` | sc_monk.hpp | 952 | _(look up)_ |
-| `song_of_chi_ji` | sc_monk.hpp | 738 | _(look up)_ |
-| `special_delivery` | sc_monk.hpp | 802 | _(look up)_ |
-| `spirit_of_the_ox` | sc_monk.hpp | 805 | _(look up)_ |
-| `spirits_essence` | sc_monk.hpp | 739 | _(look up)_ |
-| `spiritual_focus` | sc_monk.hpp | 918 | _(look up)_ |
-| `stagger` | sc_monk.hpp | 697 | _(look up)_ |
-| `staggering_strikes` | sc_monk.hpp | 791 | _(look up)_ |
-| `stormstouts_last_keg` | sc_monk.hpp | 868 | _(look up)_ |
-| `strength_of_spirit` | sc_monk.hpp | 753 | _(look up)_ |
-| `strength_of_the_black_ox` | sc_monk.hpp | 998 | _(look up)_ |
-| `strike_of_the_windlord` | sc_monk.hpp | 927 | _(look up)_ |
-| `summon_black_ox_statue` | sc_monk.hpp | 755 | _(look up)_ |
-| `sunfire_spiral` | sc_monk.hpp | 936 | _(look up)_ |
-| `swift_as_a_coursing_river` | sc_monk.hpp | 796 | _(look up)_ |
-| `teachings_of_the_monastery` | sc_monk.hpp | 900 | _(look up)_ |
-| `temple_training` | sc_monk.hpp | 986 | _(look up)_ |
-| `thunderfist` | sc_monk.hpp | 948 | _(look up)_ |
-| `tiger_fang` | sc_monk.hpp | 727 | _(look up)_ |
-| `tigereye_brew_1` | sc_monk.hpp | 971 | _(look up)_ |
-| `tigereye_brew_2` | sc_monk.hpp | 973 | _(look up)_ |
-| `tigereye_brew_3` | sc_monk.hpp | 974 | _(look up)_ |
-| `tigers_lust` | sc_monk.hpp | 700 | _(look up)_ |
-| `tigers_vigor` | sc_monk.hpp | 1051 | _(look up)_ |
-| `touch_of_the_tiger` | sc_monk.hpp | 893 | _(look up)_ |
-| `training_of_niuzao` | sc_monk.hpp | 824 | _(look up)_ |
-| `tranquil_spirit` | sc_monk.hpp | 835 | _(look up)_ |
-| `transcendence_linked_spirits` | sc_monk.hpp | 772 | _(look up)_ |
-| `unity_within` | sc_monk.hpp | 1019 | _(look up)_ |
-| `universal_energy` | sc_monk.hpp | 940 | _(look up)_ |
-| `veterans_eye` | sc_monk.hpp | 1079 | _(look up)_ |
-| `vital_flame` | sc_monk.hpp | 854 | _(look up)_ |
-| `walk_with_the_ox` | sc_monk.hpp | 832 | _(look up)_ |
-| `way_of_a_thousand_strikes` | sc_monk.hpp | 1061 | _(look up)_ |
-| `weapon_of_wind` | sc_monk.hpp | 950 | _(look up)_ |
-| `whirling_dragon_punch` | sc_monk.hpp | 928 | _(look up)_ |
-| `whirling_steel` | sc_monk.hpp | 1087 | _(look up)_ |
-| `winds_reach` | sc_monk.hpp | 708 | _(look up)_ |
-| `xuens_battlegear` | sc_monk.hpp | 947 | _(look up)_ |
-| `xuens_bond` | sc_monk.hpp | 993 | _(look up)_ |
-| `xuens_guidance` | sc_monk.hpp | 987 | _(look up)_ |
-| `yulons_avatar` | sc_monk.hpp | 1003 | _(look up)_ |
-| `yulons_grace` | sc_monk.hpp | 744 | _(look up)_ |
-| `zen_state` | sc_monk.hpp | 834 | _(look up)_ |
-| `zenith` | sc_monk.hpp | 909 | _(look up)_ |
-| `zenith_stomp` | sc_monk.hpp | 756 | _(look up)_ |
+## Hunter (250 entries)
 
-## Priest (148 entries)
+**By Name:**
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `abyssal_reverie` | sc_priest.hpp | 435 | _(look up)_ |
-| `afterlife` | sc_priest.hpp | 475 | _(look up)_ |
-| `ancient_madness` | sc_priest.hpp | 349 | _(look up)_ |
-| `angelic_touch` | sc_priest.hpp | 493 | _(look up)_ |
-| `angels_mercy` | sc_priest.hpp | 290 | _(look up)_ |
-| `apotheosis` | sc_priest.hpp | 494 | _(look up)_ |
-| `ascendant_prayers` | sc_priest.hpp | 546 | _(look up)_ |
-| `assured_safety` | sc_priest.hpp | 563 | _(look up)_ |
-| `atonement` | sc_priest.hpp | 399 | _(look up)_ |
-| `benediction` | sc_priest.hpp | 484 | _(look up)_ |
-| `benevolence` | sc_priest.hpp | 303 | _(look up)_ |
-| `blaze_of_light` | sc_priest.hpp | 443 | _(look up)_ |
-| `borrowed_time` | sc_priest.hpp | 433 | _(look up)_ |
-| `bright_pupil` | sc_priest.hpp | 414 | _(look up)_ |
-| `burning_vehemence` | sc_priest.hpp | 477 | _(look up)_ |
-| `castigation` | sc_priest.hpp | 438 | _(look up)_ |
-| `censure` | sc_priest.hpp | 469 | _(look up)_ |
-| `cosmic_ripple` | sc_priest.hpp | 474 | _(look up)_ |
-| `cosmic_wave` | sc_priest.hpp | 481 | _(look up)_ |
-| `crisis_management` | sc_priest.hpp | 505 | _(look up)_ |
-| `dark_energy` | sc_priest.hpp | 583 | _(look up)_ |
-| `dark_indulgence` | sc_priest.hpp | 411 | _(look up)_ |
-| `darkening_horizon` | sc_priest.hpp | 593 | _(look up)_ |
-| `death_and_madness` | sc_priest.hpp | 362 | _(look up)_ |
-| `deaths_torment` | sc_priest.hpp | 370 | _(look up)_ |
-| `deathspeaker` | sc_priest.hpp | 361 | _(look up)_ |
-| `desperate_measures` | sc_priest.hpp | 568 | _(look up)_ |
-| `desperate_times` | sc_priest.hpp | 509 | _(look up)_ |
-| `dispel_magic` | sc_priest.hpp | 247 | _(look up)_ |
-| `dispersing_light` | sc_priest.hpp | 497 | _(look up)_ |
-| `distorted_reality` | sc_priest.hpp | 357 | _(look up)_ |
-| `divine_aegis` | sc_priest.hpp | 441 | _(look up)_ |
-| `divine_feathers` | sc_priest.hpp | 564 | _(look up)_ |
-| `divine_hymn` | sc_priest.hpp | 482 | _(look up)_ |
-| `divine_image` | sc_priest.hpp | 514 | _(look up)_ |
-| `divine_procession` | sc_priest.hpp | 428 | _(look up)_ |
-| `divine_service` | sc_priest.hpp | 490 | _(look up)_ |
-| `divinity` | sc_priest.hpp | 501 | _(look up)_ |
-| `dominate_mind` | sc_priest.hpp | 266 | _(look up)_ |
-| `efficient_prayers` | sc_priest.hpp | 486 | _(look up)_ |
-| `embrace_the_shadow` | sc_priest.hpp | 600 | _(look up)_ |
-| `empyreal_blaze` | sc_priest.hpp | 470 | _(look up)_ |
-| `encroaching_shadows` | sc_priest.hpp | 412 | _(look up)_ |
-| `enduring_luminescence` | sc_priest.hpp | 415 | _(look up)_ |
-| `energy_compression` | sc_priest.hpp | 547 | _(look up)_ |
-| `enlightenment` | sc_priest.hpp | 483 | _(look up)_ |
-| `entropic_rift` | sc_priest.hpp | 577 | _(look up)_ |
-| `epiphany` | sc_priest.hpp | 521 | _(look up)_ |
-| `eternal_barrier` | sc_priest.hpp | 451 | _(look up)_ |
-| `eternal_sanctity` | sc_priest.hpp | 500 | _(look up)_ |
-| `evangelism` | sc_priest.hpp | 434 | _(look up)_ |
-| `expiation` | sc_priest.hpp | 449 | _(look up)_ |
-| `fade` | sc_priest.hpp | 288 | _(look up)_ |
-| `focused_power` | sc_priest.hpp | 304 | _(look up)_ |
-| `forseen_circumstances` | sc_priest.hpp | 566 | _(look up)_ |
-| `gales_of_song` | sc_priest.hpp | 489 | _(look up)_ |
-| `greater_smite` | sc_priest.hpp | 444 | _(look up)_ |
-| `guardian_angel` | sc_priest.hpp | 468 | _(look up)_ |
-| `guardian_spirit` | sc_priest.hpp | 463 | _(look up)_ |
-| `guiding_light` | sc_priest.hpp | 559 | _(look up)_ |
-| `harsh_discipline` | sc_priest.hpp | 447 | _(look up)_ |
-| `healing_focus` | sc_priest.hpp | 487 | _(look up)_ |
-| `heightened_alteration` | sc_priest.hpp | 542 | _(look up)_ |
-| `holy_celerity` | sc_priest.hpp | 502 | _(look up)_ |
-| `holy_fire` | sc_priest.hpp | 243 | _(look up)_ |
-| `holy_ray` | sc_priest.hpp | 423 | _(look up)_ |
-| `holy_word_chastise` | sc_priest.hpp | 464 | _(look up)_ |
-| `holy_word_sanctify` | sc_priest.hpp | 462 | _(look up)_ |
-| `holy_word_serenity` | sc_priest.hpp | 460 | _(look up)_ |
-| `idol_of_cthun` | sc_priest.hpp | 387 | _(look up)_ |
-| `idol_of_nzoth` | sc_priest.hpp | 380 | _(look up)_ |
-| `idol_of_yoggsaron` | sc_priest.hpp | 386 | _(look up)_ |
-| `idol_of_yshaarj` | sc_priest.hpp | 377 | _(look up)_ |
-| `improved_voidform` | sc_priest.hpp | 348 | _(look up)_ |
-| `incessant_screams` | sc_priest.hpp | 540 | _(look up)_ |
-| `indemnity` | sc_priest.hpp | 429 | _(look up)_ |
-| `inner_focus` | sc_priest.hpp | 437 | _(look up)_ |
-| `inner_light` | sc_priest.hpp | 452 | _(look up)_ |
-| `intangibility` | sc_priest.hpp | 322 | _(look up)_ |
-| `invoked_nightmares` | sc_priest.hpp | 321 | _(look up)_ |
-| `lasting_words` | sc_priest.hpp | 519 | _(look up)_ |
-| `lenience` | sc_priest.hpp | 424 | _(look up)_ |
-| `light_in_the_darkness` | sc_priest.hpp | 507 | _(look up)_ |
-| `light_of_the_naaru` | sc_priest.hpp | 506 | _(look up)_ |
-| `lights_inspiration` | sc_priest.hpp | 297 | _(look up)_ |
-| `lights_promise` | sc_priest.hpp | 407 | _(look up)_ |
-| `lightweaver` | sc_priest.hpp | 512 | _(look up)_ |
-| `master_the_darkness` | sc_priest.hpp | 454 | _(look up)_ |
-| `mental_fortitude` | sc_priest.hpp | 323 | _(look up)_ |
-| `mind_control` | sc_priest.hpp | 265 | _(look up)_ |
-| `minds_eye` | sc_priest.hpp | 356 | _(look up)_ |
-| `miracle_worker` | sc_priest.hpp | 499 | _(look up)_ |
-| `misery` | sc_priest.hpp | 320 | _(look up)_ |
-| `no_escape` | sc_priest.hpp | 582 | _(look up)_ |
-| `occultist` | sc_priest.hpp | 431 | _(look up)_ |
-| `pain_and_suffering` | sc_priest.hpp | 430 | _(look up)_ |
-| `pain_suppression` | sc_priest.hpp | 404 | _(look up)_ |
-| `pain_transformation` | sc_priest.hpp | 409 | _(look up)_ |
-| `painful_punishment` | sc_priest.hpp | 420 | _(look up)_ |
-| `petrifying_scream` | sc_priest.hpp | 257 | _(look up)_ |
-| `piety` | sc_priest.hpp | 570 | _(look up)_ |
-| `plea` | sc_priest.hpp | 416 | _(look up)_ |
-| `power_of_the_dark_side` | sc_priest.hpp | 405 | _(look up)_ |
-| `power_word_barrier` | sc_priest.hpp | 419 | _(look up)_ |
-| `power_word_radiance` | sc_priest.hpp | 403 | _(look up)_ |
-| `prayer_of_healing` | sc_priest.hpp | 466 | _(look up)_ |
-| `prayerful_litany` | sc_priest.hpp | 473 | _(look up)_ |
-| `prayers_of_the_virtuous` | sc_priest.hpp | 495 | _(look up)_ |
-| `preemptive_care` | sc_priest.hpp | 561 | _(look up)_ |
-| `preventive_measures` | sc_priest.hpp | 560 | _(look up)_ |
-| `prismatic_echoes` | sc_priest.hpp | 508 | _(look up)_ |
-| `prompt_prognosis` | sc_priest.hpp | 569 | _(look up)_ |
-| `prophets_will` | sc_priest.hpp | 567 | _(look up)_ |
-| `protector_of_the_frail` | sc_priest.hpp | 410 | _(look up)_ |
-| `psychic_voice` | sc_priest.hpp | 267 | _(look up)_ |
-| `purge_the_wicked` | sc_priest.hpp | 427 | _(look up)_ |
-| `radiant_plea` | sc_priest.hpp | 510 | _(look up)_ |
-| `realized_potential` | sc_priest.hpp | 545 | _(look up)_ |
-| `renewed_faith` | sc_priest.hpp | 491 | _(look up)_ |
-| `restitution` | sc_priest.hpp | 467 | _(look up)_ |
-| `revel_in_darkness` | sc_priest.hpp | 421 | _(look up)_ |
-| `sanctuary` | sc_priest.hpp | 408 | _(look up)_ |
-| `save_the_day` | sc_priest.hpp | 565 | _(look up)_ |
-| `say_your_prayers` | sc_priest.hpp | 503 | _(look up)_ |
-| `seraphic_crescendo` | sc_priest.hpp | 488 | _(look up)_ |
-| `shackle_undead` | sc_priest.hpp | 276 | _(look up)_ |
-| `shadow_mend` | sc_priest.hpp | 439 | _(look up)_ |
-| `shadow_tap` | sc_priest.hpp | 425 | _(look up)_ |
-| `sheer_terror` | sc_priest.hpp | 256 | _(look up)_ |
-| `shield_discipline` | sc_priest.hpp | 417 | _(look up)_ |
-| `shock_pulse` | sc_priest.hpp | 539 | _(look up)_ |
-| `spiritwell` | sc_priest.hpp | 544 | _(look up)_ |
-| `sustained_potency` | sc_priest.hpp | 548 | _(look up)_ |
-| `trail_of_light` | sc_priest.hpp | 498 | _(look up)_ |
-| `twinsight` | sc_priest.hpp | 571 | _(look up)_ |
-| `ultimate_penitence` | sc_priest.hpp | 418 | _(look up)_ |
-| `ultimate_serenity` | sc_priest.hpp | 513 | _(look up)_ |
-| `uplifting_words` | sc_priest.hpp | 480 | _(look up)_ |
-| `voice_of_harmony` | sc_priest.hpp | 476 | _(look up)_ |
-| `void_apparitions_1` | sc_priest.hpp | 389 | _(look up)_ |
-| `void_apparitions_2` | sc_priest.hpp | 390 | _(look up)_ |
-| `void_apparitions_3` | sc_priest.hpp | 393 | _(look up)_ |
-| `void_empowerment` | sc_priest.hpp | 591 | _(look up)_ |
-| `void_leech` | sc_priest.hpp | 599 | _(look up)_ |
-| `void_tendrils` | sc_priest.hpp | 268 | _(look up)_ |
-| `waste_no_time` | sc_priest.hpp | 562 | _(look up)_ |
-| `weal_and_woe` | sc_priest.hpp | 445 | _(look up)_ |
-| `word_of_supremacy` | sc_priest.hpp | 541 | _(look up)_ |
+| Talent Name | File |
+|-------------|------|
+| `A Fire Inside` | sc_demon_hunter.cpp |
+| `Accelerated Blade` | sc_demon_hunter.cpp |
+| `Agonizing Flames` | sc_demon_hunter.cpp |
+| `Aldrachi Design` | sc_demon_hunter.cpp |
+| `Aldrachi Tactics` | sc_demon_hunter.cpp |
+| `Animal Companion` | sc_hunter.cpp |
+| `Army Unto Oneself` | sc_demon_hunter.cpp |
+| `Art of the Glaive` | sc_demon_hunter.cpp |
+| `Ascending Flame` | sc_demon_hunter.cpp |
+| `Aspect of the Hydra` | sc_hunter.cpp |
+| `Aura of Pain` | sc_demon_hunter.cpp |
+| `Avian Specialization` | sc_hunter.cpp |
+| `Banshee's Mark` | sc_hunter.cpp |
+| `Better Together` | sc_hunter.cpp |
+| `Black Arrow` | sc_hunter.cpp |
+| `Blackrock Munitions` | sc_hunter.cpp |
+| `Bladecraft` | sc_demon_hunter.cpp |
+| `Blazing Path` | sc_demon_hunter.cpp |
+| `Bleak Arrows` | sc_hunter.cpp |
+| `Bleak Powder` | sc_hunter.cpp |
+| `Bloody Claws` | sc_hunter.cpp |
+| `Bloody Frenzy` | sc_hunter.cpp |
+| `Bouncing Glaives` | sc_demon_hunter.cpp |
+| `Broken Spirit` | sc_demon_hunter.cpp |
+| `Bullet Hell` | sc_hunter.cpp |
+| `Burn It Out` | sc_demon_hunter.cpp |
+| `Burning Alive` | sc_demon_hunter.cpp |
+| `Burning Blood` | sc_demon_hunter.cpp |
+| `Burning Hatred` | sc_demon_hunter.cpp |
+| `Burning Wound` | sc_demon_hunter.cpp |
+| `Calamitous` | sc_demon_hunter.cpp |
+| `Calcified Spikes` | sc_demon_hunter.cpp |
+| `Calling the Shots` | sc_hunter.cpp |
+| `Can't Miss, Won't Miss` | sc_hunter.cpp |
+| `Catastrophe` | sc_demon_hunter.cpp |
+| `Celestial Echoes` | sc_demon_hunter.cpp |
+| `Chains of Anger` | sc_demon_hunter.cpp |
+| `Chaos Nova` | sc_demon_hunter.cpp |
+| `Chaos Theory` | sc_demon_hunter.cpp |
+| `Chaotic Disposition` | sc_demon_hunter.cpp |
+| `Chaotic Transformation` | sc_demon_hunter.cpp |
+| `Charred Flesh` | sc_demon_hunter.cpp |
+| `Charred Warglaives` | sc_demon_hunter.cpp |
+| `Collapsing Star` | sc_demon_hunter.cpp |
+| `Collective Anguish` | sc_demon_hunter.cpp |
+| `Consume Magic` | sc_demon_hunter.cpp |
+| `Corpsecaller` | sc_hunter.cpp |
+| `Critical Chaos` | sc_demon_hunter.cpp |
+| `Cycle of Binding` | sc_demon_hunter.cpp |
+| `Cycle of Hatred` | sc_demon_hunter.cpp |
+| `Dancing with Fate` | sc_demon_hunter.cpp |
+| `Dark Matter` | sc_demon_hunter.cpp |
+| `Darkglare Boon` | sc_demon_hunter.cpp |
+| `Darkness` | sc_demon_hunter.cpp |
+| `Dash of Chaos` | sc_demon_hunter.cpp |
+| `Deadeye` | sc_hunter.cpp |
+| `Deflecting Dance` | sc_demon_hunter.cpp |
+| `Desperate Instincts` | sc_demon_hunter.cpp |
+| `Devourer's Bite` | sc_demon_hunter.cpp |
+| `Devourer's Edge` | sc_demon_hunter.cpp |
+| `Dire Summons` | sc_hunter.cpp |
+| `Disrupting Fury` | sc_demon_hunter.cpp |
+| `Don't Look Back` | sc_hunter.cpp |
+| `Doomsayer` | sc_demon_hunter.cpp |
+| `Down in Flames` | sc_demon_hunter.cpp |
+| `Duty Eternal` | sc_demon_hunter.cpp |
+| `Ebon Bowstring` | sc_hunter.cpp |
+| `Emptiness` | sc_demon_hunter.cpp |
+| `Entropy` | sc_demon_hunter.cpp |
+| `Eradicate` | sc_demon_hunter.cpp |
+| `Erratic Felheart` | sc_demon_hunter.cpp |
+| `Essence Break` | sc_demon_hunter.cpp |
+| `Eternal Hunt` | sc_demon_hunter.cpp |
+| `Exergy` | sc_demon_hunter.cpp |
+| `Eye Beam` | sc_demon_hunter.cpp |
+| `Fallout` | sc_demon_hunter.cpp |
+| `Feast of Souls` | sc_demon_hunter.cpp |
+| `Feed the Demon` | sc_demon_hunter.cpp |
+| `Fel Devastation` | sc_demon_hunter.cpp |
+| `Fel Flame Fortification` | sc_demon_hunter.cpp |
+| `Felblade` | sc_demon_hunter.cpp |
+| `Felbound` | sc_demon_hunter.cpp |
+| `Felfire Fist` | sc_demon_hunter.cpp |
+| `Felfire Haste` | sc_demon_hunter.cpp |
+| `Fiery Brand` | sc_demon_hunter.cpp |
+| `Fiery Demise` | sc_demon_hunter.cpp |
+| `First Blood` | sc_demon_hunter.cpp |
+| `Frailty` | sc_demon_hunter.cpp |
+| `Furious` | sc_demon_hunter.cpp |
+| `Furious Gaze` | sc_demon_hunter.cpp |
+| `Furious Throws` | sc_demon_hunter.cpp |
+| `Fury of the Aldrachi` | sc_demon_hunter.cpp |
+| `Fury of the Wyvern` | sc_hunter.cpp |
+| `Glaive Tempest` | sc_demon_hunter.cpp |
+| `Growing Inferno` | sc_demon_hunter.cpp |
+| `Guile` | sc_demon_hunter.cpp |
+| `Harness the Cosmos` | sc_demon_hunter.cpp |
+| `Headshot` | sc_hunter.cpp |
+| `Hogstrider` | sc_hunter.cpp |
+| `Hoof and Blade` | sc_hunter.cpp |
+| `Howl of the Pack Leader` | sc_hunter.cpp |
+| `Hungering Slash` | sc_demon_hunter.cpp |
+| `Illidari Knowledge` | sc_demon_hunter.cpp |
+| `Impending Apocalypse` | sc_demon_hunter.cpp |
+| `Imprison` | sc_demon_hunter.cpp |
+| `Improved Chaos Strike` | sc_demon_hunter.cpp |
+| `Improved Consume` | sc_demon_hunter.cpp |
+| `Improved Disrupt` | sc_demon_hunter.cpp |
+| `Improved Sigil of Misery` | sc_demon_hunter.cpp |
+| `Incisive Blade` | sc_demon_hunter.cpp |
+| `Incorruptible Spirit` | sc_demon_hunter.cpp |
+| `Inertia` | sc_demon_hunter.cpp |
+| `Initiative` | sc_demon_hunter.cpp |
+| `Internal Struggle` | sc_demon_hunter.cpp |
+| `Invigorating Pulse` | sc_hunter.cpp |
+| `Isolated Prey` | sc_demon_hunter.cpp |
+| `Keen Edge` | sc_demon_hunter.cpp |
+| `Keen Engagement` | sc_demon_hunter.cpp |
+| `Know Your Enemy` | sc_demon_hunter.cpp |
+| `Last Resort` | sc_demon_hunter.cpp |
+| `Live by the Glaive` | sc_demon_hunter.cpp |
+| `Long Night` | sc_demon_hunter.cpp |
+| `Lost in Darkness` | sc_demon_hunter.cpp |
+| `Lunar Calling` | sc_hunter.cpp |
+| `Lunar Storm` | sc_hunter.cpp |
+| `Mass Acceleration` | sc_demon_hunter.cpp |
+| `Midnight` | sc_demon_hunter.cpp |
+| `Moment of Craving` | sc_demon_hunter.cpp |
+| `Mongoose Rounds` | sc_hunter.cpp |
+| `Moon's Blessing` | sc_hunter.cpp |
+| `Moonlight Chakram` | sc_hunter.cpp |
+| `Mortal Dance` | sc_demon_hunter.cpp |
+| `Netherwalk` | sc_demon_hunter.cpp |
+| `No Mercy` | sc_hunter.cpp |
+| `Obsidian Arrowhead` | sc_hunter.cpp |
+| `On Target` | sc_hunter.cpp |
+| `Open Fire` | sc_hunter.cpp |
+| `Otherworldly Focus` | sc_demon_hunter.cpp |
+| `Pack Mentality` | sc_hunter.cpp |
+| `Pact of the Hollow` | sc_hunter.cpp |
+| `Painbringer` | sc_demon_hunter.cpp |
+| `Path to Oblivion` | sc_demon_hunter.cpp |
+| `Perfectly Balanced Glaive` | sc_demon_hunter.cpp |
+| `Phase Shift` | sc_demon_hunter.cpp |
+| `Pitch Black` | sc_demon_hunter.cpp |
+| `Predator's Thirst` | sc_demon_hunter.cpp |
+| `Preemptive Strike` | sc_demon_hunter.cpp |
+| `Pursuit` | sc_demon_hunter.cpp |
+| `Quickened Sigils` | sc_demon_hunter.cpp |
+| `Radiant Edge` | sc_hunter.cpp |
+| `Ragefire` | sc_demon_hunter.cpp |
+| `Reaver's Mark` | sc_demon_hunter.cpp |
+| `Relentless Onslaught` | sc_demon_hunter.cpp |
+| `Remorseless` | sc_demon_hunter.cpp |
+| `Retaliation` | sc_demon_hunter.cpp |
+| `Revel in Pain` | sc_demon_hunter.cpp |
+| `Roaring Fire` | sc_demon_hunter.cpp |
+| `Rolling Torment` | sc_demon_hunter.cpp |
+| `Ruinous Bulwark` | sc_demon_hunter.cpp |
+| `Scars of Suffering` | sc_demon_hunter.cpp |
+| `Screaming Brutality` | sc_demon_hunter.cpp |
+| `Scythe's Embrace` | sc_demon_hunter.cpp |
+| `Second Helping` | sc_demon_hunter.cpp |
+| `Sentinel` | sc_hunter.cpp |
+| `Serrated Glaive` | sc_demon_hunter.cpp |
+| `Sharpened Claws` | sc_hunter.cpp |
+| `Sharpened Fangs` | sc_hunter.cpp |
+| `Shattered Destiny` | sc_demon_hunter.cpp |
+| `Shattered Restoration` | sc_demon_hunter.cpp |
+| `Shrapnel Bomb` | sc_hunter.cpp |
+| `Shrapnel Shot` | sc_hunter.cpp |
+| `Sic 'Em` | sc_hunter.cpp |
+| `Sigil of Chains` | sc_demon_hunter.cpp |
+| `Sigil of Misery` | sc_demon_hunter.cpp |
+| `Sigil of Silence` | sc_demon_hunter.cpp |
+| `Sigil of Spite` | sc_demon_hunter.cpp |
+| `Singed Spirit` | sc_demon_hunter.cpp |
+| `Singular Strikes` | sc_demon_hunter.cpp |
+| `Snakeskin Quiver` | sc_hunter.cpp |
+| `Solitary Companion` | sc_hunter.cpp |
+| `Soul Barrier` | sc_demon_hunter.cpp |
+| `Soul Carver` | sc_demon_hunter.cpp |
+| `Soul Cleanse` | sc_demon_hunter.cpp |
+| `Soul Drinker` | sc_hunter.cpp |
+| `Soul Glutton` | sc_demon_hunter.cpp |
+| `Soul Immolation` | sc_demon_hunter.cpp |
+| `Soul Rending` | sc_demon_hunter.cpp |
+| `Soul Sigils` | sc_demon_hunter.cpp |
+| `Soul Splitter` | sc_demon_hunter.cpp |
+| `Soulcrush` | sc_demon_hunter.cpp |
+| `Soulforged Blades` | sc_demon_hunter.cpp |
+| `Soulmonger` | sc_demon_hunter.cpp |
+| `Soulscar` | sc_demon_hunter.cpp |
+| `Soulshaper` | sc_demon_hunter.cpp |
+| `Spontaneous Immolation` | sc_demon_hunter.cpp |
+| `Stalk and Strike` | sc_hunter.cpp |
+| `Stampede!` | sc_hunter.cpp |
+| `Star Fragments` | sc_demon_hunter.cpp |
+| `Stargazer` | sc_hunter.cpp |
+| `State of Matter` | sc_demon_hunter.cpp |
+| `Stoke the Flames` | sc_demon_hunter.cpp |
+| `Swallowed Anger` | sc_demon_hunter.cpp |
+| `Sweet Release` | sc_demon_hunter.cpp |
+| `Sweet Suffering` | sc_demon_hunter.cpp |
+| `Tar Trap` | sc_hunter.cpp |
+| `Tempered Soul` | sc_demon_hunter.cpp |
+| `Tempered Steel` | sc_demon_hunter.cpp |
+| `Tenacious` | sc_hunter.cpp |
+| `The Bell Tolls` | sc_hunter.cpp |
+| `The Hunt` | sc_demon_hunter.cpp |
+| `Thrill of the Fight` | sc_demon_hunter.cpp |
+| `Trail of Ruin` | sc_demon_hunter.cpp |
+| `Trick Shots` | sc_hunter.cpp |
+| `Twilight Requiem` | sc_hunter.cpp |
+| `Umbral Blade` | sc_demon_hunter.cpp |
+| `Umbral Reach` | sc_hunter.cpp |
+| `Unbound Chaos` | sc_demon_hunter.cpp |
+| `Unbreakable Bond` | sc_hunter.cpp |
+| `Unerring Vision` | sc_hunter.cpp |
+| `Unhindered Assault` | sc_demon_hunter.cpp |
+| `Unrestrained Fury` | sc_demon_hunter.cpp |
+| `Untethered Rage` | sc_demon_hunter.cpp |
+| `Ursine Fury` | sc_hunter.cpp |
+| `Vengeful Beast` | sc_demon_hunter.cpp |
+| `Vengeful Bonds` | sc_demon_hunter.cpp |
+| `Vengeful Retreat` | sc_demon_hunter.cpp |
+| `Void Metamorphosis` | sc_demon_hunter.cpp |
+| `Void Nova` | sc_demon_hunter.cpp |
+| `Void Ray` | sc_demon_hunter.cpp |
+| `Void Reaver` | sc_demon_hunter.cpp |
+| `Voidblade` | sc_demon_hunter.cpp |
+| `Voidglare Boon` | sc_demon_hunter.cpp |
+| `Voidpurge` | sc_demon_hunter.cpp |
+| `Voidrage` | sc_demon_hunter.cpp |
+| `Voidrush` | sc_demon_hunter.cpp |
+| `Voidsurge` | sc_demon_hunter.cpp |
+| `Volatile Flameblood` | sc_demon_hunter.cpp |
+| `Vulnerability` | sc_demon_hunter.cpp |
+| `Vulnerability` | sc_hunter.cpp |
+| `Wailing Dead` | sc_hunter.cpp |
+| `Wallop` | sc_hunter.cpp |
+| `Warblade's Hunger` | sc_demon_hunter.cpp |
+| `Waste Not` | sc_demon_hunter.cpp |
+| `Wild Instincts` | sc_hunter.cpp |
+| `Will of the Illidari` | sc_demon_hunter.cpp |
+| `Wings of Wrath` | sc_demon_hunter.cpp |
+| `Withering Fire` | sc_hunter.cpp |
+| `World Killer` | sc_demon_hunter.cpp |
+| `Wounded Quarry` | sc_demon_hunter.cpp |
+| `Wyvern's Gaze` | sc_hunter.cpp |
 
-## Rogue (200 entries)
+## Mage (85 entries)
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `ace_up_your_sleeve` | sc_rogue.cpp | 863 | _(look up)_ |
-| `acrobatic_strikes` | sc_rogue.cpp | 851 | _(look up)_ |
-| `adrenaline_rush` | sc_rogue.cpp | 834 | _(look up)_ |
-| `airborne_irritant` | sc_rogue.cpp | 714 | _(look up)_ |
-| `amplifying_poison` | sc_rogue.cpp | 805 | _(look up)_ |
-| `ancient_arts_1` | sc_rogue.cpp | 950 | _(look up)_ |
-| `ancient_arts_2` | sc_rogue.cpp | 951 | _(look up)_ |
-| `ancient_arts_3` | sc_rogue.cpp | 952 | _(look up)_ |
-| `atrophic_poison` | sc_rogue.cpp | 735 | _(look up)_ |
-| `audacity` | sc_rogue.cpp | 859 | _(look up)_ |
-| `avulsion` | sc_rogue.cpp | 811 | _(look up)_ |
-| `bait_and_switch` | sc_rogue.cpp | 969 | _(look up)_ |
-| `blackjack` | sc_rogue.cpp | 720 | _(look up)_ |
-| `blade_rush` | sc_rogue.cpp | 864 | _(look up)_ |
-| `blinding_powder` | sc_rogue.cpp | 841 | _(look up)_ |
-| `blindside` | sc_rogue.cpp | 807 | _(look up)_ |
-| `bloody_mess` | sc_rogue.cpp | 789 | _(look up)_ |
-| `canny_strikes` | sc_rogue.cpp | 780 | _(look up)_ |
-| `caustic_spatter` | sc_rogue.cpp | 791 | _(look up)_ |
-| `cheat_death` | sc_rogue.cpp | 719 | _(look up)_ |
-| `chosens_revelry` | sc_rogue.cpp | 986 | _(look up)_ |
-| `clear_the_witnesses` | sc_rogue.cpp | 960 | _(look up)_ |
-| `clever_combatant` | sc_rogue.cpp | 1026 | _(look up)_ |
-| `cloaked_in_shadow` | sc_rogue.cpp | 908 | _(look up)_ |
-| `cloud_cover` | sc_rogue.cpp | 1022 | _(look up)_ |
-| `combat_potency` | sc_rogue.cpp | 837 | _(look up)_ |
-| `combat_stamina` | sc_rogue.cpp | 838 | _(look up)_ |
-| `controlled_chaos` | sc_rogue.cpp | 987 | _(look up)_ |
-| `corrupt_the_blood` | sc_rogue.cpp | 964 | _(look up)_ |
-| `coup_de_grace` | sc_rogue.cpp | 1030 | _(look up)_ |
-| `crescendo_of_violence` | sc_rogue.cpp | 872 | _(look up)_ |
-| `crimson_tempest` | sc_rogue.cpp | 779 | _(look up)_ |
-| `dancing_steel` | sc_rogue.cpp | 861 | _(look up)_ |
-| `danse_macabre` | sc_rogue.cpp | 941 | _(look up)_ |
-| `dark_brew` | sc_rogue.cpp | 943 | _(look up)_ |
-| `dark_shadow` | sc_rogue.cpp | 936 | _(look up)_ |
-| `darkest_night` | sc_rogue.cpp | 980 | _(look up)_ |
-| `dashing_scoundrel` | sc_rogue.cpp | 820 | _(look up)_ |
-| `deadly_momentum` | sc_rogue.cpp | 817 | _(look up)_ |
-| `deadly_poison` | sc_rogue.cpp | 773 | _(look up)_ |
-| `deadly_pursuit` | sc_rogue.cpp | 880 | _(look up)_ |
-| `deal_fate` | sc_rogue.cpp | 988 | _(look up)_ |
-| `death_perception` | sc_rogue.cpp | 935 | _(look up)_ |
-| `deathmark` | sc_rogue.cpp | 790 | _(look up)_ |
-| `deaths_arrival` | sc_rogue.cpp | 989 | _(look up)_ |
-| `deathstalkers_mark` | sc_rogue.cpp | 958 | _(look up)_ |
-| `deepening_shadows` | sc_rogue.cpp | 927 | _(look up)_ |
-| `deeper_daggers` | sc_rogue.cpp | 933 | _(look up)_ |
-| `deft_maneuvers` | sc_rogue.cpp | 849 | _(look up)_ |
-| `delivered_doom` | sc_rogue.cpp | 990 | _(look up)_ |
-| `destiny_defined` | sc_rogue.cpp | 991 | _(look up)_ |
-| `devious_distractions` | sc_rogue.cpp | 1017 | _(look up)_ |
-| `devious_stratagem` | sc_rogue.cpp | 845 | _(look up)_ |
-| `disorienting_strikes` | sc_rogue.cpp | 1021 | _(look up)_ |
-| `dont_be_suspicious` | sc_rogue.cpp | 1016 | _(look up)_ |
-| `doomblade` | sc_rogue.cpp | 786 | _(look up)_ |
-| `double_dance` | sc_rogue.cpp | 919 | _(look up)_ |
-| `dragon_bone_dice` | sc_rogue.cpp | 875 | _(look up)_ |
-| `dragon_tempered_blades` | sc_rogue.cpp | 821 | _(look up)_ |
-| `echoing_reprimand` | sc_rogue.cpp | 758 | _(look up)_ |
-| `edge_case` | sc_rogue.cpp | 992 | _(look up)_ |
-| `elusiveness` | sc_rogue.cpp | 718 | _(look up)_ |
-| `ephemeral_bond` | sc_rogue.cpp | 902 | _(look up)_ |
-| `ethereal_cloak` | sc_rogue.cpp | 968 | _(look up)_ |
-| `exhilarating_execution` | sc_rogue.cpp | 903 | _(look up)_ |
-| `expert_duelist` | sc_rogue.cpp | 876 | _(look up)_ |
-| `fade_to_nothing` | sc_rogue.cpp | 907 | _(look up)_ |
-| `fan_the_hammer` | sc_rogue.cpp | 867 | _(look up)_ |
-| `fast_action` | sc_rogue.cpp | 874 | _(look up)_ |
-| `fatal_concoction` | sc_rogue.cpp | 796 | _(look up)_ |
-| `fatal_flourish` | sc_rogue.cpp | 847 | _(look up)_ |
-| `fate_intertwined` | sc_rogue.cpp | 993 | _(look up)_ |
-| `finality` | sc_rogue.cpp | 937 | _(look up)_ |
-| `find_an_opening` | sc_rogue.cpp | 878 | _(look up)_ |
-| `find_weakness` | sc_rogue.cpp | 892 | _(look up)_ |
-| `finish_the_job` | sc_rogue.cpp | 797 | _(look up)_ |
-| `flashing_steel` | sc_rogue.cpp | 1027 | _(look up)_ |
-| `flawless_form` | sc_rogue.cpp | 1013 | _(look up)_ |
-| `flickering_steel` | sc_rogue.cpp | 877 | _(look up)_ |
-| `flickerstrike` | sc_rogue.cpp | 1019 | _(look up)_ |
-| `flying_daggers` | sc_rogue.cpp | 799 | _(look up)_ |
-| `follow_the_blood` | sc_rogue.cpp | 971 | _(look up)_ |
-| `forced_induction` | sc_rogue.cpp | 759 | _(look up)_ |
-| `gloomblade` | sc_rogue.cpp | 912 | _(look up)_ |
-| `goremaws_bite` | sc_rogue.cpp | 942 | _(look up)_ |
-| `gouge` | sc_rogue.cpp | 713 | _(look up)_ |
-| `gravedigger_1` | sc_rogue.cpp | 884 | _(look up)_ |
-| `gravedigger_2` | sc_rogue.cpp | 885 | _(look up)_ |
-| `gravedigger_3` | sc_rogue.cpp | 886 | _(look up)_ |
-| `hand_of_fate` | sc_rogue.cpp | 994 | _(look up)_ |
-| `heavy_hitter` | sc_rogue.cpp | 844 | _(look up)_ |
-| `heightened_rush` | sc_rogue.cpp | 879 | _(look up)_ |
-| `hidden_opportunity` | sc_rogue.cpp | 869 | _(look up)_ |
-| `hit_and_run` | sc_rogue.cpp | 839 | _(look up)_ |
-| `hoodwink` | sc_rogue.cpp | 1028 | _(look up)_ |
-| `hunt_them_down` | sc_rogue.cpp | 961 | _(look up)_ |
-| `implacable_1` | sc_rogue.cpp | 824 | _(look up)_ |
-| `implacable_2` | sc_rogue.cpp | 825 | _(look up)_ |
-| `implacable_3` | sc_rogue.cpp | 826 | _(look up)_ |
-| `improved_adrenaline_rush` | sc_rogue.cpp | 860 | _(look up)_ |
-| `improved_ambush` | sc_rogue.cpp | 742 | _(look up)_ |
-| `improved_backstab` | sc_rogue.cpp | 896 | _(look up)_ |
-| `improved_between_the_eyes` | sc_rogue.cpp | 857 | _(look up)_ |
-| `improved_find_weakness` | sc_rogue.cpp | 894 | _(look up)_ |
-| `improved_garrote` | sc_rogue.cpp | 782 | _(look up)_ |
-| `improved_poisons` | sc_rogue.cpp | 776 | _(look up)_ |
-| `improved_secret_technique` | sc_rogue.cpp | 946 | _(look up)_ |
-| `improved_shuriken_storm` | sc_rogue.cpp | 898 | _(look up)_ |
-| `inexorable_march` | sc_rogue.cpp | 995 | _(look up)_ |
-| `inspiring_strike` | sc_rogue.cpp | 815 | _(look up)_ |
-| `intent_to_kill` | sc_rogue.cpp | 794 | _(look up)_ |
-| `internal_bleeding` | sc_rogue.cpp | 781 | _(look up)_ |
-| `iron_wire` | sc_rogue.cpp | 795 | _(look up)_ |
-| `keep_it_rolling` | sc_rogue.cpp | 870 | _(look up)_ |
-| `killing_spree` | sc_rogue.cpp | 846 | _(look up)_ |
-| `kingsbane` | sc_rogue.cpp | 808 | _(look up)_ |
-| `lethal_dose` | sc_rogue.cpp | 798 | _(look up)_ |
-| `lingering_darkness` | sc_rogue.cpp | 965 | _(look up)_ |
-| `lingering_shadow` | sc_rogue.cpp | 932 | _(look up)_ |
-| `loaded_dice` | sc_rogue.cpp | 854 | _(look up)_ |
-| `lucky_coin` | sc_rogue.cpp | 996 | _(look up)_ |
-| `mass_casualty` | sc_rogue.cpp | 978 | _(look up)_ |
-| `master_of_shadows` | sc_rogue.cpp | 926 | _(look up)_ |
-| `mean_streak` | sc_rogue.cpp | 997 | _(look up)_ |
-| `menacing_rush` | sc_rogue.cpp | 881 | _(look up)_ |
-| `mirrors` | sc_rogue.cpp | 1012 | _(look up)_ |
-| `momentum_of_despair` | sc_rogue.cpp | 970 | _(look up)_ |
-| `motivated_murderer` | sc_rogue.cpp | 775 | _(look up)_ |
-| `night_terrors` | sc_rogue.cpp | 909 | _(look up)_ |
-| `nimble_flurry` | sc_rogue.cpp | 1024 | _(look up)_ |
-| `no_scruples` | sc_rogue.cpp | 1023 | _(look up)_ |
-| `numbing_poison` | sc_rogue.cpp | 734 | _(look up)_ |
-| `opportunity` | sc_rogue.cpp | 832 | _(look up)_ |
-| `overflowing_purse` | sc_rogue.cpp | 998 | _(look up)_ |
-| `path_of_blood` | sc_rogue.cpp | 777 | _(look up)_ |
-| `perforated_veins` | sc_rogue.cpp | 931 | _(look up)_ |
-| `planned_execution` | sc_rogue.cpp | 917 | _(look up)_ |
-| `poison_bomb` | sc_rogue.cpp | 801 | _(look up)_ |
-| `poisoners_drive` | sc_rogue.cpp | 816 | _(look up)_ |
-| `potent_powder` | sc_rogue.cpp | 945 | _(look up)_ |
-| `precise_killer` | sc_rogue.cpp | 975 | _(look up)_ |
-| `precision_shot` | sc_rogue.cpp | 842 | _(look up)_ |
-| `premeditation` | sc_rogue.cpp | 916 | _(look up)_ |
-| `preparation` | sc_rogue.cpp | 873 | _(look up)_ |
-| `quick_decisions` | sc_rogue.cpp | 901 | _(look up)_ |
-| `quick_draw` | sc_rogue.cpp | 848 | _(look up)_ |
-| `quietus_celeris` | sc_rogue.cpp | 977 | _(look up)_ |
-| `rapid_injection` | sc_rogue.cpp | 809 | _(look up)_ |
-| `ravenholdt_mint` | sc_rogue.cpp | 999 | _(look up)_ |
-| `razor_wire` | sc_rogue.cpp | 787 | _(look up)_ |
-| `regicides_reward` | sc_rogue.cpp | 814 | _(look up)_ |
-| `relentless_strikes` | sc_rogue.cpp | 913 | _(look up)_ |
-| `replicating_shadows` | sc_rogue.cpp | 922 | _(look up)_ |
-| `retractable_hook` | sc_rogue.cpp | 836 | _(look up)_ |
-| `rush_to_the_inevitable` | sc_rogue.cpp | 1000 | _(look up)_ |
-| `ruthlessness` | sc_rogue.cpp | 853 | _(look up)_ |
-| `sanguine_stratagem` | sc_rogue.cpp | 793 | _(look up)_ |
-| `scent_of_blood` | sc_rogue.cpp | 818 | _(look up)_ |
-| `seal_fate` | sc_rogue.cpp | 785 | _(look up)_ |
-| `secondary_poisoning` | sc_rogue.cpp | 800 | _(look up)_ |
-| `secret_stratagem` | sc_rogue.cpp | 921 | _(look up)_ |
-| `shadewalker` | sc_rogue.cpp | 972 | _(look up)_ |
-| `shadow_blades` | sc_rogue.cpp | 897 | _(look up)_ |
-| `shadow_focus` | sc_rogue.cpp | 906 | _(look up)_ |
-| `shadowcraft` | sc_rogue.cpp | 940 | _(look up)_ |
-| `shadowed_finishers` | sc_rogue.cpp | 920 | _(look up)_ |
-| `shot_in_the_dark` | sc_rogue.cpp | 900 | _(look up)_ |
-| `shroud_of_night` | sc_rogue.cpp | 973 | _(look up)_ |
-| `shrouded_in_darkness` | sc_rogue.cpp | 905 | _(look up)_ |
-| `shrouded_suffocation` | sc_rogue.cpp | 810 | _(look up)_ |
-| `shuriken_tornado` | sc_rogue.cpp | 929 | _(look up)_ |
-| `silent_storm` | sc_rogue.cpp | 914 | _(look up)_ |
-| `singular_focus` | sc_rogue.cpp | 962 | _(look up)_ |
-| `sleight_of_hand` | sc_rogue.cpp | 855 | _(look up)_ |
-| `smoke` | sc_rogue.cpp | 1011 | _(look up)_ |
-| `so_tricky` | sc_rogue.cpp | 1015 | _(look up)_ |
-| `sometimes_lucky` | sc_rogue.cpp | 1001 | _(look up)_ |
-| `sudden_demise` | sc_rogue.cpp | 822 | _(look up)_ |
-| `summarily_dispatched` | sc_rogue.cpp | 866 | _(look up)_ |
-| `surprising_strikes` | sc_rogue.cpp | 1010 | _(look up)_ |
-| `symbolic_victory` | sc_rogue.cpp | 966 | _(look up)_ |
-| `systemic_failure` | sc_rogue.cpp | 803 | _(look up)_ |
-| `tempted_fate` | sc_rogue.cpp | 1002 | _(look up)_ |
-| `terrifying_pace` | sc_rogue.cpp | 910 | _(look up)_ |
-| `the_first_dance` | sc_rogue.cpp | 925 | _(look up)_ |
-| `the_rotten` | sc_rogue.cpp | 939 | _(look up)_ |
-| `thiefs_versatility` | sc_rogue.cpp | 856 | _(look up)_ |
-| `thousand_cuts` | sc_rogue.cpp | 1018 | _(look up)_ |
-| `thrown_precision` | sc_rogue.cpp | 784 | _(look up)_ |
-| `tight_spender` | sc_rogue.cpp | 743 | _(look up)_ |
-| `tricks_of_the_trade` | sc_rogue.cpp | 721 | _(look up)_ |
-| `umbral_edge` | sc_rogue.cpp | 948 | _(look up)_ |
-| `unseen_blade` | sc_rogue.cpp | 1008 | _(look up)_ |
-| `unshakeable_drive` | sc_rogue.cpp | 976 | _(look up)_ |
-| `veiltouched` | sc_rogue.cpp | 928 | _(look up)_ |
-| `venomous_wounds` | sc_rogue.cpp | 804 | _(look up)_ |
-| `warning_signs` | sc_rogue.cpp | 918 | _(look up)_ |
-| `weaponmaster` | sc_rogue.cpp | 924 | _(look up)_ |
-| `zero_in` | sc_rogue.cpp | 882 | _(look up)_ |
-| `zoldyck_recipe` | sc_rogue.cpp | 813 | _(look up)_ |
+**By Name:**
 
-## Shaman (141 entries)
+| Talent Name | File |
+|-------------|------|
+| `Aegwynn's Technique` | sc_mage.cpp |
+| `Archmage's Wrath` | sc_mage.cpp |
+| `Ashes of Inspiration` | sc_mage.cpp |
+| `Attuned Familiar` | sc_mage.cpp |
+| `Augury Abounds` | sc_mage.cpp |
+| `Blast Radius` | sc_mage.cpp |
+| `Burden of Power` | sc_mage.cpp |
+| `Burn It All` | sc_mage.cpp |
+| `Codex of the Sunstriders` | sc_mage.cpp |
+| `Cold Snap` | sc_mage.cpp |
+| `Controlled Instincts` | sc_mage.cpp |
+| `Dragon's Breath` | sc_mage.cpp |
+| `Dualcasting Adept` | sc_mage.cpp |
+| `Duality` | sc_mage.cpp |
+| `Elemental Affinity` | sc_mage.cpp |
+| `Elemental Conduit` | sc_mage.cpp |
+| `Evocation` | sc_mage.cpp |
+| `Fire's Ire` | sc_mage.cpp |
+| `Force of Will` | sc_mage.cpp |
+| `Freezing Cold` | sc_mage.cpp |
+| `Frigid Focus` | sc_mage.cpp |
+| `Frostfire Empowerment` | sc_mage.cpp |
+| `Frostfire Infusion` | sc_mage.cpp |
+| `Glorious Incandescence` | sc_mage.cpp |
+| `Heat Sink` | sc_mage.cpp |
+| `High Voltage` | sc_mage.cpp |
+| `Ice Nova` | sc_mage.cpp |
+| `Ice Ward` | sc_mage.cpp |
+| `Imbued Warding` | sc_mage.cpp |
+| `Improved Blink` | sc_mage.cpp |
+| `Infused Splinters` | sc_mage.cpp |
+| `Invocation: Arcane Phoenix` | sc_mage.cpp |
+| `Isothermic Core` | sc_mage.cpp |
+| `Lessons in Debilitation` | sc_mage.cpp |
+| `Lonely Winter` | sc_mage.cpp |
+| `Look Again` | sc_mage.cpp |
+| `Mana Adept` | sc_mage.cpp |
+| `Mana Cascade` | sc_mage.cpp |
+| `Mass Polymorph` | sc_mage.cpp |
+| `Meltdown` | sc_mage.cpp |
+| `Memory of Al'ar` | sc_mage.cpp |
+| `Merely a Setback` | sc_mage.cpp |
+| `Molten Chill` | sc_mage.cpp |
+| `Polished Focus` | sc_mage.cpp |
+| `Presence of Mind` | sc_mage.cpp |
+| `Pyrocosm` | sc_mage.cpp |
+| `Reactive Barrier` | sc_mage.cpp |
+| `Reflection` | sc_mage.cpp |
+| `Ring of Frost` | sc_mage.cpp |
+| `Rondurmancy` | sc_mage.cpp |
+| `Savor the Moment` | sc_mage.cpp |
+| `Severe Temperatures` | sc_mage.cpp |
+| `Shifting Shards` | sc_mage.cpp |
+| `Shimmer` | sc_mage.cpp |
+| `Signature Spell` | sc_mage.cpp |
+| `Slippery Slinging` | sc_mage.cpp |
+| `Slipstream` | sc_mage.cpp |
+| `Slow Burn` | sc_mage.cpp |
+| `Spatial Manipulation` | sc_mage.cpp |
+| `Spellfire Salvo` | sc_mage.cpp |
+| `Spellfire Spheres` | sc_mage.cpp |
+| `Spellfrost Teachings` | sc_mage.cpp |
+| `Splintering Orbs` | sc_mage.cpp |
+| `Splintering Ray` | sc_mage.cpp |
+| `Splintering Sorcery` | sc_mage.cpp |
+| `Splinterstorm` | sc_mage.cpp |
+| `Summon Water Elemental` | sc_mage.cpp |
+| `Sunfury Execution` | sc_mage.cpp |
+| `Supernova` | sc_mage.cpp |
+| `Temporal Realignment` | sc_mage.cpp |
+| `Thermal Conditioning` | sc_mage.cpp |
+| `Time Twist` | sc_mage.cpp |
+| `Time Walk` | sc_mage.cpp |
+| `White Out` | sc_mage.cpp |
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `aftershock` | sc_shaman.cpp | 1718 | _(look up)_ |
-| `amped_up` | sc_shaman.cpp | 1733 | _(look up)_ |
-| `amplification_core` | sc_shaman.cpp | 1803 | _(look up)_ |
-| `ancestral_guidance` | sc_shaman.cpp | 1639 | _(look up)_ |
-| `ancestral_influence` | sc_shaman.cpp | 1834 | _(look up)_ |
-| `ancestral_swiftness` | sc_shaman.cpp | 1848 | _(look up)_ |
-| `ancient_fellowship` | sc_shaman.cpp | 1830 | _(look up)_ |
-| `ascendance` | sc_shaman.cpp | 1652 | _(look up)_ |
-| `ashen_catalyst` | sc_shaman.cpp | 1667 | _(look up)_ |
-| `call_of_fire` | sc_shaman.cpp | 1755 | _(look up)_ |
-| `call_of_the_ancestors` | sc_shaman.cpp | 1826 | _(look up)_ |
-| `call_of_the_elements` | sc_shaman.cpp | 1641 | _(look up)_ |
-| `chaining_storms` | sc_shaman.cpp | 1679 | _(look up)_ |
-| `charged_conduit` | sc_shaman.cpp | 1758 | _(look up)_ |
-| `converging_storms` | sc_shaman.cpp | 1680 | _(look up)_ |
-| `crackling_fury` | sc_shaman.cpp | 1763 | _(look up)_ |
-| `crash_lightning` | sc_shaman.cpp | 1662 | _(look up)_ |
-| `creation_core` | sc_shaman.cpp | 1640 | _(look up)_ |
-| `deeply_rooted_elements` | sc_shaman.cpp | 1698 | _(look up)_ |
-| `doom_winds` | sc_shaman.cpp | 1688 | _(look up)_ |
-| `earth_shield` | sc_shaman.cpp | 1610 | _(look up)_ |
-| `earth_shock` | sc_shaman.cpp | 1709 | _(look up)_ |
-| `earthen_rage` | sc_shaman.cpp | 1745 | _(look up)_ |
-| `earthquake_reticle` | sc_shaman.cpp | 1711 | _(look up)_ |
-| `earthquake_target` | sc_shaman.cpp | 1712 | _(look up)_ |
-| `earthshatter` | sc_shaman.cpp | 1741 | _(look up)_ |
-| `earthsurge` | sc_shaman.cpp | 1817 | _(look up)_ |
-| `echo_chamber` | sc_shaman.cpp | 1743 | _(look up)_ |
-| `echo_of_the_elementals` | sc_shaman.cpp | 1759 | _(look up)_ |
-| `echo_of_the_elements` | sc_shaman.cpp | 1714 | _(look up)_ |
-| `electroshock` | sc_shaman.cpp | 1778 | _(look up)_ |
-| `elemental_assault` | sc_shaman.cpp | 1692 | _(look up)_ |
-| `elemental_attunement` | sc_shaman.cpp | 1810 | _(look up)_ |
-| `elemental_blast` | sc_shaman.cpp | 1651 | _(look up)_ |
-| `elemental_fury` | sc_shaman.cpp | 1713 | _(look up)_ |
-| `elemental_resonance` | sc_shaman.cpp | 1734 | _(look up)_ |
-| `elemental_reverb` | sc_shaman.cpp | 1833 | _(look up)_ |
-| `elemental_tempo` | sc_shaman.cpp | 1676 | _(look up)_ |
-| `elemental_unity` | sc_shaman.cpp | 1737 | _(look up)_ |
-| `elemental_weapons` | sc_shaman.cpp | 1683 | _(look up)_ |
-| `everlasting_elements` | sc_shaman.cpp | 1744 | _(look up)_ |
-| `eye_of_the_storm` | sc_shaman.cpp | 1749 | _(look up)_ |
-| `feedback_loop_1` | sc_shaman.cpp | 1766 | _(look up)_ |
-| `feedback_loop_2` | sc_shaman.cpp | 1767 | _(look up)_ |
-| `feedback_loop_3` | sc_shaman.cpp | 1768 | _(look up)_ |
-| `feral_spirit` | sc_shaman.cpp | 1694 | _(look up)_ |
-| `final_calling` | sc_shaman.cpp | 1844 | _(look up)_ |
-| `fire_nova` | sc_shaman.cpp | 1684 | _(look up)_ |
-| `first_ascendant` | sc_shaman.cpp | 1760 | _(look up)_ |
-| `flames_of_the_cauldron` | sc_shaman.cpp | 1731 | _(look up)_ |
-| `flames_of_the_firelord` | sc_shaman.cpp | 1751 | _(look up)_ |
-| `flash_of_lightning` | sc_shaman.cpp | 1716 | _(look up)_ |
-| `flurry` | sc_shaman.cpp | 1672 | _(look up)_ |
-| `forceful_winds` | sc_shaman.cpp | 1661 | _(look up)_ |
-| `fury_of_the_storms` | sc_shaman.cpp | 1729 | _(look up)_ |
-| `fusion_of_elements` | sc_shaman.cpp | 1748 | _(look up)_ |
-| `graceful_spirit` | sc_shaman.cpp | 1617 | _(look up)_ |
-| `gust_of_wind` | sc_shaman.cpp | 1627 | _(look up)_ |
-| `heed_my_call` | sc_shaman.cpp | 1831 | _(look up)_ |
-| `herald_of_the_storms` | sc_shaman.cpp | 1730 | _(look up)_ |
-| `hot_hand` | sc_shaman.cpp | 1673 | _(look up)_ |
-| `imbuement_mastery` | sc_shaman.cpp | 1813 | _(look up)_ |
-| `improved_lightning_bolt` | sc_shaman.cpp | 1625 | _(look up)_ |
-| `inferno_arc` | sc_shaman.cpp | 1750 | _(look up)_ |
-| `lashing_flames` | sc_shaman.cpp | 1685 | _(look up)_ |
-| `latent_wisdom` | sc_shaman.cpp | 1829 | _(look up)_ |
-| `lava_burst` | sc_shaman.cpp | 1600 | _(look up)_ |
-| `lava_flows` | sc_shaman.cpp | 1746 | _(look up)_ |
-| `lava_lash` | sc_shaman.cpp | 1601 | _(look up)_ |
-| `lightning_capacitor` | sc_shaman.cpp | 1722 | _(look up)_ |
-| `lightning_lasso` | sc_shaman.cpp | 1635 | _(look up)_ |
-| `lightning_rod` | sc_shaman.cpp | 1753 | _(look up)_ |
-| `lightning_strikes` | sc_shaman.cpp | 1691 | _(look up)_ |
-| `lively_totems` | sc_shaman.cpp | 1805 | _(look up)_ |
-| `maelstrom_supremacy` | sc_shaman.cpp | 1843 | _(look up)_ |
-| `maelstrom_weapon` | sc_shaman.cpp | 1656 | _(look up)_ |
-| `master_of_the_elements` | sc_shaman.cpp | 1720 | _(look up)_ |
-| `molten_assault` | sc_shaman.cpp | 1663 | _(look up)_ |
-| `molten_wrath` | sc_shaman.cpp | 1719 | _(look up)_ |
-| `mountains_will_fall` | sc_shaman.cpp | 1754 | _(look up)_ |
-| `mystic_knowledge` | sc_shaman.cpp | 1845 | _(look up)_ |
-| `natures_fury` | sc_shaman.cpp | 1618 | _(look up)_ |
-| `natures_swiftness` | sc_shaman.cpp | 1630 | _(look up)_ |
-| `offering_from_beyond` | sc_shaman.cpp | 1837 | _(look up)_ |
-| `overcharge` | sc_shaman.cpp | 1670 | _(look up)_ |
-| `overflowing_maelstrom` | sc_shaman.cpp | 1671 | _(look up)_ |
-| `oversurge` | sc_shaman.cpp | 1804 | _(look up)_ |
-| `path_of_the_seer` | sc_shaman.cpp | 1736 | _(look up)_ |
-| `power_of_the_maelstrom` | sc_shaman.cpp | 1740 | _(look up)_ |
-| `preeminence` | sc_shaman.cpp | 1761 | _(look up)_ |
-| `primal_catalyst` | sc_shaman.cpp | 1818 | _(look up)_ |
-| `primal_elementalist` | sc_shaman.cpp | 1762 | _(look up)_ |
-| `primordial_capacity` | sc_shaman.cpp | 1838 | _(look up)_ |
-| `primordial_fury` | sc_shaman.cpp | 1728 | _(look up)_ |
-| `primordial_storm` | sc_shaman.cpp | 1700 | _(look up)_ |
-| `pulse_capacitor` | sc_shaman.cpp | 1814 | _(look up)_ |
-| `purging_flames` | sc_shaman.cpp | 1764 | _(look up)_ |
-| `raging_maelstrom` | sc_shaman.cpp | 1666 | _(look up)_ |
-| `ride_the_lightning` | sc_shaman.cpp | 1687 | _(look up)_ |
-| `routine_communication` | sc_shaman.cpp | 1832 | _(look up)_ |
-| `searing_flames` | sc_shaman.cpp | 1738 | _(look up)_ |
-| `spirit_walk` | sc_shaman.cpp | 1626 | _(look up)_ |
-| `spirit_wolf` | sc_shaman.cpp | 1606 | _(look up)_ |
-| `spiritwalkers_grace` | sc_shaman.cpp | 1614 | _(look up)_ |
-| `spiritwalkers_momentum` | sc_shaman.cpp | 1839 | _(look up)_ |
-| `splitstream` | sc_shaman.cpp | 1809 | _(look up)_ |
-| `static_accumulation` | sc_shaman.cpp | 1693 | _(look up)_ |
-| `storm_frenzy` | sc_shaman.cpp | 1726 | _(look up)_ |
-| `storm_infusion` | sc_shaman.cpp | 1742 | _(look up)_ |
-| `storm_swell` | sc_shaman.cpp | 1783 | _(look up)_ |
-| `storm_unleashed_1` | sc_shaman.cpp | 1702 | _(look up)_ |
-| `storm_unleashed_2` | sc_shaman.cpp | 1703 | _(look up)_ |
-| `storm_unleashed_3` | sc_shaman.cpp | 1704 | _(look up)_ |
-| `stormbind` | sc_shaman.cpp | 1682 | _(look up)_ |
-| `stormblast` | sc_shaman.cpp | 1669 | _(look up)_ |
-| `stormflurry` | sc_shaman.cpp | 1681 | _(look up)_ |
-| `stormkeeper` | sc_shaman.cpp | 1723 | _(look up)_ |
-| `storms_wrath` | sc_shaman.cpp | 1675 | _(look up)_ |
-| `sundering` | sc_shaman.cpp | 1689 | _(look up)_ |
-| `supercharge` | sc_shaman.cpp | 1782 | _(look up)_ |
-| `supportive_imbuements` | sc_shaman.cpp | 1815 | _(look up)_ |
-| `surging_elements` | sc_shaman.cpp | 1695 | _(look up)_ |
-| `surging_shields` | sc_shaman.cpp | 1633 | _(look up)_ |
-| `surging_totem` | sc_shaman.cpp | 1799 | _(look up)_ |
-| `swelling_maelstrom` | sc_shaman.cpp | 1727 | _(look up)_ |
-| `tectonic_collapse` | sc_shaman.cpp | 1717 | _(look up)_ |
-| `thorims_invocation` | sc_shaman.cpp | 1699 | _(look up)_ |
-| `thunder_capacitor` | sc_shaman.cpp | 1697 | _(look up)_ |
-| `thunderous_paws` | sc_shaman.cpp | 1607 | _(look up)_ |
-| `thundershock` | sc_shaman.cpp | 1636 | _(look up)_ |
-| `thunderstorm` | sc_shaman.cpp | 1631 | _(look up)_ |
-| `thunderstrike_ward` | sc_shaman.cpp | 1735 | _(look up)_ |
-| `totemic_coordination` | sc_shaman.cpp | 1816 | _(look up)_ |
-| `totemic_momentum` | sc_shaman.cpp | 1806 | _(look up)_ |
-| `totemic_rebound` | sc_shaman.cpp | 1802 | _(look up)_ |
-| `totemic_recall` | sc_shaman.cpp | 1637 | _(look up)_ |
-| `unruly_winds` | sc_shaman.cpp | 1665 | _(look up)_ |
-| `whirling_elements` | sc_shaman.cpp | 1821 | _(look up)_ |
-| `windfury_weapon` | sc_shaman.cpp | 1658 | _(look up)_ |
-| `winds_of_alakir` | sc_shaman.cpp | 1622 | _(look up)_ |
-| `windspeaker` | sc_shaman.cpp | 1840 | _(look up)_ |
+**By ID (ID-only registration, no name in Wowhead):**
 
-## Warlock (172 entries)
+| Spell ID | File |
+|----------|------|
+| 1248829 | sc_mage.cpp |
+| 1254851 | sc_mage.cpp |
+| 1257348 | sc_mage.cpp |
+| 1257349 | sc_mage.cpp |
+| 1257947 | sc_mage.cpp |
+| 1257950 | sc_mage.cpp |
+| 1262981 | sc_mage.cpp |
+| 1263249 | sc_mage.cpp |
+| 190356 | sc_mage.cpp |
+| 2120 | sc_mage.cpp |
+| 431044 | sc_mage.cpp |
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `absolute_corruption` | sc_warlock.hpp | 438 | _(look up)_ |
-| `abyssal_dominion` | sc_warlock.hpp | 716 | _(look up)_ |
-| `alythesss_ire` | sc_warlock.hpp | 674 | _(look up)_ |
-| `alzzins_iniquity` | sc_warlock.hpp | 758 | _(look up)_ |
-| `antoran_armaments` | sc_warlock.hpp | 538 | _(look up)_ |
-| `ashen_remains` | sc_warlock.hpp | 608 | _(look up)_ |
-| `avatar_of_destruction` | sc_warlock.hpp | 669 | _(look up)_ |
-| `backdraft` | sc_warlock.hpp | 593 | _(look up)_ |
-| `backlash` | sc_warlock.hpp | 606 | _(look up)_ |
-| `banish` | sc_warlock.hpp | 384 | _(look up)_ |
-| `blackened_soul` | sc_warlock.hpp | 743 | _(look up)_ |
-| `bleakheart_tactics` | sc_warlock.hpp | 749 | _(look up)_ |
-| `blighted_maw` | sc_warlock.hpp | 530 | _(look up)_ |
-| `call_dreadstalkers` | sc_warlock.hpp | 504 | _(look up)_ |
-| `carnivorous_stalkers` | sc_warlock.hpp | 521 | _(look up)_ |
-| `cascading_calamity` | sc_warlock.hpp | 481 | _(look up)_ |
-| `cataclysm` | sc_warlock.hpp | 609 | _(look up)_ |
-| `channel_demonfire` | sc_warlock.hpp | 665 | _(look up)_ |
-| `chaos_bolt` | sc_warlock.hpp | 586 | _(look up)_ |
-| `chaos_incarnate` | sc_warlock.hpp | 673 | _(look up)_ |
-| `chaotic_inferno` | sc_warlock.hpp | 613 | _(look up)_ |
-| `cloven_souls` | sc_warlock.hpp | 705 | _(look up)_ |
-| `conflagrate` | sc_warlock.hpp | 587 | _(look up)_ |
-| `conflagration_of_chaos` | sc_warlock.hpp | 660 | _(look up)_ |
-| `contagion` | sc_warlock.hpp | 468 | _(look up)_ |
-| `crashing_chaos` | sc_warlock.hpp | 635 | _(look up)_ |
-| `creeping_death` | sc_warlock.hpp | 444 | _(look up)_ |
-| `cruelty_of_kerxan` | sc_warlock.hpp | 712 | _(look up)_ |
-| `cull_the_weak` | sc_warlock.hpp | 454 | _(look up)_ |
-| `cunning_cruelty` | sc_warlock.hpp | 441 | _(look up)_ |
-| `dark_harvest` | sc_warlock.hpp | 445 | _(look up)_ |
-| `deaths_embrace` | sc_warlock.hpp | 483 | _(look up)_ |
-| `demonfire_infusion` | sc_warlock.hpp | 664 | _(look up)_ |
-| `demoniac` | sc_warlock.hpp | 500 | _(look up)_ |
-| `demoniacs_fervor` | sc_warlock.hpp | 772 | _(look up)_ |
-| `demonic_brutality` | sc_warlock.hpp | 526 | _(look up)_ |
-| `demonic_calling` | sc_warlock.hpp | 546 | _(look up)_ |
-| `demonic_knowledge` | sc_warlock.hpp | 542 | _(look up)_ |
-| `demonic_soul` | sc_warlock.hpp | 765 | _(look up)_ |
-| `destructive_rapidity` | sc_warlock.hpp | 645 | _(look up)_ |
-| `devastation` | sc_warlock.hpp | 646 | _(look up)_ |
-| `devil_fruit` | sc_warlock.hpp | 757 | _(look up)_ |
-| `diabolic_embers` | sc_warlock.hpp | 663 | _(look up)_ |
-| `diabolic_oculi` | sc_warlock.hpp | 727 | _(look up)_ |
-| `diabolic_ritual` | sc_warlock.hpp | 688 | _(look up)_ |
-| `dimensional_rift` | sc_warlock.hpp | 648 | _(look up)_ |
-| `dominant_hand` | sc_warlock.hpp | 507 | _(look up)_ |
-| `dominion_of_argus_1` | sc_warlock.hpp | 575 | _(look up)_ |
-| `dominion_of_argus_2` | sc_warlock.hpp | 576 | _(look up)_ |
-| `dominion_of_argus_3` | sc_warlock.hpp | 577 | _(look up)_ |
-| `doom` | sc_warlock.hpp | 548 | _(look up)_ |
-| `drain_soul` | sc_warlock.hpp | 435 | _(look up)_ |
-| `dreadlash` | sc_warlock.hpp | 510 | _(look up)_ |
-| `embers_of_nihilam_1` | sc_warlock.hpp | 678 | _(look up)_ |
-| `embers_of_nihilam_2` | sc_warlock.hpp | 679 | _(look up)_ |
-| `embers_of_nihilam_3` | sc_warlock.hpp | 680 | _(look up)_ |
-| `emberstorm` | sc_warlock.hpp | 624 | _(look up)_ |
-| `empowered_felstorm` | sc_warlock.hpp | 533 | _(look up)_ |
-| `eternal_hunger` | sc_warlock.hpp | 789 | _(look up)_ |
-| `explosive_potential` | sc_warlock.hpp | 598 | _(look up)_ |
-| `eye_contract` | sc_warlock.hpp | 458 | _(look up)_ |
-| `fatal_echoes` | sc_warlock.hpp | 480 | _(look up)_ |
-| `feast_of_souls` | sc_warlock.hpp | 776 | _(look up)_ |
-| `fel_armaments` | sc_warlock.hpp | 522 | _(look up)_ |
-| `fel_intellect` | sc_warlock.hpp | 508 | _(look up)_ |
-| `fiendish_cruelty` | sc_warlock.hpp | 611 | _(look up)_ |
-| `fire_and_brimstone` | sc_warlock.hpp | 625 | _(look up)_ |
-| `flames_of_xoroth` | sc_warlock.hpp | 715 | _(look up)_ |
-| `flametouched` | sc_warlock.hpp | 539 | _(look up)_ |
-| `flashpoint` | sc_warlock.hpp | 615 | _(look up)_ |
-| `gloom_of_nathreza` | sc_warlock.hpp | 719 | _(look up)_ |
-| `gorefiends_avarice` | sc_warlock.hpp | 350 | _(look up)_ |
-| `grimoire_fel_ravager` | sc_warlock.hpp | 554 | _(look up)_ |
-| `grimoire_imp_lord` | sc_warlock.hpp | 553 | _(look up)_ |
-| `grimoire_of_sacrifice` | sc_warlock.hpp | 416 | _(look up)_ |
-| `hand_of_guldan` | sc_warlock.hpp | 496 | _(look up)_ |
-| `hatefury_rituals` | sc_warlock.hpp | 748 | _(look up)_ |
-| `haunt` | sc_warlock.hpp | 431 | _(look up)_ |
-| `havoc` | sc_warlock.hpp | 600 | _(look up)_ |
-| `hellbent_commander` | sc_warlock.hpp | 551 | _(look up)_ |
-| `illhoofs_design` | sc_warlock.hpp | 750 | _(look up)_ |
-| `imp_gang_boss` | sc_warlock.hpp | 524 | _(look up)_ |
-| `imperator` | sc_warlock.hpp | 512 | _(look up)_ |
-| `implosion` | sc_warlock.hpp | 513 | _(look up)_ |
-| `improved_chaos_bolt` | sc_warlock.hpp | 644 | _(look up)_ |
-| `improved_conflagrate` | sc_warlock.hpp | 592 | _(look up)_ |
-| `improved_demonic_tactics` | sc_warlock.hpp | 532 | _(look up)_ |
-| `improved_haunt` | sc_warlock.hpp | 437 | _(look up)_ |
-| `improved_havoc` | sc_warlock.hpp | 607 | _(look up)_ |
-| `improved_shadow_bolt` | sc_warlock.hpp | 434 | _(look up)_ |
-| `infernal_machine` | sc_warlock.hpp | 713 | _(look up)_ |
-| `infernal_rapidity` | sc_warlock.hpp | 519 | _(look up)_ |
-| `inferno` | sc_warlock.hpp | 659 | _(look up)_ |
-| `inner_demons` | sc_warlock.hpp | 527 | _(look up)_ |
-| `internal_combustion` | sc_warlock.hpp | 633 | _(look up)_ |
-| `lake_of_fire` | sc_warlock.hpp | 626 | _(look up)_ |
-| `looks_that_kill` | sc_warlock.hpp | 730 | _(look up)_ |
-| `malediction` | sc_warlock.hpp | 456 | _(look up)_ |
-| `malefic_grasp` | sc_warlock.hpp | 459 | _(look up)_ |
-| `malevolence` | sc_warlock.hpp | 760 | _(look up)_ |
-| `manifested_avarice` | sc_warlock.hpp | 786 | _(look up)_ |
-| `mark_of_fharg` | sc_warlock.hpp | 570 | _(look up)_ |
-| `mark_of_perotharn` | sc_warlock.hpp | 754 | _(look up)_ |
-| `mark_of_shatug` | sc_warlock.hpp | 568 | _(look up)_ |
-| `mark_of_xavius` | sc_warlock.hpp | 752 | _(look up)_ |
-| `master_summoner` | sc_warlock.hpp | 545 | _(look up)_ |
-| `mayhem` | sc_warlock.hpp | 599 | _(look up)_ |
-| `minds_eyes` | sc_warlock.hpp | 734 | _(look up)_ |
-| `necrolyte_teachings` | sc_warlock.hpp | 769 | _(look up)_ |
-| `nether_plating` | sc_warlock.hpp | 466 | _(look up)_ |
-| `nightfall` | sc_warlock.hpp | 428 | _(look up)_ |
-| `niskaran_methods` | sc_warlock.hpp | 472 | _(look up)_ |
-| `nocturnal_yield` | sc_warlock.hpp | 474 | _(look up)_ |
-| `patient_zero` | sc_warlock.hpp | 484 | _(look up)_ |
-| `potent_soul_shards` | sc_warlock.hpp | 473 | _(look up)_ |
-| `power_siphon` | sc_warlock.hpp | 515 | _(look up)_ |
-| `practiced_chaos` | sc_warlock.hpp | 595 | _(look up)_ |
-| `practiced_pestilence` | sc_warlock.hpp | 448 | _(look up)_ |
-| `practiced_rituals` | sc_warlock.hpp | 509 | _(look up)_ |
-| `quietus` | sc_warlock.hpp | 780 | _(look up)_ |
-| `raging_demonfire` | sc_warlock.hpp | 676 | _(look up)_ |
-| `rain_of_chaos` | sc_warlock.hpp | 637 | _(look up)_ |
-| `rain_of_fire` | sc_warlock.hpp | 589 | _(look up)_ |
-| `ravenous_afflictions` | sc_warlock.hpp | 477 | _(look up)_ |
-| `reign_of_tyranny` | sc_warlock.hpp | 544 | _(look up)_ |
-| `reverse_entropy` | sc_warlock.hpp | 631 | _(look up)_ |
-| `roaring_blaze` | sc_warlock.hpp | 596 | _(look up)_ |
-| `ruin` | sc_warlock.hpp | 643 | _(look up)_ |
-| `ruination` | sc_warlock.hpp | 721 | _(look up)_ |
-| `rune_of_shadows` | sc_warlock.hpp | 520 | _(look up)_ |
-| `sacrificed_souls` | sc_warlock.hpp | 543 | _(look up)_ |
-| `sacrolashs_dark_strike` | sc_warlock.hpp | 467 | _(look up)_ |
-| `sataiels_volition` | sc_warlock.hpp | 781 | _(look up)_ |
-| `scalding_flames` | sc_warlock.hpp | 602 | _(look up)_ |
-| `secrets_of_the_coven` | sc_warlock.hpp | 708 | _(look up)_ |
-| `seed_of_corruption` | sc_warlock.hpp | 424 | _(look up)_ |
-| `seeds_of_destruction` | sc_warlock.hpp | 478 | _(look up)_ |
-| `seeds_of_their_demise` | sc_warlock.hpp | 753 | _(look up)_ |
-| `shadow_of_death` | sc_warlock.hpp | 783 | _(look up)_ |
-| `shadow_of_nathreza_1` | sc_warlock.hpp | 488 | _(look up)_ |
-| `shadow_of_nathreza_2` | sc_warlock.hpp | 489 | _(look up)_ |
-| `shadow_of_nathreza_3` | sc_warlock.hpp | 490 | _(look up)_ |
-| `shadowburn` | sc_warlock.hpp | 604 | _(look up)_ |
-| `shard_instability` | sc_warlock.hpp | 470 | _(look up)_ |
-| `shared_agony` | sc_warlock.hpp | 432 | _(look up)_ |
-| `shared_fate` | sc_warlock.hpp | 774 | _(look up)_ |
-| `shared_vessel` | sc_warlock.hpp | 788 | _(look up)_ |
-| `siphon_life` | sc_warlock.hpp | 439 | _(look up)_ |
-| `soul_anathema` | sc_warlock.hpp | 770 | _(look up)_ |
-| `soul_fire` | sc_warlock.hpp | 657 | _(look up)_ |
-| `sow_the_seeds` | sc_warlock.hpp | 485 | _(look up)_ |
-| `spiteful_reconstitution` | sc_warlock.hpp | 535 | _(look up)_ |
-| `stabilized_portals` | sc_warlock.hpp | 567 | _(look up)_ |
-| `sudden_onset` | sc_warlock.hpp | 457 | _(look up)_ |
-| `summon_darkglare` | sc_warlock.hpp | 449 | _(look up)_ |
-| `summon_demonic_tyrant` | sc_warlock.hpp | 528 | _(look up)_ |
-| `summon_doomguard` | sc_warlock.hpp | 563 | _(look up)_ |
-| `summon_felguard` | sc_warlock.hpp | 517 | _(look up)_ |
-| `summon_infernal` | sc_warlock.hpp | 617 | _(look up)_ |
-| `summon_vilefiend` | sc_warlock.hpp | 556 | _(look up)_ |
-| `summoners_embrace` | sc_warlock.hpp | 415 | _(look up)_ |
-| `through_the_felvine` | sc_warlock.hpp | 756 | _(look up)_ |
-| `to_hell_and_back` | sc_warlock.hpp | 565 | _(look up)_ |
-| `touch_of_rancora` | sc_warlock.hpp | 707 | _(look up)_ |
-| `tyrants_oblation` | sc_warlock.hpp | 536 | _(look up)_ |
-| `unstable_affliction` | sc_warlock.hpp | 422 | _(look up)_ |
-| `wicked_reaping` | sc_warlock.hpp | 778 | _(look up)_ |
-| `wither` | sc_warlock.hpp | 738 | _(look up)_ |
-| `withering_bolt` | sc_warlock.hpp | 443 | _(look up)_ |
-| `xalans_cruelty` | sc_warlock.hpp | 746 | _(look up)_ |
-| `xalans_ferocity` | sc_warlock.hpp | 742 | _(look up)_ |
-| `xavius_gambit` | sc_warlock.hpp | 476 | _(look up)_ |
+## Monk (93 entries)
 
-## Warrior (182 entries)
+**By Name:**
 
-| Code Name | File | Line | Likely Wowhead Name |
-|-----------|------|------|---------------------|
-| `armor_specialization` | sc_warrior.cpp | 697 | _(look up)_ |
-| `arterial_bleed` | sc_warrior.cpp | 759 | _(look up)_ |
-| `avatar` | sc_warrior.cpp | 624 | _(look up)_ |
-| `avatar_of_the_storm` | sc_warrior.cpp | 811 | _(look up)_ |
-| `battle_scarred_veteran` | sc_warrior.cpp | 741 | _(look up)_ |
-| `battle_stance` | sc_warrior.cpp | 514 | _(look up)_ |
-| `battlelord` | sc_warrior.cpp | 617 | _(look up)_ |
-| `berserker_shout` | sc_warrior.cpp | 545 | _(look up)_ |
-| `berserker_stance` | sc_warrior.cpp | 515 | _(look up)_ |
-| `best_served_cold` | sc_warrior.cpp | 709 | _(look up)_ |
-| `bladestorm` | sc_warrior.cpp | 613 | _(look up)_ |
-| `bloodborne` | sc_warrior.cpp | 612 | _(look up)_ |
-| `bloodcraze` | sc_warrior.cpp | 666 | _(look up)_ |
-| `bloodletting` | sc_warrior.cpp | 618 | _(look up)_ |
-| `bloodsurge` | sc_warrior.cpp | 583 | _(look up)_ |
-| `bloodthirst` | sc_warrior.cpp | 634 | _(look up)_ |
-| `boneshaker` | sc_warrior.cpp | 755 | _(look up)_ |
-| `booming_voice` | sc_warrior.cpp | 735 | _(look up)_ |
-| `brace_for_impact` | sc_warrior.cpp | 696 | _(look up)_ |
-| `broad_strokes` | sc_warrior.cpp | 597 | _(look up)_ |
-| `brutal_finish` | sc_warrior.cpp | 781 | _(look up)_ |
-| `brutal_vitality` | sc_warrior.cpp | 705 | _(look up)_ |
-| `brute_force` | sc_warrior.cpp | 592 | _(look up)_ |
-| `burst_of_power` | sc_warrior.cpp | 809 | _(look up)_ |
-| `capacitance` | sc_warrior.cpp | 810 | _(look up)_ |
-| `celeritous_conclusion` | sc_warrior.cpp | 767 | _(look up)_ |
-| `champions_spear` | sc_warrior.cpp | 566 | _(look up)_ |
-| `cleave` | sc_warrior.cpp | 599 | _(look up)_ |
-| `cold_steel_hot_blood` | sc_warrior.cpp | 663 | _(look up)_ |
-| `collateral_damage` | sc_warrior.cpp | 600 | _(look up)_ |
-| `colossal_might` | sc_warrior.cpp | 754 | _(look up)_ |
-| `colossus_smash` | sc_warrior.cpp | 589 | _(look up)_ |
-| `conductivity` | sc_warrior.cpp | 804 | _(look up)_ |
-| `crashing_thunder` | sc_warrior.cpp | 795 | _(look up)_ |
-| `critical_thinking` | sc_warrior.cpp | 615 | _(look up)_ |
-| `cruelty` | sc_warrior.cpp | 660 | _(look up)_ |
-| `crushing_combo` | sc_warrior.cpp | 606 | _(look up)_ |
-| `culling_cyclone` | sc_warrior.cpp | 780 | _(look up)_ |
-| `cut_to_the_bone` | sc_warrior.cpp | 763 | _(look up)_ |
-| `deadly_focus` | sc_warrior.cpp | 784 | _(look up)_ |
-| `death_drive` | sc_warrior.cpp | 779 | _(look up)_ |
-| `decimator` | sc_warrior.cpp | 757 | _(look up)_ |
-| `defenders_aegis` | sc_warrior.cpp | 714 | _(look up)_ |
-| `deft_experience` | sc_warrior.cpp | 669 | _(look up)_ |
-| `demolish` | sc_warrior.cpp | 752 | _(look up)_ |
-| `demoralizing_shout` | sc_warrior.cpp | 693 | _(look up)_ |
-| `devastating_focus` | sc_warrior.cpp | 703 | _(look up)_ |
-| `devastator` | sc_warrior.cpp | 699 | _(look up)_ |
-| `die_by_the_sword` | sc_warrior.cpp | 581 | _(look up)_ |
-| `disrupting_shout` | sc_warrior.cpp | 701 | _(look up)_ |
-| `dominance_of_the_colossus` | sc_warrior.cpp | 768 | _(look up)_ |
-| `dreadnaught` | sc_warrior.cpp | 603 | _(look up)_ |
-| `dual_wield_specialization` | sc_warrior.cpp | 562 | _(look up)_ |
-| `earthquaker` | sc_warrior.cpp | 756 | _(look up)_ |
-| `efficiency` | sc_warrior.cpp | 593 | _(look up)_ |
-| `enduring_alacrity` | sc_warrior.cpp | 731 | _(look up)_ |
-| `enduring_defenses` | sc_warrior.cpp | 723 | _(look up)_ |
-| `enraged_regeneration` | sc_warrior.cpp | 644 | _(look up)_ |
-| `executioners_precision` | sc_warrior.cpp | 619 | _(look up)_ |
-| `executioners_wrath` | sc_warrior.cpp | 678 | _(look up)_ |
-| `fatality` | sc_warrior.cpp | 620 | _(look up)_ |
-| `fearless` | sc_warrior.cpp | 546 | _(look up)_ |
-| `fervor_of_battle` | sc_warrior.cpp | 586 | _(look up)_ |
-| `fierce_followthrough` | sc_warrior.cpp | 782 | _(look up)_ |
-| `fight_through_the_flames` | sc_warrior.cpp | 698 | _(look up)_ |
-| `flashing_skies` | sc_warrior.cpp | 805 | _(look up)_ |
-| `focus_in_chaos` | sc_warrior.cpp | 643 | _(look up)_ |
-| `focused_vigor` | sc_warrior.cpp | 729 | _(look up)_ |
-| `frenzied_enrage` | sc_warrior.cpp | 639 | _(look up)_ |
-| `frenzy` | sc_warrior.cpp | 670 | _(look up)_ |
-| `fresh_meat` | sc_warrior.cpp | 649 | _(look up)_ |
-| `fueled_by_violence` | sc_warrior.cpp | 579 | _(look up)_ |
-| `gathering_clouds` | sc_warrior.cpp | 807 | _(look up)_ |
-| `ground_current` | sc_warrior.cpp | 796 | _(look up)_ |
-| `hack_and_slash` | sc_warrior.cpp | 659 | _(look up)_ |
-| `heavy_handed` | sc_warrior.cpp | 738 | _(look up)_ |
-| `heavy_repercussions` | sc_warrior.cpp | 727 | _(look up)_ |
-| `hunker_down` | sc_warrior.cpp | 712 | _(look up)_ |
-| `ignore_pain` | sc_warrior.cpp | 580 | _(look up)_ |
-| `imminent_demise` | sc_warrior.cpp | 774 | _(look up)_ |
-| `impale` | sc_warrior.cpp | 590 | _(look up)_ |
-| `impenetrable_wall` | sc_warrior.cpp | 715 | _(look up)_ |
-| `improved_execute` | sc_warrior.cpp | 585 | _(look up)_ |
-| `improved_overpower` | sc_warrior.cpp | 584 | _(look up)_ |
-| `improved_raging_blow` | sc_warrior.cpp | 652 | _(look up)_ |
-| `improved_sweeping_strikes` | sc_warrior.cpp | 609 | _(look up)_ |
-| `improved_whirlwind` | sc_warrior.cpp | 646 | _(look up)_ |
-| `indomitable` | sc_warrior.cpp | 736 | _(look up)_ |
-| `instigate` | sc_warrior.cpp | 706 | _(look up)_ |
-| `interpose` | sc_warrior.cpp | 534 | _(look up)_ |
-| `intervene` | sc_warrior.cpp | 533 | _(look up)_ |
-| `intimidating_shout` | sc_warrior.cpp | 547 | _(look up)_ |
-| `into_the_fray` | sc_warrior.cpp | 728 | _(look up)_ |
-| `invigorating_fury` | sc_warrior.cpp | 650 | _(look up)_ |
-| `just_warming_up` | sc_warrior.cpp | 596 | _(look up)_ |
-| `keep_your_feet_on_the_ground` | sc_warrior.cpp | 802 | _(look up)_ |
-| `kill_or_be_killed` | sc_warrior.cpp | 658 | _(look up)_ |
-| `last_stand` | sc_warrior.cpp | 716 | _(look up)_ |
-| `lightning_strikes` | sc_warrior.cpp | 794 | _(look up)_ |
-| `martial_expert` | sc_warrior.cpp | 753 | _(look up)_ |
-| `martial_prowess` | sc_warrior.cpp | 602 | _(look up)_ |
-| `mass_execution` | sc_warrior.cpp | 608 | _(look up)_ |
-| `master_of_warfare_1` | sc_warrior.cpp | 626 | _(look up)_ |
-| `master_of_warfare_2` | sc_warrior.cpp | 627 | _(look up)_ |
-| `master_of_warfare_3` | sc_warrior.cpp | 628 | _(look up)_ |
-| `master_tactician` | sc_warrior.cpp | 622 | _(look up)_ |
-| `meat_cleaver` | sc_warrior.cpp | 661 | _(look up)_ |
-| `mortal_strike` | sc_warrior.cpp | 574 | _(look up)_ |
-| `mortal_wounds` | sc_warrior.cpp | 623 | _(look up)_ |
-| `mountain_of_muscle_and_scars` | sc_warrior.cpp | 766 | _(look up)_ |
-| `no_stranger_to_pain` | sc_warrior.cpp | 761 | _(look up)_ |
-| `odyns_fury` | sc_warrior.cpp | 674 | _(look up)_ |
-| `one_against_many` | sc_warrior.cpp | 758 | _(look up)_ |
-| `one_handed_weapon_specialization` | sc_warrior.cpp | 563 | _(look up)_ |
-| `opportunist` | sc_warrior.cpp | 783 | _(look up)_ |
-| `overpower` | sc_warrior.cpp | 576 | _(look up)_ |
-| `overpowering_finish` | sc_warrior.cpp | 594 | _(look up)_ |
-| `overwhelming_blades` | sc_warrior.cpp | 775 | _(look up)_ |
-| `phalanx_1` | sc_warrior.cpp | 745 | _(look up)_ |
-| `phalanx_2` | sc_warrior.cpp | 746 | _(look up)_ |
-| `phalanx_3` | sc_warrior.cpp | 747 | _(look up)_ |
-| `piercing_howl` | sc_warrior.cpp | 548 | _(look up)_ |
-| `powerful_enrage` | sc_warrior.cpp | 640 | _(look up)_ |
-| `powerful_momentum` | sc_warrior.cpp | 610 | _(look up)_ |
-| `practiced_strikes` | sc_warrior.cpp | 764 | _(look up)_ |
-| `precise_might` | sc_warrior.cpp | 765 | _(look up)_ |
-| `punish` | sc_warrior.cpp | 719 | _(look up)_ |
-| `ragedrinker` | sc_warrior.cpp | 664 | _(look up)_ |
-| `raging_blow` | sc_warrior.cpp | 636 | _(look up)_ |
-| `rampage` | sc_warrior.cpp | 651 | _(look up)_ |
-| `rampaging_berserker_1` | sc_warrior.cpp | 683 | _(look up)_ |
-| `rampaging_berserker_2` | sc_warrior.cpp | 684 | _(look up)_ |
-| `rampaging_berserker_3` | sc_warrior.cpp | 685 | _(look up)_ |
-| `rampaging_ruin` | sc_warrior.cpp | 653 | _(look up)_ |
-| `ravager` | sc_warrior.cpp | 614 | _(look up)_ |
-| `reap_the_storm` | sc_warrior.cpp | 786 | _(look up)_ |
-| `reckless_abandon` | sc_warrior.cpp | 679 | _(look up)_ |
-| `recklessness` | sc_warrior.cpp | 665 | _(look up)_ |
-| `relentless_pursuit` | sc_warrior.cpp | 776 | _(look up)_ |
-| `rend` | sc_warrior.cpp | 528 | _(look up)_ |
-| `revenge` | sc_warrior.cpp | 694 | _(look up)_ |
-| `scent_of_blood` | sc_warrior.cpp | 657 | _(look up)_ |
-| `sharpened_blades` | sc_warrior.cpp | 598 | _(look up)_ |
-| `shattering_throw` | sc_warrior.cpp | 543 | _(look up)_ |
-| `shield_charge` | sc_warrior.cpp | 740 | _(look up)_ |
-| `shield_specialization` | sc_warrior.cpp | 730 | _(look up)_ |
-| `shield_wall` | sc_warrior.cpp | 707 | _(look up)_ |
-| `show_no_mercy` | sc_warrior.cpp | 785 | _(look up)_ |
-| `slayers_dominance` | sc_warrior.cpp | 773 | _(look up)_ |
-| `slayers_malice` | sc_warrior.cpp | 787 | _(look up)_ |
-| `snap_induction` | sc_warrior.cpp | 806 | _(look up)_ |
-| `spellbreaker` | sc_warrior.cpp | 711 | _(look up)_ |
-| `spite` | sc_warrior.cpp | 656 | _(look up)_ |
-| `steadfast_as_the_peaks` | sc_warrior.cpp | 803 | _(look up)_ |
-| `storm_bolts` | sc_warrior.cpp | 800 | _(look up)_ |
-| `storm_shield` | sc_warrior.cpp | 801 | _(look up)_ |
-| `storm_surge` | sc_warrior.cpp | 798 | _(look up)_ |
-| `strategist` | sc_warrior.cpp | 702 | _(look up)_ |
-| `strength_of_arms` | sc_warrior.cpp | 595 | _(look up)_ |
-| `strength_of_the_mountain` | sc_warrior.cpp | 797 | _(look up)_ |
-| `sudden_death` | sc_warrior.cpp | 577 | _(look up)_ |
-| `surge_of_adrenaline` | sc_warrior.cpp | 676 | _(look up)_ |
-| `tactical_edge` | sc_warrior.cpp | 605 | _(look up)_ |
-| `tactician` | sc_warrior.cpp | 588 | _(look up)_ |
-| `thorims_might` | sc_warrior.cpp | 808 | _(look up)_ |
-| `thunder_blast` | sc_warrior.cpp | 799 | _(look up)_ |
-| `thunderlord` | sc_warrior.cpp | 713 | _(look up)_ |
-| `tide_of_battle` | sc_warrior.cpp | 760 | _(look up)_ |
-| `tough_as_nails` | sc_warrior.cpp | 721 | _(look up)_ |
-| `two_handed_weapon_specialization` | sc_warrior.cpp | 561 | _(look up)_ |
-| `unhinged` | sc_warrior.cpp | 788 | _(look up)_ |
-| `unrelenting_onslaught` | sc_warrior.cpp | 789 | _(look up)_ |
-| `unyielding_stance` | sc_warrior.cpp | 724 | _(look up)_ |
-| `veteran_vitality` | sc_warrior.cpp | 762 | _(look up)_ |
-| `vicious_agility` | sc_warrior.cpp | 777 | _(look up)_ |
-| `vicious_contempt` | sc_warrior.cpp | 673 | _(look up)_ |
-| `violent_euphoria` | sc_warrior.cpp | 778 | _(look up)_ |
-| `violent_outburst` | sc_warrior.cpp | 737 | _(look up)_ |
-| `warpaint` | sc_warrior.cpp | 645 | _(look up)_ |
-| `whirling_blade` | sc_warrior.cpp | 742 | _(look up)_ |
-| `wrath_and_fury` | sc_warrior.cpp | 667 | _(look up)_ |
-| `wrecking_throw` | sc_warrior.cpp | 542 | _(look up)_ |
+| Talent Name | File |
+|-------------|------|
+| `Against All Odds` | monk/sc_monk.cpp |
+| `Airborne Rhythm` | monk/sc_monk.cpp |
+| `Aspect of Harmony` | monk/sc_monk.cpp |
+| `Awakening Spirit` | monk/sc_monk.cpp |
+| `Balanced Stratagem` | monk/sc_monk.cpp |
+| `Black Ox Brew` | monk/sc_monk.cpp |
+| `Blackout Combo` | monk/sc_monk.cpp |
+| `Bob and Weave` | monk/sc_monk.cpp |
+| `Celerity` | monk/sc_monk.cpp |
+| `Celestial Brew` | monk/sc_monk.cpp |
+| `Celestial Conduit` | monk/sc_monk.cpp |
+| `Celestial Infusion` | monk/sc_monk.cpp |
+| `Charred Passions` | monk/sc_monk.cpp |
+| `Chi Burst` | monk/sc_monk.cpp |
+| `Chi Torpedo` | monk/sc_monk.cpp |
+| `Chi Wave` | monk/sc_monk.cpp |
+| `Chi-Ji's Swiftness` | monk/sc_monk.cpp |
+| `Clarity of Purpose` | monk/sc_monk.cpp |
+| `Coalescence` | monk/sc_monk.cpp |
+| `Combat Stance` | monk/sc_monk.cpp |
+| `Courage of the White Tiger` | monk/sc_monk.cpp |
+| `Crashing Fists` | monk/sc_monk.cpp |
+| `Crashing Momentum` | monk/sc_monk.cpp |
+| `Cyclone's Drift` | monk/sc_monk.cpp |
+| `Disable` | monk/sc_monk.cpp |
+| `Dragonfire Brew` | monk/sc_monk.cpp |
+| `Drinking Horn Cover` | monk/sc_monk.cpp |
+| `Echo Technique` | monk/sc_monk.cpp |
+| `Efficient Training` | monk/sc_monk.cpp |
+| `Endless Draught` | monk/sc_monk.cpp |
+| `Escape from Reality` | monk/sc_monk.cpp |
+| `Expeditious Fortification` | monk/sc_monk.cpp |
+| `Flowing Wisdom` | monk/sc_monk.cpp |
+| `Fluidity of Motion` | monk/sc_monk.cpp |
+| `Harmonic Gambit` | monk/sc_monk.cpp |
+| `Harmonic Surge` | monk/sc_monk.cpp |
+| `Hasty Provocation` | monk/sc_monk.cpp |
+| `High Impact` | monk/sc_monk.cpp |
+| `Hurricane's Vault` | monk/sc_monk.cpp |
+| `Initiator's Edge` | monk/sc_monk.cpp |
+| `Inner Compass` | monk/sc_monk.cpp |
+| `Invoke Xuen, the White Tiger` | monk/sc_monk.cpp |
+| `Ironshell Brew` | monk/sc_monk.cpp |
+| `Jade Sanctuary` | monk/sc_monk.cpp |
+| `Keg Volley` | monk/sc_monk.cpp |
+| `Manifestation` | monk/sc_monk.cpp |
+| `Mantra of Purity` | monk/sc_monk.cpp |
+| `Mantra of Tenacity` | monk/sc_monk.cpp |
+| `Martial Precision` | monk/sc_monk.cpp |
+| `Meditative Focus` | monk/sc_monk.cpp |
+| `One Versus Many` | monk/sc_monk.cpp |
+| `Overwhelming Force` | monk/sc_monk.cpp |
+| `Path of Jade` | monk/sc_monk.cpp |
+| `Path of Resurgence` | monk/sc_monk.cpp |
+| `Path of the Falling Star` | monk/sc_monk.cpp |
+| `Potential Energy` | monk/sc_monk.cpp |
+| `Predictive Training` | monk/sc_monk.cpp |
+| `Press the Advantage` | monk/sc_monk.cpp |
+| `Pride of Pandaria` | monk/sc_monk.cpp |
+| `Profound Rebuttal` | monk/sc_monk.cpp |
+| `Purified Spirit` | monk/sc_monk.cpp |
+| `Quick Footed` | monk/sc_monk.cpp |
+| `Quick Sip` | monk/sc_monk.cpp |
+| `Restore Balance` | monk/sc_monk.cpp |
+| `Revolving Whirl` | monk/sc_monk.cpp |
+| `Ring of Peace` | monk/sc_monk.cpp |
+| `Roar from the Heavens` | monk/sc_monk.cpp |
+| `Rushing Jade Wind` | monk/sc_monk.cpp |
+| `Sal'salabim's Strength` | monk/sc_monk.cpp |
+| `Shado Over the Battlefield` | monk/sc_monk.cpp |
+| `Singularly Focused Jade` | monk/sc_monk.cpp |
+| `Song of Chi-Ji` | monk/sc_monk.cpp |
+| `Special Delivery` | monk/sc_monk.cpp |
+| `Stand Ready` | monk/sc_monk.cpp |
+| `Strength of the Black Ox` | monk/sc_monk.cpp |
+| `Strike of the Windlord` | monk/sc_monk.cpp |
+| `Temple Training` | monk/sc_monk.cpp |
+| `Training of Niuzao` | monk/sc_monk.cpp |
+| `Unity Within` | monk/sc_monk.cpp |
+| `Veteran's Eye` | monk/sc_monk.cpp |
+| `Vigilant Watch` | monk/sc_monk.cpp |
+| `Vital Flame` | monk/sc_monk.cpp |
+| `Way of a Thousand Strikes` | monk/sc_monk.cpp |
+| `Weapons of the Wall` | monk/sc_monk.cpp |
+| `Whirling Dragon Punch` | monk/sc_monk.cpp |
+| `Whirling Steel` | monk/sc_monk.cpp |
+| `Wind's Reach` | monk/sc_monk.cpp |
+| `Wisdom of the Wall` | monk/sc_monk.cpp |
+| `Xuen's Battlegear` | monk/sc_monk.cpp |
+| `Xuen's Bond` | monk/sc_monk.cpp |
+| `Xuen's Guidance` | monk/sc_monk.cpp |
+| `Yu'lon's Avatar` | monk/sc_monk.cpp |
+| `Yu'lon's Grace` | monk/sc_monk.cpp |
+
+## Paladin (90 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Adjudication` | paladin/sc_paladin_protection.cpp |
+| `Art of War` | paladin/sc_paladin_retribution.cpp |
+| `Aurora` | paladin/sc_paladin.cpp |
+| `Authoritative Rebuke` | paladin/sc_paladin.cpp |
+| `Awakening` | paladin/sc_paladin_holy.cpp |
+| `Beacon of Faith` | paladin/sc_paladin_holy.cpp |
+| `Beacon of Virtue` | paladin/sc_paladin_holy.cpp |
+| `Bestow Faith` | paladin/sc_paladin_holy.cpp |
+| `Blessed Assurance` | paladin/sc_paladin.cpp |
+| `Blessed Hammer` | paladin/sc_paladin_protection.cpp |
+| `Blessing of An'she` | paladin/sc_paladin.cpp |
+| `Blessing of Freedom` | paladin/sc_paladin.cpp |
+| `Blessing of Spellwarding` | paladin/sc_paladin_protection.cpp |
+| `Blessing of the Forge` | paladin/sc_paladin.cpp |
+| `Bonds of Fellowship` | paladin/sc_paladin.cpp |
+| `Born in Sunlight` | paladin/sc_paladin.cpp |
+| `Boundless Judgment` | paladin/sc_paladin_retribution.cpp |
+| `Dawnlight` | paladin/sc_paladin.cpp |
+| `Divine Exaction` | paladin/sc_paladin.cpp |
+| `Divine Guidance` | paladin/sc_paladin.cpp |
+| `Divine Hammer` | paladin/sc_paladin.cpp |
+| `Divine Inspiration` | paladin/sc_paladin.cpp |
+| `Divine Purpose` | paladin/sc_paladin.cpp |
+| `Endless Gleam` | paladin/sc_paladin.cpp |
+| `Endless Wrath` | paladin/sc_paladin.cpp |
+| `Forewarning` | paladin/sc_paladin.cpp |
+| `Gleaming Rays` | paladin/sc_paladin.cpp |
+| `Glimmer of Light` | paladin/sc_paladin_holy.cpp |
+| `Golden Path` | paladin/sc_paladin.cpp |
+| `Hammer and Anvil` | paladin/sc_paladin.cpp |
+| `Hammer of the Righteous` | paladin/sc_paladin_protection.cpp |
+| `Hammerfall` | paladin/sc_paladin.cpp |
+| `Healing Hands` | paladin/sc_paladin.cpp |
+| `Healing Hands` | paladin/sc_paladin_retribution.cpp |
+| `Higher Calling` | paladin/sc_paladin.cpp |
+| `Holy Armaments` | paladin/sc_paladin.cpp |
+| `Holy Blade` | paladin/sc_paladin_retribution.cpp |
+| `Holy Prism` | paladin/sc_paladin_holy.cpp |
+| `Imbued Shield` | paladin/sc_paladin_protection.cpp |
+| `Improved Ardent Defender` | paladin/sc_paladin_protection.cpp |
+| `Improved Blade of Justice` | paladin/sc_paladin_retribution.cpp |
+| `Improved Judgment` | paladin/sc_paladin_retribution.cpp |
+| `Laying Down Arms` | paladin/sc_paladin.cpp |
+| `Lingering Radiance` | paladin/sc_paladin.cpp |
+| `Luminosity` | paladin/sc_paladin.cpp |
+| `Masterwork` | paladin/sc_paladin.cpp |
+| `Morning Star` | paladin/sc_paladin.cpp |
+| `Quickened Invocation` | paladin/sc_paladin.cpp |
+| `Recompense` | paladin/sc_paladin.cpp |
+| `Redoubt` | paladin/sc_paladin_protection.cpp |
+| `Reflection of Radiance` | paladin/sc_paladin.cpp |
+| `Resounding Strike` | paladin/sc_paladin.cpp |
+| `Righteous Cause` | paladin/sc_paladin_retribution.cpp |
+| `Rite of Adjuration` | paladin/sc_paladin.cpp |
+| `Rite of Sanctification` | paladin/sc_paladin.cpp |
+| `Rule of Law` | paladin/sc_paladin_holy.cpp |
+| `Sacred Strength` | paladin/sc_paladin.cpp |
+| `Sacrifice of the Just` | paladin/sc_paladin.cpp |
+| `Sacrosanct Crusade` | paladin/sc_paladin.cpp |
+| `Saved by the Light` | paladin/sc_paladin_holy.cpp |
+| `Seal of the Templar` | paladin/sc_paladin.cpp |
+| `Second Sunrise` | paladin/sc_paladin.cpp |
+| `Selfless Healer` | paladin/sc_paladin.cpp |
+| `Sentinel` | paladin/sc_paladin_protection.cpp |
+| `Shake the Heavens` | paladin/sc_paladin.cpp |
+| `Shared Resolve` | paladin/sc_paladin.cpp |
+| `Solar Grace` | paladin/sc_paladin.cpp |
+| `Solidarity` | paladin/sc_paladin.cpp |
+| `Stand Against Evil` | paladin/sc_paladin.cpp |
+| `Steed of Liberty` | paladin/sc_paladin.cpp |
+| `Strength in Adversity` | paladin/sc_paladin_protection.cpp |
+| `Sun Sear` | paladin/sc_paladin.cpp |
+| `Sun's Avatar` | paladin/sc_paladin.cpp |
+| `Sweeping Verdict` | paladin/sc_paladin_protection.cpp |
+| `Tempered in Battle` | paladin/sc_paladin.cpp |
+| `Templar Strikes` | paladin/sc_paladin_retribution.cpp |
+| `Tirion's Devotion` | paladin/sc_paladin_protection.cpp |
+| `Tyr's Enforcer` | paladin/sc_paladin_protection.cpp |
+| `Undisputed Ruling` | paladin/sc_paladin.cpp |
+| `Unrelenting Charger` | paladin/sc_paladin.cpp |
+| `Valiance` | paladin/sc_paladin.cpp |
+| `Walk Into Light` | paladin/sc_paladin.cpp |
+| `Worthy Sacrifice` | paladin/sc_paladin.cpp |
+| `Wrathful Descent` | paladin/sc_paladin.cpp |
+| `Wrench Evil` | paladin/sc_paladin.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1261111 | paladin/sc_paladin.cpp |
+| 1261111 | paladin/sc_paladin_retribution.cpp |
+| 1261159 | paladin/sc_paladin_retribution.cpp |
+| 1267211 | paladin/sc_paladin_protection.cpp |
+| 1267215 | paladin/sc_paladin_protection.cpp |
+
+## Priest (146 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Abyssal Reverie` | priest/sc_priest_discipline.cpp |
+| `Afterlife` | priest/sc_priest_holy.cpp |
+| `Ancient Madness` | priest/sc_priest_shadow.cpp |
+| `Apotheosis` | priest/sc_priest_holy.cpp |
+| `Assured Safety` | priest/sc_priest.cpp |
+| `Atonement` | priest/sc_priest_discipline.cpp |
+| `Benediction` | priest/sc_priest_holy.cpp |
+| `Benevolence` | priest/sc_priest.cpp |
+| `Blaze of Light` | priest/sc_priest_discipline.cpp |
+| `Borrowed Time` | priest/sc_priest_discipline.cpp |
+| `Bright Pupil` | priest/sc_priest_discipline.cpp |
+| `Burning Vehemence` | priest/sc_priest_holy.cpp |
+| `Castigation` | priest/sc_priest_discipline.cpp |
+| `Censure` | priest/sc_priest_holy.cpp |
+| `Collapsing Void` | priest/sc_priest.cpp |
+| `Cosmic Ripple` | priest/sc_priest_holy.cpp |
+| `Cosmic Wave` | priest/sc_priest_holy.cpp |
+| `Crisis Management` | priest/sc_priest_holy.cpp |
+| `Dark Energy` | priest/sc_priest.cpp |
+| `Dark Indulgence` | priest/sc_priest_discipline.cpp |
+| `Darkening Horizon` | priest/sc_priest.cpp |
+| `Desperate Measures` | priest/sc_priest.cpp |
+| `Desperate Times` | priest/sc_priest_holy.cpp |
+| `Devour Matter` | priest/sc_priest.cpp |
+| `Dispersing Light` | priest/sc_priest_holy.cpp |
+| `Distorted Reality` | priest/sc_priest_shadow.cpp |
+| `Divine Aegis` | priest/sc_priest_discipline.cpp |
+| `Divine Feathers` | priest/sc_priest.cpp |
+| `Divine Halo` | priest/sc_priest.cpp |
+| `Divine Hymn` | priest/sc_priest_holy.cpp |
+| `Divine Image` | priest/sc_priest_holy.cpp |
+| `Divine Procession` | priest/sc_priest_discipline.cpp |
+| `Divine Service` | priest/sc_priest_holy.cpp |
+| `Divinity` | priest/sc_priest_holy.cpp |
+| `Dominant Mind` | priest/sc_priest.cpp |
+| `Efficient Prayers` | priest/sc_priest_holy.cpp |
+| `Embrace the Shadow` | priest/sc_priest.cpp |
+| `Empowered Surges` | priest/sc_priest.cpp |
+| `Empyreal Blaze` | priest/sc_priest_holy.cpp |
+| `Encroaching Shadows` | priest/sc_priest_discipline.cpp |
+| `Enduring Luminescence` | priest/sc_priest_discipline.cpp |
+| `Energy Compression` | priest/sc_priest.cpp |
+| `Energy Conservation` | priest/sc_priest.cpp |
+| `Energy Cycle` | priest/sc_priest.cpp |
+| `Entropic Rift` | priest/sc_priest.cpp |
+| `Epiphany` | priest/sc_priest_holy.cpp |
+| `Eternal Barrier` | priest/sc_priest_discipline.cpp |
+| `Eternal Sanctity` | priest/sc_priest_holy.cpp |
+| `Evangelism` | priest/sc_priest_discipline.cpp |
+| `Expiation` | priest/sc_priest_discipline.cpp |
+| `Forseen Circumstances` | priest/sc_priest.cpp |
+| `Gales of Song` | priest/sc_priest_holy.cpp |
+| `Greater Smite` | priest/sc_priest_discipline.cpp |
+| `Guardian Angel` | priest/sc_priest_holy.cpp |
+| `Guardian Spirit` | priest/sc_priest_holy.cpp |
+| `Guiding Light` | priest/sc_priest.cpp |
+| `Halo` | priest/sc_priest.cpp |
+| `Harsh Discipline` | priest/sc_priest_discipline.cpp |
+| `Healing Focus` | priest/sc_priest_holy.cpp |
+| `Heightened Alteration` | priest/sc_priest.cpp |
+| `Holy Celerity` | priest/sc_priest_holy.cpp |
+| `Holy Fire` | priest/sc_priest.cpp |
+| `Holy Ray` | priest/sc_priest_discipline.cpp |
+| `Holy Word: Chastise` | priest/sc_priest_holy.cpp |
+| `Holy Word: Sanctify` | priest/sc_priest_holy.cpp |
+| `Holy Word: Serenity` | priest/sc_priest_holy.cpp |
+| `Improved Voidform` | priest/sc_priest_shadow.cpp |
+| `Incessant Screams` | priest/sc_priest.cpp |
+| `Indemnity` | priest/sc_priest_discipline.cpp |
+| `Inner Focus` | priest/sc_priest_discipline.cpp |
+| `Inner Light` | priest/sc_priest_discipline.cpp |
+| `Inner Quietus` | priest/sc_priest.cpp |
+| `Intangibility` | priest/sc_priest_shadow.cpp |
+| `Invoked Nightmares` | priest/sc_priest_shadow.cpp |
+| `Lasting Words` | priest/sc_priest_holy.cpp |
+| `Lenience` | priest/sc_priest_discipline.cpp |
+| `Manifested Power` | priest/sc_priest.cpp |
+| `Master the Darkness` | priest/sc_priest_discipline.cpp |
+| `Mental Fortitude` | priest/sc_priest_shadow.cpp |
+| `Mind Control` | priest/sc_priest.cpp |
+| `Mind Flay: Insanity` | priest/sc_priest.cpp |
+| `Mind's Eye` | priest/sc_priest_shadow.cpp |
+| `Miracle Worker` | priest/sc_priest_holy.cpp |
+| `Misery` | priest/sc_priest_shadow.cpp |
+| `No Escape` | priest/sc_priest.cpp |
+| `Occultist` | priest/sc_priest_discipline.cpp |
+| `Overwhelming Shadows` | priest/sc_priest.cpp |
+| `Pain Suppression` | priest/sc_priest_discipline.cpp |
+| `Pain Transformation` | priest/sc_priest_discipline.cpp |
+| `Pain and Suffering` | priest/sc_priest_discipline.cpp |
+| `Painful Punishment` | priest/sc_priest_discipline.cpp |
+| `Perfected Form` | priest/sc_priest.cpp |
+| `Petrifying Scream` | priest/sc_priest.cpp |
+| `Piety` | priest/sc_priest.cpp |
+| `Plea` | priest/sc_priest_discipline.cpp |
+| `Power Surge` | priest/sc_priest.cpp |
+| `Power Word: Barrier` | priest/sc_priest_discipline.cpp |
+| `Power Word: Radiance` | priest/sc_priest_discipline.cpp |
+| `Power of the Dark Side` | priest/sc_priest_discipline.cpp |
+| `Prayer of Healing` | priest/sc_priest_holy.cpp |
+| `Prayerful Litany` | priest/sc_priest_holy.cpp |
+| `Prayers of the Virtuous` | priest/sc_priest_holy.cpp |
+| `Preemptive Care` | priest/sc_priest.cpp |
+| `Preventive Measures` | priest/sc_priest.cpp |
+| `Prismatic Echoes` | priest/sc_priest_holy.cpp |
+| `Prompt Prognosis` | priest/sc_priest.cpp |
+| `Prophets Will` | priest/sc_priest.cpp |
+| `Protector of the Frail` | priest/sc_priest_discipline.cpp |
+| `Psychic Voice` | priest/sc_priest.cpp |
+| `Purge the Wicked` | priest/sc_priest_discipline.cpp |
+| `Quickened Pulse` | priest/sc_priest.cpp |
+| `Radiant Plea` | priest/sc_priest_holy.cpp |
+| `Realized Potential` | priest/sc_priest.cpp |
+| `Renewed Faith` | priest/sc_priest_holy.cpp |
+| `Restitution` | priest/sc_priest_holy.cpp |
+| `Revel in Darkness` | priest/sc_priest_discipline.cpp |
+| `Save the Day` | priest/sc_priest.cpp |
+| `Say Your Prayers` | priest/sc_priest_holy.cpp |
+| `Seraphic Crescendo` | priest/sc_priest_holy.cpp |
+| `Shadow Mend` | priest/sc_priest_discipline.cpp |
+| `Shadow Tap` | priest/sc_priest_discipline.cpp |
+| `Sheer Terror` | priest/sc_priest.cpp |
+| `Shield Discipline` | priest/sc_priest_discipline.cpp |
+| `Shock Pulse` | priest/sc_priest.cpp |
+| `Sustained Potency` | priest/sc_priest.cpp |
+| `Touch of the Void` | priest/sc_priest.cpp |
+| `Trail of Light` | priest/sc_priest_holy.cpp |
+| `Twinsight` | priest/sc_priest.cpp |
+| `Ultimate Penitence` | priest/sc_priest_discipline.cpp |
+| `Ultimate Serenity` | priest/sc_priest_holy.cpp |
+| `Uplifting Words` | priest/sc_priest_holy.cpp |
+| `Voice of Harmony` | priest/sc_priest_holy.cpp |
+| `Void Blast` | priest/sc_priest.cpp |
+| `Void Empowerment` | priest/sc_priest.cpp |
+| `Void Infusion` | priest/sc_priest.cpp |
+| `Void Leech` | priest/sc_priest.cpp |
+| `Void Tendrils` | priest/sc_priest.cpp |
+| `Void Torrent` | priest/sc_priest.cpp |
+| `Void Volley` | priest/sc_priest_shadow.cpp |
+| `Voidheart` | priest/sc_priest.cpp |
+| `Voidwraith` | priest/sc_priest.cpp |
+| `Waste No Time` | priest/sc_priest.cpp |
+| `Weal and Woe` | priest/sc_priest_discipline.cpp |
+| `Word of Supremacy` | priest/sc_priest.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1264104 | priest/sc_priest_shadow.cpp |
+| 1264107 | priest/sc_priest_shadow.cpp |
+
+## Rogue (91 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Airborne Irritant` | sc_rogue.cpp |
+| `Atrophic Poison` | sc_rogue.cpp |
+| `Bait and Switch` | sc_rogue.cpp |
+| `Blackjack` | sc_rogue.cpp |
+| `Canny Strikes` | sc_rogue.cpp |
+| `Cheat Death` | sc_rogue.cpp |
+| `Chosen's Revelry` | sc_rogue.cpp |
+| `Clear the Witnesses` | sc_rogue.cpp |
+| `Clever Combatant` | sc_rogue.cpp |
+| `Cloaked in Shadow` | sc_rogue.cpp |
+| `Cloud Cover` | sc_rogue.cpp |
+| `Combat Stamina` | sc_rogue.cpp |
+| `Controlled Chaos` | sc_rogue.cpp |
+| `Corrupt the Blood` | sc_rogue.cpp |
+| `Coup de Grace` | sc_rogue.cpp |
+| `Darkest Night` | sc_rogue.cpp |
+| `Deal Fate` | sc_rogue.cpp |
+| `Delivered Doom` | sc_rogue.cpp |
+| `Destiny Defined` | sc_rogue.cpp |
+| `Devious Distractions` | sc_rogue.cpp |
+| `Disorienting Strikes` | sc_rogue.cpp |
+| `Don't Be Suspicious` | sc_rogue.cpp |
+| `Echoing Reprimand` | sc_rogue.cpp |
+| `Edge Case` | sc_rogue.cpp |
+| `Elusiveness` | sc_rogue.cpp |
+| `Ephemeral Bonds` | sc_rogue.cpp |
+| `Ethereal Cloak` | sc_rogue.cpp |
+| `Exhilarating Execution` | sc_rogue.cpp |
+| `Fade to Nothing` | sc_rogue.cpp |
+| `Fate Intertwined` | sc_rogue.cpp |
+| `Flashing Steel` | sc_rogue.cpp |
+| `Flawless Form` | sc_rogue.cpp |
+| `Flickering Steel` | sc_rogue.cpp |
+| `Flickerstrike` | sc_rogue.cpp |
+| `Flying Daggers` | sc_rogue.cpp |
+| `Follow the Blood` | sc_rogue.cpp |
+| `Forced Induction` | sc_rogue.cpp |
+| `Gouge` | sc_rogue.cpp |
+| `Heightened Rush` | sc_rogue.cpp |
+| `Hit and Run` | sc_rogue.cpp |
+| `Hoodwink` | sc_rogue.cpp |
+| `Hunt Them Down` | sc_rogue.cpp |
+| `Improved Ambush` | sc_rogue.cpp |
+| `Inexorable March` | sc_rogue.cpp |
+| `Inspiring Strike` | sc_rogue.cpp |
+| `Intent to Kill` | sc_rogue.cpp |
+| `Internal Bleeding` | sc_rogue.cpp |
+| `Iron Wire` | sc_rogue.cpp |
+| `Lingering Darkness` | sc_rogue.cpp |
+| `Lucky Coin` | sc_rogue.cpp |
+| `Mass Casualty` | sc_rogue.cpp |
+| `Mean Streak` | sc_rogue.cpp |
+| `Menacing Rush` | sc_rogue.cpp |
+| `Mirrors` | sc_rogue.cpp |
+| `Momentum of Despair` | sc_rogue.cpp |
+| `Night Terrors` | sc_rogue.cpp |
+| `Nimble Flurry` | sc_rogue.cpp |
+| `Numbing Poison` | sc_rogue.cpp |
+| `Overflowing Purse` | sc_rogue.cpp |
+| `Planned Execution` | sc_rogue.cpp |
+| `Poisoner's Drive` | sc_rogue.cpp |
+| `Precise Killer` | sc_rogue.cpp |
+| `Quietus Celeris` | sc_rogue.cpp |
+| `Ravenholdt Mint` | sc_rogue.cpp |
+| `Retractable Hook` | sc_rogue.cpp |
+| `Rush to the Inevitable` | sc_rogue.cpp |
+| `Secondary Poisoning` | sc_rogue.cpp |
+| `Shadewalker` | sc_rogue.cpp |
+| `Shot in the Dark` | sc_rogue.cpp |
+| `Shroud of Night` | sc_rogue.cpp |
+| `Singular Focus` | sc_rogue.cpp |
+| `Smoke` | sc_rogue.cpp |
+| `So Tricky` | sc_rogue.cpp |
+| `Sometimes Lucky` | sc_rogue.cpp |
+| `Surprising Strikes` | sc_rogue.cpp |
+| `Symbolic Victory` | sc_rogue.cpp |
+| `Tempted Fate` | sc_rogue.cpp |
+| `Terrifying Pace` | sc_rogue.cpp |
+| `Thief's Versatility` | sc_rogue.cpp |
+| `Thousand Cuts` | sc_rogue.cpp |
+| `Tight Spender` | sc_rogue.cpp |
+| `Tricks of the Trade` | sc_rogue.cpp |
+| `Unseen Blade` | sc_rogue.cpp |
+| `Unshakeable Drive` | sc_rogue.cpp |
+| `Warning Signs` | sc_rogue.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1265386 | sc_rogue.cpp |
+| 1265387 | sc_rogue.cpp |
+| 1265862 | sc_rogue.cpp |
+| 1265863 | sc_rogue.cpp |
+| 1268936 | sc_rogue.cpp |
+| 1268939 | sc_rogue.cpp |
+
+## Shaman (61 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Aftershock` | sc_shaman.cpp |
+| `Ancestral Guidance` | sc_shaman.cpp |
+| `Ancestral Influence` | sc_shaman.cpp |
+| `Ancestral Swiftness` | sc_shaman.cpp |
+| `Ancient Fellowship` | sc_shaman.cpp |
+| `Arc Discharge` | sc_shaman.cpp |
+| `Awakening Storms` | sc_shaman.cpp |
+| `Call of the Ancestors` | sc_shaman.cpp |
+| `Call of the Elements` | sc_shaman.cpp |
+| `Conductive Energy` | sc_shaman.cpp |
+| `Creation Core` | sc_shaman.cpp |
+| `Deeply Rooted Elements` | sc_shaman.cpp |
+| `Descending Skies` | sc_shaman.cpp |
+| `Earth Shock` | sc_shaman.cpp |
+| `Earthsurge` | sc_shaman.cpp |
+| `Electroshock` | sc_shaman.cpp |
+| `Elemental Attunement` | sc_shaman.cpp |
+| `Elemental Blast` | sc_shaman.cpp |
+| `Elemental Resonance` | sc_shaman.cpp |
+| `Elemental Reverb` | sc_shaman.cpp |
+| `First Ascendant` | sc_shaman.cpp |
+| `Fury of the Storms` | sc_shaman.cpp |
+| `Graceful Spirit` | sc_shaman.cpp |
+| `Gust of Wind` | sc_shaman.cpp |
+| `Heed My Call` | sc_shaman.cpp |
+| `Herald of the Storms` | sc_shaman.cpp |
+| `Imbuement Mastery` | sc_shaman.cpp |
+| `Improved Lightning Bolt` | sc_shaman.cpp |
+| `Latent Wisdom` | sc_shaman.cpp |
+| `Lively Totems` | sc_shaman.cpp |
+| `Maelstrom Supremacy` | sc_shaman.cpp |
+| `Molten Wrath` | sc_shaman.cpp |
+| `Mystic Knowledge` | sc_shaman.cpp |
+| `Offering from Beyond` | sc_shaman.cpp |
+| `Oversurge` | sc_shaman.cpp |
+| `Preeminence` | sc_shaman.cpp |
+| `Primal Catalyst` | sc_shaman.cpp |
+| `Primordial Capacity` | sc_shaman.cpp |
+| `Pulse Capacitor` | sc_shaman.cpp |
+| `Rolling Thunder` | sc_shaman.cpp |
+| `Routine Communication` | sc_shaman.cpp |
+| `Splitstream` | sc_shaman.cpp |
+| `Supportive Imbuements` | sc_shaman.cpp |
+| `Surging Totem` | sc_shaman.cpp |
+| `Tectonic Collapse` | sc_shaman.cpp |
+| `Thunderous Paws` | sc_shaman.cpp |
+| `Thundershock` | sc_shaman.cpp |
+| `Thunderstorm` | sc_shaman.cpp |
+| `Thunderstrike Ward` | sc_shaman.cpp |
+| `Totemic Coordination` | sc_shaman.cpp |
+| `Totemic Momentum` | sc_shaman.cpp |
+| `Totemic Rebound` | sc_shaman.cpp |
+| `Totemic Recall` | sc_shaman.cpp |
+| `Unlimited Power` | sc_shaman.cpp |
+| `Voltaic Surge` | sc_shaman.cpp |
+| `Whirling Elements` | sc_shaman.cpp |
+| `Windspeaker` | sc_shaman.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1252373 | sc_shaman.cpp |
+| 1262761 | sc_shaman.cpp |
+| 462620 | sc_shaman.cpp |
+| 61882 | sc_shaman.cpp |
+
+## Warlock (57 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Absolute Corruption` | warlock/sc_warlock_init.cpp |
+| `Abyssal Dominion` | warlock/sc_warlock_init.cpp |
+| `Alzzin's Iniquity` | warlock/sc_warlock_init.cpp |
+| `Blackened Soul` | warlock/sc_warlock_init.cpp |
+| `Bleakheart Tactics` | warlock/sc_warlock_init.cpp |
+| `Channel Demonfire` | warlock/sc_warlock_init.cpp |
+| `Cloven Souls` | warlock/sc_warlock_init.cpp |
+| `Crashing Chaos` | warlock/sc_warlock_init.cpp |
+| `Devil Fruit` | warlock/sc_warlock_init.cpp |
+| `Diabolic Oculi` | warlock/sc_warlock_init.cpp |
+| `Diabolic Ritual` | warlock/sc_warlock_init.cpp |
+| `Dimensional Rift` | warlock/sc_warlock_init.cpp |
+| `Drain Soul` | warlock/sc_warlock_init.cpp |
+| `Eternal Hunger` | warlock/sc_warlock_init.cpp |
+| `Feast of Souls` | warlock/sc_warlock_init.cpp |
+| `Gloom of Nathreza` | warlock/sc_warlock_init.cpp |
+| `Grimoire of Sacrifice` | warlock/sc_warlock_init.cpp |
+| `Grimoire: Fel Ravager` | warlock/sc_warlock_init.cpp |
+| `Grimoire: Imp Lord` | warlock/sc_warlock_init.cpp |
+| `Hatefury Rituals` | warlock/sc_warlock_init.cpp |
+| `Havoc` | warlock/sc_warlock_init.cpp |
+| `Illhoof's Design` | warlock/sc_warlock_init.cpp |
+| `Implosion` | warlock/sc_warlock_init.cpp |
+| `Improved Shadow Bolt` | warlock/sc_warlock_init.cpp |
+| `Internal Combustion` | warlock/sc_warlock_init.cpp |
+| `Looks That Kill` | warlock/sc_warlock_init.cpp |
+| `Malevolence` | warlock/sc_warlock_init.cpp |
+| `Manifested Avarice` | warlock/sc_warlock_init.cpp |
+| `Mark of F'harg` | warlock/sc_warlock_init.cpp |
+| `Mark of Peroth'arn` | warlock/sc_warlock_init.cpp |
+| `Mark of Shatug` | warlock/sc_warlock_init.cpp |
+| `Mark of Xavius` | warlock/sc_warlock_init.cpp |
+| `Mayhem` | warlock/sc_warlock_init.cpp |
+| `Mind's Eyes` | warlock/sc_warlock_init.cpp |
+| `Necrolyte Teachings` | warlock/sc_warlock_init.cpp |
+| `Power Siphon` | warlock/sc_warlock_init.cpp |
+| `Quietus` | warlock/sc_warlock_init.cpp |
+| `Rain of Chaos` | warlock/sc_warlock_init.cpp |
+| `Reverse Entropy` | warlock/sc_warlock_init.cpp |
+| `Ruination` | warlock/sc_warlock_init.cpp |
+| `Sataiel's Volition` | warlock/sc_warlock_init.cpp |
+| `Secrets of the Coven` | warlock/sc_warlock_init.cpp |
+| `Seeds of Their Demise` | warlock/sc_warlock_init.cpp |
+| `Shadow of Death` | warlock/sc_warlock_init.cpp |
+| `Shared Fate` | warlock/sc_warlock_init.cpp |
+| `Shared Vessel` | warlock/sc_warlock_init.cpp |
+| `Siphon Life` | warlock/sc_warlock_init.cpp |
+| `Soul Anathema` | warlock/sc_warlock_init.cpp |
+| `Soul Fire` | warlock/sc_warlock_init.cpp |
+| `Summoner's Embrace` | warlock/sc_warlock_init.cpp |
+| `Through the Felvine` | warlock/sc_warlock_init.cpp |
+| `Touch of Rancora` | warlock/sc_warlock_init.cpp |
+| `Wicked Reaping` | warlock/sc_warlock_init.cpp |
+| `Xalan's Cruelty` | warlock/sc_warlock_init.cpp |
+| `Xalan's Ferocity` | warlock/sc_warlock_init.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1214467 | warlock/sc_warlock_init.cpp |
+| 5740 | warlock/sc_warlock_init.cpp |
+
+## Warrior (74 entries)
+
+**By Name:**
+
+| Talent Name | File |
+|-------------|------|
+| `Arterial Bleed` | sc_warrior.cpp |
+| `Berserker Shout` | sc_warrior.cpp |
+| `Bladestorm` | sc_warrior.cpp |
+| `Boneshaker` | sc_warrior.cpp |
+| `Broad Strokes` | sc_warrior.cpp |
+| `Brutal Finish` | sc_warrior.cpp |
+| `Brute Force` | sc_warrior.cpp |
+| `Burst of Power` | sc_warrior.cpp |
+| `Capacitance` | sc_warrior.cpp |
+| `Celeritous Conclusion` | sc_warrior.cpp |
+| `Colossal Might` | sc_warrior.cpp |
+| `Conductivity` | sc_warrior.cpp |
+| `Crashing Thunder` | sc_warrior.cpp |
+| `Crushing Combo` | sc_warrior.cpp |
+| `Culling Cyclone` | sc_warrior.cpp |
+| `Cut to the Bone` | sc_warrior.cpp |
+| `Deadly Focus` | sc_warrior.cpp |
+| `Decimator` | sc_warrior.cpp |
+| `Defender's Aegis` | sc_warrior.cpp |
+| `Demolish` | sc_warrior.cpp |
+| `Dominance of the Colossus` | sc_warrior.cpp |
+| `Earthquaker` | sc_warrior.cpp |
+| `Efficiency` | sc_warrior.cpp |
+| `Fearless` | sc_warrior.cpp |
+| `Fierce Followthrough` | sc_warrior.cpp |
+| `Flashing Skies` | sc_warrior.cpp |
+| `Gathering Clouds` | sc_warrior.cpp |
+| `Ground Current` | sc_warrior.cpp |
+| `Heavy Repercussions` | sc_warrior.cpp |
+| `Hunker Down` | sc_warrior.cpp |
+| `Imminent Demise` | sc_warrior.cpp |
+| `Impenetrable Wall` | sc_warrior.cpp |
+| `Improved Sweeping Strikes` | sc_warrior.cpp |
+| `Interpose` | sc_warrior.cpp |
+| `Into the Fray` | sc_warrior.cpp |
+| `Just Warming Up` | sc_warrior.cpp |
+| `Keep Your Feet on the Ground` | sc_warrior.cpp |
+| `Martial Expert` | sc_warrior.cpp |
+| `Mountain of Muscle and Scars` | sc_warrior.cpp |
+| `No Stranger to Pain` | sc_warrior.cpp |
+| `Odyn's Fury` | sc_warrior.cpp |
+| `One Against Many` | sc_warrior.cpp |
+| `Overwhelming Blades` | sc_warrior.cpp |
+| `Piercing Howl` | sc_warrior.cpp |
+| `Powerful Enrage` | sc_warrior.cpp |
+| `Powerful Momentum` | sc_warrior.cpp |
+| `Practiced Strikes` | sc_warrior.cpp |
+| `Precise Might` | sc_warrior.cpp |
+| `Ravager` | sc_warrior.cpp |
+| `Reap the Storm` | sc_warrior.cpp |
+| `Relentless Pursuit` | sc_warrior.cpp |
+| `Shattering Throw` | sc_warrior.cpp |
+| `Show No Mercy` | sc_warrior.cpp |
+| `Slayer's Dominance` | sc_warrior.cpp |
+| `Slayer's Malice` | sc_warrior.cpp |
+| `Snap Induction` | sc_warrior.cpp |
+| `Spell Breaker` | sc_warrior.cpp |
+| `Steadfast as the Peaks` | sc_warrior.cpp |
+| `Strength of the Mountain` | sc_warrior.cpp |
+| `Thunder Blast` | sc_warrior.cpp |
+| `Tide of Battle` | sc_warrior.cpp |
+| `Unhinged` | sc_warrior.cpp |
+| `Unrelenting Onslaught` | sc_warrior.cpp |
+| `Veteran Vitality` | sc_warrior.cpp |
+| `Vicious Agility` | sc_warrior.cpp |
+| `Violent Euphoria` | sc_warrior.cpp |
+| `Whirling Blade` | sc_warrior.cpp |
+| `Wrecking Throw` | sc_warrior.cpp |
+
+**By ID (ID-only registration, no name in Wowhead):**
+
+| Spell ID | File |
+|----------|------|
+| 1269306 | sc_warrior.cpp |
+| 1269307 | sc_warrior.cpp |
+| 1269309 | sc_warrior.cpp |
+| 1269310 | sc_warrior.cpp |
+| 1269312 | sc_warrior.cpp |
+| 1269313 | sc_warrior.cpp |
