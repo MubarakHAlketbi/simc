@@ -885,7 +885,10 @@ public:
       player_talent_t gravedigger_2;
       player_talent_t gravedigger_3;
 
-      // TODO: NYI - Grand Melee (ID:1259469) -- Outlaw spec talent in Midnight info_base. DPS-relevant finisher modifier.
+      // Grand Melee (ID:1259469) -- Blade Flurry causes attacks to hit nearby enemies for an additional 8% of normal damage.
+      // Source: https://www.wowhead.com/spell=1259469 (retrieved 2026-03-20)
+      // Mechanic: Modifies Blade Flurry Effect #2 (the "% of damage" cleave multiplier) by +8.
+      player_talent_t grand_melee;
 
     } outlaw;
 
@@ -1601,6 +1604,7 @@ public:
     bool summarily_dispatched = false;
     bool unshakeable_drive_2 = false;
     bool zoldyck_insignia = false;
+    bool sudden_demise = false;          // Execute-range bleed damage bonus
 
     bool mid1_assassination_4pc = false;
     bool mid1_subtlety_2pc = false;
@@ -1703,6 +1707,15 @@ public:
     if ( p->talent.assassination.dragon_tempered_blades->ok() )
     {
       affected_by.dragon_tempered_blades = ab::data().affected_by( p->talent.assassination.dragon_tempered_blades->effectN( 2 ) );
+    }
+
+    if ( p->talent.assassination.sudden_demise->ok() )
+    {
+      // Sudden Demise (ID:423136) effectN(1) = A_ADD_PCT_MODIFIER, modifies periodic damage on bleeds.
+      // Use mastery whitelist as baseline (same pattern as zoldyck / lethal_dose).
+      // Source: https://www.wowhead.com/spell=423136 (retrieved 2026-03-20)
+      affected_by.sudden_demise = ab::data().affected_by( p->mastery.potent_assassin->effectN( 1 ) ) ||
+                                  ab::data().affected_by( p->mastery.potent_assassin->effectN( 2 ) );
     }
 
     // Outlaw
@@ -2435,6 +2448,30 @@ public:
     {
       m *= 1.0 + ( p()->talent.assassination.lethal_dose->effectN( 1 ).percent() *
                    td( state->target )->lethal_dose_count() );
+    }
+
+    // Sudden Demise (ID:423136) -- Bleed damage increased by 10% (effectN(1), base bleed bonus).
+    // Additional execute mechanic: targets below effectN(3) (35%) health take extra bleed damage.
+    // For execute range: damage is amplified as bleed remaining >> remaining HP.
+    // SimC model: flat 10% bleed boost always, plus execute bonus below 35% HP.
+    // Source: https://www.wowhead.com/spell=423136 (retrieved 2026-03-20)
+    if ( affected_by.sudden_demise )
+    {
+      // Base 10% bleed damage bonus (effectN(1))
+      m *= 1.0 + p()->talent.assassination.sudden_demise->effectN( 1 ).percent();
+
+      // Execute bonus: below effectN(3).base_value()% HP, treat remaining bleed as fatal.
+      // We model execute as an additional damage multiplier proportional to missing HP.
+      // effectN(2) = 150 (pct of remaining HP that bleed must exceed) -> scalar factor.
+      const double execute_threshold = p()->talent.assassination.sudden_demise->effectN( 3 ).base_value();
+      const double hp_pct = state->target->health_percentage();
+      if ( hp_pct < execute_threshold && execute_threshold > 0.0 )
+      {
+        // Scale: at 0% HP -> full multiplier of (150/100)=1.5x; at threshold -> 1.0x
+        const double execute_scale = p()->talent.assassination.sudden_demise->effectN( 2 ).base_value() / 100.0;
+        const double t = 1.0 - ( hp_pct / execute_threshold );
+        m *= 1.0 + execute_scale * t;
+      }
     }
 
     // Follow the Blood
@@ -6974,6 +7011,13 @@ struct blade_flurry_t : public rogue_buff_t
   {
     set_cooldown( timespan_t::zero() );
     set_default_value_from_effect( 2 );
+    // Grand Melee (ID:1259469): Blade Flurry hits nearby enemies for an additional 8% of normal damage.
+    // Modifies Effect #2 (cleave damage multiplier) by +8 percentage points.
+    // Source: https://www.wowhead.com/spell=1259469 (retrieved 2026-03-20)
+    if ( p->talent.outlaw.grand_melee->ok() )
+    {
+      set_default_value( default_value + p->talent.outlaw.grand_melee->effectN( 1 ).percent() );
+    }
     set_refresh_behavior( buff_refresh_behavior::DURATION );
   }
 };
@@ -9690,6 +9734,11 @@ void rogue_t::init_spells()
   talent.outlaw.gravedigger_1 = find_talent_spell( talent_tree::SPECIALIZATION, 1265861 );
   talent.outlaw.gravedigger_2 = find_talent_spell( talent_tree::SPECIALIZATION, 1265862 );
   talent.outlaw.gravedigger_3 = find_talent_spell( talent_tree::SPECIALIZATION, 1265863 );
+
+  // Grand Melee (ID:1259469) -- Blade Flurry causes attacks to hit nearby enemies for an additional 8% of normal damage.
+  // Mechanic: Modifies Blade Flurry Effect #2 (the cleave damage %) by +8 percentage points.
+  // Source: https://www.wowhead.com/spell=1259469 (retrieved 2026-03-20)
+  talent.outlaw.grand_melee = find_talent_spell( talent_tree::SPECIALIZATION, 1259469 );
 
   // Subtlety Talents
   talent.subtlety.cloaked_in_shadow = find_talent_spell( talent_tree::SPECIALIZATION, "Cloaked in Shadow" );
