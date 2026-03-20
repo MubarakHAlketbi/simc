@@ -165,8 +165,8 @@ jobs:
           if exist build_gui rmdir /s /q build_gui
           call "%VCVARS_PATH%" x64
           
-          :: Switch -G Ninja to Visual Studio 18 2025
-          cmake -S . -B build_gui -G "Visual Studio 18 2025" -A x64 -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          :: Switch -G Ninja to Visual Studio 18 2026
+          cmake -S . -B build_gui -G "Visual Studio 18 2026" -A x64 -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           
           :: Build with MSBuild using multiple cores
           cmake --build build_gui --config Release --parallel
