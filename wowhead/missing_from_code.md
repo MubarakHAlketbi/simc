@@ -8,6 +8,35 @@ They may need implementation, or may use a different name convention in SimC.
 For each: verify on Wowhead, check if it is a DPS-relevant talent,
 then either implement it or mark N/A.
 
+## AUDIT NOTE — 2026-03-20
+
+**Audited by:** Hermes Agent (subagent)
+
+### Critical Scanner Bug Found
+
+The scanner searched for `player_talent_t` keyword to detect talent declarations.
+This caused MASSIVE FALSE POSITIVES for two classes:
+
+- **Hunter** uses `spell_data_ptr_t` for all talent declarations in sc_hunter.cpp
+  → All 98/93/93 "missing" Hunter talents (BM/MM/SV) are ALREADY IMPLEMENTED
+  → Scanner reported 284 missing, actual missing: 0
+
+- **Paladin** uses `const spell_data_t*` for all talent struct members in sc_paladin.hpp
+  → All 95/92 "missing" Paladin talents (Prot/Ret) are ALREADY IMPLEMENTED
+  → Scanner reported 187 missing, actual missing: 0
+
+### Classes with Accurate Scanner Results
+Classes that use `player_talent_t` (standard pattern) are correctly detected:
+Mage, Monk, Rogue, Priest, Shaman, Warlock, Warrior — these have small counts (2-21).
+
+### Recommendation
+The missing_from_code.md generator script should be updated to also search for:
+- `spell_data_ptr_t`
+- `const spell_data_t*`
+- `find_talent_spell(` (direct call pattern)
+
+---
+
 ---
 
 ## Hunter / Beast Mastery (98 missing)
