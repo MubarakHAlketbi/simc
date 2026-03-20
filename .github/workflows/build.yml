@@ -121,10 +121,12 @@ jobs:
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
 
-# ── Windows MSVC x64 — CLI (no Qt) ─────────────────────────────────────
   windows-cli:
     name: Windows MSVC x64 CLI
     runs-on: self-hosted
+    env:
+      VCVARS_PATH: "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Auxiliary\Build\vcvarsall.bat"
+
     steps:
       - uses: actions/checkout@v4
 
@@ -155,6 +157,9 @@ jobs:
   windows-gui:
     name: Windows MSVC x64 GUI
     runs-on: self-hosted
+    env:
+      VCVARS_PATH: "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Auxiliary\Build\vcvarsall.bat"
+
     steps:
       - uses: actions/checkout@v4
 
