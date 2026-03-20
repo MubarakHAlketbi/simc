@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 env:
-  CCACHE_GENERATION: 0
+  CCACHE_GENERATION: '0'
   VCVARS_PATH: "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat"
 
 jobs:
@@ -124,8 +124,6 @@ jobs:
   windows-cli:
     name: Windows MSVC x64 CLI
     runs-on: self-hosted
-    env:
-      VCVARS_PATH: "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Auxiliary\Build\vcvarsall.bat"
 
     steps:
       - uses: actions/checkout@v4
@@ -157,8 +155,6 @@ jobs:
   windows-gui:
     name: Windows MSVC x64 GUI
     runs-on: self-hosted
-    env:
-      VCVARS_PATH: "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Auxiliary\Build\vcvarsall.bat"
 
     steps:
       - uses: actions/checkout@v4
