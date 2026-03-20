@@ -162,16 +162,14 @@ jobs:
       - name: Configure and Build GUI
         shell: cmd
         run: |
-          :: 1. Delete the poisoned cache from previous failed runs!
           if exist build_gui rmdir /s /q build_gui
-          
           call "%VCVARS_PATH%" x64
           
-          :: 2. Configure with a completely fresh build directory
-          cmake -S . -B build_gui -G Ninja -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
+          :: Switch -G Ninja to Visual Studio 18 2025
+          cmake -S . -B build_gui -G "Visual Studio 18 2025" -A x64 -DCMAKE_PREFIX_PATH="C:/Qt/6.10.2/msvc2022_64" -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17
           
-          :: 3. Build
-          cmake --build build_gui --parallel
+          :: Build with MSBuild using multiple cores
+          cmake --build build_gui --config Release --parallel
 
       - name: Smoke test GUI
         shell: pwsh
