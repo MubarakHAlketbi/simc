@@ -174,7 +174,7 @@ jobs:
       - name: Smoke test GUI
         shell: pwsh
         run: |
-          .\build_gui\simc.exe `
+          .\build_gui\Release\simc.exe `
             output=nul html=nul json=nul `
             iterations=5 cleanup_threads=1 `
             warrior=test spec=fury load_default_gear=1 load_default_talents=1
@@ -182,13 +182,15 @@ jobs:
       - name: Deploy Qt runtime (windeployqt)
         shell: pwsh
         run: |
-          # Add your exact Qt bin folder to the PATH so windeployqt works natively
           $env:PATH = "C:\Qt\6.10.2\msvc2022_64\bin;$env:PATH"
           
           New-Item -ItemType Directory -Force -Path dist_gui
           
-          Copy-Item build_gui\SimulationCraft.exe dist_gui\
-          Copy-Item build_gui\simc.exe dist_gui\
+          # Notice the \Release\ added to the two lines below
+          Copy-Item build_gui\Release\SimulationCraft.exe dist_gui\
+          Copy-Item build_gui\Release\simc.exe dist_gui\
+          
+          # The rest remains the same
           Copy-Item qt\Welcome.html dist_gui\ -ErrorAction SilentlyContinue
           Copy-Item qt\Welcome.png dist_gui\ -ErrorAction SilentlyContinue
           Copy-Item qt\Error.html dist_gui\ -ErrorAction SilentlyContinue
