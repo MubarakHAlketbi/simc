@@ -295,9 +295,13 @@ In those cases the ID is resolved at runtime from the spell database.
 - Status: VERIFIED CORRECT
 - Source: https://www.wowhead.com/spell=1271687
 
-### Augmentation — (no apex talent in current code)
-- No _1/_2/_3 pattern found in sc_evoker.cpp for Augmentation spec
-- Augmentation may share Rising Fury or have its own apex not yet implemented
+### Augmentation — Duplicate
+- _1=1259173 (Rank 1): Breath of Eons summons a future-self duplicate for 20s that casts Eruption, Fire Breath, and Upheaval.
+- _2=1259174 (Rank 2+3): Whenever you extend Ebon Might, your duplicate is also extended by 50% of the extension amount.
+- _3=1259175 (Rank 4): While your duplicate is active, Ebon Might grants 75% additional stats; Upheaval and Eruption deal +25% damage.
+- Status: VERIFIED CORRECT — implemented in sc_evoker.cpp as talent.duplicate1/2/3 (distinct from Devastation's Rising Fury)
+- NOTE: Rising Fury (1271687) is the DEVASTATION apex. Duplicate (1259173) is AUGMENTATION-only.
+- Source: https://www.wowhead.com/spell=1259173 (verified 2026-03-20)
 
 ---
 

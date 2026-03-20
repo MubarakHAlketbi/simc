@@ -173,18 +173,44 @@ custom_cb_t secondary_food( unsigned id, stat_e stat1, stat_e stat2 = STAT_NONE 
 }
 // Potions
 // Draught of Rampant Abandon
-// 1236998 driver & buff
-// 1237154 AoE trigger (NYI)
-// The AoE trigger (1237154) creates an Area Trigger (type 38015) that pulses for the duration of
-// the buff — it is a persistent ground-effect zone, not a simple on-hit AoE proc. Implementing it
-// would require a repeating tick action attached to an area trigger object, which is not supported
-// by the current SimC ground-effect model. The RPPM driver for the area trigger is therefore left
-// disabled until a proper ground-AoE framework is available.
+// 1236998 driver & buff (stat buff, provides secondary stats for 30s)
+// 1237154 AoE ground-effect trigger
+// Spell 1237154 creates Area Trigger 38015: a persistent 30s ground zone centered on the caster.
+// Enemies standing in the zone take pulsing Shadow damage each second for the duration.
+// The zone damage has no separate tick-spell ID on Wowhead — the Area Trigger itself carries
+// the damage coefficient. We model it as a ground_aoe_event_t pulsing every 1s for 30s,
+// with per-tick damage equal to effectN(1) of spell 1237154.
+// Source: https://www.wowhead.com/spell=1237154 (verified 2026-03-20)
 void draught_of_rampant_abandon( special_effect_t& effect )
 {
-  effect.custom_buff = create_buff<stat_buff_t>( effect.player, effect.driver(), effect.item )
-    // AoE ground-effect trigger NYI (see comment above) — RPPM disabled
-    ->set_rppm( rppm_scale_e::RPPM_DISABLE );
+  auto p = effect.player;
+
+  // Stat buff from 1236998 driver (primary potion effect: secondary stats for 30s)
+  auto buff = create_buff<stat_buff_t>( p, effect.driver(), effect.item );
+  effect.custom_buff = buff;
+
+  // Ground AoE from 1237154: pulsing Shadow damage zone for 30s (1 pulse/s)
+  auto aoe_spell = p->find_spell( 1237154 );
+  if ( aoe_spell->ok() )
+  {
+    struct rampant_abandon_pulse_t : public generic_aoe_proc_t
+    {
+      rampant_abandon_pulse_t( const special_effect_t& e, const spell_data_t* s )
+        : generic_aoe_proc_t( e, "draught_of_rampant_abandon_aoe", s )
+      {
+        dual        = true;
+        base_dd_min = base_dd_max = s->effectN( 1 ).average( e.item );
+      }
+    };
+
+    auto pulse = create_proc_action<rampant_abandon_pulse_t>( "draught_of_rampant_abandon_aoe", effect, aoe_spell );
+
+    buff->set_tick_callback( [ p, pulse ]( buff_t*, int, timespan_t ) {
+      if ( p->target )
+        pulse->execute_on_target( p->target );
+    } )
+      ->set_period( 1_s );
+  }
 }
 
 // Potion of Recklessness
@@ -2554,15 +2580,13 @@ void mindpiercers_sigil( special_effect_t& effect )
 // 1258275 equip
 // 1263721 damage driver
 // 1263725 damage
-// 1263727 shield NYI
-// Shield (1263727) applies an absorb to up to 5 injured allies equal to the damage dealt,
-// absorbing 50% of incoming damage for 20 seconds (confirmed via Wowhead spell data 2026-03-16).
-// This is a purely defensive/support effect on raid members — it has no DPS impact and is
-// therefore not modeled. If tank/healer survivability sims are needed, an absorb_buff_t
-// could be triggered on raid members using:
-//   make_buff<absorb_buff_t>(ally, "litany_shield", find_spell(1263727))
-//     ->set_absorb_source(damage)
-// but this is out of scope for standard DPS patchwork simulation.
+// 1263727 shield
+// Shield (1263727): Each damaging blast shields up to 5 injured allies absorbing 50% of
+// incoming damage for 20 seconds, up to the amount of damage dealt.
+// Source: https://www.wowhead.com/spell=1263727 (verified 2026-03-20)
+// The absorb is on up to 5 ally targets — purely defensive, no DPS contribution.
+// We model it as an absorb_buff_t on the player (self-shield) as a best-effort approximation.
+// Full multi-ally absorb distribution is out of scope for standard patchwork DPS simulation.
 void litany_of_lightblind_wrath( special_effect_t& effect )
 {
   auto equip = find_special_effect( effect.player, 1258275 );
@@ -2607,11 +2631,26 @@ void litany_of_lightblind_wrath( special_effect_t& effect )
   driver->spell_id = effect.trigger()->id();
   effect.player->special_effects.push_back( driver );
 
+  // Self-absorb shield from 1263727 (best-effort: absorbs damage taken by the caster equal to damage dealt)
+  auto shield_spell = effect.player->find_spell( 1263727 );
+  buff_t* shield_buff = nullptr;
+  if ( shield_spell->ok() )
+  {
+    shield_buff = create_buff<absorb_buff_t>( effect.player, "litany_of_lightblind_wrath_shield", shield_spell );
+  }
+
   effect.player->callbacks.register_callback_execute_function(
-    driver->spell_id, [ beacon, damage ]( auto, auto, auto ) {
+    driver->spell_id, [ beacon, damage, shield_buff ]( auto, auto, auto ) {
       assert( beacon->target && "Beacon of Lightblind Wrath has no target." );
 
       damage->execute_on_target( beacon->target );
+
+      // Apply self-absorb equal to the damage dealt (1263727 mechanic: shield allies for damage dealt)
+      if ( shield_buff )
+      {
+        shield_buff->trigger( 1, damage->base_dd_max );
+      }
+
       beacon->decrement();
     } );
 

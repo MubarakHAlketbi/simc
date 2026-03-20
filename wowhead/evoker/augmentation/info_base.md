@@ -1,5 +1,13 @@
 # Evoker Augmentation — Midnight (12.0.1) Information Base
 Generated: 2026-03-17
+Updated: 2026-03-20 — Added Apex talent documentation
+
+## Midnight Apex Talent: Duplicate
+- Rank 1 (ID 1259173): Breath of Eons summons a future-self duplicate for 20s that casts Eruption, Fire Breath, Upheaval.
+- Rank 2+3 (ID 1259174): Extending Ebon Might also extends the duplicate by 50% of the amount.
+- Rank 4 (ID 1259175): While duplicate active, Ebon Might grants +75% stats; Upheaval/Eruption +25% damage.
+- SimC implementation: sc_evoker.cpp talent.duplicate1/2/3 + buff.duplicate
+- Source: https://www.wowhead.com/spell=1259173
 Sources:
 - https://www.wowhead.com/guide/classes/evoker/augmentation/overview-pve-dps
 - https://www.wowhead.com/guide/classes/evoker/augmentation/basics

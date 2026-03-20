@@ -9725,7 +9725,14 @@ void evoker_t::init_spells()
   talent.molten_embers      = ST( "Molten Embers" );
   talent.clairvoyant        = ST( "Clairvoyant" );
 
-  // Apex
+  // Apex — Augmentation 4-rank talent: Duplicate
+  // This is the Augmentation Evoker Midnight Apex talent (4-rank, Augmentation-spec only).
+  // It is triggered from Breath of Eons; Rising Fury (1271687) is the DEVASTATION apex.
+  // R1 (1259173): Breath of Eons summons a future-self duplicate for 20s that casts Eruption, Fire Breath, Upheaval.
+  // R2 (1259174): Any time you extend Ebon Might, your duplicate is also extended by 50% of that amount.
+  // R3 (1259174): Same ID as R2 — the effectN value scales per rank.
+  // R4 (1259175): While your duplicate is active, Ebon Might grants 75% additional stats; Upheaval and Eruption +25% dmg.
+  // Source: https://www.wowhead.com/spell=1259173 (verified 2026-03-20)
   talent.duplicate1                  = find_talent_spell( talent_tree::SPECIALIZATION, 1259173 );
   talent.duplicate_eruption_spell    = find_spell( 1259172 );
   talent.duplicate_fire_breath_charge_spell = find_spell( 1283718 );
