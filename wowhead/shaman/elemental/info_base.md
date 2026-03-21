@@ -587,7 +587,7 @@ _[...content truncated]_
 | 382032 | Echo Chamber | 1 | [link](https://www.wowhead.com/spell=382032) |
 | 462867 | Everlasting Elements | 1 | [link](https://www.wowhead.com/spell=462867) |
 | 170374 | Earthen Rage | 1 | [link](https://www.wowhead.com/spell=170374) |
-| 1273485 | Lava Flows | 1 | [link](https://www.wowhead.com/spell=1273485) |
+| 1273485 | Lava Flows | 1 | [link](https://www.wowhead.com/spell=1273485) | **IMPLEMENTED** (2026-03-21): Lava Burst damage increased by 5% (effectN(1)). Lava Burst and Lava Burst Overload each generate 1 additional Maelstrom (effectN(2)). Registered in init_spells(), damage wired in lava_burst_t/lava_burst_overload_t action_multiplier(), Maelstrom gain wired in lava_burst_t::execute() and lava_burst_overload_t::impact(). |
 | 462840 | Fusion of Elements | 1 | [link](https://www.wowhead.com/spell=462840) |
 | 381708 | Eye of the Storm | 1 | [link](https://www.wowhead.com/spell=381708) |
 | 114050 | Ascendance | 1 | [link](https://www.wowhead.com/spell=114050) |

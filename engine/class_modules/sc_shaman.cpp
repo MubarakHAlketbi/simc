@@ -6646,6 +6646,13 @@ struct lava_burst_overload_t : public elemental_overload_spell_t
     s->result_amount = elemental_overload_spell_t::calculate_direct_amount( s );
 
     elemental_overload_spell_t::impact( s );
+
+    // Lava Flows: Lava Burst Overload generates 1 additional Maelstrom
+    if ( p()->talent.lava_flows.ok() && p()->specialization() == SHAMAN_ELEMENTAL )
+    {
+      p()->trigger_maelstrom_gain( p()->talent.lava_flows->effectN( 2 ).base_value(),
+                                   p()->gain.lava_flows );
+    }
   }
 
   double action_multiplier() const override
@@ -6667,6 +6674,11 @@ struct lava_burst_overload_t : public elemental_overload_spell_t
       m *= 1.0 + this->composite_crit_chance();
     }
 
+    // Lava Flows: Lava Burst Overload damage increased by 5%
+    if ( p()->talent.lava_flows.ok() )
+    {
+      m *= 1.0 + p()->talent.lava_flows->effectN( 1 ).percent();
+    }
 
     return m;
   }
@@ -7053,6 +7065,13 @@ struct lava_burst_t : public shaman_spell_t
       rng().roll( p()->talent.power_of_the_maelstrom->effectN( 1 ).percent() ) )
     {
       p()->buff.power_of_the_maelstrom->trigger();
+    }
+
+    // Lava Flows: Lava Burst generates 1 additional Maelstrom
+    if ( p()->talent.lava_flows.ok() && p()->specialization() == SHAMAN_ELEMENTAL )
+    {
+      p()->trigger_maelstrom_gain( p()->talent.lava_flows->effectN( 2 ).base_value(),
+                                   p()->gain.lava_flows );
     }
 
     if ( p()->talent.routine_communication.ok() && p()->rng_obj.routine_communication->trigger() &&

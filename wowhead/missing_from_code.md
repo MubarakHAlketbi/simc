@@ -142,7 +142,7 @@ talent registration. Partial-prefix slug matching handles truncated info_base na
 | 381650 | Elemental Warding | 1 | [link](https://www.wowhead.com/spell=381650) |
 | 381930 | Mana Spring | 1 | [link](https://www.wowhead.com/spell=381930) |
 | 204268 | Voodoo Mastery | 1 | [link](https://www.wowhead.com/spell=204268) |
-| 1273485 | Lava Flows | 1 | [link](https://www.wowhead.com/spell=1273485) |
+~~| 1273485 | Lava Flows | 1 | [link](https://www.wowhead.com/spell=1273485) |~~ **IMPLEMENTED 2026-03-21**
 
 ## Shaman / Enhancement (14 / 73 missing)
 
