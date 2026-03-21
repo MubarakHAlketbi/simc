@@ -181,6 +181,49 @@ Key finding: most existing APLs are well-aligned with Wowhead rotations. The "MI
 
 Next: work through MEDIUM specs, fixing gaps spec by spec.
 
+### Phase 2 Complete — All 30 MEDIUM + 2 LOW Specs Audited (2026-03-22)
+
+All 33 specs verified. 52/52 profiles pass 1-iter sim after fixes.
+
+**Actual fixes made (2 total):**
+1. DH Havoc — Demonsurge ordering condition was in comment, not condition string (see above)
+2. Evoker Augmentation — simplified 18-line profile APL removed; now uses full C++ generator
+   (was missing cancel_buff tip_the_scales, pandemic Ebon Might, trinket sync)
+
+**False positives in diff report (parser artifacts, no action needed):**
+- DK Frost: obliterate_without_killing_machine, frostscythe_without_killing_machine
+- DK Blood: death_and_decay_and_stand
+- Mage Fire: meteor_right
+- Warrior Arms: cleave_without_martial_prowess_talented
+- Warrior Protection: execute_targets
+
+**Engine-managed replacement actions (no APL changes needed):**
+- DK Blood vampiric_strike: auto-fires via make_fallback() when buff.vampiric_strike.up
+- DK Unholy festering_scythe: set_replacement_action() replaces festering_strike automatically
+- DK Unholy graveyard: set_replacement_action() replaces epidemic when buff.forbidden_knowledge.up
+- DH Devourer void_metamorphosis: passive spec feature, not a castable action
+- DH Devourer reaper_s_toll: already in APL as reavers_toll
+- Pala Protection sacred_weapon/holy_bulwark: handled by holy_armaments with next_armament conditions
+- Druid Feral moonfire: already in APL as moonfire_cat (engine alias)
+- Rogue Outlaw opportunity: buff proc, APL uses pistol_shot,if=buff.opportunity.up
+
+**ORDER_DIFF verifications (abilities confirmed present, reordering not needed):**
+- Evoker Devastation: living_flame present
+- Mage Frost: glacial_spike, frostbolt present
+- Rogue Subtlety: shadowstrike present
+- DK Frost: reapers_mark present
+- Mage Fire: 0 missing, 0 order changes needed
+- Rogue Outlaw: blade_rush, preparation ORDER_DIFF acceptable
+- Warrior Arms: mortal_strike, rend, demolish ORDER_DIFF acceptable
+- Warrior Fury: all abilities present
+- Warrior Protection: all abilities present
+
+**NEEDS_MANUAL_REVIEW — all confirmed correct (no changes needed):**
+DH Vengeance, Druid Balance, Druid Guardian, Evoker Aug (fixed), Hunter BM,
+Hunter MM, Hunter Survival, Mage Arcane, Monk Brewmaster, Monk Windwalker,
+Priest Shadow, Rogue Assassination, Shaman Elemental, Shaman Enhancement,
+Warlock Affliction, Warlock Demonology
+
 ---
 
 ## 5. Unique Gear — Midnight Trinkets / Embellishments
@@ -289,4 +332,5 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 || 826b89e | 2026-03-20 | Warlock Affliction drain_life APL priority fix |
 || 894bf73 | 2026-03-22 | Phase 2: APL diff report all 33 specs + gen_apl_diff.py |
 || 1c6dc7a | 2026-03-22 | Wowhead browser extraction fix: hero talent toggle + placeholder wait |
-|| (pending) | 2026-03-22 | DH Havoc Demonsurge ordering APL fix |
+|| 731130c | 2026-03-22 | DH Havoc Demonsurge ordering APL fix |
+|| cd5f8eb | 2026-03-22 | Evoker Augmentation — remove simplified inline APL |
