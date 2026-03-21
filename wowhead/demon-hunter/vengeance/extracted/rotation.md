@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 22:18
+Generated: 2026-03-21 23:22
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Annihilator', 'Aldrachi Reaver']

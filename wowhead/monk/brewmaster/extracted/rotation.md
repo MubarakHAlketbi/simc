@@ -1,6 +1,6 @@
 # monk/brewmaster — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 22:39
+Generated: 2026-03-21 23:29
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Master of Harmony']
@@ -16,7 +16,22 @@ Tab Group 4: ['Blackout Combo', 'Special Delivery/Rushing Jade Wind', 'Charred P
 
 #### Single-Target Priority
 BEST BREWMASTER MONK SINGLE TARGET ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+The builds and talent options shown above are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+As a reminder, this priority is meant to be followed when you are in the middle of single-target combat and multiple abilities are already on cooldown to decide what to use next. Consult the opener tab for what order to use abilities in when first entering a pull.
+Execute an enemy with  Touch of Death, when allowed - 
+Use  Blackout Kick to trigger  Blackout Combo - 
+Cast  Chi Burst - 
+Consume one charge of  Celestial Brew/ Celestial Infusion, only if at two charges or taking minimal damage - 
+Activate  Invoke Niuzao, the Black Ox - 
+Consume your  Blackout Combo buff with  Tiger Palm - 
+Consume an active Empty Barrel from  Bring Me Another - 
+Use  Breath of Fire - 
+Use  Exploding Keg - 
+Use a charge of  Keg Smash - 
+If taking minimal damage, use an extra charge of  Purifying Brew to trigger additional  Special Delivery or Empty Barrels from  Bring Me Another - 
+Use  Tiger Palm when there are no other abilities to press - 
+ Further Details
 
 BREWMASTER STAGGER EXPLAINED
 On top of being able to frequently dodge enemy attacks with  Mastery: Elusive Brawler, Brewmaster Monks are the only specialization featuring the additional mechanic of  Stagger to further mitigate damage. With this passive effect, all damage you receive will be split into two portions:
@@ -94,8 +109,23 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST BREWMASTER MONK AOE ROTATION
-Common among tank specializations, Brewmaster Monk's rotation priority will stay mostly unchanged between single target and AoE. As with single target, for every global used, you go through the list until reaching the first relevant ability that is available to be activated. There will be minor differences in the priority depending on whether you have chosen to be a Shado-Pan Brewmaster or a Master of Harmony.
- Please select a Hero Talent option to generate a Single Target priority
+Common among tank specializations, Brewmaster Monk's rotation priority will stay mostly unchanged between single target and AoE. As with single target, for every global used, you go through the list until reaching the first relevant ability that is available to be activated. With Master of Harmony selected, the priority is as follows:
+The builds and talent options shown above are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+As a reminder, this priority is meant to be followed when you are in the middle of AoE combat and multiple abilities are already on cooldown to decide what to use next. Consult the opener tab for what order to use abilities in when first entering a pull.
+Execute an enemy with  Touch of Death, when allowed - 
+Use  Blackout Kick to trigger  Blackout Combo - 
+Cast  Chi Burst - 
+Consume one charge of  Celestial Brew/ Celestial Infusion, only if at two charges or taking minimal damage - 
+Activate  Invoke Niuzao, the Black Ox - 
+Consume your  Blackout Combo buff with  Tiger Palm - 
+Use  Breath of Fire - 
+Use your first charge of  Keg Smash or an active Empty Barrel from  Bring Me Another - 
+Use  Exploding Keg - 
+Use your second charge of  Keg Smash
+If taking minimal damage, use an extra charge of  Purifying Brew to trigger additional  Special Delivery or Empty Barrels from  Bring Me Another - 
+Use  Tiger Palm when there are no other abilities to press. - 
+ Further Details
 
 BREWMASTER STAGGER EXPLAINED
 On top of being able to frequently dodge enemy attacks with  Mastery: Elusive Brawler, Brewmaster Monks are the only specialization featuring the additional mechanic of  Stagger to further mitigate damage. With this passive effect, all damage you receive will be split into two portions:
@@ -173,11 +203,26 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST BREWMASTER MONK OPENER
-When first beginning a pull as a Brewmaster Monk, your goal is to establish a healthy amount of  Shuffle with  Keg Smash and  Blackout Kick. Due to the low cooldown of Blackout Kick, you will not be pressing multiple offensive cooldowns back-to-back, instead spacing them out at moments between casts where everything else has been used. Beyond this, when pulling multiple groups of enemies at a time, you may need to optionally include a cast or two of  Spinning Crane Kick as you are moving around to gather them before following the "proper" opener sequence. You can use the buttons below to display openers depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+When first beginning a pull as a Brewmaster Monk, your goal is to establish a healthy amount of  Shuffle with  Keg Smash and  Blackout Kick. Due to the low cooldown of Blackout Kick, you will not be pressing multiple offensive cooldowns back-to-back, instead spacing them out at moments between casts where everything else has been used. Beyond this, when pulling multiple groups of enemies at a time, you may need to optionally include a cast or two of  Spinning Crane Kick as you are moving around to gather them before following the "proper" opener sequence. With  Master of Harmony selected, opener details are as follows:
 The builds and talent options shown above are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+1s
+Moving to Target
+Pull
+
+
 OPENER SEQUENCE
+Use  Chi Burst from a distance, and move toward your target - 
+Use  Keg Smash while moving to your target - 
+Use  Blackout Kick.
+Use  Breath of Fire 
+Use  Tiger Palm - 
+Use  Exploding Keg - 
+Use  Keg Smash - 
+Use  Blackout Kick
+Activate  Invoke Niuzao, the Black Ox - 
+From here, follow the rotational priorities below.
+ Further Details
 
 BREWMASTER STAGGER EXPLAINED
 On top of being able to frequently dodge enemy attacks with  Mastery: Elusive Brawler, Brewmaster Monks are the only specialization featuring the additional mechanic of  Stagger to further mitigate damage. With this passive effect, all damage you receive will be split into two portions:

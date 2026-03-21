@@ -1,6 +1,6 @@
 # druid/feral — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/feral/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:22
+Generated: 2026-03-21 23:23
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw', 'Wildstalker']
@@ -596,8 +596,28 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST FERAL DRUID SINGLE TARGET ROTATION
 Feral's single-target priorities are maintaining debuffs and using any extra resources for direct damage. These priorities are largely the same between both Hero Talents, though there are some differences. As such you can use the buttons below to switch between each,
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Wildstalker selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Ferocious Bite with  Apex Predator's Craving procs.
+Cast  Rip:
+If you have 4 or more combo points,  Rip is missing or in Pandemic, and you have  Tiger's Fury active.
+If you have 4 or more combo points,  Rip is missing or in Pandemic, and  Tiger's Fury will not be active before the dot expires.
+Cast  Ferocious Bite if:
+you have 5 or more Combo Points, 25 or greater energy,  Rip is active, and  Berserk is active.
+you have 4 or more Combo Points, 25 or greater energy,  Rip is active, and  Berserk is not active.
+ Berserk and  Convoke the Spirits with  Tiger's Fury, these should be synced
+If  Tiger's Fury is coming off CD within 3 seconds, and you're above 80% energy dump your energy.
+Cast  Tiger's Fury on cooldown
+Cast  Rake if:
+It is missing on the target or in pandemic
+You would increase the snapshot strength.
+ Rake has 2 seconds or less of duration and  Tiger's Fury is not ready.
+Cast  Moonfire if:
+It is missing on the target or in pandemic
+You would increase the snapshot strength.
+ Moonfire has 2 seconds or less of duration and  Tiger's Fury is not ready.
+ Shred to Generate Combo Points
 
 BERSERK
  Berserk has both a simple % damage increase and an additional effect, causing you to gain a free Combo Point every 1.5 seconds and your generators to generate an additional Combo Point. While  Berserk is active, you gain a Combo Point buffer for the duration. Any Combo Points you gain over the cap of 5 are converted into a buff, and when you spend Combo Points and return to 0, that buff is converted into Combo Points.
@@ -646,8 +666,19 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FERAL DRUID AOE ROTATION
-Feral's AoE rotation is more straightforward than single target: this spec gains significant power from target count due to talents like  Apex Predator's Craving and is incredibly strong at funneling damage into a single target due to talents like  Blood Spattered.
- Please select a Hero Talent option to generate a Single Target priority
+Feral's AoE rotation is more straightforward than single target: this spec gains significant power from target count due to talents like  Apex Predator's Craving and is incredibly strong at funneling damage into a single target due to talents like  Blood Spattered. With  Wildstalker selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Ferocious Bite with  Apex Predator's Craving procs.
+Cast  Primal Wrath if  Rip is missing or in pandemic.
+Cast  Berserk with  Tiger's Fury, these should be synced.
+Cast  Ferocious Bite if you have 5 Combo Points and  Rip is active
+ Berserk and  Convoke the Spirits with  Tiger's Fury, these should be synced.
+Cast  Tiger's Fury on cooldown, if  Frantic Frenzy would come off CD just after  Tiger's Fury ends you can delay it up to 2 seconds.
+Cast  Feral Frenzy on cooldown.
+ Swipe with  Clearcasting procs up to 7 targets.
+Cast  Rake if it is missing or in pandemic.
+ Swipe to generate Combo points.
 
 BERSERK
  Berserk has both a simple % damage increase and an additional effect, causing you to gain a free Combo Point every 1.5 seconds and your generators to generate an additional Combo Point. While  Berserk is active, you gain a Combo Point buffer for the duration. Any Combo Points you gain over the cap of 5 are converted into a buff, and when you spend Combo Points and return to 0, that buff is converted into Combo Points.
@@ -696,11 +727,22 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FERAL DRUID OPENER
-The Feral Druid opener is largely the same, regardless of Hero Talents. They both have largely the same rotational priorities and the same goal, get your debuffs rolling and start spending resources on direct damage. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Feral Druid opener is largely the same, regardless of Hero Talents. They both have largely the same rotational priorities and the same goal, get your debuffs rolling and start spending resources on direct damage. With  Wildstalker selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+2s
+Pull
+To 5CPs
 OPENER SEQUENCE
+ Rake from stealth.
+Cast  Moonfire.
+ Shred to 5 Combo Points.
+Cast  Berserk and  Tiger's Fury.
+Cast  Rip.
+Cast  Convoke the Spirits
+Cast  Ferocious Bite after  Convoke the Spirits
+Cast  Feral Frenzy.
+Cast  Ferocious Bite at 5 Combo Points and  Shred to generate Combo Points during  Berserk
 
 BERSERK
  Berserk has both a simple % damage increase and an additional effect, causing you to gain a free Combo Point every 1.5 seconds and your generators to generate an additional Combo Point. While  Berserk is active, you gain a Combo Point buffer for the duration. Any Combo Points you gain over the cap of 5 are converted into a buff, and when you spend Combo Points and return to 0, that buff is converted into Combo Points.

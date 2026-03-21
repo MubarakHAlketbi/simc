@@ -1,6 +1,6 @@
 # death-knight/blood — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 22:10
+Generated: 2026-03-21 23:19
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', "San'layn"]
@@ -368,7 +368,24 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST DEATH KNIGHT BLOOD SINGLE TARGET ROTATION
 Blood Death Knight's single target rotation operates on a priority list, maintaining two crucial buffs and using resources to optimize Runic Power generation. Every GCD depends on the current state of resources and active abilities at your disposal. As a result, this section should be read as a priority list, and not a strict sequence.
- Please select a Hero Talent option to generate a Single Target priority
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ San'layn greatly empowers  Dancing Rune Weapon while also forcing the player in a feat-or-famine cycle around  Essence of the Blood Queen, a buff that can easily be stacked and refreshed during  Dancing Rune Weapon. Outside of this window of strength, this buff can only be refreshed as an infrequent proc on  Death Strike - and a player needs to generate at least one proc every 20 seconds for up to 75 seconds to keep the stacks rolling, in order not to have to spend their entire time re-stacking it during the next  Dancing Rune Weapon. The gameplay changes this brings are much more rigid and tactical.
+PRIORITY
+IN  GIFT OF THE SAN'LAYN
+Cast  Death Strike if you need the healing or are above 75 Runic PowerWhy 75?
+Maintain at least 5 charges of  Bone Shield.
+Cast  Blood Boil if the  Blood Plague copy from  Dancing Rune Weapon is not currently on your target
+Cast  Death and Decay if you have a  Crimson Scourge proc
+Fill with  Vampiric Strike
+If you run out of runes, cast  Blood Boil
+OUTSIDE  DANCING RUNE WEAPON
+Cast  Death Strike if you need the healing or are above 75 Runic PowerWhy 75?
+Maintain at least 5 charges of  Bone Shield. If  Bone Shield is about to expire, press  Marrowrend Are there other generators?
+Cast  Death and Decay and stand in it if you are not currently affected by the buff it provides, or if you get a  Crimson Scourge proc.
+Cast  Blood Boil if you have a  Boiling Point proc
+Cast  Vampiric Strike if it is available
+Cast  Blood Boil to prevent its charges from capping
+Cast  Heart Strike
 
 DANCING RUNE WEAPON
  Dancing Rune Weapon grants you 20% parry for 12 seconds when cast, replicates a small subset of abilities ( Heart Strike,  Marrowrend,  Blood Boil and  Death Strike) and has two additional effects:
@@ -417,7 +434,23 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST DEATH KNIGHT BLOOD AOE ROTATION
 Blood's rotation does not fundamentally change in AoE, at least not in broad priority. A slightly stronger emphasis is put around fully empowering  Consumption if you play it, and the penalty for mismanaging  Death and Decay is stricter, but the broad priority outside of this remains the same: waste no resources and use cooldowns broadly on cooldown.
- Please select a Hero Talent option to generate a Single Target priority
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+IN  GIFT OF THE SAN'LAYN
+Cast  Death Strike if you need the healing or are above 75 Runic PowerWhy 75?
+Maintain at least 5 charges of  Bone Shield.
+Cast  Blood Boil if the  Blood Plague copy from  Dancing Rune Weapon is not currently on your target
+Cast  Death and Decay if you have a  Crimson Scourge proc
+Fill with  Vampiric Strike
+If you run out of runes, cast  Blood Boil
+OUTSIDE  GIFT OF THE SAN'LAYN
+Cast  Death Strike if you need the healing or are above 75 Runic PowerWhy 75?
+Maintain at least 5 charges of  Bone Shield. If  Bone Shield is about to expire, press  Marrowrend Are there other generators?
+Cast  Death and Decay and stand in it if you are not currently affected by the buff it provides, or if you get a  Crimson Scourge proc.
+Cast  Blood Boil if you have a  Boiling Point proc
+Cast  Vampiric Strike if it is available
+Cast  Blood Boil to prevent its charges from capping
+Cast  Heart Strike
 
 DANCING RUNE WEAPON
  Dancing Rune Weapon grants you 20% parry for 12 seconds when cast, replicates a small subset of abilities ( Heart Strike,  Marrowrend,  Blood Boil and  Death Strike) and has two additional effects:
@@ -468,8 +501,23 @@ BEST DEATH KNIGHT BLOOD OPENER
 Your opener as a Blood Death Knight depends on your Hero Talent choice. In both cases, your goal is to set up as many maintenance buffs as you can before the fight starts to cut down on wasteful GCDs you would spend doing so otherwise.
 
 In the following section, we will assume that you are in control of pulling and can spend two global cooldowns preparing things.
- Please select a Hero Talent option to generate an Opener sequence
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+
+ San'layn's opener sets up all elements of resources as quickly as possible: it primes a  Blood Plague plague ahead of  Dancing Rune Weapon so that the first  Blood Boil in it pandemics it to maximum duration, puts up  Bone Shield ahead of everything else, primes  Death and Decay and unleashes  Dancing Rune Weapon to truly kick-start the Hero Talent's window of power with as few dead GCDs in it as possible.
+ FIGHT STYLE
+Single Target
+AoE
+SINGLE TARGET SEQUENCE
+Cast  Death's Caress
+While  Death's Caress is in flight, pre-place  Death and Decay
+Cast  Dancing Rune Weapon
+Cast  Blood Boil
+Cast  Vampiric Strike
+Cast  Vampiric Strike
+Cast  Death Strike
+Proceed with normal priority
+SAMPLE TIMELINE
+Pull
 
 DANCING RUNE WEAPON
  Dancing Rune Weapon grants you 20% parry for 12 seconds when cast, replicates a small subset of abilities ( Heart Strike,  Marrowrend,  Blood Boil and  Death Strike) and has two additional effects:

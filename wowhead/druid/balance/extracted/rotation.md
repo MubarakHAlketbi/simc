@@ -1,6 +1,6 @@
 # druid/balance — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/balance/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:20
+Generated: 2026-03-21 23:22
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Keeper of the Grove', "Elune's Chosen"]
@@ -14,7 +14,24 @@ Tab Group 2: ['Eclipse', 'Starweaver']
 
 #### Single-Target Priority
 BEST BALANCE DRUID SINGLE TARGET ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+  Keeper of the Grove is the preferred choice for raids and single target. There are two different builds to choose from, one that uses  Incarnation: Chosen of Elune with  Elune's Guidance and one that uses  Convoke the Spirits with  Radiant Moonlight.
+With  Keeper of the Grove selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ CHOOSE BUILD
+Incarnation
+Convoke the Spirits
+PRIORITY
+Apply  Moonfire and refresh within pandemic 
+Apply  Sunfire and refresh within pandemic or if your next cast is  Force of Nature
+Press  Fury of Elune during an  Eclipse or right before pressing  Force of Nature
+Press  Force of Nature if you are not currently in an  Eclipse and your next cast is either  Solar Eclipse or  Celestial Alignment
+Press  Celestial Alignment if you just used  Force of Nature and you will have another charge available when  Convoke the Spirits is off cooldown
+Press  Convoke the Spirits if you are below 40  Astral Power and  Force of Nature is active
+Enter  Solar Eclipse whenever  Starlord expires and you have any procs of  Starweaver or  Touch the Cosmos or you can overlap with  Force of Nature
+Cast  Starfall to consume  Starweaver's Warp
+Cast  Starsurge as your main spender if you need to move, if you are about to cap on  Astral Power or to spend your  Starweaver's Weft or  Touch the Cosmos procs.
+Cast  Wrath to generate  Astral Power
+ Further Details
 
 CELESTIAL ALIGNMENT
  Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
@@ -79,7 +96,20 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST BALANCE DRUID AOE ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+When you're playing  Keeper of the Grove you want to spend as many valuable casts inside your  Incarnation: Chosen of Elune window.
+There are some AoE breakpoints to be aware of when playing this hero talent, you can read about those by opening the box below the rotation.
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Spread  Moonfire while targets are being gathered 
+Apply  Sunfire when all targets are gathered 
+Press  Force of Nature if you have  Incarnation: Chosen of Elune available or if  Force of Nature will be available again before  Incarnation: Chosen of Elune
+Press  Incarnation: Chosen of Elune if you just used  Force of Nature
+Cast  Starsurge to consume  Starweaver's Weft
+Cast  Starfire at the start of  Incarnation: Chosen of Elune to consume  Ascendant Fires
+Cast  Starfallto prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Wrath outside of  Eclipse up to and including 6 targets.
+Cast  Starfire in  Lunar Eclipse and  Wrath in  Solar Eclipse
+ Further Details
 
 CELESTIAL ALIGNMENT
  Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.

@@ -1,6 +1,6 @@
 # warlock/demonology — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/demonology/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:58
+Generated: 2026-03-21 23:35
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Diabolist', 'Soul Harvester']
@@ -15,7 +15,17 @@ Tab Group 2: ['Demonic Cores']
 #### Single-Target Priority
 BEST DEMONOLOGY WARLOCK SINGLE TARGET ROTATION
 Demonology in Single Target plays around a priority list, our priority is more fluid than rigid and can be adapted based on what you have available to you in both resources and abilities.
- Please select a Hero Talent option to generate a Single Target priority
+With  Diabolist selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Power Siphon.
+Cast  Call Dreadstalkers.
+Cast  Hand of Gul'dan/ Ruination.
+Cast  Grimoire: Imp Lord/ Grimoire: Fel Ravager.
+Cast  Summon Demonic Tyrant.
+Cast  Summon Doomguard.
+Cast  Demonbolt with  Demonic Core.
+Cast  Shadow Bolt/ Infernal Bolt.
 
 DEMONIC TYRANT
  Summon Demonic Tyrant is a staple cooldown and drives lot of our damage sequences. It extends the time of just your  Call Dreadstalkers when talented into  Reign of Tyranny; however,  Summon Demonic Tyrant gains an additional damage modifier for each demon summoned. Maximize this.
@@ -59,7 +69,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST DEMONOLOGY WARLOCK AOE ROTATION
 Generally speaking, you will be pressing all the same buttons but including  Implosion and  Summon Doomguard. Advanced users will also weave  Demonbolt onto additional targets to spread the effect of  Doom.
- Please select a Hero Talent option to generate a Single Target priority
+With  Diabolist selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Implosion with 6 Wild Imps.
+Cast  Summon Doomguard.
+Cast  Call Dreadstalkers.
+Cast  Hand of Gul'dan/ Ruination.
+Cast  Grimoire: Imp Lord/ Grimoire: Fel Ravager.
+Cast  Summon Demonic Tyrant.
+Cast  Demonbolt with  Demonic Core.
+Cast  Shadow Bolt/ Infernal Bolt.
 
 DEMONIC TYRANT
  Summon Demonic Tyrant is a staple cooldown and drives lot of our damage sequences. It extends the time of just your  Call Dreadstalkers when talented into  Reign of Tyranny; however,  Summon Demonic Tyrant gains an additional damage modifier for each demon summoned. Maximize this.
@@ -102,11 +122,31 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEMONOLOGY WARLOCK OPENER
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Diabolist selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+5s
+2s
+Pull
+Or Fel Ravager
+Proceed with rotation
+Or other Racial
+On-use Trinket
 OPENER SEQUENCE
+Pre-cast  Power Siphon at least 5s before pull timer ends.
+Pre-cast  Shadow Bolt.
+Cast  Grimoire: Imp Lord.
+Cast  Call Dreadstalkers.
+Cast  Summon Demonic Tyrant.
+Cast  Hand of Gul'dan.
+Cast  Demonbolt.
+Cast  Hand of Gul'dan.
+Cast  Demonbolt.
+Cast  Hand of Gul'dan.
+Cast  Demonbolt.
+Cast  Hand of Gul'dan.
+Cast  Infernal Bolt.
+Proceed onto the normal priority list
 
 DEMONIC TYRANT
  Summon Demonic Tyrant is a staple cooldown and drives lot of our damage sequences. It extends the time of just your  Call Dreadstalkers when talented into  Reign of Tyranny; however,  Summon Demonic Tyrant gains an additional damage modifier for each demon summoned. Maximize this.

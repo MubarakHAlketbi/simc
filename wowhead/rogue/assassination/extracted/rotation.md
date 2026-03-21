@@ -1,6 +1,6 @@
 # rogue/assassination — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/assassination/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:47
+Generated: 2026-03-21 23:32
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathstalker', 'Fatebound']
@@ -581,7 +581,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST ASSASSINATION ROGUE SINGLE TARGET ROTATION
 Assassination in Single Target plays around a priority list, but these can be broken down slightly more conceptually than other specs which have hard rules for each button. Learning the overall situation of the fight and applying yourself to that situation will prove better than trying to force very specific casts.
- Please select a Hero Talent option to generate a Single Target priority
+With  Fatebound selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Garrote
+Cast  Mutilate until having 5 or more combo points
+Maintain  Rupture by casting at 5 or more combo points
+Cast  Vanish followed by  Garrote to apply  Improved Garrote. This should be lined up with  Deathmark in most situations 
+Cast  Deathmark on cooldown
+Cast  Kingsbane on cooldown, immediately after  Deathmark when applicable
+Cast  Envenom at 5 or more combo points, unless at 80 stacks of  Implacable 
+ Further Details
 
 DEATHMARK
  Deathmark is a single target debuff with a 2 minute cooldown. Aim to be casting it on cooldown, and aligning all other cooldowns to it, as its interactions will dictate your burst. Deathmark has a number of effects:
@@ -639,7 +649,18 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST ASSASSINATION ROGUE AOE ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+With  Fatebound selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Garrote on your main target
+Maintain  Rupture by casting at 5 or more combo points on your main target
+Cast  Crimson Tempest to spread bleeds to secondary targets until having 5 or more combo points
+Cast  Fan of Knives until having 5 or more combo points
+Cast  Vanish followed by  Garrote to apply  Improved Garrote. In Mythic+, this is commonly held for chainpulls where you cannot stealth beforehand. Otherwise, sync with  Deathmark.
+Cast  Deathmark on cooldown
+Cast  Kingsbane on cooldown, immediately after  Deathmark when applicable
+Cast  Envenom at 5 or more combo points to avoid wasting energy and combo points
+ Further Details
 
 DEATHMARK
  Deathmark is a single target debuff with a 2 minute cooldown. Aim to be casting it on cooldown, and aligning all other cooldowns to it, as its interactions will dictate your burst. Deathmark has a number of effects:
@@ -697,7 +718,23 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST ASSASSINATION ROGUE OPENER
-The Assassination Rogue opener is fairly standardized in Midnight and do not follow strict sequences as much as they follow conceptual ideas to prepare your cooldowns before executing on them. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
+The Assassination Rogue opener is fairly standardized in Midnight and do not follow strict sequences as much as they follow conceptual ideas to prepare your cooldowns before executing on them. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.With  Fatebound selected, opener details are as follows:
+FIGHT STYLE
+Single Target
+AoE
+SINGLE TARGET SEQUENCE
+Cast  Garrote 
+Cast  Mutilate until 5 or more combo points
+Cast  Rupture
+Cast  Mutilate until 5 or more combo points
+Cast  Envenom before entering your cooldowns
+Cast  Deathmark
+Cast any on-use trinkets, racials, and consumables now. This can be done via macro as well
+Cast  Kingsbane
+Cast  Envenom to dump combo points
+SAMPLE TIMELINE
+Until 5+ points
+Until 5+ points
 
 DEATHMARK
  Deathmark is a single target debuff with a 2 minute cooldown. Aim to be casting it on cooldown, and aligning all other cooldowns to it, as its interactions will dictate your burst. Deathmark has a number of effects:

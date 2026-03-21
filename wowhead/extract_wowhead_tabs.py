@@ -370,7 +370,10 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                 time.sleep(0.5)
 
                 hn_js = json.dumps(hero_name)
-                js_code = (
+                # Check if this hero talent is already active (data-active/data-checked).
+                # If already active, clicking it will DESELECT it — skip the click.
+                # If not active, click to activate it.
+                already_active = page_obj.evaluate(
                     "(() => {"
                     "  const btns = Array.from(document.querySelectorAll('button'));"
                     "  const target = btns.find(b => {"
@@ -379,15 +382,42 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                     "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
                     f"    return t === {hn_js};"
                     "  });"
-                    "  if (target) { target.click(); return true; }"
-                    "  return false;"
+                    "  if (!target) return null;"
+                    "  return target.dataset.active === 'true' || target.dataset.checked === 'true' || target.getAttribute('aria-pressed') === 'true';"
                     "})()"
                 )
-                clicked = page_obj.evaluate(js_code)
-                if not clicked:
+                if already_active is None:
                     print(f"    SKIP: button not found via JS")
                     continue
-                time.sleep(2)
+                if already_active:
+                    print(f"    Already active — skipping click, reading current state")
+                else:
+                    js_code = (
+                        "(() => {"
+                        "  const btns = Array.from(document.querySelectorAll('button'));"
+                        "  const target = btns.find(b => {"
+                        "    const t = b.innerText.trim();"
+                        "    const half = Math.floor(t.length / 2);"
+                        "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
+                        f"    return t === {hn_js};"
+                        "  });"
+                        "  if (target) { target.click(); return true; }"
+                        "  return false;"
+                        "})()"
+                    )
+                    clicked = page_obj.evaluate(js_code)
+                    if not clicked:
+                        print(f"    SKIP: click failed")
+                        continue
+                    # Wait up to 5s for the placeholder to disappear
+                    for _ in range(10):
+                        time.sleep(0.5)
+                        still_placeholder = page_obj.evaluate(
+                            "document.body.innerText.includes('Please select a Hero Talent')"
+                        )
+                        if not still_placeholder:
+                            break
+                    time.sleep(0.5)
             except Exception as e:
                 print(f"    ERROR clicking hero switch: {e}")
                 continue
@@ -438,7 +468,14 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                         print(f"      SKIP: tab not found via JS")
                         results["content"][hero_name][group_key]["tabs"][tab_name] = "[TAB NOT FOUND]"
                         continue
-                    time.sleep(1.0)
+                    # Wait for placeholder to disappear after tab switch
+                    for _ in range(6):
+                        time.sleep(0.5)
+                        still_ph = page_obj.evaluate(
+                            "document.body.innerText.includes('Please select a Hero Talent')"
+                        )
+                        if not still_ph:
+                            break
                 except Exception as e:
                     print(f"      ERROR clicking tab: {e}")
                     results["content"][hero_name][group_key]["tabs"][tab_name] = f"[CLICK FAILED: {e}]"

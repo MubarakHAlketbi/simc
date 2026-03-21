@@ -1,6 +1,6 @@
 # mage/frost — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/frost/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:37
+Generated: 2026-03-21 23:28
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Spellslinger', 'Frostfire']
@@ -17,7 +17,18 @@ BEST FROST MAGE SINGLE TARGET ROTATION
 Frost Mage in Single Target plays around a priority list, juggling both ability cooldowns and resources. As every cast and GCD finishes, you can simply follow this list from top to bottom and press the button with the current highest value. If you press a spell just before the previous cast or GCD ends, it will be queued immediately after the prior spell.
 
 This is also a good rotation to use against 2 targets.
- Please select a Hero Talent option to generate a Single Target priority
+With  Spellslinger selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Flurry if  Brain Freeze is active and  Thermal Void is not active - 
+ Ice Lance if  Fingers of Frost at 2 stacks - 
+ Frozen Orb
+ Glacial Spike
+ Ice Lance if  Fingers of Frost is active
+ Ice Lance if  Freezing at 6 or more stacks
+ Flurry
+ Ray of Frost - 
+ Frostbolt
 
 RAY OF FROST
  Ray of Frost is the major cooldown for Frost Mage. It deals a lot of damage and generates a lot of  Freezing stacks. The most important thing to remember here is making sure that you can get the full channel off. Be ready to  Shimmer to safety instead of canceling it and plan ahead if necessary to make sure you use it at a safe time.
@@ -66,7 +77,19 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST FROST MAGE AOE ROTATION
 In AoE scenarios (3 or more targets), Frost Mages need to incorporate  Blizzard into the rotation and make sure that  Frozen Orb is hitting as many targets as possible. Otherwise, the rotation is actually quite similar to what you do for single target.
- Please select a Hero Talent option to generate a Single Target priority
+With  Spellslinger selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Blizzard if  Freezing Rain is active
+ Flurry if  Brain Freeze is active and  Thermal Void is not active - 
+ Ice Lance if  Fingers of Frost at 2 stacks
+ Frozen Orb
+ Glacial Spike
+ Ice Lance if  Fingers of Frost is active
+ Ice Lance if  Freezing at 6 or more stacks
+ Flurry
+ Ray of Frost - 
+ Frostbolt
 
 RAY OF FROST
  Ray of Frost is the major cooldown for Frost Mage. It deals a lot of damage and generates a lot of  Freezing stacks. The most important thing to remember here is making sure that you can get the full channel off. Be ready to  Shimmer to safety instead of canceling it and plan ahead if necessary to make sure you use it at a safe time.
@@ -114,11 +137,15 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST MAGE OPENER
-In the opener, the main goal is just to use  Glacial Spike and get important cooldowns like  Ray of Frost rolling.You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+In the opener, the main goal is just to use  Glacial Spike and get important cooldowns like  Ray of Frost rolling.With  Spellslinger selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Pull
 OPENER SEQUENCE
+ Glacial Spike
+ Flurry
+ Frozen Orb
+ Ray of Frost
 
 RAY OF FROST
  Ray of Frost is the major cooldown for Frost Mage. It deals a lot of damage and generates a lot of  Freezing stacks. The most important thing to remember here is making sure that you can get the full channel off. Be ready to  Shimmer to safety instead of canceling it and plan ahead if necessary to make sure you use it at a safe time.

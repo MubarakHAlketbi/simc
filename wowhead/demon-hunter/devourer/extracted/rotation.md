@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:17
+Generated: 2026-03-21 23:21
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Void-Scarred', 'Annihilator']
@@ -15,7 +15,25 @@ Tab Group 2: ['Smuggling', "Devourer's Bite", 'Reap and Cull Optimization']
 #### Single-Target Priority
 BEST DEVOURER DEMON HUNTER SINGLE TARGET ROTATION
 Devourer in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD, we go top to bottom on a list, and press the button with the current highest value..
- Please select a Hero Talent option to generate a Single Target priority
+With  Void-Scarred selected, the priority is as follows:
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
+
+ OPTIONS
+Ranged Build
+Melee Build
+OUTSIDE VOID METAMORPHOSIS PRIORITY
+Cast  Voidblade if you are about to enter  Void Metamorphosis - 
+Cast  Reap on cooldown 
+Cast  Void Ray
+Cast  Void Metamorphosis
+Cast  Consume
+INSIDE VOID METAMORPHOSIS PRIORITY
+Cast  Cull on cooldown
+Cast  Pierce the Veil - 
+Cast  Void Ray
+Cast  Devour
+ Further Details
 
 VOID METAMORPHOSIS‎
  Void Metamorphosis is your main damaging cooldown as a Devourer Demon Hunter, transforming you into a Void Empowered Demon form, and empowering your character in a variety of ways.
@@ -169,8 +187,32 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST DEVOURER DEMON HUNTER AOE ROTATION
 In AoE, Devourer gains a lot of momentum due to the increased Soul Fragment generation provided by  Shattered Souls. We shift to a multi-target priority at 2 targets, and both Hero Trees differ significantly on where damage comes from, with  Void-Scarred focusing more on  Eradicate, and  Annihilator focusing more on  Collapsing Star.
+With  Void-Scarred selected, the priority is as follows:
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
 
- Please select a Hero Talent option to generate a Single Target priority
+ OPTIONS
+Ranged Build
+Melee Build
+OUTSIDE VOID METAMORPHOSIS PRIORITY
+Cast  Hungering Slash
+Cast  Vengeful Retreat if buffed by  Voidstep - 
+Cast  Voidblade - 
+Cast  Eradicate
+Cast  Void Ray
+Cast  Reap with 4 or more Soul Fragments on the ground - 
+Cast  Void Metamorphosis
+Cast  Consume
+INSIDE VOID METAMORPHOSIS PRIORITY
+Cast  Eradicate
+Cast  Void Ray
+Cast  Collapsing Star - 
+Cast  Reaper's Toll
+Cast  Vengeful Retreat if buffed by  Voidstep - 
+Cast  Pierce the Veil
+Cast  Cull with 4 or more Soul Fragments - 
+Cast  Devour
+ Further Details
 
 VOID METAMORPHOSIS‎
  Void Metamorphosis is your main damaging cooldown as a Devourer Demon Hunter, transforming you into a Void Empowered Demon form, and empowering your character in a variety of ways.
@@ -323,11 +365,34 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEVOURER DEMON HUNTER OPENER
-Devourer Demon Hunter doesn't have an opener in the traditional sense, as it's main cooldown,  Void Metamorphosis is not ready at the start of combat. Instead, Devourer's opener is setup to get to Void Metamorphosis as quickly as possible, before then starting to do your damage. NOTE: These openers are for Single Target Only! Changes to adapt to AOE are included. You can use the buttons below to display openers for your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+Devourer Demon Hunter doesn't have an opener in the traditional sense, as it's main cooldown,  Void Metamorphosis is not ready at the start of combat. Instead, Devourer's opener is setup to get to Void Metamorphosis as quickly as possible, before then starting to do your damage. NOTE: These openers are for Single Target Only! Changes to adapt to AOE are included. With  Void-Scarred selected, opener details are as follows. To adapt to AOE, use an additional  Hungering Slash after  Voidblade, and do not waste  Reaper's Toll.
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+ OPTIONS
+Ranged Build
+Melee Build
+CASTER BUILD SAMPLE TIMELINE
+2s
+Pull
+Untill 100 Fury
+Proceed With Rotation
 OPENER SEQUENCE
+CASTER BUILD SAMPLE TIMELINE
+ Consume 2s before pull
+ Reap
+ Reap
+ Consume Untill 100 Fury
+ Void Ray
+Repeat until Void Metamorphosis is available
+ Voidblade
+ Void Metamorphosis
+Use Trinkets and Potions
+ Cull
+ Void Ray
+ Pierce the Veil
+ Collapsing Star
+ Cull
+Contine with normal rotation
 
 VOID METAMORPHOSIS‎
  Void Metamorphosis is your main damaging cooldown as a Devourer Demon Hunter, transforming you into a Void Empowered Demon form, and empowering your character in a variety of ways.

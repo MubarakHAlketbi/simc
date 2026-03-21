@@ -1,6 +1,6 @@
 # evoker/augmentation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:27
+Generated: 2026-03-21 23:25
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Chronowarden', 'Scalecommander']
@@ -15,7 +15,19 @@ Tab Group 2: ['Bombardments']
 #### Single-Target Priority
 BEST AUGMENTATION EVOKER SINGLE TARGET ROTATION
 Augmentation in Single Target plays around a spell priority list, while making sure to avoid spending resources outside of  Ebon Might whenever possible, in order to maximize damage and uptime of buffs on allies.
- Please select a Hero Talent option to generate a Single Target priority
+With  Chronowarden selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Prescience on chosen DPS players. - 
+Cast  Ebon Might if a few seconds or less remain on the active buff duration.
+Cast  Breath of Eons (see section on cooldown usage for more details).
+Cast  Tip the Scales (see section on cooldown usage for more details).
+Cast  Fire Breath at Rank 1. - 
+Cast  Upheaval at Rank 1, unless increased radius is needed to hit relevant targets. - 
+Cast  Eruption. - 
+Cast  Living Flame as filler in nearly all situations.
+Cast  Azure Strike as backup filler that can be cast while moving, or used to slow enemies.
+Maintain  Blistering Scales on a Tank. -
 
 EMPOWER SPELLS
 The key to making the most of  Fire Breath and  Upheaval as an Augmentation Evoker is ideally to ensure that you only cast these abilities while  Ebon Might is up in order to extend the duration of  Ebon Might, as well as direct  Shifting Sands towards nearby buffed allies.
@@ -132,7 +144,19 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST AUGMENTATION EVOKER AOE ROTATION
 Augmentation essentially plays the same in AoE as it does in Single Target. Note that  Upheaval can be cast at a higher rank to hit enemies in a wider area. When playing  Scalecommander, do make sure to play around  Bombardments whenever possible; this is covered in the Advanced Tips section of this page.
- Please select a Hero Talent option to generate a Single Target priority
+With  Chronowarden selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Prescience on chosen DPS players. - 
+Cast  Ebon Might if a few seconds or less remain on the active buff duration.
+Cast  Breath of Eons (see section on cooldown usage for more details).
+Cast  Tip the Scales (see section on cooldown usage for more details).
+Cast  Fire Breath at Rank 1. - 
+Cast  Upheaval at Rank 1, unless increased radius is needed to hit relevant targets. - 
+Cast  Eruption. - 
+Cast  Living Flame as filler in nearly all situations.
+Cast  Azure Strike as backup filler that can be cast while moving, or used to slow enemies.
+Maintain  Blistering Scales on a Tank. -
 
 EMPOWER SPELLS
 The key to making the most of  Fire Breath and  Upheaval as an Augmentation Evoker is ideally to ensure that you only cast these abilities while  Ebon Might is up in order to extend the duration of  Ebon Might, as well as direct  Shifting Sands towards nearby buffed allies.
@@ -249,11 +273,26 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Opener
 BEST AUGMENTATION EVOKER OPENER
 The recommended opener has changed slightly in Midnight: we now immediately cast  Ebon Might after the start of combat to begin buffing the whole raid as soon as possible, and then proceed to cast  Prescience and  Breath of Eons. Other than this minor variation, the opener is highly intuitive, and follows the same goals as the core rotation. Be sure to avoid pairing  Tip the Scales with  Fire Breath; if we have  Molten Embers talented, we want to maximize uptime of the  Fire Breath damage over time effect.
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Chronowarden selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Tank
+Pull
+DPS 1
+DPS 2
 OPENER SEQUENCE
+Pre-cast  Blistering Scales on a Tank.
+Pre-cast  Living Flame.
+Cast  Ebon Might. - 
+Cast  Prescience on Buff Target 1. Use this time to position for  Breath of Eons.
+Cast  Prescience on Buff Target 2.
+Cast  Breath of Eons. Aim for a short, safe flight path. - 
+Use trinket and  Light's Potential . - 
+ Fire Breath at Rank 1.
+Cast  Tip the Scales (off-GCD). - 
+ Upheaval at Max Rank from  Tip the Scales.
+Cast  Eruption until dry on Essence, and fill with  Living Flame as needed.
+Proceed onto the main rotation.
 
 EMPOWER SPELLS
 The key to making the most of  Fire Breath and  Upheaval as an Augmentation Evoker is ideally to ensure that you only cast these abilities while  Ebon Might is up in order to extend the duration of  Ebon Might, as well as direct  Shifting Sands towards nearby buffed allies.

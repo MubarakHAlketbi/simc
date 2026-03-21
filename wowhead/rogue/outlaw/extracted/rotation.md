@@ -1,6 +1,6 @@
 # rogue/outlaw — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:49
+Generated: 2026-03-21 23:32
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Trickster', 'Fatebound']
@@ -391,7 +391,20 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST OUTLAW ROGUE SINGLE TARGET ROTATION
 Outlaw in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Fatebound selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Roll the Bones on cooldown if at stage 1 or less. - 
+Cast  Keep It Rolling if you have a stage 2 or higher  Roll the Bones active.
+Cast  Preparation whenever  Between the Eyes,  Adrenaline Rush, and  Blade Rush are on cooldown.
+Cast  Adrenaline Rush on cooldown at 2 or fewer combo points.
+Cast  Blade Rush on cooldown.
+Cast  Between the Eyes at 6 or more combo points.
+Cast  Dispatch at 5 or more combo points.
+Cast  Pistol Shot if;
+ Opportunity has 6 stacks.
+ Opportunity has 3 stacks, and you are at 1-3 combo points.
+Cast  Sinister Strike at 5 or fewer combo points.
 
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
@@ -430,8 +443,20 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST OUTLAW ROGUE AOE ROTATION
 In AoE, the only adjustment Outlaw has to make is to add  Blade Flurry to its spells that need to be cast on cooldown.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Fatebound selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Blade Flurry if there are 2 or more targets in range, and it is not already active. If already active, recast at 4 or fewer combo points when there are 4 or more targets within range.
+Cast  Roll the Bones on cooldown if at stage 1 or less. - 
+Cast  Keep It Rolling if you have a stage 2 or higher  Roll the Bones active.
+Cast  Adrenaline Rush on cooldown at 2 or fewer combo points.
+Cast  Blade Rush on cooldown.
+Cast  Between the Eyes at 6 or more combo points.
+Cast  Dispatch at 5 or more combo points.
+Cast  Pistol Shot if;
+ Opportunity has 6 stacks.
+ Opportunity has 3 stacks, and you are at 1-3 combo points.
+Cast  Sinister Strike at 5 or fewer combo points.
 
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
@@ -469,11 +494,26 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST OUTLAW ROGUE OPENER
-The Outlaw Rogues opener is extremely simple compared to most specs in the game, launching directly into the default rotation quickly after setting up your initial cooldowns. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Outlaw Rogues opener is extremely simple compared to most specs in the game, launching directly into the default rotation quickly after setting up your initial cooldowns.
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+1s
+Pull
+AoE
+Generators
+Proceed With Rotation
+Single Target
+Generators
 OPENER SEQUENCE
+Cast  Adrenaline Rush.
+Cast  Roll the Bones.
+Cast  Keep It Rolling.
+Cast  Dispatch.
+Cast  Blade Rush.
+Build with  Sinister Strike, and  Pistol Shot until 5 or more combo points.
+Cast  Between the Eyes.
+Cast  Preparation.
+Continue with normal rotation.
 
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.

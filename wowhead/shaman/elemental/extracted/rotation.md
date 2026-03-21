@@ -1,6 +1,6 @@
 # shaman/elemental — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/elemental/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:53
+Generated: 2026-03-21 23:33
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Farseer', 'Stormbringer']
@@ -548,7 +548,18 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST ELEMENTAL SHAMAN SINGLE TARGET ROTATION
 Elemental Shaman in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Stormbringer selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Remember to use  Spiritwalker's Grace and  Nature's Swiftness for movement events.
+Cast  Stormkeeper on cooldown.
+Cast  Ascendance roughly on cooldown, but always after  Stormkeeper
+Refresh  Flame Shock with  Voltaic Blaze within the pandemic window (30% of it's current maximum duration) if you do not have  Master of the Elements active.
+Cast  Lava Burst if you do not have  Master of the Elements active and will not overcap
+Cast  Tempest to consume  Master of the Elements.
+Cast  Lightning Bolt buffed by  Stormkeeper with to consume  Master of the Elements.
+Cast  Elemental Blast.
+Cast  Lightning Bolt/ Tempest as your filler.
 
 STORMKEEPER
  Stormkeeper is our main short cooldown spell. For  Lightning Bolt it increases the damage of the next 2 casts by 150% and force it to trigger one additional overload. For  Chain Lightning it does not directly increase the damage, but instead triggers an additional overload on every target hit.
@@ -601,8 +612,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST ELEMENTAL SHAMAN AOE ROTATION
 For Elemental Shaman there is effectively no overlap between Single Target and AoE. AoE starts at 2 targets and focusses on spamming  Chain Lightning and [
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Stormbringer selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+{{Replace the list items below for stormbringer in aoe, adhering to your mythic+ build for stormbringer. If stormbringer is not remotely viable in mythic+, you have the option to make the rotation reflect a raid encounter with aoe using your stormbringer mythic+ build, but make sure to add a mention into the box directly above this making note of that}}
+PRIORITY
+Remember to use  Spiritwalker's Grace and  Nature's Swiftness for movement events.
+Cast  Stormkeeper on cooldown.
+Cast  Ascendance roughly on cooldown, but always after  Stormkeeper
+Cast  Earthquake against 4 or more targets if possible.
+Cast  Elemental Blast against 3 or less targets if possible.
+Cast  Voltaic Blaze to refresh  Flame Shock.
+Cast  Chain Lightning/ Tempest as your filler.
 
 STORMKEEPER
  Stormkeeper is our main short cooldown spell. For  Lightning Bolt it increases the damage of the next 2 casts by 150% and force it to trigger one additional overload. For  Chain Lightning it does not directly increase the damage, but instead triggers an additional overload on every target hit.
@@ -654,11 +674,18 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST ELEMENTAL SHAMAN OPENER
-The Elemental opener is pretty basic. You stack your cooldowns and just try to get them on cooldown as early as possible. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Elemental opener is pretty basic. You stack your cooldowns and just try to get them on cooldown as early as possible.
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Pull
 OPENER SEQUENCE
+ Stormkeeper
+ Lava Burst
+ Ascendance
+ Tempest
+ Lava Burst
+ Lightning Bolt
+Continue with normal priority
 
 STORMKEEPER
  Stormkeeper is our main short cooldown spell. For  Lightning Bolt it increases the damage of the next 2 casts by 150% and force it to trigger one additional overload. For  Chain Lightning it does not directly increase the damage, but instead triggers an additional overload on every target hit.

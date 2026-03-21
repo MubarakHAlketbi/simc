@@ -1,6 +1,6 @@
 # warrior/fury — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/fury/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:04
+Generated: 2026-03-21 23:37
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Slayer', 'Mountain Thane']
@@ -17,9 +17,27 @@ BEST FURY WARRIOR SINGLE TARGET ROTATIONS
 The single target rotation revolves around generating rage and using  Rampage to convert it into  Enrage. The bulk of the rotation is then filled by a combination of Bloodthirst, Execute, Raging Blow, and Whirlwind or Thunder Clap, creating two similar yet distinctive playstyles.
 Slayer
 Mountain Thane
- Select a Hero Specialization to fill in the rotation
 These builds use default talents recommended on the Talents page.
 Hover over the  icons for additional notes.
+DURING COOLDOWNS
+ Rampage over 100 rage
+ Bladestorm 
+ Odyn's Fury
+ Bloodbath 
+ Rampage 
+ Execute
+ Crushing Blow 
+OUTSIDE COOLDOWNS
+ Recklessness
+ Rampage over 100 rage or if  Enrage is about to expire
+ Odyn's Fury
+ Execute
+ Bloodthirst
+ Rampage
+ Wrecking Throw 
+ Rend 
+ Raging Blow
+ Whirlwind when nothing else is available
 
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 

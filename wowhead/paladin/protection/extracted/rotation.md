@@ -1,6 +1,6 @@
 # paladin/protection — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 22:42
+Generated: 2026-03-21 23:30
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Lightsmith']
@@ -14,7 +14,17 @@ Tab Group 2: ['Always Be Casting']
 
 #### Single-Target Priority
 BEST PROTECTION PALADIN SINGLE TARGET ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+With  Templar selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Avenging Wrath on cooldown.
+Cast  Judgment on cooldown.
+Cast  Shield of the Righteous when you have 3-5 Holy Power or if it's free. Try not to cap Holy Power.
+Cast  Avenger's Shield on cooldown.
+ Divine Toll if you have 0 Holy Power. Try to use this on cooldown as much as possible.
+ Blessed Hammer/ Hammer of the Righteous on cooldown.
+ Word of Glory if your health drops below 50% or to top yourself off if you are in danger of a big hit.
+ Consecration as a filler.
 
 AVENGING WRATH
  Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
@@ -57,8 +67,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST PROTECTION PALADIN AOE ROTATION
 As with most tanks, our AoE is built into our normal kit, so our rotation does not change on AoE. This is great! It allows us to focus on the difficult role of tanking.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Templar selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Avenging Wrath on cooldown.
+Cast  Judgment on cooldown.
+Cast  Shield of the Righteous when you have 3-5 Holy Power or if it's free. Try not to cap Holy Power.
+Cast  Avenger's Shield on cooldown.
+ Divine Toll if you have 0 Holy Power. Try to use this on cooldown as much as possible.
+ Blessed Hammer/ Hammer of the Righteous on cooldown.
+ Word of Glory if your health drops below 50% or to top yourself off if you are in danger of a big hit.
+ Consecration as a filler.
 
 AVENGING WRATH
  Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
@@ -101,11 +120,25 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Opener
 BEST PROTECTION PALADIN OPENER
 The goal of the opener is to quickly get  Shield of the Righteous active and start unleashing our  Avenging Wrath and  Divine Toll swiftly.
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Templar selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Potion
+2s
+1s
+Pull
+Templar
+On CD
+On CD
 OPENER SEQUENCE
+ Consecration pre-pull as close to the boss as you can safely get without pulling.
+ Blessed Hammer can be used pre-pull to get a few holy power
+ Hand of Reckoning on pull so no DPS/Healers get punched.
+ Ardent Defender if you are tanking first
+ Avenger's Shield
+ Avenging Wrath
+ Divine Toll +  Hammer of Light
+Proceed normal rotation
 
 AVENGING WRATH
  Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.

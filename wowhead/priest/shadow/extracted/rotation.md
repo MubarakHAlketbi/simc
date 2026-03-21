@@ -1,6 +1,6 @@
 # priest/shadow — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:45
+Generated: 2026-03-21 23:31
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Archon', 'Voidweaver']
@@ -356,7 +356,28 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST SHADOW PRIEST SINGLE TARGET ROTATION
 Shadow in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Voidweaver selected, the priority is as follows:
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ OPTIONS
+Misery
+Invoked Nightmare
+Voidform
+PRIORITY
+Cast  Shadow Word: Pain to maintain  Shadow Word: Pain.
+Maintain  Vampiric Touch, either with  Tentacle Slam or hard cast  Vampiric Touch
+Cast  Voidform to enter  Voidform.
+Cast  Power Infusion.
+Cast  Shadow Word: Death if the target has an absorb shield.
+Cast  Void Blast if  Shadow Word: Madness is active or if  Entropic Rift is about to expire.
+Spend  Insanity on  Shadow Word: Madness if it is not active, is about to fall off, you are about to cap, or  Entropic Rift is active.
+Cast  Void Volley.
+Cast  Void Torrent to activate  Entropic Rift.
+Cast  Mind Blast.
+Cast  Shadow Word: Madness.
+Cast  Tentacle Slam if there will be no additional targets to DoT or upcoming movement.
+Cast  Mind Flay, interrupting as soon as anything of higher priority becomes available.
+When moving, cast  Tentacle Slam,  Shadow Word: Death, or  Shadow Word: Pain to generate some  Insanity and deal some damage.
 
 POWER INFUSION
 Due to the talent  Twins of the Sun Priestess,  Power Infusion can be cast on allies in order to provide them with the same buff to haste that you provide to yourself when you activate it. This means as a Shadow Priest you should be aiming to find a target for Power Infusion who is going to consistently get high value from the haste buff every 2 minutes. In some cases, you can even change your Power Infusion targets throughout the encounter or dungeon, as well as time your cooldowns around those of your allies to get the maximum benefit. However, you should always prioritize your own value and damage from Power Infusion over that of others. Make sure you are always getting the maximum number of uses possible, and timing it with your other powerful cooldowns.
@@ -395,8 +416,28 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST SHADOW PRIEST AOE ROTATION
 Shadow in AoE plays around a priority list almost identical to that of Single Target, juggling both ability cooldowns and  Insanity based on an order of power. This means with each GCD, we go top to bottom on a list and press the button with the current highest value.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Voidweaver selected, the priority is as follows:
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ OPTIONS
+Misery
+Invoked Nightmare
+Voidform
+PRIORITY
+Cast  Shadow Word: Pain to maintain  Shadow Word: Pain.
+Maintain  Vampiric Touch, either with  Tentacle Slam or hard cast  Vampiric Touch
+Cast  Voidform to enter  Voidform.
+Cast  Power Infusion.
+Cast  Shadow Word: Death if the target has an absorb shield.
+Cast  Void Blast if  Shadow Word: Madness is active or if  Entropic Rift is about to expire.
+Spend  Insanity on  Shadow Word: Madness if it is not active, is about to fall off, you are about to cap, or  Entropic Rift is active.
+Cast  Void Volley.
+Cast  Void Torrent to activate  Entropic Rift.
+Cast  Mind Blast.
+Cast  Shadow Word: Madness.
+Cast  Tentacle Slam if there will be no additional targets to DoT or upcoming movement.
+Cast  Mind Flay, interrupting as soon as anything of higher priority becomes available.
+When moving, cast  Tentacle Slam,  Shadow Word: Death, or  Shadow Word: Pain to generate some  Insanity and deal some damage.
 
 POWER INFUSION
 Due to the talent  Twins of the Sun Priestess,  Power Infusion can be cast on allies in order to provide them with the same buff to haste that you provide to yourself when you activate it. This means as a Shadow Priest you should be aiming to find a target for Power Infusion who is going to consistently get high value from the haste buff every 2 minutes. In some cases, you can even change your Power Infusion targets throughout the encounter or dungeon, as well as time your cooldowns around those of your allies to get the maximum benefit. However, you should always prioritize your own value and damage from Power Infusion over that of others. Make sure you are always getting the maximum number of uses possible, and timing it with your other powerful cooldowns.
@@ -434,10 +475,23 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST SHADOW PRIEST OPENER
-The Shadow Priest Opener has some small deviations depending on your Hero Talent. Each opener is underpinned by three core goals, put the most important spells on cooldown, generate  Insanity to start maintaining  Shadow Word: Madness, and react where needed to any important procs that occur throughout the first 10 to 15 seconds. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Shadow Priest Opener has some small deviations depending on your Hero Talent. Each opener is underpinned by three core goals, put the most important spells on cooldown, generate  Insanity to start maintaining  Shadow Word: Madness, and react where needed to any important procs that occur throughout the first 10 to 15 seconds. With  Voidweaver selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Precast
+ OPTIONS
+Misery
+Invoked Nightmare
+Voidform
+SEQUENCE
+Cast  Tentacle Slam.
+Cast  Shadow Word: Pain.
+Cast  Voidform.
+Cast  Power Infusion + Use  Light's Potential  + Any on use trinkets.
+Cast  Void Volley.
+Cast  Shadow Word: Madness.
+Cast  Void Torrent.
+Cast  Void Blast.
 
 POWER INFUSION
 Due to the talent  Twins of the Sun Priestess,  Power Infusion can be cast on allies in order to provide them with the same buff to haste that you provide to yourself when you activate it. This means as a Shadow Priest you should be aiming to find a target for Power Infusion who is going to consistently get high value from the haste buff every 2 minutes. In some cases, you can even change your Power Infusion targets throughout the encounter or dungeon, as well as time your cooldowns around those of your allies to get the maximum benefit. However, you should always prioritize your own value and damage from Power Infusion over that of others. Make sure you are always getting the maximum number of uses possible, and timing it with your other powerful cooldowns.

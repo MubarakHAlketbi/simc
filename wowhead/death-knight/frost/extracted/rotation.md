@@ -1,6 +1,6 @@
 # death-knight/frost — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:12
+Generated: 2026-03-21 23:19
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', 'Rider of the Apocalypse']
@@ -15,7 +15,23 @@ Tab Group 2: ['Killing Streak']
 #### Single-Target Priority
 BEST FROST DEATH KNIGHT SINGLE TARGET ROTATION
 Frost in Single Target plays around a priority list informed by proc management and pressing the highest damage button each GCD. This list reflects that priority and is not reflective of a static order you should press.
- Please select a Hero Talent option to generate a Single Target priority
+With  Deathbringer selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Empower Rune Weapon if you have 2 charges
+ Reaper's Mark
+ Pillar of Frost
+ Breath of Sindragosa
+ Frostwyrm's Fury if you do not have an active  Reaper's Mark or  Exterminate
+ Obliterate if you have 2  Killing Machine stacks, or  Exterminate 
+ Howling Blast with  Rime
+ Frost Strike to avoid Runic Power waste 
+ Obliterate with  Killing Machine 
+ Empower Rune Weapon to generate  Killing Machine
+ Frost Strike
+ Obliterate without  Killing Machine 
+ Howling Blast 
+ Further Details
 
 PILLAR OF FROST
  Pillar of Frost is extremely simple by itself, but it serves as an activator for some important effects.
@@ -61,8 +77,23 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST FROST DEATH KNIGHT AOE ROTATION
 Frost's AoE rotation has identical logic as its Single Target rotation, but replaces  Obliterate with  Frostscythe and  Frost Strike with  Glacial Advance at 3+ targets.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Deathbringer selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Empower Rune Weapon if you have 2 charges
+ Reaper's Mark
+ Pillar of Frost
+ Breath of Sindragosa
+ Frostwyrm's Fury if you do not have an active  Reaper's Mark or  Exterminate
+ Frostscythe if you have 2  Killing Machine stacks, or  Exterminate 
+ Howling Blast with  Rime
+ Glacial Advance to avoid Runic Power waste 
+ Frostscythe with  Killing Machine 
+ Empower Rune Weapon to generate  Killing Machine
+ Glacial Advance
+ Frostscythe without  Killing Machine 
+ Howling Blast 
+ Further Details
 
 PILLAR OF FROST
  Pillar of Frost is extremely simple by itself, but it serves as an activator for some important effects.
@@ -107,11 +138,18 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST DEATH KNIGHT OPENER
-The Deathbringer opener uses Reaper's Mark before the rest of the cooldowns to make another GCD available in Pillar of Frost for spending Killing Machine. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Deathbringer opener uses Reaper's Mark before the rest of the cooldowns to make another GCD available in Pillar of Frost for spending Killing Machine. With  Deathbringer selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
 OPENER SEQUENCE
+ Empower Rune Weapon
+ Reaper's Mark
+ Pillar of Frost
+ Breath of Sindragosa
+ Obliterate
+ Empower Rune Weapon
+ Obliterate
+Continue with normal rotation.
 
 PILLAR OF FROST
  Pillar of Frost is extremely simple by itself, but it serves as an activator for some important effects.
@@ -258,6 +296,8 @@ Buff Up Make sure you have a food buff, an active flask, and weapon oils applied
 
 FROSTWYRM'S FURY
  Frostwyrm's Fury is integral to Frost in Midnight, thanks for the Apex talents. The most important thing to know is to never cast Frostwyrm's Fury without  Pillar of Frost, otherwise you will waste  Chosen of Frostbrood. Other concerns are specific to each Hero Talent.
+
+ Deathbringer needs put some delay between using Frostwyrm's Fury and  Reaper's Mark.  Exterminate can only stack two times, so  Echoing Fury will lose effectiveness if you cast Frostwyrm's Fury right after Reaper's Mark (Reaper's Mark can be expected to detonate in only a few seconds). Casting the recall Frostwyrm's Fury grants a single stack of Exterminate through Echoing Fury.
 
 UNDERSTANDING KILLING STREAK
  Killing Streak poses an important question: should I intentionally wait for two stacks of  Killing Machine? The short answer is no. Killing Machine stacks to two to give us some rotational breathing room, but do not try to intentionally go to two stacks.

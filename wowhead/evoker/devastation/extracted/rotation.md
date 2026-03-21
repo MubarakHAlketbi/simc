@@ -1,6 +1,6 @@
 # evoker/devastation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/devastation/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:26
+Generated: 2026-03-21 23:24
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Scalecommander', 'Flameshaper']
@@ -15,7 +15,22 @@ Tab Group 2: ['Hover and Movement', 'Deep Breath Z-axis', 'Disintegrate Chaining
 #### Single-Target Priority
 BEST DEVASTATION EVOKER SINGLE TARGET ROTATION
 Devastation in Single Target plays around a simple priority list. This means with each cast and GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Scalecommander selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Hover if capped and  Deep Breath is ready soon. - .
+ Deep Breath. - 
+ Deep Breath when  Strafing Run is about to expire. - 
+ Dragonrage.
+ Tip the Scales.
+ Eternity Surge Rank 1.
+ Fire Breath Rank 1.
+Channel  Disintegrate with  Mass Disintegrate. - 
+Channel  Disintegrate. - 
+ Azure Sweep.
+ Living Flame as filler.
+ Azure Strike if needed for movement.
+ Further Details
 
 DRAGONRAGE
  Dragonrage is your main cooldown as Devastation. This buff guarantees  Essence Burst procs from  Living Flame and  Azure Strike for the duration. Try to use it every 2 minutes.
@@ -155,7 +170,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -255,7 +270,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -358,8 +373,23 @@ You are not logged in. Please log in or register an account to add your comment.
 BEST DEVASTATION EVOKER AOE ROTATION
 For Devastation, AoE is defined as 3 or more targets. Devastation plays mostly the same in AoE, aside from sometimes casting  Pyre. Ranking Empowered spells up can also be beneficial.
 
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Scalecommander selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+ Hover if capped and  Deep Breath is ready soon. - .
+ Deep Breath.
+ Dragonrage.
+ Tip the Scales on  Eternity Surge. - .
+ Fire Breath Rank 1.
+ Eternity Surge Rank 1.
+ Deep Breath with  Strafing Run.
+Channel  Disintegrate with  Mass Disintegrate. - 
+ Pyre at 4+ targets.
+Otherwise, channel  Disintegrate. - 
+ Azure Sweep.
+ Living Flame with  Leaping Flames and  Burnout.
+ Azure Strike as filler.
+ Further Details
 
 DRAGONRAGE
  Dragonrage is your main cooldown as Devastation. This buff guarantees  Essence Burst procs from  Living Flame and  Azure Strike for the duration. Try to use it every 2 minutes.
@@ -499,7 +529,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -599,7 +629,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -701,11 +731,24 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Opener
 BEST DEVASTATION EVOKER OPENER
 The optimal Devastation Evoker opener sets up your  Dragonrage and uses various cooldowns, trinkets, or items. Following that, we transition into our main rotation.
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Scalecommander selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Pull
 OPENER SEQUENCE
+ Hover twice before combat. - .
+Pre-cast  Living Flame.
+Use damage potion
+AoE Only: Use  Vaelgor's Final Stare.
+ Deep Breath. - 
+ Dragonrage.
+ Tip the Scales.
+ Eternity Surge.
+ Fire Breath Rank 1.
+AoE Only:  Deep Breath again.
+Channel  Disintegrate. - 
+ Dragonrage is now active, continue to the normal rotation.
+Outside of AoE: Delay your damage trinket (ex:  Vaelgor's Final Stare) until you have 4 stacks of  Rising Fury.
 
 DRAGONRAGE
  Dragonrage is your main cooldown as Devastation. This buff guarantees  Essence Burst procs from  Living Flame and  Azure Strike for the duration. Try to use it every 2 minutes.
@@ -845,7 +888,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -945,7 +988,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -1190,7 +1233,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -1290,7 +1333,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -1537,7 +1580,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -1637,7 +1680,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -1884,7 +1927,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -1984,7 +2027,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -2224,7 +2267,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -2324,7 +2367,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -2569,7 +2612,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -2669,7 +2712,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -2908,7 +2951,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -3008,7 +3051,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -3249,7 +3292,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -3349,7 +3392,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -3584,7 +3627,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -3684,7 +3727,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -3923,7 +3966,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -4023,7 +4066,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -4281,7 +4324,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -4381,7 +4424,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -4637,7 +4680,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -4737,7 +4780,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -4992,7 +5035,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -5092,7 +5135,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -5337,7 +5380,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -5437,7 +5480,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -5684,7 +5727,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -5784,7 +5827,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -6031,7 +6074,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -6131,7 +6174,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -6371,7 +6414,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -6471,7 +6514,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -6716,7 +6759,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -6816,7 +6859,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -7055,7 +7098,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -7155,7 +7198,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -7396,7 +7439,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -7496,7 +7539,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -7731,7 +7774,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -7831,7 +7874,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
@@ -8070,7 +8113,7 @@ as noted before i do understand a lot of thought put to this guide and especiall
 6
 
 	
-By Bifflin (8,599 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
+By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
 	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
@@ -8170,7 +8213,7 @@ Not
 1
 
 	
-By Asaqq (9,079 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
+By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
 	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 

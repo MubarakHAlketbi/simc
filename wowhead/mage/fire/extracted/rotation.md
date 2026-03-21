@@ -1,6 +1,6 @@
 # mage/fire — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:35
+Generated: 2026-03-21 23:28
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sunfury', 'Frostfire']
@@ -16,7 +16,37 @@ Tab Group 3: ['Entering Combustion', 'Firestarter Examples']
 #### Single-Target Priority
 BEST FIRE MAGE SINGLE TARGET ROTATION
 Fire in Single Target plays around a simple priority list. This means with each cast and GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Sunfury selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ OPTIONS
+ Scorch 
+ Burnout
+ Meteor 
+COMBUSTION PRIORITY
+During  Combustion, all of your casts will Critically strike. This means that you will alternate between  Pyroblast (with  Hot Streak!) and builders.
+ Meteor in the last 8 seconds of  Combustion.
+ Pyroblast with  Hot Streak!
+ Pyroblast again if you just spent  Hot Streak! at the end of a  Scorch cast. 
+The below casts are used to generate  Hot Streak!:
+ Fire Blast.
+ Scorch as filler.
+Examples of a  Combustion timeline:
+
+
+While casting
+PRIORITY (OUTSIDE COMBUSTION)
+Cast  Combustion. 
+ Pyroblast with  Hot Streak!.
+ Pyroblast with  Hyperthermia.
+Cast  Fire Blast if you have  Heating Up while casting  Fireball. 
+Cast  Fire Blast if you just spent  Hot Streak! and are guaranteed to Crit:
+ Pyroblast is in flight during  Hyperthermia. 
+In Execute: Cast  Fire Blast without  Heating Up while casting  Scorch. 
+In Execute: If you have  Heating Up. 
+ Scorch with  Heat Shimmer after spending  Hot Streak!. 
+In Execute:  Scorch if the target is below 30% health.
+ Fireball as filler.
+ Further Details
 
 COMBUSTION
 All spells Critically Strike during  Combustion, making you a  Hot Streak! machine gun. It has many interactions that either grant other buffs, increase proc chance, speed up cooldown recovery, or boost damage. Key takeaways are:
@@ -97,8 +127,38 @@ You are not logged in. Please log in or register an account to add your comment.
 BEST FIRE MAGE AOE ROTATION
 In AoE, Fire simply replaces  Pyroblast with  Flamestrike and plays around a priority list. This means with each cast and GCD we go top to bottom on a list, and press the button with the current highest value.
 
+With  Sunfury selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ Sunfury replaces  Pyroblast with  Flamestrike at 4 or more targets. 
+ OPTIONS
+ Scorch 
+ Meteor 
+COMBUSTION PRIORITY
+During  Combustion, all of your casts will Critically strike. This means that you will alternate between  Flamestrike (with  Hot Streak!) and builders.
+ Meteor (if it will land during  Combustion)
+ Flamestrike with  Hot Streak!
+ Flamestrike again if you just spent  Hot Streak! at the end of a  Scorch cast. 
+The below casts are used to generate  Hot Streak!:
+ Fire Blast.
+ Scorch as filler.
+Examples of a  Combustion timeline:
 
- Please select a Hero Talent option to generate a Single Target priority
+
+While casting
+PRIORITY (OUTSIDE COMBUSTION)
+ Meteor right before  Combustion.
+Cast  Combustion. 
+ Flamestrike with  Hot Streak!.
+ Flamestrike with  Hyperthermia.
+Cast  Fire Blast if you have  Heating Up while casting  Fireball. 
+Cast  Fire Blast if you just spent  Hot Streak! and are guaranteed to Crit:
+ Flamestrike is in flight during  Hyperthermia. 
+In Execute: Cast  Fire Blast without  Heating Up while casting  Scorch. 
+In Execute: If you have  Heating Up. 
+ Scorch with  Heat Shimmer after spending  Hot Streak!. 
+In Execute:  Scorch if the target is below 30% health.
+ Fireball as filler.
+ Further Details
 
 COMBUSTION
 All spells Critically Strike during  Combustion, making you a  Hot Streak! machine gun. It has many interactions that either grant other buffs, increase proc chance, speed up cooldown recovery, or boost damage. Key takeaways are:
@@ -179,12 +239,41 @@ You are not logged in. Please log in or register an account to add your comment.
 BEST FIRE MAGE OPENER
 The optimal Fire Mage opener makes use of  Firestarter and sets up your  Combustion window with a "Double Pyroblast". The idea is to have as many instant cast  Pyroblast casts as possible. Activating  Combustion while casting other spells allows us to fit more spells into the cooldown. After activating  Combustion, proceed to the Single-Target or AoE Priority tab.
 
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Sunfury selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 
 SAMPLE TIMELINE
+During  Firestarter (>=90% Health):
+
+
+Pull
+Double Pyroblast
+Delayed
+
+
+Entering  Combustion:
+
+
+AoE
 OPENER (FIRESTARTER)
+Pre-cast  Pyroblast before the pull (hard-cast).
+ Fireball.
+ Fire Blast during the  Fireball cast.
+ Pyroblast with  Hot Streak! twice 
+Alternate between  Fire Blast and  Pyroblast until you run out of charges. 
+If the target is still above 90% health, repeat the following:
+ Fireball
+ Fire Blast during the  Fireball cast.
+Without  Hot Streak!,  Fireball again.
+ Pyroblast with  Hot Streak! twice 
+ENTERING COMBUSTION
+ Pyroblast to spend your  Hot Streak!.
+AoE Only: Precast  Meteor, before your  Scorch cast.
+Begin a  Scorch cast.
+ Fire Blast as soon as the  Scorch cast begins. 
+ Combustion right before the  Scorch cast ends.
+ Pyroblast (or  Flamestrike in AoE) with  Hot Streak! twice 
+Double Pyroblast explained here.
 
 COMBUSTION
 All spells Critically Strike during  Combustion, making you a  Hot Streak! machine gun. It has many interactions that either grant other buffs, increase proc chance, speed up cooldown recovery, or boost damage. Key takeaways are:

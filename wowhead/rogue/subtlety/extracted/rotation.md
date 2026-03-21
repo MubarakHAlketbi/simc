@@ -1,6 +1,6 @@
 # rogue/subtlety — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/subtlety/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:51
+Generated: 2026-03-21 23:33
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathstalker', 'Trickster']
@@ -647,7 +647,27 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST SUBTLETY ROGUE SINGLE TARGET ROTATION
 Subtlety in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. The list below provides a guideline, and can be followed top to bottom.
- Please select a Hero Talent option to generate a Single Target priority
+With  Trickster selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Use  Shadowstrike from  Stealth. - 
+continue based on the following priority:
+DURING  SHADOW DANCE
+Use Finishing Moves when on 6 or more Combo Points with the following priority:
+Cast  Secret Technique. - 
+Cast  Eviscerate.
+Cast Combo Point builder with the following priority:
+Cast  Shadowstrike.
+OUTSIDE OF  SHADOW DANCE
+Cast Finishing Moves when on 6 or more Combo Points with the following priority:
+Cast  Eviscerate.
+Cast Combo Point builder with the following priority:
+Cast  Backstab.
+COOLDOWNS
+Use  Shadow Dance with 6 or more Combo Points when  Secret Technique is ready or during  Shadow Blades. - 
+Use  Shadow Blades if you have  Shadow Dance ready.
+Use  Vanish on cooldown with low Combo Points.
+ Further Details
 
 SECRET TECHNIQUE‎
  Secret Technique is a finishing move that's split in three parts, and is the only cooldown on Subtlety that has a static cooldown, which is reduced by haste. The following information is good to know:
@@ -703,8 +723,30 @@ You are not logged in. Please log in or register an account to add your comment.
 BEST SUBTLETY ROGUE AOE ROTATION
 Subtlety switches to an multi target rotation already with two or more targets. This means replacing single target combo point builder and finishing moves with multi-target options. Hero and Apex talents impact these decisions, potentially leading to the use of single-target spells.
 
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Trickster selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Shadowstrike from  Stealth. - 
+continue based on the following priority:
+DURING  SHADOW DANCE
+Use Finishing Moves when on 6 or more Combo Points with the following priority:
+Cast  Secret Technique. - 
+Cast  Eviscerate with  Coup de Grace.
+Cast  Black Powder. - 
+Use Combo Point builder with the following priority:
+Cast  Shadowstrike with 3 or less targets
+Cast  Shuriken Storm.
+OUTSIDE OF  SHADOW DANCE
+Use Finishing Moves when on 6 or more Combo Points with the following priority:
+Cast  Eviscerate with  Coup de Grace.
+Cast  Black Powder. - 
+Use Combo Point builder with the following priority:
+Cast  Shuriken Storm.
+COOLDOWNS
+Cast  Shadow Dance with 6 or more Combo Points when  Secret Technique is ready or during  Shadow Blades. - 
+Cast  Shadow Blades if you have  Shadow Dance ready.
+Cast  Vanish on cooldown with low Combo Points.
+ Further Details
 
 SECRET TECHNIQUE‎
  Secret Technique is a finishing move that's split in three parts, and is the only cooldown on Subtlety that has a static cooldown, which is reduced by haste. The following information is good to know:
@@ -758,12 +800,32 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST SUBTLETY ROGUE OPENER
-The goal of the opener is to use your cooldowns as soon as possible without sacrificing efficiency. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The goal of the opener is to use your cooldowns as soon as possible without sacrificing efficiency.
 Use the ✖ markers next to pick a fight style.
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+
+
+Single Target
+ 
+Multi Target
+
+
 SAMPLE TIMELINE
+Potion
+Trinket
+Pull
 OPENER SEQUENCE
+Make sure to be in  Stealth before pull.
+Start the fight with  Shadowstrike.
+Cast  Shadow Dance.
+Cast  Shadow Blades
+Use your combat poiton ( Tempered Potion).
+Use your trinket.
+Cast  Secret Technique.
+Repeat the following steps for the rest of  Shadow Dance.
+Cast  Shadowstrike.
+Cast  Eviscerate.
+Continue with your normal rotation.
 
 SECRET TECHNIQUE‎
  Secret Technique is a finishing move that's split in three parts, and is the only cooldown on Subtlety that has a static cooldown, which is reduced by haste. The following information is good to know:

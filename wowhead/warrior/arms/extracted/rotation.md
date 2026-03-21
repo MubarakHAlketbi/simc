@@ -1,6 +1,6 @@
 # warrior/arms — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/arms/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:02
+Generated: 2026-03-21 23:37
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Slayer', 'Colossus']
@@ -17,9 +17,29 @@ BEST ARMS WARRIOR SINGLE TARGET ROTATION
 The single target rotation revolves around managing rage, which is generated primarily through auto-attacks, but consumed by most special abilities, the most important of which are typically  Mortal Strike and  Execute.
 Slayer
 Colossus
- Select a Hero Specialization to fill in the rotation
 These builds use default talents recommended on the Talents page.
 Hover over the  icons for additional notes.
+PRIORITY
+ Avatar shortly before or with Colossus Smash
+ Colossus Smash
+ Bladestorm during Colossus Smash 
+ Mortal Strike
+ Execute during  Sudden Death
+ Heroic Strike
+ Overpower
+ Cleave while the target is below 35% health 
+ Rend to apply or refresh at <4 seconds remaining
+ Wrecking Throw 
+ Slam when nothing else is available
+EXECUTE PRIORITY
+ Avatar shortly before or with Colossus Smash
+ Colossus Smash
+ Heroic Strike
+ Bladestorm during Colossus Smash 
+ Mortal Strike with two stacks of  Executioner's Precision
+ Overpower with less than 90 rage
+ Execute
+ Wrecking Throw
 
 PullSudden DeathExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 

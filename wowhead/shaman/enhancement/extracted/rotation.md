@@ -1,6 +1,6 @@
 # shaman/enhancement — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:55
+Generated: 2026-03-21 23:34
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Stormbringer', 'Totemic']
@@ -557,7 +557,26 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Single-Target Priority
 BEST ENHANCEMENT SHAMAN SINGLE TARGET ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+ Totemic adds  Surging Totem, a 1-minute cooldown to overlap with  Doom Winds. It focuses on  Hot Hand windows to cast  Lava Lash, and extending it using  Totemic Momentum. It defaults to  Doom Winds as its cooldown.
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
+ OPTIONS
+Primordial Storm
+PRIORITY
+Cast  Voltaic Blaze if  Flame Shock isn't active - 
+Cast  Surging Totem
+Cast  Lava Lash with  Hot Hand or  Whirling Fire active
+Cast  Sundering - 
+Cast  Doom Winds - 
+Cast  Crash Lightning - 
+Cast  Primordial Storm with 10  Maelstrom Weapon stacks - 
+Cast  Stormstrike during  Doom Winds
+Cast  Lightning Bolt with 10  Maelstrom Weapon stacks - 
+Cast  Lava Lash
+Cast  Stormstrike
+Cast  Voltaic Blaze
+Cast  Lightning Bolt with 5+  Maelstrom Weapon stacks
+  TOTEMIC NOTES
 
 DOOM WINDS
  Doom Winds is your standard cooldown choice, with a 1 minute cooldown and 8 second duration baseline (increasing to 10 with  Thorim's Invocation taken) - while also being off the GCD. While active, your chance to trigger  Windfury Weapon is doubled, based on your character sheet (so includes the baseline 15%, plus your Mastery chance, and any talent choices that increase it such as  Forceful Winds). Additionally, all  Windfury Weapon damage you deal while it's active is increased by 20%. This does not impact the bonus attacks from  Skyfury.
@@ -606,7 +625,28 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST ENHANCEMENT SHAMAN AOE ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+ Totemic plays similarly in AoE due to built-in cleave.  Lava Lash is its main strike, extending  Hot Hand for  Splitstream through  Totemic Momentum. Its cooldown of choice is  Doom Winds, pairing it with  Surging Totem.
+Use the ✖ markers to switch to common alternate talent picks based on your loadout.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
+
+ OPTIONS
+Fire Nova
+Primordial Storm
+PRIORITY
+Cast  Voltaic Blaze if  Flame Shock isn't currently active - 
+Cast  Surging Totem
+Cast  Sundering - 
+Cast  Lava Lash with  Hot Hand or  Whirling Fire active
+Cast  Doom Winds - 
+Cast  Primordial Storm with 10  Maelstrom Weapon stacks - 
+Cast  Crash Lightning
+Cast  Stormstrike during  Doom Winds
+Cast  Chain Lightning with 10  Maelstrom Weapon stacks - 
+Cast  Voltaic Blaze
+Cast  Lava Lash
+Cast  Stormstrike
+Cast  Chain Lightning with 5+  Maelstrom Weapon stacks
+ TOTEMIC NOTES
 
 DOOM WINDS
  Doom Winds is your standard cooldown choice, with a 1 minute cooldown and 8 second duration baseline (increasing to 10 with  Thorim's Invocation taken) - while also being off the GCD. While active, your chance to trigger  Windfury Weapon is doubled, based on your character sheet (so includes the baseline 15%, plus your Mastery chance, and any talent choices that increase it such as  Forceful Winds). Additionally, all  Windfury Weapon damage you deal while it's active is increased by 20%. This does not impact the bonus attacks from  Skyfury.
@@ -655,7 +695,26 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST ENHANCEMENT SHAMAN OPENER
- Please select a Hero Talent option to generate an Opener sequence
+ Totemic's needs to set up  Flame Shock, consuming all 3  Whirling Elements motes and starting  Doom Winds. It then builds up  Hot Hand with  Totemic Momentum, and transitions to its standard rotation after.
+Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
+ FIGHT STYLE
+Single Target
+AoE
+ OPTIONS
+Primordial Storm
+SAMPLE TIMELINE
+Off GCD
+SINGLE TARGET SEQUENCE
+Cast  Voltaic Blaze on the way into melee
+Cast  Surging Totem
+Cast  Sundering
+Cast  Lava Lash to trigger  Hot Hand
+Cast  Doom Winds and immediately  Primordial Storm
+Cast  Lava Lash
+Cast  Crash Lightning
+Continue with normal ability priority
+ TOTEMIC NOTES
 
 DOOM WINDS
  Doom Winds is your standard cooldown choice, with a 1 minute cooldown and 8 second duration baseline (increasing to 10 with  Thorim's Invocation taken) - while also being off the GCD. While active, your chance to trigger  Windfury Weapon is doubled, based on your character sheet (so includes the baseline 15%, plus your Mastery chance, and any talent choices that increase it such as  Forceful Winds). Additionally, all  Windfury Weapon damage you deal while it's active is increased by 20%. This does not impact the bonus attacks from  Skyfury.

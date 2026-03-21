@@ -1,6 +1,6 @@
 # druid/guardian — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 22:24
+Generated: 2026-03-21 23:23
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw']
@@ -14,7 +14,19 @@ Tab Group 2: ['Spending Rage']
 
 #### Single-Target Priority
 BEST GUARDIAN DRUID SINGLE TARGET ROTATION
- Please select a Hero Talent option to generate a Single Target priority
+With  Druid of the Claw selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Moonfire on your primary target.
+Maintain 3-5 stacks of  Thrash.
+Cast  Red Moon on cooldown.
+Cast  Mangle on cooldown.
+Cast  Thrash on cooldown.
+Spend Rage on either  Maul (offensively) or  Ironfur(defensively.
+Cast  Frenzied Regeneration if your health dips low.
+Cast  Moonfire with  Galactic Guardian procs.
+Use your cooldowns  Barkskin/ Incarnation: Guardian of Ursoc as frequently as possible.
+Cast  Swipe if you have nothing else to press.
 
 While this buff is active, you want to try to get as many casts of  Thrash and  Mangle off as possible, while also spending your Rage on  Maul,  Raze, or  Ironfur to avoid capping Rage.
 
@@ -59,8 +71,18 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST GUARDIAN DRUID AOE ROTATION
 The AoE and Single Target rotation of Guardian is essentially the same. Our spells and priority do not change, which is great!. This makes for an easy and comfortable tank playstyle and allows you to focus on your role.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Druid of the Claw selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Moonfire on your primary target.
+Maintain 3-5 stacks of  Thrash.
+Cast  Mangle on cooldown.
+Cast  Thrash on cooldown.
+Spend Rage on either  Maul (offensively) or  Ironfur(defensively.
+Cast  Frenzied Regeneration if your health dips low.
+Cast  Moonfire with  Galactic Guardian procs.
+Use your cooldowns  Barkskin/ Incarnation: Guardian of Ursoc as frequently as possible.
+Cast  Swipe if you have nothing else to press.
 
 While this buff is active, you want to try to get as many casts of  Thrash and  Mangle off as possible, while also spending your Rage on  Maul,  Raze, or  Ironfur to avoid capping Rage.
 
@@ -105,11 +127,23 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Opener
 BEST GUARDIAN DRUID OPENER
 Our opener is fairly straightforward and consistent. The goal is to get all of our DoTs ( Moonfire and Thrash) rolling immediately and then start using our bigger cooldowns, followed by our regular rotation.
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Druid of the Claw selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+2s
+Pull
+Dump rage
+On CD
+On CD
 OPENER SEQUENCE
+Cast  Red Moon on cooldown.
+Cast  Mangle on cooldown.
+Cast  Thrash on cooldown.
+Maintain 3-5 stacks of  Thrash.
+Spend Rage on either  Maul (offensively) or  Ironfur(defensively.
+Cast  Frenzied Regeneration if your health dips low.
+Use your cooldowns  Barkskin/ Incarnation: Guardian of Ursoc as frequently as possible.
+Cast  Swipe if you have nothing else to press.
 
 While this buff is active, you want to try to get as many casts of  Thrash and  Mangle off as possible, while also spending your Rage on  Maul,  Raze, or  Ironfur to avoid capping Rage.
 

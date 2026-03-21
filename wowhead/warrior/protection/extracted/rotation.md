@@ -1,6 +1,6 @@
 # warrior/protection — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/protection/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:06
+Generated: 2026-03-21 23:38
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Colossus', 'Mountain Thane']
@@ -15,7 +15,17 @@ Tab Group 2: ['Always Be Casting']
 #### Single-Target Priority
 BEST PROTECTION WARRIOR SINGLE TARGET ROTATION
 Protection in Single Target plays around a simple priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Colossus selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Always  Charge into combat.
+ Demolish on cooldown.
+ Shield Slam on cooldown.
+ Thunder Clap on cooldown and to apply  Rend.
+ Revenge
+Spend excess Rage on  Ignore Pain.
+ Execute targets at or below 20%(35% if you have the talent) health.
+Use  Impending Victory if you have low HP!
 
 AVATAR
 Avatar gives you a multitude of perks and can be changed based on talents, but primary it increases all damage done and generally reduces the cooldown of Thunder Clap.
@@ -58,8 +68,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST PROTECTION WARRIOR AOE ROTATION
 Nothing changes significantly rotationally for Prot Warrior from ST to AoE. Our rotation naturally AoE's which means its already doing it's job well.
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Colossus selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Always  Charge into combat.
+ Demolish on cooldown.
+ Shield Slam on cooldown.
+ Thunder Clap on cooldown and to apply  Rend.
+ Revenge
+Spend excess Rage on  Ignore Pain.
+ Execute targets at or below 20%(35% if you have the talent) health.
+Use  Impending Victory if you have low HP!
 
 AVATAR
 Avatar gives you a multitude of perks and can be changed based on talents, but primary it increases all damage done and generally reduces the cooldown of Thunder Clap.
@@ -102,11 +121,23 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Opener
 BEST PROTECTION WARRIOR OPENER
 The goal here is to get in and start cycling through cooldowns as fast as we can.
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Colossus selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Taunt
+Avatar
+Shield Block
+Avoid Rage Capping
+Rotation
 OPENER SEQUENCE
+Always  Charge into combat.
+ Demolish on cooldown.
+ Shield Slam on cooldown.
+ Thunder Clap on cooldown and to apply  Rend.
+ Revenge
+Spend excess Rage on  Ignore Pain.
+ Execute targets at or below 20%(35% if you have the talent) health.
+Use  Impending Victory if you have low HP!
 
 AVATAR
 Avatar gives you a multitude of perks and can be changed based on talents, but primary it increases all damage done and generally reduces the cooldown of Thunder Clap.

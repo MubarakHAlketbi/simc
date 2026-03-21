@@ -1,6 +1,6 @@
 # warlock/destruction — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/destruction/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:00
+Generated: 2026-03-21 23:36
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Hellcaller', 'Diabolist']
@@ -14,7 +14,16 @@ Tab Group 1: ['Summon Infernal', 'Havoc', 'Diabolist Demons', 'Malevolence']
 #### Single-Target Priority
 BEST DESTRUCTION WARLOCK SINGLE TARGET ROTATION
 Destructions single-target follows a simple priority list. In this segment, you can read about what the priority looks like.
- Please select a Hero Talent option to generate a Single Target priority
+With  Hellcaller selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Wither
+Cast  Shadowburn when available, and if you are about to cap on soul shards
+Cast  Chaos Bolt to avoid capping soul shards
+ Soul Fire when available, and you have less than 4 soul shards
+Cast  Conflagrate to keep this below 2 stacks or when moving
+Cast  Conflagrate to generate soul shards and generate  Backdraft stacks. Try to use these on  Chaos Bolt as much as possible.
+Cast  Incinerate to generate soul shards
 
 Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards during its duration. Some things to keep in mind when using your infernal is:
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
@@ -54,7 +63,14 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST DESTRUCTION WARLOCK AOE ROTATION
 The Destruction AoE is very different depending on if you're playing  Diabolist or  Hellcaller.
- Please select a Hero Talent option to generate a Single Target priority
+With  Hellcaller selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Maintain  Wither on as many targets as possible
+cast  Malevolence when you have as many enemies affected by  Wither as possible
+Spend your soul shards to avoid overcapping - Read the note below
+Cast  Conflagrate to generate soul shards and  Backdraft stacks
+Cast  Incinerate to generate soul shards
 Soul Shard Spending on AoE depends on a few variables.
 If you're playing  Hellcaller. you want to cast  Rain of Fire if there are 5+ targets up and you have  Havoc active. If  Havoc is not up, you spend soul shards with  Rain of Fire on 3+ targets.
 
@@ -99,11 +115,20 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DESTRUCTION WARLOCK OPENER
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Hellcaller selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+Or other Racial
+On-use Trinket
+Pre-pull so the cast finishes as the boss is pulled
+Proceed with rotation
 OPENER SEQUENCE
+Precast  Soul Fire
+Pop  Summon Infernal as well as any potions, trinkets and racials
+Cast  Malevolence to stack up your  Wither
+Cast  Conflagrate to get this on cooldown, as well as to generate soul shards and  Backdraft stacks
+Generate and spend as many soul shards as possible during your cooldowns. Make sure you dump ALL your cooldowns before  Malevolence runs out, to benefit the most from this.
+Proceed onto the normal priority list
 
 Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards during its duration. Some things to keep in mind when using your infernal is:
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.

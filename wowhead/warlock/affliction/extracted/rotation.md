@@ -1,6 +1,6 @@
 # warlock/affliction — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/affliction/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:57
+Generated: 2026-03-21 23:35
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Hellcaller', 'Soul Harvester']
@@ -15,7 +15,17 @@ Tab Group 2: ['Gameplay']
 #### Single-Target Priority
 BEST AFFLICTION WARLOCK SINGLE TARGET ROTATION
 Affliction in Single Target plays around a priority list, our priority is more fluid than rigid and can be adapted based on what you have available to you in both resources and abilities.
- Please select a Hero Talent option to generate a Single Target priority
+With  Hellcaller selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Haunt.
+Cast  Agony.
+Cast  Wither.
+Cast  Dark Harvest.
+Cast  Summon Darkglare.
+Cast  Malevolence.
+Cast as many  Unstable Affliction as possible.
+Cast  Malefic Grasp.
 
 Summon Darkglare is your major cooldown on a two-minute CD. It increases the damage of your active DOT effects by 20% while active, which means that you will want to cast Darkglare BEFORE you begin to chain cast Unstable Affliction. This will lead to optimal damage output by having Darkglare's damage amp cover the entire duration of your Unstable Affliction effects.
 
@@ -68,7 +78,17 @@ You are not logged in. Please log in or register an account to add your comment.
 #### AoE Priority
 BEST AFFLICTION WARLOCK AOE ROTATION
 Afflictions AOE revolves around casting as many  Seed of Corruption as possible, while maintaining a few  Agony and casting  Dark Harvest on CD.
- Please select a Hero Talent option to generate a Single Target priority
+With  Hellcaller selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Seed of Corruption.
+Cast  Haunt on your priority target.
+Cast  Agony on a handful of targets.
+Cast  Summon Darkglare.
+Cast  Malevolence.
+Cast  Dark Harvest.
+Cast  Seed of Corruption as many times as possible.
+Cast  Malefic Grasp.
 
 Summon Darkglare is your major cooldown on a two-minute CD. It increases the damage of your active DOT effects by 20% while active, which means that you will want to cast Darkglare BEFORE you begin to chain cast Unstable Affliction. This will lead to optimal damage output by having Darkglare's damage amp cover the entire duration of your Unstable Affliction effects.
 
@@ -120,11 +140,25 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST AFFLICTION WARLOCK OPENER
-You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+With  Hellcaller selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
+2s
+Pull
+Proceed with rotation
+As many as possible
+Or other Racial
+On-use Trinket
 OPENER SEQUENCE
+Precast  Haunt.
+Cast  Agony on pull.
+Cast  Wither.
+Cast  Dark Harvest.
+Cast  Summon Darkglare.
+Cast  Malevolence.
+Cast as many  Unstable Affliction as possible.
+Cast  Malefic Grasp.
+Proceed onto the normal priority list
 
 Summon Darkglare is your major cooldown on a two-minute CD. It increases the damage of your active DOT effects by 20% while active, which means that you will want to cast Darkglare BEFORE you begin to chain cast Unstable Affliction. This will lead to optimal damage output by having Darkglare's damage amp cover the entire duration of your Unstable Affliction effects.
 

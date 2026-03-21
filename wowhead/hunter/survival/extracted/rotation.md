@@ -1,6 +1,6 @@
 # hunter/survival — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/survival/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 22:32
+Generated: 2026-03-21 23:27
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Pack Leader', 'Sentinel']
@@ -15,7 +15,21 @@ Tab Group 2: ['Strike as One', 'Positioning', 'Pet Utility']
 #### Single-Target Priority
 BEST SURVIVAL HUNTER SINGLE TARGET ROTATION
 Survival in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
- Please select a Hero Talent option to generate a Single Target priority
+With  Pack Leader selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Avoid using  Hatchet Toss, even with  Hogstrider. .
+Cast  Hunter's Mark if it is not yet active. 
+Cast  Kill Command whenever any of the  Howl of the Pack Leader beasts are available to summon, without wasting any  Tip of the Spear stacks. .
+Cast  Takedown at 0  Tip of the Spear stacks to maximise  Twin Fangs.
+Cast  Boomstick if you have a  Tip of the Spear stack to spend
+Cast  Wildfire Bomb if  Fury of the Wyvern can be extended, and if you have a  Tip of the Spear stack to spend.
+Cast  Raptor Swipe if you have a  Tip of the Spear stack to spend.
+Cast  Raptor Strike with or without a  Tip of the Spear to spend
+Cast  Kill Command.
+Cast  Wildfire Bomb.
+Cast  Takedown as a fallback if you ran out of buttons or focus, and cannot manage to cast it at 0  Tip of the Spear stacks.
+ Further Details
 
 TAKEDOWN
  Takedown Is an extremely short-duration damage cooldown which should always be buffed with  Tip of the Spear. In addition to its high upfront damage, it buffs you and your pets' damage by 20%. It is worth noting that this 20% buff does not affect any damage sources outside of our class-specific damaging abilities, so no trinkets or non-class procs can be buffed this way.
@@ -71,8 +85,20 @@ You are not logged in. Please log in or register an account to add your comment.
 BEST SURVIVAL HUNTER AOE ROTATION
 Our AoE rotation is very similar to our single-target gameplay loop. However, you'll have much more frequent uses of  Wildfire Bomb and  Boomstick due to two talents recommended in most builds:  Wildfire Shells and  Lethal Calibration. This means it's extra important to pay attention to your ability's cooldown to not waste uses. Something else to consider is your position, as both Wildfire Bomb and Boomstick deal damage in cone shapes, so you need to make sure you are standing in a way to hit as many enemies as possible.
 
-
- Please select a Hero Talent option to generate a Single Target priority
+With  Pack Leader selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Avoid using  Hatchet Toss, even with  Hogstrider. .
+Cast  Hunter's Mark if it is not yet active. 
+Cast  Kill Command whenever any of the  Howl of the Pack Leader beasts are available to summon, without wasting any  Tip of the Spear stacks. .
+Cast  Takedown at 0  Tip of the Spear stacks to maximise  Twin Fangs.
+Cast  Boomstick if you have a  Tip of the Spear stack to spend
+Cast  Wildfire Bomb if you have a  Tip of the Spear stack to spend.
+Cast  Raptor Swipe if you have a  Tip of the Spear stack to spend.
+Cast  Raptor Strike with or without a  Tip of the Spear to spend
+Cast  Kill Command.
+Cast  Takedown as a fallback if you ran out of buttons or focus, and cannot manage to cast it at 0  Tip of the Spear stacks.
+ Further Details
 
 TAKEDOWN
  Takedown Is an extremely short-duration damage cooldown which should always be buffed with  Tip of the Spear. In addition to its high upfront damage, it buffs you and your pets' damage by 20%. It is worth noting that this 20% buff does not affect any damage sources outside of our class-specific damaging abilities, so no trinkets or non-class procs can be buffed this way.
@@ -126,9 +152,37 @@ You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST SURVIVAL HUNTER OPENER
-The Survival Hunter opener is quite simple, and barely changes based on hero talent selection. You want to throw a  Wildfire Bomb to get the cooldown running and use a  Kill Command shortly after the bomb hits to start fueling your  Tip of the Spear loop. You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
- Please select a Hero Talent option to generate an Opener sequence
+The Survival Hunter opener is quite simple, and barely changes based on hero talent selection. You want to throw a  Wildfire Bomb to get the cooldown running and use a  Kill Command shortly after the bomb hits to start fueling your  Tip of the Spear loop. With  Pack Leader selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ Pack Leader's immediate goal is to trigger your  Howl of the Pack Leader beast and  Stampede as soon as possible as you enter  Takedown.
+
+
+Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
+The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
+
+ FIGHT STYLE
+Single Target
+AoE
+SINGLE TARGET SEQUENCE
+Pre-Cast  Hunter's Mark on the boss.
+Pre-cast  Wildfire Bomb ~1 GCD (~1.25sec) before the pull timer ends, making sure to stand far away from the boss. 
+Cast  Harpoon,  Misdirection, and  Light's Potential  together. 
+Cast  Raptor Strike. 
+Cast  Boomstick. 
+Cast  Takedown.
+Cast  Raptor Swipe.
+Cast  Kill Command. 
+Cast  Raptor Strike.
+Cast  Raptor Swipe.
+Continue generating  Tip of the Spear, spending them on  Raptor Swipe or  Raptor Strike until  Takedown ends.
+Cast  Wildfire Bomb. 
+Continue by following your Single Target priority.
+SAMPLE TIMELINE
+on tank
+1 gcd
+Pull
+ PACK LEADER NOTES
+There is very little mechanical RNG in the Pack Leader opener, or its entire rotation for that matter. You could technically end up doing the exact same thing every single pull, global to global.
 
 TAKEDOWN
  Takedown Is an extremely short-duration damage cooldown which should always be buffed with  Tip of the Spear. In addition to its high upfront damage, it buffs you and your pets' damage by 20%. It is worth noting that this 20% buff does not affect any damage sources outside of our class-specific damaging abilities, so no trinkets or non-class procs can be buffed this way.
