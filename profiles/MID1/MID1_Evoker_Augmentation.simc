@@ -28,26 +28,11 @@ actions.precombat+=/blistering_scales,target_if=target.role.tank
 actions.precombat+=/living_flame
 
 # Executed every time the actor is available.
-# Simplified APL for Augmentation Evoker (Midnight Season 1)
-# Priority: Ebon Might > Prescience > BoE > TtS > Fire Breath > Upheaval > Eruption > Living Flame > Azure Strike
-# Source: Wowhead Augmentation Evoker Rotation Guide 2026-03-15
-actions=ebon_might,if=!buff.ebon_might_self.up|buff.ebon_might_self.remains<4
-actions+=/prescience,if=debuff.prescience.remains<gcd.max*2
-actions+=/potion,if=fight_remains<35|cooldown.breath_of_eons.remains>=90
-actions+=/berserking
-actions+=/blood_fury
-actions+=/ancestral_call
-actions+=/fireblood
-actions+=/use_item,slot=trinket1
-actions+=/use_item,slot=trinket2
-actions+=/breath_of_eons,if=target.time_to_die>=20
-actions+=/tip_the_scales,if=action.upheaval.usable_in<=action.fire_breath.usable_in
-actions+=/fire_breath,empower_to=1,if=buff.ebon_might_self.up
-actions+=/upheaval,empower_to=1,if=buff.ebon_might_self.up
-actions+=/time_skip,if=talent.time_skip
-actions+=/eruption,if=(buff.ebon_might_self.up&buff.ebon_might_self.remains>execute_time)|essence.deficit=0|buff.essence_burst.stack=buff.essence_burst.max_stack
-actions+=/living_flame,if=(buff.ancient_flame.up|!talent.dream_of_spring)|buff.leaping_flames.up
-actions+=/azure_strike
+# Using C++ generator APL (apl_evoker.cpp augmentation()) — more sophisticated than the previous
+# simplified Wowhead-derived APL. Key improvements: pandemic-based Ebon Might, cancel_buff
+# tip_the_scales to avoid wasted fire_breath DoT with Molten Embers, fury_of_the_aspects,
+# separate fb sub-list for empower-level selection, complex trinket sync with Breath of Eons.
+# APL review 2026-03-22: replaced simplified profile APL with C++ generator output.
 
 head=hornhelm_of_the_black_talon,id=249997,bonus_id=1808/13575,ilevel=289,gem_id=240983,enchant_id=7961
 neck=amulet_of_the_abyssal_hymn,id=250247,ilevel=289,gem_id=240906/240906
