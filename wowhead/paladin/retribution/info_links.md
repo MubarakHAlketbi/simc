@@ -7,7 +7,9 @@ https://www.wowhead.com/guide/classes/paladin/retribution/abilities-talents-pve-
 https://www.wowhead.com/guide/classes/paladin/retribution/stat-priority-pve-dps
 https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
 https://www.wowhead.com/guide/classes/paladin/retribution/enchants-gems-pve-dps
+https://www.wowhead.com/guide/classes/paladin/retribution/talent-builds-pve-dps
+https://www.wowhead.com/guide/classes/paladin/retribution/tier-set-bonuses
 
-## Hero Talents
+## Talents use talent_extraction.md method to extract data
 https://www.wowhead.com/talent-calc/paladin/retribution/herald-of-the-sun
 https://www.wowhead.com/talent-calc/paladin/retribution/templar

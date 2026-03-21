@@ -1,0 +1,1161 @@
+# druid/balance — Rotation (Browser Extracted)
+Source: https://www.wowhead.com/guide/classes/druid/balance/rotation-cooldowns-pve-dps
+Generated: 2026-03-21 22:20
+
+## Discovered Page Structure
+Hero Talent Switches: ['Keeper of the Grove', "Elune's Chosen"]
+Tab Group 0: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+Tab Group 1: ['Celestial Alignment', 'Convoke the Spirits']
+Tab Group 2: ['Eclipse', 'Starweaver']
+
+## Hero Talent: Keeper of the Grove
+
+### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+
+#### Single-Target Priority
+BEST BALANCE DRUID SINGLE TARGET ROTATION
+ Please select a Hero Talent option to generate a Single Target priority
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### AoE Priority
+BEST BALANCE DRUID AOE ROTATION
+ Please select a Hero Talent option to generate a Single Target priority
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Opener
+BEST BALANCE DRUID OPENER
+Balance Druid's opener is fairly consistent for Keeper of the Grove and Elune's Chosen. The only real difference is trading out the  Force of Nature cast in  Keeper of the Grove for  Fury of Elune in  Elune's Chosen.
+
+The goal of the opener is to enter  Eclipse as soon as possible, getting it on cooldown and then spending the  Ascendant Stars buff from your apex talent before using  Force of Nature and using your cooldowns. You also want to refresh your  Sunfire early before using your cooldowns so you don't use a GCD inside your cooldowns on it.
+It is also a damage gain to use  Starfire while you're inside  Celestial Alignment/ Incarnation: Chosen of Elune.
+
+Below you can choose if you want to view an opener for  Incarnation: Chosen of Elune or  Convoke the Spirits.
+ CHOOSE VERSION
+Incarnation
+Convoke the Spirits
+SAMPLE TIMELINE
+Off-GCD
++Trinket!
+x3 at -4s
+If Proc
+CDs
+<40 AP
+Above is a sample timeline for Keeper of the Grove on single target. The AoE rotation is virtually the same, except you'll replace  Starsurge with  Starfall.
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Pre-Combat Checks
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_1 — Tabs: ['Celestial Alignment', 'Convoke the Spirits']
+
+#### Celestial Alignment
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Convoke the Spirits
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_2 — Tabs: ['Eclipse', 'Starweaver']
+
+#### Eclipse
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Starweaver
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+STARWEAVER
+Historically the choice between  Starweaver and  Rattle the Stars has been a one-sided choice, but with adjustments to the damage of  Shooting Stars this has changed a bit.
+Maximize uptime on  Solstice: Shooting Stars is now a considerable amount of your damage, so maintaining uptime on Solstice through the  Hail of Stars interactions with Starweaver and  Touch the Cosmos is important.
+Whenever playing Starweaver you also want to bank up procs before entering your  Eclipse in order to spend  Ascendant Eclipses as soon as possible inside your  Balance of All Things window.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+## Hero Talent: Elune's Chosen
+
+### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+
+#### Single-Target Priority
+BEST BALANCE DRUID SINGLE TARGET ROTATION
+  Elune's Chosen is not the recommended build for single target, but it can still do well. For this hero talent, you want to either play around  Starweaver or  Rattle the Stars with  Incarnation: Chosen of Elune. You are also locked out of entering  Solar Eclipse because of the talent  Lunar Calling.
+With  Elune's Chosen selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+ CHOOSE BUILD
+Rattle the Stars
+Starweaver
+PRIORITY
+Apply  Moonfire and refresh within pandemic
+Apply  Sunfire and refresh within pandemic
+Press  Incarnation: Chosen of Elune if you're not in  Lunar Eclipse and  Fury of Elune is off cooldown
+Press  Fury of Elune off cooldown
+Enter  Lunar Eclipse if you're above 90%  Astral Power and you're either about to overcap on charges or  Fury of Elune is also available
+Cast  Starsurge to consume  Touch the Cosmos
+Cast  Starsurge to prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Lunar Eclipse
+Cast  Starfire to generate  Astral Power
+ Further Details
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### AoE Priority
+BEST BALANCE DRUID AOE ROTATION
+With Elune's Chosen your general goal is to reduce the cooldown of  Fury of Elune through the  Lunation talent. This requires you to be wary of your uptime, since every cast matters and you don't want to be caught low on resources in a mechanic that forces you to move.
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Spread  Moonfire to as many targets as possible 
+Apply  Sunfire when all targets are gathered 
+Press  Fury of Elune off cooldown
+Press  Incarnation: Chosen of Elune on the GCD after using  Fury of Elune
+Enter  Lunar Eclipse if you're above 90%  Astral Power and you're either about to overcap on charges or  Fury of Elune is also available
+Cast  Starfallto prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Starfire to generate  Astral Power
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Opener
+BEST BALANCE DRUID OPENER
+Balance Druid's opener is fairly consistent for Keeper of the Grove and Elune's Chosen. The only real difference is trading out the  Force of Nature cast in  Keeper of the Grove for  Fury of Elune in  Elune's Chosen.
+
+The goal of the opener is to enter  Eclipse as soon as possible, getting it on cooldown and then spending the  Ascendant Stars buff from your apex talent before using  Force of Nature and using your cooldowns. You also want to refresh your  Sunfire early before using your cooldowns so you don't use a GCD inside your cooldowns on it.
+It is also a damage gain to use  Starfire while you're inside  Celestial Alignment/ Incarnation: Chosen of Elune.
+
+Below you can choose if you want to view an opener for  Incarnation: Chosen of Elune or  Convoke the Spirits.
+ CHOOSE VERSION
+Incarnation
+Convoke the Spirits
+SAMPLE TIMELINE
+Off-GCD
++Trinket!
+x3 at -4s
+If Proc
+CDs
+<40 AP
+Above is a sample timeline for Keeper of the Grove on single target. The AoE rotation is virtually the same, except you'll replace  Starsurge with  Starfall.
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Pre-Combat Checks
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_1 — Tabs: ['Celestial Alignment', 'Convoke the Spirits']
+
+#### Celestial Alignment
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CELESTIAL ALIGNMENT
+ Celestial Alignment grants you both Eclipse effects, which increases the damage that all your abilities do. Additionally,  Incarnation: Chosen of Elune is an improved version of Celestial Alignment, increasing its duration, and providing additional Critical Strike. Your rotation does not change during Celestial Alignment, but you should generally try to spend as much  Astral Power as possible during this window.
+Incarnation: Chosen of Elune is a very real choice of cooldown in Midnight, with the buffs to interactions revolving  Shooting Stars and  Starweaver. These buffs lean into a more flat damage profile, and therefore prefers Incarnation: Chosen of Elune for the increased duration and Critical Strike buff.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Convoke the Spirits
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_2 — Tabs: ['Eclipse', 'Starweaver']
+
+#### Eclipse
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+ECLIPSE
+The fundamental in how you approach pressing  Eclipse comes down to if you can align it with  Force of Nature. You want to press your cooldowns together whenever applicable, but since Eclipse and  Celestial Alignment/ Incarnation: Chosen of Elune are virtually the same cooldown and the effects overwrite each other, there is some headache involved in planning this without potentially losing uses of your cooldowns.
+You should treat Eclipse as a damage cooldown and apply the standard rules you would on any other damage cooldown. This means to press it with as much resource available as possible while not overcapping the cooldown, and trying to pair it together with your other cooldowns.
+Entering any Eclipse or pressing Celestial Alignment/Incarnation resets your current  Solstice to 6 seconds no matter what your previous duration was.
+Members of the Dreamgrove discord developed this cooldown planner tool including the many CDR options in the Balance Druid tree. This tool can be pretty handy if you are interested in seeing how they interact with each other or want to plan cooldowns for an upcoming boss.
+Below is a timeline example of your cooldown planning during a regular 2 minute boss encounter, with timestamps.
+
+
+Pull
+0:05
+0:07
+0:07
+0:11
+0:25
+0:45
+1:01
+1:01
+1:05
+1:20
+1:40
+2:00
+2:00
+2:02
+You can hold a charge of  Celestial Alignment at any time to better line up with a mechanic as long as you are not sitting on 2 charges.
+Remember that  Control of the Dream lets you hold any use of  Force of Nature,  Celestial Alignment/ Incarnation: Chosen of Elune and  Convoke the Spirits for up to 15 seconds and will reduce the cooldown depending on how long it was held.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Starweaver
+PRE-COMBAT CHECK
+Before any combat happens, make sure as an Balance Druid to have the following done. Forgetting any of these will hurt your performance significnatly, and this applies to Raids, Dungeons, Delves and even Open-World content.
+DRUID BUFFS
+Use Your Raid Buff - Remember to apply  Mark of the Wild before a pull!.
+Innervate Your Healer - Talk with your healer or raid leader and decide which healer to  Innervate!
+CONSUMABLES CHECK
+Flasks & Food - Use  Flask of the Magisters  and Intellect food.
+Weapon Oils -  Remember to use weapon oils like  Thalassian Phoenix Oil !
+Bring Healing - Always have a  Healthstone and a  Silvermoon Health Potion !
+
+CONVOKE THE SPIRITS
+ Convoke the Spirits is primarily a single-target cooldown since it uses a lot of  Wraths and  Starsurges. You want to have as many mobs afflicted by  Moonfire as well, because Wrath/Starsurge can get replaced with  Moonfire.
+The free Starsurges cast by Convoke the Spirits also provide 1 second value for  Hail of Stars, which usually adds up to about 6 or 7 seconds.
+The spells cast by Convoke the Spirits work off of two separate pools of spells. One pool is filled with regular Balance spells like  Starfall, Starsurge, Wrath, Moonfire and  Full Moon. The other pool is filled with Feral/Restoration Druid spells and which ones are cast depends on your proximity to the target. On the surface, this means that using Convoke the Spirits in melee is a DPS gain, but this equals out because of the existence of  Blooming Infusion. Feral Druid spells also do very low damage so even if there is a difference it is negligible in the grand scheme of things.
+Full Moon cast by Convoke the Spirits work off a stacked deck. 1 in every 5 casts will be a guaranteed Full Moon, and the deck doesn't start over until all 5 casts are done. The deck gets changed to 1 in every 2 casts instead if you are talented into 1-minute Convoke through  Elune's Guidance.
+
+STARWEAVER
+Historically the choice between  Starweaver and  Rattle the Stars has been a one-sided choice, but with adjustments to the damage of  Shooting Stars this has changed a bit.
+Maximize uptime on  Solstice: Shooting Stars is now a considerable amount of your damage, so maintaining uptime on Solstice through the  Hail of Stars interactions with Starweaver and  Touch the Cosmos is important.
+Whenever playing Starweaver you also want to bank up procs before entering your  Eclipse in order to spend  Ascendant Eclipses as soon as possible inside your  Balance of All Things window.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.

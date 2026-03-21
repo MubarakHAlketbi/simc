@@ -1,0 +1,116 @@
+{
+  "spec": "demon-hunter/vengeance",
+  "page": "talents",
+  "url": "https://www.wowhead.com/guide/classes/demon-hunter/vengeance/talent-builds-pve-tank",
+  "discovered_structure": {
+    "hero_switches": [
+      "Annihilator",
+      "Aldrachi Reaver"
+    ],
+    "tab_groups": [
+      [
+        "Annihilator Raid / ST",
+        "Aldrachi Reaver Raid / ST"
+      ],
+      [
+        "Annihilator Mythic+",
+        "Aldrachi Reaver Mythic+"
+      ],
+      [
+        "Annihilator",
+        "Aldrachi Reaver"
+      ]
+    ],
+    "talent_toggles": []
+  },
+  "content": {
+    "Annihilator": {
+      "tab_group_0": {
+        "tab_names": [
+          "Annihilator Raid / ST",
+          "Aldrachi Reaver Raid / ST"
+        ],
+        "tabs": {
+          "Annihilator Raid / ST": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver Raid / ST": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      },
+      "tab_group_1": {
+        "tab_names": [
+          "Annihilator Mythic+",
+          "Aldrachi Reaver Mythic+"
+        ],
+        "tabs": {
+          "Annihilator Mythic+": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver Mythic+": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      },
+      "tab_group_2": {
+        "tab_names": [
+          "Annihilator",
+          "Aldrachi Reaver"
+        ],
+        "tabs": {
+          "Annihilator": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      }
+    },
+    "Aldrachi Reaver": {
+      "tab_group_0": {
+        "tab_names": [
+          "Annihilator Raid / ST",
+          "Aldrachi Reaver Raid / ST"
+        ],
+        "tabs": {
+          "Annihilator Raid / ST": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver Raid / ST": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      },
+      "tab_group_1": {
+        "tab_names": [
+          "Annihilator Mythic+",
+          "Aldrachi Reaver Mythic+"
+        ],
+        "tabs": {
+          "Annihilator Mythic+": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver Mythic+": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      },
+      "tab_group_2": {
+        "tab_names": [
+          "Annihilator",
+          "Aldrachi Reaver"
+        ],
+        "tabs": {
+          "Annihilator": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          },
+          "Aldrachi Reaver": {
+            "content": "Export Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n1/1\n2/2\n1/1\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n2/2\n2/2\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n1/1\n2/2\n1/1\n2/2\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/2\n2/2\n1/1\n1/1\n2/2\n1/1\n2/2\n1/1\n1/1\n1/1\n4/4\nExport Talents\nOpen in Calculator\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1\n1/1"
+          }
+        }
+      }
+    }
+  }
+}

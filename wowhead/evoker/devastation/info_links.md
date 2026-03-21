@@ -7,7 +7,9 @@ https://www.wowhead.com/guide/classes/evoker/devastation/abilities-talents-pve-d
 https://www.wowhead.com/guide/classes/evoker/devastation/stat-priority-pve-dps
 https://www.wowhead.com/guide/classes/evoker/devastation/rotation-cooldowns-pve-dps
 https://www.wowhead.com/guide/classes/evoker/devastation/enchants-gems-pve-dps
+https://www.wowhead.com/guide/classes/evoker/devastation/talent-builds-pve-dps
+https://www.wowhead.com/guide/classes/evoker/devastation/tier-set-bonuses
 
-## Hero Talents
+## Talents use talent_extraction.md method to extract data
 https://www.wowhead.com/talent-calc/evoker/devastation/flameshaper
 https://www.wowhead.com/talent-calc/evoker/devastation/scalecommander

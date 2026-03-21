@@ -1,0 +1,296 @@
+# paladin/retribution — Bis (Browser Extracted)
+Source: https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear
+Generated: 2026-03-21 22:44
+
+## Discovered Page Structure
+Hero Talent Switches: None found
+Tab Group 0: ['Overall BiS']
+Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
+
+## Default (no hero switch)
+
+### tab_group_0 — Tabs: ['Overall BiS']
+
+#### Overall BiS
+Best in Slot Gear for Retribution Paladin
+Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
+
+
+Slot	Item	Source
+Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
+Head	 Luminant Verdict's Unwavering Gaze	Tier Set
+Neck	 Amulet of the Abyssal Hymn	Midnight Falls
+Shoulders	 Luminant Verdict's Providence Watch	Tier Set
+Cloak	 Adherent's Silken Shroud	Crafting/Misc
+Chest	 Luminant Verdict's Divine Warplate	Tier Set
+Wrist	 Spellbreaker's Bracers	Crafting/Misc
+Gloves	 Voidclaw Gauntlets	Seat of the Triumvirate
+Belt	 Hate-Tied Waistchain	Crown of the Cosmos
+Legs	 Luminant Verdict's Greaves	Tier Set
+Boots	 Greaves of the Unformed	Chimaerus
+Ring	 Sin'dorei Band of Hope	Belo'ren
+Ring	 Eye of Midnight	Midnight Falls
+Trinket	 Umbral Plume	Belo'ren
+Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
+
+At the start of the season, resources and gear are very limited, and the first few crafted pieces are crucial for progressing efficiently. Here is the best early crafting order for Retribution Paladin using  Spark of Radiance, targeting the quickest power gains:
+Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation 
+Craft Low Item Level slots with  Arcanoweave Lining  Explanation 
+Replace Low Item Level Pieces.
+
+1 - 13 of 13
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
+	On 2020/12/09	perculia	29
+
+Gear Up Early in Shadowlands Dungeons - Shadowlands Gear Pages on Class Guides Updated
+	On 2020/11/30	Archimtiros	5
+
+April 17th Hotfixes - Crucible of Storms Loot Restrictions
+	On 2019/04/17	perculia	28
+
+Battle For Azeroth Darkmoon Deck Community Opinions
+	On 2018/08/25	Squishei	12
+
+Mythic 0 Dungeons Can Now Drop 2 Pieces On Non-End Bosses
+	On 2018/08/22	Squishei	33
+
+New Sources of Wakening Essences with Battle of Azeroth Pre-Patch
+	On 2018/07/17	Anshlun	54
+
+Buy Specific Legendaries in the Battle for Azeroth Pre-Patch
+	On 2018/07/14	perculia	146
+
+Legendary Changes in 7.3.5
+	On 2018/01/12	Anshlun	57
+
+Everything We Know About the Antorus Pantheon Trinkets
+	On 2017/11/27	Archimtiros	29
+
+Legendary Updates for Antorus
+	On 2017/11/22	Anshlun	34
+
+Legendary Items in Patch 7.3.2 and Antorus, the Burning Throne
+	On 2017/10/15	perculia	43
+
+Patch 7.2.5 Survival Guide
+	On 2017/06/13	perculia	807
+
+New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
+	On 2017/05/21	perculia	77
+1 - 13 of 13
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
+
+#### Early Crafts
+Best in Slot Gear for Retribution Paladin
+Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
+
+
+Slot	Item	Source
+Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
+Head	 Luminant Verdict's Unwavering Gaze	Tier Set
+Neck	 Amulet of the Abyssal Hymn	Midnight Falls
+Shoulders	 Luminant Verdict's Providence Watch	Tier Set
+Cloak	 Adherent's Silken Shroud	Crafting/Misc
+Chest	 Luminant Verdict's Divine Warplate	Tier Set
+Wrist	 Spellbreaker's Bracers	Crafting/Misc
+Gloves	 Voidclaw Gauntlets	Seat of the Triumvirate
+Belt	 Hate-Tied Waistchain	Crown of the Cosmos
+Legs	 Luminant Verdict's Greaves	Tier Set
+Boots	 Greaves of the Unformed	Chimaerus
+Ring	 Sin'dorei Band of Hope	Belo'ren
+Ring	 Eye of Midnight	Midnight Falls
+Trinket	 Umbral Plume	Belo'ren
+Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
+
+At the start of the season, resources and gear are very limited, and the first few crafted pieces are crucial for progressing efficiently. Here is the best early crafting order for Retribution Paladin using  Spark of Radiance, targeting the quickest power gains:
+Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation 
+Craft Low Item Level slots with  Arcanoweave Lining  Explanation 
+Replace Low Item Level Pieces.
+
+1 - 13 of 13
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
+	On 2020/12/09	perculia	29
+
+Gear Up Early in Shadowlands Dungeons - Shadowlands Gear Pages on Class Guides Updated
+	On 2020/11/30	Archimtiros	5
+
+April 17th Hotfixes - Crucible of Storms Loot Restrictions
+	On 2019/04/17	perculia	28
+
+Battle For Azeroth Darkmoon Deck Community Opinions
+	On 2018/08/25	Squishei	12
+
+Mythic 0 Dungeons Can Now Drop 2 Pieces On Non-End Bosses
+	On 2018/08/22	Squishei	33
+
+New Sources of Wakening Essences with Battle of Azeroth Pre-Patch
+	On 2018/07/17	Anshlun	54
+
+Buy Specific Legendaries in the Battle for Azeroth Pre-Patch
+	On 2018/07/14	perculia	146
+
+Legendary Changes in 7.3.5
+	On 2018/01/12	Anshlun	57
+
+Everything We Know About the Antorus Pantheon Trinkets
+	On 2017/11/27	Archimtiros	29
+
+Legendary Updates for Antorus
+	On 2017/11/22	Anshlun	34
+
+Legendary Items in Patch 7.3.2 and Antorus, the Burning Throne
+	On 2017/10/15	perculia	43
+
+Patch 7.2.5 Survival Guide
+	On 2017/06/13	perculia	807
+
+New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
+	On 2017/05/21	perculia	77
+1 - 13 of 13
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Best In Slot Crafts
+Best in Slot Gear for Retribution Paladin
+Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
+
+
+Slot	Item	Source
+Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
+Head	 Luminant Verdict's Unwavering Gaze	Tier Set
+Neck	 Amulet of the Abyssal Hymn	Midnight Falls
+Shoulders	 Luminant Verdict's Providence Watch	Tier Set
+Cloak	 Adherent's Silken Shroud	Crafting/Misc
+Chest	 Luminant Verdict's Divine Warplate	Tier Set
+Wrist	 Spellbreaker's Bracers	Crafting/Misc
+Gloves	 Voidclaw Gauntlets	Seat of the Triumvirate
+Belt	 Hate-Tied Waistchain	Crown of the Cosmos
+Legs	 Luminant Verdict's Greaves	Tier Set
+Boots	 Greaves of the Unformed	Chimaerus
+Ring	 Sin'dorei Band of Hope	Belo'ren
+Ring	 Eye of Midnight	Midnight Falls
+Trinket	 Umbral Plume	Belo'ren
+Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
+
+Here is the best crafting order for Retribution Paladin using  Spark of Radiance, especially when Sparks are no longer a limiting resource and more gear is available late in the Season:
+Craft  Spellbreaker's Bracers and  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation 
+Optional: Craft  Loa Worshiper's Band Explanation 
+Replace Low Item Level Pieces.
+
+1 - 13 of 13
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
+	On 2020/12/09	perculia	29
+
+Gear Up Early in Shadowlands Dungeons - Shadowlands Gear Pages on Class Guides Updated
+	On 2020/11/30	Archimtiros	5
+
+April 17th Hotfixes - Crucible of Storms Loot Restrictions
+	On 2019/04/17	perculia	28
+
+Battle For Azeroth Darkmoon Deck Community Opinions
+	On 2018/08/25	Squishei	12
+
+Mythic 0 Dungeons Can Now Drop 2 Pieces On Non-End Bosses
+	On 2018/08/22	Squishei	33
+
+New Sources of Wakening Essences with Battle of Azeroth Pre-Patch
+	On 2018/07/17	Anshlun	54
+
+Buy Specific Legendaries in the Battle for Azeroth Pre-Patch
+	On 2018/07/14	perculia	146
+
+Legendary Changes in 7.3.5
+	On 2018/01/12	Anshlun	57
+
+Everything We Know About the Antorus Pantheon Trinkets
+	On 2017/11/27	Archimtiros	29
+
+Legendary Updates for Antorus
+	On 2017/11/22	Anshlun	34
+
+Legendary Items in Patch 7.3.2 and Antorus, the Burning Throne
+	On 2017/10/15	perculia	43
+
+Patch 7.2.5 Survival Guide
+	On 2017/06/13	perculia	807
+
+New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
+	On 2017/05/21	perculia	77
+1 - 13 of 13
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.

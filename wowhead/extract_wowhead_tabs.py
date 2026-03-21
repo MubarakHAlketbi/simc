@@ -519,7 +519,11 @@ def format_output(data):
 
     # Content per hero talent / tab combination
     for hero_name, hero_data in data["content"].items():
-        lines.append(f"## {'Hero Talent: ' + hero_name if hero_name != 'default' else 'Default (no hero switch)'}")
+        if hero_name and hero_name != "default":
+            section_label = f"Hero Talent: {hero_name}"
+        else:
+            section_label = "Default (no hero switch)"
+        lines.append(f"## {section_label}")
         lines.append("")
 
         if isinstance(hero_data, str):

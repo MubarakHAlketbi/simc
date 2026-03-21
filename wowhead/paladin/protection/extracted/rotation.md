@@ -1,0 +1,879 @@
+# paladin/protection — Rotation (Browser Extracted)
+Source: https://www.wowhead.com/guide/classes/paladin/protection/rotation-cooldowns-pve-tank
+Generated: 2026-03-21 22:42
+
+## Discovered Page Structure
+Hero Talent Switches: ['Templar', 'Lightsmith']
+Tab Group 0: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+Tab Group 1: ['Avenging Wrath', 'Ardent Defender', 'Guardian of Ancient Kings', 'Divine Shield']
+Tab Group 2: ['Always Be Casting']
+
+## Hero Talent: Templar
+
+### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+
+#### Single-Target Priority
+BEST PROTECTION PALADIN SINGLE TARGET ROTATION
+ Please select a Hero Talent option to generate a Single Target priority
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### AoE Priority
+BEST PROTECTION PALADIN AOE ROTATION
+As with most tanks, our AoE is built into our normal kit, so our rotation does not change on AoE. This is great! It allows us to focus on the difficult role of tanking.
+
+ Please select a Hero Talent option to generate a Single Target priority
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Opener
+BEST PROTECTION PALADIN OPENER
+The goal of the opener is to quickly get  Shield of the Righteous active and start unleashing our  Avenging Wrath and  Divine Toll swiftly.
+You can use the buttons below to display openers for both single-target and AoE, depending on your chosen Hero Talent.
+ Please select a Hero Talent option to generate an Opener sequence
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+SAMPLE TIMELINE
+OPENER SEQUENCE
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Pre-Combat Checks
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_1 — Tabs: ['Avenging Wrath', 'Ardent Defender', 'Guardian of Ancient Kings', 'Divine Shield']
+
+#### Avenging Wrath
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Ardent Defender
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+An extremely short cooldown that should be used as frequently as possible to smooth overall damage intake. Rarely, it can be held for a short time to align with bigger damage spikes.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Guardian of Ancient Kings
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+A 50% damage reduction on a fairly long cooldown, this is our biggest damage reduction cooldown and should be reserved for dangerous periods during a pull or encounter.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Divine Shield
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+Get out of jail free card. Immunity to damage and most debuffs for a short duration.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_2 — Tabs: ['Always Be Casting']
+
+#### Always Be Casting
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+Get out of jail free card. Immunity to damage and most debuffs for a short duration.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+## Hero Talent: Lightsmith
+
+### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+
+#### Single-Target Priority
+BEST PROTECTION PALADIN SINGLE TARGET ROTATION
+With  Lightsmith selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Avenging Wrath on cooldown.
+ Sacred Weapon if you aren't inside  Avenging Wrath.
+Cast  Shield of the Righteous when you have 3-5 Holy Power or if it's free. Try not to cap Holy Power.
+Cast  Avenger's Shield on cooldown.
+Cast  Judgment on cooldown.
+ Divine Toll if you have 0 Holy Power. Try to use this on cooldown as much as possible.
+ Holy Bulwark if you have any charges.
+ Blessed Hammer/ Hammer of the Righteous on cooldown.
+ Word of Glory if your health drops below 50% or to top yourself off if you are in danger of a big hit.
+ Consecration as a filler.
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### AoE Priority
+BEST PROTECTION PALADIN AOE ROTATION
+As with most tanks, our AoE is built into our normal kit, so our rotation does not change on AoE. This is great! It allows us to focus on the difficult role of tanking.
+With  Lightsmith selected, the priority is as follows:
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+PRIORITY
+Cast  Avenging Wrath on cooldown.
+ Sacred Weapon if you aren't inside  Avenging Wrath.
+Cast  Shield of the Righteous when you have 3-5 Holy Power or if it's free. Try not to cap Holy Power.
+Cast  Avenger's Shield on cooldown.
+Cast  Judgment on cooldown.
+ Divine Toll if you have 0 Holy Power. Try to use this on cooldown as much as possible.
+ Holy Bulwark if you have any charges.
+ Blessed Hammer/ Hammer of the Righteous on cooldown.
+ Word of Glory if your health drops below 50% or to top yourself off if you are in danger of a big hit.
+ Consecration as a filler.
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Opener
+BEST PROTECTION PALADIN OPENER
+The goal of the opener is to quickly get  Shield of the Righteous active and start unleashing our  Avenging Wrath and  Divine Toll swiftly.
+
+The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
+SAMPLE TIMELINE
+Potion
+2s
+1s
+Pull
+On CD
+On CD
+OPENER SEQUENCE
+ Consecration pre-pull as close to the boss as you can safely get without pulling.
+ Blessed Hammer can be used pre-pull to get a few holy power
+ Hand of Reckoning on pull so no DPS/Healers get punched.
+ Ardent Defender if you are tanking first
+ Avenger's Shield
+ Avenging Wrath
+ Divine Toll
+Proceed normal rotation
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Pre-Combat Checks
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_1 — Tabs: ['Avenging Wrath', 'Ardent Defender', 'Guardian of Ancient Kings', 'Divine Shield']
+
+#### Avenging Wrath
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+ Avenging Wrath is an enjoyable and commonly active cooldown. It changes our  Judgment into  Hammer of Wrath and increases our damage/healing and crit chance.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Ardent Defender
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+An extremely short cooldown that should be used as frequently as possible to smooth overall damage intake. Rarely, it can be held for a short time to align with bigger damage spikes.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Guardian of Ancient Kings
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+A 50% damage reduction on a fairly long cooldown, this is our biggest damage reduction cooldown and should be reserved for dangerous periods during a pull or encounter.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+#### Divine Shield
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+Get out of jail free card. Immunity to damage and most debuffs for a short duration.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+### tab_group_2 — Tabs: ['Always Be Casting']
+
+#### Always Be Casting
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Protection Paladin to make sure the following are done. This applies to raids, dungeons, delves, or even open-world content.
+
+Make sure you have the most useful aura on
+Check your gear is repaired
+Consume Food/Flask/Weapon Oil
+
+AVENGING WRATH
+Get out of jail free card. Immunity to damage and most debuffs for a short duration.
+
+ALWAYS BE CASTING
+This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
+Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
+
+1 - 1 of 1
+ 
+Subject
+	
+Posted
+	
+Author
+	
+Replies
+
+
+How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
+	On 2018/07/21	Anshlun	75
+1 - 1 of 1
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.
+
+Please keep the following in mind when posting a comment:
+Your comment must be in English or it will be removed.
+Unsure how to post? Check out our handy guide!
+You might want to proof-read your comments before posting them.
+Please post questions on our forums for quicker reply.
+Post a Comment
+You are not logged in. Please log in or register an account to add your comment.

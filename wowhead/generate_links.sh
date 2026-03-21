@@ -69,6 +69,9 @@ https://www.wowhead.com/guide/classes/$class/$spec/abilities-talents-pve-$role
 https://www.wowhead.com/guide/classes/$class/$spec/stat-priority-pve-$role
 https://www.wowhead.com/guide/classes/$class/$spec/rotation-cooldowns-pve-$role
 https://www.wowhead.com/guide/classes/$class/$spec/enchants-gems-pve-$role
+https://www.wowhead.com/guide/classes/$class/$spec/talent-builds-pve-$role
+https://www.wowhead.com/guide/classes/$class/$spec/bis-gear
+https://www.wowhead.com/guide/classes/$class/$spec/tier-set-bonuses
 
 ## Talents use talent_extraction.md method to extract data
 https://www.wowhead.com/talent-calc/$class/$spec/$ht1

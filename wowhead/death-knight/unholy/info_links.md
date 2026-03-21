@@ -7,7 +7,9 @@ https://www.wowhead.com/guide/classes/death-knight/unholy/abilities-talents-pve-
 https://www.wowhead.com/guide/classes/death-knight/unholy/stat-priority-pve-dps
 https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps
 https://www.wowhead.com/guide/classes/death-knight/unholy/enchants-gems-pve-dps
+https://www.wowhead.com/guide/classes/death-knight/unholy/talent-builds-pve-dps
+https://www.wowhead.com/guide/classes/death-knight/unholy/tier-set-bonuses
 
-## Hero Talents
+## Talents use talent_extraction.md method to extract data
 https://www.wowhead.com/talent-calc/death-knight/unholy/rider-of-the-apocalypse
 https://www.wowhead.com/talent-calc/death-knight/unholy/sanlayn
