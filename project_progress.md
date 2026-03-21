@@ -95,14 +95,14 @@ Missing hero-tree variant profiles (low priority — need valid live talent hash
 | Mage Fire | In Beta | |
 | Mage Frost | In Beta | |
 | Monk Brewmaster | In Beta | |
-| Monk Windwalker | In Beta | Ascension energy regen (effect#2) implemented |
+| Monk Windwalker | In Beta | Ascension energy regen (effect#2) implemented; Weapon of Wind (ID 1272678) implemented 2026-03-21: +10% damage during Zenith via DBC parse_effects |
 | Paladin Protection | In Beta | All 95 flagged "missing" talents confirmed implemented (Paladin uses const spell_data_t* pattern, not player_talent_t — scanner false-positive) |
 | Paladin Retribution | In Beta | All 92 confirmed implemented |
 | Priest Shadow | In Beta | |
 | Rogue Assassination | In Beta | Sudden Demise (ID 423136) execute mechanic now IMPLEMENTED: +10% bleed damage always; execute bonus below 35% HP scales linearly to +150% at 0% HP |
 | Rogue Outlaw | In Beta | Grand Melee (ID 1259469) now IMPLEMENTED: +8% to Blade Flurry cleave multiplier |
 | Rogue Subtlety | In Beta | |
-| Shaman Elemental | Implemented | |
+| Shaman Elemental | Implemented | Lava Flows (ID 1273485) implemented 2026-03-21: +5% Lava Burst damage, +1 Maelstrom per cast/overload |
 | Shaman Enhancement | Implemented | |
 | Warlock Affliction | In Beta | drain_life APL priority now FIXED (2026-03-20): chains as main filler when Gorefiend's Avarice talented, interrupts on Nightfall |
 | Warlock Demonology | In Beta | |

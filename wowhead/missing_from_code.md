@@ -5,7 +5,7 @@ Detection: find_talent_spell(ID/"Name") + lambda CT/ST/HT + initializer-list pat
 A Wowhead row is MISSING only when neither its spell ID nor its name matches any SimC
 talent registration. Partial-prefix slug matching handles truncated info_base names.
 
-**Total missing: 111** across 13 specs
+**Total missing: 109** across 13 specs
 
 **Fully covered (0 missing):** Mage/Arcane, Mage/Frost, Paladin/Retribution, Priest/Shadow, Rogue/Assassination, Rogue/Outlaw, Rogue/Subtlety, Warrior/Arms, Warrior/Protection
 
@@ -109,14 +109,13 @@ talent registration. Partial-prefix slug matching handles truncated info_base na
 | 450514 | Wind | 1 | [link](https://www.wowhead.com/spell=450514) |
 | 414131 | Yu | 1 | [link](https://www.wowhead.com/spell=414131) |
 
-## Monk / Windwalker (4 / 86 missing)
+## Monk / Windwalker (3 / 86 missing)
 
 | Spell ID | Name | Max Rank | Wowhead |
 |----------|------|----------|---------|
 | 450514 | Wind | 1 | [link](https://www.wowhead.com/spell=450514) |
 | 414131 | Yu | 1 | [link](https://www.wowhead.com/spell=414131) |
 | 392993 | Xuen | 1 | [link](https://www.wowhead.com/spell=392993) |
-| 1272678 | Weapon of Wind | 1 | [link](https://www.wowhead.com/spell=1272678) |
 
 ## Paladin / Protection (1 / 79 missing)
 
@@ -124,7 +123,7 @@ talent registration. Partial-prefix slug matching handles truncated info_base na
 |----------|------|----------|---------|
 | 378285 | Tyr | 1 | [link](https://www.wowhead.com/spell=378285) |
 
-## Shaman / Elemental (15 / 72 missing)
+## Shaman / Elemental (14 / 72 missing)
 
 | Spell ID | Name | Max Rank | Wowhead |
 |----------|------|----------|---------|
@@ -142,7 +141,6 @@ talent registration. Partial-prefix slug matching handles truncated info_base na
 | 381650 | Elemental Warding | 1 | [link](https://www.wowhead.com/spell=381650) |
 | 381930 | Mana Spring | 1 | [link](https://www.wowhead.com/spell=381930) |
 | 204268 | Voodoo Mastery | 1 | [link](https://www.wowhead.com/spell=204268) |
-~~| 1273485 | Lava Flows | 1 | [link](https://www.wowhead.com/spell=1273485) |~~ **IMPLEMENTED 2026-03-21**
 
 ## Shaman / Enhancement (14 / 73 missing)
 
