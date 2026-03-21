@@ -1503,6 +1503,7 @@ public:
     gain_t* spirit_of_the_maelstrom;
     gain_t* searing_flames;
     gain_t* inundate;
+    gain_t* lava_flows;
   } gain;
 
   // Tracked Procs
@@ -6986,6 +6987,12 @@ struct lava_burst_t : public shaman_spell_t
       m *= 1.0 + this->composite_crit_chance();
     }
 
+    // Lava Flows: Lava Burst damage increased by 5%
+    if ( p()->talent.lava_flows.ok() )
+    {
+      m *= 1.0 + p()->talent.lava_flows->effectN( 1 ).percent();
+    }
+
     return m;
   }
 
@@ -11090,6 +11097,7 @@ void shaman_t::init_spells()
   talent.searing_flames         = _ST( "Searing Flames" );
   talent.everlasting_elements   = _ST( "Everlasting Elements" );
   talent.earthen_rage           = _ST( "Earthen Rage" );
+  talent.lava_flows             = _ST( "Lava Flows" );
   // Row 8
   talent.fusion_of_elements     = _ST( "Fusion of Elements" );
   talent.eye_of_the_storm       = _ST( "Eye of the Storm" );
@@ -12561,6 +12569,7 @@ void shaman_t::init_gains()
   gain.feral_spirit            = get_gain( "Feral Spirit" );
   gain.spirit_of_the_maelstrom = get_gain( "Spirit of the Maelstrom" );
   gain.inundate                = get_gain( "Inundate" );
+  gain.lava_flows              = get_gain( "Lava Flows" );
 }
 
 // shaman_t::init_procs =====================================================

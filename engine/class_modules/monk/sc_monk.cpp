@@ -5523,6 +5523,7 @@ void monk_t::init_spells()
     talent.windwalker.xuens_battlegear               = _ST( "Xuen's Battlegear" );
     talent.windwalker.thunderfist                    = _ST( "Thunderfist" );
     talent.windwalker.thunderfist_buff               = find_spell( 393565 );
+    talent.windwalker.weapon_of_wind                 = _ST( "Weapon of Wind" );
     talent.windwalker.knowledge_of_the_broken_temple = _ST( "Knowledge of the Broken Temple" );
     talent.windwalker.slicing_winds                  = _ST( "Slicing Winds" );
     talent.windwalker.slicing_winds_damage           = find_spell( 1217411 );
