@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-20 (full from-scratch audit)
+Last updated: 2026-03-22 (Phase 2 APL diff complete)
 All information verified fresh against Wowhead + code inspection.
 52/52 profiles pass 1-iteration sim. Build: gcc-14 clean.
 
@@ -165,6 +165,21 @@ All verified against Wowhead 2026-03-17 / 2026-03-20.
 | Warlock Affliction | Updated 2026-03-20 | Yes | Gorefiend's Avarice filler logic fixed: drain_life chains as main filler, interrupted by Nightfall; drain_soul used as fallback |
 | Rogue Outlaw | Updated 2026-03-20 | Yes | Grand Melee implementation (see section 2) |
 | Rogue Assassination | Updated 2026-03-20 | Yes | Sudden Demise execute bonus active |
+| DH Havoc | Updated 2026-03-22 | Yes | Demonsurge ordering fix: immolation_aura in default list now guarded by !action.abyssal_gaze.demonsurge_available — ensures Abyssal Gaze (Eye Beam Demonsurge) is consumed before Consuming Fire (Immolation Aura Demonsurge) triggers |
+
+### Phase 2 APL Diff — Summary (2026-03-22)
+Full report: wowhead/APL_diff_report.md (2317 lines)
+Analysis script: wowhead/gen_apl_diff.py
+
+| Priority | Count | Specs |
+| :--- | :--- | :--- |
+| HIGH | 1 | DH Havoc (Demonsurge ordering gap — FIXED 2026-03-22) |
+| MEDIUM | 30 | Minor gaps (1-2 missing/ORDER_DIFF); many opener sections NEEDS_MANUAL_REVIEW (Wowhead uses timeline images not text) |
+| LOW | 2 | Paladin Retribution, Warlock Destruction (well-aligned) |
+
+Key finding: most existing APLs are well-aligned with Wowhead rotations. The "MISSING" flags in the diff were mostly for Demonsurge sub-abilities that are implicit (consuming_fire, abyssal_gaze triggered inside immolation_aura/eye_beam) or already present under different names (reavers_glaive). The 30 MEDIUM specs need manual opener review but core rotational priority is correct.
+
+Next: work through MEDIUM specs, fixing gaps spec by spec.
 
 ---
 
@@ -271,4 +286,7 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | d01587d | 2026-03-20 | Hunter/Paladin DPS talent audit — all confirmed implemented; document scanner bug |
 | 826b89e | 2026-03-20 | Implement Aug Evoker Apex (Duplicate, verified) + NYI unique gear (1237154, 1263727) |
 | 5f93285 | 2026-03-20 | Implement Rogue Outlaw Grand Melee (ID 1259469) + Assassination Sudden Demise execute |
-| (pending) | 2026-03-20 | Warlock Affliction drain_life APL priority fix |
+|| 826b89e | 2026-03-20 | Warlock Affliction drain_life APL priority fix |
+|| 894bf73 | 2026-03-22 | Phase 2: APL diff report all 33 specs + gen_apl_diff.py |
+|| 1c6dc7a | 2026-03-22 | Wowhead browser extraction fix: hero talent toggle + placeholder wait |
+|| (pending) | 2026-03-22 | DH Havoc Demonsurge ordering APL fix |
