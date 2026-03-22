@@ -34,21 +34,21 @@ actions.precombat+=/living_flame
 # separate fb sub-list for empower-level selection, complex trinket sync with Breath of Eons.
 # APL review 2026-03-22: replaced simplified profile APL with C++ generator output.
 
-head=hornhelm_of_the_black_talon,id=249997,bonus_id=1808/13575,ilevel=289,gem_id=240983,enchant_id=7961
-neck=amulet_of_the_abyssal_hymn,id=250247,ilevel=289,gem_id=240906/240906
+head=horns_of_the_spurned_valkyr,id=133506,bonus_id=12806/13577,gem_id=240906,enchant_id=7961
+neck=ribbon_of_coiled_malice,id=249337,bonus_id=13355/13468/13469,gem_id=240906/240906
 shoulders=beacons_of_the_black_talon,id=249995,bonus_id=13574,ilevel=289,enchant_id=8031
 back=adherents_silken_shroud,id=239656,bonus_id=8960/12214/12214/12384/13622/13667/9627,crafted_stats=32/36
 chest=frenzyward_of_the_black_talon,id=250000,bonus_id=13575,ilevel=289,enchant_id=7987
 wrists=farstriders_plated_bracers,id=244584,bonus_id=1808/8960/12214/12214/12384/13622/13667/9627,gem_id=240906,crafted_stats=32/36
-hands=untethered_berserkers_grips,id=249325,ilevel=289
+hands=enforcer_grips_of_the_black_talon,id=249998,bonus_id=13575,enchant_id=8013
 waist=scabrous_zombie_leather_belt,id=49810,bonus_id=1808/6652/12667/12806/13335,ilevel=289,gem_id=240906
 legs=greaves_of_the_black_talon,id=249996,bonus_id=13575,ilevel=289,enchant_id=7935
 feet=spelltreads_of_the_black_talon,id=249999,bonus_id=6652/12806/13335,ilevel=289,enchant_id=7993
 finger1=sindorei_band_of_hope,id=249919,ilevel=289,gem_id=240906,enchant_id=7967
 finger2=eye_of_midnight,id=249920,ilevel=289,gem_id=240906/240906,enchant_id=7967
-trinket1=gaze_of_the_alnseer,id=249343,ilevel=289
-trinket2=vaelgors_final_stare,id=249346,ilevel=289
-main_hand=belomelorn_the_shattered_talon,id=249283,ilevel=289,enchant_id=8039
+trinket1=shadow_of_the_empyrean_requiem,id=249810,bonus_id=13355/13468/13469
+trinket2=heart_of_wind,id=250256,bonus_id=13355/13468/13469
+main_hand=ceremonial_hexblade,id=251178,bonus_id=13355/13468/13469,enchant_id=8039
 off_hand=grimoire_of_the_eternal_light,id=249276,ilevel=289
 
 # Gear Summary

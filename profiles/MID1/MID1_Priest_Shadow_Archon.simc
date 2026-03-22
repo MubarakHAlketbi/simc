@@ -111,18 +111,18 @@ actions.trinkets+=/use_items,if=(buff.voidform.up|buff.power_infusion.remains>=1
 head=blind_oaths_winged_crest,id=250051,bonus_id=13575/13575/13575/13575,ilevel=289,gem_id=240983,enchant_id=7961
 neck=eternal_voidsong_chain,id=249368,ilevel=289,gem_id=240892
 shoulders=blind_oaths_seraphguards,id=250049,bonus_id=13574/13574/13574/13574,ilevel=289,enchant_id=8031
-back=arcanoweave_cloak,id=239661,ilevel=285
+back=draconic_nullcape,id=249370,bonus_id=13355/13468/13469
 chest=blind_oaths_raiment,id=250054,bonus_id=13575/13575/13575/13575,ilevel=289,enchant_id=7987
-wrists=arcanoweave_bracers,id=239660,ilevel=285,gem_id=240908
+wrists=wraps_of_watchful_wrath,id=251108,bonus_id=13355/13468/13469,gem_id=240908
 hands=vilehex_bonds,id=251172,ilevel=289
 waist=endless_march_waistwrap,id=249319,ilevel=289,gem_id=240900
 legs=blind_oaths_leggings,id=250050,bonus_id=13575/13575/13575/13575,ilevel=289,enchant_id=7935
-feet=lightbinder_treads,id=109796,ilevel=289,enchant_id=7993
+feet=dream_scorched_striders,id=249373,bonus_id=13355/13468/13469,enchant_id=7993
 finger1=eye_of_midnight,id=249920,ilevel=289,gem_id=240918/240900,enchant_id=7969
-finger2=omission_of_light,id=251093,ilevel=289,gem_id=240900,enchant_id=7997
-trinket1=soulcatchers_charm,id=250223,ilevel=289
-trinket2=gaze_of_the_alnseer,id=249343,bonus_id=12806/13577,ilevel=289
-main_hand=brazier_of_the_dissonant_dirge,id=249286,ilevel=289,enchant_id=8041
+finger2=bond_of_light,id=249369,bonus_id=13355/13468/13469,gem_id=240908,enchant_id=7967
+trinket1=gaze_of_the_alnseer,id=249343,bonus_id=13355/13468/13469
+trinket2=vaelgors_final_stare,id=249346,bonus_id=13355/13468/13469
+main_hand=belomelorn_the_shattered_talon,id=249283,bonus_id=13355/13468/13469,enchant_id=8039
 
 # Gear Summary
 # gear_ilvl=288.47

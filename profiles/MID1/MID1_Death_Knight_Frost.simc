@@ -138,7 +138,7 @@ back=adherents_silken_shroud,id=239656,bonus_id=8791/8960/12066/12214/12384/1362
 chest=relentless_riders_cuirass,id=249973,bonus_id=40/12676/12806/13335/13336/13575,enchant_id=7987
 wrists=spellbreakers_bracers,id=237834,bonus_id=8791/8960/12066/12384/13622/12497,gem_id=240908
 hands=relentless_riders_bonegrasps,id=249971,bonus_id=40/12675/12806/13335/13337/13574
-waist=relentless_riders_chain,id=249967,bonus_id=6935/13355/13468/13469,gem_id=240908
+waist=hate_tied_waistchain,id=249380,bonus_id=13355/13468/13469,gem_id=240908
 legs=relentless_riders_legguards,id=249969,bonus_id=40/12676/12806/13335/13339/13575,enchant_id=8159
 feet=greaves_of_the_unformed,id=249381,bonus_id=13355/13468/13469
 finger1=platinum_star_band,id=193708,bonus_id=6935/13355/13468/13469,gem_id=240908,enchant_id=7967

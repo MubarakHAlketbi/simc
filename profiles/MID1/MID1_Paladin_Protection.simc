@@ -63,17 +63,17 @@ neck=eternal_voidsong_chain,id=249368,bonus_id=4786/4800/12806/13668,gem_id=2408
 shoulders=luminant_verdicts_providence_watch,id=249959,bonus_id=13574/13574/13574/13574,ilevel=289
 back=soulhunters_mask,id=251161,bonus_id=4786/12806
 chest=luminant_verdicts_divine_warplate,id=249964,bonus_id=13575/13575/13575,ilevel=289,enchant_id=7987
-wrists=spellbreakers_bracers,id=237834,bonus_id=12066/12214/12214/12384/13622/13667/13668/9627,gem_id=240890,crafted_stats=36/32
+wrists=lights_march_bracers,id=249326,bonus_id=13355/13468/13469,gem_id=240890
 hands=voidclaw_gauntlets,id=151332,bonus_id=13574,ilevel=289
-waist=shadowsplit_girdle,id=251112,bonus_id=4786/12806/13668,gem_id=240888
+waist=ezzoraks_gloombind,id=249331,bonus_id=13355/13468/13469,gem_id=240890
 legs=luminant_verdicts_greaves,id=249960,bonus_id=13575/13575/13575/13575,ilevel=289,enchant_id=8159
 feet=aetherlume_stompers,id=244774,bonus_id=12066/12214/12214/12384/13622/13667/9627,crafted_stats=36/32
-finger1=occlusion_of_void,id=251217,bonus_id=4786/4800/12806/13668,gem_id=240890,enchant_id=8025
-finger2=omission_of_light,id=251093,bonus_id=4786/4800/12806/13668,gem_id=240890,enchant_id=8025
-trinket1=umbral_plume,id=260235,ilevel=289
-trinket2=algethar_puzzle_box,id=193701,ilevel=289
+finger1=eye_of_midnight,id=249920,bonus_id=13355/13468/13469,gem_id=240890/240890,enchant_id=8025
+finger2=band_of_the_triumvirate,id=151311,bonus_id=12806/13577,gem_id=240890,enchant_id=8025
+trinket1=gaze_of_the_alnseer,id=249343,bonus_id=13355/13468/13469
+trinket2=heart_of_ancient_hunger,id=249342,bonus_id=13355/13468/13469
 main_hand=turalyons_false_echo,id=249295,ilevel=289,enchant_id=8039
-off_hand=bulwark_of_noble_resolve,id=249275,ilevel=289
+off_hand=thalassian_dawnguard,id=249921,bonus_id=13355/13468/13469
 
 # Gear Summary
 # gear_ilvl=288.50

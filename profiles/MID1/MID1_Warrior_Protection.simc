@@ -95,17 +95,17 @@ neck=eternal_voidsong_chain,id=249368,ilevel=289,gem_id=240906/240906
 shoulders=night_enders_pauldrons,id=249950,ilevel=289,enchant_id=8031
 back=adherents_silken_shroud,id=239656,ilevel=285,embellishment=arcanoweave_lining,crafted_stats=49/36
 chest=night_enders_breastplate,id=249955,ilevel=289,enchant_id=7987
-wrists=spellbreakers_bracers,id=237834,ilevel=285,gem_id=240983,embellishment=arcanoweave_lining,crafted_stats=49/36
+wrists=lights_march_bracers,id=249326,bonus_id=13355/13468/13469,gem_id=240906
 hands=voidclaw_gauntlets,id=151332,ilevel=289
-waist=night_enders_girdle,id=249949,ilevel=289
+waist=ezzoraks_gloombind,id=249331,bonus_id=13355/13468/13469,gem_id=240906
 legs=night_enders_chausses,id=249951,ilevel=289,enchant_id=8163
 feet=night_enders_greatboots,id=249954,ilevel=289,enchant_id=7993
 finger1=eye_of_midnight,id=249920,ilevel=289,gem_id=240906/240906,enchant_id=7969
-finger2=occlusion_of_void,id=251217,ilevel=289,gem_id=240906/240906,enchant_id=7969
-trinket1=algethar_puzzle_box,id=193701,ilevel=289
-trinket2=gaze_of_the_alnseer,id=249343,ilevel=289
+finger2=band_of_the_triumvirate,id=151311,bonus_id=12806/13577,gem_id=240906,enchant_id=7969
+trinket1=gaze_of_the_alnseer,id=249343,bonus_id=13355/13468/13469
+trinket2=heart_of_ancient_hunger,id=249342,bonus_id=13355/13468/13469
 main_hand=turalyons_false_echo,id=249295,ilevel=289,enchant_id=8039
-off_hand=ward_of_the_spellbreaker,id=251105,ilevel=289
+off_hand=thalassian_dawnguard,id=249921,bonus_id=13355/13468/13469
 
 # Gear Summary
 # gear_ilvl=288.50
