@@ -63,13 +63,13 @@ All information verified fresh against Wowhead + code inspection.
 | MID1_Warrior_Fury.simc | PASS | |
 | MID1_Warrior_Protection.simc | PASS | |
 
-**Total: 56/56 PASS**
+**Total: 56/56 PASS** (52 original + 4 hero-tree variants added 2026-03-22)
 
-4 new hero-tree variant profiles added 2026-03-22 (now in profile table above):
-| MID1_Druid_Balance_Keeper.simc | PASS | Keeper of the Grove — Wowhead Build 1 talent string |
-| MID1_Druid_Balance_Elune.simc | PASS | Chosen of Elune — Wowhead Build 1 talent string |
-| MID1_Evoker_Augmentation_Chronowarden.simc | PASS | Chronowarden — talent-calc direct URL |
-| MID1_Rogue_Assassination_Deathstalker.simc | PASS | Deathstalker — Wowhead Build 1 talent string |
+Hero-tree variant profiles (added 2026-03-22, included in total above):
+| MID1_Druid_Balance_Keeper.simc | PASS | Keeper of the Grove |
+| MID1_Druid_Balance_Elune.simc | PASS | Chosen of Elune |
+| MID1_Evoker_Augmentation_Chronowarden.simc | PASS | Chronowarden |
+| MID1_Rogue_Assassination_Deathstalker.simc | PASS | Deathstalker |
 
 ---
 
@@ -79,7 +79,7 @@ All information verified fresh against Wowhead + code inspection.
 | :--- | :--- | :--- |
 | DK Blood | Implemented | |
 | DK Frost | Implemented | |
-|| DK Unholy | In Beta | Massive 12.0 rework: Apocalypse removed; new loop = Lesser Ghouls (from Scourge Strike) + Putrefy (burst detonation) + Dread Plague spreading + Reaping talent. festering_scythe + graveyard via set_replacement_action() confirmed working. control_undead/unholy_endurance NYI but zero DPS impact (CC/defensive only). |
+| DK Unholy | In Beta | 12.0 rework: Apocalypse removed; loop = Lesser Ghouls + Putrefy + Dread Plague + Reaping. festering_scythe/graveyard via set_replacement_action() working. control_undead/unholy_endurance NYI (zero DPS). |
 | DH Devourer | Implemented | |
 | DH Havoc | Implemented | |
 | DH Vengeance | Implemented | |
@@ -91,19 +91,19 @@ All information verified fresh against Wowhead + code inspection.
 | Hunter BM | Implemented | All 98 flagged "missing" talents confirmed already implemented (scanner false-positive bug in missing_from_code.md — Hunter uses spell_data_ptr_t not player_talent_t) |
 | Hunter Marks | Implemented | Same scanner false-positive — all 93 confirmed implemented |
 | Hunter Survival | Implemented | Same — all 93 confirmed implemented |
-| Mage Arcane | In Beta | 75 open TODO comments — mostly behavior verification, see section 6 |
-| Mage Fire | In Beta | |
-| Mage Frost | In Beta | |
+| Mage Arcane | In Beta | ~62 TODO comments remain; 13 resolved 2026-03-22 (see section 7) |
+| Mage Fire | In Beta | Burnout 75% finalised; Pyromaniac confirmed correct; Flamestrike_pyromaniac documented |
+| Mage Frost | In Beta | Winter's End AoE falloff FIXED (removed !p->bugs guard, confirmed real behavior) |
 | Monk Brewmaster | In Beta | |
 | Monk Windwalker | In Beta | Ascension energy regen (effect#2) implemented; Weapon of Wind (ID 1272678) implemented 2026-03-21: +10% damage during Zenith via DBC parse_effects |
 | Paladin Protection | In Beta | All 95 flagged "missing" talents confirmed implemented (Paladin uses const spell_data_t* pattern, not player_talent_t — scanner false-positive) |
 | Paladin Retribution | In Beta | All 92 confirmed implemented |
-|| Priest Shadow | Implemented | tormenting_whispers (ID 1250492) +15% SW:Madness implemented 2026-03-22; surge_of_insanity (ID 391399) +15% Mind Flay implemented 2026-03-22; deaths_torment (ID 1240364) was already implemented |
-|| Rogue Assassination | In Beta | Sudden Demise (ID 423136) execute mechanic now IMPLEMENTED: +10% bleed damage always; execute bonus below 35% HP scales linearly to +150% at 0% HP |
-|| Rogue Outlaw | In Beta | Grand Melee (ID 1259469) now IMPLEMENTED: +8% to Blade Flurry cleave multiplier |
-|| Rogue Subtlety | In Beta | |
-|| Shaman Elemental | Implemented | Lava Flows (ID 1273485) implemented 2026-03-21: +5% Lava Burst damage, +1 Maelstrom per cast/overload; surging_shields (ID 382033) +4 Maelstrom/LS trigger implemented 2026-03-22 |
-|| Shaman Enhancement | Implemented | surging_shields (ID 382033) +50% MSW proc chance on LS trigger implemented 2026-03-22 |
+| Priest Shadow | Implemented | tormenting_whispers +15% SW:Madness; surge_of_insanity +15% Mind Flay (both 2026-03-22); Collapsing Void target-died edge case FIXED 2026-03-22 |
+| Rogue Assassination | In Beta | Sudden Demise execute mechanic IMPLEMENTED: +10% bleed always; linear bonus to +150% at 0% HP |
+| Rogue Outlaw | In Beta | Grand Melee (ID 1259469) IMPLEMENTED: +8% Blade Flurry cleave |
+| Rogue Subtlety | In Beta | |
+| Shaman Elemental | Implemented | Lava Flows (ID 1273485) 2026-03-21; surging_shields (ID 382033) +4 Maelstrom/LS trigger 2026-03-22 |
+| Shaman Enhancement | Implemented | surging_shields (ID 382033) +50% MSW proc chance on LS trigger 2026-03-22 |
 | Warlock Affliction | In Beta | drain_life APL priority now FIXED (2026-03-20): chains as main filler when Gorefiend's Avarice talented, interrupts on Nightfall |
 | Warlock Demonology | In Beta | |
 | Warlock Destruction | In Beta | |
@@ -450,3 +450,4 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
 | 71e8e58 | 2026-03-22 | Feat(shaman) + fix(profiles): surging_shields impl + gear BiS batch 2 (7 profiles) |
 | c3baf08 | 2026-03-22 | Fix/docs: DK Unholy + Priest Shadow + Mage TODOs — Winter's End AoE fix, Collapsing Void edge case |
+| da1a909 | 2026-03-22 | Docs: fix commit hash c3baf08 |
