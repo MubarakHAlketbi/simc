@@ -8,9 +8,9 @@ position=front
 talents=CIEAAAAAAAAAAAAAAAAAAAAAAsMzAzyMLmZMDLLDzYmFbzYAAAAAAAAg0MziZMmxYmt2AgBADsNAAACwMzyySbzMWMwgFzMDwMDAmZAwMDyA
 
 # Default consumables
-potion=lights_potential_2
-flask=flask_of_the_shattered_sun_2
-food=blooming_feast
+potion=draught_of_rampant_abandon_2
+flask=flask_of_the_blood_knights_2
+food=silvermoon_parade
 augmentation=void_touched
 temporary_enchant=main_hand:thalassian_phoenix_oil_2,if=!(talent.rite_of_adjuration.enabled|talent.rite_of_sanctification.enabled)
 
