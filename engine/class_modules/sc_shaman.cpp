@@ -1504,6 +1504,7 @@ public:
     gain_t* searing_flames;
     gain_t* inundate;
     gain_t* lava_flows;
+    gain_t* surging_shields;
   } gain;
 
   // Tracked Procs
@@ -1631,7 +1632,7 @@ public:
     player_talent_t natures_swiftness;
     player_talent_t thunderstorm;
     player_talent_t totemic_focus; // TODO: NYI
-    player_talent_t surging_shields; // Implemented: Lightning Shield +100% dmg, +4 Maelstrom/trigger (Ele); see lightning_shield_t
+    player_talent_t surging_shields; // Implemented: +100% LS dmg (via parse_effects/buff mult); +4 Maelstrom/trigger (Ele) or +50% MSW chance (Enh) in lightning_shield_damage_t::execute()
     // Row 9
     player_talent_t lightning_lasso;
     player_talent_t thundershock;
@@ -4695,6 +4696,32 @@ struct lightning_shield_damage_t : public shaman_spell_t
   {
     background = true;
     callbacks  = false;
+  }
+
+  void execute() override
+  {
+    shaman_spell_t::execute();
+
+    // Surging Shields (ID 382033): Lightning Shield trigger generates +4 Maelstrom (Elemental)
+    // or grants +50% chance for a Maelstrom Weapon stack (Enhancement).
+    // Source: https://www.wowhead.com/spell=382033 (2026-03-22)
+    if ( p()->talent.surging_shields.ok() )
+    {
+      if ( p()->specialization() == SHAMAN_ELEMENTAL )
+      {
+        // effectN(1) is damage modifier, effectN(2) is the Maelstrom bonus for Elemental (+4 per rank 2)
+        double maelstrom = p()->talent.surging_shields->effectN( 2 ).base_value();
+        if ( maelstrom > 0 )
+          p()->trigger_maelstrom_gain( maelstrom, p()->gain.surging_shields );
+      }
+      else if ( p()->specialization() == SHAMAN_ENHANCEMENT )
+      {
+        // Enhancement: +50% chance to gain a Maelstrom Weapon stack on Lightning Shield trigger
+        double chance = p()->talent.surging_shields->effectN( 3 ).percent();
+        if ( chance > 0 && p()->rng().roll( chance ) )
+          p()->generate_maelstrom_weapon( this, 1 );
+      }
+    }
   }
 };
 
@@ -12589,6 +12616,7 @@ void shaman_t::init_gains()
   gain.spirit_of_the_maelstrom = get_gain( "Spirit of the Maelstrom" );
   gain.inundate                = get_gain( "Inundate" );
   gain.lava_flows              = get_gain( "Lava Flows" );
+  gain.surging_shields         = get_gain( "Surging Shields" );
 }
 
 // shaman_t::init_procs =====================================================

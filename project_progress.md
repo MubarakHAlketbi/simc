@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-22 (Batches 1–7 complete — full profile overhaul, NYI implementations, Phase 3 done, Phase 4 baselines run)
+Last updated: 2026-03-22 (Batch 8 complete — gear fixes, surging_shields impl, Phase 4 report)
 All information verified fresh against Wowhead + code inspection.
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
 
@@ -102,8 +102,8 @@ All information verified fresh against Wowhead + code inspection.
 || Rogue Assassination | In Beta | Sudden Demise (ID 423136) execute mechanic now IMPLEMENTED: +10% bleed damage always; execute bonus below 35% HP scales linearly to +150% at 0% HP |
 || Rogue Outlaw | In Beta | Grand Melee (ID 1259469) now IMPLEMENTED: +8% to Blade Flurry cleave multiplier |
 || Rogue Subtlety | In Beta | |
-| Shaman Elemental | Implemented | Lava Flows (ID 1273485) implemented 2026-03-21: +5% Lava Burst damage, +1 Maelstrom per cast/overload |
-| Shaman Enhancement | Implemented | |
+|| Shaman Elemental | Implemented | Lava Flows (ID 1273485) implemented 2026-03-21: +5% Lava Burst damage, +1 Maelstrom per cast/overload; surging_shields (ID 382033) +4 Maelstrom/LS trigger implemented 2026-03-22 |
+|| Shaman Enhancement | Implemented | surging_shields (ID 382033) +50% MSW proc chance on LS trigger implemented 2026-03-22 |
 | Warlock Affliction | In Beta | drain_life APL priority now FIXED (2026-03-20): chains as main filler when Gorefiend's Avarice talented, interrupts on Nightfall |
 | Warlock Demonology | In Beta | |
 | Warlock Destruction | In Beta | |
@@ -270,10 +270,29 @@ python3 wowhead/extract_wowhead_tabs.py --all --pages rotation,talents,bis,consu
 - Composite = 50% Patchwerk + 50% HecticAddCleave
 
 **Remaining Phase 4 work:**
-1. Parse baseline JSONs → build composite DPS table (report script needs path fix)
+1. ~~Parse baseline JSONs → composite DPS table~~ DONE — /tmp/phase4_report.py fixed; all 52 pairs parsed
 2. Run permutation candidates per spec (APL condition sweeps)
 3. Accept changes only when composite improves AND neither fight style regresses >1%
 4. Phase 5: trinket combinatorics (BiS pair sims per spec)
+
+**Composite DPS baseline (1000 iter, 2026-03-22) — top 10:**
+| Profile | Patchwerk | HecticAC | Composite |
+| :--- | ---: | ---: | ---: |
+| MID1_Warlock_Demonology_Soul_Harvester | 97,590 | 471,531 | 284,560 |
+| MID1_Warlock_Demonology | 97,754 | 464,535 | 281,145 |
+| MID1_Rogue_Subtlety | 125,892 | 233,196 | 179,544 |
+| MID1_Mage_Fire_Frostfire | 101,657 | 225,945 | 163,801 |
+| MID1_Mage_Fire | 101,705 | 225,508 | 163,607 |
+| MID1_Death_Knight_Unholy | 110,175 | 212,680 | 161,427 |
+| MID1_Death_Knight_Unholy_San'layn | 110,055 | 212,410 | 161,232 |
+| MID1_Monk_Windwalker | 108,260 | 208,618 | 158,439 |
+| MID1_Demon_Hunter_Devourer_Void-Scarred | 108,553 | 204,002 | 156,277 |
+| MID1_Demon_Hunter_Devourer | 105,777 | 203,082 | 154,429 |
+
+**Outliers needing APL investigation (very low DPS):**
+- MID1_Rogue_Assassination (13k) — APL likely needs DPS-spec tuning
+- MID1_Evoker_Augmentation (8k) — Aug is a support spec, low raw DPS expected
+- MID1_Druid_Balance (3k) — no valid talent hash, APL using defaults only
 
 ---
 
@@ -341,7 +360,10 @@ Class-tree talents — documented as utility/no DPS impact 2026-03-22:
 Class-tree utility talents — documented 2026-03-22:
 - `thunderous_paws`, `gust_of_wind`, `creation_core` — movement/utility; no DPS impact
 - `fury_of_the_storms` — stale NYI label fixed; already implemented (summons Storm Elemental on Stormkeeper)
-- `surging_shields` — cross-referenced to lightning_shield_t (already handles it)
+- `surging_shields` (ID 382033) — IMPLEMENTED 2026-03-22 in `lightning_shield_damage_t::execute()`:
+  - Elemental: +4 Maelstrom per Lightning Shield trigger via `trigger_maelstrom_gain()`
+  - Enhancement: +50% Maelstrom Weapon proc chance per trigger via `generate_maelstrom_weapon()`
+  - `gain_t* surging_shields` added to gains struct + `init_gains()`
 
 **Rogue**
 - Stale "Partial NYI" comment at line 822 for `sudden_demise` — FIXED 2026-03-22, now documents implemented behavior.
@@ -349,10 +371,10 @@ Class-tree utility talents — documented 2026-03-22:
 
 ### LOW — Cosmetic / blocked
 
-- Phase 4 APL optimization loop: baselines done, permutation loop pending
+- Phase 4 APL optimization loop: baselines done (56×2=112 JSONs), report script fixed (composite DPS table generated), permutation loop pending
 - Trinket+embellishment stacking — GitHub Issue #81, blocked on beta data
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
-- Phase 4 report script: JSON path lookup needs fix before composite DPS table can be generated
+- Phase 4 composite DPS table: see results/phase4/ — top specs Warlock Demo (284k composite), Rogue Sub (179k), Mage Fire (163k)
 
 ---
 
@@ -410,3 +432,6 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | d082570 | 2026-03-22 | Feat(talents): extractor upgraded (get_talent_links), updater script, 46/56 profiles updated |
 | f6916a2 | 2026-03-22 | Fix/feat: DH Devourer talent hash corrected; 4 new hero-tree profiles (56/56 pass) |
 | 3c77a2a | 2026-03-22 | Fix(profiles): gear BiS for 19 profiles — 20 new item IDs sourced from Wowhead |
+| 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
+| (pending) | 2026-03-22 | Fix(profiles): gear BiS batch 2 (7 profiles) + DH Devourer legs ID fix |
+| (pending) | 2026-03-22 | Feat(shaman): implement surging_shields — +4 Maelstrom/trigger (Ele), +50% MSW (Enh) |

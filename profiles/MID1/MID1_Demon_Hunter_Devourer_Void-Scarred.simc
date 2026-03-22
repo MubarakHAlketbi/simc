@@ -106,7 +106,7 @@ chest=devouring_reavers_engine,id=250036,bonus_id=13575/13575/13575/13575/13575/
 wrists=frenzyroot_cuffs,id=193714,bonus_id=1808/12806/13577,gem_id=240892
 hands=devouring_reavers_essence_grips,id=250034,bonus_id=13574/13574/13574/13574/13574/13574/13574,ilevel=289
 waist=scornscarred_shulkas_belt,id=249374,bonus_id=13534,ilevel=289,gem_id=240892
-legs=shaggy_wyrmleather_leggings,id=49817,ilevel=289,enchant_id=7935
+legs=shaggy_wyrmleather_leggings,id=133499,ilevel=289,enchant_id=7935
 feet=silvermoon_agents_sneakers,id=244569,bonus_id=8793/8960/12066/12214/12214/12214/12384/13622/13667/9627,enchant_id=7963,crafted_stats=32/49
 finger1=loa_worshipers_band,id=251513,bonus_id=8960/8960/12214/12214,ilevel=285,gem_id=240892,enchant_id=7969
 finger2=bond_of_light,id=249369,bonus_id=13534,ilevel=289,gem_id=240892,enchant_id=7969

@@ -182,7 +182,7 @@ actions.zenith+=/zenith,target_if=max:target.time_to_die,if=fight_style.patchwer
 head=fearsome_visage_of_radens_chosen,id=250015,bonus_id=1808/6652/12667/12676/12806/13335/13338/13575,gem_id=240983,enchant_id=8017
 neck=amulet_of_the_abyssal_hymn,id=250247,bonus_id=3170/4786/4800/12806/13668,gem_id=240892/240892
 shoulders=aurastones_of_radens_chosen,id=250013,bonus_id=6652/12675/12806/13335/13340/13574,enchant_id=8001
-back=rigid_scale_greatcloak,id=258575,bonus_id=3202/4786/12806
+back=windwrap_of_radens_chosen,id=250010,bonus_id=6652/12806/13335
 chest=battle_garb_of_radens_chosen,id=250018,bonus_id=6652/12676/12806/13335/13336/13575,enchant_id=7987
 wrists=frenzyroot_cuffs,id=193714,bonus_id=3165/4786/11307/12806,gem_id=240892
 hands=vaelgors_fearsome_grasp,id=249321,bonus_id=12806/13577
