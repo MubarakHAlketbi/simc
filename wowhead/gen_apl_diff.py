@@ -522,24 +522,33 @@ def extract_md_priority_steps(md_content, section_name_variants):
 
 
 def parse_priority_line(line):
-    """Parse a PRIORITY list line like ' SpellName condition text'."""
-    # Format: leading space + SpellName + optional condition
-    m = re.match(r'^ ([A-Z][A-Za-z\'\-\s,]+?)(?:\s+(?:shortly|during|just|while|if|when|on\s|as\s|at\s|to\s|by\s|with\s|around|before|until|for\s|in\s|after|is\s|are\s|has\s|have\s|will\s|won\'t|doesn\'t|and\s+(?:target|during|while)|on cooldown|\-\s)|[\-.,\n]|$)', line)
+    """Parse a PRIORITY list line like ' SpellName condition text' or 'Use SpellName'."""
+    # Format 1: leading space + SpellName + optional condition (icon-style)
+    m = re.match(r'^ ([A-Z][A-Za-z\'\-\s,]+?)(?:\s+(?:shortly|during|just|while|if|when|on\s|as\s|at\s|to\s|by\s|with\s|around|before|until|for\s|in\s|after|is\s|are\s|has\s|have\s|will\s|won\'t|doesn\'t|over\s|under\s|below\s|above\s|every\s|and\s+(?:target|during|while)|on cooldown|\-\s)|[\-.,\n]|$)', line)
     if m:
         spell = m.group(1).strip().rstrip('., -')
-        # Handle compound " and  SpellName" in middle
         if ' and  ' in spell:
             spell = spell.split(' and  ')[0].strip()
         if len(spell) > 2 and len(spell) < 45:
             return spell
+
+    # Format 2: "Use SpellName" or "Cast SpellName" (no double-space icon gap)
+    m2 = re.match(r'^(?:Use|Cast|Precast|Maintain)\s+([A-Z][A-Za-z\'\-\s,]+?)(?:\s+(?:if|when|on\s|as\s|at\s|to\s|by\s|with\s|around|before|until|for\s|in\s|after|on pull|on cooldown|over\s|under\s|below\s|above\s|every\s|\-\s)|[\-.,\n]|$)', line.strip())
+    if m2:
+        spell = m2.group(1).strip().rstrip('., -')
+        if ' and  ' in spell:
+            spell = spell.split(' and  ')[0].strip()
+        if len(spell) > 2 and len(spell) < 45:
+            return spell
+
     return None
 
 
 def parse_cast_line(line):
-    """Parse a 'Cast  SpellName.' or 'Precast  SpellName.' line."""
-    # Format: "Cast  SpellName." or "Cast as many  SpellName as possible."
+    """Parse a 'Cast  SpellName.', 'Precast  SpellName.', or 'Use  SpellName.' line."""
+    # Format: "Cast  SpellName." or "Cast as many  SpellName as possible." or "Use  SpellName."
     # The double-space before spell name is where the icon was
-    m = re.match(r'^(?:Precast|Cast(?:\s+as\s+many)?)\s{1,2}([A-Z][A-Za-z\'\-\s,]+?)(?:\s+(?:if|when|on\s|as\s|at\s|to\s|by\s|with\s|around|before|until|for\s|in\s|after|on pull|on cooldown|as possible|as many|\-\s)|[\-.,\n]|$)', line)
+    m = re.match(r'^(?:Precast|Cast(?:\s+as\s+many)?|Use)\s{1,2}([A-Z][A-Za-z\'\-\s,]+?)(?:\s+(?:if|when|on\s|as\s|at\s|to\s|by\s|with\s|around|before|until|for\s|in\s|after|on pull|on cooldown|as possible|as many|over\s|under\s|below\s|above\s|every\s|\-\s)|[\-.,\n]|$)', line)
     if m:
         spell = m.group(1).strip().rstrip('., -')
         # Skip lines that are really explanatory text starting with "and  " (compound icon refs)
@@ -569,10 +578,13 @@ def parse_rotation_md(md_path):
     in_sequence = False
     
     ST_VARIANTS = {'single-target priority', 'single target', 'single-target', 'st priority',
-                   'single target priority'}
+                   'single target priority', 'during cooldowns', 'outside cooldowns',
+                   'sustained', 'sustained priority', 'cooldown priority',
+                   'rotation', 'easy mode'}
     AOE_VARIANTS = {'aoe priority', 'aoe', 'multitarget', 'multi-target', 'aoe rotation',
-                    'best aoe'}
-    OPENER_VARIANTS = {'opener', 'opening sequence', 'pre-pull', 'best opener'}
+                    'best aoe', 'cleave', 'aoe/cleave', 'mythic+ priority'}
+    OPENER_VARIANTS = {'opener', 'opening sequence', 'pre-pull', 'best opener',
+                       'pre-combat checks', 'pre-combat', 'burst', 'burst priority'}
     
     def get_tab_canonical(name):
         n = name.lower().strip()
@@ -614,8 +626,11 @@ def parse_rotation_md(md_path):
             else:
                 current_tab = None
         
-        # Detect PRIORITY section
-        elif stripped == 'PRIORITY' and current_hero and current_tab:
+        # Detect PRIORITY section or other known priority block headers
+        elif current_hero and current_tab and stripped in (
+            'PRIORITY', 'DURING COOLDOWNS', 'OUTSIDE COOLDOWNS',
+            'ROTATION', 'ROTATION PRIORITY', 'SUSTAINED ROTATION',
+        ):
             in_priority = True
             in_sequence = False
         
@@ -627,7 +642,8 @@ def parse_rotation_md(md_path):
         # Exit priority/sequence on new uppercase section header or blank line
         elif in_priority and current_hero and current_tab:
             if (stripped and stripped.upper() == stripped and len(stripped) > 3
-                    and not stripped.startswith('Cast') and not stripped.startswith('Precast')):
+                    and not stripped.startswith('Cast') and not stripped.startswith('Precast')
+                    and not stripped.startswith('Use') and not stripped.startswith('Maintain')):
                 in_priority = False
             elif line.startswith('####') or line.startswith('###') or line.startswith('##'):
                 in_priority = False
@@ -639,7 +655,8 @@ def parse_rotation_md(md_path):
         
         elif in_sequence and current_hero and current_tab:
             if (stripped and stripped.upper() == stripped and len(stripped) > 3
-                    and not stripped.startswith('Cast') and not stripped.startswith('Precast')):
+                    and not stripped.startswith('Cast') and not stripped.startswith('Precast')
+                    and not stripped.startswith('Use') and not stripped.startswith('Maintain')):
                 in_sequence = False
             elif line.startswith('####') or line.startswith('###') or line.startswith('##'):
                 in_sequence = False
@@ -649,9 +666,15 @@ def parse_rotation_md(md_path):
                     if spell not in result[current_hero][current_tab]:
                         result[current_hero][current_tab].append(spell)
         
-        # Also handle direct "Cast  X." lines even outside explicit PRIORITY blocks
-        elif current_hero and current_tab and line.startswith('Cast  '):
+        # Also handle direct "Cast/Use  X." lines even outside explicit PRIORITY blocks
+        elif current_hero and current_tab and (
+            line.startswith('Cast  ') or line.startswith('Use  ') or
+            line.startswith('Cast ') or line.startswith('Use ') or
+            line.startswith('Maintain ')
+        ):
             spell = parse_cast_line(line)
+            if not spell:
+                spell = parse_priority_line(line)
             if spell and spell not in result[current_hero][current_tab]:
                 result[current_hero][current_tab].append(spell)
     

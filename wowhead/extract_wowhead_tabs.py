@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 """
-Wowhead Tabbed Content Extractor — Discovery-Based
-====================================================
+Wowhead Tabbed Content Extractor — Discovery-Based (v2)
+========================================================
 Extracts ALL content hidden behind JS tabs on Wowhead guide pages.
 Does NOT hardcode tab names or positions — discovers them dynamically.
+
+v2 improvements (Phase 3.5a):
+  - Post-processing: strip comment widget noise from all extracted text
+  - Post-processing: deduplicate repeated blocks within each hero section
+  - Hero talent click verification + retry on failure
+  - MutationObserver-based lazy load waiting (replaces fixed sleep)
+  - Validation pass after each extraction (warns on missing heroes, short files, truncation)
+  - Fixed "null" string key in JSON when no hero switches found (now "default")
 
 Each spec has a DIFFERENT tab layout:
   - Different tab names ("AoE Priority" vs "Multitarget")
@@ -21,7 +29,7 @@ Usage:
   python3 extract_wowhead_tabs.py warrior fury --pages rotation,talents
   python3 extract_wowhead_tabs.py --all
 
-Outputs: wowhead/<class>/<spec>/extracted/<page>.md
+Outputs: wowhead/<class>/<spec>/extracted/<page>.md + .json
 
 Requirements:
   pip install playwright
@@ -139,6 +147,192 @@ def is_hero_talent_button(name):
     # Remove leading icon chars / whitespace
     low = low.lstrip(" \t\n\u200b")
     return low in ALL_HERO_TALENT_NAMES
+
+
+# ---------------------------------------------------------------------------
+# Post-processing: noise stripping + deduplication (Phase 3.5a items A, B)
+# ---------------------------------------------------------------------------
+
+# Anchors that reliably identify the start of comment widget noise
+_COMMENT_WIDGET_ANCHORS = [
+    "1 - 1 of 1",
+    "1 - 2 of 2",
+    "1 - 3 of 3",
+    "1 - 4 of 4",
+    "1 - 5 of 5",
+    "You are not logged in",
+    "Please keep the following in mind when posting a comment",
+    "How to Play Your Class in the Battle for Azeroth",
+    "How to Play Your Class in",
+    "Please log in to submit feedback",
+]
+
+# Regex that matches the comment-count pattern "N - N of N"
+_COMMENT_COUNT_RE = re.compile(r'^\d+\s*-\s*\d+\s+of\s+\d+$')
+
+
+def strip_site_noise(text):
+    """
+    Remove Wowhead comment widget pollution and other site chrome from extracted text.
+    Works line-by-line: when a noise anchor is found, removes from that line to the
+    next section boundary (blank line followed by non-noise content, or end of text).
+    """
+    if not text:
+        return text
+
+    lines = text.split('\n')
+    clean_lines = []
+    skip_mode = False
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Check if this line triggers skip mode
+        if not skip_mode:
+            is_noise = False
+            for anchor in _COMMENT_WIDGET_ANCHORS:
+                if anchor in stripped:
+                    is_noise = True
+                    break
+            if not is_noise and _COMMENT_COUNT_RE.match(stripped):
+                is_noise = True
+
+            if is_noise:
+                skip_mode = True
+                continue
+            clean_lines.append(line)
+        else:
+            # In skip mode — look for end of noise block.
+            # Noise blocks end when we hit a blank line followed by real content,
+            # or when we see a header/section marker.
+            if stripped == '':
+                # Blank line — might be end of noise. Peek ahead by just exiting
+                # skip mode; if next line is also noise it will re-trigger.
+                skip_mode = False
+                clean_lines.append(line)
+            elif any(anchor in stripped for anchor in _COMMENT_WIDGET_ANCHORS):
+                # Still in noise
+                continue
+            elif _COMMENT_COUNT_RE.match(stripped):
+                continue
+            elif stripped.startswith('#') or stripped.startswith('##'):
+                # A markdown header — real content, end skip mode
+                skip_mode = False
+                clean_lines.append(line)
+            else:
+                # Continuation of noise block — skip
+                continue
+
+    return '\n'.join(clean_lines)
+
+
+def deduplicate_blocks(text, min_block_len=80):
+    """
+    Remove paragraph-level duplicates within a text body.
+    Splits on double-newlines, tracks seen paragraphs, removes exact repeats.
+    Only deduplicates blocks longer than min_block_len chars to avoid
+    removing short legitimate repeated lines (like single spell names).
+    """
+    if not text:
+        return text
+
+    # Split into blocks separated by double-newlines
+    blocks = re.split(r'\n\s*\n', text)
+    seen = set()
+    unique_blocks = []
+
+    for block in blocks:
+        stripped = block.strip()
+        if not stripped:
+            continue
+        # Only dedup blocks above threshold
+        if len(stripped) >= min_block_len:
+            # Normalize whitespace for comparison
+            normalized = re.sub(r'\s+', ' ', stripped)
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+        unique_blocks.append(block)
+
+    return '\n\n'.join(unique_blocks)
+
+
+def postprocess_content(text):
+    """Apply all post-processing steps to extracted text content."""
+    text = strip_site_noise(text)
+    text = deduplicate_blocks(text)
+    # Clean up excessive blank lines left by stripping
+    text = re.sub(r'\n{4,}', '\n\n\n', text)
+    return text.strip()
+
+
+# ---------------------------------------------------------------------------
+# Validation (Phase 3.5a item G)
+# ---------------------------------------------------------------------------
+
+def validate_extraction(data, cls, spec, page_name):
+    """
+    Post-extraction validation. Returns list of warning strings.
+    Checks:
+      - Hero talent section count vs expected (from HERO_TALENTS)
+      - Placeholder text remaining
+      - Suspiciously short content
+      - Truncated lines (ending with '[' or mid-word indicators)
+    """
+    warnings = []
+    spec_key = f"{cls}/{spec}"
+    expected_heroes = HERO_TALENTS.get(spec_key, [])
+
+    # Check hero talent count
+    content = data.get("content", {})
+    hero_keys = [k for k in content.keys() if k and k != "default"]
+    if page_name == "rotation" and len(expected_heroes) > 0:
+        if len(hero_keys) < len(expected_heroes):
+            warnings.append(
+                f"MISSING HERO TALENTS: found {len(hero_keys)} ({hero_keys}), "
+                f"expected {len(expected_heroes)} ({expected_heroes})"
+            )
+
+    # Check for placeholder text in any content
+    all_text = json.dumps(data.get("content", {}))
+    if "Please select a Hero Talent" in all_text:
+        warnings.append("PLACEHOLDER TEXT: 'Please select a Hero Talent' found in output")
+
+    # Check total content length
+    total_chars = len(all_text)
+    if total_chars < 500 and page_name in ("rotation", "talents", "bis"):
+        warnings.append(f"SUSPICIOUSLY SHORT: only {total_chars} chars of content")
+
+    # Check for truncated lines in tab content
+    truncation_patterns = [
+        re.compile(r'\[$'),           # line ending with open bracket
+        re.compile(r'\w{3,}\s*$'),    # OK — normal word ending, not truncated
+    ]
+    for hero_key, hero_data in content.items():
+        if not isinstance(hero_data, dict):
+            continue
+        for group_key, group_data in hero_data.items():
+            if not isinstance(group_data, dict) or "tabs" not in group_data:
+                continue
+            for tab_name, tab_data in group_data.get("tabs", {}).items():
+                if isinstance(tab_data, dict):
+                    tab_text = tab_data.get("content", "")
+                elif isinstance(tab_data, str):
+                    tab_text = tab_data
+                else:
+                    continue
+                # Check last non-empty line
+                lines = [l for l in tab_text.split('\n') if l.strip()]
+                if lines:
+                    last_line = lines[-1].rstrip()
+                    if last_line.endswith('[') or last_line.endswith('('):
+                        warnings.append(
+                            f"TRUNCATED: {hero_key}/{group_key}/{tab_name} — "
+                            f"last line ends with '{last_line[-20:]}'"
+                        )
+
+    return warnings
+
 
 # ---------------------------------------------------------------------------
 # Discovery Engine — finds all interactive elements on a page
@@ -328,6 +522,186 @@ class PageDiscovery:
 
 
 # ---------------------------------------------------------------------------
+# Lazy load: MutationObserver-based waiting (Phase 3.5a item D)
+# ---------------------------------------------------------------------------
+
+def wait_for_content_stable(page_obj, timeout_ms=8000, settle_ms=500):
+    """
+    Wait for page content to stabilize using a MutationObserver.
+    Watches .guide-body (or body) for new child nodes. Resolves when
+    no new mutations fire for settle_ms. Falls back to timeout.
+    """
+    try:
+        page_obj.evaluate(f"""
+            () => new Promise((resolve) => {{
+                const target = document.querySelector('.guide-body')
+                    || document.querySelector('main')
+                    || document.body;
+                let timer = null;
+                const observer = new MutationObserver(() => {{
+                    if (timer) clearTimeout(timer);
+                    timer = setTimeout(() => {{
+                        observer.disconnect();
+                        resolve('settled');
+                    }}, {settle_ms});
+                }});
+                observer.observe(target, {{ childList: true, subtree: true }});
+                // Start the settle timer immediately in case no mutations fire
+                timer = setTimeout(() => {{
+                    observer.disconnect();
+                    resolve('timeout-no-mutations');
+                }}, {settle_ms});
+                // Hard timeout
+                setTimeout(() => {{
+                    observer.disconnect();
+                    resolve('hard-timeout');
+                }}, {timeout_ms});
+            }})
+        """)
+    except Exception:
+        # Fallback to fixed sleep if MutationObserver fails
+        time.sleep(timeout_ms / 1000)
+
+
+def scroll_and_wait(page_obj):
+    """
+    Scroll to trigger lazy-loaded content, then wait for DOM to stabilize
+    via MutationObserver instead of fixed sleeps.
+    """
+    # Scroll down in steps to trigger intersection observers
+    for _ in range(5):
+        page_obj.evaluate("window.scrollBy(0, 600)")
+        time.sleep(0.15)
+    # Scroll back to top
+    page_obj.evaluate("window.scrollTo(0, 0)")
+    # Wait for content to stabilize after lazy loads
+    wait_for_content_stable(page_obj, timeout_ms=6000, settle_ms=800)
+
+
+# ---------------------------------------------------------------------------
+# Hero talent click with verification + retry (Phase 3.5a item E)
+# ---------------------------------------------------------------------------
+
+def click_hero_talent(page_obj, hero_name, url, max_retries=2):
+    """
+    Click a hero talent button with verification.
+    After clicking, verifies data-active='true' is set on the target button.
+    Retries with page reload on failure.
+    Returns True if successfully activated, False otherwise.
+    """
+    hn_js = json.dumps(hero_name)
+
+    for attempt in range(max_retries + 1):
+        if attempt > 0:
+            print(f"    Retry {attempt}/{max_retries} for hero talent: {hero_name}")
+            page_obj.goto(url, wait_until="domcontentloaded", timeout=45000)
+            time.sleep(3)
+            scroll_and_wait(page_obj)
+
+        # Check if already active
+        already_active = page_obj.evaluate(
+            "(() => {"
+            "  const btns = Array.from(document.querySelectorAll('button'));"
+            "  const target = btns.find(b => {"
+            "    const t = b.innerText.trim();"
+            "    const half = Math.floor(t.length / 2);"
+            "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
+            f"    return t === {hn_js};"
+            "  });"
+            "  if (!target) return null;"
+            "  return target.dataset.active === 'true' || target.dataset.checked === 'true' || target.getAttribute('aria-pressed') === 'true';"
+            "})()"
+        )
+
+        if already_active is None:
+            # Button not found — try case-insensitive match
+            found_ci = page_obj.evaluate(
+                "(() => {"
+                "  const btns = Array.from(document.querySelectorAll('button'));"
+                f"  const needle = {hn_js}.toLowerCase();"
+                "  const target = btns.find(b => {"
+                "    const t = b.innerText.trim().toLowerCase();"
+                "    const half = Math.floor(t.length / 2);"
+                "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
+                "    return t === needle;"
+                "  });"
+                "  if (target) { target.click(); return true; }"
+                "  return false;"
+                "})()"
+            )
+            if found_ci:
+                print(f"    Clicked via case-insensitive match")
+                time.sleep(1)
+            else:
+                print(f"    Button not found (attempt {attempt + 1})")
+                continue
+
+        elif already_active:
+            print(f"    Already active — reading current state")
+            return True
+        else:
+            # Click it
+            clicked = page_obj.evaluate(
+                "(() => {"
+                "  const btns = Array.from(document.querySelectorAll('button'));"
+                "  const target = btns.find(b => {"
+                "    const t = b.innerText.trim();"
+                "    const half = Math.floor(t.length / 2);"
+                "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
+                f"    return t === {hn_js};"
+                "  });"
+                "  if (target) { target.click(); return true; }"
+                "  return false;"
+                "})()"
+            )
+            if not clicked:
+                print(f"    Click failed (attempt {attempt + 1})")
+                continue
+
+        # Wait for placeholder to disappear
+        for _ in range(10):
+            time.sleep(0.5)
+            still_placeholder = page_obj.evaluate(
+                "document.body.innerText.includes('Please select a Hero Talent')"
+            )
+            if not still_placeholder:
+                break
+        time.sleep(0.5)
+
+        # VERIFY: check that the button is now active
+        is_now_active = page_obj.evaluate(
+            "(() => {"
+            "  const btns = Array.from(document.querySelectorAll('button'));"
+            f"  const needle = {hn_js}.toLowerCase();"
+            "  const target = btns.find(b => {"
+            "    const t = b.innerText.trim().toLowerCase();"
+            "    const half = Math.floor(t.length / 2);"
+            "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
+            "    return t === needle;"
+            "  });"
+            "  if (!target) return null;"
+            "  return target.dataset.active === 'true' || target.dataset.checked === 'true' || target.getAttribute('aria-pressed') === 'true';"
+            "})()"
+        )
+
+        if is_now_active:
+            print(f"    Verified active: {hero_name}")
+            return True
+        else:
+            # Check if placeholder is gone (some pages don't use data-active)
+            still_ph = page_obj.evaluate(
+                "document.body.innerText.includes('Please select a Hero Talent')"
+            )
+            if not still_ph:
+                print(f"    No data-active attribute, but placeholder gone — accepting")
+                return True
+            print(f"    Verification failed (attempt {attempt + 1})")
+
+    print(f"    FAILED after {max_retries + 1} attempts: {hero_name}")
+    return False
+
+
+# ---------------------------------------------------------------------------
 # Extraction strategy: click through ALL combinations
 # ---------------------------------------------------------------------------
 
@@ -337,7 +711,8 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
     1. Discover all interactive elements (hero switches, tab groups, talent toggles)
     2. Log the discovered structure
     3. Click through every combination and capture content
-    4. Return structured results
+    4. Post-process: strip noise and deduplicate
+    5. Return structured results
 
     Handles the fact that:
     - Hero switches may be above or inside content tabs
@@ -381,6 +756,9 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
     hero_names = [h["name"] for h in hero_switches] if hero_switches else [None]
 
     for hero_name in hero_names:
+        # Key for content dict: use "default" instead of None/null
+        content_key = hero_name if hero_name else "default"
+
         if hero_name:
             print(f"\n  === Hero Talent: {hero_name} ===")
             try:
@@ -389,77 +767,26 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                 # artifacts after tab clicks, making them unclickable. A fresh
                 # page load restores the original DOM reliably.
                 page_obj.goto(url, wait_until="domcontentloaded", timeout=45000)
-                time.sleep(5)
-                # Scroll to load lazy content
-                for _ in range(5):
-                    page_obj.evaluate("window.scrollBy(0, 600)")
-                    time.sleep(0.2)
-                page_obj.evaluate("window.scrollTo(0, 0)")
-                time.sleep(0.5)
+                time.sleep(3)
+                scroll_and_wait(page_obj)
 
-                hn_js = json.dumps(hero_name)
-                # Check if this hero talent is already active (data-active/data-checked).
-                # If already active, clicking it will DESELECT it — skip the click.
-                # If not active, click to activate it.
-                already_active = page_obj.evaluate(
-                    "(() => {"
-                    "  const btns = Array.from(document.querySelectorAll('button'));"
-                    "  const target = btns.find(b => {"
-                    "    const t = b.innerText.trim();"
-                    "    const half = Math.floor(t.length / 2);"
-                    "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
-                    f"    return t === {hn_js};"
-                    "  });"
-                    "  if (!target) return null;"
-                    "  return target.dataset.active === 'true' || target.dataset.checked === 'true' || target.getAttribute('aria-pressed') === 'true';"
-                    "})()"
-                )
-                if already_active is None:
-                    print(f"    SKIP: button not found via JS")
+                if not click_hero_talent(page_obj, hero_name, url):
+                    print(f"    SKIP: could not activate hero talent {hero_name}")
                     continue
-                if already_active:
-                    print(f"    Already active — skipping click, reading current state")
-                else:
-                    js_code = (
-                        "(() => {"
-                        "  const btns = Array.from(document.querySelectorAll('button'));"
-                        "  const target = btns.find(b => {"
-                        "    const t = b.innerText.trim();"
-                        "    const half = Math.floor(t.length / 2);"
-                        "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
-                        f"    return t === {hn_js};"
-                        "  });"
-                        "  if (target) { target.click(); return true; }"
-                        "  return false;"
-                        "})()"
-                    )
-                    clicked = page_obj.evaluate(js_code)
-                    if not clicked:
-                        print(f"    SKIP: click failed")
-                        continue
-                    # Wait up to 5s for the placeholder to disappear
-                    for _ in range(10):
-                        time.sleep(0.5)
-                        still_placeholder = page_obj.evaluate(
-                            "document.body.innerText.includes('Please select a Hero Talent')"
-                        )
-                        if not still_placeholder:
-                            break
-                    time.sleep(0.5)
             except Exception as e:
                 print(f"    ERROR clicking hero switch: {e}")
                 continue
         else:
             print(f"\n  === No hero switches found, extracting directly ===")
 
-        results["content"][hero_name] = {}
+        results["content"][content_key] = {}
 
         # For talents pages: extract all talent-calc/blizzard/ href codes visible after
         # the hero switch — these are the base64 SimC talent strings.
         if page_name == "talents":
             talent_codes = disc.get_talent_links()
             if talent_codes:
-                results["content"][hero_name]["talent_codes"] = talent_codes
+                results["content"][content_key]["talent_codes"] = talent_codes
                 print(f"    Talent codes found: {len(talent_codes)}")
                 for code in talent_codes[:3]:
                     print(f"      {code[:60]}...")
@@ -473,7 +800,8 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
         if not tab_groups_now:
             # No tabs at all — just grab the page content
             print(f"    No tab groups found, capturing full page")
-            results["content"][hero_name]["full_page"] = disc.get_page_content_snapshot()
+            raw_text = disc.get_page_content_snapshot()
+            results["content"][content_key]["full_page"] = postprocess_content(raw_text)
             continue
 
         # Click through each tab in each group
@@ -484,7 +812,7 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
         for gi, group in enumerate(tab_groups_now):
             group_key = f"tab_group_{gi}"
             tab_names_in_group = [t["name"] for t in group]
-            results["content"][hero_name][group_key] = {
+            results["content"][content_key][group_key] = {
                 "tab_names": tab_names_in_group,
                 "tabs": {},
             }
@@ -506,19 +834,13 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                     clicked = page_obj.evaluate(tab_js)
                     if not clicked:
                         print(f"      SKIP: tab not found via JS")
-                        results["content"][hero_name][group_key]["tabs"][tab_name] = "[TAB NOT FOUND]"
+                        results["content"][content_key][group_key]["tabs"][tab_name] = "[TAB NOT FOUND]"
                         continue
-                    # Wait for placeholder to disappear after tab switch
-                    for _ in range(6):
-                        time.sleep(0.5)
-                        still_ph = page_obj.evaluate(
-                            "document.body.innerText.includes('Please select a Hero Talent')"
-                        )
-                        if not still_ph:
-                            break
+                    # Wait for content to stabilize after tab switch
+                    wait_for_content_stable(page_obj, timeout_ms=4000, settle_ms=500)
                 except Exception as e:
                     print(f"      ERROR clicking tab: {e}")
-                    results["content"][hero_name][group_key]["tabs"][tab_name] = f"[CLICK FAILED: {e}]"
+                    results["content"][content_key][group_key]["tabs"][tab_name] = f"[CLICK FAILED: {e}]"
                     continue
 
                 # After clicking a main tab, check for talent toggles that appeared
@@ -529,11 +851,12 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                 if new_toggles:
                     print(f"      Found {len(new_toggles)} talent toggles: {[t['name'] for t in new_toggles]}")
 
-                # Capture content with current state
+                # Capture content with current state — apply post-processing
                 panel_text = disc.get_visible_panel_text()
                 if not panel_text:
                     panel_text = disc.get_page_content_snapshot()
 
+                panel_text = postprocess_content(panel_text)
                 tab_result = {"content": panel_text}
 
                 # If there are talent toggles visible, click each one and capture
@@ -548,7 +871,7 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                             variant_text = disc.get_visible_panel_text()
                             if not variant_text:
                                 variant_text = disc.get_page_content_snapshot()
-                            tab_result["talent_variants"][toggle_name] = variant_text
+                            tab_result["talent_variants"][toggle_name] = postprocess_content(variant_text)
                         except Exception as e:
                             tab_result["talent_variants"][toggle_name] = f"[CLICK FAILED: {e}]"
 
@@ -563,7 +886,7 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
                     # They'll be caught in the outer loop since we enumerate all groups
                     pass
 
-                results["content"][hero_name][group_key]["tabs"][tab_name] = tab_result
+                results["content"][content_key][group_key]["tabs"][tab_name] = tab_result
 
     return results
 
@@ -689,7 +1012,7 @@ def run_extraction(cls, spec, pages, wowhead_dir):
 
             try:
                 page_obj.goto(url, wait_until="domcontentloaded", timeout=45000)
-                time.sleep(5)  # Wait for JS hydration (ads/trackers keep networkidle busy)
+                time.sleep(3)  # Brief wait for initial JS hydration
 
                 # Dismiss cookie banners / overlays
                 for selector in ['button:has-text("Accept")', 'button:has-text("Consent")',
@@ -703,30 +1026,41 @@ def run_extraction(cls, spec, pages, wowhead_dir):
                     except Exception:
                         pass
 
-                # Scroll down to trigger lazy-loaded content
-                for _ in range(5):
-                    page_obj.evaluate("window.scrollBy(0, 600)")
-                    time.sleep(0.3)
-                # Scroll back to top
-                page_obj.evaluate("window.scrollTo(0, 0)")
-                time.sleep(1)
+                # Scroll to trigger lazy content + wait for DOM stability
+                scroll_and_wait(page_obj)
 
                 # Run discovery-based extraction
                 data = extract_page_complete(page_obj, cls, spec, page_name, url=url)
 
-                # Format and write
+                # --- Validation pass (Phase 3.5a item G) ---
+                warnings = validate_extraction(data, cls, spec, page_name)
+                if warnings:
+                    print(f"\n  ⚠ VALIDATION WARNINGS ({len(warnings)}):")
+                    for w in warnings:
+                        print(f"    - {w}")
+
+                # Format and write markdown
                 output = format_output(data)
                 out_file = out_dir / f"{page_name}.md"
                 out_file.write_text(output, encoding="utf-8")
                 print(f"\n  Written: {out_file} ({len(output)} bytes)")
 
-                # Also save raw JSON for programmatic consumption
+                # Save raw JSON for programmatic consumption
                 json_file = out_dir / f"{page_name}.json"
-                # Strip non-serializable elements
                 serializable = json.loads(json.dumps(data, default=str))
                 json_file.write_text(json.dumps(serializable, indent=2, ensure_ascii=False),
                                      encoding="utf-8")
                 print(f"  Written: {json_file}")
+
+                # Write validation warnings to a separate file if any
+                if warnings:
+                    warn_file = out_dir / f"{page_name}_warnings.txt"
+                    warn_file.write_text(
+                        f"Spec: {cls}/{spec}\nPage: {page_name}\nURL: {url}\n"
+                        f"Warnings ({len(warnings)}):\n" +
+                        "\n".join(f"  - {w}" for w in warnings) + "\n"
+                    )
+                    print(f"  Written: {warn_file}")
 
             except Exception as e:
                 print(f"  ERROR extracting {page_name}: {e}")

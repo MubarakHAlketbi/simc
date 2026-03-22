@@ -1,8 +1,10 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-22 (Batch 9 complete — DK Unholy documented, Priest Shadow fixed, Mage TODOs resolved)
-All information verified fresh against Wowhead + code inspection.
+Last updated: 2026-03-22 (ground-truth audit pass — every claim verified against actual code)
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
+
+Ground-truth audit methodology: all statements below verified by direct code inspection
+(grep + read_file on actual source). Discrepancies from prior version are annotated.
 
 ---
 
@@ -21,10 +23,13 @@ All information verified fresh against Wowhead + code inspection.
 | MID1_Demon_Hunter_Havoc.simc | PASS | |
 | MID1_Demon_Hunter_Vengeance.simc | PASS | |
 | MID1_Demon_Hunter_Vengeance_Aldrachi_Reaver.simc | PASS | |
-| MID1_Druid_Balance.simc | PASS | talent= updated 2026-03-22 from Wowhead extraction |
+| MID1_Druid_Balance.simc | PASS | talents= updated 2026-03-22 from Wowhead extraction |
+| MID1_Druid_Balance_Elune.simc | PASS | hero-tree variant added 2026-03-22 |
+| MID1_Druid_Balance_Keeper.simc | PASS | hero-tree variant added 2026-03-22 |
 | MID1_Druid_Feral.simc | PASS | |
 | MID1_Druid_Guardian.simc | PASS | |
 | MID1_Evoker_Augmentation.simc | PASS | Inline APL removed 2026-03-22 — uses C++ generator |
+| MID1_Evoker_Augmentation_Chronowarden.simc | PASS | hero-tree variant added 2026-03-22 |
 | MID1_Evoker_Devastation.simc | PASS | |
 | MID1_Evoker_Devastation_FS.simc | PASS | |
 | MID1_Hunter_Beast_Mastery.simc | PASS | |
@@ -47,6 +52,7 @@ All information verified fresh against Wowhead + code inspection.
 | MID1_Priest_Shadow.simc | PASS | |
 | MID1_Priest_Shadow_Archon.simc | PASS | |
 | MID1_Rogue_Assassination.simc | PASS | |
+| MID1_Rogue_Assassination_Deathstalker.simc | PASS | hero-tree variant added 2026-03-22 |
 | MID1_Rogue_Outlaw.simc | PASS | |
 | MID1_Rogue_Outlaw_Trickster.simc | PASS | |
 | MID1_Rogue_Subtlety.simc | PASS | |
@@ -63,9 +69,9 @@ All information verified fresh against Wowhead + code inspection.
 | MID1_Warrior_Fury.simc | PASS | |
 | MID1_Warrior_Protection.simc | PASS | |
 
-**Total: 56/56 PASS** (52 original + 4 hero-tree variants added 2026-03-22)
+**Total: 56/56 PASS** (52 base + 4 hero-tree variants added 2026-03-22)
 
-Hero-tree variant profiles (added 2026-03-22, included in total above):
+Hero-tree variant profiles (included in 56 total):
 | MID1_Druid_Balance_Keeper.simc | PASS | Keeper of the Grove |
 | MID1_Druid_Balance_Elune.simc | PASS | Chosen of Elune |
 | MID1_Evoker_Augmentation_Chronowarden.simc | PASS | Chronowarden |
@@ -75,57 +81,60 @@ Hero-tree variant profiles (added 2026-03-22, included in total above):
 
 ## 2. Class Mechanics — General Changes
 
+All statuses below are based on direct code inspection (2026-03-22 audit).
+
 | Class / Spec | Mechanic Status | Notes |
 | :--- | :--- | :--- |
 | DK Blood | Implemented | |
 | DK Frost | Implemented | |
-| DK Unholy | In Beta | 12.0 rework: Apocalypse removed; loop = Lesser Ghouls + Putrefy + Dread Plague + Reaping. festering_scythe/graveyard via set_replacement_action() working. control_undead/unholy_endurance NYI (zero DPS). |
+| DK Unholy | In Beta | Apocalypse removed; loop = Lesser Ghouls + Putrefy + Dread Plague + Reaping. festering_scythe replaces festering_strike via set_replacement_action() (sc_death_knight.cpp:10046). graveyard replaces epidemic via set_replacement_action() when buff.forbidden_knowledge.up (sc_death_knight.cpp:9952). control_undead NYI (declared at line 1165, no action impl). unholy_endurance NYI (declared at line 1189, no action impl). Both are pure utility/CC with zero DPS impact. |
 | DH Devourer | Implemented | |
-| DH Havoc | Implemented | |
+| DH Havoc | Implemented | Demonsurge ordering fix confirmed in apl_demon_hunter.cpp: demonsurge_available woven into if= guards throughout the meta list (lines 212, 250–254). |
 | DH Vengeance | Implemented | |
-| Druid Balance | In Beta | Eclipse conditions simplified |
+| Druid Balance | In Beta | Eclipse conditions confirmed in sc_druid.cpp — eclipse_lunar/eclipse_solar buffs (lines 706–707, 1237–1238); conditions simplified per prior audit. Low Phase 4 DPS (~3k composite) due to no valid talent hash — APL running on defaults only. |
 | Druid Feral | In Beta | |
 | Druid Guardian | In Beta | |
-| Evoker Devastation | Implemented | Rising Fury apex: IDs 1271687/1271796/1271788 |
-| Evoker Augmentation | Implemented | Duplicate apex: IDs 1259173/1259174/1259175 — Breath of Eons summons future-self; Ebon Might extends duplicate; capstone gives +75% stat buff during duplicate |
-| Hunter BM | Implemented | All 98 flagged "missing" talents confirmed already implemented (scanner false-positive bug in missing_from_code.md — Hunter uses spell_data_ptr_t not player_talent_t) |
-| Hunter Marks | Implemented | Same scanner false-positive — all 93 confirmed implemented |
-| Hunter Survival | Implemented | Same — all 93 confirmed implemented |
-| Mage Arcane | In Beta | ~62 TODO comments remain; 13 resolved 2026-03-22 (see section 7) |
-| Mage Fire | In Beta | Burnout 75% finalised; Pyromaniac confirmed correct; Flamestrike_pyromaniac documented |
-| Mage Frost | In Beta | Winter's End AoE falloff FIXED (removed !p->bugs guard, confirmed real behavior) |
+| Evoker Devastation | Implemented | Rising Fury apex IDs 1271687/1271796/1271788 confirmed at sc_evoker.cpp lines 9659–9662. |
+| Evoker Augmentation | Implemented | Duplicate apex IDs 1259173/1259174/1259175 confirmed at sc_evoker.cpp lines 9736–9742. Note: ID 1259174 used for both R2 and R3 — acknowledged in code comment at line 9733. cancel_buff tip_the_scales present in apl_evoker.cpp line 220. Inline APL removed 2026-03-22; full C++ generator active. |
+| Hunter BM | Implemented | Uses spell_data_ptr_t (not player_talent_t) for talent lookups — confirmed in sc_hunter.cpp lines 17–30. All talents confirmed implemented; scanner false-positive. |
+| Hunter Marks | Implemented | Same spell_data_ptr_t pattern — scanner false-positive. |
+| Hunter Survival | Implemented | Same pattern. |
+| Mage Arcane | In Beta | 61 TODO/FIXME comments remain in sc_mage.cpp (exact count from grep, not ~62). Touch of Archmage IDs 1257942/1257947/1257950 confirmed at lines 6005–6017. |
+| Mage Fire | In Beta | Fired Up IDs 1257343/1257349/1257348 confirmed at lines 6060–6072. Burnout: code reads effectN(1).percent() from spell data dynamically (line 1468); comment states 75% (line 2531). Pyromaniac confirmed correct. |
+| Mage Frost | In Beta | Hand of Frost IDs 1262935/1262981/1263249 confirmed at lines 6117–6133. Winter's End AoE: reduced_aoe_targets set at line 4337 with NO p->bugs guard — confirmed real in-game behavior per inline comment citing spell ID 1247775. |
 | Monk Brewmaster | In Beta | |
-| Monk Windwalker | In Beta | Ascension energy regen (effect#2) implemented; Weapon of Wind (ID 1272678) implemented 2026-03-21: +10% damage during Zenith via DBC parse_effects |
-| Paladin Protection | In Beta | All 95 flagged "missing" talents confirmed implemented (Paladin uses const spell_data_t* pattern, not player_talent_t — scanner false-positive) |
-| Paladin Retribution | In Beta | All 92 confirmed implemented |
-| Priest Shadow | Implemented | tormenting_whispers +15% SW:Madness; surge_of_insanity +15% Mind Flay (both 2026-03-22); Collapsing Void target-died edge case FIXED 2026-03-22 |
-| Rogue Assassination | In Beta | Sudden Demise execute mechanic IMPLEMENTED: +10% bleed always; linear bonus to +150% at 0% HP |
-| Rogue Outlaw | In Beta | Grand Melee (ID 1259469) IMPLEMENTED: +8% Blade Flurry cleave |
+| Monk Windwalker | In Beta | Ascension energy regen effect#2 confirmed in sc_monk.cpp lines 6677–6678 (effectN(2).percent()). Weapon of Wind (ID 1272678): talent REGISTERED at sc_monk.cpp line 5526 and in DBC, but NO effect code exists (no parse_effects, no buff, no action). Effectively a stub/NYI despite prior claim of implementation. |
+| Paladin Protection | In Beta | Uses const spell_data_t* pattern (not player_talent_t) in paladin/sc_paladin.cpp — scanner false-positive. All talents confirmed implemented. |
+| Paladin Retribution | In Beta | Same const spell_data_t* pattern. All confirmed implemented. |
+| Priest Shadow | Implemented | tormenting_whispers (ID 1250492): +15% SW:Madness via composite_persistent_multiplier confirmed at sc_priest_shadow.cpp lines 944–946. surge_of_insanity (ID 391399): +15% Mind Flay via composite_ta_multiplier confirmed at lines 53–55. Collapsing Void target_ready() early return confirmed at sc_priest.cpp line 1446. |
+| Rogue Assassination | In Beta | Sudden Demise: +10% bleed base (effectN(1)) + linear bonus to +150% at 0% HP below execute threshold (effectN(3)) — confirmed at sc_rogue.cpp lines 2453–2471. |
+| Rogue Outlaw | In Beta | Grand Melee (ID 1259469): +8% Blade Flurry cleave confirmed — talent init at line 9741, Blade Flurry default_value += effectN(1).percent() at lines 7014–7019. |
 | Rogue Subtlety | In Beta | |
-| Shaman Elemental | Implemented | Lava Flows (ID 1273485) 2026-03-21; surging_shields (ID 382033) +4 Maelstrom/LS trigger 2026-03-22 |
-| Shaman Enhancement | Implemented | surging_shields (ID 382033) +50% MSW proc chance on LS trigger 2026-03-22 |
-| Warlock Affliction | In Beta | drain_life APL priority now FIXED (2026-03-20): chains as main filler when Gorefiend's Avarice talented, interrupts on Nightfall |
+| Shaman Elemental | Implemented | Lava Flows (ID 1273485): Maelstrom gain on LvB Overload (lines 6677–6681) and damage bonus (lines 6704–6707, 7029–7032) confirmed. Code looks up by name via _ST("Lava Flows"), not hardcoded ID. surging_shields (ID 382033): +4 Maelstrom per LS trigger via effectN(2) confirmed at sc_shaman.cpp lines 4712–4715. gain_t* surging_shields in gains struct (line 1507) and init_gains() (line 12619) confirmed. |
+| Shaman Enhancement | Implemented | surging_shields (ID 382033): +50% MSW proc chance on LS trigger via effectN(3).percent() confirmed at sc_shaman.cpp lines 4719–4722. |
+| Warlock Affliction | In Beta | drain_life APL: confirmed in warlock.cpp line 77 as primary filler with Gorefiend's Avarice; drain_soul also present (line 78) for Nightfall proc handling alongside it — not sole filler. |
 | Warlock Demonology | In Beta | |
 | Warlock Destruction | In Beta | |
-| Warrior Arms | Implemented | |
-| Warrior Fury | Implemented | |
-| Warrior Protection | Implemented | |
+| Warrior Arms | Implemented | Master of Warfare IDs 1269314/1269306/1269307 confirmed at sc_warrior.cpp lines 7263–7265. |
+| Warrior Fury | Implemented | Rampaging Berserker IDs 1269308/1269309/1269310 confirmed at sc_warrior.cpp lines 7318–7320. |
+| Warrior Protection | Implemented | Phalanx IDs 1269311/1269312/1269313 confirmed at sc_warrior.cpp lines 7378–7380. |
 
 ---
 
 ## 3. Midnight Apex (4-Rank) Talents — All 33 Specs
 
 Each spec has one 4-rank apex talent using 3 spell IDs: Rank1 (_1), Ranks2+3 (_23), Rank4 (_4).
-All verified against Wowhead 2026-03-17 / 2026-03-20.
+All spell IDs verified against source code (2026-03-22 audit). "name+rank" means registered via
+_ST/_CT name lookup rather than explicit integer ID in find_talent_spell calls.
 
-| Spec | Apex Talent Name | R1 ID | R23 ID | R4 ID | Status |
+| Spec | Apex Talent Name | R1 ID | R23 ID | R4 ID | Code Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Warrior Arms | Master of Warfare | 1269314 | 1269306 | 1269307 | Implemented |
-| Warrior Fury | Rampaging Berserker | 1269308 | 1269309 | 1269310 | Implemented |
-| Warrior Protection | Phalanx | 1269311 | 1269312 | 1269313 | Implemented |
-| Mage Arcane | Touch of the Archmage | 1257942 | 1257947 | 1257950 | Implemented |
-| Mage Fire | Fired Up | 1257343 | 1257349 | 1257348 | Implemented |
-| Mage Frost | Hand of Frost | 1262935 | 1262981 | 1263249 | Implemented |
+| Warrior Arms | Master of Warfare | 1269314 | 1269306 | 1269307 | Confirmed (sc_warrior.cpp:7263–7265) |
+| Warrior Fury | Rampaging Berserker | 1269308 | 1269309 | 1269310 | Confirmed (sc_warrior.cpp:7318–7320) |
+| Warrior Protection | Phalanx | 1269311 | 1269312 | 1269313 | Confirmed (sc_warrior.cpp:7378–7380) |
+| Mage Arcane | Touch of the Archmage | 1257942 | 1257947 | 1257950 | Confirmed (sc_mage.cpp:6005–6017) |
+| Mage Fire | Fired Up | 1257343 | 1257349 | 1257348 | Confirmed (sc_mage.cpp:6060–6072) |
+| Mage Frost | Hand of Frost | 1262935 | 1262981 | 1263249 | Confirmed (sc_mage.cpp:6117–6133) |
 | Shaman Elemental | Feedback Loop | name+rank | name+rank | name+rank | Implemented |
 | Shaman Enhancement | Storm Unleashed | 1262713 | — | — | Implemented |
 | Rogue Assassination | Implacable | verified | verified | verified | Implemented |
@@ -147,8 +156,8 @@ All verified against Wowhead 2026-03-17 / 2026-03-20.
 | Druid Feral | Unseen Predator | name+rank | name+rank | name+rank | Implemented |
 | Druid Guardian | Wild Guardian | name+rank | name+rank | name+rank | Implemented |
 | Druid Restoration | Everbloom | name+rank | name+rank | name+rank | N/A (healer) |
-| Evoker Devastation | Rising Fury | 1271687 | 1271796 | 1271788 | Implemented |
-| Evoker Augmentation | Duplicate | 1259173 | 1259174 | 1259175 | Implemented (2026-03-20: verified correct — Duplicate IS the Aug apex) |
+| Evoker Devastation | Rising Fury | 1271687 | 1271796 | 1271788 | Confirmed (sc_evoker.cpp:9659–9662) |
+| Evoker Augmentation | Duplicate | 1259173 | 1259174 | 1259175 | Confirmed (sc_evoker.cpp:9736–9742). Note: R2 and R3 share ID 1259174 — acknowledged in comment at line 9733. |
 | Hunter BM | Nature's Ally | name+rank | name+rank | name+rank | Implemented |
 | Hunter Marks | Take Aim | name+rank | name+rank | name+rank | Implemented |
 | Hunter Survival | Raptor Swipe | name+rank | name+rank | name+rank | Implemented |
@@ -162,11 +171,11 @@ All verified against Wowhead 2026-03-17 / 2026-03-20.
 | Spec | APL Source | Sim Validated | Notes |
 | :--- | :--- | :--- | :--- |
 | All 33 specs | Wowhead Midnight rotations, synced 2026-03-17 | Yes (1-iter) | |
-| Warlock Affliction | Updated 2026-03-20 | Yes | Gorefiend's Avarice filler: drain_life chains as main filler, interrupted by Nightfall |
-| Rogue Outlaw | Updated 2026-03-20 | Yes | Grand Melee implementation |
-| Rogue Assassination | Updated 2026-03-20 | Yes | Sudden Demise execute bonus active |
-| DH Havoc | Updated 2026-03-22 | Yes | Demonsurge ordering fix: immolation_aura default-list condition moved from comment into if= |
-| Evoker Augmentation | Updated 2026-03-22 | Yes | Removed simplified 18-line inline APL; now uses full C++ generator (cancel_buff tip_the_scales, pandemic Ebon Might, trinket sync) |
+| Warlock Affliction | Updated 2026-03-20 | Yes | drain_life primary filler with Gorefiend's Avarice; drain_soul present for Nightfall proc handling |
+| Rogue Outlaw | Updated 2026-03-20 | Yes | Grand Melee implementation confirmed |
+| Rogue Assassination | Updated 2026-03-20 | Yes | Sudden Demise execute bonus confirmed |
+| DH Havoc | Updated 2026-03-22 | Yes | Demonsurge ordering fix: demonsurge_available in if= guards (apl_demon_hunter.cpp lines 212, 250–254) |
+| Evoker Augmentation | Updated 2026-03-22 | Yes | Removed 18-line inline APL; C++ generator active; cancel_buff tip_the_scales present (apl_evoker.cpp:220) |
 
 ### Phase 2 APL Diff — Summary (2026-03-22)
 
@@ -192,8 +201,8 @@ Analysis script: `wowhead/gen_apl_diff.py`
 
 **Engine-managed replacement actions (no APL changes needed):**
 - DK Blood `vampiric_strike`: auto-fires via make_fallback() when buff active
-- DK Unholy `festering_scythe`: set_replacement_action() replaces festering_strike
-- DK Unholy `graveyard`: set_replacement_action() replaces epidemic when buff.forbidden_knowledge.up
+- DK Unholy `festering_scythe`: set_replacement_action() replaces festering_strike (sc_death_knight.cpp:10046)
+- DK Unholy `graveyard`: set_replacement_action() replaces epidemic when buff.forbidden_knowledge.up (sc_death_knight.cpp:9952)
 - DH Devourer `void_metamorphosis`: passive spec feature, not castable
 - DH Devourer `reaper_s_toll`: already in APL as reavers_toll
 - Paladin Protection `sacred_weapon`/`holy_bulwark`: handled by holy_armaments next_armament conditions
@@ -219,63 +228,33 @@ Full specification: `APL_optimization.md`
 | Phase 1 | Browser extraction of all Wowhead pages (rotation, talents, bis, consumables, tier) | COMPLETE — 33 specs × 5 pages = 165 files in wowhead/*/extracted/ |
 | Phase 2 | APL validation — diff all specs against Wowhead rotations | COMPLETE — 2 fixes applied |
 | Phase 3 | Profile updates — BiS gear, consumables, talent builds from extracted data | COMPLETE — consumables (30 profiles), gear BiS (19 profiles fixed), talents (46/56 updated via extractor + updater script) |
-| Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | IN PROGRESS — baselines complete (56×2=112 JSON files in results/phase4/); permutation loop not yet run |
+| Phase 3.5a | Extractor pipeline fixes — validation pass, strip comment noise, dedup blocks, hero talent click verification, targeted DOM extraction, mutation observer for lazy load | NOT STARTED — see wowhead/EXTRACTION_PIPELINE_AUDIT.md |
+| Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fail on "Use X"/inline format), fix "null" JSON key, port consumers to .json | NOT STARTED |
+| Phase 3.5c | Re-extract 6 specs with missing hero talents + investigate outliers (evoker/dev 8313 lines, DH devourer dir) + fix 3 profile data gaps | NOT STARTED |
+| Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | IN PROGRESS — baselines PARTIAL (see note below); permutation loop not yet run |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
-### Extraction Tool
+### Phase 4 Baseline Status (2026-03-22) — PARTIAL, not complete as previously claimed
 
-`wowhead/extract_wowhead_tabs.py` — Playwright-based browser extractor. Discovery-based
-(no hardcoded tab names). Handles all Wowhead JS tab variations per spec.
+**Actual JSON file counts (verified by ls results/phase4/):**
+- Patchwerk JSONs: 56 / 56 profiles — COMPLETE
+- HecticAddCleave JSONs: 52 / 56 profiles — INCOMPLETE
 
-Key fixes applied during development:
-- Hero talent buttons use `data-active` attribute — clicking an already-active button deselects it
-- Page reloads between hero talent iterations to clear Wowhead DOM artifacts (buttons become "SlayerSlayer" after tab clicks)
-- JS-based clicking by text (not element handles) — immune to stale references
+**Missing HecticAddCleave runs (4 profiles):**
+- MID1_Death_Knight_Blood
+- MID1_Death_Knight_Blood_Deathbringer
+- MID1_Evoker_Devastation
+- MID1_Evoker_Devastation_FS
 
-Usage:
-```
-pip install playwright && playwright install chromium
-python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
-python3 wowhead/extract_wowhead_tabs.py --all --pages rotation,talents,bis,consumables,tier
-```
-
-### Phase 3 Status (2026-03-22) — COMPLETE
-
-**Consumables (DONE):** 30 profiles corrected — flask, potion, food match Wowhead Season 1.
-
-**Gear BiS (DONE):** 19 profiles updated with correct item IDs sourced from Wowhead:
-- DK Frost x2: hate_tied_waistchain (249380)
-- DK Blood x2: eye_of_midnight/loa_worshipers_band rings, light_company_guidon trinket, garfrost weapon (133486), bent_gold_belt (133492)
-- Priest Shadow x2: draconic_nullcape (249370), wraps_of_watchful_wrath (251108), dream_scorched_striders (249373), bond_of_light (249369), belomelorn weapon (249283)
-- Warlock Affliction x2: whisper_inscribed_sash (249376), belomelorn
-- Warlock Demo x2: whisper_inscribed, eye_of_midnight/signet_of_azerothian_blessings (241140), gaze/vaelgor trinkets, belomelorn
-- Warlock Destro x2: whisper_inscribed, signet_of_azerothian, belomelorn
-- Evoker Dev x2: darkstrider_treads (249377), locus_walkers_ribbon (249809)
-- Evoker Aug + Chronowarden: horns_of_spurned_valkyr (133506), ribbon_of_coiled_malice (249337), enforcer_grips (249998), shadow_of_empyrean (249810), heart_of_wind (250256), ceremonial_hexblade (251178)
-- Paladin Prot x2 + Warrior Prot: lights_march_bracers (249326), ezzoraks_gloombind, eye_of_midnight, band_of_triumvirate (151311), gaze/heart_of_ancient_hunger trinkets, thalassian_dawnguard (249921)
-
-**Talent Strings (DONE — extractor upgraded):**
-- extract_wowhead_tabs.py upgraded with get_talent_links() — scrapes `<a href>` talent-calc/blizzard/ codes from rendered DOM
-- update_talents_from_extracted.py written — auto-updates talents= lines from extracted codes
-- All 33 specs re-extracted; 46/56 profiles updated with fresh Wowhead build codes; 6 already correct; 4 Devourer profiles needed manual fix
-- DH Devourer x2 fixed: wrong Havoc hash → correct Devourer CgcB strings
-
-**All 56 profiles pass 1-iter smoke test.**
-
-### Phase 4 Status (2026-03-22) — IN PROGRESS
-
-**Baseline sims complete:**
-- Patchwerk 1000-iter: 56 JSON files → results/phase4/*_patchwerk.json
-- HecticAddCleave 1000-iter: 56 JSON files → results/phase4/*_hecticaddcleave.json
-- Composite = 50% Patchwerk + 50% HecticAddCleave
+**Total JSONs: 108** (not 112 as previously claimed — 4 HAC runs never completed)
 
 **Remaining Phase 4 work:**
-1. ~~Parse baseline JSONs → composite DPS table~~ DONE — /tmp/phase4_report.py fixed; all 52 pairs parsed
+1. Run 4 missing HecticAddCleave baseline sims (DK Blood x2, Evoker Dev x2)
 2. Run permutation candidates per spec (APL condition sweeps)
 3. Accept changes only when composite improves AND neither fight style regresses >1%
 4. Phase 5: trinket combinatorics (BiS pair sims per spec)
 
-**Composite DPS baseline (1000 iter, 2026-03-22) — top 10:**
+**Composite DPS baseline (1000 iter, 2026-03-22) — top 10 (52 complete pairs only):**
 | Profile | Patchwerk | HecticAC | Composite |
 | :--- | ---: | ---: | ---: |
 | MID1_Warlock_Demonology_Soul_Harvester | 97,590 | 471,531 | 284,560 |
@@ -289,21 +268,30 @@ python3 wowhead/extract_wowhead_tabs.py --all --pages rotation,talents,bis,consu
 | MID1_Demon_Hunter_Devourer_Void-Scarred | 108,553 | 204,002 | 156,277 |
 | MID1_Demon_Hunter_Devourer | 105,777 | 203,082 | 154,429 |
 
-**Outliers needing APL investigation (very low DPS):**
-- MID1_Rogue_Assassination (13k) — APL likely needs DPS-spec tuning
-- MID1_Evoker_Augmentation (8k) — Aug is a support spec, low raw DPS expected
-- MID1_Druid_Balance (3k) — no valid talent hash, APL using defaults only
+**Extraction pipeline audit:** `wowhead/EXTRACTION_PIPELINE_AUDIT.md` — full analysis of
+extraction pipeline accuracy. 9 confirmed problems: comment widget pollution (all 33 specs),
+6 specs with missing hero talents, repeated blocks inflating files 3–10x, APL diff parser
+broken for 17/33 specs ("Use X"/inline format), mid-sentence truncation, .json files unused
+by consumers, outlier files (evoker/dev 8313 lines), 3 profile data gaps. 15 proposed fixes
+across phases 3.5a/b/c. Must be completed before Phase 4 APL optimization.
+
+**Outliers needing APL investigation:**
+- MID1_Rogue_Assassination (~13k composite) — APL likely needs DPS-spec tuning
+- MID1_Evoker_Augmentation (~8k) — support spec, low raw DPS expected
+- MID1_Druid_Balance (~3k) — no valid talent hash, APL using defaults only
 
 ---
 
 ## 6. Unique Gear — Midnight Trinkets / Embellishments
 
-### unique_gear_midnight.cpp — NYI Items Resolved
+### unique_gear_midnight.cpp — Current State
 
-| Spell ID | Name | Previous Status | Current Status | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| 1237154 | AoE ground-effect trigger (Draught of Rampant Abandon secondary) | NYI — RPPM disabled | Implemented 2026-03-20 | Area Trigger 38015: 30s ground zone, 1s pulse ticks, Shadow damage = effectN(1).average(item) |
-| 1263727 | Litany of Lightblind Wrath shield | NYI | Implemented 2026-03-20 | absorb_buff_t triggered on blast; self-absorb approximation for solo patchwork |
+| Spell ID | Name | Status | Notes |
+| :--- | :--- | :--- | :--- |
+| 1237154 | AoE ground-effect trigger (Draught of Rampant Abandon secondary) | Implemented | Area Trigger 38015: 30s ground zone, 1s pulse ticks, Shadow damage = effectN(1).average(item) — confirmed at line 177+ |
+| 1263727 | Litany of Lightblind Wrath shield | Implemented | absorb_buff_t triggered on blast; self-absorb approx for solo patchwork — confirmed at line 2583+ |
+
+**NYI items remaining: 0** (grep for NYI/nyi/not_yet_implemented in unique_gear_midnight.cpp returns zero matches — confirmed by audit)
 
 All other Midnight trinkets/consumables status:
 
@@ -331,77 +319,52 @@ None currently open.
 
 ### MEDIUM — Behavior correctness
 
-**Mage (sc_mage.cpp — ~62 TODO/FIXME comments remaining)**
-Resolved 2026-03-22 (6 TODOs, first pass):
-- Ignite partial tick bank: documented as best-effort approximation (ticks_left_fractional)
-- Ignite spread target priority/cap: documented as best-effort
-- Ignite crit trigger: documented as known approximation (omits crit_bonus/PvP)
-- Pyromaniac proc: CONFIRMED correct — requires Hot Streak (ID 451466 tooltip verified)
-- Arcane Phoenix no targets: documented skip+wait as standard WoW pet behavior
-- Arcane Missiles cost TODO: RESOLVED — Mana Confluence already implemented at line 1830
+**Monk Windwalker (sc_monk.cpp)**
+- Weapon of Wind (ID 1272678): talent REGISTERED and ID confirmed in DBC, but no effect
+  code exists (no parse_effects, no buff, no action). Prior claim of "Implemented" was
+  incorrect — this is a STUB. Needs effectN() implementation.
 
-Resolved 2026-03-22 (7 more TODOs, second pass):
-- Winter's End AoE falloff: FIXED — `reduced_aoe_targets` was behind `!p->bugs` guard; confirmed REAL behavior from 12.0.1 spell tooltip (ID 1247775). Guard removed.
-- Burnout (ID 1271335) "not hotfixed on beta": STALE — main Burnout finalized at 75% in build 64741. Note updated.
-- Pyromaniac Flamestrike (460476) + Fuel the Fire / Ignition: documented as unconfirmed; conservative no-bonus implementation retained.
-- Frostfire Bolt travel time: documented as known implementation quirk; unverifiable from public sources.
-- Flamestrike_pyromaniac reduced_aoe_targets: confirmed from spelldata effectN(2).
-- Frostbane 100ms delay: documented as approximation; Blizzard hotfixed related bug (2025-09-24) suggesting ~200ms may be more accurate post-fix.
+**Mage (sc_mage.cpp — 61 TODO/FIXME comments remaining)**
+- Exact count from grep: 61 (previously stated ~62)
+- Winter's End AoE falloff: CONFIRMED FIXED — reduced_aoe_targets at line 4337, no p->bugs
+  guard, confirmed real in-game behavior from spell ID 1247775 tooltip
+- Burnout: code reads effectN(1).percent() dynamically from spell data (line 1468); comment
+  at line 2531 states 75%; actual value depends on live spell data
 
-**Priest Shadow (sc_priest_shadow.cpp)**
-- tormenting_whispers (ID 1250492): IMPLEMENTED 2026-03-22 — +15% SW:Madness via composite_persistent_multiplier
-- surge_of_insanity (ID 391399): IMPLEMENTED 2026-03-22 — +15% Mind Flay via mind_flay_base_t composite_ta_multiplier
-- deaths_torment (ID 1240364): was already implemented in sw_death_t::impact() — stale TODO cleared
-- Collapsing Void target-died edge case: FIXED 2026-03-22 — returns early if target_ready() is false, preventing execute() on dead target. Was: set_target skipped but execute() still called (potential wrong-target hit).
+**DK Unholy (sc_death_knight.cpp)**
+- control_undead (line 1165): declared NYI, no action implementation
+- unholy_endurance (line 1189): declared NYI, no action implementation
+- Both are pure utility (CC / defensive) with zero DPS impact
 
-**Druid (sc_druid.cpp — 50 TODOs)**
-All remaining NYI items are Restoration talents (healer, out of scope for DPS sim).
-
-**Death Knight (sc_death_knight.cpp)**
-Class-tree talents — documented as utility/no DPS impact 2026-03-22:
-- `death_charge` — movement utility (breaks snares, +100% speed 10s); no DPS impact
-- `newly_turned` — res utility (Raise Ally at full HP + 20% absorb); no DPS impact
-- `pact_of_the_apocalypse` — utility NYI, low DPS impact
-- `control_undead` — pure CC (mind-controls undead); dismissed your ghoul if used as Unholy; zero DPS
-- `unholy_endurance` — Lichborne duration/DR; purely defensive; zero DPS
-
-Unholy-specific TODOs resolved 2026-03-22:
-- Blightburst ST hit + Rune of the Apocalypse: documented as unconfirmed; current impl applies RoA consistent with AoE path
-- Frostbane 100ms delay (DK Frost): documented as approximation; Blizzard bug-fixed high-haste failure, true delay may be ~200ms
-
-Frostwyrm's Fury stun: baseline 3s stun in 12.0 — NYI in sim is correct (stun is utility-only, no DPS contribution; raid bosses are stun-immune).
-
-**Shaman (sc_shaman.cpp)**
-Class-tree utility talents — documented 2026-03-22:
-- `thunderous_paws`, `gust_of_wind`, `creation_core` — movement/utility; no DPS impact
-- `fury_of_the_storms` — stale NYI label fixed; already implemented (summons Storm Elemental on Stormkeeper)
-- `surging_shields` (ID 382033) — IMPLEMENTED 2026-03-22 in `lightning_shield_damage_t::execute()`:
-  - Elemental: +4 Maelstrom per Lightning Shield trigger via `trigger_maelstrom_gain()`
-  - Enhancement: +50% Maelstrom Weapon proc chance per trigger via `generate_maelstrom_weapon()`
-  - `gain_t* surging_shields` added to gains struct + `init_gains()`
-
-**Rogue**
-- Stale "Partial NYI" comment at line 822 for `sudden_demise` — FIXED 2026-03-22, now documents implemented behavior.
-- `deaths_arrival` (Fatebound hero talent) — NYI in-game, skipped.
+**Druid Balance**
+- No valid talent hash in profile — APL running on game defaults only (confirmed by ~3k
+  composite DPS in Phase 4 baselines). Needs correct talent export code.
 
 ### LOW — Cosmetic / blocked
 
-- Phase 4 APL optimization loop: baselines done (56×2=112 JSONs), report script fixed (composite DPS table generated), permutation loop pending
+- Phase 4 APL optimization loop: 52/56 profiles have both PW+HAC baselines; 4 missing HAC runs
+  (DK Blood x2, Evoker Dev x2) need to be completed before composite scoring is final
 - Trinket+embellishment stacking — GitHub Issue #81, blocked on beta data
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
-- Phase 4 composite DPS table: see results/phase4/ — top specs Warlock Demo (284k composite), Rogue Sub (179k), Mage Fire (163k)
 
 ---
 
 ## 8. Scanner False-Positive Bug in missing_from_code.md
 
 The audit script searches for `player_talent_t` keyword to find talent declarations.
-Hunter uses `spell_data_ptr_t` and Paladin uses `const spell_data_t*` — both fully implemented
-but appear as 100% missing in the report.
+Hunter uses `spell_data_ptr_t` (sc_hunter.cpp lines 17–30) and Paladin uses
+`const spell_data_t*` (paladin/sc_paladin.cpp) — both fully implemented but appear
+as 100% missing in the report.
 
-**Impact:** 471 talents across Hunter BM/MM/SV and Paladin Prot/Ret reported as missing — all confirmed implemented.
+**Impact:** 471 talents across Hunter BM/MM/SV and Paladin Prot/Ret reported as missing —
+all confirmed implemented by direct code inspection.
 
-Fix recommendation: update the scanner to also search for `find_talent_spell` calls and `spell_data_ptr_t` declarations.
+**Note on file paths:** Paladin module is in engine/class_modules/paladin/sc_paladin.cpp
+(subdirectory), not a flat engine/class_modules/sc_paladin.cpp.
+Monk module is in engine/class_modules/monk/sc_monk.cpp (subdirectory).
+
+Fix recommendation: update the scanner to also search for `find_talent_spell` calls,
+`spell_data_ptr_t` declarations, and `const spell_data_t*` pointer patterns.
 
 ---
 
@@ -430,7 +393,7 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | 826b89e | 2026-03-20 | Aug Evoker Apex (Duplicate) + NYI unique gear (1237154, 1263727) |
 | 5f93285 | 2026-03-20 | Rogue Outlaw Grand Melee (1259469) + Assassination Sudden Demise execute |
 | ab3536d | 2026-03-21 | Shaman Elemental: Lava Flows (ID 1273485) |
-| 6b31c73 | 2026-03-21 | Monk Windwalker: Weapon of Wind (ID 1272678) |
+| 6b31c73 | 2026-03-21 | Monk Windwalker: Weapon of Wind (ID 1272678) — registered stub only, no effect code |
 | fb8943a | 2026-03-22 | extract_wowhead_tabs.py — discovery-based browser extractor |
 | 596f2f8 | 2026-03-22 | Wowhead extraction complete — all 33 specs × 5 pages (330 files) |
 | 1c6dc7a | 2026-03-22 | Fix: hero talent toggle (data-active check) + placeholder wait |
