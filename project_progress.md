@@ -218,7 +218,7 @@ Full specification: `APL_optimization.md`
 | :--- | :--- | :--- |
 | Phase 1 | Browser extraction of all Wowhead pages (rotation, talents, bis, consumables, tier) | COMPLETE — 33 specs × 5 pages = 165 files in wowhead/*/extracted/ |
 | Phase 2 | APL validation — diff all specs against Wowhead rotations | COMPLETE — 2 fixes applied |
-| Phase 3 | Profile updates — BiS gear, consumables, talent builds from extracted data | NOT STARTED |
+| Phase 3 | Profile updates — BiS gear, consumables, talent builds from extracted data | PARTIAL — consumables done (30/52 profiles fixed 2026-03-22); gear audit done (changelog noise filtered); talent strings blocked (see T8 note) |
 | Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | NOT STARTED |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
@@ -239,13 +239,32 @@ python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 python3 wowhead/extract_wowhead_tabs.py --all --pages rotation,talents,bis,consumables,tier
 ```
 
-### Phase 3 Next Steps
+### Phase 3 Status (2026-03-22)
 
-1. Update all profiles with Wowhead BiS gear + consumables (from extracted/bis.md, extracted/consumables.md)
-2. Build multi-talent-build profiles (from extracted/talents.md export codes — up to 8 builds per spec)
-3. Run optimization loop: Patchwerk (50% weight) + HecticAddCleave (50% weight), accept changes
-   only when composite improves AND neither fight style regresses >1%
-4. Trinket combinatorics: extract all BiS trinkets, sim all pairs, find optimal combo per fight style
+**DONE:**
+- Consumables: 30/52 profiles updated — flask, potion, food now match Wowhead Season 1 recommendations
+- Gear audit: completed audit script (audit_gear.py); changelog noise filtered; real discrepancies documented
+- 52/52 profiles still pass 1-iter smoke test after consumables changes
+
+**GEAR DISCREPANCIES (real, need item IDs to fix):**
+Some profiles have outdated gear items vs current Wowhead BiS. Key examples:
+- Priest Shadow: arcanoweave_cloak/bracers → draconic_nullcape / wraps_of_watchful_wrath
+- DK Frost: relentless_riders_chain (waist) → hate_tied_waistchain
+- Evoker Dev: spelltreads → darkstrider_treads; gaze_of_alnseer → locus_walkers_ribbon (trinket)
+- Warlock Demo/Destro: multiple item updates needed
+- Specs that are correct: DK Unholy, Mage Arcane x2, Shaman Ele, Hunter MM, Warrior Arms, Monk Brew
+
+**T8 — TALENT STRINGS (blocked):**
+extracted/talents.md files contain only rank-count lists (1/1, 2/2...), not base64 export codes.
+The extractor captures visible tab text but talent export codes are behind a JS "copy" button.
+Profiles already have valid talents= strings (from initial setup). Re-extraction requires
+upgrading extract_wowhead_tabs.py to intercept the export code from the talent-calc JS.
+
+**REMAINING Phase 3 Work:**
+1. Fix gear item mismatches in ~25 profiles (need item IDs from Wowhead — do per-spec)
+2. Upgrade extractor to capture talent export codes (JS intercept or talent-calc API)
+3. Run optimization loop: Patchwerk (50%) + HecticAddCleave (50%)
+4. Trinket combinatorics: sim all BiS trinket pairs per spec
 
 ---
 
