@@ -7,7 +7,7 @@ level=90
 race=blood_elf
 role=attack
 position=back
-# talents= (assassination talent hash not set — using defaults)
+talents=CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmtBbzAAAAAAy2MzMzMzYMzMzsNz2MzMYMzMzYmxwAsZWGYALBbDTghFDmZAGjB
 
 # Default consumables (Wowhead Midnight Season 1)
 potion=lights_potential_2

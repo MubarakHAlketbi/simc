@@ -132,7 +132,7 @@ actions.variables=variable,name=cds_active,op=set,value=!talent.summon_darkglare
 
 head=abyssal_immolators_smoldering_flames,id=250042,bonus_id=1808/13575,ilevel=289,gem_id=240983,enchant_id=7961
 neck=eternal_voidsong_chain,id=249368,bonus_id=12806/13577/13668,gem_id=240916
-shoulders=echoing_void_mantle,id=249328,bonus_id=12806/13577,enchant_id=8001
+shoulders=mantle_of_dark_devotion,id=251085,bonus_id=12806/13577,enchant_id=8001
 back=adherents_silken_shroud,id=239656,bonus_id=8795/8960/12214/12384/13622/13667/9627,crafted_stats=36/49
 chest=abyssal_immolators_dreadrobe,id=250045,bonus_id=13575,ilevel=289,enchant_id=7987
 wrists=martyrs_bindings,id=239648,bonus_id=1808/8795/8960/12066/12214/12384/13622/13667/9627,gem_id=240916,crafted_stats=32/36

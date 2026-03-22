@@ -165,10 +165,24 @@ _COMMENT_WIDGET_ANCHORS = [
     "How to Play Your Class in the Battle for Azeroth",
     "How to Play Your Class in",
     "Please log in to submit feedback",
+    "Post a Comment",
+    "Comments (Newest First)",
+    "Comment by ",
 ]
 
 # Regex that matches the comment-count pattern "N - N of N"
 _COMMENT_COUNT_RE = re.compile(r'^\d+\s*-\s*\d+\s+of\s+\d+$')
+
+# Regex patterns for Wowhead user comments (not forum widget, but page comments)
+# e.g. "By Username (Patch 12.0.1)" or "Patch 12.0.1"
+_USER_COMMENT_PATTERNS = [
+    re.compile(r'^By \w+.*\(Patch \d+\.\d+'),          # "By Username ... (Patch X.X.X)"
+    re.compile(r'^\(Patch \d+\.\d+'),                    # "(Patch X.X.X)"
+    re.compile(r'^Reply$'),                               # standalone "Reply"
+    re.compile(r'^Report$'),                              # standalone "Report"
+    re.compile(r'^\d+ (likes?|dislikes?)$'),              # vote counts "5 likes"
+    re.compile(r'^Edited by \w+'),                        # "Edited by Username"
+]
 
 
 def strip_site_noise(text):
@@ -196,6 +210,11 @@ def strip_site_noise(text):
                     break
             if not is_noise and _COMMENT_COUNT_RE.match(stripped):
                 is_noise = True
+            if not is_noise:
+                for pat in _USER_COMMENT_PATTERNS:
+                    if pat.match(stripped):
+                        is_noise = True
+                        break
 
             if is_noise:
                 skip_mode = True
