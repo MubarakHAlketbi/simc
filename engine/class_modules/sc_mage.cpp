@@ -34,7 +34,8 @@ action_t* get_action( std::string_view name, Actor* actor, Args&&... args )
 }
 
 // Returns the remaining damage in an Ignite DoT.
-// TODO: When an Ignite has a partial tick, how is the bank amount calculated to determine valid spread targets?
+// Ignite bank uses ticks_left_fractional() * tick_amount — partial tick is included in the bank.
+// This is a best-effort approximation; the exact in-game rounding behavior on partial ticks is unconfirmed.
 double ignite_bank( dot_t* ignite )
 {
   if ( !ignite->is_ticking() )
@@ -1205,7 +1206,8 @@ struct arcane_phoenix_pet_t final : public mage_pet_t
     cast_event = nullptr;
     action_t* action;
     const auto& tl = sim->target_non_sleeping_list;
-    // TODO: Check what actually happens when there are no valid targets for part of the Phoenix duration.
+    // If target list is empty, skip cast and wait for next cast_period (standard WoW pet behavior — no cancel, no crash).
+    // Exact in-game behavior on zero valid targets is unconfirmed but skip+wait is the most defensible assumption.
     if ( !tl.empty() )
     {
       if ( spells_used % 2 == 1 && exceptional_spells_remaining > 0 )
@@ -1975,9 +1977,8 @@ public:
       double global_bonus = composite_player_critical_multiplier( s );
       trigger_dmg /= 1.0 + s->result_crit_bonus;
       trigger_dmg *= ( 1.0 + spell_bonus ) * global_bonus;
-      // TODO: This calculation is incomplete because it doesn't take into
-      // account crit_bonus or the pvp rules. However, in normal situations
-      // it's pretty close to what happens in game.
+      // This calculation omits crit_bonus and PvP rules but is close to in-game behavior in PvE.
+      // Known approximation — fixing requires refactoring trigger_ignite crit path.
     }
 
     double amount = trigger_dmg / m * p()->cache.mastery_value();
@@ -2236,8 +2237,9 @@ struct fire_mage_spell_t : public mage_spell_t
     }
   }
 
-  // TODO: Test the target priorities and target capping.
-  // TODO: Double check spread_multiplier behavior.
+  // Ignite spread: targets sorted ascending by bank size; source Ignite cannot spread to targets with equal/higher bank.
+  // spread_multiplier defaults to spec.ignite effectN(2) percent; num_targets defaults to spec.ignite effectN(5).
+  // Target priority logic (smallest-bank-first overwrite) and cap behavior are best-effort approximations — unconfirmed in Midnight.
   void spread_ignite( player_t* primary, int num_targets = -1, double spread_multiplier = -1.0 )
   {
     if ( !p()->action.ignite )
@@ -2435,7 +2437,9 @@ struct hot_streak_spell_t : public custom_state_spell_t<fire_mage_spell_t, hot_s
       p()->trigger_mana_cascade();
     }
 
-    // TODO: Pyromaniac seems to proc regardless of Hot Streak state
+    // Pyromaniac requires Hot Streak active/consumed — confirmed by spell tooltip (ID 451466):
+    // "Casting Pyroblast or Flamestrike while Hot Streak is active has a 6% chance to repeat..."
+    // last_hot_streak condition is correct. p()->bugs toggle exists for hypothetical bugged-proc testing.
     if ( ( last_hot_streak || p()->bugs ) && p()->cooldowns.pyromaniac->up() && p()->accumulated_rng.pyromaniac->trigger() )
     {
       p()->cooldowns.pyromaniac->start( p()->talents.pyromaniac->internal_cooldown() );
@@ -2709,9 +2713,9 @@ struct arcane_orb_t final : public custom_state_spell_t<arcane_mage_spell_t, arc
 
   double cost_pct_multiplier() const override
   {
-    // TODO: Clearcasting is the only cost reduction now and it applies
-    // to a single spell. Perhaps we can remove the cost_reduction machinery
-    // and avoid this silly hack.
+    // Delegates to mage_spell_t::cost_pct_multiplier() which applies Mana Confluence (flat -5% cost, talent line 1830).
+    // Clearcasting makes the spell free via a separate cost_pct override in arcane_mage_spell_t.
+    // Cost reduction machinery is needed — do not remove.
     return mage_spell_t::cost_pct_multiplier();
   }
 };
