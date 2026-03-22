@@ -1,6 +1,6 @@
 # evoker/augmentation — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/talent-builds-pve-dps
-Generated: 2026-03-21 22:28
+Generated: 2026-03-22 06:34
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Scalecommander']
@@ -9,6 +9,13 @@ Tab Group 1: ['Scalecommander']
 Tab Group 2: ['Scalecommander']
 
 ## Hero Talent: Scalecommander
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CEcBAAAAAAAAAAAAAAAAAAAAAMmxMbzMzMWGYmlZMGmZDAAAAAGAAMzMwgxUjZmZAAAAwMmZGzMbjZGYmNDMmxCLwAzwQjYBzMmZAgB`
+Build 2: `CEcBAAAAAAAAAAAAAAAAAAAAAMmZmZbmZmxyAzsMjxwMAAAAAAAAYmBmBjHoGzMzAAAAgZmZmxMzyYmBmZzAjZswCMwMM0IWwMzMzAAD`
+Build 3: `CEcBAAAAAAAAAAAAAAAAAAAAAMmxMbzMzMWGYmlZMGmZDAAAAAGAAMzMwgxUjZmZAAAAwMmZGzMbjZGYmNjBLwyYYsNAmJiNMzAzMAG`
+Build 4: `CEcBAAAAAAAAAAAAAAAAAAAAAMmZmZbmZmxyAzsMjxwMAAAAAAAAYmBmBjHoGzMzAAAAgZmZmxMzyYmBmZzYwCsMGGbDgZiYDzMDmZAM`
 
 ### tab_group_0 — Tabs: ['Scalecommander']
 
@@ -276,7 +283,7 @@ could you please lay out a talent build for chronowarden for those that want to 
 1
 
 	
-By TheNemesis1705 (2,913 – 8·10) 3 days ago (Patch 12.0.1)	
+By TheNemesis1705 (2,913 – 8·10) 4 days ago (Patch 12.0.1)	
 	
 why was the raid build changed from the "motes" build to the "molten embers" build when the molten embers JUST got nerfed for the start of s1?
 
@@ -284,7 +291,7 @@ why was the raid build changed from the "motes" build to the "molten embers" bui
 
 	
 
-Jereico <Guide Author> 2 days ago (Patch 12.0.1)
+Jereico <Guide Author> 3 days ago (Patch 12.0.1)
 
 A recent hotfix removed the smart-targeting logic for Shifting Sands from Motes (i.e. Shifting Sands no longer automatically picks nearby DPS when Motes are picked up by Aug, Tanks, or Healers). This coupled with the tier set changes and spec tuning have tilted the recommended builds back in favour of Scalecommander and Molten Embers for now.
 By khdunderscore (1,145 – 2·4) on 2023/08/18 (Patch 10.1.5)	
@@ -573,7 +580,7 @@ could you please lay out a talent build for chronowarden for those that want to 
 1
 
 	
-By TheNemesis1705 (2,913 – 8·10) 3 days ago (Patch 12.0.1)	
+By TheNemesis1705 (2,913 – 8·10) 4 days ago (Patch 12.0.1)	
 	
 why was the raid build changed from the "motes" build to the "molten embers" build when the molten embers JUST got nerfed for the start of s1?
 
@@ -581,7 +588,7 @@ why was the raid build changed from the "motes" build to the "molten embers" bui
 
 	
 
-Jereico <Guide Author> 2 days ago (Patch 12.0.1)
+Jereico <Guide Author> 3 days ago (Patch 12.0.1)
 
 A recent hotfix removed the smart-targeting logic for Shifting Sands from Motes (i.e. Shifting Sands no longer automatically picks nearby DPS when Motes are picked up by Aug, Tanks, or Healers). This coupled with the tier set changes and spec tuning have tilted the recommended builds back in favour of Scalecommander and Molten Embers for now.
 By khdunderscore (1,145 – 2·4) on 2023/08/18 (Patch 10.1.5)	
@@ -870,7 +877,7 @@ could you please lay out a talent build for chronowarden for those that want to 
 1
 
 	
-By TheNemesis1705 (2,913 – 8·10) 3 days ago (Patch 12.0.1)	
+By TheNemesis1705 (2,913 – 8·10) 4 days ago (Patch 12.0.1)	
 	
 why was the raid build changed from the "motes" build to the "molten embers" build when the molten embers JUST got nerfed for the start of s1?
 
@@ -878,7 +885,7 @@ why was the raid build changed from the "motes" build to the "molten embers" bui
 
 	
 
-Jereico <Guide Author> 2 days ago (Patch 12.0.1)
+Jereico <Guide Author> 3 days ago (Patch 12.0.1)
 
 A recent hotfix removed the smart-targeting logic for Shifting Sands from Motes (i.e. Shifting Sands no longer automatically picks nearby DPS when Motes are picked up by Aug, Tanks, or Healers). This coupled with the tier set changes and spec tuning have tilted the recommended builds back in favour of Scalecommander and Molten Embers for now.
 By khdunderscore (1,145 – 2·4) on 2023/08/18 (Patch 10.1.5)	

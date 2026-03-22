@@ -1,6 +1,6 @@
 # hunter/marksmanship — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/talent-builds-pve-dps
-Generated: 2026-03-21 22:31
+Generated: 2026-03-22 06:35
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sentinel']
@@ -9,6 +9,15 @@ Tab Group 1: ['Sentinel']
 Tab Group 2: ['Sentinel']
 
 ## Hero Talent: Sentinel
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGNWGAzgNAAAAAAAAgZMjZYGzMjZwYaGjZmZbbzMzMMzgZmlxYWGMDAAYMzMDAzMttBDw2wA`
+Build 2: `C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGNWGAzgNAAAAAAAAgZMzMjtZMzMmhlx0MGjZ222MzMDzMsMzsMGzywMDAAgxYAYmpFGGgNM`
+Build 3: `C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGN2GAzgNAAAAAAAAgZMjZYGzMjZGeATzYMmZbZzMzMMzwyMz2YMbDzMAAgZGDAMz0GWmBYDD`
+Build 4: `C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYLwsAAAAAAAAAMjZMDzYmZMDGTzYwMbbMzMWmZGjZmNmZWGMDAAYMzMzMzMgJbwAshB`
+Build 5: `C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYJwsAAAAAAAAAMjZmZsNjZmxMsMmmxgZW22mZmhHYmZsMjFGzywMDAAgxYmZmBMhhBYDD`
+Build 6: `C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYJwsAAAAAAAAAMjZmZsNjZmxMsMmmxgZW22mZmhHYmZsMjNGzywMDAAgxYmZmBMhhBYDD`
 
 ### tab_group_0 — Tabs: ['Sentinel']
 

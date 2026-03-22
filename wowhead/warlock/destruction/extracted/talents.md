@@ -1,6 +1,6 @@
 # warlock/destruction — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/destruction/talent-builds-pve-dps
-Generated: 2026-03-21 23:01
+Generated: 2026-03-22 06:42
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Diabolist', 'Hellcaller']
@@ -9,6 +9,15 @@ Tab Group 1: ['Hellcaller Mythic+', 'Diabolist Mythic+']
 Tab Group 2: ['Diabolist', 'Hellcaller']
 
 ## Hero Talent: Diabolist
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsAGzYYhMw2wGNWYAAgxAjNAMzAYmxYAAAYmZmBAwMDD`
+Build 2: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzDMzoZzM2MzYWmNMzsMzMLLzMAAgZMzMLgxMGWIDsNsQjFGAAYAzAAmZAGzYmZDAAwMzMAAYGG`
+Build 3: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLDzMLGzyiZAAwYGzMzCYMjhFyAbDb0YhBAAGgxGAmZAmZGjZDAAwMzMAAMzwA`
+Build 4: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsYBGYWMaMDgZL2YAAgxAjNAgZGYmxYAAAYmZmBAwMDD`
+Build 5: `CsQAAAAAAAAAAAAAAAAAAAAAAwMjZGNLmxiZGzysNzYsYmZZZmBAAzgZmZxCMwsY0YGAzWsxAAAjZYAAwMDGzMmZDAAwMzMDAAzwA`
+Build 6: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLjxMLGz2CDAAmZGzMzCYMjhFyAbDb0YhBAAGDM2AwMDwMzYMbAAAmZmBAgZGG`
 
 ### tab_group_0 — Tabs: ['Diabolist Single-Target', 'Diabolist/Hellcaller Cleave']
 
@@ -1682,6 +1691,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Hellcaller
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsAGzYYhMw2wGNWYAAgxAjNAMzAYmxYAAAYmZmBAwMDD`
+Build 2: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzDMzoZzM2MzYWmNMzsMzMLLzMAAgZMzMLgxMGWIDsNsQjFGAAYAzAAmZAGzYmZDAAwMzMAAYGG`
+Build 3: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLDzMLGzyiZAAwYGzMzCYMjhFyAbDb0YhBAAGgxGAmZAmZGjZDAAwMzMAAMzwA`
+Build 4: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsYBGYWMaMDgZL2YAAgxAjNAgZGYmxYAAAYmZmBAwMDD`
+Build 5: `CsQAAAAAAAAAAAAAAAAAAAAAAwMjZGNLmxiZGzysNzYsYmZZZmBAAzgZmZxCMwsY0YGAzWsxAAAjZYAAwMDGzMmZDAAwMzMDAAzwA`
+Build 6: `CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLjxMLGz2CDAAmZGzMzCYMjhFyAbDb0YhBAAGDM2AwMDwMzYMbAAAmZmBAgZGG`
 
 ### tab_group_0 — Tabs: ['Diabolist Single-Target', 'Diabolist/Hellcaller Cleave']
 

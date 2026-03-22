@@ -1,6 +1,6 @@
 # warrior/fury — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/fury/talent-builds-pve-dps
-Generated: 2026-03-21 23:05
+Generated: 2026-03-22 06:44
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Slayer', 'Mountain Thane']
@@ -9,6 +9,15 @@ Tab Group 1: ['Mountain Thane', 'Slayer']
 Tab Group 2: ['Mountain Thane', 'Slayer']
 
 ## Hero Talent: Slayer
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA`
+Build 2: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA`
+Build 3: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG`
+Build 4: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA`
+Build 5: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB`
+Build 6: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA`
 
 ### tab_group_0 — Tabs: ['Slayer', 'Mountain Thane']
 
@@ -1757,6 +1766,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Mountain Thane
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA`
+Build 2: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA`
+Build 3: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG`
+Build 4: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA`
+Build 5: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB`
+Build 6: `CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA`
 
 ### tab_group_0 — Tabs: ['Slayer', 'Mountain Thane']
 

@@ -1,6 +1,6 @@
 # shaman/enhancement — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/talent-builds-pve-dps
-Generated: 2026-03-21 22:55
+Generated: 2026-03-22 06:41
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Totemic', 'Stormbringer']
@@ -9,6 +9,15 @@ Tab Group 1: ['Totemic Mythic+', 'Stormbringer Mythic+']
 Tab Group 2: ['Totemic', 'Stormbringer']
 
 ## Hero Talent: Totemic
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYmZmZmZmhZmZAAAAAAAAAsBYzMG2ILwMM0gFAmlZMzMWWmBmZ2YZmZmhhxMAAzwwMmZCMzAYMA`
+Build 2: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2ILwMM0gFAmlZMjxyiBmZ2GLzMzMDWGzAAYYMDmJwMDGMuAA`
+Build 3: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2IbwMM0gFAmlZMjxyyMwMz2YxMzMjxCzAAYYMDmJwMDGMuAA`
+Build 4: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMzMWWmBmZ2YZmZmhhxMAAGgxMTMzAAjB`
+Build 5: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZGzAAAAAAAAAALwGMjFN2GAzEsBwsMjZMWWMwMz2YZmZmZwyYGAAgxYGxMDwgxA`
+Build 6: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMjxyyMwMjxiZmZGjFmBAAYMmZiZGAYMA`
 
 ### tab_group_0 — Tabs: ['Totemic Raid / ST', 'Stormbringer Raid / ST']
 
@@ -1726,6 +1735,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Stormbringer
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYmZmZmZmhZmZAAAAAAAAAsBYzMG2ILwMM0gFAmlZMzMWWmBmZ2YZmZmhhxMAAzwwMmZCMzAYMA`
+Build 2: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2ILwMM0gFAmlZMjxyiBmZ2GLzMzMDWGzAAYYMDmJwMDGMuAA`
+Build 3: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2IbwMM0gFAmlZMjxyyMwMz2YxMzMjxCzAAYYMDmJwMDGMuAA`
+Build 4: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMzMWWmBmZ2YZmZmhhxMAAGgxMTMzAAjB`
+Build 5: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZGzAAAAAAAAAALwGMjFN2GAzEsBwsMjZMWWMwMz2YZmZmZwyYGAAgxYGxMDwgxA`
+Build 6: `CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMjxyyMwMjxiZmZGjFmBAAYMmZiZGAYMA`
 
 ### tab_group_0 — Tabs: ['Totemic Raid / ST', 'Stormbringer Raid / ST']
 

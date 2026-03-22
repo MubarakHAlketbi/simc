@@ -1,6 +1,6 @@
 # druid/guardian — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/talent-builds-pve-tank
-Generated: 2026-03-21 22:24
+Generated: 2026-03-22 06:34
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw']
@@ -9,6 +9,14 @@ Tab Group 1: ['Elunes Chosen', 'Druid of the Claw']
 Tab Group 2: ['Elunes Chosen']
 
 ## Hero Talent: Druid of the Claw
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMPwYM2MLzMPgZZZgZDGNRzMzyMzMzYMjZAAAAAADLzAAAAQNzysMzMDAgFMzAsYGMYwy2AgZWgB`
+Build 2: `CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMPwMjxiZZMPwMLLDMbGGNRzMzyMzMzsMmhBAAAAAMsMDAAAA1MLzyMzMAAWwMPAwiZwgBLbDAmZDG`
+Build 3: `CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxs4BGjxmZZmZMLLDMbwoJamZWmZmZGjZMDAAAAAYYZGw22MDGz2AYKAAAwGmZAWMDGMYZbAmZAM`
+Build 4: `CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZmlZGjxiZh5BmZZZgZzwoJamZWmZmZmlxMAAAAAAMsMDYZbmBjZZAMFAAAYzYmHAYxMYwgltBYmBwA`
+Build 5: `CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMjxiZZMPgZZZgZzMGNRzMziZmZmlxMAAAAAAMsNDYZbmBjZZAMFAAAYDz8ADYxMYwgltBYmBwA`
 
 ### tab_group_0 — Tabs: ['Druid of the Claw']
 

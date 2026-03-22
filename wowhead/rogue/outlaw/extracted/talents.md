@@ -1,6 +1,6 @@
 # rogue/outlaw — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/talent-builds-pve-dps
-Generated: 2026-03-21 22:49
+Generated: 2026-03-22 06:40
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Fatebound']
@@ -9,6 +9,13 @@ Tab Group 1: ['Fatebound']
 Tab Group 2: ['Fatebound']
 
 ## Hero Talent: Fatebound
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGjZMzsNzMzY8AmNegZmZZaZw2MAAAAAgZbbmZGmZmZGzMz2AAAAwYAwY2MMkBmFWoN2YAmZwAD`
+Build 2: `CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGzMzMzsNzMzYmHYmNeAmx0ygtZAAAAAAz22MzMMzMzMmZmtBAAAgxAgxsZYIDMLsQLsxAMzgBG`
+Build 3: `CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGjZMzsNzMzMjHwswDMzMLTLD2mBAAAAAMbbzMzwMzMzYmZ2GAAAAGADsBzY0Y2AsNhFGAMzMwA`
+Build 4: `CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGzMzMzsNzMzYmHYmFGmx0ygtZAAAAAAz22MzMMzMzMmZmtBAAAgBwAbwMGNmNAbTYhBAzMDM`
 
 ### tab_group_0 — Tabs: ['Fatebound']
 

@@ -1,6 +1,6 @@
 # priest/shadow — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/talent-builds-pve-dps
-Generated: 2026-03-21 22:46
+Generated: 2026-03-22 06:39
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Archon']
@@ -9,6 +9,13 @@ Tab Group 1: ['Archon']
 Tab Group 2: ['Archon']
 
 ## Hero Talent: Archon
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAgxYxMGLzMY2mZGzw2MzYmZGbIzYxMNAzAMzmZY2MAkxYBAzAZMzMjZbMz2yAMTMA`
+Build 2: `CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAghZxMGLzMMzyMDzw2MzYmZGbIzYxMNAzAMziZY2MAkxYBAzYIjZmZMbjZ2WGgZiB`
+Build 3: `CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAgxYxMGLzMY2mZGzw2MzYmZGbIzYxMNAzMzAABY2mtFwsxAMDkxMzMmtxMYmBzED`
+Build 4: `CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAgBLmxYZmxMzyMDzw2MzYmZGbIzYxMNAzMzAABY2mtFwsxAMzMjMmZmxsxMYmBzED`
 
 ### tab_group_0 — Tabs: ['Archon']
 

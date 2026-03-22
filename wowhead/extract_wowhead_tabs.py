@@ -279,6 +279,34 @@ class PageDiscovery:
                 continue
         return "\n\n---\n\n".join(visible_text) if visible_text else ""
 
+    def get_talent_links(self):
+        """
+        Extract talent-calc/blizzard/ export codes from all <a href> links on the page.
+        These are the base64 talent strings usable directly in SimC profiles as talents=<code>.
+        Returns a list of unique talent code strings (the part after /talent-calc/blizzard/).
+        """
+        try:
+            links = self.page.evaluate(
+                "Array.from(document.querySelectorAll('a[href*=\"talent-calc/blizzard/\"]'))"
+                ".map(a => a.href)"
+            )
+            codes = []
+            seen = set()
+            for href in links:
+                # Extract the base64 code from the URL
+                # Format: https://www.wowhead.com/talent-calc/blizzard/CODEHERE
+                idx = href.find("/talent-calc/blizzard/")
+                if idx >= 0:
+                    code = href[idx + len("/talent-calc/blizzard/"):]
+                    # Strip any trailing query params or fragments
+                    code = code.split("?")[0].split("#")[0].strip()
+                    if code and code not in seen:
+                        seen.add(code)
+                        codes.append(code)
+            return codes
+        except Exception:
+            return []
+
     def get_visible_panel_text(self):
         """Get text only from currently visible/active tab panels."""
         panels = self.page.query_selector_all('[role="tabpanel"]')
@@ -426,6 +454,18 @@ def extract_page_complete(page_obj, cls, spec, page_name, url=None):
 
         results["content"][hero_name] = {}
 
+        # For talents pages: extract all talent-calc/blizzard/ href codes visible after
+        # the hero switch — these are the base64 SimC talent strings.
+        if page_name == "talents":
+            talent_codes = disc.get_talent_links()
+            if talent_codes:
+                results["content"][hero_name]["talent_codes"] = talent_codes
+                print(f"    Talent codes found: {len(talent_codes)}")
+                for code in talent_codes[:3]:
+                    print(f"      {code[:60]}...")
+            else:
+                print(f"    No talent-calc/blizzard/ links found for this hero state")
+
         # Re-discover after hero switch (tabs may have changed)
         tab_groups_now = disc.discover_tab_groups()
         talent_toggles_now = disc.discover_toggle_buttons()
@@ -572,6 +612,15 @@ def format_output(data):
             if group_key == "full_page":
                 lines.append("### Full Page Content")
                 lines.append(group_data)
+                lines.append("")
+                continue
+
+            # Talent codes block — emit as a SimC-ready section
+            if group_key == "talent_codes":
+                lines.append("### Talent Export Codes (SimC `talents=` strings)")
+                lines.append("")
+                for i, code in enumerate(group_data, 1):
+                    lines.append(f"Build {i}: `{code}`")
                 lines.append("")
                 continue
 

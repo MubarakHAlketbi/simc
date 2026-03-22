@@ -1,6 +1,6 @@
 # hunter/beast-mastery — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/beast-mastery/talent-builds-pve-dps
-Generated: 2026-03-21 22:29
+Generated: 2026-03-22 06:35
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -9,6 +9,15 @@ Tab Group 1: ['Pack Leader Mythic+ Build', 'Dark Ranger Mythic+ Build']
 Tab Group 2: ['Pack Leader Delve Build']
 
 ## Default (no hero switch)
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGPw2YmtZGmxMDDzMGzMMzYGzwMzYGzghmBAAAAAMDAAAzMzMAzshwwsA2MA`
+Build 2: `C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsBzwQDbAAYGzyMzsYGmZmZGzMMmxMMzYmZGbzMDjZYZoZAAAAAAAAAw8AjZGwMbIgZBsZA`
+Build 3: `C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwGsAzwQDbAAYGzyMzsYGmZmZGzMMmxMMzMzYGmZGGzMMmmBAAAAAAAAAjxMAzsgglZWAbGA`
+Build 4: `C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZMbjZWegZYGzMmhZGDzwMjZMDzMjZMDGaGAAAAAwMAAAMzMzgZGgwwsA2MA`
+Build 5: `C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZGLzMziZYmZmhZMzYYGmZMzMjtZmhxMsM0MAAAAAgZAAAYegxMDzMABMLgND`
+Build 6: `C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZGLzMziZYmZmhZMzYYGmZmZMDzMDjZGGTzAAAAAAmBAAgxYGMzAEsMzCYzA`
 
 ### tab_group_0 — Tabs: ['Single-Target', 'Light Cleave', 'Full Raid Cleave']
 

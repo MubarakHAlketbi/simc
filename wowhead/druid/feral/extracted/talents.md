@@ -1,6 +1,6 @@
 # druid/feral — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/feral/talent-builds-pve-dps
-Generated: 2026-03-21 22:23
+Generated: 2026-03-22 06:33
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Wildstalker', 'Druid of the Claw']
@@ -9,6 +9,13 @@ Tab Group 1: ['Druid of the Claw']
 Tab Group 2: ['Druid of the Claw']
 
 ## Hero Talent: Wildstalker
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAghZ2YmZmZGzmx2MbzMzMmZAAAAYJYWMGmZUzYWMzMzsMmZAAAAAAwADAAAgmZZ2mZmBEYBMzAswgBAAwMbYA`
+Build 2: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGG`
+Build 3: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlxyMbzYGzMDAAAALBzihxMjaGziZmZGjZYAAAAAAMwAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD`
+Build 4: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZYmZmZMmNjtZ2mZmZegZGAAAAWCmFjhZG1MmFzMzMGzMGAAAAAADMAAAACAmlZ2aWmZZDMzAswgBAwMDAG`
 
 ### tab_group_0 — Tabs: ['Wildstalker']
 
@@ -890,6 +897,13 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Druid of the Claw
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAghZ2YmZmZGzmx2MbzMzMmZAAAAYJYWMGmZUzYWMzMzsMmZAAAAAAwADAAAgmZZ2mZmBEYBMzAswgBAAwMbYA`
+Build 2: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGG`
+Build 3: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlxyMbzYGzMDAAAALBzihxMjaGziZmZGjZYAAAAAAMwAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD`
+Build 4: `CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZYmZmZMmNjtZ2mZmZegZGAAAAWCmFjhZG1MmFzMzMGzMGAAAAAADMAAAACAmlZ2aWmZZDMzAswgBAwMDAG`
 
 ### tab_group_0 — Tabs: ['Wildstalker']
 

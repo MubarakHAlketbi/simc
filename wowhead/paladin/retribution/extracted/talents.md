@@ -1,6 +1,6 @@
 # paladin/retribution — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/talent-builds-pve-dps
-Generated: 2026-03-21 22:44
+Generated: 2026-03-22 06:38
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Herald of the Sun', 'Templar']
@@ -9,6 +9,15 @@ Tab Group 1: ['Templar']
 Tab Group 2: ['Templar']
 
 ## Hero Talent: Herald of the Sun
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQz22MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGbsNMAAkZm2mZ2mBAsBYAwYGmBzYMbYZGMMmxgB`
+Build 2: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxMDzYjNMAAkZm2mZ2mBAsBYAwYGGYGjZDLzghxMGM`
+Build 3: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYjtBAAkZm2mZ2mBAsBYAAzwMYYmZBLzgxMmxgB`
+Build 4: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzy2MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGLsNMgZZ2mZmtGEAAwCgBAjZYGMjxsAMzMMmxgB`
+Build 5: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxYYGLshBMLz2Mzs1gAAAWAMAYMDDMjZmNgZmhxMGM`
+Build 6: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYhtBgZZ2mZmtGEAAwCgBAMDzghZmFgZmxMmxgB`
 
 ### tab_group_0 — Tabs: ['Templar Execution Sentence', 'Templar Radiant Glory', 'Herald of the Sun']
 
@@ -1472,6 +1481,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Templar
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQz22MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGbsNMAAkZm2mZ2mBAsBYAwYGmBzYMbYZGMMmxgB`
+Build 2: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxMDzYjNMAAkZm2mZ2mBAsBYAwYGGYGjZDLzghxMGM`
+Build 3: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYjtBAAkZm2mZ2mBAsBYAAzwMYYmZBLzgxMmxgB`
+Build 4: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzy2MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGLsNMgZZ2mZmtGEAAwCgBAjZYGMjxsAMzMMmxgB`
+Build 5: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxYYGLshBMLz2Mzs1gAAAWAMAYMDDMjZmNgZmhxMGM`
+Build 6: `CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYhtBgZZ2mZmtGEAAwCgBAMDzghZmFgZmxMmxgB`
 
 ### tab_group_0 — Tabs: ['Templar Execution Sentence', 'Templar Radiant Glory', 'Herald of the Sun']
 

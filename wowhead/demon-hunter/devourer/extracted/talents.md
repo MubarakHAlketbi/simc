@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/talent-builds-pve-dps
-Generated: 2026-03-21 22:17
+Generated: 2026-03-22 06:32
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -9,6 +9,14 @@ Tab Group 1: ['Annihilator M+', 'Void-Scarred M+']
 Tab Group 2: ['Void-Scarred Delve']
 
 ## Default (no hero switch)
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CgcBAAAAAAAAAAAAAAAAAAAAAAAWmxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzYmZWmZmmlZ2mZGjZGA`
+Build 2: `CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmxMzMGzMAAAAAAALzYADAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzMzMzyMz0sNz2MzYMzA`
+Build 3: `CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmxMzMGzMAAAAAAAegxsNYGAAAAAAAAmxMMmZmZmZmZGzsYGjFtsxMzMzWbzMzAYYAIwMGMmB`
+Build 4: `CgcBAAAAAAAAAAAAAAAAAAAAAAA2mxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZGzsYGjFtsxMzMzWLzMzAYYAIwMGMmB`
+Build 5: `CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmZmZmxwMAAAAAAAmxAmBAAAAAAAgZMDjZmZmZmZmxMLmxYRLbMzMzs1yMzMAGzAQgZMYMD`
 
 ### tab_group_0 — Tabs: ['Annihilator Pure ST', 'Annihilator Raid Cleave', 'Void-Scarred Pure ST', 'Void-Scarred Raid Cleave', 'Void-Scarred Melee']
 
@@ -290,7 +298,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -583,7 +591,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -882,7 +890,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -1176,7 +1184,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -1478,7 +1486,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -1782,7 +1790,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -2093,7 +2101,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1
@@ -2406,7 +2414,7 @@ Hero talents are also reversed....the builds for Void-scarred are showing Annihi
 
 	
 
-DrippyNose <Epic Premium User> 18 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
 
 They working now?
 1 - 1 of 1

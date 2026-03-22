@@ -1,6 +1,6 @@
 # shaman/elemental — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/elemental/talent-builds-pve-dps
-Generated: 2026-03-21 22:53
+Generated: 2026-03-22 06:41
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Stormbringer', 'Farseer']
@@ -9,6 +9,15 @@ Tab Group 1: ['Stormbringer']
 Tab Group 2: ['Farseer']
 
 ## Hero Talent: Stormbringer
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbbbjxMmZAAAAAbmZDGwAmNmQmFAYWmZmxYbxEmZWGLzMzMGWsMjFMzMzCAwMAYmxwwA`
+Build 2: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZZbbMmxMAAAAALGbAAwsxEysAAzyMzMGbLmwMjxyMzMzMsMLGLYmZmFAgBAmZMMMA`
+Build 3: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZbZZMmxMDAAAAYzMbwAGwsxEysAAzyMzMGbLmwMjxyMzMzMjFLGLYMzsAAMAwMjhhB`
+Build 4: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMmZmZZbbgxMDAAAAAsYGDbwCMjGasBAzyMzMGbLmwMzyYZmZmxwysMjFzMjZWAAGAzMwwwA`
+Build 5: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMzYML2mhZMzAAAAAALmxwGsAzohGbAwsMzMjx2ipNmZMWmZmZMsMLGLmZGzsAAMDwMDMMMA`
+Build 6: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbLLjxMmZAAAAAAmxwGAmRoxGAMLzMzYmtFTYmxYZmZmxwysYsgZmZWAAmBYmBGGG`
 
 ### tab_group_0 — Tabs: ['Stormbringer', 'High Mobility and Cleave Farseer']
 
@@ -1209,6 +1218,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Farseer
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbbbjxMmZAAAAAbmZDGwAmNmQmFAYWmZmxYbxEmZWGLzMzMGWsMjFMzMzCAwMAYmxwwA`
+Build 2: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZZbbMmxMAAAAALGbAAwsxEysAAzyMzMGbLmwMjxyMzMzMsMLGLYmZmFAgBAmZMMMA`
+Build 3: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZbZZMmxMDAAAAYzMbwAGwsxEysAAzyMzMGbLmwMjxyMzMzMjFLGLYMzsAAMAwMjhhB`
+Build 4: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMmZmZZbbgxMDAAAAAsYGDbwCMjGasBAzyMzMGbLmwMzyYZmZmxwysMjFzMjZWAAGAzMwwwA`
+Build 5: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMzYML2mhZMzAAAAAALmxwGsAzohGbAwsMzMjx2ipNmZMWmZmZMsMLGLmZGzsAAMDwMDMMMA`
+Build 6: `CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbLLjxMmZAAAAAAmxwGAmRoxGAMLzMzYmtFTYmxYZmZmxwysYsgZmZWAAmBYmBGGG`
 
 ### tab_group_0 — Tabs: ['Stormbringer', 'High Mobility and Cleave Farseer']
 

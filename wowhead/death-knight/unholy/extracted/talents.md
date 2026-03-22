@@ -1,6 +1,6 @@
 # death-knight/unholy — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/unholy/talent-builds-pve-dps
-Generated: 2026-03-21 22:14
+Generated: 2026-03-22 06:31
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Rider of the Apocalypse', "San'layn"]
@@ -9,6 +9,14 @@ Tab Group 1: ['Rider of the Apocalypse', "San'layn"]
 Tab Group 2: ['Rider of the Apocalypse', "San'layn"]
 
 ## Hero Talent: Rider of the Apocalypse
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTzmZmZMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGwmZxwQGY2YoxCAmBAmZGzAMzMjZMA`
+Build 2: `CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZMDz2MzMTDzMmZGDAAAAAAAAzMMzAglhZmtZmxMGgFzmhhMwsxQjFMgZAYMzMMAzMDzYA`
+Build 3: `[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB`
+Build 4: `CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTziZGzMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGDMwMW0YZDwyEbAYGAYmZMDmZwMmxA`
+Build 5: `CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZYY2mZmZaYmxMzYAAAAAAAAYmhZGAsMMzsNzMmxwADMjFNWWAsMxGGwMAMmZGGMzgZMjB`
 
 ### tab_group_0 — Tabs: ['Rider of the Apocalypse', "San'layn"]
 
@@ -1769,6 +1777,14 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: San'layn
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTzmZmZMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGwmZxwQGY2YoxCAmBAmZGzAMzMjZMA`
+Build 2: `CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZMDz2MzMTDzMmZGDAAAAAAAAzMMzAglhZmtZmxMGgFzmhhMwsxQjFMgZAYMzMMAzMDzYA`
+Build 3: `[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB`
+Build 4: `CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTziZGzMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGDMwMW0YZDwyEbAYGAYmZMDmZwMmxA`
+Build 5: `CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZYY2mZmZaYmxMzYAAAAAAAAYmhZGAsMMzsNzMmxwADMjFNWWAsMxGGwMAMmZGGMzgZMjB`
 
 ### tab_group_0 — Tabs: ['Rider of the Apocalypse', "San'layn"]
 

@@ -1,6 +1,6 @@
 # druid/balance — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/balance/talent-builds-pve-dps
-Generated: 2026-03-21 22:21
+Generated: 2026-03-22 06:33
 
 ## Discovered Page Structure
 Hero Talent Switches: ["Elune's Chosen", 'Keeper of the Grove']
@@ -9,6 +9,14 @@ Tab Group 1: ["Elune's Chosen", 'Keeper of the Grove']
 Tab Group 2: ['Keeper of the Grove']
 
 ## Hero Talent: Elune's Chosen
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDMmlZmZmBYYWmZbYGzYjlZMzMjZ2wAgBYZbshpZmlRAAAA2MzMzMYzYYMDgZGAYA`
+Build 2: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgZZmlZWmxM2GLzsMGjxCGAMALbjNMNzsMCAAAwmZmHYmBbGzYMAMzAADA`
+Build 3: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMwMmZbsNjZsNzyMGjBLYAwAssN2w0MzyIAAAAbMzMzgNjZMmBwMDAMA`
+Build 4: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMYYmZMzyMLmZGLjlZWGjBLYAwYZbmBjZbEYCAAAwiZmZmBbGGjBAgZGYA`
+Build 5: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZmlxyMLjZGshBAjltZGMmtRgJAAAALMzMzgNjZMGAAmZgB`
 
 ### tab_group_0 — Tabs: ['Convoke the Spirits', 'Incarnation: Chosen of Elune']
 
@@ -1484,6 +1492,14 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Keeper of the Grove
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDMmlZmZmBYYWmZbYGzYjlZMzMjZ2wAgBYZbshpZmlRAAAA2MzMzMYzYYMDgZGAYA`
+Build 2: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgZZmlZWmxM2GLzsMGjxCGAMALbjNMNzsMCAAAwmZmHYmBbGzYMAMzAADA`
+Build 3: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMwMmZbsNjZsNzyMGjBLYAwAssN2w0MzyIAAAAbMzMzgNjZMmBwMDAMA`
+Build 4: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMYYmZMzyMLmZGLjlZWGjBLYAwYZbmBjZbEYCAAAwiZmZmBbGGjBAgZGYA`
+Build 5: `CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZmlxyMLjZGshBAjltZGMmtRgJAAAALMzMzgNjZMGAAmZgB`
 
 ### tab_group_0 — Tabs: ['Convoke the Spirits', 'Incarnation: Chosen of Elune']
 

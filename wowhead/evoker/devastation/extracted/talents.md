@@ -1,6 +1,6 @@
 # evoker/devastation — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/devastation/talent-builds-pve-dps
-Generated: 2026-03-21 22:26
+Generated: 2026-03-22 06:34
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Scalecommander']
@@ -9,6 +9,15 @@ Tab Group 1: ['Scalecommander']
 Tab Group 2: ['Scalecommander']
 
 ## Hero Talent: Scalecommander
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMDMDzYmBMYMTzMzMNjx2MmZmZmHYmZGwMmxYmZZmZgBGDWglxox2AyMIYDDMzghB`
+Build 2: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZgZ8AzgBGGjZaMzMNjx2MmZmZGzMzAmZmxYmZZmZgBGDWglxox2AyMIYDzgZGMMA`
+Build 3: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMzMDMDzMMwwYMTjZmpZMzyMmZmZGzMzAmZGDzMLzMDMADWglxox2AyMIYDDMzgZMA`
+Build 4: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZwMDGMgBjZamZmJjxyMzMzwMzMzAmxMzYmZZmZwMwMmB2ALgZYCsFsMMAmZGG`
+Build 5: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZGjZmZmZGzMwMGDTDzMZMWGmZGGzMzAmZmxYmxMzgZgZMDsA2AzwEYLYZYGgZmhB`
+Build 6: `CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZwMDmhBmBjZamZmJjxyMzMzwMzMzAmZGDzMbzMDmBMmB2ALgZYCsFsMMAmZGG`
 
 ### tab_group_0 — Tabs: ['Scalecommander']
 
@@ -294,7 +303,7 @@ These pre-patch builds are great, it's close to what I came up with just by look
 4
 
 	
-By Primalcrux (18,949 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
+By Primalcrux (18,954 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
 	
 Why not pick up Onyx Legacy? 1 Min Deep Breath is a lot of damage and utility.
 
@@ -309,21 +318,21 @@ It was considered before they reworked the final area of talents. I guess with t
 3
 
 	
-By yogus (12,557 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
+By yogus (12,562 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
 	
 Really wish Firestorm was more viable, it's fun.
 
 3
 
 	
-By Liina (4,884 – 18·21) on 2025/08/13 (Patch 11.2.0)	
+By Liina (4,889 – 18·21) on 2025/08/13 (Patch 11.2.0)	
 	
 The delve talent build must include Rescue. Because we always have Brann there, this is free teleport and can be used to quickly reposition out of danger or onto the healing potions. It really is a must have in higher difficulties.
 
 3
 
 	
-By 008Zulu (230 – 2) 24 days ago (Patch 12.0.1)	
+By 008Zulu (230 – 2) 25 days ago (Patch 12.0.1)	
 	
 Something is wrong with these talent builds, they are assigning more points than we currently get.
 
@@ -331,21 +340,21 @@ Something is wrong with these talent builds, they are assigning more points than
 
 	
 
-Preheat <Guide Author> 7 days ago (Patch 12.0.1)
+Preheat <Guide Author> 8 days ago (Patch 12.0.1)
 
 This was likely due to the swap from TWW to Midnight.
 
 2
 
 	
-By PriestessAur (92,245 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
+By PriestessAur (92,265 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
 	
 The Scalecommander Delve build export is talenting Spatial Paradox instead of Time Spiral
 
 1
 
 	
-By xLunacyx (40,728 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
+By xLunacyx (40,733 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
 	
 Scarlet Adaptation is so good with the instant living flame procs and Engulfing Blaze talent, surprised no top evokers are utilizing the combo despite taking the talents.
 Basically if there's some raid damage, you throw out an Emerald Blossom (since it requires effective healing), then you can basically shoot out 2 200k+ instant living flames inbetween your essence bursts, instead of two 30k living flames.
@@ -353,7 +362,7 @@ Basically if there's some raid damage, you throw out an Emerald Blossom (since i
 1
 
 	
-By Pariiah (7,931 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
+By Pariiah (7,956 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
 	
 Can we get an evoker player to write these guides please? preheat doesn't even play evoker, only mage. Plus, there is practically no explanation for the talent picks and this is riddled with typos and errors
 
@@ -697,7 +706,7 @@ These pre-patch builds are great, it's close to what I came up with just by look
 4
 
 	
-By Primalcrux (18,949 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
+By Primalcrux (18,954 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
 	
 Why not pick up Onyx Legacy? 1 Min Deep Breath is a lot of damage and utility.
 
@@ -712,21 +721,21 @@ It was considered before they reworked the final area of talents. I guess with t
 3
 
 	
-By yogus (12,557 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
+By yogus (12,562 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
 	
 Really wish Firestorm was more viable, it's fun.
 
 3
 
 	
-By Liina (4,884 – 18·21) on 2025/08/13 (Patch 11.2.0)	
+By Liina (4,889 – 18·21) on 2025/08/13 (Patch 11.2.0)	
 	
 The delve talent build must include Rescue. Because we always have Brann there, this is free teleport and can be used to quickly reposition out of danger or onto the healing potions. It really is a must have in higher difficulties.
 
 3
 
 	
-By 008Zulu (230 – 2) 24 days ago (Patch 12.0.1)	
+By 008Zulu (230 – 2) 25 days ago (Patch 12.0.1)	
 	
 Something is wrong with these talent builds, they are assigning more points than we currently get.
 
@@ -734,21 +743,21 @@ Something is wrong with these talent builds, they are assigning more points than
 
 	
 
-Preheat <Guide Author> 7 days ago (Patch 12.0.1)
+Preheat <Guide Author> 8 days ago (Patch 12.0.1)
 
 This was likely due to the swap from TWW to Midnight.
 
 2
 
 	
-By PriestessAur (92,245 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
+By PriestessAur (92,265 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
 	
 The Scalecommander Delve build export is talenting Spatial Paradox instead of Time Spiral
 
 1
 
 	
-By xLunacyx (40,728 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
+By xLunacyx (40,733 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
 	
 Scarlet Adaptation is so good with the instant living flame procs and Engulfing Blaze talent, surprised no top evokers are utilizing the combo despite taking the talents.
 Basically if there's some raid damage, you throw out an Emerald Blossom (since it requires effective healing), then you can basically shoot out 2 200k+ instant living flames inbetween your essence bursts, instead of two 30k living flames.
@@ -756,7 +765,7 @@ Basically if there's some raid damage, you throw out an Emerald Blossom (since i
 1
 
 	
-By Pariiah (7,931 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
+By Pariiah (7,956 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
 	
 Can we get an evoker player to write these guides please? preheat doesn't even play evoker, only mage. Plus, there is practically no explanation for the talent picks and this is riddled with typos and errors
 
@@ -1100,7 +1109,7 @@ These pre-patch builds are great, it's close to what I came up with just by look
 4
 
 	
-By Primalcrux (18,949 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
+By Primalcrux (18,954 – 3·22·75) on 2023/05/05 (Patch 10.1.0)	
 	
 Why not pick up Onyx Legacy? 1 Min Deep Breath is a lot of damage and utility.
 
@@ -1115,21 +1124,21 @@ It was considered before they reworked the final area of talents. I guess with t
 3
 
 	
-By yogus (12,557 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
+By yogus (12,562 – 1·25·34) on 2024/05/08 (Patch 10.2.7)	
 	
 Really wish Firestorm was more viable, it's fun.
 
 3
 
 	
-By Liina (4,884 – 18·21) on 2025/08/13 (Patch 11.2.0)	
+By Liina (4,889 – 18·21) on 2025/08/13 (Patch 11.2.0)	
 	
 The delve talent build must include Rescue. Because we always have Brann there, this is free teleport and can be used to quickly reposition out of danger or onto the healing potions. It really is a must have in higher difficulties.
 
 3
 
 	
-By 008Zulu (230 – 2) 24 days ago (Patch 12.0.1)	
+By 008Zulu (230 – 2) 25 days ago (Patch 12.0.1)	
 	
 Something is wrong with these talent builds, they are assigning more points than we currently get.
 
@@ -1137,21 +1146,21 @@ Something is wrong with these talent builds, they are assigning more points than
 
 	
 
-Preheat <Guide Author> 7 days ago (Patch 12.0.1)
+Preheat <Guide Author> 8 days ago (Patch 12.0.1)
 
 This was likely due to the swap from TWW to Midnight.
 
 2
 
 	
-By PriestessAur (92,245 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
+By PriestessAur (92,265 – 26·70·607) <Rare Premium User> on 2025/08/10 (Patch 11.2.0)	
 	
 The Scalecommander Delve build export is talenting Spatial Paradox instead of Time Spiral
 
 1
 
 	
-By xLunacyx (40,728 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
+By xLunacyx (40,733 – 8·57·559) <Rare Premium User> on 2023/02/19 (Patch 10.0.5)	
 	
 Scarlet Adaptation is so good with the instant living flame procs and Engulfing Blaze talent, surprised no top evokers are utilizing the combo despite taking the talents.
 Basically if there's some raid damage, you throw out an Emerald Blossom (since it requires effective healing), then you can basically shoot out 2 200k+ instant living flames inbetween your essence bursts, instead of two 30k living flames.
@@ -1159,7 +1168,7 @@ Basically if there's some raid damage, you throw out an Emerald Blossom (since i
 1
 
 	
-By Pariiah (7,931 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
+By Pariiah (7,956 – 1·9·10) on 2025/08/06 (Patch 11.2.0)	
 	
 Can we get an evoker player to write these guides please? preheat doesn't even play evoker, only mage. Plus, there is practically no explanation for the talent picks and this is riddled with typos and errors
 

@@ -1,6 +1,6 @@
 # mage/arcane — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/arcane/talent-builds-pve-dps
-Generated: 2026-03-21 22:34
+Generated: 2026-03-22 06:36
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -9,6 +9,13 @@ Tab Group 1: ['Spellslinger - Orb Master']
 Tab Group 2: ['Spellslinger - Orb Master']
 
 ## Default (no hero switch)
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzQzMzAAAwAAgAmZmZZZmZYBAgtxMzMmtFLzMzYmxYMzMGLMzMjZAAGAAAzsAAmBADD`
+Build 2: `C4DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzswMzQzMGAAAGAAEwMzMLLzMxCAAbzYmZMbmlZmZMzYMmZmZswMzMGAADAAgZWAADAMM`
+Build 3: `C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzQzMzAAAwAAmZmmlltZAgYDAgNmZmxYzyMzMLzMGjZmxYhZmZMDAwAAAMAzMgZAwwA`
+Build 4: `C4DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGamxAAAwAAmZmmlttZAgYDAgNDzMDbzyMzMLzwYGzMDLMzMzDMDAwAAAMAzMgZAwwA`
 
 ### tab_group_0 — Tabs: ['Spellslinger - Orb Master']
 

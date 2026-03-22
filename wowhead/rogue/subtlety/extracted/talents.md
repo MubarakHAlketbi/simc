@@ -1,6 +1,6 @@
 # rogue/subtlety — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/subtlety/talent-builds-pve-dps
-Generated: 2026-03-21 22:51
+Generated: 2026-03-22 06:40
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Trickster', 'Deathstalker']
@@ -9,6 +9,14 @@ Tab Group 1: ['Trickster']
 Tab Group 2: ['Trickster']
 
 ## Hero Talent: Trickster
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMDDmZmZGjZbMzYbbmZmZmZMYMz2AAAAwgxsYWGYALglhJkZBzwMDwMGA`
+Build 2: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMjxDMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMmNzyADYBsMMhMLYGmZAmxA`
+Build 3: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMDegZmZGjZbmZGbbzMzMzMjBjZ2GAAAAGMmNzyADYDsMMhMLYGmZAmxA`
+Build 4: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZwDMzMzYMbjZGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA`
+Build 5: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZMMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA`
 
 ### tab_group_0 — Tabs: ['Trickster', 'Deathstalker']
 
@@ -1219,6 +1227,14 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Deathstalker
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMDDmZmZGjZbMzYbbmZmZmZMYMz2AAAAwgxsYWGYALglhJkZBzwMDwMGA`
+Build 2: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMjxDMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMmNzyADYBsMMhMLYGmZAmxA`
+Build 3: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMDegZmZGjZbmZGbbzMzMzMjBjZ2GAAAAGMmNzyADYDsMMhMLYGmZAmxA`
+Build 4: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZwDMzMzYMbjZGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA`
+Build 5: `CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZMMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA`
 
 ### tab_group_0 — Tabs: ['Trickster', 'Deathstalker']
 

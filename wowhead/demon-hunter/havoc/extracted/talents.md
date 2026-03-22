@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/talent-builds-pve-dps
-Generated: 2026-03-21 22:15
+Generated: 2026-03-22 06:31
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Fel-Scarred']
@@ -9,6 +9,14 @@ Tab Group 1: ['Fel-Scarred Inertia', 'Aldrachi Reaver Low Mover', 'Fel-Scarred L
 Tab Group 2: ['Fel-Scarred']
 
 ## Hero Talent: Fel-Scarred
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmZ2mZGbz28AzwYYsMw2sYGDzmmGzMjhNAAAAAAAAmZwAAAAwA`
+Build 2: `CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmBmx2sNzMjxALDsNbmxwsopxMzYGbAAAADAAAgZGMAAAAM`
+Build 3: `CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmh5BmBbzMzYMwyAbzmZMMLaaMzMmxGAAAwAAAAYmBDAAAAD`
+Build 4: `CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmZ2mZGLz2YGLjZMWmZbGMMW2YSGzMGWAAAAAAAAzMADAAAAD`
+Build 5: `CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmZ2GzgtZmhxwYZmtZwwYbjJZmZGzYBAAAAAAAMzAMAAAAM`
 
 ### tab_group_0 — Tabs: ['Fel-Scarred Inertia', 'Fel-Scarred Cleave', 'Aldrachi Reaver No Mover']
 

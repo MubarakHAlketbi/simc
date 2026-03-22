@@ -1,6 +1,6 @@
 # warrior/protection — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/protection/talent-builds-pve-tank
-Generated: 2026-03-21 23:07
+Generated: 2026-03-22 06:44
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Mountain Thane', 'Colossus']
@@ -9,6 +9,12 @@ Tab Group 1: ['Mountain Thane']
 Tab Group 2: ['Colossus']
 
 ## Hero Talent: Mountain Thane
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CkEAAAAAAAAAAAAAAAAAAAAAA0yAAAzMzYmZGzMzmxsMjxYmGmZYZMzMDzYmBAAAALDAzYAGYDWWMaMDgZLmZDmxMDmtBAzMAAMAD`
+Build 2: `CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzYmZmZmxsZmZZYMmpxMGWGzMzwMmZAAAAwyAwMGAYzMG2IDMDL0YmFGzMzMY2GAgZGAwAMA`
+Build 3: `CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzMzMzMmxsZmZZGjxMNmxwyYmZYmxMDAAAAWGAmxAMwGssY0YGAzWMzGMzMzgZZAwMDAADwA`
 
 ### tab_group_0 — Tabs: ['Mountain Thane']
 
@@ -932,6 +938,12 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Colossus
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CkEAAAAAAAAAAAAAAAAAAAAAA0yAAAzMzYmZGzMzmxsMjxYmGmZYZMzMDzYmBAAAALDAzYAGYDWWMaMDgZLmZDmxMDmtBAzMAAMAD`
+Build 2: `CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzYmZmZmxsZmZZYMmpxMGWGzMzwMmZAAAAwyAwMGAYzMG2IDMDL0YmFGzMzMY2GAgZGAwAMA`
+Build 3: `CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzMzMzMmxsZmZZGjxMNmxwyYmZYmxMDAAAAWGAmxAMwGssY0YGAzWMzGMzMzgZZAwMDAADwA`
 
 ### tab_group_0 — Tabs: ['Mountain Thane']
 

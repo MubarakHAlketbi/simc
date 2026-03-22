@@ -1,6 +1,6 @@
 # warlock/demonology — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/demonology/talent-builds-pve-dps
-Generated: 2026-03-21 22:59
+Generated: 2026-03-22 06:42
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Soul Harvester']
@@ -9,6 +9,15 @@ Tab Group 1: ['Doomguard', 'Vilefiend']
 Tab Group 2: ['Soul Harvester']
 
 ## Hero Talent: Soul Harvester
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CoQAy0jxIDofkwJmoH7WhvESoZmZMzoZjhZmxsMAAAAAAAjllZMzMsYYYmtZpNaGLGjZ2mlZmZYAgZYmZmZGMzMzMmZAAAGzMzMDzYZGDYA`
+Build 2: `CoQAAAAAAAAAAAAAAAAAAAAAAYmhZGNbmx2MzYWGAAAAAAAwYGDLwAbj2ohFjZGLz2MzwMAwMzMzMzMDwMzwMbAAgxMzMGD2mBwA`
+Build 3: `CoQAy0jxIDofkwJmoH7WhvESoZmhZGNbmx2MzYWGAAAAAAgxyyMmZGWMMMz2s0GNjFjZGLjZmxMDAMzMzYmZGMzMzMMzGAAYMzMjxgtZGgB`
+Build 4: `CoQAy0jxIDofkwJmoH7WhvESoZmZMzoZjhZmxsMAAAAAAAjllZMzMsYYYmtZpNaGbGjZ2mlZmZYAgZYmZmZGMzMzMmZAAAGzMzMDzYZGDYA`
+Build 5: `CoQAAAAAAAAAAAAAAAAAAAAAAYmhZGNbmx2MzYWGAAAAAAgxyyADYAzwSIjNjZGLz2MzwMAwMzMzMDwMzMzwMbAAgxMzMGD2mBwA`
+Build 6: `CoQAy0jxIDofkwJmoH7WhvESoZmhZGNbmx2MzYWGAAAAAAgxyyMmZGWMMMz2s0GNjNjZGLjZmxMDAMzMzYmZGMzMzMMzGAAYMzMjxgtZGgB`
 
 ### tab_group_0 — Tabs: ['Soul Harvester']
 

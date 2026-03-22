@@ -1,6 +1,6 @@
 # death-knight/frost — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/talent-builds-pve-dps
-Generated: 2026-03-21 22:12
+Generated: 2026-03-22 06:30
 
 ## Discovered Page Structure
 Hero Talent Switches: ['DEATHBRINGER']
@@ -9,6 +9,15 @@ Tab Group 1: ['DEATHBRINGER']
 Tab Group 2: ['DEATHBRINGER']
 
 ## Hero Talent: DEATHBRINGER
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAwY2GYALglhJkxCmZMzMwMAGmZAmBM`
+Build 2: `CsPAAAAAAAAAAAAAAAAAAAAAAMAzMjZmZAz2MzMzMLmZkZMmZmZGYMzwMzMjZAAAAAAAAAwY2GYALglhJkxCmZYmBmBwwMDwMgB`
+Build 3: `CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxYYGgZmZmZmZmZAAAAAAAAAwY2GYALglhJkxCmZmZmBGAGmZAmBM`
+Build 4: `CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAAYzsZYgBmNN0wGmZMzMwMAGAmZmBM`
+Build 5: `CsPAAAAAAAAAAAAAAAAAAAAAAYAmZMzMDY2mZmZmZxMjmZMGmZGGzMwMzMzMDAAAAAAAAAAbmNDDMwsphG2wMzMzMwMAGAmZmBM`
+Build 6: `CsPAAAAAAAAAAAAAAAAAAAAAAYAzMMjZMDzmZmZmZxMjmZMGmZGGPwMmZmZmZmZAAAAAAAAAAYzsZYgBmNN0wGmZmZmBAwAwMzMgB`
 
 ### tab_group_0 — Tabs: ['DEATHBRINGER']
 

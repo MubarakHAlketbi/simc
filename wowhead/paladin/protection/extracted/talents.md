@@ -1,6 +1,6 @@
 # paladin/protection — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/talent-builds-pve-tank
-Generated: 2026-03-21 22:43
+Generated: 2026-03-22 06:38
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Lightsmith']
@@ -9,6 +9,13 @@ Tab Group 1: ['Lightsmith', 'Templar']
 Tab Group 2: ['Templar']
 
 ## Hero Talent: Templar
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CIEAAAAAAAAAAAAAAAAAAAAAAsZm5BYWGLzMjZGbLjxYmFbzYAAGAAAAAAkmZWMjZmxYmt2AwAGwgNAAwMTbzMLzAAsBmxAYMDjBAYZGgZGkB`
+Build 2: `CIEAAAAAAAAAAAAAAAAAAAAAAsNjBzyYZMjZmZZZMzwsMLzYAAGAAAAAA00MziZMzwws1GAGYAzgNAAwMTbzMLzAAsZGMAYMDjBAYZGgZGkB`
+Build 3: `CIEAAAAAAAAAAAAAAAAAAAAAAsNzMYWmZZMjZmxyYmhZhZMAADAAAAAASzMLmxMDzMzWbAYgZAwGAAABYmZbbptZGLGMjBwYGGDAmZAwMDyA`
+Build 4: `CIEAAAAAAAAAAAAAAAAAAAAAAsZMYWGLzMjZmZZZMzwsMLzYAAAAAAAAgmmZWMjZGGGBADYAD2GAAABYmZZbplZGLmhZMAGzwYAwMDAzMDyA`
 
 ### tab_group_0 — Tabs: ['Templar']
 
@@ -1177,6 +1184,13 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Lightsmith
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CIEAAAAAAAAAAAAAAAAAAAAAAsZm5BYWGLzMjZGbLjxYmFbzYAAGAAAAAAkmZWMjZmxYmt2AwAGwgNAAwMTbzMLzAAsBmxAYMDjBAYZGgZGkB`
+Build 2: `CIEAAAAAAAAAAAAAAAAAAAAAAsNjBzyYZMjZmZZZMzwsMLzYAAGAAAAAA00MziZMzwws1GAGYAzgNAAwMTbzMLzAAsZGMAYMDjBAYZGgZGkB`
+Build 3: `CIEAAAAAAAAAAAAAAAAAAAAAAsNzMYWmZZMjZmxyYmhZhZMAADAAAAAASzMLmxMDzMzWbAYgZAwGAAABYmZbbptZGLGMjBwYGGDAmZAwMDyA`
+Build 4: `CIEAAAAAAAAAAAAAAAAAAAAAAsZMYWGLzMjZmZZZMzwsMLzYAAAAAAAAgmmZWMjZGGGBADYAD2GAAABYmZZbplZGLmhZMAGzwYAwMDAzMDyA`
 
 ### tab_group_0 — Tabs: ['Templar']
 

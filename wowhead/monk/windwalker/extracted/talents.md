@@ -1,6 +1,6 @@
 # monk/windwalker — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/talent-builds-pve-dps
-Generated: 2026-03-21 22:41
+Generated: 2026-03-22 06:37
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Shado-Pan']
@@ -9,6 +9,15 @@ Tab Group 1: ['Shado-Pan']
 Tab Group 2: ['Shado-Pan']
 
 ## Hero Talent: Shado-Pan
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYw2wwsMzMbzAAAAAAAAAAAAsMMCzYbYAzYYmZmhZZYGmlZCAYzMbzMMmZGAAbAwsMLNzMzCAGYmBAWGDxAG`
+Build 2: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDjwMMMgZMMzMzwsMMDzyMBAsZmtxwYmZAAsBAzys0MzMLADDMzAwYZMEDYA`
+Build 3: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDzEmhhBMjhZmZGmthZYWmJAgNzsNGGzMDAgNAYWmlmZmZBYYgZGAYZMEDYA`
+Build 4: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYM2GGsMzMbzAAAAAAAAAAAAsMMCzYbYAzYYmZmhZZYGmlZCAYzMbjhZmZGAALmZZ2GTQAAYAMDALjhYmZWM`
+Build 5: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYMgBLzMz2MGAAAAAAAAAAAYZYEmx2wAmxwMzMDzywMMLzEAwmZ2GjZMzMAAWMzysMmgAAGGAzAwyYImZmFD`
+Build 6: `C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDzEmx2wAGGmZmZY2GmhZZmAA2Mz2YYMzMAAWMzysNmgAAGGAzAM2GImZmND`
 
 ### tab_group_0 — Tabs: ['Shado-Pan']
 

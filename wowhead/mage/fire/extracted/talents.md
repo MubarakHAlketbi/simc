@@ -1,6 +1,6 @@
 # mage/fire — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/talent-builds-pve-dps
-Generated: 2026-03-21 22:36
+Generated: 2026-03-22 06:36
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Frostfire', 'Sunfury']
@@ -9,6 +9,15 @@ Tab Group 1: ['Frostfire', 'Sunfury']
 Tab Group 2: ['Frostfire']
 
 ## Hero Talent: Frostfire
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAGAwMz0sssMDAwmZmx2YmZGAAAAAgFzMzMDAAGzwYmZmZ2GAmZIjxYwMMA`
+Build 2: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYDAAAAAWMzMzMAAYMDjZmZmZbAYmhwYMYGG`
+Build 3: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYBAAAAA2MzMzMAAYMDjZmZmZbAYmhwYMYGG`
+Build 4: `C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAmZZGzMLzCEAAwiZmx2YmZGAAAAAgFzMzMDAAGzYmZmZmZ2AmZADzYMYwA`
+Build 5: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAAWMzMzMAAYMjZmZmZmZDYmBMYMGMYA`
+Build 6: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAA2MzMzMAAYMjZmZmZmZDYmBMYMGMYA`
 
 ### tab_group_0 — Tabs: ['Frostfire', 'Sunfury', 'Sunfury (No Meteor)', 'Cinderstorm Single Target']
 
@@ -2120,6 +2129,15 @@ Post a Comment
 You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Sunfury
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAGAwMz0sssMDAwmZmx2YmZGAAAAAgFzMzMDAAGzwYmZmZ2GAmZIjxYwMMA`
+Build 2: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYDAAAAAWMzMzMAAYMDjZmZmZbAYmhwYMYGG`
+Build 3: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYBAAAAA2MzMzMAAYMDjZmZmZbAYmhwYMYGG`
+Build 4: `C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAmZZGzMLzCEAAwiZmx2YmZGAAAAAgFzMzMDAAGzYmZmZmZ2AmZADzYMYwA`
+Build 5: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAAWMzMzMAAYMjZmZmZmZDYmBMYMGMYA`
+Build 6: `C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAA2MzMzMAAYMjZmZmZmZDYmBMYMGMYA`
 
 ### tab_group_0 — Tabs: ['Frostfire', 'Sunfury', 'Sunfury (No Meteor)', 'Cinderstorm Single Target']
 

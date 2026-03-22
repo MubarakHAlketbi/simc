@@ -1,6 +1,6 @@
 # monk/brewmaster — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/brewmaster/talent-builds-pve-tank
-Generated: 2026-03-21 22:39
+Generated: 2026-03-22 06:37
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -9,6 +9,14 @@ Tab Group 1: ['Shado Pan', 'Mythic+ Talent Choices Explained']
 Tab Group 2: ['Master of Harmony (Delves/Open World)', 'Shado Pan (Legacy/Speed)']
 
 ## Default (no hero switch)
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sMMLAAwGCAAwsNLNzMziZYDgZGmGDAAYA`
+Build 2: `CwQAAAAAAAAAAAAAAAAAAAAAAAAAAwMLbGDzwyM2MmZAAAAAAAYZBmYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAgNEAAgZbWamZmNG2AYmhpxAGAwA`
+Build 3: `CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZZzYGzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAgNEAAgZbWamZmFG2AYmhpxAGAwA`
+Build 4: `CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sMMLAAwysMtMbzsMAAQAmhNwMDYaMAAgB`
+Build 5: `CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZZzYGzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAglZZaZ2mZZAAgAYYDMzAmGDYAAD`
 
 ### tab_group_0 — Tabs: ['Master of Harmony (Standard)', 'Master of Harmony (Advanced)', 'Raid Talent Choices Explained']
 

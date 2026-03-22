@@ -1,6 +1,6 @@
 # mage/frost — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/frost/talent-builds-pve-dps
-Generated: 2026-03-21 22:38
+Generated: 2026-03-22 06:37
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Spellslinger']
@@ -9,6 +9,15 @@ Tab Group 1: ['Spellslinger']
 Tab Group 2: ['Spellslinger']
 
 ## Hero Talent: Spellslinger
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmxMjZMziZmZmZMDAAAMzMzyyMTbAAAAAAgNA22GzMzgZZeAjZYBAAgZWAmJjBMDGA`
+Build 2: `CAEAAAAAAAAAAAAAAAAAAAAAAMzwYZmZmFmZmYGmZmZmZWMzMMjZAAAgZmZWWmZaDAAWAAAAWAYbbMzMDmthxMjNAAAmZDYmMGwMYA`
+Build 3: `CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzEzMzMzMzMziZmhZMDAAAMzMzyyMTbAAAAAAgFA22GzMzgZbYMzYDAAgZ2AmJjBMDGA`
+Build 4: `CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmxMjZMziZmZmxMzsMTzMLzCAAAaBAAAAAAsBw22YmZGYZGjZstAAAAmZwMZMgBGA`
+Build 5: `CAEAAAAAAAAAAAAAAAAAAAAAAMzwYZmZmFmZmYGmZmZmZWMzMzMGzsMTzMLzCAAAaBAAWAAAAWAYbbMzMDGGzMzYDAAAMzgZyYAgB`
+Build 6: `CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzEzMzMzMzMziZmZmxYmlZamZZWAAAQLAAAAAAgFA22GzMzghxMzM2AAAAzMYmMGAYA`
 
 ### tab_group_0 — Tabs: ['Spellslinger']
 

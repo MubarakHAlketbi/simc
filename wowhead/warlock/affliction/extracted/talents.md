@@ -1,6 +1,6 @@
 # warlock/affliction — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/affliction/talent-builds-pve-dps
-Generated: 2026-03-21 22:57
+Generated: 2026-03-22 06:41
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -9,6 +9,13 @@ Tab Group 1: ['Soul Harvester M+']
 Tab Group 2: ['Soul Harvester Delve']
 
 ## Default (no hero switch)
+
+### Talent Export Codes (SimC `talents=` strings)
+
+Build 1: `CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlBAAYmZZ2mZmlxAAWgBmFjGzAysBWGAAAmBAAmZAzMjxwwMjZmZGMzMzAAmBG`
+Build 2: `CkQAAAAAAAAAAAAAAAAAAAAAAwMjZGNbmxmZGzyAAAmZmlZbmZWGDAYBGYWMaMDIzGYZAAAwAAAzMYMjZmtZGzgZmZGDzMzMAgBMA`
+Build 3: `CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZhhZmZmlBAAYmZxyMzsMzAAjllBGwEMDbBG2GAAAmBAAwMDzMjBGmZmZGzgZmZGAwMwA`
+Build 4: `CkQAAAAAAAAAAAAAAAAAAAAAAwMjZGNbmxmZGzyAAAmZmlZzMzyYAgx22ADYCmhtADbDAAAGAAAzMjZMzsNzYGMzMzYYmZmBAMDMA`
 
 ### tab_group_0 — Tabs: ['Soul Harvester Raid']
 
