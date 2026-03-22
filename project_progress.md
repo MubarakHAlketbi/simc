@@ -63,13 +63,13 @@ All information verified fresh against Wowhead + code inspection.
 | MID1_Warrior_Fury.simc | PASS | |
 | MID1_Warrior_Protection.simc | PASS | |
 
-**Total: 52/52 PASS**
+**Total: 56/56 PASS**
 
-Missing hero-tree variant profiles (low priority — need valid live talent hashes):
-- MID1_Druid_Balance_Keeper.simc (Keeper of the Grove)
-- MID1_Druid_Balance_Elune.simc (Chosen of Elune)
-- MID1_Evoker_Augmentation_Chronowarden.simc
-- MID1_Rogue_Assassination_Deathstalker.simc
+4 new hero-tree variant profiles added 2026-03-22:
+- MID1_Druid_Balance_Keeper.simc (Keeper of the Grove) — PASS
+- MID1_Druid_Balance_Elune.simc (Chosen of Elune) — PASS
+- MID1_Evoker_Augmentation_Chronowarden.simc — PASS
+- MID1_Rogue_Assassination_Deathstalker.simc — PASS
 
 ---
 
