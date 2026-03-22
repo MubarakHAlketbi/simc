@@ -433,5 +433,4 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | f6916a2 | 2026-03-22 | Fix/feat: DH Devourer talent hash corrected; 4 new hero-tree profiles (56/56 pass) |
 | 3c77a2a | 2026-03-22 | Fix(profiles): gear BiS for 19 profiles — 20 new item IDs sourced from Wowhead |
 | 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
-| (pending) | 2026-03-22 | Fix(profiles): gear BiS batch 2 (7 profiles) + DH Devourer legs ID fix |
-| (pending) | 2026-03-22 | Feat(shaman): implement surging_shields — +4 Maelstrom/trigger (Ele), +50% MSW (Enh) |
+| 71e8e58 | 2026-03-22 | Feat(shaman) + fix(profiles): surging_shields impl + gear BiS batch 2 (7 profiles) |
