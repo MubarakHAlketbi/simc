@@ -66,6 +66,29 @@ The talent is registered in code but has NO effect implementation:
 
 ---
 
+## 3b. Apex Talents — All Specs Use Max Rank (Rank 4)
+
+**RESOLVED:** Full apex talent data extracted from Wowhead and saved to
+`wowhead/apex_talents_wowhead.md`. All 33 DPS/tank specs + 5 healer specs documented
+with R1/R2-3/R4 descriptions.
+
+**Key facts:**
+- All specs should use max rank (Rank 4 = all 3 nodes talented, 4 points total)
+- Rank 4 unlocks at Level 90 (level cap)
+- Each apex talent has 3 sequential nodes: R1 (level 81), R2-3 (level 84, 2-point), R4 (level 90)
+- Demonology Warlock apex (Spell #1264137) has INCOMPLETE data on Wowhead — R1/R2 descriptions missing
+
+**Notable findings from Wowhead data:**
+- Blood DK "Dance of Midnight" R4: shows 0% damage increase and 0% DR — likely placeholder/tooltip bug
+- Feral "Unseen Predator" R2-3: shows 0% damage increase — likely tooltip bug
+- Survival Hunter R1: shows "Aimed Shot always critically strikes" — copy error from Marksmanship
+- Demonology Warlock: talent name not displayed, only Spell #1264137 reference
+
+These tooltip issues should be verified against live spell data (effectN values)
+rather than trusting the displayed percentages.
+
+---
+
 ## 4. Phase 4 Missing HecticAddCleave Baselines (4 profiles)
 
 These profiles have Patchwerk baselines but no HecticAddCleave. Need to be re-run
