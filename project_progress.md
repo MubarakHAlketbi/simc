@@ -228,9 +228,10 @@ Full specification: `APL_optimization.md`
 | Phase 1 | Browser extraction of all Wowhead pages (rotation, talents, bis, consumables, tier) | COMPLETE — 33 specs × 5 pages = 165 files in wowhead/*/extracted/ |
 | Phase 2 | APL validation — diff all specs against Wowhead rotations | COMPLETE — 2 fixes applied |
 | Phase 3 | Profile updates — BiS gear, consumables, talent builds from extracted data | COMPLETE — consumables (30 profiles), gear BiS (19 profiles fixed), talents (46/56 updated via extractor + updater script) |
-| Phase 3.5a | Extractor pipeline fixes — validation pass, strip comment noise, dedup blocks, hero talent click verification, targeted DOM extraction, mutation observer for lazy load | NOT STARTED — see wowhead/EXTRACTION_PIPELINE_AUDIT.md |
-| Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fail on "Use X"/inline format), fix "null" JSON key, port consumers to .json | NOT STARTED |
-| Phase 3.5c | Re-extract 6 specs with missing hero talents + investigate outliers (evoker/dev 8313 lines, DH devourer dir) + fix 3 profile data gaps | NOT STARTED |
+| Phase 3.5a | Extractor pipeline fixes — validation pass, strip comment noise, dedup blocks, hero talent click verification, mutation observer for lazy load | COMPLETE — 56-82% file size reduction, all 33 specs cleaned |
+| Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fixed), "null" JSON key fixed | COMPLETE — 17/17 previously-failing specs now parse; APL diff re-run: HIGH=11, MEDIUM=21, LOW=1 |
+| Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; evoker/dev noise identified; 3 profiles fixed (Rogue Assn talents, WL Hellcaller talents, WL shoulders) |
+| Phase 3.5c-L | Re-extract 6 specs with missing hero talents (paladin/ret, DK/unholy, druid/guardian, mage/arcane, monk/brew+ww) | PENDING — requires Playwright + Wowhead access. Pipeline code ready. |
 | Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | IN PROGRESS — baselines PARTIAL (see note below); permutation loop not yet run |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
