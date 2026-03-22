@@ -1390,7 +1390,7 @@ public:
       player_talent_t death_charge;      // NYI
       player_talent_t mograines_might;
       player_talent_t horsemens_aid;             // NOTE: not in info_base.md talent table (minor utility node)
-      player_talent_t pact_of_the_apocalypse;  // NYI — NOTE: not in info_base.md talent table
+      player_talent_t pact_of_the_apocalypse;  // NOTE: not in info_base.md talent table (utility — NYI, low DPS impact)
       player_talent_t ride_or_die;
       player_talent_t whitemanes_famine;
       player_talent_t nazgrims_conquest;

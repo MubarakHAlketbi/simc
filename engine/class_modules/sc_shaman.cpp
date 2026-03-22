@@ -1729,7 +1729,7 @@ public:
     player_talent_t storm_frenzy;
     player_talent_t swelling_maelstrom;
     player_talent_t primordial_fury;
-    player_talent_t fury_of_the_storms; // TODO Hawk: NYI
+    player_talent_t fury_of_the_storms; // Implemented: summons Greater/Primal Storm Elemental on Stormkeeper cast
     player_talent_t herald_of_the_storms;
     player_talent_t flames_of_the_cauldron;
     // Row 6

@@ -819,7 +819,7 @@ public:
 
       player_talent_t dashing_scoundrel;
       player_talent_t dragon_tempered_blades;
-      player_talent_t sudden_demise;            // Partial NYI for "execute" mechanic
+      player_talent_t sudden_demise;            // Implemented: +10% bleed dmg always; execute bonus scales linearly to +150% at 0% HP below 35%
 
       player_talent_t implacable_1;
       player_talent_t implacable_2;
