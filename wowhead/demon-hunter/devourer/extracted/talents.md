@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/talent-builds-pve-dps
-Generated: 2026-03-22 06:32
+Generated: 2026-03-23 01:08
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -23,9 +23,6 @@ Build 5: `CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmZmZmxwMAAAAAAAmxAmBAAAAAAAgZMDjZmZmZmZ
 #### Annihilator Pure ST
 In pure single target,  Annihilator picks up  Devourer's Bite for powerful burst windows! If the fight features significant cleave, the  Annihilator cleave build should be played instead!
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -103,15 +100,9 @@ Open in Calculator
 1/1
 1/1
 
-
-
-
-
  Further Details
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
-
-
 
 Export Talents
 Open in Calculator
@@ -192,8 +183,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -272,59 +261,26 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Annihilator Raid Cleave
 This build drops  Devourer's Bite, instead flexing into the powerful cleave provided by  Eradicate. Since  Voidblade is no longer used,  Duty Eternal is also swapped out for  Scythe's Embrace.
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -403,8 +359,6 @@ Open in Calculator
 1/1
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
-
-
 
 Export Talents
 Open in Calculator
@@ -485,8 +439,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -565,59 +517,26 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Void-Scarred Pure ST
 In pure single target, Void-Scarred drops all of the left side of the tree to pick up augmentations to  Collapsing Star, while keeping  Devourer's Bite for powerful burst windows. If the fight has significant cleave, the Void-Scarred Cleave build should be played instead!
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -695,15 +614,9 @@ Open in Calculator
 1/1
 1/1
 
-
-
-
-
  Further Details
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
-
-
 
 Export Talents
 Open in Calculator
@@ -784,8 +697,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -864,59 +775,26 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Void-Scarred Raid Cleave
 This build drops  Devourer's Bite and the talents leading into it, instead flexing into the powerful cleave provided by  Eradicate, as well as the minor increase to cleave provided by  Hungering Slash and the extra  Voidsurge.
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -997,8 +875,6 @@ Open in Calculator
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1078,8 +954,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1158,58 +1032,25 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Void-Scarred Melee
 This build drops all of the  Collapsing Star talents completely, instead focusing much more on the Melee suit of talents, and the synergy that  Void-Scarred provides. It has much more frequent burst damage than the other builds provide, and is much more resilient to downtime or interruptions, but has a much lower overall ceiling than the caster build variants.
-
-
-
 
 Export Talents
 Open in Calculator
@@ -1290,17 +1131,11 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-
-
-
 
  Further Details
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1380,8 +1215,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1460,61 +1293,28 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Annihilator M+', 'Void-Scarred M+']
 
 #### Annihilator M+
 This build drops all of the  Collapsing Star talents completely, instead focusing much more on the Melee suit of talents, and the synergy that  Void-Scarred provides. It has much more frequent burst damage than the other builds provide, and is much more resilient to downtime or interruptions, but has a much lower overall ceiling than the caster build variants.
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1595,15 +1395,9 @@ Open in Calculator
 1/1
 1/1
 
-
-
-
-
  Further Details
 
 Annihilator is all about casting large  Collapsing Stars in Mythic+, and plays very similar to its raid counterpart build. Focus on your  Eradicate with this build, and don't waste  Voidfall procs. Since this build relies on some ramp, it is not recommended to run in keys where packs die quickly, but is the best in any key level where you can successfully perform your cooldown window.
-
-
 
 Export Talents
 Open in Calculator
@@ -1684,8 +1478,6 @@ Open in Calculator
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1764,58 +1556,25 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Void-Scarred M+
 This build drops all of the  Collapsing Star talents completely, instead focusing much more on the Melee suit of talents, and the synergy that  Void-Scarred provides. It has much more frequent burst damage than the other builds provide, and is much more resilient to downtime or interruptions, but has a much lower overall ceiling than the caster build variants.
-
-
-
 
 Export Talents
 Open in Calculator
@@ -1897,16 +1656,10 @@ Open in Calculator
 1/1
 1/1
 
-
-
-
-
  Further Details
 
 Void-Scarred focuses much more on frequent  Void Metamorphosis windows due to  Soul Glutton. This provides more  Voidsurge and  Hungering Slash, leading to a playstyle with more burst. This build can fall off in key levels where packs start significantly outlive your burst, but is the recommended build for key levels where packs die fairly fast.
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1986,17 +1739,11 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-
-
-
 
  Further Details
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -2075,61 +1822,28 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Void-Scarred Delve']
 
 #### Void-Scarred Delve
 This build drops all of the  Collapsing Star talents completely, instead focusing much more on the Melee suit of talents, and the synergy that  Void-Scarred provides. It has much more frequent burst damage than the other builds provide, and is much more resilient to downtime or interruptions, but has a much lower overall ceiling than the caster build variants.
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -2210,16 +1924,10 @@ Open in Calculator
 1/1
 1/1
 
-
-
-
-
  Further Details
 
 Void-Scarred focuses much more on frequent  Void Metamorphosis windows due to  Soul Glutton. This provides more  Voidsurge and  Hungering Slash, leading to a playstyle with more burst. This build can fall off in key levels where packs start significantly outlive your burst, but is the recommended build for key levels where packs die fairly fast.
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -2299,17 +2007,11 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-
-
-
 
  Further Details
 
 This build plays around the melee talents of  Void-Scarred, while also taking  Eradicate for more cleave, and  Devourer's Bite for single and priority target damage!
 
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -2388,49 +2090,19 @@ Open in Calculator
 1/1
 1/1
 1/1
-
-1 - 1 of 1
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.0
 
 15
 
-	
-By NektheDarkener (4,408 – 1·6·12) on 2026/01/21 (Patch 12.0.0)	
-	
 Hero talents look to be missing on all of the builds for importing
 
 3
-
-	
 
 Pfenix <Epic Premium User> on 2026/01/21 (Patch 12.0.0)
 
 Hero talents are also reversed....the builds for Void-scarred are showing Annihilator Hero Talents and vice-versa!
 
-
-
 0
 
-	
-
-DrippyNose <Epic Premium User> 19 days ago (Patch 12.0.1)
+DrippyNose <Epic Premium User> 20 days ago (Patch 12.0.1)
 
 They working now?
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

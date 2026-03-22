@@ -1,0 +1,5 @@
+Spec: death-knight/unholy
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps
+Warnings (1):
+  - MISSING HERO TALENTS: found 1 (['Rider of the Apocalypse']), expected 2 (['rider-of-the-apocalypse', 'sanlayn'])

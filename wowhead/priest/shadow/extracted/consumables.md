@@ -1,6 +1,6 @@
 # priest/shadow — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/enchants-gems-pve-dps
-Generated: 2026-03-21 22:46
+Generated: 2026-03-23 01:23
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -110,12 +110,8 @@ Feast:  Blooming Feast
 Personal Food:  Royal Roast
 Our Shadow Priest guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Shadow Priest guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 EllipsisPriest
 Elli | World of Warcraft Shadow Priest Expert

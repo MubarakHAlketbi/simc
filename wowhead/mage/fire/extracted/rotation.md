@@ -1,6 +1,6 @@
 # mage/fire — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:28
+Generated: 2026-03-23 00:05
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sunfury', 'Frostfire']
@@ -31,7 +31,6 @@ The below casts are used to generate  Hot Streak!:
  Fire Blast.
  Scorch as filler.
 Examples of a  Combustion timeline:
-
 
 While casting
 PRIORITY (OUTSIDE COMBUSTION)
@@ -83,7 +82,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -92,36 +90,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FIRE MAGE AOE ROTATION
@@ -142,7 +117,6 @@ The below casts are used to generate  Hot Streak!:
  Fire Blast.
  Scorch as filler.
 Examples of a  Combustion timeline:
-
 
 While casting
 PRIORITY (OUTSIDE COMBUSTION)
@@ -195,7 +169,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -204,36 +177,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FIRE MAGE OPENER
@@ -245,14 +195,11 @@ The builds used below are covered in the Talents page. Anywhere you see the  ico
 SAMPLE TIMELINE
 During  Firestarter (>=90% Health):
 
-
 Pull
 Double Pyroblast
 Delayed
 
-
 Entering  Combustion:
-
 
 AoE
 OPENER (FIRESTARTER)
@@ -310,7 +257,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -319,36 +265,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -393,7 +316,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -402,36 +324,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Combustion']
 
@@ -478,7 +377,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -487,36 +385,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Double Pyroblast']
 
@@ -563,7 +438,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -572,36 +446,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_3 — Tabs: ['Entering Combustion', 'Firestarter Examples']
 
@@ -648,7 +499,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -657,36 +507,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Firestarter Examples
 PRE-COMBAT CHECK
@@ -735,36 +562,13 @@ So to reiterate on the most basic example: Begin casting  Fireball, convert  Hea
 
 Double Pyroblast Exercise
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Frostfire
 
@@ -787,7 +591,6 @@ The below casts are used to generate  Hot Streak!:
  Fire Blast.
  Frostfire Bolt as filler.
 Examples of a  Combustion timeline:
-
 
 While casting
 Instant
@@ -836,7 +639,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -845,36 +647,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FIRE MAGE AOE ROTATION
@@ -893,7 +672,6 @@ The below casts are used to generate  Hot Streak!:
  Fire Blast.
  Frostfire Bolt as filler.
 Examples of a  Combustion timeline:
-
 
 While casting
 Instant
@@ -942,7 +720,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -951,36 +728,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FIRE MAGE OPENER
@@ -992,14 +746,11 @@ Any reference to  Fireball also applies to  Frostfire Bolt, as this is the Frost
 SAMPLE TIMELINE
 During  Firestarter (>=90% Health):
 
-
 Pull
 Double Pyroblast
 Delayed
 
-
 Entering  Combustion:
-
 
 AoE
 OPENER (FIRESTARTER)
@@ -1058,7 +809,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -1067,36 +817,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -1141,7 +868,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -1150,36 +876,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Combustion']
 
@@ -1226,7 +929,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -1235,36 +937,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Double Pyroblast']
 
@@ -1311,7 +990,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -1320,36 +998,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_3 — Tabs: ['Entering Combustion', 'Firestarter Examples']
 
@@ -1396,7 +1051,6 @@ You queue a  Hot Streak! spender ( Pyroblast or  Flamestrike) as the cast comple
 Entering Combustion
 Firestarter Examples
 
-
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 Display Animated Double Pyroblast Example
 So to reiterate on the most basic example: Begin casting  Fireball, convert  Heating Up into  Hot Streak! with  Fire Blast while casting (try doing it midway through the cast), then press  Pyroblast as the  Fireball finishes. If both Crit, press  Pyroblast again. If this is still not working for you, know that you are not alone. It's so common that we have devised a training method for you:
@@ -1405,36 +1059,13 @@ Double Pyroblast Exercise
 
 Note: You can swap  Scorch for  Fireball and other spells that  Hot Streak!.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Firestarter Examples
 PRE-COMBAT CHECK
@@ -1483,33 +1114,10 @@ So to reiterate on the most basic example: Begin casting  Fireball, convert  Hea
 
 Double Pyroblast Exercise
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

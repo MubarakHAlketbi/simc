@@ -1,6 +1,6 @@
 # mage/arcane — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:27
+Generated: 2026-03-23 00:05
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sunfury']
@@ -17,9 +17,6 @@ Tab Group 3: ['Optimizing Damage as Arcane', 'Stutter Stepping', 'The Spellqueue
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -99,7 +96,6 @@ Open in Calculator
 1/1
 1/1
 
-
 EASY MODE PRIORITY ROTATION
  Arcane Surge
  Touch of the Magi
@@ -158,36 +154,13 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Rotation', 'Opener / Cooldowns', 'Pre-Combat Checks']
 
@@ -195,9 +168,6 @@ You are not logged in. Please log in or register an account to add your comment.
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -276,7 +246,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -336,43 +305,17 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener / Cooldowns
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -452,7 +395,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -488,7 +430,6 @@ Pull
 21
 23
 25
-
 
 8
 17
@@ -527,43 +468,17 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -644,7 +559,6 @@ Open in Calculator
 1/1
 1/1
 
-
 EASY MODE PRIORITY ROTATION
  Arcane Surge
  Touch of the Magi
@@ -693,36 +607,13 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Arcane Surge', 'Touch of the Magi', 'Evocation']
 
@@ -730,9 +621,6 @@ You are not logged in. Please log in or register an account to add your comment.
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -811,7 +699,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -861,43 +748,17 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Touch of the Magi
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -977,7 +838,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -1012,43 +872,17 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Evocation
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -1129,7 +963,6 @@ Open in Calculator
 1/1
 1/1
 
-
 EASY MODE PRIORITY ROTATION
  Arcane Surge
  Touch of the Magi
@@ -1161,36 +994,13 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_3 — Tabs: ['Optimizing Damage as Arcane', 'Stutter Stepping', 'The Spellqueue Window']
 
@@ -1198,9 +1008,6 @@ You are not logged in. Please log in or register an account to add your comment.
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
 
-
-
-
 Export Talents
 Open in Calculator
 1/1
@@ -1279,7 +1086,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -1312,43 +1118,17 @@ Don't allow yourself to get frazzled with mechanics, when movement is required, 
  Alter Time is a strong defensive, but don't be afraid to also double tap it for mobility in the moment. This can help you keep up with classes that have much better sustained mobility.
 Your cooldown window only needs about 18 seconds for  Spellslinger and a maximum of 26 seconds for  Sunfury, and 18s for your miniburns; don't hold your cooldowns for too long if you can help it, remember how short the cooldown on  Touch of the Magi and  Arcane Surge are!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Stutter Stepping
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -1428,7 +1208,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -1456,43 +1235,17 @@ EVOCATION
 STUTTER STEPPING
 Stutter stepping is the art of efficient movement and is something every caster should master, the below gif explains how it works; you can always find this resource at the Altered Time discord as well.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### The Spellqueue Window
 EASY MODE
 If you would just like a short tl;dr rotation that will get you started right away, the one button rotation for Arcane is super bad, you will do a lot better using this simple talent loadout with the below easy mode rotation:
-
-
-
 
 Export Talents
 Open in Calculator
@@ -1572,7 +1325,6 @@ Open in Calculator
 1/1
 1/1
 1/1
-
 
 EASY MODE PRIORITY ROTATION
  Arcane Surge
@@ -1614,33 +1366,10 @@ You can reset your spellqueue back to 400 with the code below, but be mindful th
 
 /console SpellQueueWindow 400
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

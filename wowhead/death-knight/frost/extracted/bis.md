@@ -1,6 +1,6 @@
 # death-knight/frost — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/bis-gear
-Generated: 2026-03-21 22:12
+Generated: 2026-03-23 01:06
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Frost Death Knight
 Frost's BiS is guided by finding as much Critical Strike and Mastery as possible. Both Two-Hand and One-Hand options are provided here, depending on your preference.
 
-
 Slot	Item	Source
 Weapon (2H)	 Bellamy's Final Judgement	Lightblinded Vanguard
 Weapon (1H)	 Blade of the Final Twilight	Fallen-King Salhadaar
@@ -41,16 +40,13 @@ Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation
 OR Craft  Spellbreaker's Blade with  Darkmoon Sigil: Hunt  Explanation 
 Replace low Item Level pieces, adding  Arcanoweave Lining . Explanation
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -90,23 +86,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -114,7 +93,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Frost Death Knight
 Frost's BiS is guided by finding as much Critical Strike and Mastery as possible. Both Two-Hand and One-Hand options are provided here, depending on your preference.
 
-
 Slot	Item	Source
 Weapon (2H)	 Bellamy's Final Judgement	Lightblinded Vanguard
 Weapon (1H)	 Blade of the Final Twilight	Fallen-King Salhadaar
@@ -140,16 +118,13 @@ Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation
 OR Craft  Spellbreaker's Blade with  Darkmoon Sigil: Hunt  Explanation 
 Replace low Item Level pieces, adding  Arcanoweave Lining . Explanation
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -189,28 +164,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Frost Death Knight
 Frost's BiS is guided by finding as much Critical Strike and Mastery as possible. Both Two-Hand and One-Hand options are provided here, depending on your preference.
-
 
 Slot	Item	Source
 Weapon (2H)	 Bellamy's Final Judgement	Lightblinded Vanguard
@@ -235,16 +192,13 @@ Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation
 Craft  Spellbreaker's Bracers with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -284,20 +238,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

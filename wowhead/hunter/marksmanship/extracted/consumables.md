@@ -1,6 +1,6 @@
 # hunter/marksmanship — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/enchants-gems-pve-dps
-Generated: 2026-03-21 22:31
+Generated: 2026-03-23 01:14
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -43,7 +43,7 @@ Guide Info
 Changelog
 Marksmanship Hunter Enchants & Consumables - Midnight
 By TheAzortharion
-Updated: 2026/03/20
+Updated: 2026/03/22
 Consumables are an important aspect of high-level content in WoW, such as raids and Mythic+ dungeons. They provide additional ways for players to improve and customize their stats outside of gear.
 
 In this guide, we will explain the best gems, flasks, potions, and enchants to use for Marksmanship Hunter in Midnight Season 1, as well as cheaper alternatives. Make sure to also check our Midnight Profession Guide for all profession details.
@@ -67,17 +67,16 @@ Ring	 Enchant Ring - Eyes of the Eagle
 Diamond	If you have >4 sockets in your gear,  Indecipherable Eversong Diamond . Otherwise,  Powerful Eversong Diamond .
 Other Gems	If you have >4 sockets in your gear: 1x each of  Flawless Deadly Peridot ,  Flawless Deadly Amethyst , and  Flawless Deadly Lapis . Rest  Flawless Masterful Garnet . Otherwise, fill all with  Flawless Masterful Garnet .
 Marksmanship Hunter Gems
-If you have 5 sockets or more in your gear, you can make use of  Powerful Eversong Diamond  as your Eversong Diamond, and a combination of at least 1 Emerald, 1 Sapphire, 1 Ruby, and 1 Onyx, then  Flawless Masterful Garnet  in all other sockets. This fully stacks up the Crit Damage Effect of the Eversong Diamond, which is particularly potent for us as Marksmanship Hunters, since we have tons of Crit naturally, and our  Aimed Shot is guaranteed to Crit.
-Emerald:  Flawless Deadly Peridot 
-Onyx:  Flawless Deadly Amethyst 
-Ruby:  Flawless Masterful Garnet 
-Sapphire:  Flawless Deadly Lapis 
-If you do not have the sockets required to fully realize the  Powerful Eversong Diamond , simply use  Telluric Eversong Diamond  instead.
+If you have 5 sockets or more in your gear, you can make use of  Powerful Eversong Diamond  as your Eversong Diamond, and a combination of at least 1 Peridot, 1 Amethyst, 1 Garnet, and 1 Lapis, then  Flawless Masterful Garnet  in all other sockets. This fully stacks up the Crit Damage Effect of the Eversong Diamond, which is particularly potent for us as Marksmanship Hunters, since we have tons of Crit naturally, and our  Aimed Shot is guaranteed to Crit.
+Peridot:  Flawless Deadly Peridot 
+Amethyst:  Flawless Deadly Amethyst 
+Garnet:  Flawless Masterful Garnet 
+Lapis:  Flawless Deadly Lapis 
+If you do not have the sockets required to fully realize the  Powerful Eversong Diamond , simply use  Indecipherable Eversong Diamond  instead.
 Marksmanship Hunter Weapon Enchant
  Enchant Weapon - Acuity of the Ren'dorei  is going to be strongest for the beginning of a patch/expansion.
  BEST MARKSMANSHIP HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Here are the best flasks, potions, and weapon buffs that Marksmanship Hunters can use in PvE content. While haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
-
 
 Type	Best	Options
 Flask	 Flask of the Shattered Sun 
@@ -103,12 +102,8 @@ Feast:  Hearty Harandar Celebration
 Personal Food:  Hearty Royal Roast
 Our Marksmanship Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Marksmanship Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 TheAzortharion
 World of Warcraft Retail Marksmanship Hunter Guidewriter

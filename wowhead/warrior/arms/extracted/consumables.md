@@ -1,6 +1,6 @@
 # warrior/arms — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/arms/enchants-gems-pve-dps
-Generated: 2026-03-21 23:03
+Generated: 2026-03-23 01:30
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -47,6 +47,9 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  BEST ARMS WARRIOR GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is an easy reference table of the recommended enchants to use on your Arms Warrior gear. Please note that ring enchants are very flexible and likely to change according to your current gearing.
 Slot	Best Enchant	Alternate
@@ -64,7 +67,6 @@ The  Indecipherable Eversong Diamond  is generally stronger than  Powerful Evers
  BEST ARMS WARRIOR CONSUMABLES IN MIDNIGHT SEASON 1
 These are the best flasks, potions, food, and other enhancements for Arms Warriors in PvE content. Please note that stats are flexible and may change according to your current gearing. Once your gear is stabilized, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best Consumable	Alternate
 Flask	 Flask of the Shattered Sun 	 Flask of the Blood Knights 
 Combat Potion	 Potion of Recklessness 	 Potion of Recklessness 
@@ -72,6 +74,9 @@ Health Potion	 Silvermoon Health Potion 	-
 Weapon Buff	 Thalassian Phoenix Oil 	-
 Augment Rune	 Void-Touched Augment Rune	-
 Food	 Blooming Feast	 Champion's Bento
+Report Ad
+Report ad
+Remove All Ads
 Arms Warrior Flasks
 The best flask for Arms Warriors is  Flask of the Shattered Sun  or  Flask of the Blood Knights .
 Arms Warrior Combat Potion
@@ -86,12 +91,8 @@ Arms Warrior Food
  Blooming Feast,  Champion's Bento, and  Flora Frenzy all provide the maximum benefit.
 Our Arms Warrior guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Arms Warrior guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Archimtiros
 World of Warcraft Warrior Class Theorycrafter & Senior News Editor

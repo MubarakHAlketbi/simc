@@ -1,6 +1,6 @@
 # death-knight/frost — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/tier-set-bonuses
-Generated: 2026-03-21 22:13
+Generated: 2026-03-23 01:06
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Frost Death Knight Tier Set Bonuses for Midnight Season 1
 By khazakdk
-Updated: 2026/03/16
+Updated: 2026/03/22
 khazakdk
 Offline on Twitch
 Follow
@@ -51,14 +51,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR FROST DEATH KNIGHT
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Frost Death Knight gear page!
-
 
 Frost Death Knight Gear Guide
 Midnight Season 1 Tier Set Bonuses for Frost Death Knight
@@ -67,11 +63,6 @@ Relentless Rider's Lament
  Death Knight Frost 12.0 Class Set 2pc -  Empower Rune Weapon grants a buff that increases the damage of the next  Obliterate or  Frostscythe. This buff can stack multiple times.
  Death Knight Frost 12.0 Class Set 4pc - Reduces the cooldown of Empower Rune Weapon and when you cast  Pillar of Frost you get a free charge. The free charge does not impact any ongoing cooldowns and bypasses the normal two-charge cap.
 
-
-
-
-
-
 Best Tier Set Pieces for Frost Death Knight
 Our tier set bonus, Relentless Rider's Lament, is comprised of the following items from Midnight Season 1:
  Relentless Rider's Crown (Helm from Lightblinded Vanguard - The Voidspire)
@@ -79,9 +70,6 @@ Our tier set bonus, Relentless Rider's Lament, is comprised of the following ite
  Relentless Rider's Cuirass (Chest from Chimaerus - The Dreamrift)
  Relentless Rider's Bonegrasps (Gloves from Vorasius - The Voidspire)
  Relentless Rider's Legguards (Legs from Vaelgor & Ezzorak - The Voidspire)
-Report Ad
-Report ad
-Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Frost Death Knights prefer equipping tier pieces in these slots:
@@ -95,7 +83,6 @@ Tier Set Bonus Rotation Changes for Frost Death Knight
 The two-piece does not impact our rotation, but the four-piece will make  Deathbringer feel smoother. In Midnight,  Exterminate no longer reduces the cost of the ability that consumes it. Getting an extra charge of  Empower Rune Weapon effectively offsets the change, letting us squeeze in more uses of  Killing Machine empowered abilities during  Pillar of Frost.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Frost Death Knight Rotation and Talent Builds Pages.
-
 
 Frost Death Knight Rotation Guide
 Frost Death Knight Talent Builds Guide

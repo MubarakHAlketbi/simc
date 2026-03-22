@@ -1,6 +1,6 @@
 # death-knight/blood — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/tier-set-bonuses
-Generated: 2026-03-21 22:11
+Generated: 2026-03-23 01:05
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Blood Death Knight Tier Set Bonuses for Midnight Season 1
 By Mandl
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Blood Death Knight tier, including how the tier bonuses work, their effect on the Blood Death Knight playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -48,14 +48,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR BLOOD DEATH KNIGHT
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Blood Death Knight gear page!
-
 
 Blood Death Knight Gear Guide
 Midnight Season 1 Tier Set Bonuses for Blood Death Knight
@@ -65,11 +61,6 @@ Similarly to every expansion, this tier set acts as a "welcome to Midnight" act 
 Relentless Rider's Lament
  Death Knight Blood 12.0 Class Set 2pc - Blood Boil deals 8% bonus damage and each cast (including Boiling Point echoes) grants 3 Runic Power.
  Death Knight Blood 12.0 Class Set 4pc - Death Strike deals 8% bonus damage and each cast has a 10% chance to grant an additional Blood Boil charge.
-
-
-
-
-
 
 Best Tier Set Pieces for Blood Death Knight
 Our tier set bonus, Relentless Rider's Lament, is comprised of the following items from Midnight Season 1:
@@ -94,7 +85,6 @@ There are no rotational changes brought forward by the tier set. The chance to r
 You will simply have slightly more Runic Power to spend, magnified further by Boiling Point procs.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Blood Death Knight Rotation and Talent Builds Pages.
-
 
 Blood Death Knight Rotation Guide
 Blood Death Knight Talent Builds Guide

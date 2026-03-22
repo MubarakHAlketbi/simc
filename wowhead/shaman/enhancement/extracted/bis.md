@@ -1,6 +1,6 @@
 # shaman/enhancement — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/bis-gear
-Generated: 2026-03-21 22:56
+Generated: 2026-03-23 01:27
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -36,25 +36,20 @@ At the start of the season, you're limited by both your sparks and your crests, 
 Craft  Farstrider's Chopper with  Darkmoon Sigil: Hunt  - 
 Craft  Farstrider's Reinforced Faulds* with  Arcanoweave Lining 
 
-
 Early Crafting Optimization 
-
 
 Since  Arcanoweave Lining  scales with item level, you want to spend Dawncrests upgrading the off-piece you craft after you upgrade your weapon fully. That means if you're crafting early, you want to put it on a high budget item worth raising to 285 rather than a low budget piece like a Cloak or Bracers. Our best off-piece (Legs) drop from the first boss of Quel'danas, Belo'ren, so by the time that's even killable on Mythic you'll have sparks to spare.
 
 Use a Veteran level Crafted Piece (ideally Cloak or Bracers) with  Arcanoweave Lining  until you know which 4 Tier Pieces you have. If crafting Legs isn't an option, switch to crafting Boots or Belt. Due to the Catalyst Unbound achievement though, even if you get Legs as one of your tier pieces, you can farm an alternative in Mythic+ to fix it.
 Replace Low Item Level Pieces -
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -94,23 +89,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -139,25 +117,20 @@ At the start of the season, you're limited by both your sparks and your crests, 
 Craft  Farstrider's Chopper with  Darkmoon Sigil: Hunt  - 
 Craft  Farstrider's Reinforced Faulds* with  Arcanoweave Lining 
 
-
 Early Crafting Optimization 
-
 
 Since  Arcanoweave Lining  scales with item level, you want to spend Dawncrests upgrading the off-piece you craft after you upgrade your weapon fully. That means if you're crafting early, you want to put it on a high budget item worth raising to 285 rather than a low budget piece like a Cloak or Bracers. Our best off-piece (Legs) drop from the first boss of Quel'danas, Belo'ren, so by the time that's even killable on Mythic you'll have sparks to spare.
 
 Use a Veteran level Crafted Piece (ideally Cloak or Bracers) with  Arcanoweave Lining  until you know which 4 Tier Pieces you have. If crafting Legs isn't an option, switch to crafting Boots or Belt. Due to the Catalyst Unbound achievement though, even if you get Legs as one of your tier pieces, you can farm an alternative in Mythic+ to fix it.
 Replace Low Item Level Pieces -
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -197,23 +170,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 BEST IN SLOT ENHANCEMENT SHAMAN GEAR
@@ -241,16 +197,13 @@ Craft  Farstrider's Chopper with  Darkmoon Sigil: Hunt  -
 Craft  Adherent's Silken Shroud with  Arcanoweave Lining  - 
 Craft  Loa Worshiper's Band -
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -290,20 +243,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

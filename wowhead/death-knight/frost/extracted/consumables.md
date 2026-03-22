@@ -1,6 +1,6 @@
 # death-knight/frost — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/enchants-gems-pve-dps
-Generated: 2026-03-21 22:12
+Generated: 2026-03-23 01:06
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -57,9 +57,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST FROST DEATH KNIGHT GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -71,8 +68,6 @@ Boots	 Enchant Boots - Farstrider's Hunt
 Ring	 Enchant Ring - Eyes of the Eagle 
 Diamond	 Indecipherable Eversong Diamond 
 Other Gems	 Flawless Masterful Garnet 
-
-
 
 Build	Runeforge
  Shattering Blade	 Rune of Razorice on Main Hand	 Rune of the Fallen Crusader on Off Hand
@@ -91,7 +86,6 @@ Frost Death Knight Weapon Enchant
  BEST FROST DEATH KNIGHT CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Frost can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Shattered Sun 
 Combat Potion	 Light's Potential 
@@ -99,9 +93,6 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Royal Roast
-Report Ad
-Report ad
-Remove All Ads
 Frost Death Knight Flask
 The best Flask for Frost Death Knight is  Flask of the Shattered Sun .
 Frost Death Knight Combat Potions
@@ -118,12 +109,8 @@ Feast:  Hearty Silvermoon Parade/ Hearty Quel'dorei Medley
 Personal Food:  Royal Roast
 Our Frost Death Knight guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Frost Death Knight guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 khazakdk
 Khazak started playing World of Warcraft in 5.4 and rolled a Death Knight as soon as he reached level 55. Besides writing guides, he is active in Acherus, the Death Knight class Discord, and is a maintainer on SimulationCraft, contributing code implementations and APLs for Frost Death Knights. He raids in Agency on Zul'jin-US and sometimes streams raids on Twitch. He is always happy to take questions or comments about the guide through Discord.

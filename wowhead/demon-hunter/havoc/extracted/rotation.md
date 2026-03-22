@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:21
+Generated: 2026-03-22 23:59
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Fel-Scarred', 'Aldrachi Reaver']
@@ -16,14 +16,11 @@ Tab Group 2: ['Inertia']
 BEST HAVOC DEMON HUNTER SINGLE TARGET ROTATION
 Havoc in Single Target plays around a priority list, juggling short ability cooldowns before falling down to filler spenders. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. With  Fel-Scarred selected, the priority is as follows:
 
-
 Fel-Scarred
 Aldrachi Reaver
  Fel-Scarred in single target puts a major focus on  Eye Beam and  Metamorphosis for major burst damage through  Demonsurge, this heavy burst profile adds value to  Inertia making it the primary choice.
 Use the ✖ markers to switch to common alternate talent picks based on your loadout.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
-
-
 
  OPTIONS
 Inertia
@@ -54,49 +51,23 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST HAVOC DEMON HUNTER SINGLE TARGET ROTATION
 Havoc in AoE plays around a priority list, juggling short ability cooldowns before falling down to filler spenders. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. There are almost zero differences in Single Target and AoE rotations, but you swap to a multi-target priority at 2 targets. With  Fel-Scarred selected, the AoE priority is as follows:
-
 
 Fel-Scarred
 Aldrachi Reaver
  Fel-Scarred in AoE puts a major focus  Immolation Aura due to  Flamebound and  Ragefire causing it to be a significant portion of your overall damage. There's still also a large impact from  Eye Beam and  Metamorphosis for major burst damage through  Demonsurge, and this heavy burst profile adds value to  Inertia making it the primary choice.
 Use the ✖ markers to switch to common alternate talent picks based on your loadout.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
-
-
 
  OPTIONS
 Inertia
@@ -128,46 +99,21 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST HAVOC DEMON HUNTER OPENER
 The Havoc Demon Hunter opener differs based on your chosen hero talent and talent build. Fortunately, there are almost zero differences in Single Target and AoE openers, however the talent builds will likely differ in those scenarios. With  Fel-Scarred selected, the opener is as follows:
 
-
 Fel-Scarred
 Aldrachi Reaver
 The  Fel-Scarred opener aims to get all your cooldowns on cooldown efficiently while utilizing all your potential  Demonsurge's before returning to a regular rotation.
-
 
 Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -203,7 +149,6 @@ Pre-cast
 Pull
 Inertia
 
-
 Inertia
  FEL-SCARRED NOTES
 The  Fel-Scarred opener focuses on quickly entering  Metamorphosis as quickly as possible, getting all your important cooldowns on cooldown.
@@ -214,36 +159,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -259,36 +181,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Metamorphosis', 'Eye Beam', 'Essence Break', 'The Hunt']
 
@@ -306,36 +205,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Eye Beam
 PRE-COMBAT CHECK
@@ -351,36 +227,13 @@ Due to  Demonic,  Eye Beam provides a burst window where you are temporarily in 
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Essence Break
 PRE-COMBAT CHECK
@@ -396,36 +249,13 @@ Essence Break is cast when already in  Metamorphosis form, whether from the cool
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### The Hunt
 PRE-COMBAT CHECK
@@ -441,36 +271,13 @@ The Hunt usage depends on your Hero Talent, for  Fel-Scarred there is no talent
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Inertia']
 
@@ -488,36 +295,13 @@ The Hunt usage depends on your Hero Talent, for  Fel-Scarred there is no talent
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Aldrachi Reaver
 
@@ -526,7 +310,6 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST HAVOC DEMON HUNTER SINGLE TARGET ROTATION
 Havoc in Single Target plays around a priority list, juggling short ability cooldowns before falling down to filler spenders. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. With  Aldrachi Reaver selected, the priority is as follows:
-
 
 Fel-Scarred
 Aldrachi Reaver
@@ -565,41 +348,17 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST HAVOC DEMON HUNTER SINGLE TARGET ROTATION
 Havoc in AoE plays around a priority list, juggling short ability cooldowns before falling down to filler spenders. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. There are almost zero differences in Single Target and AoE rotations, but you swap to a multi-target priority at 2 targets. With  Aldrachi Reaver selected, the AoE priority is as follows:
-
 
 Fel-Scarred
 Aldrachi Reaver
@@ -641,46 +400,21 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST HAVOC DEMON HUNTER OPENER
 The Havoc Demon Hunter opener differs based on your chosen hero talent and talent build. Fortunately, there are almost zero differences in Single Target and AoE openers, however the talent builds will likely differ in those scenarios. With  Aldrachi Reaver selected, the opener is as follows:
 
-
 Fel-Scarred
 Aldrachi Reaver
  Aldrachi Reaver structures it's opener around using  The Hunt to generate your first  Reaver's Glaive and spending it to apply out your  Reaver's Mark. If you already have a  Reaver's Glaive from a previous pull in scenarios like Mythic+ or Delves, you must first use  Reaver's Glaive before  The Hunt.
-
 
 Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -719,36 +453,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -764,36 +475,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Metamorphosis', 'Eye Beam', 'Essence Break', 'The Hunt']
 
@@ -811,36 +499,13 @@ Metamorphosis is not simply a press and go button due to the talent  Chaotic Tra
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Eye Beam
 PRE-COMBAT CHECK
@@ -856,36 +521,13 @@ Due to  Demonic,  Eye Beam provides a burst window where you are temporarily in 
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Essence Break
 PRE-COMBAT CHECK
@@ -901,36 +543,13 @@ Essence Break is cast when already in  Metamorphosis form, whether from the cool
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### The Hunt
 PRE-COMBAT CHECK
@@ -946,36 +565,13 @@ The Hunt usage depends on your Hero Talent, for  Fel-Scarred there is no talent
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Inertia']
 
@@ -993,33 +589,10 @@ The Hunt usage depends on your Hero Talent, for  Fel-Scarred there is no talent
 INERTIA
 With  Inertia, you will be lining up  Vengeful Retreat consistently to  Eye Beam. This is due to  Tactical Retreat and  Cycle of Hatred reducing both abilities to a 20 second cooldown, while using the damage amplification with the burst around Eye Beam for Fel-Scarred. If you make a mistake and de-sync, continue to use Eye Beam on cooldown and hold Vengeful Retreat for your next Eye Beam.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

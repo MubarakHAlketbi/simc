@@ -1,6 +1,6 @@
 # warrior/fury — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/fury/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:37
+Generated: 2026-03-23 00:15
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Slayer', 'Mountain Thane']
@@ -47,36 +47,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Multitarget
 BEST FURY WARRIOR AOE ROTATION
@@ -117,36 +94,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FURY WARRIOR OPENER
@@ -172,43 +126,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -221,36 +151,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Recklessness', 'Avatar', 'Bladestorm', "Odyn's Fury", "Champion's Spear"]
 
@@ -260,7 +167,6 @@ PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
 
-
 Be in Berserker Stance
 Apply Battle Shout
 Eat food, drink flask
@@ -272,43 +178,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Avatar
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -321,43 +203,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Bladestorm
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -370,43 +228,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Odyn's Fury
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -419,43 +253,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Champion's Spear
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -468,36 +278,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Maximizing Uptime', 'Aligning Cooldowns']
 
@@ -507,7 +294,6 @@ PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
 
-
 Be in Berserker Stance
 Apply Battle Shout
 Eat food, drink flask
@@ -519,43 +305,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Aligning Cooldowns
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -568,36 +330,13 @@ Fury Warriors have several cooldowns, but they're all used more or less the same
 
 The reason is that losing an entire use of a cooldown is typically a bigger loss than what is gained by stacking the cooldown with something else to amplify it. Some cooldowns, like  Recklessness and  Avatar will always align naturally, though others will not, so anticipating those timers and knowing when adds or important damage phases are coming is key.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Mountain Thane
 
@@ -641,36 +380,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Multitarget
 BEST FURY WARRIOR AOE ROTATION
@@ -711,36 +427,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FURY WARRIOR OPENER
@@ -766,43 +459,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -815,36 +484,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Recklessness', 'Avatar', 'Bladestorm', "Odyn's Fury", "Champion's Spear"]
 
@@ -854,7 +500,6 @@ PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
 
-
 Be in Berserker Stance
 Apply Battle Shout
 Eat food, drink flask
@@ -866,43 +511,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Avatar
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -915,43 +536,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Bladestorm
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -964,43 +561,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Odyn's Fury
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -1013,43 +586,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Champion's Spear
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -1062,36 +611,13 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Maximizing Uptime', 'Aligning Cooldowns']
 
@@ -1101,7 +627,6 @@ PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
 
-
 Be in Berserker Stance
 Apply Battle Shout
 Eat food, drink flask
@@ -1113,43 +638,19 @@ Fury Warriors are very straightforward damage dealers, with a very flat damage p
 
 There are a variety of tools to help with this, from using  Heroic Leap to move out of range at the last moment before damage goes out, to using  Charge after a target has finished moving, which are largely a byproduct of time and experience.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Aligning Cooldowns
 PullEnrageExecute timing varies, depending on  Sudden Death procs. Storm Bolt is an extremely minor damage increase when used during Bladestorm, though it is not worth talenting at the expense of survivability or mobility.
 
 PRE-COMBAT CHECKS
 Before any form of combat, whether raids, dungeons, delves, or even open-world content, ensure that  Battle Shout is active on yourself and all relevant party members. In higher-end content, applying a food buff, flask, weapon oils, and preparing a combat potion is also a good idea.
-
 
 Be in Berserker Stance
 Apply Battle Shout
@@ -1162,33 +663,10 @@ Fury Warriors have several cooldowns, but they're all used more or less the same
 
 The reason is that losing an entire use of a cooldown is typically a bigger loss than what is gained by stacking the cooldown with something else to amplify it. Some cooldowns, like  Recklessness and  Avatar will always align naturally, though others will not, so anticipating those timers and knowing when adds or important damage phases are coming is key.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

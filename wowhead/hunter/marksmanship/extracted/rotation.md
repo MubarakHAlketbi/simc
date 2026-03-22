@@ -1,6 +1,6 @@
 # hunter/marksmanship — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:26
+Generated: 2026-03-23 00:04
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sentinel', 'Dark Ranger']
@@ -42,36 +42,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST MARKSMANSHIP HUNTER AOE ROTATION
@@ -106,36 +83,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST MARKSMANSHIP HUNTER OPENER
@@ -190,36 +144,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -244,36 +175,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Trueshot']
 
@@ -300,36 +208,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Always Be Casting']
 
@@ -356,36 +241,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Dark Ranger
 
@@ -422,36 +284,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST MARKSMANSHIP HUNTER AOE ROTATION
@@ -487,36 +326,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST MARKSMANSHIP HUNTER OPENER
@@ -574,36 +390,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -628,36 +421,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Trueshot']
 
@@ -684,36 +454,13 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Always Be Casting']
 
@@ -740,33 +487,10 @@ For both Hero Talents, activating  Trueshot turns the Trueshot button into anoth
 ALWAYS BE CASTING
 The problem is not so much that people forget that  Steady Shot exists, however. It is understanding the value of time in the DPS equation. Most people press their buttons rather slowly, they press buttons that are not available to them, their DPS rotation stops when they are focused on a mechanic, or they just have bad reaction times. All of these things lead to lost time where you are not casting anything, often for very small windows of time, but these small windows of time add up very quickly, and they are the difference between a good and a great player. Always be casting something, even if it is just  Steady Shot, and you will see a noticeable increase in your DPS.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

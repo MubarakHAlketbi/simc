@@ -1,0 +1,5 @@
+Spec: monk/windwalker
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps
+Warnings (1):
+  - MISSING HERO TALENTS: found 1 (['Conduit of the Celestials']), expected 2 (['conduit-of-the-celestials', 'shado-pan'])

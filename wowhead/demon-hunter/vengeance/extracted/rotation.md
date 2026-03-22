@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:22
+Generated: 2026-03-23 00:00
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Annihilator', 'Aldrachi Reaver']
@@ -14,7 +14,6 @@ Tab Group 1: ['Fracture']
 #### Single-Target Priority
 BEST VENGEANCE DEMON HUNTER SINGLE TARGET ROTATION
 Vengeance plays around a priority list rather than a strict rotation. This means with each GCD we go top to bottom on a list ordered by relative power and use the first ability on that list which meets our conditions. With  Annihilator selected, the priority is as follows:
-
 
 Annihilator
 Aldrachi Reaver
@@ -54,41 +53,17 @@ Try to enter  Metamorphosis with maximum Souls to take advantage of  Spirit Bomb
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST VENGEANCE DEMON HUNTER AOE ROTATION
 In AoE, the Vengeance priority is roughly the same as for ST, but  Fel Devastation is a bit higher priority. We shift to a multi-target priority at 2 targets. With  Annihilator selected, the AoE priority is as follows:
-
 
 Annihilator
 Aldrachi Reaver
@@ -123,46 +98,21 @@ The AoE rotation is nearly the same as the ST rotation, but  Fel Devastation has
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST VENGEANCE DEMON HUNTER OPENER
 Our opener is generally fairly set, with minor variations depending on the type of pull. Generally, the rule is to get all of our cooldowns rolling in a sequence to avoid any potential waste or missed casts. Following that, after everything is set up, we transition smoothly into our buff management and ability cycling, and as such we are less reliant on opener damage overall. It's instead a way to hit the ground running. With  Annihilator selected, opener details are as follows:
 
-
 Annihilator
 Aldrachi Reaver
 Get everything rolling!
-
 
 Use the ✖ markers to pick talent options.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -199,36 +149,13 @@ We are simply trying to get all our cooldowns rolling quickly before going into 
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -239,36 +166,13 @@ Use your Consumables - Food, Flasks, Oils.
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Fracture']
 
@@ -281,36 +185,13 @@ Use your Consumables - Food, Flasks, Oils.
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Aldrachi Reaver
 
@@ -319,7 +200,6 @@ You are not logged in. Please log in or register an account to add your comment.
 #### Single-Target Priority
 BEST VENGEANCE DEMON HUNTER SINGLE TARGET ROTATION
 Vengeance plays around a priority list rather than a strict rotation. This means with each GCD we go top to bottom on a list ordered by relative power and use the first ability on that list which meets our conditions. With  Aldrachi Reaver selected, the priority is as follows:
-
 
 Annihilator
 Aldrachi Reaver
@@ -361,41 +241,17 @@ Uptime is critical due to the constant flow of glaives maintaining buffs.
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST VENGEANCE DEMON HUNTER AOE ROTATION
 In AoE, the Vengeance priority is roughly the same as for ST, but  Fel Devastation is a bit higher priority. We shift to a multi-target priority at 2 targets. With  Aldrachi Reaver selected, the AoE priority is as follows:
-
 
 Annihilator
 Aldrachi Reaver
@@ -432,46 +288,21 @@ It is more critical as  Aldrachi Reaver to constantly be generating Souls since
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST VENGEANCE DEMON HUNTER OPENER
 Our opener is generally fairly set, with minor variations depending on the type of pull. Generally, the rule is to get all of our cooldowns rolling in a sequence to avoid any potential waste or missed casts. Following that, after everything is set up, we transition smoothly into our buff management and ability cycling, and as such we are less reliant on opener damage overall. It's instead a way to hit the ground running. With  Aldrachi Reaver selected, opener details are as follows:
 
-
 Annihilator
 Aldrachi Reaver
 Start your first glaive combo early and then transition into all other cooldowns.
-
 
 Use the ✖ markers to pick talent options.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -506,36 +337,13 @@ We want to get our first glaive combo out as quickly as possible and then contin
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -546,36 +354,13 @@ Use your Consumables - Food, Flasks, Oils.
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Fracture']
 
@@ -588,33 +373,10 @@ Use your Consumables - Food, Flasks, Oils.
 FRACTURE
 Fracture optimization is a minor optimization that can be managed when playing  Annihilator. When you are at full stacks of Voidfall or in the process of spending them, avoid pressing Fracture since you cannot generate. That means you want to prioritize it more heavily when you are about to proc the third stack.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

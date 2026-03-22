@@ -1,6 +1,6 @@
 # monk/windwalker — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/enchants-gems-pve-dps
-Generated: 2026-03-21 22:41
+Generated: 2026-03-23 01:20
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -82,7 +82,6 @@ Windwalker Monk Weapon Enchant
  BEST WINDWALKER MONK CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Windwalker Monks can use in PvE content. While Critical Strike or Haste is generally recommended as the safest option for gearing characters, you should ideally be simming your character using Raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Blood Knights 
 Combat Potion	 Potion of Recklessness 
@@ -105,12 +104,8 @@ Feast:  Harandar Celebration or  Silvermoon Parade.
 Personal Food:  Impossibly Royal Roast or  Royal Roast.
 Our Windwalker Monk guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Windwalker Monk guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Babylonius
 Windwalker Monk Guide Writer and Community Leader

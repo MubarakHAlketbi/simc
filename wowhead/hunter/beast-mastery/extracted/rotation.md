@@ -1,6 +1,6 @@
 # hunter/beast-mastery — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/beast-mastery/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:25
+Generated: 2026-03-23 00:03
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Pack Leader', 'Dark Ranger']
@@ -60,36 +60,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST BEAST MASTERY HUNTER AOE ROTATION
@@ -141,36 +118,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST BEAST MASTERY HUNTER OPENER
@@ -178,10 +132,8 @@ Tthe goal of your opener will be to make sure that your pet gets into melee rang
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 You can select either of the fight types below to adjust the opener accordingly.
 
-
 Single-target
 AoE
-
 
 SAMPLE TIMELINE
 and similar racials
@@ -236,36 +188,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECKS
@@ -312,36 +241,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Bestial Wrath', 'Trinkets, Potions and Racials']
 
@@ -390,36 +296,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Trinkets, Potions and Racials
 PRE-COMBAT CHECKS
@@ -461,36 +344,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Perfecting your cooldown window', 'Pet Management']
 
@@ -534,36 +394,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pet Management
 PRE-COMBAT CHECKS
@@ -596,36 +433,13 @@ Your  Kill Command and  Barbed Shot will cause your pet charge towards the targe
 Your pet also has  Dash, which you can manually use to move it around quickly. It is set to auto-cast by default, which often wastes it.
 It's worth turning off  Spirit Walk auto-cast, as it makes your pet start attacking the enemy slower.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Dark Ranger
 
@@ -682,36 +496,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST BEAST MASTERY HUNTER AOE ROTATION
@@ -765,36 +556,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST BEAST MASTERY HUNTER OPENER
@@ -802,10 +570,8 @@ Tthe goal of your opener will be to make sure that your pet gets into melee rang
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 You can select either of the fight types below to adjust the opener accordingly.
 
-
 Single-target
 AoE
-
 
 SAMPLE TIMELINE
 and similar racials
@@ -866,36 +632,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECKS
@@ -942,36 +685,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Bestial Wrath', 'Trinkets, Potions and Racials']
 
@@ -1020,36 +740,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Trinkets, Potions and Racials
 PRE-COMBAT CHECKS
@@ -1091,36 +788,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Perfecting your cooldown window', 'Pet Management']
 
@@ -1164,36 +838,13 @@ The Dark Hound with  Dire Cleave causes your cooldown to gain a powerful AoE bur
 Note that the priority changes when  Withering Fire fades and  Bestial Wrath is still active. During this small period, you should aim to use  Barbed Shot over  Black Arrow.
  Wailing Arrow is generally flexible in how you use it but you should generally avoid wasting resources while using it, such as  Kill Command reaching two charges. You should, however, always use it before the effect runs out. You also have the option of taking advantage of silence effect in Mythic+.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pet Management
 PRE-COMBAT CHECKS
@@ -1226,33 +877,10 @@ Your  Kill Command and  Barbed Shot will cause your pet charge towards the targe
 Your pet also has  Dash, which you can manually use to move it around quickly. It is set to auto-cast by default, which often wastes it.
 It's worth turning off  Spirit Walk auto-cast, as it makes your pet start attacking the enemy slower.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

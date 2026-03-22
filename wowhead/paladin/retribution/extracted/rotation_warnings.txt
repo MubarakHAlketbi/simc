@@ -1,0 +1,5 @@
+Spec: paladin/retribution
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
+Warnings (1):
+  - MISSING HERO TALENTS: found 0 ([]), expected 2 (['herald-of-the-sun', 'templar'])

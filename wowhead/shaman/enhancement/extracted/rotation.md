@@ -1,6 +1,6 @@
 # shaman/enhancement — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:34
+Generated: 2026-03-23 00:12
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Stormbringer', 'Totemic']
@@ -45,36 +45,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST ENHANCEMENT SHAMAN AOE ROTATION
@@ -115,36 +92,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST ENHANCEMENT SHAMAN OPENER
@@ -182,36 +136,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -240,36 +171,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Doom Winds', 'Ascendance', "Thorim's Invocation", 'Sundering', 'Surging Totem']
 
@@ -300,36 +208,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ascendance
 PRE-COMBAT CHECK
@@ -354,36 +239,13 @@ Due to the heavy  Maelstrom Weapon generation while active,  Stormbringer can o
 Single Target - No matter what,  Windstrike is cast on cooldown. Even if  Tempest procs, there's no downside.
 AoE - Cast  Crash Lightning if available, and  Windstrike otherwise. Similarly, even if  Tempest procs, don't switch priority.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Thorim's Invocation
 PRE-COMBAT CHECK
@@ -411,36 +273,13 @@ The  Maelstrom Weapon spender cast is dictated by a few specific conditions, and
  Stormbringer - with  Tempest active, it will always be consumed, regardless of the current priming state.
 In Midnight, it's good to know what you're currently primed to, but with the removal of addons it's quite difficult to know for sure. You already want to be in the correct state before you cast these, as fixing it while they're active forces you to use up a valuable GCD on the appropriate spell. In most cases, you should naturally be in the correct state through your rotation, and especially in the case of  Stormbringer your opening  Tempest via  Descending Skies will adjust it to the current situation anyway.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Sundering
 PRE-COMBAT CHECK
@@ -465,36 +304,13 @@ Depending on the Hero Talent tree taken, the ability serves a variety of functio
  Stormbringer - makes use of this as a strong front-loaded burst cooldown in AoE situations, using the Haste provided by  Surging Elements to empower  Ascendance. Unfortunately, it struggles to fit it into single target builds.
  Totemic - always takes this due to interactions with  Whirling Elements. The additional Haste it can layer over both  Surging Totem and  Doom Winds consistently makes an already strong combo of cooldowns even more powerful.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Surging Totem
 PRE-COMBAT CHECK
@@ -517,39 +333,15 @@ Exclusive to  Totemic,  Surging Totem has been re-situated as a burst cooldown 
  Primal Catalyst - Your next  Lava Lash cast repeats for 150% damage. This is consumed alongside  Whirling Fire.
 Executing these sequences to set up for a long  Hot Hand through  Totemic Momentum is key, and gives a lot of breathing room after it ends. This often leads to a buff so long it lasts until your next  Sundering when played correctly, so aim for that. Sequencing changes between single target and AoE, but follows something similar to this:
 
-
 Executing this sequence in Midnight consistently is relatively easy, as cooldowns should be kept in sync with correct play. Making sure you don't drift  Sundering away from these 1-minute timers is important though, as having the extra Searing Totem active for your upcoming streak of  Lava Lash casts contributes a lot of extra damage currently.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Totemic
 
@@ -592,36 +384,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST ENHANCEMENT SHAMAN AOE ROTATION
@@ -662,36 +431,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST ENHANCEMENT SHAMAN OPENER
@@ -730,36 +476,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -788,36 +511,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Doom Winds', 'Ascendance', "Thorim's Invocation", 'Sundering', 'Surging Totem']
 
@@ -848,36 +548,13 @@ New in Midnight, this also gains the effects of both  Static Accumulation and  T
 Always weave  Lava Lash on cooldown during this, making sure  Hot Hand has been triggered from  Whirling Fire.
 Cast Activators in between. Priority is  Crash Lightning ➜  Stormstrike, which should provide cooldown reduction through  Elemental Tempo.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ascendance
 PRE-COMBAT CHECK
@@ -902,36 +579,13 @@ Due to the heavy  Maelstrom Weapon generation while active,  Stormbringer can o
 Single Target - No matter what,  Windstrike is cast on cooldown. Even if  Tempest procs, there's no downside.
 AoE - Cast  Crash Lightning if available, and  Windstrike otherwise. Similarly, even if  Tempest procs, don't switch priority.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Thorim's Invocation
 PRE-COMBAT CHECK
@@ -959,36 +613,13 @@ The  Maelstrom Weapon spender cast is dictated by a few specific conditions, and
  Stormbringer - with  Tempest active, it will always be consumed, regardless of the current priming state.
 In Midnight, it's good to know what you're currently primed to, but with the removal of addons it's quite difficult to know for sure. You already want to be in the correct state before you cast these, as fixing it while they're active forces you to use up a valuable GCD on the appropriate spell. In most cases, you should naturally be in the correct state through your rotation, and especially in the case of  Stormbringer your opening  Tempest via  Descending Skies will adjust it to the current situation anyway.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Sundering
 PRE-COMBAT CHECK
@@ -1013,36 +644,13 @@ Depending on the Hero Talent tree taken, the ability serves a variety of functio
  Stormbringer - makes use of this as a strong front-loaded burst cooldown in AoE situations, using the Haste provided by  Surging Elements to empower  Ascendance. Unfortunately, it struggles to fit it into single target builds.
  Totemic - always takes this due to interactions with  Whirling Elements. The additional Haste it can layer over both  Surging Totem and  Doom Winds consistently makes an already strong combo of cooldowns even more powerful.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Surging Totem
 PRE-COMBAT CHECK
@@ -1065,36 +673,12 @@ Exclusive to  Totemic,  Surging Totem has been re-situated as a burst cooldown 
  Primal Catalyst - Your next  Lava Lash cast repeats for 150% damage. This is consumed alongside  Whirling Fire.
 Executing these sequences to set up for a long  Hot Hand through  Totemic Momentum is key, and gives a lot of breathing room after it ends. This often leads to a buff so long it lasts until your next  Sundering when played correctly, so aim for that. Sequencing changes between single target and AoE, but follows something similar to this:
 
-
 Executing this sequence in Midnight consistently is relatively easy, as cooldowns should be kept in sync with correct play. Making sure you don't drift  Sundering away from these 1-minute timers is important though, as having the extra Searing Totem active for your upcoming streak of  Lava Lash casts contributes a lot of extra damage currently.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

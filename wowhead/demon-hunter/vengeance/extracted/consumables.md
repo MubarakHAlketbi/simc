@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/enchants-gems-pve-tank
-Generated: 2026-03-21 22:19
+Generated: 2026-03-23 01:09
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -54,9 +54,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST VENGEANCE DEMON HUNTER GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best Enchant	Alternative
@@ -79,13 +76,9 @@ Vengeance Demon Hunter Weapon Enchant
 For Weapons, since we have several different options, I've listed them here. Note that the best option may vary depending on your current gear setup so it's best to sim them yourself:
 Double  Enchant Weapon - Acuity of the Ren'dorei  defensively.
 Any combination of the secondary enchants offensively ( Enchant Weapon - Berserker's Rage ,  Enchant Weapon - Jan'alai's Precision ,  Enchant Weapon - Worldsoul Tenacity ,  Enchant Weapon - Arcane Mastery )
-Report Ad
-Report ad
-Remove All Ads
 Note: It does not matter what weapon you enchant with which effect. Procs occur at the same rate for main-hand and off-hand weapons. The effect is doubled with the same proc rate, if used on both.
  BEST VENGEANCE DEMON HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Vengeance Demon Hunters can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
-
 
 Type	Best
 Flask	 Flask of the Blood Knights 
@@ -112,12 +105,8 @@ Secondary stat food:  Blooming Feast/ Quel'dorei Medley (Feast),  Champion's Ben
 Agility Feast:  Harandar Celebration/ Silvermoon Parade
 Our Vengeance Demon Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Vengeance Demon Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Itamae
 World of Warcraft Vengeance Demon Hunter Expert

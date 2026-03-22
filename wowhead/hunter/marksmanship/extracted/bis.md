@@ -1,6 +1,6 @@
 # hunter/marksmanship — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/bis-gear
-Generated: 2026-03-21 22:31
+Generated: 2026-03-23 01:14
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,16 +37,13 @@ Craft  World Tender's Barkclasp Explanation
 Craft  World Tender's RootslippersExplanation 
 Replace Low Item Level Pieces, preferring Weapon > Neck/Rings > Cloak/Wrists. Other item slots are generally not crafted, as they are taken up by Tier or other uniquely strong pieces.
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +86,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -135,16 +115,13 @@ Craft  World Tender's Barkclasp Explanation
 Craft  World Tender's RootslippersExplanation 
 Replace Low Item Level Pieces, preferring Weapon > Neck/Rings > Cloak/Wrists. Other item slots are generally not crafted, as they are taken up by Tier or other uniquely strong pieces.
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,23 +164,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Marksmanship Hunter
@@ -231,16 +191,13 @@ Craft  World Tender's Barkclasp Explanation
 Craft  World Tender's RootslippersExplanation 
 Replace Low Item Level Pieces, preferring Weapon > Neck/Rings > Cloak/Wrists. Other item slots are generally not crafted, as they are taken up by Tier or other uniquely strong pieces.
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -283,20 +240,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # monk/windwalker — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/bis-gear
-Generated: 2026-03-21 22:41
+Generated: 2026-03-23 01:20
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,16 +37,13 @@ Unless you're comfortable waiting until you look or Great Vault a Myth track 2-H
 Craft  Loa Worshiper's Band Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -86,23 +83,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts', 'Flowchart']
 
@@ -132,16 +112,13 @@ Unless you're comfortable waiting until you look or Great Vault a Myth track 2-H
 Craft  Loa Worshiper's Band Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -181,23 +158,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Windwalker Monk
@@ -225,16 +185,13 @@ Craft  Loa Worshiper's Band Explanation
 Craft an item with  Stabilizing Gemstone Bandolier  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -274,23 +231,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Flowchart
 Best in Slot Gear for Windwalker Monk
@@ -313,16 +253,13 @@ Ring	 Eye of Midnight	Midnight Falls
 Trinket 1	 Gaze of the Alnseer	Chimaerus
 Trinket 2	 Algeth'ar Puzzle Box	Algeth'ar Academy
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -362,20 +299,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/talent-builds-pve-tank
-Generated: 2026-03-22 06:32
+Generated: 2026-03-23 01:09
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Annihilator', 'Aldrachi Reaver']

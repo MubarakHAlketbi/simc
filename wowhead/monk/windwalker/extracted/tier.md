@@ -1,6 +1,6 @@
 # monk/windwalker — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/tier-set-bonuses
-Generated: 2026-03-21 22:41
+Generated: 2026-03-23 01:20
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Windwalker Monk Tier Set Bonuses for Midnight Season 1
 By Babylonius
-Updated: 2026/03/16
+Updated: 2026/03/22
 Babylonius
 Offline on Twitch
 Follow
@@ -56,7 +56,6 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Windwalker Monk gear page!
 
-
 Windwalker Monk Gear Guide
 Midnight Season 1 Tier Set Bonuses for Windwalker Monk
 Thematically, the Season 1 set takes it's name from Ra-Den, the twice-Raid boss that first appeared in the second tier of Mists of Pandaria, Throne of Thunder.
@@ -65,11 +64,6 @@ Like most Season 1 tier bonuses, the Midnight Season 1 bonuses are relatively be
 Way of Ra-den's Chosen
  Monk Windwalker12.0 Class Set 2pc - Strike of the Windlord and Whirling Dragon Punch's damage is increased by 30%.
  Monk Windwalker12.0 Class Set 4pc - The cooldowns of Strike of the Windlord and Whirling Dragon Punch are reduced by 5 sec.
-
-
-
-
-
 
 Best Tier Set Pieces for Windwalker Monk
 Our tier set bonus, Way of Ra-den's Chosen, is comprised of the following items from Midnight Season 1:
@@ -92,7 +86,6 @@ Tier Set Bonus Rotation Changes for Windwalker Monk
 The Midnight Season 1 bonuses are not very strong and simply add damage to the existing rotation. This means there is no changes to the priority with or without the bonuses.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Windwalker Monk Rotation and Talent Builds Pages.
-
 
 Windwalker Monk Rotation Guide
 Windwalker Monk Talent Builds Guide

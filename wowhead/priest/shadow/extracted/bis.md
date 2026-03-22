@@ -1,6 +1,6 @@
 # priest/shadow — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/bis-gear
-Generated: 2026-03-21 22:46
+Generated: 2026-03-23 01:23
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -17,7 +17,6 @@ This best-in-slot set aims to combine overbudget items from the raid (such as  E
 
 Note that you will also have two crafted pieces for Embellishments, but these are not in the list since your final "BiS" crafts will differ from your early crafts and it is incredibly important not to mix them up. See the crafting section of the guide below for more information.
 
-
 Slot	Item	Source
 Helm	 Blind Oath's Winged Crest	Raid | Catalyst | Vault
 Neck	 Amulet of the Abyssal Hymn	Midnight Falls (Raid)
@@ -47,16 +46,13 @@ Craft  Arcanoweave Cord Explanation
 Craft a low value slot with  Arcanoweave Lining  (or nothing, see description) Explanation
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -96,23 +92,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -122,7 +101,6 @@ This best-in-slot set aims to combine overbudget items from the raid (such as  E
 
 Note that you will also have two crafted pieces for Embellishments, but these are not in the list since your final "BiS" crafts will differ from your early crafts and it is incredibly important not to mix them up. See the crafting section of the guide below for more information.
 
-
 Slot	Item	Source
 Helm	 Blind Oath's Winged Crest	Raid | Catalyst | Vault
 Neck	 Amulet of the Abyssal Hymn	Midnight Falls (Raid)
@@ -152,16 +130,13 @@ Craft  Arcanoweave Cord Explanation
 Craft a low value slot with  Arcanoweave Lining  (or nothing, see description) Explanation
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -201,30 +176,12 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Shadow Priest
 This best-in-slot set aims to combine overbudget items from the raid (such as  Eye of Midnight), with haste-heavy offpieces. You should end up with haste in most slots.
 
 Note that you will also have two crafted pieces for Embellishments, but these are not in the list since your final "BiS" crafts will differ from your early crafts and it is incredibly important not to mix them up. See the crafting section of the guide below for more information.
-
 
 Slot	Item	Source
 Helm	 Blind Oath's Winged Crest	Raid | Catalyst | Vault
@@ -251,16 +208,13 @@ Craft  Sunfire Bracers Explanation
 Craft  Sunfire Treads Explanation
 Replace Low Item Level Pieces, potentially applying  Arcanoweave Lining  if you've chosen to forego the above set.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -300,20 +254,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

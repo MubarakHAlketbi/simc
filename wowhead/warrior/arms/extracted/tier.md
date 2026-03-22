@@ -1,6 +1,6 @@
 # warrior/arms — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/arms/tier-set-bonuses
-Generated: 2026-03-21 23:03
+Generated: 2026-03-23 01:30
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Arms Warrior Tier Set Bonuses for Midnight Season 1
 By Archimtiros
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Arms Warrior tier, including how the tier bonuses work, their effect on the Arms Warrior playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -48,11 +48,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR ARMS WARRIOR
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Arms Warrior gear page!
-
 
 Arms Warrior Gear Guide
 Midnight Season 1 Tier Set Bonuses for Arms Warrior
@@ -61,11 +63,6 @@ Rage of the Night Ender
  Warrior Arms 12.0 Class Set 2pc - Mortal Strike and Cleave damage increased by 5%. Colossus Smash increases damage taken by an additional 5%.
  Warrior Arms 12.0 Class Set 4pc - Damaging a target affected by Colossus Smash with Mortal Strike or Cleave that hits 3 or more targets extends Colossus Smash's effect on them by 1.0 sec.
 
-
-
-
-
-
 Best Tier Set Pieces for Arms Warrior
 Our tier set bonus, Rage of the Night Ender, is comprised of the following items from Midnight Season 1:
 (Item #429952) (Helm from Lightblinded Vanguard - The Voidspire)
@@ -73,6 +70,9 @@ Our tier set bonus, Rage of the Night Ender, is comprised of the following items
  Night Ender's Breastplate (Chest from Chimaerus - The Dreamrift)
  Night Ender's Fists (Gloves from Vorasius - The Voidspire)
  Night Ender's Chausses (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Arms Warrior prefer equipping tier pieces on these slots:
@@ -85,7 +85,6 @@ Tier Set Bonus Rotation Changes for Arms Warrior
 Because Mortal Strike and Cleave are already highly prioritized, the Season 1 tier set bonus does not have any notable influence on the rotation.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Arms Warrior Rotation and Talent Builds Pages.
-
 
 Arms Warrior Rotation Guide
 Arms Warrior Talent Builds Guide

@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/tier-set-bonuses
-Generated: 2026-03-21 22:20
+Generated: 2026-03-23 01:09
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Vengeance Demon Hunter Tier Set Bonuses for Midnight Season 1
 By Itamae
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Vengeance Demon Hunter tier, including how the tier bonuses work, their effect on the Vengeance Demon Hunter playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -48,14 +48,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR VENGEANCE DEMON HUNTER
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Vengeance Demon Hunter gear page!
-
 
 Vengeance Demon Hunter Gear Guide
 Midnight Season 1 Tier Set Bonuses for Vengeance Demon Hunter
@@ -64,11 +60,6 @@ Devouring Reaver's Sheathe
  Demon Hunter Vengeance 12.0 Class Set 2pc - Fracture damage increased by 35%.
  Demon Hunter Vengeance 12.0 Class Set 4pc - Fracture has a 30% chance to spark a violent detonation, causing (180% of Attack Power) Fire damage onto nearby enemies. Damage reduced beyond 5 targets. (500ms cooldown)
 
-
-
-
-
-
 Best Tier Set Pieces for Vengeance Demon Hunter
 Our tier set bonus, Devouring Reaver's Sheathe, is comprised of the following items from Midnight Season 1:
  Devouring Reaver's Intake (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,9 +67,6 @@ Our tier set bonus, Devouring Reaver's Sheathe, is comprised of the following it
  Devouring Reaver's Engine (Chest from Chimaerus - The Dreamrift)
  Devouring Reaver's Essence Grips (Gloves from Vorasius - The Voidspire)
  Devouring Reaver's Pistons (Legs from Vaelgor & Ezzorak - The Voidspire)
-Report Ad
-Report ad
-Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Vengeance Demon Hunter prefer equipping tier pieces on these slots:
@@ -91,7 +79,6 @@ Tier Set Bonus Rotation Changes for Vengeance Demon Hunter
 Due to the tier simply giving bonus damage to Fracture, there are no changes rotationally.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Vengeance Demon Hunter Rotation and Talent Builds Pages.
-
 
 Vengeance Demon Hunter Rotation Guide
 Vengeance Demon Hunter Talent Builds Guide

@@ -1,6 +1,6 @@
 # warrior/fury — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/fury/bis-gear
-Generated: 2026-03-21 23:05
+Generated: 2026-03-23 01:31
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best-in-Slot Crafts']
 Best-in-Slot Gear for Fury Warriors
 This list represents the best overall gear available from all sources in Midnight Season 1, used equally by both  Slayer and  Mountain Thane, including some special effect "cantrip" items and Mythic+ dungeon items that will only be available at maximum item level from the weekly Great Vault.
 
-
 Item Slot	Name	Source
 Helm	 Night Ender's Tusks	Tier Set	
 Neck	 Amulet of the Abyssal Hymn	Midnight Falls	
@@ -38,16 +37,13 @@ Since there are no important cantrip weapons in current content, crafting a weap
 Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation 
 Proceed to Best-in-Slot crafts. Explanation
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -90,23 +86,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best-in-Slot Crafts']
 
@@ -114,7 +93,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best-in-Slot Gear for Fury Warriors
 This list represents the best overall gear available from all sources in Midnight Season 1, used equally by both  Slayer and  Mountain Thane, including some special effect "cantrip" items and Mythic+ dungeon items that will only be available at maximum item level from the weekly Great Vault.
 
-
 Item Slot	Name	Source
 Helm	 Night Ender's Tusks	Tier Set	
 Neck	 Amulet of the Abyssal Hymn	Midnight Falls	
@@ -137,16 +115,13 @@ Since there are no important cantrip weapons in current content, crafting a weap
 Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation 
 Proceed to Best-in-Slot crafts. Explanation
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -189,28 +164,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best-in-Slot Crafts
 Best-in-Slot Gear for Fury Warriors
 This list represents the best overall gear available from all sources in Midnight Season 1, used equally by both  Slayer and  Mountain Thane, including some special effect "cantrip" items and Mythic+ dungeon items that will only be available at maximum item level from the weekly Great Vault.
-
 
 Item Slot	Name	Source
 Helm	 Night Ender's Tusks	Tier Set	
@@ -234,16 +191,13 @@ Because a weapon is a large investment, it will take some time to get enough cre
 Craft  Spellbreaker's Bracers with  Arcanoweave Lining  Explanation 
 Craft whatever non-embellished items are needed to replace low item level pieces.
 
-1 - 14 of 14
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -286,20 +240,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 14 of 14
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # druid/balance — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/balance/enchants-gems-pve-dps
-Generated: 2026-03-21 22:21
+Generated: 2026-03-23 01:10
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -10,7 +10,7 @@ Hero Talent Switches: None found
 ### Full Page Content
 Guide Contents
 Patch 12.0.1
-4.8/5  (30 Votes)
+4.8/5  (31 Votes)
 Midnight
 Cheat Sheet
 Talent Builds
@@ -54,6 +54,9 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  BEST BALANCE DRUID GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -77,7 +80,6 @@ The option for weapon enchants comes down to flat secondary stats in  Thalassian
  BEST BALANCE DRUID CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Balance Druids can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Magisters 
 Combat Potion	 Light's Potential 
@@ -87,6 +89,9 @@ Weapon Buff	 Thalassian Phoenix Oil
 Augment Rune	 Void-Touched Augment Rune
 Food	 Harandar Celebration
  Blooming Feast
+Report Ad
+Report ad
+Remove All Ads
 Balance Druid Flask
 The best Flask for Balance Druid is  Flask of the Magisters .
 Balance Druid Combat Potions
@@ -103,12 +108,8 @@ Feast:  Harandar Celebration
 Personal Food:  Impossibly Royal Roast
 Our Balance Druid guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Balance Druid guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 gamz
 Gamz is currently a Balance Druid Expert and active theorycrafter in the Dreamgrove discord, where you can usually find him yapping about Moonkin. In the game he raids at a Hall of Fame-level in <Echoes> on Laughing Skull in EU.

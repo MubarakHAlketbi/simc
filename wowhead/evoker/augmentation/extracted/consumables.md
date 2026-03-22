@@ -1,6 +1,6 @@
 # evoker/augmentation — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/enchants-gems-pve-dps
-Generated: 2026-03-21 22:28
+Generated: 2026-03-23 01:13
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -80,7 +80,6 @@ Augmentation Evoker Weapon Enchant
  BEST AUGMENTATION EVOKER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Augmentation Evoker can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Flask	 Flask of the Shattered Sun 
 Combat Potion	 Light's Potential 
 Health Potion	 Silvermoon Health Potion 
@@ -106,12 +105,8 @@ Feast:  Hearty Silvermoon Parade
 Personal Food:  Hearty Royal Roast
 Our Augmentation Evoker guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Augmentation Evoker guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Jereico
 World of Warcraft Evoker Class Expert

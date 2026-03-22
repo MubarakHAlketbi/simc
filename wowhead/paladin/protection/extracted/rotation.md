@@ -1,6 +1,6 @@
 # paladin/protection — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:30
+Generated: 2026-03-23 00:07
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Lightsmith']
@@ -33,36 +33,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST PROTECTION PALADIN AOE ROTATION
@@ -86,36 +63,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST PROTECTION PALADIN OPENER
@@ -147,36 +101,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -193,36 +124,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Avenging Wrath', 'Ardent Defender', 'Guardian of Ancient Kings', 'Divine Shield']
 
@@ -241,36 +149,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ardent Defender
 PRE-COMBAT CHECK
@@ -287,36 +172,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Guardian of Ancient Kings
 PRE-COMBAT CHECK
@@ -333,36 +195,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Divine Shield
 PRE-COMBAT CHECK
@@ -379,36 +218,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Always Be Casting']
 
@@ -427,36 +243,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Lightsmith
 
@@ -485,36 +278,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST PROTECTION PALADIN AOE ROTATION
@@ -540,36 +310,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST PROTECTION PALADIN OPENER
@@ -600,36 +347,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -646,36 +370,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Avenging Wrath', 'Ardent Defender', 'Guardian of Ancient Kings', 'Divine Shield']
 
@@ -694,36 +395,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ardent Defender
 PRE-COMBAT CHECK
@@ -740,36 +418,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Guardian of Ancient Kings
 PRE-COMBAT CHECK
@@ -786,36 +441,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Divine Shield
 PRE-COMBAT CHECK
@@ -832,36 +464,13 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Always Be Casting']
 
@@ -880,33 +489,10 @@ ALWAYS BE CASTING
 This is a classic staple for all specs in WoW, ABC. Always be casting. Your gcd usage is extremely important, if you are missing 10-20% of your total casts just because you aren't mashing fast enough then you are going to be losing a significant amount of damage and holy power generation. This all plays into itself, less resources, less cdr, less damage when you need it.
 Your casts don't have to be perfect all the time, just make sure you are actually hitting something instead of mashing buttons that aren't ready yet.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # death-knight/blood — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/bis-gear
-Generated: 2026-03-21 22:11
+Generated: 2026-03-23 01:05
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -17,7 +17,6 @@ The following Best in Slot list assumes that all raids are active, and that all 
 
 This will be adjusted; a number of raid trinkets are slated to get nerfed, judging by their relative power level compared to the rest of the loot pool. As a result, we recommend checking this frequently or simming yourself.
 
-
 Slot	Item	Source
 Weapon	 Garfrost's Two-Ton Hammer	Pit of Saron
 Head	 Relentless Rider's Crown	Tier Set
@@ -42,16 +41,13 @@ Replace Low Item Level Pieces. If you have acquired a Myth-track weapon and full
 replace  Blood Knight's Warblade with it, and craft the other option on step 2. If you are going for full AoE, consider  Signet of Azerothian Blessings.
 It is worth noting that  Signet of Azerothian Blessings is very likely to be nerfed.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -91,23 +87,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -117,7 +96,6 @@ The following Best in Slot list assumes that all raids are active, and that all 
 
 This will be adjusted; a number of raid trinkets are slated to get nerfed, judging by their relative power level compared to the rest of the loot pool. As a result, we recommend checking this frequently or simming yourself.
 
-
 Slot	Item	Source
 Weapon	 Garfrost's Two-Ton Hammer	Pit of Saron
 Head	 Relentless Rider's Crown	Tier Set
@@ -142,16 +120,13 @@ Replace Low Item Level Pieces. If you have acquired a Myth-track weapon and full
 replace  Blood Knight's Warblade with it, and craft the other option on step 2. If you are going for full AoE, consider  Signet of Azerothian Blessings.
 It is worth noting that  Signet of Azerothian Blessings is very likely to be nerfed.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -191,30 +166,12 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Season 1  San'layn Best in Slot Gear for Blood Death Knight
 The following Best in Slot list assumes that all raids are active, and that all items are available to you at their maximum item level from any form of content. It functions as an end goal in gearing.
 
 This will be adjusted; a number of raid trinkets are slated to get nerfed, judging by their relative power level compared to the rest of the loot pool. As a result, we recommend checking this frequently or simming yourself.
-
 
 Slot	Item	Source
 Weapon	 Garfrost's Two-Ton Hammer	Pit of Saron
@@ -243,16 +200,13 @@ Craft  Signet of Azerothian Blessings Explanation
 Craft  Spellbreaker's Bracers with  Primal Spore Binding  (raw damage)  Arcanoweave Lining  (group value) Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -292,20 +246,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

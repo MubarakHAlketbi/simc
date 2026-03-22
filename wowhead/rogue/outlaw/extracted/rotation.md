@@ -1,6 +1,6 @@
 # rogue/outlaw — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:32
+Generated: 2026-03-23 00:09
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Trickster', 'Fatebound']
@@ -32,36 +32,13 @@ Cast  Sinister Strike at 5 or fewer combo points.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST OUTLAW ROGUE AOE ROTATION
@@ -85,36 +62,13 @@ Cast  Sinister Strike at 5 or fewer combo points.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST OUTLAW ROGUE OPENER
@@ -141,36 +95,13 @@ Continue with normal rotation.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -182,36 +113,13 @@ Eat Food
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Adrenaline Rush', 'Roll the Bones', 'Keep it Rolling', 'Preparation']
 
@@ -225,36 +133,13 @@ Eat Food
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Roll the Bones
 PRE-COMBAT CHECK
@@ -271,36 +156,13 @@ Stage 2 is  Sinister Strike generates an additional combo point.
 Stage 3 is increased  Restless Blades effectiveness.
 Stage 4 is increased Critical Strike chance.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Keep it Rolling
 PRE-COMBAT CHECK
@@ -312,36 +174,13 @@ Eat Food
 KEEP IT ROLLING
 Despite this spell's massive 6-minute cooldown, its effective in-combat cooldown is only around 1:15 seconds thanks to  Restless Blades. To avoid wasting its cooldown, you will want to use this any time  Roll the Bones is on stage 2 or higher.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Preparation
 PRE-COMBAT CHECK
@@ -353,36 +192,13 @@ Eat Food
 PREPARATION
 This ability, in most instances, can be fairly autopilot, just use it when the conditions are met. However, because this doesn't work with  Restless Blades, we can be a bit more nuanced in its usage on certain encounters. If a fight is, for example, only going to last 3 minutes, you always get 1 cast of  Preparation. This means we can use the spell at the best of an encounter, which could be a burn phase, or even an add phase to maximize AoE damage. Keep in mind that you don't want to lose casts by holding it for too long!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Fatebound
 
@@ -409,36 +225,13 @@ Cast  Sinister Strike at 5 or fewer combo points.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST OUTLAW ROGUE AOE ROTATION
@@ -461,36 +254,13 @@ Cast  Sinister Strike at 5 or fewer combo points.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST OUTLAW ROGUE OPENER
@@ -518,36 +288,13 @@ Continue with normal rotation.
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -559,36 +306,13 @@ Eat Food
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Adrenaline Rush', 'Roll the Bones', 'Keep it Rolling', 'Preparation']
 
@@ -602,36 +326,13 @@ Eat Food
 ADRENALINE RUSH
 While this buff is active, we gain a dramatic increase to our energy regen and a lowered GCD that scales with haste. It can be decreased to 0.8 seconds from the base 1 second with 25% haste. We only need 22% raw due to  Alacrity. With  Restless Blades being as strong as it is, good play directly links to more uptime of  Adrenaline Rush.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Roll the Bones
 PRE-COMBAT CHECK
@@ -648,36 +349,13 @@ Stage 2 is  Sinister Strike generates an additional combo point.
 Stage 3 is increased  Restless Blades effectiveness.
 Stage 4 is increased Critical Strike chance.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Keep it Rolling
 PRE-COMBAT CHECK
@@ -689,36 +367,13 @@ Eat Food
 KEEP IT ROLLING
 Despite this spell's massive 6-minute cooldown, its effective in-combat cooldown is only around 1:15 seconds thanks to  Restless Blades. To avoid wasting its cooldown, you will want to use this any time  Roll the Bones is on stage 2 or higher.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Preparation
 PRE-COMBAT CHECK
@@ -730,33 +385,10 @@ Eat Food
 PREPARATION
 This ability, in most instances, can be fairly autopilot, just use it when the conditions are met. However, because this doesn't work with  Restless Blades, we can be a bit more nuanced in its usage on certain encounters. If a fight is, for example, only going to last 3 minutes, you always get 1 cast of  Preparation. This means we can use the spell at the best of an encounter, which could be a burn phase, or even an add phase to maximize AoE damage. Keep in mind that you don't want to lose casts by holding it for too long!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/tier-set-bonuses
-Generated: 2026-03-21 22:16
+Generated: 2026-03-23 01:08
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,10 +37,9 @@ Guide Info
 Changelog
 Havoc Demon Hunter Tier Set Bonuses for Midnight Season 1
 By Shadarek
-Updated: 2026/03/16
-LIVE
+Updated: 2026/03/22
 Shadarek
-Live on Twitch!
+Offline on Twitch
 Follow
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
@@ -60,18 +59,12 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Havoc Demon Hunter gear page!
 
-
 Havoc Demon Hunter Gear Guide
 Midnight Season 1 Tier Set Bonuses for Havoc Demon Hunter
 The Season 1 tier set for Havoc Demon Hunter is unfortunately quite weak with very little interaction to our kit. It buffs  Blade Dance and  Death Sweep by a paltry 15% giving a minor DPS increase in single target and almost zero DPS in AoE, while the 4pc gives Haste in  Metamorphosis which has never been needed on Havoc also resulting in a minor increase.
 Devouring Reaver's Sheathe
  Demon Hunter Havoc 12.0 Class Set 2pc - Blade Dance damage increased by 15%.
  Demon Hunter Havoc 12.0 Class Set 4pc - Your Haste is increased by an additional 6% during Metamorphosis.
-
-
-
-
-
 
 Best Tier Set Pieces for Havoc Demon Hunter
 Our tier set bonus, Devouring Reaver's Sheathe, is comprised of the following items from Midnight Season 1:
@@ -96,7 +89,6 @@ Tier Set Bonus Rotation Changes for Havoc Demon Hunter
 The season 1 tier set of Midnight does not affect Havoc Demon Hunters rotation.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Havoc Demon Hunter Rotation and Talent Builds Pages.
-
 
 Havoc Demon Hunter Rotation Guide
 Havoc Demon Hunter Talent Builds Guide

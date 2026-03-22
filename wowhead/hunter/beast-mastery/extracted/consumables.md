@@ -1,6 +1,6 @@
 # hunter/beast-mastery — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/beast-mastery/enchants-gems-pve-dps
-Generated: 2026-03-21 22:30
+Generated: 2026-03-23 01:14
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -58,7 +58,6 @@ Basics
  BEST BEAST MASTERY HUNTER GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 
-
 Slot	Best Enchant
 Weapon	 Enchant Weapon - Acuity of the Ren'dorei 
 Head	 Enchant Helm - Empowered Rune of Avoidance 
@@ -74,7 +73,6 @@ Beast Mastery Hunter Weapon Enchant
 All weapon enchants which provide stats are very close.  Enchant Weapon - Acuity of the Ren'dorei  is however, the most universal of the bunch, and is therefore the main recommendation here.
  BEST BEAST MASTERY HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Beast Mastery Hunters can use in PvE content.
-
 
 Type	Best
 Flask	 Flask of the Magisters 
@@ -100,12 +98,8 @@ Beast Mastery Hunter Food
 Feasts that give secondary stats (like  Quel'dorei Medley) and feasts that give Agility (like  Silvermoon Parade) are very similar to one another, so you are generally happy with either option while in a group. If you want personal food you can similarly use either  Flora Frenzy or  Royal Roast, but there are more similar alternatives.
 Our Beast Mastery Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Beast Mastery Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Tarlo
 Wowhead Beast Mastery Hunter Writer

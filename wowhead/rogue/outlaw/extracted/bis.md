@@ -1,6 +1,6 @@
 # rogue/outlaw — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear
-Generated: 2026-03-21 22:50
+Generated: 2026-03-23 01:24
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Outlaw Rogue
 Unlike many specs in the game, Outlaw Rogue doesn't have a traditional burst cooldown, meaning the value of a stat based on use trinket ends up not being as valuable for us as other specs. In addition, with the stat budgeting of Season 1, almost all of our gear is going to be fully invested into Critial Strike and Haste.
 
-
 Slot	Item	Source
 Weapon	 Arator's Swift Remembrance	Crown of the Cosmos
 Offhand	 Krick's Beetle Stabber	Pit of Saron
@@ -40,16 +39,13 @@ Craft  Silvermoon Agent's Sneakers with  Arcanoweave Lining  Explanation
 Craft  Masterwork Sin'dorei Band with  Prismatic Focusing Iris  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +85,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -113,7 +92,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Outlaw Rogue
 Unlike many specs in the game, Outlaw Rogue doesn't have a traditional burst cooldown, meaning the value of a stat based on use trinket ends up not being as valuable for us as other specs. In addition, with the stat budgeting of Season 1, almost all of our gear is going to be fully invested into Critial Strike and Haste.
 
-
 Slot	Item	Source
 Weapon	 Arator's Swift Remembrance	Crown of the Cosmos
 Offhand	 Krick's Beetle Stabber	Pit of Saron
@@ -138,16 +116,13 @@ Craft  Silvermoon Agent's Sneakers with  Arcanoweave Lining  Explanation
 Craft  Masterwork Sin'dorei Band with  Prismatic Focusing Iris  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,28 +162,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Outlaw Rogue
 Unlike many specs in the game, Outlaw Rogue doesn't have a traditional burst cooldown, meaning the value of a stat based on use trinket ends up not being as valuable for us as other specs. In addition, with the stat budgeting of Season 1, almost all of our gear is going to be fully invested into Critial Strike and Haste.
-
 
 Slot	Item	Source
 Weapon	 Arator's Swift Remembrance	Crown of the Cosmos
@@ -234,16 +191,13 @@ Craft  Silvermoon Agent's Sneakers with  Arcanoweave Lining  Explanation
 Craft  Masterwork Sin'dorei Band with  Prismatic Focusing Iris Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -283,20 +237,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

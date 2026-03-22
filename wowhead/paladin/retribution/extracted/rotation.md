@@ -1,6 +1,6 @@
 # paladin/retribution — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:30
+Generated: 2026-03-23 00:07
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -36,36 +36,13 @@ Cast  Judgment
 EXECUTION SENTENCE
 The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST RETRIBUTION PALADIN AOE ROTATION
@@ -92,36 +69,13 @@ Cast  Judgment
 EXECUTION SENTENCE
 The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST RETRIBUTION PALADIN OPENER
@@ -144,36 +98,13 @@ Continue with normal rotation.
 EXECUTION SENTENCE
 The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -186,36 +117,13 @@ Eat Food
 EXECUTION SENTENCE
 The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Execution Sentence', 'Avenging Wrath', 'Radiant Glory', 'Hammer of Light', 'Trinkets']
 
@@ -230,36 +138,13 @@ Eat Food
 EXECUTION SENTENCE
 The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Avenging Wrath
 PRE-COMBAT CHECK
@@ -272,36 +157,13 @@ Eat Food
 AVENGING WRATH
  Avenging Wrath is a straightforward off-GCD damage buff that you'll want to make sure you have active before using other cooldowns. When using  Avenging Wrath, you'll ideally want to stack it sooner rather than later, but it's worth putting other abilities like  Execution Sentence on cooldown before worrying about stacking it.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Radiant Glory
 PRE-COMBAT CHECK
@@ -314,36 +176,13 @@ Eat Food
 RADIANT GLORY
  Radiant Glory removes  Avenging Wrath as an active ability and instead automatically applies it when  Wake of Ashes is used. Because the duration of the buff is relatively short and  Wake of Ashes does a significant amount of damage, it's better to cast  Wake of Ashes inside a  Execution Sentence window rather than trying to have a buff active before using  Execution Sentence if you're using both of them.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Hammer of Light
 PRE-COMBAT CHECK
@@ -356,36 +195,13 @@ Eat Food
 HAMMER OF LIGHT
 There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light. If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath is already active and before the proc expires.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Trinkets
 PRE-COMBAT CHECK
@@ -400,33 +216,10 @@ Retribution will often value on-use stat trinkets highly. Retribution can often 
 
  Avenging Wrath doesn't buff the damage of trinket procs or on use effects, but it does increase their Crit chance, which means that for most instant on use trinkets you'll hold them a few seconds on pull for a little bit more damage. For trinkets with a cooldown desynced from  Avenging Wrath, you generally don't want to hold it or  Avenging Wrath for 30s to line them up - this is a major damage loss as you'll often lose casts over a fight.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

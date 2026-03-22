@@ -1,6 +1,6 @@
 # paladin/retribution — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear
-Generated: 2026-03-21 22:44
+Generated: 2026-03-23 01:22
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Retribution Paladin
 Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
 
-
 Slot	Item	Source
 Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
 Head	 Luminant Verdict's Unwavering Gaze	Tier Set
@@ -38,16 +37,13 @@ Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation
 Craft Low Item Level slots with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -87,23 +83,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -111,7 +90,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Retribution Paladin
 Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
 
-
 Slot	Item	Source
 Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
 Head	 Luminant Verdict's Unwavering Gaze	Tier Set
@@ -134,16 +112,13 @@ Craft  Blood Knight's Warblade with  Darkmoon Sigil: Hunt  Explanation
 Craft Low Item Level slots with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -183,28 +158,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Retribution Paladin
 Because Retribution wants a balance across a few different secondary stats, there are alternative setups that end up with similar stat distributions using slightly different items. This list should just be used as a reference rather than considered to be a universal best.
-
 
 Slot	Item	Source
 Weapon	 Bellamy's Final Judgement	Lightblinded Vanguard
@@ -228,16 +185,13 @@ Craft  Spellbreaker's Bracers and  Adherent's Silken Shroud with  Arcanoweave Li
 Optional: Craft  Loa Worshiper's Band Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -277,20 +231,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

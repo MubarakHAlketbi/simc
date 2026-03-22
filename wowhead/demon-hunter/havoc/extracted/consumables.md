@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/enchants-gems-pve-dps
-Generated: 2026-03-21 22:16
+Generated: 2026-03-23 01:07
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -44,9 +44,8 @@ Changelog
 Havoc Demon Hunter Enchants & Consumables - Midnight
 By Shadarek
 Updated: 2026/03/15
-LIVE
 Shadarek
-Live on Twitch!
+Offline on Twitch
 Follow
 Consumables are an important aspect of high-level content in WoW, such as raids and Mythic+ dungeons. They provide additional ways for players to improve and customize their stats outside of gear.
 
@@ -80,7 +79,6 @@ Havoc Demon Hunter Weapon Enchant
  BEST HAVOC DEMON HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Havoc Demon Hunter can use in PvE content. While Critical Strike is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Shattered Sun 
 Combat Potion	 Potion of Recklessness  or  Light's Potential 
@@ -107,12 +105,8 @@ Feast:  Hearty Harandar Celebration
 Personal Food:  Royal Roast /  Hearty Royal Roast
 Our Havoc Demon Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Havoc Demon Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Shadarek
 World of Warcraft Havoc Demon Hunter Expert

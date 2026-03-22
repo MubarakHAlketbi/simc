@@ -1,6 +1,6 @@
 # mage/fire — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/enchants-gems-pve-dps
-Generated: 2026-03-21 22:37
+Generated: 2026-03-23 01:17
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -57,6 +57,9 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  BEST FIRE MAGE GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best Enchant
@@ -89,6 +92,9 @@ Augment Rune	 Void-Touched Augment Rune
 Food	 Harandar Celebration
  Quel'dorei Medley
 Tea 	 Sanguithorn Tea
+Report Ad
+Report ad
+Remove All Ads
 Fire Mage Flask
 The best Flask for Fire Mages is  Flask of the Magisters , though  Flask of the Blood Knights  can be better depending on your stats.  Flask of Thalassian Resistance  is also a decent option for  Pyroclasm builds (if they get buffed).
 Fire Mage Combat Potions
@@ -106,12 +112,8 @@ Personal Food:  Champion's Bento
 In addition to food, you can also consume any tea (ex:  Sanguithorn Tea) for a movement speed increase that stacks with your food buff.
 Our Fire Mage guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Fire Mage guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Preheat
 Coach, Former RWF Raider, & World of Warcraft Retail Expert

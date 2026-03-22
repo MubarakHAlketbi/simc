@@ -1,6 +1,6 @@
 # druid/guardian — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:23
+Generated: 2026-03-23 00:01
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw']
@@ -37,36 +37,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST GUARDIAN DRUID AOE ROTATION
@@ -93,36 +70,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST GUARDIAN DRUID OPENER
@@ -154,36 +108,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -202,36 +133,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Berserk / Incarnation', 'Lunar Beam', 'Heart of the Wild', 'Survival Instincts', 'Barkskin']
 
@@ -252,36 +160,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Lunar Beam
 PRE-COMBAT CHECK
@@ -300,36 +185,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Heart of the Wild
 PRE-COMBAT CHECK
@@ -352,36 +214,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Survival Instincts
 PRE-COMBAT CHECK
@@ -400,36 +239,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Barkskin
 PRE-COMBAT CHECK
@@ -448,36 +264,13 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Spending Rage']
 
@@ -498,33 +291,10 @@ As our goal is to stay above 80 rage with each cast of  Maul due to  Harnessed R
 This means we end up filling our GCD's with useless abilities like  Swipe which generate no rage and deal very little damage. The more you are swiping the less DPS you are doing efficiently.
 Alternatively, not pressing Ironfur when a large physical hit is coming or significant flow of melee swings, can easily lead to death. So finding a comfortable balance between these 2 is integral.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

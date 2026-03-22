@@ -1,6 +1,6 @@
 # warlock/demonology — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/demonology/enchants-gems-pve-dps
-Generated: 2026-03-21 22:59
+Generated: 2026-03-23 01:28
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -57,6 +57,9 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  BEST DEMONOLOGY WARLOCK ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended enchants to use on your Demonology Warlock gear during The War Within.
 Slot	Best Enchant
@@ -86,6 +89,9 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Royal Roast
+Report Ad
+Report ad
+Remove All Ads
 Demonology Warlock Flask
 The best Flask for Demonology Warlocks is  Flask of the Shattered Sun , though other stat flasks can still be used depending on your overall stat weighting.
 Demonology Warlock Combat Potions in Midnight Season 1
@@ -104,12 +110,8 @@ Feast:  Silvermoon Parade
 Personal Food:  Royal Roast
 Our Demonology Warlock guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Demonology Warlock guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 NotWarlock
 Retail Guide Writer

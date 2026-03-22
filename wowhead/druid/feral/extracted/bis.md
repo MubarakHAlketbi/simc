@@ -1,6 +1,6 @@
 # druid/feral — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/feral/bis-gear
-Generated: 2026-03-21 22:23
+Generated: 2026-03-23 01:10
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -14,7 +14,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 #### Overall BiS
 Best in Slot Gear for Feral Druid
 This is one of the weaker tier sets Feral has had, however it is still free damage so you'll want to equip it. As allways which weapon you have is much less important than having the highest ilevel weapon. Don't pass on an upgrade just because it's not on this list!
-
 
 Slot	Item	Source
 Weapon	 Inescapable Reach	Vorasius
@@ -45,7 +44,6 @@ Replace Low Item Level Pieces.
 Best in Slot Gear for Feral Druid
 This is one of the weaker tier sets Feral has had, however it is still free damage so you'll want to equip it. As allways which weapon you have is much less important than having the highest ilevel weapon. Don't pass on an upgrade just because it's not on this list!
 
-
 Slot	Item	Source
 Weapon	 Inescapable Reach	Vorasius
 Head	 Branches of the Luminous Bloom	Tier Set
@@ -72,7 +70,6 @@ Replace Low Item Level Pieces.
 #### Best In Slot Crafts
 Best in Slot Gear for Feral Druid
 This is one of the weaker tier sets Feral has had, however it is still free damage so you'll want to equip it. As allways which weapon you have is much less important than having the highest ilevel weapon. Don't pass on an upgrade just because it's not on this list!
-
 
 Slot	Item	Source
 Weapon	 Inescapable Reach	Vorasius

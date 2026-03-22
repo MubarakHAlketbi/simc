@@ -1,6 +1,6 @@
 # mage/fire — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/tier-set-bonuses
-Generated: 2026-03-21 22:37
+Generated: 2026-03-23 01:17
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Fire Mage Tier Set Bonuses for Midnight Season 1
 By Preheat
-Updated: 2026/03/16
+Updated: 2026/03/22
 Preheat
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR FIRE MAGE
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Fire Mage gear page!
-
 
 Fire Mage Gear Guide
 Midnight Season 1 Tier Set Bonuses for Fire Mage
@@ -64,11 +66,6 @@ Voidbreaker's Accordance
  Mage Fire 12.0 Class Set 2pc - Pyroblast and Flamestrike deal 8% increased damage.
  Mage Fire 12.0 Class Set 4pc - Casting Pyroblast or Flamestrike reduces the cooldown of Fire Blast by 0.50 sec.
 
-
-
-
-
-
 Best Tier Set Pieces for Fire Mage
 Our tier set bonus, Voidbreaker's Accordance, is comprised of the following items from Midnight Season 1:
  Voidbreaker's Veil (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,6 +73,9 @@ Our tier set bonus, Voidbreaker's Accordance, is comprised of the following item
  Voidbreaker's Robe (Chest from Chimaerus - The Dreamrift)
  Voidbreaker's Gloves (Gloves from Vorasius - The Voidspire)
  Voidbreaker's Britches (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Fire Mage prefer equipping tier pieces on these slots:
@@ -90,7 +90,6 @@ Tier Set Bonus Rotation Changes for Fire Mage
 This tier set does not change how you play, but it does make the average cooldown of  Fire Blast shorter and  Hot Streak! plentiful.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Fire Mage Rotation and Talent Builds Pages.
-
 
 Fire Mage Rotation Guide
 Fire Mage Talent Builds Guide

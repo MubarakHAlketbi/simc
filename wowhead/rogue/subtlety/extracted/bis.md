@@ -1,6 +1,6 @@
 # rogue/subtlety — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear
-Generated: 2026-03-21 22:52
+Generated: 2026-03-23 01:25
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Subtlety Rogue
 Subtlety Rogues aim for a mix of stats and an active trinket combined with a passive option.
 
-
 Slot	Item	Source
 Head	 Masquerade of the Grim Jest	Tier Set
 Neck	 Eternal Voidsong Chain	Crown of the Cosmos
@@ -41,16 +40,13 @@ Replace Low Item Level Pieces.
 Missive:
 Use  Thalassian Missive of the Feverflare  or  Thalassian Missive of the Peerless .
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -90,23 +86,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -114,7 +93,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Subtlety Rogue
 Subtlety Rogues aim for a mix of stats and an active trinket combined with a passive option.
 
-
 Slot	Item	Source
 Head	 Masquerade of the Grim Jest	Tier Set
 Neck	 Eternal Voidsong Chain	Crown of the Cosmos
@@ -140,16 +118,13 @@ Replace Low Item Level Pieces.
 Missive:
 Use  Thalassian Missive of the Feverflare  or  Thalassian Missive of the Peerless .
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -189,28 +164,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Subtlety Rogue
 Subtlety Rogues aim for a mix of stats and an active trinket combined with a passive option.
-
 
 Slot	Item	Source
 Head	 Masquerade of the Grim Jest	Tier Set
@@ -237,16 +194,13 @@ Replace Low Item Level Pieces.
 Missive:
 Use  Thalassian Missive of the Feverflare  or  Thalassian Missive of the Peerless .
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -286,20 +240,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

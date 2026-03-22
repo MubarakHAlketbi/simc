@@ -1,6 +1,6 @@
 # death-knight/unholy — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:20
+Generated: 2026-03-22 23:58
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Rider of the Apocalypse']
@@ -14,7 +14,6 @@ Tab Group 1: ['Army of the Dead', 'Dark Transformation', 'Putrefy']
 #### Single-Target Priority
 BEST UNHOLY DEATH KNIGHT SINGLE TARGET ROTATION
 Unholy in Single Target plays around a priority list, juggling both ability cooldowns and resources based on an order of power. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
-
 
 PRIORITY OUTSIDE OF FORBIDDEN KNOWLEDGE
 Cast  Outbreak if  Virulent Plague is not active.
@@ -42,36 +41,13 @@ ARMY OF THE DEAD‎
 
 With the sheer quantity of pets being summoned by this ability, if you have talented  Commander of the Dead, it's vital to ensure that  Army of the Dead and  Dark Transformation stay in sync, so you are using both at the same time. Generally, this will mean ensuring you hit  Dark Transformation as soon as possible after it comes off cooldown once between every  Army of the Dead cast.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST UNHOLY DEATH KNIGHT AOE ROTATION
@@ -98,36 +74,13 @@ ARMY OF THE DEAD‎
 
 With the sheer quantity of pets being summoned by this ability, if you have talented  Commander of the Dead, it's vital to ensure that  Army of the Dead and  Dark Transformation stay in sync, so you are using both at the same time. Generally, this will mean ensuring you hit  Dark Transformation as soon as possible after it comes off cooldown once between every  Army of the Dead cast.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST UNHOLY DEATH KNIGHT OPENER PRIORITY
@@ -152,36 +105,13 @@ ARMY OF THE DEAD‎
 
 With the sheer quantity of pets being summoned by this ability, if you have talented  Commander of the Dead, it's vital to ensure that  Army of the Dead and  Dark Transformation stay in sync, so you are using both at the same time. Generally, this will mean ensuring you hit  Dark Transformation as soon as possible after it comes off cooldown once between every  Army of the Dead cast.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -194,36 +124,13 @@ ARMY OF THE DEAD‎
 
 With the sheer quantity of pets being summoned by this ability, if you have talented  Commander of the Dead, it's vital to ensure that  Army of the Dead and  Dark Transformation stay in sync, so you are using both at the same time. Generally, this will mean ensuring you hit  Dark Transformation as soon as possible after it comes off cooldown once between every  Army of the Dead cast.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Army of the Dead', 'Dark Transformation', 'Putrefy']
 
@@ -238,36 +145,13 @@ ARMY OF THE DEAD‎
 
 With the sheer quantity of pets being summoned by this ability, if you have talented  Commander of the Dead, it's vital to ensure that  Army of the Dead and  Dark Transformation stay in sync, so you are using both at the same time. Generally, this will mean ensuring you hit  Dark Transformation as soon as possible after it comes off cooldown once between every  Army of the Dead cast.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Dark Transformation
 PRE-COMBAT CHECK
@@ -282,36 +166,13 @@ With Commander of the Dead, it is particularly important to keep your cooldowns 
 
 In addition to this, if you talent Outnumber, it becomes incredibly important to try to time your Dark Transformation with add spawns, as the Lesser Ghoul  Sweeping Claws attacks are incredibly potent, and will constitute a major portion of our AoE damage potential.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Putrefy
 PRE-COMBAT CHECK
@@ -328,33 +189,10 @@ Now, there is a pair of talents that can throw a wrench into this logic with  So
 
 Outside of this, if you talent Reaping, you should try to bank a charge for Dark Transformation windows to save you the global and rune you would have spent on Putrefy otherwise. It is important to note that trying to bank 2 charges of Putrefy should never be done, as that will end up wasting cooldown duration and cooldown reduction duration on Putrefy, leading to lost casts.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

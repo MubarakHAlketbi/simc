@@ -1,6 +1,6 @@
 # rogue/assassination — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/assassination/tier-set-bonuses
-Generated: 2026-03-21 22:48
+Generated: 2026-03-23 01:24
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Assassination Rogue Tier Set Bonuses for Midnight Season 1
 By Whispyr
-Updated: 2026/03/16
+Updated: 2026/03/22
 Whispyr
 Offline on Twitch
 Follow
@@ -56,18 +56,12 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Assassination Rogue gear page!
 
-
 Assassination Rogue Gear Guide
 Midnight Season 1 Tier Set Bonuses for Assassination Rogue
 The Season 1 Tier Set Bonus for Assassination Rogues increases the damage of combo point generators, and is fairly weak. Each bonus is worth roughly 3% dps, and does not provide any meaningful decision making or talent swaps.
 Motley of the Grim Jest
  Rogue Assassination 12.0 Class Set 2pc - Garrote's damage is increased by 30% and it also applies your weapon poisons.
  Rogue Assassination 12.0 Class Set 4pc - Garrote's Energy cost is reduced by 10. Mutilate, Ambush and Fan of Knives deal 25% increased damage to targets affected by your weapon poisons.
-
-
-
-
-
 
 Best Tier Set Pieces for Assassination Rogue
 Our tier set bonus, Motley of the Grim Jest, is comprised of the following items from Midnight Season 1:
@@ -89,7 +83,6 @@ Tier Set Bonus Rotation Changes for Assassination Rogue
 The Tier Set Bonus does not affect the rotation of Assassination Rogues.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Assassination Rogue Rotation and Talent Builds Pages.
-
 
 Assassination Rogue Rotation Guide
 Assassination Rogue Talent Builds Guide

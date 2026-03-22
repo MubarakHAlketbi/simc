@@ -1,6 +1,6 @@
 # warlock/affliction — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/affliction/tier-set-bonuses
-Generated: 2026-03-21 22:57
+Generated: 2026-03-23 01:28
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Affliction Warlock Tier Set Bonuses for Midnight Season 1
 By Kalamazi
-Updated: 2026/03/16
+Updated: 2026/03/22
 Kalamazi
 Offline on Twitch
 Follow
@@ -51,14 +51,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR AFFLICTION WARLOCK
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Affliction Warlock gear page!
-
 
 Affliction Warlock Gear Guide
 Midnight Season 1 Tier Set Bonuses for Affliction Warlock
@@ -67,11 +63,6 @@ Reign of the Abyssal Immolator
  Warlock Affliction 12.0 Class Set 2pc -  Unstable Affliction and  Seed of Corruption damage increased by 10%.
  Warlock Affliction 12.0 Class Set 4pc -  Agony starts at 2 additional stacks, and its damage is increased by 20%.
 
-
-
-
-
-
 Best Tier Set Pieces for Affliction Warlock
 Our tier set bonus, Reign of the Abyssal Immolator, is comprised of the following items from Midnight Season 1:
  Abyssal Immolator's Smoldering Flames (Helm from Lightblinded Vanguard - The Voidspire)
@@ -79,9 +70,6 @@ Our tier set bonus, Reign of the Abyssal Immolator, is comprised of the followin
  Abyssal Immolator's Dreadrobe (Chest from Chimaerus - The Dreamrift)
  Abyssal Immolator's Grasps (Gloves from Vorasius - The Voidspire)
  Abyssal Immolator's Pillars (Legs from Vaelgor & Ezzorak - The Voidspire)
-Report Ad
-Report ad
-Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Affliction Warlocks prefer equipping tier pieces on these slots:
@@ -94,7 +82,6 @@ Tier Set Bonus Rotation Changes for Affliction Warlock
 Due to the Affliction Tier Ser bonuses in Midnight Season 1 being completely passive, you will not notice any rotational changes. They are pure damage increases that have no interaction with resource generation or things of the sort.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Affliction Warlock Rotation and Talent Builds Pages.
-
 
 Affliction Warlock Rotation Guide
 Affliction Warlock Talent Builds Guide

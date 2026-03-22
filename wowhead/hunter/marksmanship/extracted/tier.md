@@ -1,6 +1,6 @@
 # hunter/marksmanship — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/tier-set-bonuses
-Generated: 2026-03-21 22:31
+Generated: 2026-03-23 01:14
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Marksmanship Hunter Tier Set Bonuses for Midnight Season 1
 By TheAzortharion
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Marksmanship Hunter tier, including how the tier bonuses work, their effect on the Marksmanship Hunter playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -48,11 +48,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR MARKSMANSHIP HUNTER
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Marksmanship Hunter gear page!
-
 
 Marksmanship Hunter Gear Guide
 Midnight Season 1 Tier Set Bonuses for Marksmanship Hunter
@@ -63,11 +65,6 @@ Primal Sentry's Camouflage
  Hunter Marksmanship 12.0 Class Set 2pc -  Precise Shots damage increased by an additional 20%.
  Hunter Marksmanship 12.0 Class Set 4pc - Spending  Precise Shots has a small chance to release a volley of arrows at your target, dealing (150% of Attack Power) damage to nearby enemies.
 
-
-
-
-
-
 Best Tier Set Pieces for Marksmanship Hunter
 Our tier set bonus, Primal Sentry's Camouflage, is comprised of the following items from Midnight Season 1:
  Primal Sentry's Maw (Helm from Lightblinded Vanguard - The Voidspire)
@@ -75,6 +72,9 @@ Our tier set bonus, Primal Sentry's Camouflage, is comprised of the following it
  Primal Sentry's Scaleplate (Chest from Chimaerus - The Dreamrift)
  Primal Sentry's Talonguards (Gloves from Vorasius - The Voidspire)
  Primal Sentry's Legguards (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Marksmanship Hunter prefer equipping tier pieces on these slots:
@@ -90,7 +90,6 @@ Tier Set Bonus Rotation Changes for Marksmanship Hunter
 Our Tier Set has no impact on our rotational priorities or decision-making.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Marksmanship Hunter Rotation and Talent Builds Pages.
-
 
 Marksmanship Hunter Rotation Guide
 Marksmanship Hunter Talent Builds Guide

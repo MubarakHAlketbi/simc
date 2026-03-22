@@ -1,6 +1,6 @@
 # druid/guardian — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/tier-set-bonuses
-Generated: 2026-03-21 22:25
+Generated: 2026-03-23 01:11
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Guardian Druid Tier Set Bonuses for Midnight Season 1
 By Pumps
-Updated: 2026/03/16
+Updated: 2026/03/22
 Pumps
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR GUARDIAN DRUID
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Guardian Druid gear page!
-
 
 Guardian Druid Gear Guide
 Midnight Season 1 Tier Set Bonuses for Guardian Druid
@@ -66,11 +68,6 @@ Sprouts of the Luminous Bloom
  Druid Guardian 12.0 Class Set 2pc - Raze/Maul and Ravage damage increased by 10%. Moonfire damage increased by 10%.
  Druid Guardian 12.0 Class Set 4pc - Raze/Maul and Ravage have a 5% chance to activate Galactic Guardian. Moonfire's periodic damage has a chance to make your next Raze/Maul or Ravage strike again at 100% effectiveness.
 
-
-
-
-
-
 Best Tier Set Pieces for Guardian Druid
 Our tier set bonus, Sprouts of the Luminous Bloom, is comprised of the following items from Midnight Season 1:
  Branches of the Luminous Bloom (Helm from Lightblinded Vanguard - The Voidspire)
@@ -78,6 +75,9 @@ Our tier set bonus, Sprouts of the Luminous Bloom, is comprised of the following
  Trunk of the Luminous Bloom (Chest from Chimaerus - The Dreamrift)
  Arbortenders of the Luminous Bloom (Gloves from Vorasius - The Voidspire)
  Phloemwraps of the Luminous Bloom (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Guardian Druid prefer equipping tier pieces on these slots:
@@ -91,7 +91,6 @@ Tier Set Bonus Rotation Changes for Guardian Druid
 Assuming you are playing Druid of the Claw, each proc of your 4p should ideally be saved for a Ravage proc. However, you should not wait too long and cap rage as you may waste procs. 4-5 GCD's at most then just send a Maul like usual instead.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Guardian Druid Rotation and Talent Builds Pages.
-
 
 Guardian Druid Rotation Guide
 Guardian Druid Talent Builds Guide

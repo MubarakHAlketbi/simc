@@ -1,6 +1,6 @@
 # shaman/enhancement — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/tier-set-bonuses
-Generated: 2026-03-21 22:56
+Generated: 2026-03-23 01:27
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Enhancement Shaman Tier Set Bonuses for Midnight Season 1
 By wordup
-Updated: 2026/03/17
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Enhancement Shaman tier, including how the tier bonuses work, their effect on the Enhancement Shaman playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -48,11 +48,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR ENHANCEMENT SHAMAN
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Enhancement Shaman gear page!
-
 
 Enhancement Shaman Gear Guide
 Midnight Season 1 Tier Set Bonuses for Enhancement Shaman
@@ -80,7 +82,6 @@ Tier Set Bonus Rotation Changes for Enhancement Shaman
 While the bonus is a solid increase for both  Totemic and  Stormbringer, there's no significant rotational differences when using them. Due to it buffing both  Stormstrike and  Lava Lash, it also has a relatively similar impact for both trees, so doesn't influence build selection either. The benefits are largely passive, simply increasing the damage of abilities and providing Mastery from doing things we already do rotationally.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Enhancement Shaman Rotation and Talent Builds Pages.
-
 
 Enhancement Shaman Rotation Guide
 Enhancement Shaman Talent Builds Guide

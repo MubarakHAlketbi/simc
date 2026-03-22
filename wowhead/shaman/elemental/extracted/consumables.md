@@ -1,6 +1,6 @@
 # shaman/elemental — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/elemental/enchants-gems-pve-dps
-Generated: 2026-03-21 22:54
+Generated: 2026-03-23 01:26
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -54,6 +54,9 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  BEST ELEMENTAL SHAMAN GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -81,7 +84,6 @@ Elemental Shaman Weapon Enchant
  BEST ELEMENTAL SHAMAN CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Elemental Shamans can use in PvE content. While Mastery is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Magisters 
 Combat Potion	 Light's Potential 
@@ -89,6 +91,9 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Flametongue Weapon/ Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Harandar Celebration
+Report Ad
+Report ad
+Remove All Ads
 Elemental Shaman Flask
 The best Flask for Elemental Shamans is  Flask of the Magisters . Mastery is our best stat so getting more of it is good.
 Elemental Shaman Combat Potions
@@ -103,12 +108,8 @@ Elemental Shaman Food
 In Midnight, Elemental Shamans will use  Harandar Celebration as their feast of choice, giving some main stat which is especially good at the start of the expansion.
 Our Elemental Shaman guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Elemental Shaman guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 HawkCorrigan
 After starting his World of Warcraft journey as an Elemental Shaman at the tail end of Warlords of Draenor, Hawk's interest in mathematics, programming, and collaborative work quickly got him involved with most of the community tools that started to spring out at the time. Starting out as a Contributor to the Elemental Shaman part of WoWAnalyzer and an active chatter in the Earthshrine discord, he quickly got more involved in the theorycrafting portion of the game, becoming a maintainer (now Emeritus) for WoWAnalyzer, maintainer for the Elemental Shaman module in simulationcraft, and Moderator in the class Discord Earthshrine, he is now at the forefront of theorycrafting, working together with the top players of the spec to create easily digestible guides, tools, and educational resources for all levels of players.

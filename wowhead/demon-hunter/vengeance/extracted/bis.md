@@ -1,6 +1,6 @@
 # demon-hunter/vengeance — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/vengeance/bis-gear
-Generated: 2026-03-21 22:19
+Generated: 2026-03-23 01:09
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,22 +15,23 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Vengeance Demon Hunter
 We're essentially looking to get Tier slots as quickly as possible and then fill out other slots, with various trinkets for different situations.
 
-
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
-Offhand	 Tormentor's Bladed Fists	Fallen-King Salhadaar
+Offhand	 Tormentor's Bladed Fists or  Spellbreaker's Warglaive	Fallen-King Salhadaar or Crafted
 Head	 Devouring Reaver's Intake	Lightblinded Vanguard(Tier Set)
 Neck	 Necklace of the Twisting Void	Seat of the Triumvirate
 Shoulders	 Devouring Reaver's Exhaustplates	Fallen-King Salhadaar(Tier Set)
-Cloak	 Adherent's Silken Shroud	Crafting
+Cloak	 Adherent's Silken Shroud (with Loa) or  Adherent's Silken Shroud (with Weapon)	Crafting
 Chest	 Vest of the Void's Embrace	Seat of the Triumvirate
 Wrist	 Chewed Leather Wristguards	Pit of Saron
 Gloves	 Devouring Reaver's Essence Grips	Vorasius(Tier Set)
 Belt	 Flayer's Black Belt	Pit of Saron
 Legs	 Devouring Reaver's Pistons	Vaelgor & Ezzorak(Tier Set)
 Boots	 Eclipse Espadrilles	Nexus Point Xenas
-Ring	 Eye of Midnight	Midnight Falls
-Ring	 Loa Worshiper's Band	Crafting
+Ring Set	 Omission of Light	Nexus Point Xenas
+ Occlusion of Void	Nexus Point Xenas
+Ring (Defensive)	 Eye of Midnight	Midnight Falls
+Ring	 Loa Worshiper's Band (with above)	Crafting
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Light Company Guidon	Imperator Averzian
 
@@ -40,16 +41,13 @@ Craft  Loa Worshiper's Band Explanation
 Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +87,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -113,22 +94,23 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Vengeance Demon Hunter
 We're essentially looking to get Tier slots as quickly as possible and then fill out other slots, with various trinkets for different situations.
 
-
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
-Offhand	 Tormentor's Bladed Fists	Fallen-King Salhadaar
+Offhand	 Tormentor's Bladed Fists or  Spellbreaker's Warglaive	Fallen-King Salhadaar or Crafted
 Head	 Devouring Reaver's Intake	Lightblinded Vanguard(Tier Set)
 Neck	 Necklace of the Twisting Void	Seat of the Triumvirate
 Shoulders	 Devouring Reaver's Exhaustplates	Fallen-King Salhadaar(Tier Set)
-Cloak	 Adherent's Silken Shroud	Crafting
+Cloak	 Adherent's Silken Shroud (with Loa) or  Adherent's Silken Shroud (with Weapon)	Crafting
 Chest	 Vest of the Void's Embrace	Seat of the Triumvirate
 Wrist	 Chewed Leather Wristguards	Pit of Saron
 Gloves	 Devouring Reaver's Essence Grips	Vorasius(Tier Set)
 Belt	 Flayer's Black Belt	Pit of Saron
 Legs	 Devouring Reaver's Pistons	Vaelgor & Ezzorak(Tier Set)
 Boots	 Eclipse Espadrilles	Nexus Point Xenas
-Ring	 Eye of Midnight	Midnight Falls
-Ring	 Loa Worshiper's Band	Crafting
+Ring Set	 Omission of Light	Nexus Point Xenas
+ Occlusion of Void	Nexus Point Xenas
+Ring (Defensive)	 Eye of Midnight	Midnight Falls
+Ring	 Loa Worshiper's Band (with above)	Crafting
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Light Company Guidon	Imperator Averzian
 
@@ -138,16 +120,13 @@ Craft  Loa Worshiper's Band Explanation
 Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,44 +166,28 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Vengeance Demon Hunter
 We're essentially looking to get Tier slots as quickly as possible and then fill out other slots, with various trinkets for different situations.
 
-
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
-Offhand	 Tormentor's Bladed Fists	Fallen-King Salhadaar
+Offhand	 Tormentor's Bladed Fists or  Spellbreaker's Warglaive	Fallen-King Salhadaar or Crafted
 Head	 Devouring Reaver's Intake	Lightblinded Vanguard(Tier Set)
 Neck	 Necklace of the Twisting Void	Seat of the Triumvirate
 Shoulders	 Devouring Reaver's Exhaustplates	Fallen-King Salhadaar(Tier Set)
-Cloak	 Adherent's Silken Shroud	Crafting
+Cloak	 Adherent's Silken Shroud (with Loa) or  Adherent's Silken Shroud (with Weapon)	Crafting
 Chest	 Vest of the Void's Embrace	Seat of the Triumvirate
 Wrist	 Chewed Leather Wristguards	Pit of Saron
 Gloves	 Devouring Reaver's Essence Grips	Vorasius(Tier Set)
 Belt	 Flayer's Black Belt	Pit of Saron
 Legs	 Devouring Reaver's Pistons	Vaelgor & Ezzorak(Tier Set)
 Boots	 Eclipse Espadrilles	Nexus Point Xenas
-Ring	 Eye of Midnight	Midnight Falls
-Ring	 Loa Worshiper's Band	Crafting
+Ring Set	 Omission of Light	Nexus Point Xenas
+ Occlusion of Void	Nexus Point Xenas
+Ring (Defensive)	 Eye of Midnight	Midnight Falls
+Ring	 Loa Worshiper's Band (with above)	Crafting
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Light Company Guidon	Imperator Averzian
 
@@ -233,16 +196,13 @@ Craft  Spellbreaker's Warglaive (or equivalent Agility One-Handed Weapon with  D
 Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -282,20 +242,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

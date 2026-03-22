@@ -1,6 +1,6 @@
 # rogue/outlaw — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/tier-set-bonuses
-Generated: 2026-03-21 22:50
+Generated: 2026-03-23 01:24
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Outlaw Rogue Tier Set Bonuses for Midnight Season 1
 By JustGuy
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Outlaw Rogue tier, including how the tier bonuses work, their effect on the Outlaw Rogue playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -56,18 +56,12 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Outlaw Rogue gear page!
 
-
 Outlaw Rogue Gear Guide
 Midnight Season 1 Tier Set Bonuses for Outlaw Rogue
 This tier set is overall very simple, and further cements what Outlaw already wants to be doing.  Blade Rush is already a very important spell before you get the tier set, and once you get it you want to continue to be ontop of casting it on cooldown.
 Motley of the Grim Jest
  Rogue Outlaw 12.0 Class Set 2pc -  Blade Rush's damage is increased by 30% and its damage to your primary target is increased by an additional 15%.
  Rogue Outlaw 12.0 Class Set 4pc -  Blade Rush's cooldown is reduced by 6 sec and it increases your damage dealt by 5% for 8 sec.
-
-
-
-
-
 
 Best Tier Set Pieces for Outlaw Rogue
 Our tier set bonus, Motley of the Grim Jest, is comprised of the following items from Midnight Season 1:
@@ -92,7 +86,6 @@ Tier Set Bonus Rotation Changes for Outlaw Rogue
  Blade Rush is already a massive part of the specs' energy economy, so this tier set that buffs the already optimal playstyle.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Outlaw Rogue Rotation and Talent Builds Pages.
-
 
 Outlaw Rogue Rotation Guide
 Outlaw Rogue Talent Builds Guide

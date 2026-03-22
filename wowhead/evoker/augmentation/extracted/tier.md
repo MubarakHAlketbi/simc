@@ -1,6 +1,6 @@
 # evoker/augmentation — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/tier-set-bonuses
-Generated: 2026-03-21 22:28
+Generated: 2026-03-23 01:13
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Augmentation Evoker Tier Set Bonuses for Midnight Season 1
 By Jereico
-Updated: 2026/03/16
+Updated: 2026/03/22
 Jereico
 Offline on Twitch
 Follow
@@ -59,7 +59,6 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Augmentation Evoker gear page!
 
-
 Augmentation Evoker Gear Guide
 Midnight Season 1 Tier Set Bonuses for Augmentation Evoker
 Augmentation Evoker's tier set bonuses in Midnight Season 1 feature substantial upgrades to the spec's core damaging spells, while improving uptime on  Ebon Might and Augmentation's new Apex talent,  Duplicate. This tier set does not force any major talent swaps or gameplay changes, instead serving to reinforce the spec's existing priorities.
@@ -70,11 +69,6 @@ The 4pc set bonus increases damage dealt by Empower spells  Fire Breath and  Uph
 Livery of the Black Talon
  Evoker Augmentation 12.0 Class Set 2pc - Eruption damage increased by 15% and it extends Ebon Might by an additional 0.3 sec.
  Evoker Augmentation 12.0 Class Set 4pc - While Ebon Might is active, empower spells deal 20% more damage and cool down 20% faster.
-
-
-
-
-
 
 Best Tier Set Pieces for Augmentation Evoker
 Our tier set bonus, Livery of the Black Talon, is comprised of the following items from Midnight Season 1:
@@ -98,7 +92,6 @@ Tier Set Bonus Rotation Changes for Augmentation Evoker
 The Midnight Season 1 tier set for Augmentation does not force any meaningful changes to your rotation. The tier set does improve uptime of  Ebon Might and  Duplicate, while also allowing Empower spells  Fire Breath and  Upheaval to be cast more frequently.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Augmentation Evoker Rotation and Talent Builds Pages.
-
 
 Augmentation Evoker Rotation Guide
 Augmentation Evoker Talent Builds Guide

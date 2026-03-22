@@ -1,6 +1,6 @@
 # warrior/protection — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/protection/bis-gear
-Generated: 2026-03-21 23:07
+Generated: 2026-03-23 01:32
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Protection Warrior
 Prot warrior will generally focus on completing their tier set bonus, alongside picking up both offensive and defensive trinkets incase we need them to survive. Prot can also be quite flexible with trinket cooldowns as  Avatar is up very frequently.
 
-
 Slot	Item	Source
 Weapon	 Turalyon's False Echo	Crown of the Cosmos
 Offhand	 Thalassian Dawnguard	Belo'ren
@@ -40,16 +39,13 @@ Craft  Spellbreaker's Rebuke with  Arcanoweave Lining  Explanation
 Craft  Spellbreaker's March with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +85,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -113,7 +92,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Protection Warrior
 Prot warrior will generally focus on completing their tier set bonus, alongside picking up both offensive and defensive trinkets incase we need them to survive. Prot can also be quite flexible with trinket cooldowns as  Avatar is up very frequently.
 
-
 Slot	Item	Source
 Weapon	 Turalyon's False Echo	Crown of the Cosmos
 Offhand	 Thalassian Dawnguard	Belo'ren
@@ -138,16 +116,13 @@ Craft  Spellbreaker's Rebuke with  Arcanoweave Lining  Explanation
 Craft  Spellbreaker's March with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,28 +162,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Protection Warrior
 Prot warrior will generally focus on completing their tier set bonus, alongside picking up both offensive and defensive trinkets incase we need them to survive. Prot can also be quite flexible with trinket cooldowns as  Avatar is up very frequently.
-
 
 Slot	Item	Source
 Weapon	 Turalyon's False Echo	Crown of the Cosmos
@@ -234,16 +191,13 @@ Craft  Spellbreaker's Rebuke with  Arcanoweave Lining  Explanation
 Craft  Spellbreaker's MarchExplanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -283,20 +237,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

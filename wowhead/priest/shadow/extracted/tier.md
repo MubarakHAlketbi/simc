@@ -1,6 +1,6 @@
 # priest/shadow — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/tier-set-bonuses
-Generated: 2026-03-21 22:46
+Generated: 2026-03-23 01:23
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Shadow Priest Tier Set Bonuses for Midnight Season 1
 By EllipsisPriest
-Updated: 2026/03/16
+Updated: 2026/03/22
 EllipsisPriest
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR SHADOW PRIEST
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Shadow Priest gear page!
-
 
 Shadow Priest Gear Guide
 Midnight Season 1 Tier Set Bonuses for Shadow Priest
@@ -64,11 +66,6 @@ Blind Oath's Burden
  Priest Shadow 12.0 Class Set 2pc - Shadow Word: Madness damage increased by 10% and Insanity cost reduced by 5.
  Priest Shadow 12.0 Class Set 4pc - Shadowy Apparitions and Void Apparitions damage increased by 40%.
 
-
-
-
-
-
 Best Tier Set Pieces for Shadow Priest
 Our tier set bonus, Blind Oath's Burden, is comprised of the following items from Midnight Season 1:
  Blind Oath's Winged Crest (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,6 +73,9 @@ Our tier set bonus, Blind Oath's Burden, is comprised of the following items fro
  Blind Oath's Raiment (Chest from Chimaerus - The Dreamrift)
  Blind Oath's Touch (Gloves from Vorasius - The Voidspire)
  Blind Oath's Leggings (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Shadow Priest prefer equipping tier pieces on these slots:
@@ -88,7 +88,6 @@ This is only a minor optimization; wearing five pieces of the tier is fine if yo
 Tier Set Bonus Rotation Changes for Shadow Priest
 As already mentioned, Shadow’s tier set bonus does not have any rotational impact beyond just making your spender a little bit cheaper.
 For more information on how tier set bonuses will impact our gameplay, check out the Shadow Priest Rotation and Talent Builds Pages.
-
 
 Shadow Priest Rotation Guide
 Shadow Priest Talent Builds Guide

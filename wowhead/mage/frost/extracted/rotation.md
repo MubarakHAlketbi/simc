@@ -1,6 +1,6 @@
 # mage/frost — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/frost/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:28
+Generated: 2026-03-23 00:06
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Spellslinger', 'Frostfire']
@@ -40,39 +40,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FROST MAGE AOE ROTATION
@@ -101,39 +78,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST MAGE OPENER
@@ -157,39 +111,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -212,39 +143,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Ray of Frost', 'Comet Storm', 'Time Warp']
 
@@ -269,39 +177,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Comet Storm
 PRE-COMBAT CHECK
@@ -322,39 +207,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Time Warp
 PRE-COMBAT CHECK
@@ -375,39 +237,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Charged Cooldowns']
 
@@ -430,39 +269,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Frostfire
 
@@ -496,39 +312,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FROST MAGE AOE ROTATION
@@ -558,39 +351,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST MAGE OPENER
@@ -614,39 +384,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -669,39 +416,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Ray of Frost', 'Comet Storm', 'Time Warp']
 
@@ -726,39 +450,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Comet Storm
 PRE-COMBAT CHECK
@@ -779,39 +480,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Time Warp
 PRE-COMBAT CHECK
@@ -832,39 +510,16 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Charged Cooldowns']
 
@@ -887,36 +542,13 @@ Frost Mage has a big advantage over the other Mage specializations in Midnight, 
 With  Hand of Frost at level 90,  Ray of Frost will have 2 charges, which provides significant flexibility in when you do deal damage. Keep it on cooldown, but as long as you have less than two charges you have a lot of choice in when you use the other charge. In particular, this has the potential to be very strong when bosses have vulnerability phases or spawn priority adds that must be killed.
  Glacial Bulwark grants two charges of both  Ice Barrier and  Ice Block/ Ice Cold. This makes it much easier to ensure that you have defensive cooldowns available for big damage events and offers a huge optimization opportunity if you're interesting in carefully scripting out all of your defensive usages in a boss fight.
 
-1 - 2 of 2
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Frost Mage State on the Shadowlands Alpha - Winter's Chill, Talents, Covenant Abilities
 	On 2020/06/24	Squishei	35
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 2 of 2
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

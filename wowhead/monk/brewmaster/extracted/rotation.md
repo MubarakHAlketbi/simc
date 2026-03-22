@@ -1,6 +1,6 @@
 # monk/brewmaster — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:29
+Generated: 2026-03-23 00:06
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Master of Harmony']
@@ -76,36 +76,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST BREWMASTER MONK AOE ROTATION
@@ -170,36 +147,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST BREWMASTER MONK OPENER
@@ -209,7 +163,6 @@ SAMPLE TIMELINE
 1s
 Moving to Target
 Pull
-
 
 OPENER SEQUENCE
 Use  Chi Burst from a distance, and move toward your target - 
@@ -267,36 +220,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -353,36 +283,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Stagger Explained', 'Improving Your Stagger', "'Brew' Abilities"]
 
@@ -441,36 +348,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Improving Your Stagger
 PRE-COMBAT CHECK
@@ -513,36 +397,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### 'Brew' Abilities
 PRE-COMBAT CHECK
@@ -595,36 +456,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Healing Spheres', "Niuzao's Resolve", 'Awakening Spirit/Vital Flame']
 
@@ -679,36 +517,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Niuzao's Resolve
 PRE-COMBAT CHECK
@@ -761,36 +576,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Awakening Spirit/Vital Flame
 PRE-COMBAT CHECK
@@ -841,36 +633,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_3 — Tabs: ['Exploding Keg', 'Invoke Niuzao', 'Touch of Death', 'Fortifying Brew']
 
@@ -923,36 +692,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Invoke Niuzao
 PRE-COMBAT CHECK
@@ -1001,36 +747,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Touch of Death
 PRE-COMBAT CHECK
@@ -1082,36 +805,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Fortifying Brew
 PRE-COMBAT CHECK
@@ -1162,36 +862,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_4 — Tabs: ['Blackout Combo', 'Special Delivery/Rushing Jade Wind', 'Charred Passions/Dragonfire Brew', 'Shadowboxing Treads/Fluidity of Motion']
 
@@ -1244,36 +921,13 @@ When taking on  Blackout Combo, the choice of what ability to empower is usually
 
 Of course, with  Keg Smash and  Tiger Palm being two of your most frequently-pressed abilities, the biggest key to you empowering the abilities you want with  Blackout Combo is to take advantage of abilities that do not have a combo effect. If they are used instead, you will keep your Blackout Combo buff and may still use it on another ability later. All of your other main abilities are fair game for this, such as  Breath of Fire,  Spinning Crane Kick,  Rushing Jade Wind,  Chi Burst, alongside all of your cooldowns and defensive abilities. By making good use of these "gap-filling" abilities, you can still reliably consume every  Blackout Kick's buff with Tiger Palm instead of Keg Smash. Don't forget about it!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Special Delivery/Rushing Jade Wind
 PRE-COMBAT CHECK
@@ -1322,36 +976,13 @@ RUSHING JADE WIND VS SPECIAL DELIVERY 
 If you are looking for a less hectic experience,  Special Delivery may be just what you need. Rather than maintaining a small damage buff, you will instead passively deal additional damage simply by using your mitigation kit.  Purifying Brew,  Celestial Brew/ Celestial Infusion,  Fortifying Brew, and even  Black Ox Brew will trigger this effect, while also applying a hefty 50% snare when hitting enemies. Although it does have a 3-second travel delay, it will rarely miss what you are fighting. However, it can backfire at times, hitting an enemy that was recently crowd-controlled and freeing them. When you are in a scenario where you're frequently having to kite, this talent becomes especially noteworthy.
 Ultimately, your decision between  Rushing Jade Wind and  Special Delivery will be one based on the type of content you're in. For easier content that involves rapidly moving between groups of enemies, Rushing Jade Wind's ability to tag them and establish early threat can prove valuable. However, if damage is what you are after, then Special Delivery often maintains a slight offensive edge regardless of target count due to its passive nature. This does come at the expense of having global cooldowns where you do nothing; don't fill the time with too many extra  Tiger Palms!
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Charred Passions/Dragonfire Brew
 PRE-COMBAT CHECK
@@ -1404,36 +1035,13 @@ If  Scalding Brew is talented into rather than  Sal'salabim's Strength, then you
 
 However, because of this interaction you must always talent into  Charred Passions if using  Scalding Brew;  Dragonfire Brew is no longer an option.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Shadowboxing Treads/Fluidity of Motion
 PRE-COMBAT CHECK
@@ -1486,33 +1094,10 @@ You are a Master of Harmony Brewmaster
 You are fighting in single-target combat
 If you meet these requirements, then  Fluidity of Motion becomes a substantial damage increase thanks to  Bring Me Another and  Black Ox Brew helping to reduce your Energy spent. In particular, this also means that you will no longer cast  Keg Smash unless it is a free Empty Barrel. Should any one condition not be true, then  Shadowboxing Treads remains the superior talent.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

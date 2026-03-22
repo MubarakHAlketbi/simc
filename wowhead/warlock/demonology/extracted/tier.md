@@ -1,6 +1,6 @@
 # warlock/demonology — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/demonology/tier-set-bonuses
-Generated: 2026-03-21 22:59
+Generated: 2026-03-23 01:29
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Demonology Warlock Tier Set Bonuses for Midnight Season 1
 By NotWarlock
-Updated: 2026/03/16
+Updated: 2026/03/22
 NotWarlock
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR DEMONOLOGY WARLOCK
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Demonology Warlock gear page!
-
 
 Demonology Warlock Gear Guide
 Midnight Season 1 Tier Set Bonuses for Demonology Warlock
@@ -64,11 +66,6 @@ Reign of the Abyssal Immolator
  Warlock Demonology 12.0 Class Set 2pc - Hand of Gul'dan damage increased by 15%.
  Warlock Demonology 12.0 Class Set 4pc - Your Dreadstalkers deal 10% increased damage and last 3 additional sec.
 
-
-
-
-
-
 Best Tier Set Pieces for Demonology Warlock
 Our tier set bonus, Reign of the Abyssal Immolator, is comprised of the following items from Midnight Season 1:
  Abyssal Immolator's Smoldering Flames (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,6 +73,9 @@ Our tier set bonus, Reign of the Abyssal Immolator, is comprised of the followin
  Abyssal Immolator's Dreadrobe (Chest from Chimaerus - The Dreamrift)
  Abyssal Immolator's Grasps (Gloves from Vorasius - The Voidspire)
  Abyssal Immolator's Pillars (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Demonology Warlock prefer equipping tier pieces on these slots:
@@ -89,7 +89,6 @@ Tier Set Bonus Rotation Changes for Demonology Warlock
 Since our tier set are just numerical increases to core rotational abilities, there is no additional gameplay or rotation changes when using this tier set.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Demonology Warlock Rotation and Talent Builds Pages.
-
 
 Demonology Warlock Rotation Guide
 Demonology Warlock Talent Builds Guide

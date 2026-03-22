@@ -1,0 +1,5 @@
+Spec: druid/guardian
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank
+Warnings (1):
+  - MISSING HERO TALENTS: found 1 (['Druid of the Claw']), expected 2 (['druid-of-the-claw', 'elunes-chosen'])

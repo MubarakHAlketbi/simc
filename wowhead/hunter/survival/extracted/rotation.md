@@ -1,6 +1,6 @@
 # hunter/survival — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/survival/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:27
+Generated: 2026-03-23 00:04
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Pack Leader', 'Sentinel']
@@ -50,36 +50,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST SURVIVAL HUNTER AOE ROTATION
@@ -119,43 +96,19 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST SURVIVAL HUNTER OPENER
 The Survival Hunter opener is quite simple, and barely changes based on hero talent selection. You want to throw a  Wildfire Bomb to get the cooldown running and use a  Kill Command shortly after the bomb hits to start fueling your  Tip of the Spear loop. With  Pack Leader selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
  Pack Leader's immediate goal is to trigger your  Howl of the Pack Leader beast and  Stampede as soon as possible as you enter  Takedown.
-
 
 Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -203,36 +156,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -260,36 +190,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Takedown', 'Flamefang Pitch', 'Boomstick']
 
@@ -319,36 +226,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Flamefang Pitch
 PRE-COMBAT CHECK
@@ -376,36 +260,13 @@ The duration of  Wildfire Imbuement does not stack with itself, so ideally the s
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Boomstick
 PRE-COMBAT CHECK
@@ -425,36 +286,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Strike as One', 'Positioning', 'Pet Utility']
 
@@ -476,36 +314,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Positioning
 PRE-COMBAT CHECK
@@ -525,36 +340,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 POSITIONING
 As a Survival Hunter, literally all of your AoE/Cleave depends on your positioning.  Wildfire Bomb and  Boomstick deal their damage in a cone (from the target and from you respectively) so you need to be aware of your position and place yourself in an angle to hit as many targets as possible with the abilities conal shape.  Raptor Swipe and  Stampede! also rely on your positioning as well, so it's a good idea to keep track of where you are in relation to the target(s).
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pet Utility
 PRE-COMBAT CHECK
@@ -574,36 +366,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 PET UTILITY
 To make sure you're meeting you and your groups needs at all times, we strongly recommend you keep a Tenacity, Ferocity, and Cunning pet in your active pet slots at all times. This means you can flex into more self-sustain and Bloodlust with Ferocity, more pure damage reduction through Tenacity, or external CC cleansing with Cunning.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Sentinel
 
@@ -647,36 +416,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST SURVIVAL HUNTER AOE ROTATION
@@ -717,43 +463,19 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST SURVIVAL HUNTER OPENER
 The Survival Hunter opener is quite simple, and barely changes based on hero talent selection. You want to throw a  Wildfire Bomb to get the cooldown running and use a  Kill Command shortly after the bomb hits to start fueling your  Tip of the Spear loop.
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 The  Sentinel opener gets a predictable  Sentinel's Mark proc thanks to  Lunar Calling. The goal is to efficiently get rid of it to make room for new procs.
-
 
 Use the ✖ markers next to pick a fight style. Other talent options will populate underneath.
 The build options used below are covered in the Talents page. Swaps not included should not change the priority in any meaningful way unless covered elsewhere. Anywhere you see the  icon, you can hover over it for additional notes.
@@ -797,36 +519,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -854,36 +553,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Takedown', 'Flamefang Pitch', 'Boomstick']
 
@@ -913,36 +589,13 @@ For  Sentinel, talents impact  Takedown to a much bigger degree, and are modifi
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Flamefang Pitch
 PRE-COMBAT CHECK
@@ -970,36 +623,13 @@ The duration of  Wildfire Imbuement does not stack with itself, so ideally the s
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Boomstick
 PRE-COMBAT CHECK
@@ -1019,36 +649,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Strike as One', 'Positioning', 'Pet Utility']
 
@@ -1070,36 +677,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 STRIKE AS ONE
  Strike as One, despite being a passive talent, is one of your most important sources of damage. It's very important you're proccing this as much as possible, which means you're playing around your Focus management and  Kill Command charges.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Positioning
 PRE-COMBAT CHECK
@@ -1119,36 +703,13 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 POSITIONING
 As a Survival Hunter, literally all of your AoE/Cleave depends on your positioning.  Wildfire Bomb and  Boomstick deal their damage in a cone (from the target and from you respectively) so you need to be aware of your position and place yourself in an angle to hit as many targets as possible with the abilities conal shape.  Raptor Swipe and  Stampede! also rely on your positioning as well, so it's a good idea to keep track of where you are in relation to the target(s).
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pet Utility
 PRE-COMBAT CHECK
@@ -1168,33 +729,10 @@ Due to the layout of the talent tree we cannot easily ignore these talents, but 
 PET UTILITY
 To make sure you're meeting you and your groups needs at all times, we strongly recommend you keep a Tenacity, Ferocity, and Cunning pet in your active pet slots at all times. This means you can flex into more self-sustain and Bloodlust with Ferocity, more pure damage reduction through Tenacity, or external CC cleansing with Cunning.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # paladin/protection — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/enchants-gems-pve-tank
-Generated: 2026-03-21 22:43
+Generated: 2026-03-23 01:21
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -57,9 +57,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST PROTECTION PALADIN GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -78,7 +75,6 @@ Protection Paladin Weapon Enchant
  Enchant Weapon - Berserker's Rage  is going to be the most effective weapon enchant overall.
  BEST PROTECTION PALADIN CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Protection Paladins can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
-
 
 Type	Best
 Flask	 Flask of the Blood Knights 
@@ -102,12 +98,8 @@ Protection Paladin Food
 In Midnight, Protection Paladin eats the feast ( Silvermoon Parade) for buffs because primary stat is always the highest increase for us.
 Our Protection Paladin guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Protection Paladin guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Pumps
 World of Warcraft Guardian Druid Expert

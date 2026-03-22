@@ -1,6 +1,6 @@
 # druid/guardian — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/bis-gear
-Generated: 2026-03-21 22:25
+Generated: 2026-03-23 01:11
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -16,11 +16,10 @@ Best in Slot Gear for Guardian Druid
 Guardian is focusing on picking up a few flexible trinkets, some more defensive oriented are also great incase you need them.
 Generally we prioritize any gear with high haste, an early weapon and completing our tier set.
 
-
 Slot	Item	Source
 Weapon	 Alnscorned Spire	Chimaerus
 Head	 Mask of Darkest Intent	Seat of the Triumvirate
-Neck	 Pendant of Aching Grief	Windrunner Spire
+Neck	 Eternal Voidsong Chain	Crown of the Cosmos
 Shoulders	 Seedpods of the Luminous Bloom	Tier Set
 Cloak	 Draconic Nullcape	Vaelgor & Ezzorak
 Chest	 Trunk of the Luminous Bloom	Tier Set
@@ -30,7 +29,7 @@ Belt	 Scorn-Scarred Shul'ka's Belt	Chimaerus
 Legs	 Phloemwraps of the Luminous Bloom	Tier Set
 Boots	 Void-Claimed Shinkickers	Imperator Averzian
 Ring	 Omission of Light	Nexus Point Xenas
-Ring	 Occlusion of Void	Nexus Point Xenas
+Ring	 Eye of Midnight	Midnight Falls
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
 
@@ -40,16 +39,13 @@ Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's Sneakers with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +85,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -114,11 +93,10 @@ Best in Slot Gear for Guardian Druid
 Guardian is focusing on picking up a few flexible trinkets, some more defensive oriented are also great incase you need them.
 Generally we prioritize any gear with high haste, an early weapon and completing our tier set.
 
-
 Slot	Item	Source
 Weapon	 Alnscorned Spire	Chimaerus
 Head	 Mask of Darkest Intent	Seat of the Triumvirate
-Neck	 Pendant of Aching Grief	Windrunner Spire
+Neck	 Eternal Voidsong Chain	Crown of the Cosmos
 Shoulders	 Seedpods of the Luminous Bloom	Tier Set
 Cloak	 Draconic Nullcape	Vaelgor & Ezzorak
 Chest	 Trunk of the Luminous Bloom	Tier Set
@@ -128,7 +106,7 @@ Belt	 Scorn-Scarred Shul'ka's Belt	Chimaerus
 Legs	 Phloemwraps of the Luminous Bloom	Tier Set
 Boots	 Void-Claimed Shinkickers	Imperator Averzian
 Ring	 Omission of Light	Nexus Point Xenas
-Ring	 Occlusion of Void	Nexus Point Xenas
+Ring	 Eye of Midnight	Midnight Falls
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
 
@@ -138,16 +116,13 @@ Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's Sneakers with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,34 +162,16 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Guardian Druid
 Guardian is focusing on picking up a few flexible trinkets, some more defensive oriented are also great incase you need them.
 Generally we prioritize any gear with high haste, an early weapon and completing our tier set.
 
-
 Slot	Item	Source
 Weapon	 Alnscorned Spire	Chimaerus
 Head	 Mask of Darkest Intent	Seat of the Triumvirate
-Neck	 Pendant of Aching Grief	Windrunner Spire
+Neck	 Eternal Voidsong Chain	Crown of the Cosmos
 Shoulders	 Seedpods of the Luminous Bloom	Tier Set
 Cloak	 Draconic Nullcape	Vaelgor & Ezzorak
 Chest	 Trunk of the Luminous Bloom	Tier Set
@@ -224,7 +181,7 @@ Belt	 Scorn-Scarred Shul'ka's Belt	Chimaerus
 Legs	 Phloemwraps of the Luminous Bloom	Tier Set
 Boots	 Void-Claimed Shinkickers	Imperator Averzian
 Ring	 Omission of Light	Nexus Point Xenas
-Ring	 Occlusion of Void	Nexus Point Xenas
+Ring	 Eye of Midnight	Midnight Falls
 Trinket	 Gaze of the Alnseer	Chimaerus
 Trinket	 Algeth'ar Puzzle Box	Algeth'ar Academy
 
@@ -234,16 +191,13 @@ Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's SneakersExplanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -283,20 +237,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

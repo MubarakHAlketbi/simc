@@ -1,6 +1,6 @@
 # druid/balance — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/balance/bis-gear
-Generated: 2026-03-21 22:21
+Generated: 2026-03-23 01:10
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -35,25 +35,20 @@ At the start of the season, you're limited by both your sparks and your crests, 
 Craft  Aln'hara Cane with  Darkmoon Sigil: Hunt  - 
 Craft  Silvermoon Agent's Handwraps* with  Arcanoweave Lining 
 
-
 Early Crafting Optimization 
-
 
 Since  Arcanoweave Lining  scales with item level, you want to spend Dawncrests upgrading the off-piece you craft after you upgrade your weapon fully. That means if you're crafting early, you want to put it on a high budget item worth raising to 285 rather than a low budget piece like a Cloak or Bracers. Our best off-piece (Gloves) comes from the Great Vault so chances are it will take some time before you see it.
 
 Use a Veteran level Crafted Piece (ideally Cloak or Bracers) with  Arcanoweave Lining  until you know which 4 Tier Pieces you have. If crafting Gloves isn't an option, switch to crafting Boots or Belt.
 Replace Low Item Level Pieces -
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -93,23 +88,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -137,25 +115,20 @@ At the start of the season, you're limited by both your sparks and your crests, 
 Craft  Aln'hara Cane with  Darkmoon Sigil: Hunt  - 
 Craft  Silvermoon Agent's Handwraps* with  Arcanoweave Lining 
 
-
 Early Crafting Optimization 
-
 
 Since  Arcanoweave Lining  scales with item level, you want to spend Dawncrests upgrading the off-piece you craft after you upgrade your weapon fully. That means if you're crafting early, you want to put it on a high budget item worth raising to 285 rather than a low budget piece like a Cloak or Bracers. Our best off-piece (Gloves) comes from the Great Vault so chances are it will take some time before you see it.
 
 Use a Veteran level Crafted Piece (ideally Cloak or Bracers) with  Arcanoweave Lining  until you know which 4 Tier Pieces you have. If crafting Gloves isn't an option, switch to crafting Boots or Belt.
 Replace Low Item Level Pieces -
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -195,23 +168,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Balance Druid
@@ -241,16 +197,13 @@ Craft  Aln'hara Lantern with  Darkmoon Sigil: Hunt  Explanation
 Craft  Loa Worshiper's Band Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -290,20 +243,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

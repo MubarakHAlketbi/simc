@@ -1,6 +1,6 @@
 # evoker/devastation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/devastation/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:24
+Generated: 2026-03-23 00:02
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Scalecommander', 'Flameshaper']
@@ -54,68 +54,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -125,21 +92,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -147,14 +106,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -162,16 +116,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -181,9 +129,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -193,31 +138,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -225,37 +159,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -269,14 +188,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -284,32 +198,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -317,9 +219,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -331,43 +230,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEVASTATION EVOKER AOE ROTATION
@@ -413,68 +284,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -484,21 +322,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -506,14 +336,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -521,16 +346,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -540,9 +359,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -552,31 +368,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -584,37 +389,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -628,14 +418,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -643,32 +428,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -676,9 +449,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -690,43 +460,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEVASTATION EVOKER OPENER
@@ -772,68 +514,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -843,21 +552,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -865,14 +566,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -880,16 +576,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -899,9 +589,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -911,31 +598,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -943,37 +619,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -987,14 +648,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -1002,32 +658,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -1035,9 +679,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -1049,43 +690,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -1117,68 +730,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -1188,21 +768,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -1210,14 +782,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -1225,16 +792,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -1244,9 +805,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -1256,31 +814,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -1288,37 +835,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -1332,14 +864,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -1347,32 +874,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -1380,9 +895,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -1394,43 +906,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Dragonrage', 'Empower Spells', 'Tip The Scales', 'Deep Breath', 'Fury of the Aspects']
 
@@ -1464,68 +948,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -1535,21 +986,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -1557,14 +1000,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -1572,16 +1010,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -1591,9 +1023,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -1603,31 +1032,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -1635,37 +1053,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -1679,14 +1082,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -1694,32 +1092,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -1727,9 +1113,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -1741,43 +1124,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Empower Spells
 PRE-COMBAT CHECK
@@ -1811,68 +1166,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -1882,21 +1204,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -1904,14 +1218,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -1919,16 +1228,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -1938,9 +1241,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -1950,31 +1250,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -1982,37 +1271,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -2026,14 +1300,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -2041,32 +1310,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -2074,9 +1331,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -2088,43 +1342,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Tip The Scales
 PRE-COMBAT CHECK
@@ -2151,68 +1377,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -2222,21 +1415,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -2244,14 +1429,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -2259,16 +1439,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -2278,9 +1452,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -2290,31 +1461,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -2322,37 +1482,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -2366,14 +1511,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -2381,32 +1521,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -2414,9 +1542,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -2428,43 +1553,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Deep Breath
 PRE-COMBAT CHECK
@@ -2496,68 +1593,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -2567,21 +1631,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -2589,14 +1645,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -2604,16 +1655,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -2623,9 +1668,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -2635,31 +1677,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -2667,37 +1698,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -2711,14 +1727,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -2726,32 +1737,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -2759,9 +1758,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -2773,43 +1769,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Fury of the Aspects
 PRE-COMBAT CHECK
@@ -2835,68 +1803,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -2906,21 +1841,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -2928,14 +1855,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -2943,16 +1865,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -2962,9 +1878,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -2974,31 +1887,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -3006,37 +1908,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -3050,14 +1937,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -3065,32 +1947,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -3098,9 +1968,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -3112,43 +1979,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Hover and Movement', 'Deep Breath Z-axis', 'Disintegrate Chaining and Clipping']
 
@@ -3176,68 +2015,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -3247,21 +2053,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -3269,14 +2067,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -3284,16 +2077,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -3303,9 +2090,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -3315,31 +2099,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -3347,37 +2120,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -3391,14 +2149,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -3406,32 +2159,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -3439,9 +2180,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -3453,43 +2191,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Deep Breath Z-axis
 PRE-COMBAT CHECK
@@ -3511,68 +2221,35 @@ Another trick is to  Glide to gain altitude before  Deep Breath. This helps grea
 
  Hover and  Deep Breath can also be used in tandem to cross great distances in the air. You can try this yourself: Start by jump  Glideing from a high place. Use both  Hover charges to dash forward twice, then use  Deep Breath until it expires.  Deep Breath again, then  Hover forward twice using the refunds from  Slipstream.  Time Spiral for one last forward  Hover, then finish by reactivating  Glide. In total, this is around 200 yards of movement with minimal loss of height.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -3582,21 +2259,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -3604,14 +2273,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -3619,16 +2283,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -3638,9 +2296,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -3650,31 +2305,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -3682,37 +2326,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -3726,14 +2355,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -3741,32 +2365,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -3774,9 +2386,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -3788,43 +2397,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Disintegrate Chaining and Clipping
 PRE-COMBAT CHECK
@@ -3850,68 +2431,35 @@ If you mess clipping up the loss will outweigh the gain, so decide for yourself 
 
 Chaining Example
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -3921,21 +2469,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -3943,14 +2483,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -3958,16 +2493,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -3977,9 +2506,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -3989,31 +2515,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -4021,37 +2536,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -4065,14 +2565,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -4080,32 +2575,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -4113,9 +2596,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -4127,43 +2607,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Flameshaper
 
@@ -4208,68 +2660,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -4279,21 +2698,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -4301,14 +2712,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -4316,16 +2722,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -4335,9 +2735,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -4347,31 +2744,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -4379,37 +2765,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -4423,14 +2794,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -4438,32 +2804,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -4471,9 +2825,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -4485,43 +2836,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEVASTATION EVOKER AOE ROTATION
@@ -4564,68 +2887,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -4635,21 +2925,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -4657,14 +2939,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -4672,16 +2949,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -4691,9 +2962,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -4703,31 +2971,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -4735,37 +2992,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -4779,14 +3021,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -4794,32 +3031,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -4827,9 +3052,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -4841,43 +3063,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEVASTATION EVOKER OPENER
@@ -4919,68 +3113,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -4990,21 +3151,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -5012,14 +3165,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -5027,16 +3175,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -5046,9 +3188,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -5058,31 +3197,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -5090,37 +3218,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -5134,14 +3247,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -5149,32 +3257,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -5182,9 +3278,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -5196,43 +3289,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -5264,68 +3329,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -5335,21 +3367,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -5357,14 +3381,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -5372,16 +3391,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -5391,9 +3404,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -5403,31 +3413,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -5435,37 +3434,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -5479,14 +3463,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -5494,32 +3473,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -5527,9 +3494,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -5541,43 +3505,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Dragonrage', 'Empower Spells', 'Tip The Scales', 'Deep Breath', 'Fury of the Aspects']
 
@@ -5611,68 +3547,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -5682,21 +3585,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -5704,14 +3599,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -5719,16 +3609,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -5738,9 +3622,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -5750,31 +3631,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -5782,37 +3652,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -5826,14 +3681,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -5841,32 +3691,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -5874,9 +3712,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -5888,43 +3723,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Empower Spells
 PRE-COMBAT CHECK
@@ -5958,68 +3765,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -6029,21 +3803,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -6051,14 +3817,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -6066,16 +3827,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -6085,9 +3840,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -6097,31 +3849,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -6129,37 +3870,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -6173,14 +3899,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -6188,32 +3909,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -6221,9 +3930,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -6235,43 +3941,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Tip The Scales
 PRE-COMBAT CHECK
@@ -6298,68 +3976,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -6369,21 +4014,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -6391,14 +4028,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -6406,16 +4038,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -6425,9 +4051,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -6437,31 +4060,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -6469,37 +4081,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -6513,14 +4110,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -6528,32 +4120,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -6561,9 +4141,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -6575,43 +4152,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Deep Breath
 PRE-COMBAT CHECK
@@ -6643,68 +4192,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -6714,21 +4230,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -6736,14 +4244,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -6751,16 +4254,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -6770,9 +4267,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -6782,31 +4276,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -6814,37 +4297,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -6858,14 +4326,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -6873,32 +4336,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -6906,9 +4357,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -6920,43 +4368,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Fury of the Aspects
 PRE-COMBAT CHECK
@@ -6982,68 +4402,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -7053,21 +4440,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -7075,14 +4454,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -7090,16 +4464,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -7109,9 +4477,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -7121,31 +4486,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -7153,37 +4507,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -7197,14 +4536,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -7212,32 +4546,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -7245,9 +4567,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -7259,43 +4578,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Hover and Movement', 'Deep Breath Z-axis', 'Disintegrate Chaining and Clipping']
 
@@ -7323,68 +4614,35 @@ Not all downtime is created equal. During  Dragonrage, stakes are higher. As Sca
 
 Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move with  Hover.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -7394,21 +4652,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -7416,14 +4666,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -7431,16 +4676,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -7450,9 +4689,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -7462,31 +4698,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -7494,37 +4719,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -7538,14 +4748,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -7553,32 +4758,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -7586,9 +4779,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -7600,43 +4790,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Deep Breath Z-axis
 PRE-COMBAT CHECK
@@ -7658,68 +4820,35 @@ Another trick is to  Glide to gain altitude before  Deep Breath. This helps grea
 
  Hover and  Deep Breath can also be used in tandem to cross great distances in the air. You can try this yourself: Start by jump  Glideing from a high place. Use both  Hover charges to dash forward twice, then use  Deep Breath until it expires.  Deep Breath again, then  Hover forward twice using the refunds from  Slipstream.  Time Spiral for one last forward  Hover, then finish by reactivating  Glide. In total, this is around 200 yards of movement with minimal loss of height.
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -7729,21 +4858,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -7751,14 +4872,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -7766,16 +4882,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -7785,9 +4895,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -7797,31 +4904,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -7829,37 +4925,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -7873,14 +4954,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -7888,32 +4964,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -7921,9 +4985,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -7935,43 +4996,15 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Disintegrate Chaining and Clipping
 PRE-COMBAT CHECK
@@ -7997,68 +5030,35 @@ If you mess clipping up the loss will outweigh the gain, so decide for yourself 
 
 Chaining Example
 
-1 - 23 of 23
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.2.0
-11.1.7
-11.1.0
-11.0.2
-10.2.0
-10.1.5
-10.1.0
-10.0.7
-10.0.2
-
 53
 
-	
-By Resqued (5,416 – 2·16·17) on 2022/11/16 (Patch 10.0.2)	
-	
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
 1
-
-	
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
 Completely disagree - the guide is thorough, the reality is that the class is not that simple when it comes to maximizing the value you get from all the scalar mechanics the Evoker has.
 
-
-
 8
-
-	
 
 Leaflorn on 2022/12/05 (Patch 10.0.2)
 
 Agree with Katt here for sure. There's an important difference between maximizing dps in every situation and understanding your class. Would probably be better to just give the generic version and then use the paragraph after to explain key things to consider. One thing I've always liked about wowhead is the section "things to make you better" that comes after the "dumbed down version" of the rotation.
 
-
-
 4
-
-	
 
 Schattensang <Rare Premium User> on 2022/12/12 (Patch 10.0.2)
 
 To be fair, you can do something like this for every single class. The simplified thing here is pretty much the rotation. Just the further you get down it gets to more and more advanced stuff.
 
-
-
 2
-
-	
 
 Techhead7890 on 2023/03/05 (Patch 10.0.5)
 
 As an example, the opener has a lot of redundancy. Steps 7 and 8 about Disintegrate could really be combined, or at least the disclaimer about clipping them. Nobody's going to read each step in isolation, it should be clear that clipping applies to both steps, and it just bloats the lines and makes it harder to see the overall structure and flow of the checklist.
 
-
-
 1
-
-	
 
 DocHoly on 2023/04/18 (Patch 10.0.7)
 
@@ -8068,21 +5068,13 @@ Show 3 More Replies
 
 40
 
-	
-By SaltyBird (902 – 8·10) on 2022/11/18 (Patch 10.0.2)	
-	
 Obviously much thought and effort was put into this guide, but my goodness.
 
 27
 
-	
-By Tefel (8,276 – 2·10·13) on 2022/11/18 (Patch 10.0.2)	
-	
 this is a guide for 0,1% of the playerbase, do you have on for the rest of us too?
 
 0
-
-	
 
 RadicalDame on 2023/08/09 (Patch 10.1.5)
 
@@ -8090,14 +5082,9 @@ Yeah sadly at the moment the main Devastation Evoker guide-maker is this guy, an
 
 13
 
-	
-By Tsarez (485 – 3·6) on 2022/11/20 (Patch 10.0.2)	
-	
 Dear lord, do I need to have a PhD in evoker to play this class?
 
 7
-
-	
 
 Molendro on 2022/11/21 (Patch 10.0.2)
 
@@ -8105,16 +5092,10 @@ Envoker is not that hard if you just want to play them casually, hit abilities-u
 
 6
 
-	
-By r1dd3l (6,124 – 2·12·15) on 2023/05/10 (Patch 10.1.0)	
-	
 as noted before i do understand a lot of thought put to this guide and especially rotation but its really hard to read
 
 6
 
-	
-By Bifflin (8,604 – 2·17·44) on 2024/08/27 (Patch 11.0.2)	
-	
 There is mixed signaling on what the priority is for Deep Breath as Scalecommander. Under “How to Play Devastation Evoker,” the guide cites:
 As Scalecommander use Deep Breath on cooldown, even in Dragonrage.
 However, further down in the guide under “Devastation Evoker Major Cooldown Usage,” it says:
@@ -8124,9 +5105,6 @@ Last edited by Bifflin on 2024/08/27 (Patch 11.0.2)
 
 6
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/06/18 (Patch 11.1.7)	
-	
 For the assistant section, the macro
 #showtooltip
 /cast [nochanneling] One-Button Assistant
@@ -8136,31 +5114,20 @@ Should actually be
 
 -2
 
-	
-
 Collielord on 2025/07/13 (Patch 11.1.7)
 
 and even then it's bad and doesn't really work
 
 5
 
-	
-By zhuzhu4 (512 – 2·5) on 2022/12/05 (Patch 10.0.2)	
-	
 been playing DPS evoker a lot during m0's from my usual healer and this guide helped a lot. obviously some people want a more simplified guide, but this is the kind of guide i want, so i'm happy to have it. hope they can do a quick little guide for those who prefer condensed info and less complex stuff, but it gave everything i wanted and more. ty
 
 3
 
-	
-By Pandaabear (14,464 – 3·25·46) on 2023/05/03 (Patch 10.1.0)	
-	
 "2. Use normal rotation if delaying Dragonrage (See Single Target Rotation and Priority)." The link is broken btw.
 
 3
 
-	
-By MaliLeigh (1,055 – 4·17) on 2023/05/05 (Patch 10.1.0)	
-	
 Can anybody explain please why it is suggested to use Tip the Scales before Eternity Surge on single target opener? Maybe I'm missing something obvious but why charge it to full if there's only one target?
 
 Edit, think I've figured it. Tip the Scales and Eternity is faster than channeling to even rank 1, so just saves time during the burst opener :)
@@ -8168,37 +5135,22 @@ Last edited by MaliLeigh on 2023/05/05 (Patch 10.1.0)
 
 3
 
-	
-By KenpachiX (7,186 – 2·11·11) on 2025/03/20 (Patch 11.1.0)	
-	
 I've been playing FS since season 2. Before that, I didn't realize that the guide here is ultra-focused on SC. I think there should be two versions for each hero talent. Or at least more filter options.
 
 1
 
-	
-By Shadowtek (23,443 – 3·24·31) on 2023/03/23 (Patch 10.0.7)	
-	
 deep and thourough rotation guide with explanation on how and why, learned a few things from reading this after spending a couple of days at max level
 
 1
 
-	
-By Linaori (14,656 – 2·13·17) on 2023/08/26 (Patch 10.1.5)	
-	
 What's the secret behind unravel? It feels like a waste of a GCD, mainly because it's so extremely niche that there's no way I have an actionbar slot for it that I can train muscle memory for.
 
 1
 
-	
-By dr7swag (16,415 – 2·13·94) on 2025/03/27 (Patch 11.1.0)	
-	
 I tried precasting eternity surge before Dragonrage, but I don't have enough time for a 4th extension, what's the point of it? Do I need more haste to manage a 4th extension?
 
 1
 
-	
-By Civil4794 (6,903 – 3·6·15) on 2025/06/27 (Patch 11.1.7)	
-	
 macro for single button assistant is wrong.
 it should say
 
@@ -8212,14 +5164,9 @@ Not
 
 1
 
-	
-By Asaqq (9,080 – 1·16·30) on 2025/08/21 (Patch 11.2.0)	
-	
 Is the rotation section for Flameshaper right? It says its about building big Engulf and then ignore Disintegrate in the rotation to buff it? Shattering Star is not essence ability so it doesnt enable the third DOT for engulf. Why then this guide says to not use Disintegrate before engulf?
 
 0
-
-	
 
 suchtie on 2026/01/03 (Patch 11.2.7)
 
@@ -8227,32 +5174,20 @@ Using Dragonrage automatically casts 3 Pyres. This is why you don't need to Disi
 
 1
 
-	
-By Muzashi (2,799 – 1·10·15) on 2025/09/24 (Patch 11.2.0)	
-	
 Fire Breath is higher priority than Eternity Surge. This forces Jackpot! buffs (Season 2 Tier Bonus) onto Fire Breath.
 Jackpot buff is the #1 tip? This isn't maintained very well.
 
 0
 
-	
-By Kaeleane (7,500 – 1·19·22) on 2022/12/09 (Patch 10.0.2)	
-	
 Where do we get "Shattering Star"? I don't see it available (passive or active) on "Specialization and Talents" or in the Spellbook?
 
 0
-
-	
 
 Echonomix on 2022/12/10 (Patch 10.0.2)
 
 its on the right talent tree, right side, lower half
 
-
-
 0
-
-	
 
 Kirastrasza on 2023/01/19 (Patch 10.0.2)
 
@@ -8260,9 +5195,6 @@ I had a hard time finding certain talents, but the search field in the lower lef
 
 0
 
-	
-By Madisonics (8,726 – 2·10·47) on 2024/10/22 (Patch 11.0.2)	
-	
 None of the guides online seem to know how to play Flameshaper. Engulf damage is increased by the number of DOTs you have on the target.
 
 You should have the Living Flame dot talent (Ruby Embers, which stacks x3 but unclear if each stack counts separately for Engulf), Flame Breath, and the Disintegrate dot talent (Enkindle) active on the target prior to using Engulf. I also use the extended Shattering Star time with Focusing Iris, but that's personal preference.
@@ -8274,40 +5206,12 @@ Last edited by Madisonics on 2024/10/22 (Patch 11.0.2)
 
 -1
 
-	
-By Kookster (4,177 – 13·12) on 2022/12/13 (Patch 10.0.2)	
-	
 Easy to play, hard to master? :D sounds blizzardlike
 
 -1
 
-	
-By MykeC72 (7,163 – 1·16·20) on 2023/03/30 (Patch 10.0.7)	
-	
 Can someone explain why Firestorm is listed to use but is not selected as a Talent?
 
 -3
 
-	
-By Khazan (10,932 – 3·20·47) on 2023/12/14 (Patch 10.2.0)	
-	
 With the new 4-set bonus Emerald Trance, should Disintegrate be prioritized over Eternity Surge? Both in-game and in sims, Disintegrate deals more damage per cast than Eternity Surge does. During Emerald Trance after Dragonrage, you have so many Essence Bursts you end up wasting them by having to cast Eternity Surge.
-By Bearage (4,237 – 8·17) on 2023/01/03 (Patch 10.0.2)	
-	
-1 - 23 of 23
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

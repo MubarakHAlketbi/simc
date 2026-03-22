@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:21
+Generated: 2026-03-23 00:00
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Void-Scarred', 'Annihilator']
@@ -77,16 +77,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -94,17 +86,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -112,9 +98,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -132,57 +115,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEVOURER DEMON HUNTER AOE ROTATION
@@ -207,7 +160,7 @@ INSIDE VOID METAMORPHOSIS PRIORITY
 Cast  Eradicate
 Cast  Void Ray
 Cast  Collapsing Star - 
-Cast  Reaper's Toll
+Cast  Reaper's Toll - 
 Cast  Vengeful Retreat if buffed by  Voidstep - 
 Cast  Pierce the Veil
 Cast  Cull with 4 or more Soul Fragments - 
@@ -256,16 +209,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -273,17 +218,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -291,9 +230,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -311,57 +247,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEVOURER DEMON HUNTER OPENER
@@ -436,16 +342,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -453,17 +351,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -471,9 +363,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -491,57 +380,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -595,16 +454,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -612,17 +463,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -630,9 +475,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -650,57 +492,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Void Metamorphosis', 'Collapsing Star', 'The Melee Talents']
 
@@ -756,16 +568,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -773,17 +577,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -791,9 +589,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -811,57 +606,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Collapsing Star
 PRE-COMBAT CHECK
@@ -895,16 +660,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -912,17 +669,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -930,9 +681,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -950,57 +698,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### The Melee Talents
 PRE-COMBAT CHECK
@@ -1051,16 +769,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1068,17 +778,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1086,9 +790,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1106,57 +807,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Smuggling', "Devourer's Bite", 'Reap and Cull Optimization']
 
@@ -1209,16 +880,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1226,17 +889,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1244,9 +901,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1264,57 +918,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Devourer's Bite
 PRE-COMBAT CHECK
@@ -1357,16 +981,8 @@ Because of this, it's recommended to always hold your  Voidblade and  The Hunt u
 
 Since the best builds play  Emptiness this season, you will often find yourself in Void Metamorphosis long enough to get a second Devourer's Bite window. For these additional windows, try to fit in either a Collapsing Star, or a Moment of Craving buffed Cull, ideally both!
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1374,17 +990,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1392,9 +1002,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1412,57 +1019,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Reap and Cull Optimization
 PRE-COMBAT CHECK
@@ -1509,16 +1086,8 @@ This is especially important for  Eradicate, as this is a large portion of your 
 
 Finally,  Annihilator has some small optimizations which can be made with Reap and Cull. The usage of these abilities are much more important as they are used to proc  Voidfall. Because of this, they are not used on cooldown, and are instead used to proc Voidfall once you reach three stacks!
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1526,17 +1095,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1544,9 +1107,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1564,57 +1124,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Annihilator
 
@@ -1681,16 +1211,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1698,17 +1220,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1716,9 +1232,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1736,57 +1249,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEVOURER DEMON HUNTER AOE ROTATION
@@ -1848,16 +1331,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -1865,17 +1340,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -1883,9 +1352,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -1903,57 +1369,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEVOURER DEMON HUNTER OPENER
@@ -2023,16 +1459,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2040,17 +1468,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2058,9 +1480,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2078,57 +1497,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -2182,16 +1571,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2199,17 +1580,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2217,9 +1592,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2237,57 +1609,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Void Metamorphosis', 'Collapsing Star', 'The Melee Talents']
 
@@ -2343,16 +1685,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2360,17 +1694,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2378,9 +1706,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2398,57 +1723,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Collapsing Star
 PRE-COMBAT CHECK
@@ -2482,16 +1777,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2499,17 +1786,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2517,9 +1798,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2537,57 +1815,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### The Melee Talents
 PRE-COMBAT CHECK
@@ -2638,16 +1886,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2655,17 +1895,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2673,9 +1907,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2693,57 +1924,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Smuggling', "Devourer's Bite", 'Reap and Cull Optimization']
 
@@ -2796,16 +1997,8 @@ This is predominantly done in the M+  Void-Scarred build, but is still quite st
 ERADICATE AND MOMENT OF CRAVING
 Similar to smuggling  Hungering Slash, by smuggling  Eradicate and  Moment of Craving into  Void Metamorphosis, we're able to take advantage of the 30% more damage that  Cull gains, as well as the additional damage we gain from our mastery  Mastery: Monster Within. By smuggling  Moment of Craving into Void Meta, we're able to spend that on a Cull rather than a  Reap. Likewise, since  Void Ray is reset upon entering Void Meta, we're able to use 2 Moment of Craving buffed Culls at the start of our burst, rather than 1.  Eradicate works similarly, upgrading into the "Cull" version when entering Meta, and doing 30% more damage (+damage from our mastery) as a result.
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2813,17 +2006,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2831,9 +2018,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2851,57 +2035,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Devourer's Bite
 PRE-COMBAT CHECK
@@ -2944,16 +2098,8 @@ Because of this, it's recommended to always hold your  Voidblade and  The Hunt u
 
 Since the best builds play  Emptiness this season, you will often find yourself in Void Metamorphosis long enough to get a second Devourer's Bite window. For these additional windows, try to fit in either a Collapsing Star, or a Moment of Craving buffed Cull, ideally both!
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -2961,17 +2107,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -2979,9 +2119,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -2999,57 +2136,27 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Reap and Cull Optimization
 PRE-COMBAT CHECK
@@ -3096,16 +2203,8 @@ This is especially important for  Eradicate, as this is a large portion of your 
 
 Finally,  Annihilator has some small optimizations which can be made with Reap and Cull. The usage of these abilities are much more important as they are used to proc  Voidfall. Because of this, they are not used on cooldown, and are instead used to proc Voidfall once you reach three stacks!
 
-1 - 5 of 5
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-12.0.1
-12.0.0
-
 10
 
-	
-By christhekiller (14,432 – 1·18·43) on 2026/01/24 (Patch 12.0.0)	
-	
 is it possible to give a break down of the best way to get to a collapsing star? im struggling to even get to cast it once, much less multiple times.
 
 is it normal for a void scarred build to just never cast it? that doesnt seem right but i cant keep up enough fury to actually cast it in time.
@@ -3113,17 +2212,11 @@ Last edited by christhekiller on 2026/01/24 (Patch 12.0.0)
 
 2
 
-	
-
 MysticToeBeans on 2026/01/28 (Patch 12.0.0)
 
 There is a note near the bottom in Metamorphosis: In Pre-Patch, Void-Scarred doesn't make use of Collapsing Star in Single Target, as the lack of Apex talents and the lack of buffs that Annihilator provides it cause it to be less valuable than Devour.
 
-
-
 0
-
-	
 
 Ayraesa on 2026/01/29 (Patch 12.0.0)
 
@@ -3131,9 +2224,6 @@ I just posted a comment explaining my experience with using collapsing stars. Ta
 
 1
 
-	
-By Ayraesa (215 – 2·2) on 2026/01/29 (Patch 12.0.0)	
-	
 Okay, let's go. I think this Wowhead tutorial is missing some details.
 Pre-Patch - Dynamic Collapsing Star:
 
@@ -3151,54 +2241,24 @@ Last edited by Ayraesa on 2026/01/29 (Patch 12.0.0)
 
 1
 
-	
-By Primalcrux (18,949 – 3·22·75) 25 days ago (Patch 12.0.1)	
-	
 If I'm running Annihilator, do I always use Reap before Void Ray since it resets? Or do I save those souls for Eradicate?
 
 0
 
-	
-
-Yumnomi 13 days ago (Patch 12.0.1)
+Yumnomi 14 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
 1
 
-	
-By Gryffyth (610 – 2·2) 5 days ago (Patch 12.0.1)	
-	
 Pre tier set is using the melee build with glutton but the guide is saying going for 4 Collapsing Stars - Im getting one at the moment and I assumed most damage would come - in this build - from the scarred empowered abilties? Am I just playing it wrong
 
 -1
 
-	
-By Eluaria (6,769 – 1·11·22) 27 days ago (Patch 12.0.1)	
-	
 So, lemme get this straight, our entire rotation outside of Meta is LITERALLY just using Consume? So, we lose DPS when we do essentially anything else? That is ... incredibly upsetting.
 
 0
 
-	
-
-Fluffytooths 21 days ago (Patch 12.0.1)
+Fluffytooths 22 days ago (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
-1 - 5 of 5
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

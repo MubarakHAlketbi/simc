@@ -1,6 +1,6 @@
 # mage/arcane — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/arcane/enchants-gems-pve-dps
-Generated: 2026-03-21 22:35
+Generated: 2026-03-23 01:16
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -83,7 +83,6 @@ Arcane Mage Weapon Enchant
  BEST ARCANE MAGE CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Arcane Mages can use in PvE content. While Haste is generally recommended as the safest option for gearing characters and for the added benefit of smoothing out gameplay feel, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of Thalassian Resistance 
 Combat Potion	 Light's Potential 
@@ -91,9 +90,6 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Silvermoon Parade and  Sanguithorn Tea (they stack!)
-Report Ad
-Report ad
-Remove All Ads
 Arcane Mage Flask
 The best Flask for Arcane Mages is  Flask of Thalassian Resistance , overall the other options are completely useable too though.
 Arcane Mage Combat Potions
@@ -110,12 +106,8 @@ Feast:  Silvermoon Parade
 Personal Food: Anything that gives max stats is basically useable, sim for best results!
 Our Arcane Mage guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Arcane Mage guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Porom
 World of Warcraft Mage Expert

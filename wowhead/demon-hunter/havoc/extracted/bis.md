@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Bis (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/bis-gear
-Generated: 2026-03-21 22:16
+Generated: 2026-03-23 01:07
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -15,7 +15,6 @@ Tab Group 1: ['Early Crafts', 'Best In Slot Crafts']
 Best in Slot Gear for Havoc Demon Hunter
 BiS is built around stacking Critical Strike and Mastery as you can, while using the best available on-use 2 minute trinket to align to our burst in  Algeth'ar Puzzle Box. Our Tier Set is not overly powerful and it does not affect your rotation in any way.
 
-
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
 Offhand	 Emblazoned Sunglaive	Vaelgor & Ezzorak
@@ -40,16 +39,13 @@ Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -89,23 +85,6 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Early Crafts', 'Best In Slot Crafts']
 
@@ -113,7 +92,6 @@ You are not logged in. Please log in or register an account to add your comment.
 Best in Slot Gear for Havoc Demon Hunter
 BiS is built around stacking Critical Strike and Mastery as you can, while using the best available on-use 2 minute trinket to align to our burst in  Algeth'ar Puzzle Box. Our Tier Set is not overly powerful and it does not affect your rotation in any way.
 
-
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
 Offhand	 Emblazoned Sunglaive	Vaelgor & Ezzorak
@@ -138,16 +116,13 @@ Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -187,28 +162,10 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Best In Slot Crafts
 Best in Slot Gear for Havoc Demon Hunter
 BiS is built around stacking Critical Strike and Mastery as you can, while using the best available on-use 2 minute trinket to align to our burst in  Algeth'ar Puzzle Box. Our Tier Set is not overly powerful and it does not affect your rotation in any way.
-
 
 Slot	Item	Source
 Weapon	 Lightless Lament	Midnight Falls
@@ -233,16 +190,13 @@ Craft  Adherent's Silken Shroud with  Arcanoweave Lining  Explanation
 Craft  Silvermoon Agent's Deflectors with  Arcanoweave Lining  Explanation 
 Replace Low Item Level Pieces.
 
-1 - 13 of 13
- 
 Subject
-	
-Posted
-	
-Author
-	
-Replies
 
+Posted
+
+Author
+
+Replies
 
 Reminder - No Bonus Rolls in Shadowlands - Great Vault Loot Instead
 	On 2020/12/09	perculia	29
@@ -282,20 +236,3 @@ Patch 7.2.5 Survival Guide
 
 New Legendaries and ilvl 970 Upgrades in Patch 7.2.5
 	On 2017/05/21	perculia	77
-1 - 13 of 13
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

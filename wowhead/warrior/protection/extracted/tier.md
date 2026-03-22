@@ -1,6 +1,6 @@
 # warrior/protection — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/protection/tier-set-bonuses
-Generated: 2026-03-21 23:07
+Generated: 2026-03-23 01:32
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Protection Warrior Tier Set Bonuses for Midnight Season 1
 By Pumps
-Updated: 2026/03/16
+Updated: 2026/03/22
 Pumps
 Offline on Twitch
 Follow
@@ -56,7 +56,6 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Protection Warrior gear page!
 
-
 Protection Warrior Gear Guide
 Midnight Season 1 Tier Set Bonuses for Protection Warrior
 The Midnight Season 1 tier set for Protection Warrior is rather passive and buffs our regular rotational spells with little effort.
@@ -64,11 +63,6 @@ More damage on Thunder Clap and Shield Slam and a guaranteed Revenge! proc on ea
 Rage of the Night Ender
  Warrior Protection 12.0 Class Set 2pc - Shield Slam damage increased by 10% and Shield Charge damage increased by 100%.
  Warrior Protection 12.0 Class Set 4pc - Thunder Clap and Revenge damage increased by 10% and Shield Charge grants Revenge!
-
-
-
-
-
 
 Best Tier Set Pieces for Protection Warrior
 Our tier set bonus, Rage of the Night Ender, is comprised of the following items from Midnight Season 1:
@@ -89,7 +83,6 @@ Tier Set Bonus Rotation Changes for Protection Warrior
 The tier set does not affect the Prot Warrior rotation.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Protection Warrior Rotation and Talent Builds Pages.
-
 
 Protection Warrior Rotation Guide
 Protection Warrior Talent Builds Guide

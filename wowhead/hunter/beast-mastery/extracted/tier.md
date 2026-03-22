@@ -1,6 +1,6 @@
 # hunter/beast-mastery — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/beast-mastery/tier-set-bonuses
-Generated: 2026-03-21 22:30
+Generated: 2026-03-23 01:14
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -38,7 +38,7 @@ Guide Info
 Changelog
 Beast Mastery Hunter Tier Set Bonuses for Midnight Season 1
 By Tarlo
-Updated: 2026/03/16
+Updated: 2026/03/22
 Tier sets are unique class armor sets that provide powerful spec-specific bonuses when multiple pieces of the set are worn. These bonuses will change based on your character's active talent specialization, ensuring that the bonus is appropriate and valuable to your spec.
 
 This guide provides relevant information about your Beast Mastery Hunter tier, including how the tier bonuses work, their effect on the Beast Mastery Hunter playstyle, how to acquire tier set pieces, and what gearing strategy you should be using.
@@ -54,18 +54,12 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Beast Mastery Hunter gear page!
 
-
 Beast Mastery Hunter Gear Guide
 Midnight Season 1 Tier Set Bonuses for Beast Mastery Hunter
 The Beast Mastery Tier set bonus is very straight forward, the 2-set buffs  Bestial Wrath (and  Bloodshed) direct damage and the 4-set summons a  Dire Beast whenever you use Bestial Wrath. The most notable thing the tier set does is make Dire Beast setups more viable, as it generates more  Huntmaster's Call beasts. The 2-set is worth roughly 4.5% damage and the 4-set is worth 3% damage.
 Primal Sentry’s Camouflage
  Hunter Beast Mastery 12.0 Class Set 2pc - Bestial Wrath’s direct damage is increased by 25%.
  Hunter Beast Mastery 12.0 Class Set 4pc - Bestial Wrath summons 1 Dire Beast for 8 sec.
-
-
-
-
-
 
 Best Tier Set Pieces for Beast Mastery Hunter
 Our tier set bonus, Primal Sentry’s Camouflage, is comprised of the following items from Midnight Season 1:
@@ -88,7 +82,6 @@ Tier Set Bonus Rotation Changes for Beast Mastery Hunter
 Your tier set bonus has no impact on your rotation as Beast Mastery Hunter.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Beast Mastery Hunter Rotation and Talent Builds Pages.
-
 
 Beast Mastery Hunter Rotation Guide
 Beast Mastery Hunter Talent Builds Guide

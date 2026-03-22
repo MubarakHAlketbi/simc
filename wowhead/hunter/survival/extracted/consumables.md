@@ -1,6 +1,6 @@
 # hunter/survival — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/survival/enchants-gems-pve-dps
-Generated: 2026-03-21 22:33
+Generated: 2026-03-23 01:16
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -54,13 +54,9 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST SURVIVAL HUNTER GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1. As always, we encourage you to regularly sim your character for more personalized options.
 Gems and enchants are often utilised to even out our stat distribution, Although Mastery is by far our strongest stat, we want a reasonable balance of Crit and Haste as well, usually around ~30-50% of our mastery rating amount. Gems and enchants are a perfect opportunity to even this out.
-
 
 Slot	Best Enchant
 Weapon	 Enchant Weapon - Arcane Mastery (Main Hand / 2 Hand) |  Enchant Weapon - Acuity of the Ren'dorei  (Off Hand)
@@ -78,7 +74,6 @@ For our weapon, we recommend  Enchant Weapon - Arcane Mastery  as it provides ou
  BEST SURVIVAL HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Survival Hunter can use in PvE content.
 
-
 Type	Best
 Flask	 Fleeting Flask of the Magisters 
 Combat Potion	 Light's Potential 
@@ -86,9 +81,6 @@ Health Potion	 Silvermoon Health Potion
 Augment Rune	 Void-Touched Augment Rune
 Weapon Buff	 Thalassian Phoenix Oil 
 Food	 Silvermoon Parade
-Report Ad
-Report ad
-Remove All Ads
 Survival Hunter Flask
 The best flask for Survival Hunters is  Fleeting Flask of the Magisters , for all scenarios, as it is our best stat.
 Survival Hunter Combat Potions
@@ -103,12 +95,8 @@ Survival Hunter Food
 We recommend  Silvermoon Parade for the primary stat. You can also get away with  Quel'dorei Medley if you're very close to BiS.
 Our Survival Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Survival Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 DoolB
 Dool B Thyminde | World of Warcraft Retail Survival Hunter Guidewriter

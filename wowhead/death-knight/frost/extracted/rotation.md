@@ -1,6 +1,6 @@
 # death-knight/frost — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:19
+Generated: 2026-03-22 23:58
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', 'Rider of the Apocalypse']
@@ -43,36 +43,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FROST DEATH KNIGHT AOE ROTATION
@@ -105,36 +82,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST DEATH KNIGHT OPENER
@@ -161,36 +115,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -208,36 +139,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Pillar of Frost', "Frostwyrm's Fury", "Reaper's Mark"]
 
@@ -257,36 +165,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Frostwyrm's Fury
 PRE-COMBAT CHECK
@@ -304,36 +189,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Reaper's Mark
 PRE-COMBAT CHECK
@@ -349,36 +211,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Killing Streak']
 
@@ -396,36 +235,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Rider of the Apocalypse
 
@@ -461,36 +277,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FROST DEATH KNIGHT AOE ROTATION
@@ -522,36 +315,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FROST DEATH KNIGHT OPENER
@@ -578,36 +348,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -625,36 +372,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Pillar of Frost', "Frostwyrm's Fury", "Reaper's Mark"]
 
@@ -674,36 +398,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Frostwyrm's Fury
 PRE-COMBAT CHECK
@@ -714,8 +415,6 @@ Buff Up Make sure you have a food buff, an active flask, and weapon oils applied
 FROSTWYRM'S FURY
  Frostwyrm's Fury is integral to Frost in Midnight, thanks for the Apex talents. The most important thing to know is to never cast Frostwyrm's Fury without  Pillar of Frost, otherwise you will waste  Chosen of Frostbrood. Other concerns are specific to each Hero Talent.
 
-
-
  Rider of the Apocalypse wants to use Frostwyrm's Fury as soon as possible after Pillar of Frost. Frostwyrm's Fury summons all the Horsemen through  Apocalypse Now, meaning  Apocalyptic Conquest is active. We want to overlap it with Pillar of Frost's strength buff to keep our Strength as high as possible as long as possible.
 
 UNDERSTANDING KILLING STREAK
@@ -723,36 +422,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Reaper's Mark
 PRE-COMBAT CHECK
@@ -768,36 +444,13 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Killing Streak']
 
@@ -815,33 +468,10 @@ UNDERSTANDING KILLING STREAK
 
 Frost wants to spend as many GCDs as possible on spending Killing Machine, and as few GCDs as possible on casting  Obliterate/ Frostscythe without Killing Machine. Obliterate deals over double its normal damage with Killing Machine, and Frostscythe deals four times its normal damage. You deal more damage overall by spending two single Killing Machine abilities than by consuming double Killing Machine. The bonus crit damage from Killing Streak is not nearly as much as the difference between an unbuffed hit and a hit buffed by Killing Machine.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

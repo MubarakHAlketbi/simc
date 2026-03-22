@@ -1,6 +1,6 @@
 # monk/windwalker — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:29
+Generated: 2026-03-23 00:07
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Conduit of the Celestials']
@@ -17,7 +17,6 @@ Windwalker in Single Target plays around a priority list, juggling both ability 
 
 With  Conduit of the Celestials selected, the priority is as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
-
 
  Conduit of the Celestials is focused on managing the additional cooldown of  Celestial Conduit and the effects from  Heart of the Jade Serpent. This burst window accelerates how quickly your abilities come off cooldown and how quickly you channel  Fists of Fury allow you to squeeze a large amount of damage into its buff window.
 OPTIONS
@@ -54,36 +53,13 @@ If talented into  Obsidian Spiral then  Blackout Kick generates a Chi rather tha
  Zenith has two stacks, so you do not need to use it as soon as it is available but can plan its use for the best possible time.
 Through talents,  Zenith can have a cooldown that takes 60, 70, 80, or 90-seconds to return. With two possible stacks, this means you can safely use it based on when you get the most value out of it, during a high-damage phase of a fight, a time with many targets to hit, or during large buffs like  Bloodlust or with your trinkets.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST WINDWALKER MONK AOE ROTATION
@@ -91,7 +67,6 @@ With current tuning, Windwalker AOE differs very little compared to how it funct
 
 With  Conduit of the Celestials selected, the priority is as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
-
 
  Conduit of the Celestials doesn't current change when shifting to AOE damage as most of the damage comes from the additional casts of  Fists of Fury that you get with the cooldown reduction brought by  Heart of the Jade Serpent.
 OPTIONS
@@ -129,36 +104,13 @@ If talented into  Obsidian Spiral then  Blackout Kick generates a Chi rather tha
  Zenith has two stacks, so you do not need to use it as soon as it is available but can plan its use for the best possible time.
 Through talents,  Zenith can have a cooldown that takes 60, 70, 80, or 90-seconds to return. With two possible stacks, this means you can safely use it based on when you get the most value out of it, during a high-damage phase of a fight, a time with many targets to hit, or during large buffs like  Bloodlust or with your trinkets.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST WINDWALKER MONK OPENER
@@ -166,7 +118,6 @@ The Windwalker Monk opener is somewhat affected by your choice of Hero Talents. 
 
 With  Conduit of the Celestials selected, opener details are as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
-
 
 The  Shado-pan opener aims to get stronger abilities like  Fists of Fury and  Rising Sun Kick on cooldown as quickly as possible so that you can use it more often. Generally, the opener follows the priority closer than openers often do. The opener is also the same for single target and AOE.
 SAMPLE TIMELINE
@@ -201,36 +152,13 @@ If talented into  Obsidian Spiral then  Blackout Kick generates a Chi rather tha
  Zenith has two stacks, so you do not need to use it as soon as it is available but can plan its use for the best possible time.
 Through talents,  Zenith can have a cooldown that takes 60, 70, 80, or 90-seconds to return. With two possible stacks, this means you can safely use it based on when you get the most value out of it, during a high-damage phase of a fight, a time with many targets to hit, or during large buffs like  Bloodlust or with your trinkets.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -251,36 +179,13 @@ If talented into  Obsidian Spiral then  Blackout Kick generates a Chi rather tha
  Zenith has two stacks, so you do not need to use it as soon as it is available but can plan its use for the best possible time.
 Through talents,  Zenith can have a cooldown that takes 60, 70, 80, or 90-seconds to return. With two possible stacks, this means you can safely use it based on when you get the most value out of it, during a high-damage phase of a fight, a time with many targets to hit, or during large buffs like  Bloodlust or with your trinkets.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Zenith', 'Celestial Conduit', 'Invoke Xuen', 'Touch of Death', 'Touch of Karma', 'Fortifying Brew']
 
@@ -303,36 +208,13 @@ If talented into  Obsidian Spiral then  Blackout Kick generates a Chi rather tha
  Zenith has two stacks, so you do not need to use it as soon as it is available but can plan its use for the best possible time.
 Through talents,  Zenith can have a cooldown that takes 60, 70, 80, or 90-seconds to return. With two possible stacks, this means you can safely use it based on when you get the most value out of it, during a high-damage phase of a fight, a time with many targets to hit, or during large buffs like  Bloodlust or with your trinkets.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Celestial Conduit
 PRE-COMBAT CHECK
@@ -353,36 +235,13 @@ Try to cast  Zenith during  Heart of the Jade Serpent.
 Try NOT to cast  Celestial Conduit if you still have the  Heart of the Jade Serpent buff from  Strike of the Windlord or  Whirling Dragon Punch.
 Try NOT to cast  Strike of the Windlord or  Whirling Dragon Punch if you have the  Heart of the Jade Serpent buff from  Celestial Conduit.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Invoke Xuen
 PRE-COMBAT CHECK
@@ -396,36 +255,13 @@ With the changes in Midnight  Invoke Xuen, the White Tiger is mainly a button yo
 
 There is a large window after casting  Invoke Xuen, the White Tiger where you're able to cast  Celestial Conduit. Because balancing the above  Heart of the Jade Serpent buff generally means a somewhat strict sequence of abilities, you will want to avoid deviating much from the above opener, even if it's the middle of a fight.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Touch of Death
 PRE-COMBAT CHECK
@@ -441,36 +277,13 @@ While this generally means that you'll want to use it as soon as its available a
 
 This is a very small window and  Touch of Death can sometimes have a delay before being usable if you just swap to a target to try and hit it with  Touch of Death. This delay can be the difference between making or missing the very small window. Missing the window generally means that you don't get  Touch of Death off and thus lose damage that you would have done if you had cast it sooner.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Touch of Karma
 PRE-COMBAT CHECK
@@ -486,36 +299,13 @@ Most fights in most content have times where you will be taking damage and can c
 
 Needing to  Provoke a target to get the benefit from  Touch of Karma should be used as a last resort and only ever be done with the express permission of your tanks and healers as you're often likely to get killed once the shield ends without direct intervention. Do this at your own risk.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Fortifying Brew
 PRE-COMBAT CHECK
@@ -531,33 +321,10 @@ If you are not going to need the defensive value of  Fortifying Brew on its own,
 
 A real good way to use this is to find a way to use  Fortifying Brew then  Touch of Karma at a time when you'll also be able to use  Touch of Death during the duration of  Fortifying Brew. This gets you both benefits for one use. If you're already going to use it for DPS purposes, then you might as well be efficient about it.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/enchants-gems-pve-dps
-Generated: 2026-03-21 22:18
+Generated: 2026-03-23 01:08
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -53,9 +53,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST DEVOURER DEMON HUNTER GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -76,7 +73,6 @@ For Season One, Devourer looks to use a mixture of the secondary stat weapon enc
  BEST DEVOURER DEMON HUNTER CONSUMABLES IN MIDNIGHT SEASON 1
 Below, we've listed the best flasks, potions, and weapon buffs that Devourer Demon Hunters can use in PvE content. While Mastery is generally recommended as the safest option for gearing characters, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Magisters  or  Flask of the Blood Knights 
 Combat Potion	 Potion of Recklessness 
@@ -84,9 +80,6 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Silvermoon Parade or  Champion's Bento
-Report Ad
-Report ad
-Remove All Ads
 Devourer Demon Hunter Flask
 The best Flask for Devourer Demon Hunters is  Flask of the Magisters , though  Flask of the Blood Knights  can still be helpful if you feel you want the extra haste to smooth out your gameplay.
 Devourer Demon Hunter Combat Potions
@@ -103,10 +96,5 @@ Feast:  Silvermoon Parade
 Personal Food:  Champion's Bento
 Our Devourer Demon Hunter guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Devourer Demon Hunter guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
-

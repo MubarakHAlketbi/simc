@@ -1,0 +1,5 @@
+Spec: monk/brewmaster
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank
+Warnings (1):
+  - MISSING HERO TALENTS: found 1 (['Master of Harmony']), expected 2 (['master-of-harmony', 'shado-pan'])

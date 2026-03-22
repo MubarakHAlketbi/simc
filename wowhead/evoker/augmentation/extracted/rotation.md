@@ -1,6 +1,6 @@
 # evoker/augmentation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:25
+Generated: 2026-03-23 00:03
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Chronowarden', 'Scalecommander']
@@ -43,17 +43,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -63,32 +54,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -96,14 +76,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -111,35 +86,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST AUGMENTATION EVOKER AOE ROTATION
@@ -172,17 +125,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -192,32 +136,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -225,14 +158,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -240,35 +168,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST AUGMENTATION EVOKER OPENER
@@ -308,17 +214,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -328,32 +225,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -361,14 +247,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -376,35 +257,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -432,17 +291,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -452,32 +302,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -485,14 +324,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -500,35 +334,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Empower Spells', 'Tip The Scales', 'Ebon Might', 'Breath of Eons', 'Time Skip']
 
@@ -558,17 +370,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -578,32 +381,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -611,14 +403,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -626,35 +413,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Tip The Scales
 PRE-COMBAT CHECK
@@ -680,17 +445,8 @@ When playing  Chronowarden, in addition to the above, be sure to treat  Tempora
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -700,32 +456,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -733,14 +478,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -748,35 +488,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ebon Might
 PRE-COMBAT CHECK
@@ -800,17 +518,8 @@ The amount of main stat granted by  Ebon Might currently updates dynamically to 
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -820,32 +529,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -853,14 +551,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -868,35 +561,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Breath of Eons
 PRE-COMBAT CHECK
@@ -918,17 +589,8 @@ While raiding, make sure to be flexible with the exact timing of  Breath of Eons
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -938,32 +600,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -971,14 +622,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -986,35 +632,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Time Skip
 PRE-COMBAT CHECK
@@ -1040,17 +664,8 @@ After your first cast, consider using  Time Skip essentially on cooldown, aligni
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1060,32 +675,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1093,14 +697,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1108,35 +707,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Bombardments']
 
@@ -1164,17 +741,8 @@ After your first cast, consider using  Time Skip essentially on cooldown, aligni
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1184,32 +752,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1217,14 +774,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1232,35 +784,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Scalecommander
 
@@ -1297,17 +827,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1317,32 +838,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1350,14 +860,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1365,35 +870,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST AUGMENTATION EVOKER AOE ROTATION
@@ -1426,17 +909,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1446,32 +920,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1479,14 +942,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1494,35 +952,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST AUGMENTATION EVOKER OPENER
@@ -1562,17 +998,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1582,32 +1009,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1615,14 +1031,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1630,35 +1041,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -1686,17 +1075,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1706,32 +1086,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1739,14 +1108,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1754,35 +1118,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Empower Spells', 'Tip The Scales', 'Ebon Might', 'Breath of Eons', 'Time Skip']
 
@@ -1812,17 +1154,8 @@ Empowering  Upheaval simply expands the radius of the spell's area of effect, so
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1832,32 +1165,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1865,14 +1187,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -1880,35 +1197,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Tip The Scales
 PRE-COMBAT CHECK
@@ -1934,17 +1229,8 @@ When playing  Chronowarden, in addition to the above, be sure to treat  Tempora
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -1954,32 +1240,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -1987,14 +1262,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -2002,35 +1272,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ebon Might
 PRE-COMBAT CHECK
@@ -2054,17 +1302,8 @@ The amount of main stat granted by  Ebon Might currently updates dynamically to 
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -2074,32 +1313,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -2107,14 +1335,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -2122,35 +1345,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Breath of Eons
 PRE-COMBAT CHECK
@@ -2172,17 +1373,8 @@ While raiding, make sure to be flexible with the exact timing of  Breath of Eons
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -2192,32 +1384,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -2225,14 +1406,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -2240,35 +1416,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Time Skip
 PRE-COMBAT CHECK
@@ -2294,17 +1448,8 @@ After your first cast, consider using  Time Skip essentially on cooldown, aligni
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -2314,32 +1459,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -2347,14 +1481,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -2362,35 +1491,13 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Bombardments']
 
@@ -2418,17 +1525,8 @@ After your first cast, consider using  Time Skip essentially on cooldown, aligni
 SPREADING BOMBARDMENTS
 When playing  Scalecommander, your Empower spells each grant a buff causing your next cast of  Eruption to be cast as  Mass Eruption and apply  Bombardments to the target. This buff stacks up to 2, allowing you to cast both Empower spells back-to-back. In situations with two or more high-health enemies, cast your second  Eruption on a second priority target in order to have  Bombardments rolling on both targets simultaneously. Any time  Extended Battle activates, it extends the duration of all active  Bombardments, meaning that you gain twice the value by doing this, increasing your damage done and further reducing the cooldown on  Breath of Eons from  Wingleader.
 
-1 - 4 of 4
-Add your comment|Sort: newest first, oldest first, highest rated|Filter by patch: 
-11.0.5
-11.0.2
-10.1.5
-
 4
 
-	
-By Fister (4,069 – 9·14) on 2023/07/11 (Patch 10.1.5)	
-	
 I have a question regarding  Prescience use and what it actually affects. Does the ability only affect the buffed player's abilities and spells, or also their pet's abilities and spells?
 
 You mention Unholy Death Knight as a very good target for Prescience on pull due to high burst of the spec, which revolves around Army and Gargoyle, but leave out Demo Lock which has a higher burst ceiling than any class in the game do to Pit Lord and Tyrant (and all the demons summoned from Nether Portal along with the normal demons being summoned: Dreadstalkers, Grimoire Felguard, Vilefiend, Imps (from Hand of Guldan), etc.) all active at the same time.
@@ -2438,32 +1536,21 @@ Last edited by Fister on 2023/07/11 (Patch 10.1.5)
 
 5
 
-	
-
 Raliath on 2023/07/12 (Patch 10.1.5)
 
 I believe it comes down to getting value out of Breath of Eons. It lasts 10 sec and is used on pull and stores damage dealt by players with Ebon Might (which will always prio target players with Prescience). Demo does indeed have the highest burst, but it takes too long to ramp. By the time Demo is doing damage (around 15+ sec into the fight) Breath of Eons has ended, so the damage multiplier is wasted on them as they do less damage than tanks until Nether Portal ends.
 
 2
 
-	
-By Rick442 (3,098 – 7·8) on 2024/09/03 (Patch 11.0.2)	
-	
 When will the Rotation page be updated for TWW ? with molten embers you dont use firebreath at max rank etc.
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/09/03 (Patch 11.0.2)
 
 At the time of writing this comment the page is up to date with respect to the recommended Chronowarden builds. While  Molten Embers does encourage uptime on  Fire Breath, this is currently outweighed by the cast time saved from instant cast  Fire Breath. The sequence of casting  Tip the Scales into  Fire Breath into  Upheaval is set in stone for Chronowarden, and it turns out that you will generally spend most of your Essence during the Rank 3  Fire Breath’s duration regardless, so canceling the  Tip the Scales buff is not necessary at this time. If you find yourself playing Scalecommander it would be more appropriate to use  Tip the Scales with  Upheaval instead, however Scalecommander is not considered a competitive option at this time.
 
-
-
 1
-
-	
 
 Rick442 on 2024/09/04 (Patch 11.0.2)
 
@@ -2471,14 +1558,9 @@ While i understand the reasoning, i still find it odd to not try to have 100% up
 
 1
 
-	
-By Relm (5,925 – 1·8·15) on 2024/08/26 (Patch 11.0.2)	
-	
 WIth Mass eruption. wouldn't it be best to cast Fire breath, Eruption, Upheval, Eruption?
 
 1
-
-	
 
 Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
@@ -2486,32 +1568,10 @@ Jereico <Guide Author> on 2024/08/26 (Patch 11.0.2)
 
 1
 
-	
-By frozenembers (9,547 – 2·25·44) on 2024/10/23 (Patch 11.0.5)	
-	
 Why are we not also pre-casting tip the scales?
 
 1
 
-	
-
 Jereico <Guide Author> on 2024/10/23 (Patch 11.0.5)
 
 If you're playing Scalecommander, you certainly can if you like--it's off the global cooldown so it can be cast without interrupting your rotation. When playing Chronowarden it is important to cast it at the appropriate time to make best use of  Temporal Burst.
-1 - 4 of 4
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

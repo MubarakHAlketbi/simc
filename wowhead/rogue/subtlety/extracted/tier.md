@@ -1,6 +1,6 @@
 # rogue/subtlety — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/subtlety/tier-set-bonuses
-Generated: 2026-03-21 22:52
+Generated: 2026-03-23 01:25
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Subtlety Rogue Tier Set Bonuses for Midnight Season 1
 By fuu1
-Updated: 2026/03/16
+Updated: 2026/03/22
 fuu1
 Offline on Twitch
 Follow
@@ -51,14 +51,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR SUBTLETY ROGUE
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Subtlety Rogue gear page!
-
 
 Subtlety Rogue Gear Guide
 Midnight Season 1 Tier Set Bonuses for Subtlety Rogue
@@ -67,11 +63,6 @@ Motley of the Grim Jest
  Rogue Subtlety 12.0 Class Set 2pc - Finishing moves deal 1.5% more damage per combo point spent.
  Rogue Subtlety 12.0 Class Set 4pc - Shadow Blades has a 4.0 sec increased duration and causes your attacks to deal an additional 6.0% damage as Shadow.
 
-
-
-
-
-
 Best Tier Set Pieces for Subtlety Rogue
 Our tier set bonus, Motley of the Grim Jest, is comprised of the following items from Midnight Season 1:
  Masquerade of the Grim Jest (Helm from Lightblinded Vanguard - The Voidspire)
@@ -79,9 +70,6 @@ Our tier set bonus, Motley of the Grim Jest, is comprised of the following items
  Fantastic Finery of the Grim Jest (Chest from Chimaerus - The Dreamrift)
  Sleight of Hand of the Grim Jest (Gloves from Vorasius - The Voidspire)
  Blade Holsters of the Grim Jest (Legs from Vaelgor & Ezzorak - The Voidspire)
-Report Ad
-Report ad
-Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Subtlety Rogue prefer equipping tier pieces on these slots:
@@ -99,7 +87,6 @@ Tier Set Bonus Rotation Changes for Subtlety Rogue
 Neither of the tier set bonuses changes the rotation; what they do is more or less passively increase damage and widen the major cooldown spell to fit multiple instances of  Shadow Dance more comfortably. The duration of such dances can be increased from talents, which would previously have overflowed but now fit within.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Subtlety Rogue Rotation and Talent Builds Pages.
-
 
 Subtlety Rogue Rotation Guide
 Subtlety Rogue Talent Builds Guide

@@ -1,6 +1,6 @@
 # death-knight/unholy — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/unholy/tier-set-bonuses
-Generated: 2026-03-21 22:14
+Generated: 2026-03-23 01:07
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Unholy Death Knight Tier Set Bonuses for Midnight Season 1
 By Taeznak
-Updated: 2026/03/16
+Updated: 2026/03/22
 Taeznak
 Offline on Twitch
 Follow
@@ -56,18 +56,12 @@ Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each ti
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Unholy Death Knight gear page!
 
-
 Unholy Death Knight Gear Guide
 Midnight Season 1 Tier Set Bonuses for Unholy Death Knight
 The Season 1 Unholy Tier Set bonuses are pretty simple, and don't really impact talent choice with current tuning. If our Diseases, or this tier set are buffed in the future, though, there is a chance this tier set causes  San'layn to pull ahead of  Rider of the Apocalypse. But as it stands, the favor towards  San'layn isn't great enough for it to be the best hero talent.
 Relentless Rider's Lament
  Death Knight Unholy 12.0 Class Set 2pc - Dread Plague damage increased by 25%. Virulent Plague damage increased by 25%.
  Death Knight Unholy 12.0 Class Set 4pc - Putrefy deals 20% increased damage and causes your next Scourge Strike to cost no Rune.
-
-
-
-
-
 
 Best Tier Set Pieces for Unholy Death Knight
 Our tier set bonus, Relentless Rider's Lament, is comprised of the following items from Midnight Season 1:
@@ -89,7 +83,6 @@ Tier Set Bonus Rotation Changes for Unholy Death Knight
 Unholy Death Knight's Season 1 Tier set in Midnight has no rotational impact.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Unholy Death Knight Rotation and Talent Builds Pages.
-
 
 Unholy Death Knight Rotation Guide
 Unholy Death Knight Talent Builds Guide

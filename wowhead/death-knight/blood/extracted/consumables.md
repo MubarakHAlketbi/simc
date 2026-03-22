@@ -1,6 +1,6 @@
 # death-knight/blood — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/enchants-gems-pve-tank
-Generated: 2026-03-21 22:11
+Generated: 2026-03-23 01:05
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -54,9 +54,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST BLOOD DEATH KNIGHT GEMS AND ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended gems and enchants to use on your gear during Midnight Season 1.
 Slot	Best
@@ -84,7 +81,6 @@ There is a small difference in stat priority for San'layn specifically: Whenever
 
 To be sure of this, you should ideally be simming your character using raidbots to determine the best configuration for you.
 
-
 Type	Best
 Flask	 Flask of the Blood Knights / Flask of the Shattered Sun 
 Combat Potion	 Potion of Recklessness / Light's Potential 
@@ -93,10 +89,6 @@ Weapon Buff	 Thalassian Phoenix Oil
 Augment Rune	 Void-Touched Augment Rune
 Food	 Blooming Feast
 Tea	 Sanguithorn Tea
-Report Ad
-Report ad
-Remove All Ads
-
 
 Also note that consumables are being actively hotfixed, particularly combat potions.  Potion of Recklessness  is currently far ahead, but this may not stay true for long.
  Blood Death Knight Flask
@@ -125,12 +117,8 @@ Secondary stats:  Blooming Feast
 We strongly recommend simming these choices.
 Our Blood Death Knight guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Blood Death Knight guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Mandl
 World of Warcraft Death Knight Class Expert

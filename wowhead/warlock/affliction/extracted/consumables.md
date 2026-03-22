@@ -1,6 +1,6 @@
 # warlock/affliction — Consumables (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/affliction/enchants-gems-pve-dps
-Generated: 2026-03-21 22:57
+Generated: 2026-03-23 01:28
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -57,9 +57,6 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  BEST AFFLICTION WARLOCK ENCHANTS IN MIDNIGHT SEASON 1
 Below is a list of the recommended enchants to use on your Affliction Warlock gear during The War Within.
 Slot	Best Enchant
@@ -89,9 +86,6 @@ Health Potion	 Silvermoon Health Potion
 Weapon Buff	 Thalassian Phoenix Oil 
 Augment Rune	 Void-Touched Augment Rune
 Food	 Harandar Celebration and  Royal Roast
-Report Ad
-Report ad
-Remove All Ads
 Affliction Warlock Flask
 The best Flask for Affliction Warlocks is  Flask of the Magisters , though other stat flasks can still be used depending on your overall stat weighting.
 Affliction Warlock Combat Potions in Midnight Season 1
@@ -110,12 +104,8 @@ Feast:  Harandar Celebration
 Personal Food:  Royal Roast
 Our Affliction Warlock guides are always updated with the latest information from in-game experience, simulations, and logs. Make sure to check our changelog for this page by clicking on View Changelog in the Quick Facts column or on the book icon at the top of the page. If you are interested in more in-depth Affliction Warlock guides for Midnight Season 1, make sure to browse the Navigation Bar at the top of the page.
 
-
-
-
 Feedback
 Thanks for reading our class guides! If you have any feedback, feel free to leave a comment in the section below, and we will reply as quickly as possible. If you'd like to talk with any of our writers directly, you can do so by joining our Discord server and finding them there!
-
 
 Kalamazi
 World of Warcraft Warlock Content Creator

@@ -1,6 +1,6 @@
 # druid/feral — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/feral/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:23
+Generated: 2026-03-23 00:01
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw', 'Wildstalker']
@@ -52,36 +52,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FERAL DRUID AOE ROTATION
@@ -114,36 +91,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FERAL DRUID OPENER
@@ -178,36 +132,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -235,36 +166,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Berserk', 'Convoke the Spirits']
 
@@ -294,36 +202,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Convoke the Spirits
 PRE-COMBAT CHECK
@@ -362,36 +247,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Pandemic and Snapshotting', 'Ferocious Bite', 'Chomp']
 
@@ -432,36 +294,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ferocious Bite
 PRE-COMBAT CHECK
@@ -495,36 +334,13 @@ Usage of  Convoke the Spirits is fairly straightforward when you break it down. 
 FEROCIOUS BITE
  Ferocious Bite has a mechanic whereby it will deal bonus damage based on extra energy spent. By default  Ferocious Bite will spend 25 energy with up to 100% extra damage at 25 additional energy spent for a total of 50 energy spent. Currently this isn't a relevant mechanic for gameplay because you'll cast  Ferocious Bite whenever you hit 4 or more combo points and 25 or more energy. No pooling for  Ferocious Bite here.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Chomp
 PRE-COMBAT CHECK
@@ -558,36 +374,13 @@ Usage of  Convoke the Spirits is fairly straightforward when you break it down. 
 CHOMP
  Chomp is a unique spell that might take some getting accustomed too. Experienced Ferals will be familiar with Pooling, ensuring you have enough energy for CDs or to generate after a finisher.  Chomp requires you to think similarly but in reverse. You'll need to ensure that, as  Chomp comes off cooldown, you're low enough energy to cast it on cooldown.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Wildstalker
 
@@ -633,36 +426,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST FERAL DRUID AOE ROTATION
@@ -694,36 +464,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST FERAL DRUID OPENER
@@ -758,36 +505,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -815,36 +539,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Berserk', 'Convoke the Spirits']
 
@@ -874,36 +575,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Convoke the Spirits
 PRE-COMBAT CHECK
@@ -942,36 +620,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Pandemic and Snapshotting', 'Ferocious Bite', 'Chomp']
 
@@ -1012,36 +667,13 @@ So if you take  Rake which has a base duration of 15 seconds, if you refresh  Ra
 Snapshotting
 What is snapshotting, snapshotting is for most classes historical. Feral however still has a few interactions.  Tiger's Fury and  Pouncing Strikes, when a dot is applied during these effects the effect is applied to the full duration of the spell. If you cast a  Rake, or  Rip during  Tiger's Fury then the entire duration of the dot will be affected by the buff, even when you no longer have the buff active.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Ferocious Bite
 PRE-COMBAT CHECK
@@ -1075,36 +707,13 @@ Usage of  Convoke the Spirits is fairly straightforward when you break it down. 
 FEROCIOUS BITE
  Ferocious Bite has a mechanic whereby it will deal bonus damage based on extra energy spent. By default  Ferocious Bite will spend 25 energy with up to 100% extra damage at 25 additional energy spent for a total of 50 energy spent. Currently this isn't a relevant mechanic for gameplay because you'll cast  Ferocious Bite whenever you hit 4 or more combo points and 25 or more energy. No pooling for  Ferocious Bite here.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Chomp
 PRE-COMBAT CHECK
@@ -1138,33 +747,10 @@ Usage of  Convoke the Spirits is fairly straightforward when you break it down. 
 CHOMP
  Chomp is a unique spell that might take some getting accustomed too. Experienced Ferals will be familiar with Pooling, ensuring you have enough energy for CDs or to generate after a finisher.  Chomp requires you to think similarly but in reverse. You'll need to ensure that, as  Chomp comes off cooldown, you're low enough energy to cast it on cooldown.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

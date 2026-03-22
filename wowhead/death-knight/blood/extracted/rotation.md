@@ -1,6 +1,6 @@
 # death-knight/blood — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/rotation-cooldowns-pve-tank
-Generated: 2026-03-21 23:19
+Generated: 2026-03-22 23:57
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', "San'layn"]
@@ -41,36 +41,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEATH KNIGHT BLOOD AOE ROTATION
@@ -100,36 +77,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEATH KNIGHT BLOOD OPENER
@@ -167,36 +121,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -220,36 +151,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Dancing Rune Weapon']
 
@@ -275,36 +183,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Bone Shield management']
 
@@ -330,36 +215,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: San'layn
 
@@ -400,36 +262,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DEATH KNIGHT BLOOD AOE ROTATION
@@ -465,36 +304,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DEATH KNIGHT BLOOD OPENER
@@ -532,36 +348,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -585,36 +378,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Dancing Rune Weapon']
 
@@ -640,36 +410,13 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_2 — Tabs: ['Bone Shield management']
 
@@ -695,33 +442,10 @@ As  Deathbringer, when playing  Reaper's Onslaught, this is effectively dealt w
 
  Bone Shield management is significantly harder as  San'layn, due to the hero talent not having any passive generation tools. You are left to your own devices - and to make things even worse, Apex talents have effectively randomized how many  Bone Shield charges a single  Marrowrend provides, since each Apex  Dancing Rune Weapon provides its own bonus three stacks. Proper UI tracking goes a long way towards solving this, but there is still an element of skill involved.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

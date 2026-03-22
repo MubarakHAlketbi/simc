@@ -1,0 +1,5 @@
+Spec: mage/arcane
+Page: rotation
+URL: https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps
+Warnings (1):
+  - MISSING HERO TALENTS: found 1 (['Sunfury']), expected 2 (['spellslinger', 'sunfury'])

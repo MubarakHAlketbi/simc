@@ -1,6 +1,6 @@
 # mage/frost — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/frost/tier-set-bonuses
-Generated: 2026-03-21 22:38
+Generated: 2026-03-23 01:18
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Frost Mage Tier Set Bonuses for Midnight Season 1
 By Dorovon
-Updated: 2026/03/16
+Updated: 2026/03/22
 Dorovon
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR FROST MAGE
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Frost Mage gear page!
-
 
 Frost Mage Gear Guide
 Midnight Season 1 Tier Set Bonuses for Frost Mage
@@ -64,11 +66,6 @@ Voidbreaker's Accordance
  Mage Frost 12.0 Class Set 2pc - Flurry damage increased by 10% and Flurry has a 10% chance to grant Fingers of Frost.
  Mage Frost 12.0 Class Set 4pc - Fingers of Frost increases Shatter's damage by 15%.
 
-
-
-
-
-
 Best Tier Set Pieces for Frost Mage
 Our tier set bonus, Voidbreaker's Accordance, is comprised of the following items from Midnight Season 1:
  Voidbreaker's Veil (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,6 +73,9 @@ Our tier set bonus, Voidbreaker's Accordance, is comprised of the following item
  Voidbreaker's Robe (Chest from Chimaerus - The Dreamrift)
  Voidbreaker's Gloves (Gloves from Vorasius - The Voidspire)
  Voidbreaker's Britches (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Frost Mage prefer equipping tier pieces on these slots:
@@ -89,7 +89,6 @@ Tier Set Bonus Rotation Changes for Frost Mage
 The Voidbreaker's Accordance set does not have any significant impact on a Frost Mage's rotation. It simply puts more emphasis on  Flurry and  Fingers of Frost, which the rotation is already based heavily around.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Frost Mage Rotation and Talent Builds Pages.
-
 
 Frost Mage Rotation Guide
 Frost Mage Talent Builds Guide

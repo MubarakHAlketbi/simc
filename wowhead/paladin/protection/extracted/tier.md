@@ -1,6 +1,6 @@
 # paladin/protection — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/tier-set-bonuses
-Generated: 2026-03-21 22:43
+Generated: 2026-03-23 01:21
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Protection Paladin Tier Set Bonuses for Midnight Season 1
 By Pumps
-Updated: 2026/03/16
+Updated: 2026/03/22
 Pumps
 Offline on Twitch
 Follow
@@ -51,14 +51,10 @@ Talent Builds
 Consumables
 Stats
 Basics
-Report Ad
-Report ad
-Remove All Ads
  TIER SET BONUSES FOR PROTECTION PALADIN
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Protection Paladin gear page!
-
 
 Protection Paladin Gear Guide
 Midnight Season 1 Tier Set Bonuses for Protection Paladin
@@ -69,11 +65,6 @@ Luminant Verdicts Vestments
  Paladin Protection 12.0 Class Set 2pc - Shield of the Righteous deals 20% increased damage.
  Paladin Protection 12.0 Class Set 4pc - After casting Shield of the Righteous, your next Avengers Shield deals 5% increased damage. Stacks up to 5.
 
-
-
-
-
-
 Best Tier Set Pieces for Protection Paladin
 Our tier set bonus, Luminant Verdicts Vestments, is comprised of the following items from Midnight Season 1:
  Luminant Verdict's Unwavering Gaze (Helm from Lightblinded Vanguard - The Voidspire)
@@ -81,9 +72,6 @@ Our tier set bonus, Luminant Verdicts Vestments, is comprised of the following i
  Luminant Verdict's Divine Warplate (Chest from Chimaerus - The Dreamrift)
  Luminant Verdict's Gauntlets (Gloves from Vorasius - The Voidspire)
  Luminant Verdict's Greaves (Legs from Vaelgor & Ezzorak - The Voidspire)
-Report Ad
-Report ad
-Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Protection Paladin prefer equipping tier pieces on these slots:
@@ -96,7 +84,6 @@ Tier Set Bonus Rotation Changes for Protection Paladin
 Tier set for Protection Paladin is completely passive and has no impact on our rotation currently.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Protection Paladin Rotation and Talent Builds Pages.
-
 
 Protection Paladin Rotation Guide
 Protection Paladin Talent Builds Guide

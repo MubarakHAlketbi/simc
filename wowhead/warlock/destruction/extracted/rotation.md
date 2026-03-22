@@ -1,6 +1,6 @@
 # warlock/destruction — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/destruction/rotation-cooldowns-pve-dps
-Generated: 2026-03-21 23:36
+Generated: 2026-03-23 00:14
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Hellcaller', 'Diabolist']
@@ -29,36 +29,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DESTRUCTION WARLOCK AOE ROTATION
@@ -82,36 +59,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DESTRUCTION WARLOCK OPENER
@@ -134,36 +88,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -179,36 +110,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Summon Infernal', 'Havoc', 'Diabolist Demons', 'Malevolence']
 
@@ -226,36 +134,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Havoc
 PRE-COMBAT CHECK
@@ -272,36 +157,13 @@ Keep in mind you can generate 2x Soul Shards with  Havoc while your spenders don
  Havoc only replicates 60% of the damage of your single-target abilities, meaning you should apply this to the less important target.
 Make sure your target is going to live for the full  Havoc duration if possible.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Diabolist Demons
 PRE-COMBAT CHECK
@@ -325,36 +187,13 @@ Mother of Chaos
 Pit Lord
 This resets on boss combat in raids, but not in dungeons. This means, you can play slower or faster from time to time, depending on what demon you want to summon. As an example, if you're in a dungeon and you're about to finish off a pack, just killing off the last few mobs, and you're about to gain  Demonic Art: Pit Lord, do not trigger this on that pack. Instead, be a little patient and deal big damage on the next pack. Do not postpone this, because when playing, you do cycle through the rotation of demons fairly quickly. However, it adds a layer of complexity and depth to the playstyle and might ultimately make your damage output significantly higher.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Malevolence
 PRE-COMBAT CHECK
@@ -370,36 +209,13 @@ Before pressing  Malevolence, always have all of your  Wither applied. This can 
 
 During  Malevolence, all of the  Soul Shards you cast grants double stacks of  Wither to your targets, so try your very best to have some shards ready before, and make sure you dump as much as you can before  Malevolence runs out. And be careful not to let your  Wither drop on high stacks.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ## Hero Talent: Diabolist
 
@@ -424,36 +240,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### AoE Priority
 BEST DESTRUCTION WARLOCK AOE ROTATION
@@ -477,36 +270,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Opener
 BEST DESTRUCTION WARLOCK OPENER
@@ -527,36 +297,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Pre-Combat Checks
 PRE-COMBAT CHECK
@@ -572,36 +319,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 ### tab_group_1 — Tabs: ['Summon Infernal', 'Havoc', 'Diabolist Demons', 'Malevolence']
 
@@ -619,36 +343,13 @@ Summon Infernal is our 2-minute cooldown that helps us generate more Soul Shards
 If you're playing  Crashing Chaos, your Infernal cast also makes your damage more important. It's not only a point and click cooldown that does damage on its own; make sure you pair this up with any racial ability and trinkets if you can.
 Keep in mind you can delay this cooldown as long as you don't miss out on uses. During a Mythic+ dungeon you will likely want to pop this as often as possible because you will lose out on uses otherwise, but popping it at the correct time is important.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Havoc
 PRE-COMBAT CHECK
@@ -665,36 +366,13 @@ Keep in mind you can generate 2x Soul Shards with  Havoc while your spenders don
  Havoc only replicates 60% of the damage of your single-target abilities, meaning you should apply this to the less important target.
 Make sure your target is going to live for the full  Havoc duration if possible.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Diabolist Demons
 PRE-COMBAT CHECK
@@ -718,36 +396,13 @@ Mother of Chaos
 Pit Lord
 This resets on boss combat in raids, but not in dungeons. This means, you can play slower or faster from time to time, depending on what demon you want to summon. As an example, if you're in a dungeon and you're about to finish off a pack, just killing off the last few mobs, and you're about to gain  Demonic Art: Pit Lord, do not trigger this on that pack. Instead, be a little patient and deal big damage on the next pack. Do not postpone this, because when playing, you do cycle through the rotation of demons fairly quickly. However, it adds a layer of complexity and depth to the playstyle and might ultimately make your damage output significantly higher.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
 
 #### Malevolence
 PRE-COMBAT CHECK
@@ -763,33 +418,10 @@ Before pressing  Malevolence, always have all of your  Wither applied. This can 
 
 During  Malevolence, all of the  Soul Shards you cast grants double stacks of  Wither to your targets, so try your very best to have some shards ready before, and make sure you dump as much as you can before  Malevolence runs out. And be careful not to let your  Wither drop on high stacks.
 
-1 - 1 of 1
- 
 Subject
-	
+
 Posted
-	
+
 Author
-	
+
 Replies
-
-
-How to Play Your Class in the Battle for Azeroth 8.0 Pre-Patch - Class Guides for All Specializations
-	On 2018/07/21	Anshlun	75
-1 - 1 of 1
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.
-
-Please keep the following in mind when posting a comment:
-Your comment must be in English or it will be removed.
-Unsure how to post? Check out our handy guide!
-You might want to proof-read your comments before posting them.
-Please post questions on our forums for quicker reply.
-Post a Comment
-You are not logged in. Please log in or register an account to add your comment.

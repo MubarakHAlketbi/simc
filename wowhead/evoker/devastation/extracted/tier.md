@@ -1,6 +1,6 @@
 # evoker/devastation — Tier (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/devastation/tier-set-bonuses
-Generated: 2026-03-21 22:27
+Generated: 2026-03-23 01:12
 
 ## Discovered Page Structure
 Hero Talent Switches: None found
@@ -37,7 +37,7 @@ Guide Info
 Changelog
 Devastation Evoker Tier Set Bonuses for Midnight Season 1
 By Preheat
-Updated: 2026/03/16
+Updated: 2026/03/22
 Preheat
 Offline on Twitch
 Follow
@@ -51,11 +51,13 @@ Talent Builds
 Consumables
 Stats
 Basics
+Report Ad
+Report ad
+Remove All Ads
  TIER SET BONUSES FOR DEVASTATION EVOKER
 Tier set bonuses are usually standardized to a 2-set and 4-set bonus for each tier set, meaning that one bonus is activated when two pieces of the armor set are worn, while another is activated once four pieces are worn.
 
 For more information on Midnight Season 1 gear and tier set bonuses, check out the Devastation Evoker gear page!
-
 
 Devastation Evoker Gear Guide
 Midnight Season 1 Tier Set Bonuses for Devastation Evoker
@@ -64,11 +66,6 @@ Livery of the Black Talon
  Evoker Devastation 12.0 Class Set 2pc - Azure Sweep damage increased by 50% and its damage against your primary target is increased by an additional 100%.
  Evoker Devastation 12.0 Class Set 4pc - Eternity Surge grants 1 additional charge of Azure Sweep. Casting Azure Sweep reduces the cooldown of Eternity Surge by 2 sec.
 
-
-
-
-
-
 Best Tier Set Pieces for Devastation Evoker
 Our tier set bonus, Livery of the Black Talon, is comprised of the following items from Midnight Season 1:
  Hornhelm of the Black Talon (Helm from Lightblinded Vanguard - The Voidspire)
@@ -76,6 +73,9 @@ Our tier set bonus, Livery of the Black Talon, is comprised of the following ite
  Frenzyward of the Black Talon (Chest from Chimaerus - The Dreamrift)
  Enforcer's Grips of the Black Talon (Gloves from Vorasius - The Voidspire)
  Greaves of the Black Talon (Legs from Vaelgor & Ezzorak - The Voidspire)
+Report Ad
+Report ad
+Remove All Ads
 Additional item slots will be available for transmog from the Great Vault or once the Catalyst crafting system becomes available, but those don't contribute to the tier set bonus.
 
 To unlock the tier set bonus, you'll need to equip 4 pieces of the tier set. Due to their itemization, Devastation Evoker prefer equipping tier pieces on these slots:
@@ -90,7 +90,6 @@ Tier Set Bonus Rotation Changes for Devastation Evoker
 Once you have the 4-set, you will want to prioritize  Azure Sweep in your rotation. This means you will Azure Sweep after your Empowered spells as long as you are not capped on  Essence Burst. This change is not worthwhile in AoE, so play normally above 3 targets. The  Event Horizon talent also gains value, and will perform best in most scenarios with your set.
 
 For more information on how tier set bonuses will impact our gameplay, check out the Devastation Evoker Rotation and Talent Builds Pages.
-
 
 Devastation Evoker Rotation Guide
 Devastation Evoker Talent Builds Guide
