@@ -1605,7 +1605,7 @@ public:
     player_talent_t earth_elemental;
     player_talent_t wind_shear;
     player_talent_t spirit_wolf; // TODO: NYU
-    player_talent_t thunderous_paws; // TODO: NYI
+    player_talent_t thunderous_paws; // NYI — movement utility (Ghost Wolf removes snares, +25% speed 3s); no DPS impact
     player_talent_t frost_shock;
     // Row 3
     player_talent_t earth_shield;
@@ -1620,25 +1620,25 @@ public:
     player_talent_t spiritual_awakening;
     // Row 6
     player_talent_t totemic_surge;
-    player_talent_t winds_of_alakir; // TODO: NYI
+    player_talent_t winds_of_alakir; // NYI — movement utility; no DPS impact
     // Row 7
     player_talent_t healing_stream_totem;
     player_talent_t improved_lightning_bolt;
     player_talent_t spirit_walk;
-    player_talent_t gust_of_wind; // TODO: NYI
+    player_talent_t gust_of_wind; // NYI — movement utility (lunge forward); no DPS impact
     player_talent_t enhanced_imbues;
     // Row 8
     player_talent_t natures_swiftness;
     player_talent_t thunderstorm;
     player_talent_t totemic_focus; // TODO: NYI
-    player_talent_t surging_shields; // TODO: NYI
+    player_talent_t surging_shields; // Implemented: Lightning Shield +100% dmg, +4 Maelstrom/trigger (Ele); see lightning_shield_t
     // Row 9
     player_talent_t lightning_lasso;
     player_talent_t thundershock;
     player_talent_t totemic_recall;
     // Row 10
     player_talent_t ancestral_guidance;
-    player_talent_t creation_core; // TODO: NYI
+    player_talent_t creation_core; // NYI — utility (Totemic Recall +1 totem); no DPS impact
     player_talent_t call_of_the_elements;
     player_talent_t instinctive_imbuements;
     // Midnight class tree additions (2026-03-16)

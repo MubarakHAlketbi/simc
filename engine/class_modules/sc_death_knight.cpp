@@ -1387,7 +1387,7 @@ public:
     {
       player_talent_t riders_champion;
       player_talent_t on_a_paler_horse;  // NYI
-      player_talent_t death_charge;      // NYI
+      player_talent_t death_charge;      // NYI — movement utility (breaks snares, +100% speed 10s); no DPS impact
       player_talent_t mograines_might;
       player_talent_t horsemens_aid;             // NOTE: not in info_base.md talent table (minor utility node)
       player_talent_t pact_of_the_apocalypse;  // NOTE: not in info_base.md talent table (utility — NYI, low DPS impact)
@@ -1430,7 +1430,7 @@ public:
     struct
     {
       player_talent_t vampiric_strike;
-      player_talent_t newly_turned;    // NYI
+      player_talent_t newly_turned;    // NYI — res utility (Raise Ally at full HP + 20% absorb shield); no DPS impact
       player_talent_t vampiric_speed;  // NYI
       player_talent_t bloodsoaked_ground;
       player_talent_t desecrate;

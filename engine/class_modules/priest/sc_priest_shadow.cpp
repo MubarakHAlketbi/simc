@@ -48,6 +48,13 @@ struct mind_flay_base_t : public priest_spell_t
       m *= 1 + priest().talents.shadow.insidious_ire->effectN( 1 ).percent();
     }
 
+    // Surge of Insanity: +15% Mind Flay / Mind Flay: Insanity periodic damage
+    // Source: https://www.wowhead.com/spell=391399 (2026-03-22)
+    if ( priest().talents.shadow.surge_of_insanity.enabled() )
+    {
+      m *= 1.0 + priest().talents.shadow.surge_of_insanity->effectN( 1 ).percent();
+    }
+
     return m;
   }
 
@@ -930,6 +937,13 @@ struct shadow_word_madness_t final : public priest_spell_t
     if ( !casted && triggered_by_maddening_tentacles )
     {
       m *= priest().talents.shadow.maddening_tentacles->effectN( 1 ).percent();
+    }
+
+    // Tormenting Whispers: +15% Shadow Word: Madness damage (direct + periodic)
+    // Source: https://www.wowhead.com/spell=1250492 (2026-03-22)
+    if ( priest().talents.shadow.tormenting_whispers.enabled() )
+    {
+      m *= 1.0 + priest().talents.shadow.tormenting_whispers->effectN( 1 ).percent();
     }
 
     return m;
@@ -2042,9 +2056,9 @@ void priest_t::init_spells_shadow()
   talents.shadow.shadowy_apparition   = find_spell( 148859 );
   talents.shadow.shadowy_apparitions  = ST( "Shadowy Apparitions" );
   // Row 4
-  talents.shadow.tormenting_whispers = ST( "Tormenting Whispers" );  // NYI
+  talents.shadow.tormenting_whispers = ST( "Tormenting Whispers" );  // Implemented: +15% SW:Madness dmg via composite_persistent_multiplier
   talents.shadow.descending_darkness = ST( "Descending Darkness" );
-  talents.shadow.surge_of_insanity   = ST( "Surge of Insanity" );  // NYI
+  talents.shadow.surge_of_insanity   = ST( "Surge of Insanity" );  // Implemented: +15% Mind Flay/MF:Insanity dmg via mind_flay_base_t composite_ta_multiplier
   // Row 5
   talents.shadow.shadowy_insight     = ST( "Shadowy Insight" );
   talents.shadow.voidtouched         = ST( "Voidtouched" );
@@ -2097,7 +2111,8 @@ void priest_t::init_spells_shadow()
   talents.shadow.idol_of_nzoth          = ST( "Idol of N'Zoth" );
   talents.shadow.idol_of_yoggsaron      = ST( "Idol of Yogg-Saron" );
   talents.shadow.idol_of_cthun          = ST( "Idol of C'Thun" );
-  // TODO: implement — "Death" (ID 1240364) new Midnight Shadow talent; missing from code entirely
+  // NOTE: "Death's Torment" (ID 1240364) is registered as talents.shadow.deaths_torment above (Row 9) and
+  //       fully implemented in shadow_word_death_t::impact() — chains 2 extra hits at 15% effectiveness.
   // Apex
   // Apex -- Void Apparitions (Midnight 4-rank talent)
   // Pattern: _1=Rank1 (base effect), _2=Rank2+3 (same ID, value scales), _3=Rank4 (capstone)
