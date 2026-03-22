@@ -10729,7 +10729,10 @@ struct glacial_advance_t final : public death_knight_spell_t
       p()->buffs.icy_onslaught->trigger();
     }
 
-    // 12.0 TODO drive the delay from likely misc values
+    // Frostbane delayed execute: 100ms is a best-guess approximation.
+    // Blizzard hotfixed a "Frostbane casts fail at high Haste" bug (2025-09-24), suggesting the
+    // true server-side delay may be ~200ms (one server tick). Ideally derived from spell misc data.
+    // Low DPS impact; revisit if haste-scaling issues appear.
     make_event<delayed_execute_event_t>( *sim, p(), damage_action, execute_state->target, 100_ms );
 
     if ( p()->buffs.pillar_of_frost->up() && p()->talent.frost.obliteration.ok() )
@@ -11694,7 +11697,9 @@ struct putrefy_aoe_t final : public death_knight_spell_t
         dk_td->dot.virulent_plague->adjust_duration( blightburst_dur );
       }
 
-      // TODO: Does the ST hit apply these too?
+      // Blightburst ST hit + Rune of the Apocalypse: whether the single-target explosion
+      // triggers RoA debuffs is unconfirmed from public sources. Current implementation
+      // applies RoA to be consistent with the AoE path. Revisit if in-game testing differs.
       p()->trigger_rune_of_the_apocalypse( s->target );
     }
   }

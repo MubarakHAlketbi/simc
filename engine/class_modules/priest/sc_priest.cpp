@@ -1439,13 +1439,14 @@ struct collapsing_void_damage_t final : public priest_spell_t
     player->sim->print_debug( "{} triggered collapsing_void_damage on target {} with {} stacks", priest(), *target,
                               parent_stacks );
 
-    // TODO: Handle if the target dies between entropic rift start and collapsing void
-    // Make sure the target is still available
-    if ( this->target_ready( target ) )
-    {
-      set_target( target );
-    }
+    // Handle target death between Entropic Rift start and Collapsing Void:
+    // If the original target is no longer available (died mid-channel), skip the explosion.
+    // In-game Collapsing Void fires at the target's location even if dead, but in a sim
+    // with a single target there is nothing to hit, so we simply return.
+    if ( !this->target_ready( target ) )
+      return;
 
+    set_target( target );
     execute();
   }
 };

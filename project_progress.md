@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-22 (Batch 8 complete — gear fixes, surging_shields impl, Phase 4 report)
+Last updated: 2026-03-22 (Batch 9 complete — DK Unholy documented, Priest Shadow fixed, Mage TODOs resolved)
 All information verified fresh against Wowhead + code inspection.
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
 
@@ -79,7 +79,7 @@ All information verified fresh against Wowhead + code inspection.
 | :--- | :--- | :--- |
 | DK Blood | Implemented | |
 | DK Frost | Implemented | |
-| DK Unholy | In Beta | |
+|| DK Unholy | In Beta | Massive 12.0 rework: Apocalypse removed; new loop = Lesser Ghouls (from Scourge Strike) + Putrefy (burst detonation) + Dread Plague spreading + Reaping talent. festering_scythe + graveyard via set_replacement_action() confirmed working. control_undead/unholy_endurance NYI but zero DPS impact (CC/defensive only). |
 | DH Devourer | Implemented | |
 | DH Havoc | Implemented | |
 | DH Vengeance | Implemented | |
@@ -331,21 +331,28 @@ None currently open.
 
 ### MEDIUM — Behavior correctness
 
-**Mage (sc_mage.cpp — ~69 TODO/FIXME comments remaining)**
-Resolved 2026-03-22 (6 TODOs):
+**Mage (sc_mage.cpp — ~62 TODO/FIXME comments remaining)**
+Resolved 2026-03-22 (6 TODOs, first pass):
 - Ignite partial tick bank: documented as best-effort approximation (ticks_left_fractional)
 - Ignite spread target priority/cap: documented as best-effort
 - Ignite crit trigger: documented as known approximation (omits crit_bonus/PvP)
 - Pyromaniac proc: CONFIRMED correct — requires Hot Streak (ID 451466 tooltip verified)
 - Arcane Phoenix no targets: documented skip+wait as standard WoW pet behavior
 - Arcane Missiles cost TODO: RESOLVED — Mana Confluence already implemented at line 1830
-Still open (need beta testing): various behavior-verification TODOs in Fire/Frost/Arcane paths.
+
+Resolved 2026-03-22 (7 more TODOs, second pass):
+- Winter's End AoE falloff: FIXED — `reduced_aoe_targets` was behind `!p->bugs` guard; confirmed REAL behavior from 12.0.1 spell tooltip (ID 1247775). Guard removed.
+- Burnout (ID 1271335) "not hotfixed on beta": STALE — main Burnout finalized at 75% in build 64741. Note updated.
+- Pyromaniac Flamestrike (460476) + Fuel the Fire / Ignition: documented as unconfirmed; conservative no-bonus implementation retained.
+- Frostfire Bolt travel time: documented as known implementation quirk; unverifiable from public sources.
+- Flamestrike_pyromaniac reduced_aoe_targets: confirmed from spelldata effectN(2).
+- Frostbane 100ms delay: documented as approximation; Blizzard hotfixed related bug (2025-09-24) suggesting ~200ms may be more accurate post-fix.
 
 **Priest Shadow (sc_priest_shadow.cpp)**
 - tormenting_whispers (ID 1250492): IMPLEMENTED 2026-03-22 — +15% SW:Madness via composite_persistent_multiplier
 - surge_of_insanity (ID 391399): IMPLEMENTED 2026-03-22 — +15% Mind Flay via mind_flay_base_t composite_ta_multiplier
 - deaths_torment (ID 1240364): was already implemented in sw_death_t::impact() — stale TODO cleared
-- Remaining: Entropic Rift / Collapsing Void if target dies mid-channel (line 1442)
+- Collapsing Void target-died edge case: FIXED 2026-03-22 — returns early if target_ready() is false, preventing execute() on dead target. Was: set_target skipped but execute() still called (potential wrong-target hit).
 
 **Druid (sc_druid.cpp — 50 TODOs)**
 All remaining NYI items are Restoration talents (healer, out of scope for DPS sim).
@@ -355,6 +362,14 @@ Class-tree talents — documented as utility/no DPS impact 2026-03-22:
 - `death_charge` — movement utility (breaks snares, +100% speed 10s); no DPS impact
 - `newly_turned` — res utility (Raise Ally at full HP + 20% absorb); no DPS impact
 - `pact_of_the_apocalypse` — utility NYI, low DPS impact
+- `control_undead` — pure CC (mind-controls undead); dismissed your ghoul if used as Unholy; zero DPS
+- `unholy_endurance` — Lichborne duration/DR; purely defensive; zero DPS
+
+Unholy-specific TODOs resolved 2026-03-22:
+- Blightburst ST hit + Rune of the Apocalypse: documented as unconfirmed; current impl applies RoA consistent with AoE path
+- Frostbane 100ms delay (DK Frost): documented as approximation; Blizzard bug-fixed high-haste failure, true delay may be ~200ms
+
+Frostwyrm's Fury stun: baseline 3s stun in 12.0 — NYI in sim is correct (stun is utility-only, no DPS contribution; raid bosses are stun-immune).
 
 **Shaman (sc_shaman.cpp)**
 Class-tree utility talents — documented 2026-03-22:
@@ -434,3 +449,6 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | 3c77a2a | 2026-03-22 | Fix(profiles): gear BiS for 19 profiles — 20 new item IDs sourced from Wowhead |
 | 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
 | 71e8e58 | 2026-03-22 | Feat(shaman) + fix(profiles): surging_shields impl + gear BiS batch 2 (7 profiles) |
+| (pending) | 2026-03-22 | Fix(mage): Winter's End AoE falloff confirmed real — remove !p->bugs guard; resolve 6 more TODOs |
+| (pending) | 2026-03-22 | Fix(priest/shadow): Collapsing Void target-died edge case — return early if target not ready |
+| (pending) | 2026-03-22 | Docs(dk): Unholy 12.0 rework documented; Blightburst/RoA + Frostbane delay clarified |

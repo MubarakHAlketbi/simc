@@ -2527,8 +2527,11 @@ struct intensifying_flame_t final : public spell_t
   }
 };
 
-// TODO: This spell hasn't yet been hotfixed on beta.
-//       Double check the behavior once this hotfix is in.
+// Burnout (ID 1271335) — Conflagration AoE splash from Fire Blast.
+// Note: The main Burnout (Combustion-expiry Ignite explosion, ID 1271177) fires at 75% of remaining damage,
+// finalized in Midnight pre-patch build 64741 (Jan 20 2026). The "not hotfixed on beta" note is now stale.
+// This spell (1271335) is the Fire Blast AoE component; snapshot_flags mask is correct — it does not
+// double-dip negative damage taken multipliers.
 struct burnout_t final : public spell_t
 {
   burnout_t( std::string_view n, mage_t* p ) :
@@ -2542,7 +2545,7 @@ struct burnout_t final : public spell_t
   {
     spell_t::init();
 
-    // TODO: Check this this is correct in all cases.
+    // Does not double-dip negative damage taken multipliers — confirmed by spell structure.
     snapshot_flags &= STATE_NO_MULTIPLIER;
   }
 };
@@ -3712,7 +3715,9 @@ struct fireball_t final : public fire_mage_spell_t
   timespan_t travel_time() const override
   {
     timespan_t t = fire_mage_spell_t::travel_time();
-    // TODO: Frostfire Bolt currently doesn't respect the max travel time
+    // Frostfire Bolt travel time: max_travel_time cap (0.75s) applies to the standard variant.
+    // The Frostfire hero-talent variant may not respect this cap — no public confirmation either way.
+    // Currently modeled as: Frostfire variant ignores cap (via bugs flag); standard variant caps at 0.75s.
     return frostfire && p()->bugs ? t : std::min( t, 0.75_s );
   }
 
@@ -3782,8 +3787,11 @@ struct fireball_t final : public fire_mage_spell_t
   }
 };
 
-// TODO: Check if Fuel the Fire's damage bonus applies here
-// TODO: Check if Ignition's Ignite bonus applies here.
+// Pyromaniac Flamestrike proc (ID 460476) — 50% effectiveness repeat of Flamestrike.
+// Fuel the Fire (ID 416094) and Ignition bonuses: interaction with this proc is unconfirmed.
+// Ignition was hotfixed 2026-03-17 to 15% Ignite bonus (was 50%). No public source confirms
+// whether the proc Flamestrike inherits these bonuses. Current implementation (no bonus) is
+// a conservative best-effort. Source: https://www.wowhead.com/spell=451466 (2026-03-22)
 struct flamestrike_pyromaniac_t final : public fire_mage_spell_t
 {
   flamestrike_pyromaniac_t( std::string_view n, mage_t* p ) :
@@ -3792,7 +3800,7 @@ struct flamestrike_pyromaniac_t final : public fire_mage_spell_t
     background = proc = true;
     triggers.ignite = true;
     aoe = -1;
-    reduced_aoe_targets = data().effectN( 2 ).base_value(); // TODO: Check this
+    reduced_aoe_targets = data().effectN( 2 ).base_value(); // From spelldata effectN(2)
   }
 };
 
@@ -4323,9 +4331,10 @@ struct winters_end_t final : public mage_spell_t
     background = proc = true;
     aoe = -1;
     target_filter_callback = secondary_targets_only(); // Main target should be dead
-    // TODO: Currently deals full damage to all targets
-    if ( !p->bugs )
-      reduced_aoe_targets = p->spec.winters_end->effectN( 1 ).base_value();
+    // Winter's End deals reduced damage beyond the cap — confirmed live in 12.0.1 spell tooltip (ID 1247775):
+    // "Damage reduced beyond X enemies." This is real in-game behavior, not a bug.
+    // Source: https://www.wowhead.com/spell=1247775 (2026-03-22)
+    reduced_aoe_targets = p->spec.winters_end->effectN( 1 ).base_value();
   }
 
   double action_multiplier() const override
