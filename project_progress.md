@@ -449,6 +449,4 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | 3c77a2a | 2026-03-22 | Fix(profiles): gear BiS for 19 profiles — 20 new item IDs sourced from Wowhead |
 | 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
 | 71e8e58 | 2026-03-22 | Feat(shaman) + fix(profiles): surging_shields impl + gear BiS batch 2 (7 profiles) |
-| (pending) | 2026-03-22 | Fix(mage): Winter's End AoE falloff confirmed real — remove !p->bugs guard; resolve 6 more TODOs |
-| (pending) | 2026-03-22 | Fix(priest/shadow): Collapsing Void target-died edge case — return early if target not ready |
-| (pending) | 2026-03-22 | Docs(dk): Unholy 12.0 rework documented; Blightburst/RoA + Frostbane delay clarified |
+| c3baf08 | 2026-03-22 | Fix/docs: DK Unholy + Priest Shadow + Mage TODOs — Winter's End AoE fix, Collapsing Void edge case |
