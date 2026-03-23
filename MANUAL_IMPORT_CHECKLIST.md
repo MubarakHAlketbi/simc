@@ -1,17 +1,13 @@
 # Manual Import Checklist
 
-Items the automated pipeline cannot resolve — requires human review of Wowhead pages.
-Generated: 2026-03-22
+Items requiring human review. Updated: 2026-03-22 (post visual audit of all 33 specs)
 
 ---
 
-## 1. Missing Hero Talent Rotation Priorities (6 specs)
+## 1. Missing Hero Talent Rotation Priorities — FULLY RESOLVED
 
-The extractor cannot find the second hero talent switch button on these Wowhead pages.
-You need to visit each URL, manually click the missing hero talent, and copy the
-rotation priority list into the corresponding `wowhead/{class}/{spec}/extracted/rotation.md`.
-
-**ALL 6 RESOLVED** — three separate extractor bugs fixed through visual page inspection:
+**ALL 6 RESOLVED** — three separate extractor bugs fixed through visual inspection of
+every Wowhead rotation page:
 
 | # | Spec | Root Cause | Fix |
 |---|------|-----------|-----|
@@ -19,10 +15,21 @@ rotation priority list into the corresponding `wowhead/{class}/{spec}/extracted/
 | 2 | mage/arcane | Build-variant buttons ("Spellslinger" prefix) | Prefix matching |
 | 3 | death-knight/unholy | Apostrophe stripped ("Sanlayn" not "San'layn") | Name normalization |
 | 4 | druid/guardian | Apostrophe stripped ("Elunes Chosen" not "Elune's Chosen") | Name normalization |
-| 5 | monk/brewmaster | Hyphen→space ("Shado Pan" not "Shado-Pan") | Name normalization |
-| 6 | monk/windwalker | Hyphen→space ("Shado Pan" not "Shado-Pan") | Name normalization |
+| 5 | monk/brewmaster | Hyphen to space ("Shado Pan" not "Shado-Pan") | Name normalization |
+| 6 | monk/windwalker | Hyphen to space ("Shado Pan" not "Shado-Pan") | Name normalization |
 
-All 33 specs now extract both hero talents with real, differentiated content.
+**Additional finding:** visual audit of all 33 specs found 5 specs with 3 build variants
+(previously collapsed into 2 by prefix grouping). Now all captured:
+
+| Spec | Build Variants |
+|------|---------------|
+| mage/arcane | Spellslinger (Orb) + Spellslinger Missile Build + Sunfury |
+| paladin/retribution | Templar ES + Templar RG + Herald of the Sun |
+| warlock/destruction | Hellcaller + Diabolist + Diabolist Demons |
+| warrior/arms | Slayer + Colossus + Colossus Smash |
+| shaman/elemental | Farseer + Stormbringer + Farseer AoE |
+
+**Final validation: 33/33 specs have 2+ hero builds, real differentiated content, zero errors.**
 
 ---
 
@@ -64,7 +71,7 @@ The talent is registered in code but has NO effect implementation:
 
 ---
 
-## 3b. Apex Talents — All Specs Use Max Rank (Rank 4)
+## 4. Apex Talents — All Specs Use Max Rank (Rank 4)
 
 **RESOLVED:** Full apex talent data extracted from Wowhead and saved to
 `wowhead/apex_talents_wowhead.md`. All 33 DPS/tank specs + 5 healer specs documented
@@ -76,21 +83,17 @@ with R1/R2-3/R4 descriptions.
 - Each apex talent has 3 sequential nodes: R1 (level 81), R2-3 (level 84, 2-point), R4 (level 90)
 - Demonology Warlock apex (Spell #1264137) has INCOMPLETE data on Wowhead — R1/R2 descriptions missing
 
-**Notable findings from Wowhead data:**
-- Blood DK "Dance of Midnight" R4: shows 0% damage increase and 0% DR — likely placeholder/tooltip bug
-- Feral "Unseen Predator" R2-3: shows 0% damage increase — likely tooltip bug
+**Notable Wowhead tooltip issues (verify against live spell data):**
+- Blood DK "Dance of Midnight" R4: shows 0% damage increase and 0% DR — placeholder
+- Feral "Unseen Predator" R2-3: shows 0% damage increase — placeholder
 - Survival Hunter R1: shows "Aimed Shot always critically strikes" — copy error from Marksmanship
 - Demonology Warlock: talent name not displayed, only Spell #1264137 reference
 
-These tooltip issues should be verified against live spell data (effectN values)
-rather than trusting the displayed percentages.
-
 ---
 
-## 4. Phase 4 Missing HecticAddCleave Baselines (4 profiles)
+## 5. Phase 4 Missing HecticAddCleave Baselines (4 profiles)
 
-These profiles have Patchwerk baselines but no HecticAddCleave. Need to be re-run
-(this is automated — not manual — but noting for completeness):
+Automated — not manual. These need sim runs:
 
 | Profile | Patchwerk | HecticAddCleave |
 |---------|-----------|-----------------|
@@ -101,26 +104,26 @@ These profiles have Patchwerk baselines but no HecticAddCleave. Need to be re-ru
 
 ---
 
-## 5. HIGH Priority APL Gaps (11 specs)
+## 6. HIGH Priority APL Gaps (11 specs)
 
-The APL diff report flagged these specs as having significant gaps (3+ missing spells)
-between the Wowhead rotation guide and the SimC APL. These need human review to determine
-if the MISSING actions are real gaps or false positives (engine-managed, passive, etc.).
+The APL diff report flagged these specs with 3+ missing spells between Wowhead guide
+and SimC APL. Need human review to separate real gaps from false positives.
+Note: items 2 and 7 now have full hero talent data (previously incomplete).
 
-| # | Spec | Action |
-|---|------|--------|
+| # | Spec | Notes |
+|---|------|-------|
 | 1 | death-knight/blood | Review `wowhead/APL_diff_report.md` section |
-| 2 | death-knight/unholy | Review — note: only Rider of the Apocalypse rotation extracted |
-| 3 | demon-hunter/devourer | Review — new spec, may have significant gaps |
+| 2 | death-knight/unholy | Both heroes now extracted (was only Rider) |
+| 3 | demon-hunter/devourer | New spec, may have significant gaps |
 | 4 | demon-hunter/havoc | Review |
-| 5 | demon-hunter/vengeance | Review — tank spec, "Use X" format now parsed |
-| 6 | druid/balance | Review — no valid talent hash, APL on defaults |
-| 7 | druid/guardian | Review — tank, only Druid of the Claw extracted |
+| 5 | demon-hunter/vengeance | Tank spec, "Use X" format now parsed |
+| 6 | druid/balance | No valid talent hash, APL on defaults |
+| 7 | druid/guardian | Both heroes now extracted (was only Druid of the Claw) |
 | 8 | hunter/survival | Review |
 | 9 | rogue/subtlety | Review |
-| 10 | shaman/elemental | Review |
+| 10 | shaman/elemental | Now has 3 builds including Farseer AoE variant |
 | 11 | shaman/enhancement | Review |
-| 12 | warrior/protection | Review — tank spec |
+| 12 | warrior/protection | Tank spec |
 
 Full report: `wowhead/APL_diff_report.md`
 
@@ -129,7 +132,6 @@ Full report: `wowhead/APL_diff_report.md`
 ## Priority Order
 
 1. **Item 2** (talent strings) — 5 minutes, immediately unblocks Phase 4 DPS accuracy
-2. **Item 1** (hero talent rotations) — 30-60 min, improves APL source data quality
-3. **Item 3** (Weapon of Wind) — 15 min research, needs code implementation after
-4. **Item 5** (APL gaps) — ongoing, review during Phase 4 optimization
-5. **Item 4** (missing baselines) — automated, will be run when Phase 4 resumes
+2. **Item 3** (Weapon of Wind) — 15 min research, needs code implementation after
+3. **Item 6** (APL gaps) — ongoing, review during Phase 4 optimization
+4. **Item 5** (missing baselines) — automated, run when Phase 4 resumes

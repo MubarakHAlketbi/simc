@@ -228,10 +228,10 @@ Full specification: `APL_optimization.md`
 | Phase 1 | Browser extraction of all Wowhead pages (rotation, talents, bis, consumables, tier) | COMPLETE — 33 specs × 5 pages = 165 files in wowhead/*/extracted/ |
 | Phase 2 | APL validation — diff all specs against Wowhead rotations | COMPLETE — 2 fixes applied |
 | Phase 3 | Profile updates — BiS gear, consumables, talent builds from extracted data | COMPLETE — consumables (30 profiles), gear BiS (19 profiles fixed), talents (46/56 updated via extractor + updater script) |
-| Phase 3.5a | Extractor pipeline fixes — validation pass, strip comment noise, dedup blocks, hero talent click verification, mutation observer for lazy load | COMPLETE — 56-82% file size reduction, all 33 specs cleaned |
+| Phase 3.5a | Extractor pipeline fixes — validation, noise strip, dedup, hero click verify, MutationObserver | COMPLETE — 56-82% file size reduction |
 | Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fixed), "null" JSON key fixed | COMPLETE — 17/17 previously-failing specs now parse; APL diff re-run: HIGH=11, MEDIUM=21, LOW=1 |
-| Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; evoker/dev noise identified; 3 profiles fixed (Rogue Assn talents, WL Hellcaller talents, WL shoulders) |
-| Phase 3.5c-L | Re-extract 6 specs with missing hero talents (paladin/ret, DK/unholy, druid/guardian, mage/arcane, monk/brew+ww) | PENDING — requires Playwright + Wowhead access. Pipeline code ready. |
+| Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; 3 profiles fixed |
+| Phase 3.5d | Visual audit of all 33 specs + hero talent extraction fixes | COMPLETE — 3 extractor bugs fixed (prefix matching, apostrophe normalization, hyphen-to-space); 5 specs with 3 build variants now captured; 33/33 validated |
 | Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | IN PROGRESS — baselines PARTIAL (see note below); permutation loop not yet run |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
@@ -269,12 +269,11 @@ Full specification: `APL_optimization.md`
 | MID1_Demon_Hunter_Devourer_Void-Scarred | 108,553 | 204,002 | 156,277 |
 | MID1_Demon_Hunter_Devourer | 105,777 | 203,082 | 154,429 |
 
-**Extraction pipeline audit:** `wowhead/EXTRACTION_PIPELINE_AUDIT.md` — full analysis of
-extraction pipeline accuracy. 9 confirmed problems: comment widget pollution (all 33 specs),
-6 specs with missing hero talents, repeated blocks inflating files 3–10x, APL diff parser
-broken for 17/33 specs ("Use X"/inline format), mid-sentence truncation, .json files unused
-by consumers, outlier files (evoker/dev 8313 lines), 3 profile data gaps. 15 proposed fixes
-across phases 3.5a/b/c. Must be completed before Phase 4 APL optimization.
+**Extraction pipeline audit:** `wowhead/EXTRACTION_PIPELINE_AUDIT.md` + `MANUAL_IMPORT_CHECKLIST.md`
+All original 9 problems resolved. Visual audit of all 33 specs (Phase 3.5d) found and fixed
+3 additional hero talent matching bugs + discovered 5 specs with 3 build variants. Current
+state: 33/33 specs extract all hero builds with real differentiated rotation content.
+Remaining manual items: 2 talent strings, 1 NYI talent (Weapon of Wind), APL gap review.
 
 **Outliers needing APL investigation:**
 - MID1_Rogue_Assassination (~13k composite) — APL likely needs DPS-spec tuning
