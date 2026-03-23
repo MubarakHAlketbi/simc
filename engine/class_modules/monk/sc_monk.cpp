@@ -149,7 +149,7 @@ void monk_action_t<Base>::apply_buff_effects()
   parse_effects( p()->buff.press_the_advantage );
   parse_effects( p()->buff.combo_breaker, affect_list_t( 1, 2, 3 ).remove_spell(
                                               p()->talent.windwalker.teachings_of_the_monastery_blackout_kick->id() ) );
-  parse_effects( p()->buff.zenith );
+  parse_effects( p()->buff.zenith, p()->talent.windwalker.weapon_of_wind );
   parse_effects( p()->buff.invoke_xuen, effect_mask_t( false ).enable( 3 ), "Ferociousness" );
   parse_effects( p()->buff.dance_of_chiji );
 

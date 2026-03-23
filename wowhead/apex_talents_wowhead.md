@@ -15,8 +15,8 @@ Note: All specs use max rank (Rank 4 = all 3 nodes talented). The 3 nodes are:
 
 ### Blood — Dance of Midnight
 - R1: While Dancing Rune Weapon is active, Parrying an attack has a chance to make your next Heart Strike cost no Runes and deal 150% increased damage.
-- R2-3: When you consume a Rune you have a chance to call a Dancing Rune Weapon to your aid for 6 sec.
-- R4: For each Dancing Rune Weapon active your damage is increased by 0% and your damage taken is reduced by 0%.
+- R2-3: For each Dancing Rune Weapon active your damage is increased by 0% and your damage taken is reduced by 0%.
+- R4: When you consume a Rune you have a chance to call a Dancing Rune Weapon to your aid for 6 sec.
 
 ### Frost — Chosen of Frostbrood
 - R1: Frostwyrm's Fury deals 100% increased damage to the first enemy it hits and grants you 15% Haste for 12 sec.
@@ -54,7 +54,7 @@ Note: All specs use max rank (Rank 4 = all 3 nodes talented). The 3 nodes are:
 
 ### Feral — Unseen Predator
 - R1: When you Ferocious Bite, you have a 15% chance per combo point spent to flicker to an enemy within 30 yds and deliver an Unseen Attack.
-- R2-3: Unseen Attacks increase your damage done by 0% for 5 sec. Additional applications extend this effect.
+- R2-3: Unseen Attacks increase your damage done by 8%/15% (Rank 2/3) for 5 sec. Additional applications extend this effect.
 - R4: Tiger's Fury causes you to perform an Unseen Attack after your next 2 combo point generating attacks. Rip and Unseen Attack damage increased by 30%.
 
 ### Guardian — Wild Guardian
@@ -175,10 +175,10 @@ Note: All specs use max rank (Rank 4 = all 3 nodes talented). The 3 nodes are:
 - R2-3: Increases the initial damage of Haunt by 50% and Haunt increases damage dealt to its host by an additional 2%.
 - R4: Damage dealt by Haunt has a chance to release the demonic soul haunting its target. When released, it calls down a meteor (Wrath of Nathreza) dealing Shadow damage to all enemies within 10 yds. Damage reduced beyond 8 targets.
 
-### Demonology — (Spell #1264137, name not displayed on Wowhead)
-- R1: (Not displayed on Wowhead)
-- R2-3: (Not displayed on Wowhead)
-- R4: A Soulkeeper stalks you, collecting Demonic Cores as you use them. It has an increasing chance to unleash Willbreaker at your target whenever it collects a Demonic Core. Willbreaker assaults the target's soul with chaos magic, inflicting Chaos damage to it and all enemies within 10 yds every 0.5 sec for 8.5 sec. Damage is reduced beyond 8 targets.
+### Demonology — Dominion of Argus
+- R1 (ID 1276163): Summoning your Demonic Tyrant leaves open a portal to Argus for 15 sec, causing every 2 casts of Hand of Gul'dan to summon a subjugated demon that serves you for 10 sec.
+- R2-3 (ID 1276190): Increases the duration of Dominion of Argus by 5 sec and increases damage dealt by Hand of Gul'dan by 10%.
+- R4 (ID 1276222): While Dominion of Argus is active, Hand of Gul'dan refunds 1 Soul Shard. Demons summoned by Dominion of Argus last an additional 4 sec.
 
 ### Destruction — Embers of Nihilam
 - R1: Casting Incinerate has a chance to evoke an echo of the Dark Titan's power (Echo of Sargeras). Hurl an ember torn from Nihilam dealing Shadowflame damage and additional Shadowflame damage to all enemies within 10 yds. Damage reduced beyond 8 targets.
