@@ -102,13 +102,15 @@ PAGE_URLS = {
 
 # Known hero talent display names (for identification — NOT for hardcoded clicking)
 ALL_HERO_TALENT_NAMES = {
-    "hellcaller", "soul harvester", "deathbringer", "san'layn", "rider of the apocalypse",
+    "hellcaller", "soul harvester", "deathbringer", "san'layn", "sanlayn",
+    "rider of the apocalypse",
     "aldrachi reaver", "fel-scarred", "annihilator", "void-scarred",
-    "elune's chosen", "keeper of the grove", "druid of the claw", "wildstalker",
+    "elune's chosen", "elunes chosen", "keeper of the grove",
+    "druid of the claw", "wildstalker",
     "flameshaper", "scalecommander", "chronowarden",
     "dark ranger", "pack leader", "sentinel",
     "spellslinger", "sunfury", "frostfire",
-    "master of harmony", "shado-pan", "conduit of the celestials",
+    "master of harmony", "shado-pan", "shadopan", "conduit of the celestials",
     "lightsmith", "templar", "herald of the sun",
     "archon", "voidweaver",
     "deathstalker", "fatebound", "trickster",
@@ -141,21 +143,29 @@ def should_skip_tab(name):
             return True
     return False
 
+def _normalize_hero_name(text):
+    """Normalize hero talent name for matching — strip apostrophes, dashes, extra whitespace."""
+    return re.sub(r"['\-]", "", text.lower().strip()).strip()
+
 def is_hero_talent_button(name):
     """Check if a button text matches a known hero talent name.
     
     Matches both exact names ('Templar') and build-variant names ('Templar ES',
     'Herald of the Sun TS') where the hero talent name is a prefix.
+    Also handles apostrophe/dash variants (San'layn vs Sanlayn, Elune's vs Elunes).
     """
     low = name.lower().strip()
     # Remove leading icon chars / whitespace
     low = low.lstrip(" \t\n\u200b")
-    if low in ALL_HERO_TALENT_NAMES:
-        return True
-    # Check if the button text STARTS WITH a hero talent name
-    # (handles build-variant buttons like "Templar ES", "Herald of the Sun TS")
+    normalized = _normalize_hero_name(low)
+    
     for ht_name in ALL_HERO_TALENT_NAMES:
-        if low.startswith(ht_name + " ") or low.startswith(ht_name + "\t"):
+        ht_norm = _normalize_hero_name(ht_name)
+        # Exact match (with normalization)
+        if normalized == ht_norm:
+            return True
+        # Prefix match for build-variant buttons
+        if normalized.startswith(ht_norm + " "):
             return True
     return False
 
@@ -411,15 +421,15 @@ class PageDiscovery:
                     continue
                 # Extract the hero talent name (may be just "Templar" or "Templar ES")
                 low = text.lower().strip().lstrip(" \t\n\u200b")
-                hero_name = text  # default: use full text
+                normalized = _normalize_hero_name(low)
+                hero_name = text.strip().lstrip(" \t\n\u200b")  # default: use full text
                 for ht_name in ALL_HERO_TALENT_NAMES:
-                    if low == ht_name:
-                        hero_name = text
+                    ht_norm = _normalize_hero_name(ht_name)
+                    if normalized == ht_norm:
+                        hero_name = text.strip().lstrip(" \t\n\u200b")
                         break
-                    if low.startswith(ht_name + " ") or low.startswith(ht_name + "\t"):
+                    if normalized.startswith(ht_norm + " "):
                         # Build-variant: extract just the hero talent prefix
-                        hero_name = text[:len(ht_name)]
-                        # Preserve original casing from the button
                         hero_name = text.strip().lstrip(" \t\n\u200b")[:len(ht_name)]
                         break
                 if hero_name not in seen_names:

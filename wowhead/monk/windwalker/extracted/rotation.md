@@ -1,6 +1,6 @@
 # monk/windwalker — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 05:22
+Generated: 2026-03-23 07:15
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Conduit of the Celestials']
