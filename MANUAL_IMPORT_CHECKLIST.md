@@ -11,20 +11,21 @@ The extractor cannot find the second hero talent switch button on these Wowhead 
 You need to visit each URL, manually click the missing hero talent, and copy the
 rotation priority list into the corresponding `wowhead/{class}/{spec}/extracted/rotation.md`.
 
-| # | Spec | URL | Has | Missing |
-|---|------|-----|-----|---------|
-| 1 | paladin/retribution | https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps | Nothing (0 heroes found) | Herald of the Sun + Templar |
-| 2 | death-knight/unholy | https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps | Rider of the Apocalypse | San'layn |
-| 3 | druid/guardian | https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank | Druid of the Claw | Elune's Chosen |
-| 4 | mage/arcane | https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps | Sunfury | Spellslinger |
-| 5 | monk/brewmaster | https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank | Master of Harmony | Shado-Pan |
-| 6 | monk/windwalker | https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps | Conduit of the Celestials | Shado-Pan |
+| # | Spec | URL | Has | Missing | Status |
+|---|------|-----|-----|---------|--------|
+| 1 | paladin/retribution | https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps | Templar + Herald of the Sun | — | RESOLVED (prefix matching fix) |
+| 2 | mage/arcane | https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps | Spellslinger + Sunfury | — | RESOLVED (prefix matching fix) |
+| 3 | death-knight/unholy | https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps | Rider of the Apocalypse | San'layn | Wowhead shows only 1 button |
+| 4 | druid/guardian | https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank | Druid of the Claw | Elune's Chosen | Wowhead shows only 1 button |
+| 5 | monk/brewmaster | https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank | Master of Harmony | Shado-Pan | Wowhead shows only 1 button |
+| 6 | monk/windwalker | https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps | Conduit of the Celestials | Shado-Pan | Wowhead shows only 1 button |
 
-**What to check on each page:**
-- Is there actually a hero talent switch button? (some guides may not differentiate)
-- If yes, does it use a different UI pattern? (dropdown, radio button, toggle instead of button)
-- If rotation is identical for both hero talents, note that — no import needed
-- If different, copy the ST priority, AoE priority, and Opener for the missing hero talent
+**Items 1-2 RESOLVED** by fixing extractor's hero talent prefix matching (build-variant
+buttons like "Templar ES" now correctly identified as hero talent switches).
+
+**Items 3-6 still need manual check:** Visit each URL and confirm whether Wowhead genuinely
+only shows one hero talent, or if the button uses yet another UI pattern we haven't handled.
+If rotation is identical for both hero talents, no import needed.
 
 ---
 
