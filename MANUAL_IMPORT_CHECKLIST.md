@@ -11,21 +11,18 @@ The extractor cannot find the second hero talent switch button on these Wowhead 
 You need to visit each URL, manually click the missing hero talent, and copy the
 rotation priority list into the corresponding `wowhead/{class}/{spec}/extracted/rotation.md`.
 
-| # | Spec | URL | Has | Missing | Status |
-|---|------|-----|-----|---------|--------|
-| 1 | paladin/retribution | https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps | Templar + Herald of the Sun | — | RESOLVED (prefix matching fix) |
-| 2 | mage/arcane | https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps | Spellslinger + Sunfury | — | RESOLVED (prefix matching fix) |
-| 3 | death-knight/unholy | https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps | Rider of the Apocalypse | San'layn | Wowhead shows only 1 button |
-| 4 | druid/guardian | https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank | Druid of the Claw | Elune's Chosen | Wowhead shows only 1 button |
-| 5 | monk/brewmaster | https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank | Master of Harmony | Shado-Pan | Wowhead shows only 1 button |
-| 6 | monk/windwalker | https://www.wowhead.com/guide/classes/monk/windwalker/rotation-cooldowns-pve-dps | Conduit of the Celestials | Shado-Pan | Wowhead shows only 1 button |
+**ALL 6 RESOLVED** — three separate extractor bugs fixed through visual page inspection:
 
-**Items 1-2 RESOLVED** by fixing extractor's hero talent prefix matching (build-variant
-buttons like "Templar ES" now correctly identified as hero talent switches).
+| # | Spec | Root Cause | Fix |
+|---|------|-----------|-----|
+| 1 | paladin/retribution | Build-variant buttons ("Templar ES" not "Templar") | Prefix matching |
+| 2 | mage/arcane | Build-variant buttons ("Spellslinger" prefix) | Prefix matching |
+| 3 | death-knight/unholy | Apostrophe stripped ("Sanlayn" not "San'layn") | Name normalization |
+| 4 | druid/guardian | Apostrophe stripped ("Elunes Chosen" not "Elune's Chosen") | Name normalization |
+| 5 | monk/brewmaster | Hyphen→space ("Shado Pan" not "Shado-Pan") | Name normalization |
+| 6 | monk/windwalker | Hyphen→space ("Shado Pan" not "Shado-Pan") | Name normalization |
 
-**Items 3-6 still need manual check:** Visit each URL and confirm whether Wowhead genuinely
-only shows one hero talent, or if the button uses yet another UI pattern we haven't handled.
-If rotation is identical for both hero talents, no import needed.
+All 33 specs now extract both hero talents with real, differentiated content.
 
 ---
 
