@@ -1,13 +1,13 @@
 # paladin/retribution — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:07
+Generated: 2026-03-23 05:23
 
 ## Discovered Page Structure
-Hero Talent Switches: None found
+Hero Talent Switches: ['Templar', 'Herald of the Sun']
 Tab Group 0: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
 Tab Group 1: ['Execution Sentence', 'Avenging Wrath', 'Radiant Glory', 'Hammer of Light', 'Trinkets']
 
-## Default (no hero switch)
+## Hero Talent: Templar
 
 ### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
 
@@ -92,6 +92,217 @@ OPENER SEQUENCE
  Execution Sentence
  Wake of Ashes
  Hammer of Light
+ Divine Toll
+Continue with normal rotation.
+
+EXECUTION SENTENCE
+The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Pre-Combat Checks
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+EXECUTION SENTENCE
+The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+### tab_group_1 — Tabs: ['Execution Sentence', 'Avenging Wrath', 'Radiant Glory', 'Hammer of Light', 'Trinkets']
+
+#### Execution Sentence
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+EXECUTION SENTENCE
+The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Avenging Wrath
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+AVENGING WRATH
+ Avenging Wrath is a straightforward off-GCD damage buff that you'll want to make sure you have active before using other cooldowns. When using  Avenging Wrath, you'll ideally want to stack it sooner rather than later, but it's worth putting other abilities like  Execution Sentence on cooldown before worrying about stacking it.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Radiant Glory
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+RADIANT GLORY
+ Radiant Glory removes  Avenging Wrath as an active ability and instead automatically applies it when  Wake of Ashes is used. Because the duration of the buff is relatively short and  Wake of Ashes does a significant amount of damage, it's better to cast  Wake of Ashes inside a  Execution Sentence window rather than trying to have a buff active before using  Execution Sentence if you're using both of them.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Hammer of Light
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+HAMMER OF LIGHT
+There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light. If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath is already active and before the proc expires.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Trinkets
+PRE-COMBAT CHECK
+Before any combat happens, it is important for Retribution Paladin to make sure the following are done. This is mostly important for raids - dungeons, delves, or open-world content generally won't require all of these buffs.
+
+Use a Flask
+Apply Weapon Oil
+Eat Food
+
+TRINKETS
+Retribution will often value on-use stat trinkets highly. Retribution can often use multiple of these, as they can be lined up with alternating cooldown sets with little downside. You should use them with  Avenging Wrath, before your other important cooldowns. When using  Algeth'ar Puzzle Box, it can be channeled precombat on pull, but should otherwise be used before the rest of your cooldowns, since it takes a few seconds to gain its buff.
+
+ Avenging Wrath doesn't buff the damage of trinket procs or on use effects, but it does increase their Crit chance, which means that for most instant on use trinkets you'll hold them a few seconds on pull for a little bit more damage. For trinkets with a cooldown desynced from  Avenging Wrath, you generally don't want to hold it or  Avenging Wrath for 30s to line them up - this is a major damage loss as you'll often lose casts over a fight.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+## Hero Talent: Herald of the Sun
+
+### tab_group_0 — Tabs: ['Single-Target Priority', 'AoE Priority', 'Opener', 'Pre-Combat Checks']
+
+#### Single-Target Priority
+BEST RETRIBUTION PALADIN SINGLE TARGET ROTATION
+Retribution in Single Target uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value.
+With  Herald of the Sun selected, the priority is as follows:
+The builds used below are covered in the Talents page.
+PRIORITY
+Cast  Avenging Wrath
+Cast  Execution Sentence
+Cast  Final Verdict with 5 Holy Power
+Cast  Wake of Ashes
+Cast  Divine Toll
+Cast  Hammer of Wrath with an  Art of War proc
+Cast  Blade of Justice with an  Art of War proc
+Cast  Final Verdict
+Cast  Hammer of Wrath
+Cast  Blade of Justice
+Cast  Judgment
+Cast  Templar Strike /  Templar Slash
+
+EXECUTION SENTENCE
+The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### AoE Priority
+BEST RETRIBUTION PALADIN AOE ROTATION
+Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets, regardless of talent builds.
+With  Herald of the Sun selected, the priority is as follows:
+The builds used below are covered in the Talents page.
+PRIORITY
+Cast  Avenging Wrath
+Cast  Execution Sentence
+Cast  Divine Storm with 5 Holy Power
+Cast  Wake of Ashes
+Cast  Divine Toll
+Cast  Hammer of Wrath with an  Art of War proc
+Cast  Blade of Justice with an  Art of War proc
+Cast  Divine Storm
+Cast  Hammer of Wrath
+Cast  Blade of Justice
+Cast  Judgment
+Cast  Templar Strike /  Templar Slash
+
+EXECUTION SENTENCE
+The goal with  Execution Sentence is to fit as much damage within its window as you can. All damage done to targets hit by the initial damage count towards the funnel portion, so you should keep using AoE abilities if you're fighting multiple targets. The final damage portion is buffed by effects that are active when it lands, not when it is cast, so be careful to still have buffs like  Avenging Wrath active when it lands.
+
+Subject
+
+Posted
+
+Author
+
+Replies
+
+#### Opener
+BEST RETRIBUTION PALADIN OPENER
+The opener follows a similar priority to the regular one, applying important debuffs first before putting your other strong abilities on cooldown.
+With  Herald of the Sun selected, opener details are as follows:
+The builds used below are covered in the Talents page.
+SAMPLE TIMELINE
+Proceed With Rotation
+OPENER SEQUENCE
+ Blade of Justice
+ Avenging Wrath
+ Light's Potential  and any on-use trinkets
+ Execution Sentence
+ Wake of Ashes
+ Final Verdict
+ Final Verdict
  Divine Toll
 Continue with normal rotation.
 

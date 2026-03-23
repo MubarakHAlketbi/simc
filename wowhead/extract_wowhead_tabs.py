@@ -142,11 +142,22 @@ def should_skip_tab(name):
     return False
 
 def is_hero_talent_button(name):
-    """Check if a button text matches a known hero talent name."""
+    """Check if a button text matches a known hero talent name.
+    
+    Matches both exact names ('Templar') and build-variant names ('Templar ES',
+    'Herald of the Sun TS') where the hero talent name is a prefix.
+    """
     low = name.lower().strip()
     # Remove leading icon chars / whitespace
     low = low.lstrip(" \t\n\u200b")
-    return low in ALL_HERO_TALENT_NAMES
+    if low in ALL_HERO_TALENT_NAMES:
+        return True
+    # Check if the button text STARTS WITH a hero talent name
+    # (handles build-variant buttons like "Templar ES", "Herald of the Sun TS")
+    for ht_name in ALL_HERO_TALENT_NAMES:
+        if low.startswith(ht_name + " ") or low.startswith(ht_name + "\t"):
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -370,7 +381,14 @@ class PageDiscovery:
         self.page = page_obj
 
     def discover_hero_switches(self):
-        """Find hero talent switch buttons anywhere on the page."""
+        """Find hero talent switch buttons anywhere on the page.
+        
+        Handles two patterns:
+        1. Pure hero talent switches: "Templar", "Herald of the Sun"
+        2. Build-variant buttons: "Templar ES", "Herald of the Sun TS"
+           For pattern 2, groups by hero talent prefix and treats each
+           unique prefix as a hero switch (clicking the first variant).
+        """
         switches = []
         seen_names = set()
         buttons = self.page.query_selector_all('button')
@@ -389,9 +407,25 @@ class PageDiscovery:
                 half = len(text) // 2
                 if len(text) > 4 and len(text) % 2 == 0 and text[:half] == text[half:]:
                     continue
-                if is_hero_talent_button(text) and text not in seen_names:
-                    seen_names.add(text)
-                    switches.append({"element": btn, "name": text, "type": "hero_switch"})
+                if not is_hero_talent_button(text):
+                    continue
+                # Extract the hero talent name (may be just "Templar" or "Templar ES")
+                low = text.lower().strip().lstrip(" \t\n\u200b")
+                hero_name = text  # default: use full text
+                for ht_name in ALL_HERO_TALENT_NAMES:
+                    if low == ht_name:
+                        hero_name = text
+                        break
+                    if low.startswith(ht_name + " ") or low.startswith(ht_name + "\t"):
+                        # Build-variant: extract just the hero talent prefix
+                        hero_name = text[:len(ht_name)]
+                        # Preserve original casing from the button
+                        hero_name = text.strip().lstrip(" \t\n\u200b")[:len(ht_name)]
+                        break
+                if hero_name not in seen_names:
+                    seen_names.add(hero_name)
+                    switches.append({"element": btn, "name": hero_name,
+                                     "full_text": text, "type": "hero_switch"})
             except Exception:
                 continue
         return switches
@@ -617,15 +651,16 @@ def click_hero_talent(page_obj, hero_name, url, max_retries=2):
             time.sleep(3)
             scroll_and_wait(page_obj)
 
-        # Check if already active
+        # Check if already active — match by exact name OR prefix (build-variant buttons)
         already_active = page_obj.evaluate(
             "(() => {"
             "  const btns = Array.from(document.querySelectorAll('button'));"
+            f"  const needle = {hn_js};"
             "  const target = btns.find(b => {"
             "    const t = b.innerText.trim();"
             "    const half = Math.floor(t.length / 2);"
             "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
-            f"    return t === {hn_js};"
+            "    return t === needle || t.toLowerCase().startsWith(needle.toLowerCase() + ' ');"
             "  });"
             "  if (!target) return null;"
             "  return target.dataset.active === 'true' || target.dataset.checked === 'true' || target.getAttribute('aria-pressed') === 'true';"
@@ -659,15 +694,16 @@ def click_hero_talent(page_obj, hero_name, url, max_retries=2):
             print(f"    Already active — reading current state")
             return True
         else:
-            # Click it
+            # Click it — match by exact name OR prefix (build-variant buttons)
             clicked = page_obj.evaluate(
                 "(() => {"
                 "  const btns = Array.from(document.querySelectorAll('button'));"
+                f"  const needle = {hn_js};"
                 "  const target = btns.find(b => {"
                 "    const t = b.innerText.trim();"
                 "    const half = Math.floor(t.length / 2);"
                 "    if (t.length > 4 && t.length % 2 === 0 && t.slice(0,half)===t.slice(half)) return false;"
-                f"    return t === {hn_js};"
+                "    return t === needle || t.toLowerCase().startsWith(needle.toLowerCase() + ' ');"
                 "  });"
                 "  if (target) { target.click(); return true; }"
                 "  return false;"

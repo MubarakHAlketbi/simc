@@ -1,6 +1,6 @@
 # druid/guardian — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank
-Generated: 2026-03-23 00:01
+Generated: 2026-03-23 05:19
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw']
