@@ -441,10 +441,21 @@ class PageDiscovery:
                         # Build-variant: extract just the hero talent prefix
                         hero_name = text.strip().lstrip(" \t\n\u200b")[:len(ht_name)]
                         break
-                if hero_name not in seen_names:
+                full_text = text.strip().lstrip(" \t\n\u200b")
+                if full_text in seen_names:
+                    # Exact duplicate button (DH Havoc/Vengeance show buttons twice) — skip
+                    continue
+                seen_names.add(full_text)
+                if hero_name in seen_names:
+                    # Same hero prefix already seen — this is a build variant
+                    # (e.g. "Spellslinger Orb Build" vs "Spellslinger Missile Build")
+                    # Use full text as key to preserve both variants
+                    switches.append({"element": btn, "name": full_text,
+                                     "full_text": full_text, "type": "hero_switch"})
+                else:
                     seen_names.add(hero_name)
                     switches.append({"element": btn, "name": hero_name,
-                                     "full_text": text, "type": "hero_switch"})
+                                     "full_text": full_text, "type": "hero_switch"})
             except Exception:
                 continue
         return switches
