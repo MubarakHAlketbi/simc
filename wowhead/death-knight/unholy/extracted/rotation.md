@@ -1,6 +1,6 @@
 # death-knight/unholy — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/unholy/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 07:13
+Generated: 2026-03-23 23:36
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Rider of the Apocalypse', 'Sanlayn']

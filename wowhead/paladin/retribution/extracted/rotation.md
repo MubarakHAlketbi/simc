@@ -1,6 +1,6 @@
 # paladin/retribution — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 05:23
+Generated: 2026-03-23 23:35
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Herald of the Sun']

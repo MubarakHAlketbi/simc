@@ -144,8 +144,17 @@ def should_skip_tab(name):
     return False
 
 def _normalize_hero_name(text):
-    """Normalize hero talent name for matching — strip apostrophes, dashes, extra whitespace."""
-    return re.sub(r"['\-]", "", text.lower().strip()).strip()
+    """Normalize hero talent name for matching — strip apostrophes, dashes, collapse whitespace.
+    
+    Handles: San'layn vs Sanlayn, Elune's Chosen vs Elunes Chosen,
+    Shado-Pan vs Shado Pan, Fel-Scarred vs Fel Scarred.
+    """
+    # Remove apostrophes entirely (San'layn -> Sanlayn, Elune's -> Elunes)
+    normalized = text.lower().strip().replace("'", "")
+    # Replace dashes with spaces (Shado-Pan -> Shado Pan, Fel-Scarred -> Fel Scarred)
+    normalized = normalized.replace("-", " ")
+    # Collapse multiple spaces to single space and strip
+    return re.sub(r"\s+", " ", normalized).strip()
 
 def is_hero_talent_button(name):
     """Check if a button text matches a known hero talent name.

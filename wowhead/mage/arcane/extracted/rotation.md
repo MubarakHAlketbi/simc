@@ -1,6 +1,6 @@
 # mage/arcane — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/arcane/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 05:19
+Generated: 2026-03-23 23:36
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Spellslinger', 'Sunfury']
