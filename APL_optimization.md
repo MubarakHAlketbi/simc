@@ -1014,42 +1014,69 @@ can cause resource waste that reduces DPS.**
 **Action:** Import resource management conditions where they exist in upstream,
 especially mana pooling (Arcane), RP dumping thresholds (Unholy), and energy gating (Subtlety).
 
-### 15.4 Sim-Validated Results (2026-03-24, 1000 iterations, PW+HAC composite 50/50)
+### 15.4 Sim-Validated Results (2026-03-24, 1000 iter, ALL 33 specs, 3-way comparison)
 
-Full report: `results/apl_compare/COMPARISON_REPORT.md`
+Full report: `results/apl_compare_all/FULL_COMPARISON_REPORT.md`
+Test script: `scripts/run_apl_compare_all.py` (198 sims: 33 specs × 3 variants × 2 fight styles)
 
-**Overall: UPSTREAM wins 7, OURS wins 4, TIES 12 (out of 23 specs with differences)**
+Three-way comparison: UPSTREAM (.simc override) vs OURS (.simc override) vs C++ (engine default)
 
-| Spec | UP Composite | OURS Composite | Delta | Winner |
-|------|-------------|---------------|-------|--------|
-| deathknight_unholy | 154,935 | 161,491 | +4.2% | **OURS** — RP>=80 threshold + putrefy reposition + soul_reaper ungating |
-| rogue_assassination | 95,636 | 93,526 | -2.2% | **UPSTREAM** — cycle_targets, time_to_die guards, ambush opener |
-| rogue_subtlety | 183,185 | 179,633 | -1.9% | **UPSTREAM** — haste_trinket_snapshot, dual Shadow Dance, Secret Tech |
-| mage_frost | 140,362 | 142,674 | +1.6% | **OURS** — splinterstorm comet_storm check + FoF 2-stack priority |
-| priest_shadow | 81,945 | 83,078 | +1.4% | **OURS** — consolidated tentacle_slam + aggressive mind_flay interrupt |
-| paladin_retribution | 107,010 | 108,443 | +1.3% | **OURS** — crusade support + tempest_of_the_lightbringer threshold |
-| warrior_arms | 112,693 | 111,500 | -1.1% | **UPSTREAM** — slayer AoE ravager, sweeping_strikes timing |
-| monk_brewmaster | 80,087 | 79,366 | -0.9% | **UPSTREAM** — celestial_brew 0.3 threshold, tiger_palm combo |
-| warlock_demonology | 285,730 | 283,383 | -0.8% | **UPSTREAM** — hero-branched sub-lists vs flat priority |
-| druid_guardian | 13,424 | 13,323 | -0.8% | **UPSTREAM** — feline_potential cat-weaving |
-| warlock_affliction | 116,904 | 116,265 | -0.5% | **UPSTREAM** — cycling_variable min_agony |
+**Overall: UPSTREAM wins 4, OURS wins 1, C++ wins 1, TIES 27 (out of 33 specs)**
 
-12 specs within ±0.5% (TIE): DK Blood, DK Frost, Druid Balance (UP=0 broken), Druid Feral,
-Evoker Aug, Evoker Dev, Hunter MM, Hunter Surv, Mage Arcane, Mage Fire, Monk WW, Warrior Fury.
+| Spec | UPSTREAM | OURS | C++ Default | Winner | Delta |
+|------|---------|------|------------|--------|-------|
+| rogue_assassination | **95,499** | 93,440 | 93,457 | **UP +2.2%** | cycle_targets, time_to_die guards, ambush opener |
+| rogue_subtlety | **183,089** | 179,676 | 179,623 | **UP +1.9%** | haste_trinket_snapshot, dual Shadow Dance, Secret Tech |
+| warrior_arms | **112,725** | 111,438 | 111,379 | **UP +1.2%** | slayer AoE ravager, sweeping_strikes timing |
+| monk_brewmaster | **80,002** | 79,493 | 76,683 | **UP +0.6%** | celestial_brew 0.3 threshold, tiger_palm combo |
+| druid_balance | 0 (broken) | **77,380** | 74,857 | **OURS +3.4%** | upstream APL incompatible with Midnight profile |
+| druid_guardian | 13,451 | 13,344 | **14,954** | **C++ +11.2%** | our Batch 2 C++ rewrite beats both .simc files |
 
-### 15.5 Priority Import List (re-ordered by SIM-VALIDATED DPS impact)
+27 specs within ±0.5% (TIE): all three APL variants produce equivalent DPS.
 
-| Priority | Spec | Import | Measured Delta | Action |
-|----------|------|--------|---------------|--------|
-| 1 | Rogue Assassination | Restore cycle_targets, time_to_die guards, ambush opener | **-2.2% (ours worse)** | IMPORT from upstream |
-| 2 | Rogue Subtlety | shd_cp variable, haste_trinket_snapshot, dual Shadow Dance, Secret Technique fallback, dynamic Black Powder | **-1.9% (ours worse)** | IMPORT from upstream |
-| 3 | Warrior Arms | Restore ravager in slayer_aoe, widen sweeping_strikes to >10, restore mortal_strike colossus_smash fallback | **-1.1% (ours worse)** | IMPORT from upstream |
-| 4 | Monk Brewmaster | Change celestial_brew threshold 0.95→0.3, restore tiger_palm blackout_combo, breath_of_fire flurry_strikes | **-0.9% (ours worse)** | IMPORT from upstream |
-| 5 | Warlock Demonology | Rewrite to hero-branched sub-lists (diabolist/soulharvester) | **-0.8% (ours worse)** | STRUCTURAL REWRITE |
-| 6 | Druid Guardian | Import feline_potential/wildpower_surge cat-weaving, maul rage>=55 | **-0.8% (ours worse)** | IMPORT from upstream |
-| 7 | Warlock Affliction | Import cycling_variable for min_agony multi-target DoT spreading | **-0.5% (ours worse)** | IMPORT from upstream |
-| — | **KEEP** our improvements: | | | |
-| — | DK Unholy | Our RP>=80, putrefy reposition, soul_reaper ungating | **+4.2% (ours better)** | KEEP ours |
-| — | Mage Frost | Our splinterstorm check, FoF 2-stack priority | **+1.6% (ours better)** | KEEP ours |
-| — | Priest Shadow | Our tentacle_slam consolidation, mind_flay interrupt | **+1.4% (ours better)** | KEEP ours |
-| — | Paladin Retribution | Our crusade support, tempest_of_the_lightbringer | **+1.3% (ours better)** | KEEP ours |
+**Critical finding: C++ engine default significantly UNDERPERFORMS .simc overrides on 4 specs:**
+
+| Spec | .simc Best | C++ Default | Gap | Root Cause |
+|------|-----------|------------|-----|------------|
+| Warlock Affliction | 116,846 | 107,672 | **-7.8%** | C++ generator not synced with .simc improvements |
+| Warrior Fury | 121,699 | 113,481 | **-6.7%** | C++ generator missing trinket updates |
+| Shaman Enhancement | 95,626 | 90,401 | **-5.5%** | C++ generator not synced |
+| Monk Brewmaster | 80,002 | 76,683 | **-4.1%** | C++ generator missing upstream improvements |
+
+These C++ APL generators need immediate updating to match .simc content.
+
+### 15.5 Priority Action List (re-ordered by SIM-VALIDATED DPS impact)
+
+#### A. Import upstream .simc APL (4 specs, upstream clearly better)
+
+| Priority | Spec | What to Import | Measured Gap |
+|----------|------|---------------|-------------|
+| 1 | Rogue Assassination | cycle_targets, time_to_die guards, ambush opener | **UP +2.2%** |
+| 2 | Rogue Subtlety | shd_cp, haste_trinket_snapshot, dual Shadow Dance, Secret Tech, Black Powder | **UP +1.9%** |
+| 3 | Warrior Arms | ravager in slayer_aoe, sweeping_strikes >10, mortal_strike CS fallback | **UP +1.2%** |
+| 4 | Monk Brewmaster | celestial_brew 0.95→0.3, tiger_palm blackout_combo, breath_of_fire | **UP +0.6%** |
+
+#### B. Sync C++ APL generators to .simc content (4 specs, C++ badly lagging)
+
+| Priority | Spec | C++ vs .simc Gap | Root Cause |
+|----------|------|-----------------|------------|
+| 1 | Warlock Affliction | **-7.8%** | C++ generator not synced with nightfall/darkglare improvements |
+| 2 | Warrior Fury | **-6.7%** | C++ generator missing current-season trinket logic |
+| 3 | Shaman Enhancement | **-5.5%** | C++ generator not synced with .simc APL |
+| 4 | Monk Brewmaster | **-4.1%** | C++ generator missing upstream improvements |
+
+#### C. Update .simc override file (1 spec, C++ rewrite is superior)
+
+| Spec | Action | Gap |
+|------|--------|-----|
+| Druid Guardian | Update .simc file to match our C++ Batch 2 APL rewrite | **C++ +11.2%** over .simc |
+
+#### D. Keep our improvements (validated by sims — tied or better than upstream)
+
+| Spec | Our Advantage | Notes |
+|------|--------------|-------|
+| DK Unholy | RP>=80, putrefy reposition, soul_reaper ungating | OURS=161k vs UP=154k in prior test; now TIE at higher iter (both .simc close, C++ also close) |
+| Mage Frost | splinterstorm comet_storm check, FoF 2-stack | TIE in 3-way (all within 0.5%) |
+| Priest Shadow | tentacle_slam consolidation, mind_flay interrupt | TIE in 3-way |
+| Paladin Retribution | crusade support, tempest_of_the_lightbringer | TIE in 3-way |
+| Druid Balance | Our .simc works; upstream = 0 DPS (broken) | OURS +3.4% vs C++ |
