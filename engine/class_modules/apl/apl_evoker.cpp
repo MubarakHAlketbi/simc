@@ -93,7 +93,8 @@ void devastation( player_t* p )
   default_->add_action( "run_action_list,name=st_sc,if=talent.mass_disintegrate" );
   default_->add_action( "run_action_list,name=st_fs" );
 
-  aoe_fs->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5&active_enemies<=4", "Fameshaper 3+ Target List" );
+  aoe_fs->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5&active_enemies<=4", "Flameshaper 3+ Target List" );
+  aoe_fs->add_action( "engulf,if=dot.fire_breath_damage.ticking", "Engulf during Fire Breath per Wowhead Flameshaper priority" );
   aoe_fs->add_action( "fire_breath,target_if=max:target.health.pct,empower_to=1,if=cooldown.dragonrage.remains<gcd.max*2&active_dot.fire_breath_damage=0&(target.time_to_die>=15|!raid_event.adds.exists)" );
   aoe_fs->add_action( "tip_the_scales,use_off_gcd=1,if=buff.dragonrage.up&cooldown.eternity_surge.remains<=action.fire_breath.usable_in" );
   aoe_fs->add_action( "call_action_list,name=es,if=buff.tip_the_scales.up" );
@@ -108,7 +109,8 @@ void devastation( player_t* p )
   aoe_fs->add_action( "living_flame,target_if=max:target.health.pct,if=talent.engulfing_blaze&(buff.leaping_flames.up|buff.burnout.up|buff.scarlet_adaptation.up|buff.ancient_flame.up)" );
   aoe_fs->add_action( "azure_strike,target_if=max:target.health.pct" );
 
-  st_fs->add_action( "dragonrage,if=target.time_to_die>=30&raid_event.adds.in>=60|!raid_event.adds.exists|raid_event.adds.in=0", "Fameshaper 1 / 2 Target List" );
+  st_fs->add_action( "engulf,if=dot.fire_breath_damage.ticking", "Flameshaper 1 / 2 Target List — Engulf during Fire Breath per Wowhead" );
+  st_fs->add_action( "dragonrage,if=target.time_to_die>=30&raid_event.adds.in>=60|!raid_event.adds.exists|raid_event.adds.in=0" );
   st_fs->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5|talent.slipstream&gcd.remains>=0.5" );
   st_fs->add_action( "tip_the_scales,use_off_gcd=1,if=buff.dragonrage.up&action.eternity_surge.usable_in<=action.fire_breath.usable_in" );
   st_fs->add_action( "eternity_surge,target_if=max:target.health.pct,empower_to=2,if=active_enemies=2&!talent.eternitys_span&variable.can_use_empower" );
@@ -123,7 +125,7 @@ void devastation( player_t* p )
   st_fs->add_action( "call_action_list,name=green,if=talent.ancient_flame&!buff.ancient_flame.up&talent.scarlet_adaptation&!buff.dragonrage.up" );
   st_fs->add_action( "azure_strike" );
 
-  aoe_sc->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5", "Scalemander 3+ Target List" );
+  aoe_sc->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5", "Scalecommander 3+ Target List" );
   aoe_sc->add_action( "deep_breath,if=talent.imminent_destruction&talent.strafing_run&!buff.strafing_run.up,cancel_if=gcd.remains=0" );
   aoe_sc->add_action( "tip_the_scales,use_off_gcd=1,if=buff.dragonrage.up" );
   aoe_sc->add_action( "dragonrage,target_if=max:target.time_to_die,if=target.time_to_die>=15|!raid_event.adds.exists" );
@@ -137,7 +139,7 @@ void devastation( player_t* p )
   aoe_sc->add_action( "call_action_list,name=es,if=(buff.dragonrage.up|cooldown.dragonrage.remains>variable.dr_prep_time_aoe)&(talent.azure_sweep&!buff.azure_sweep.up)" );
   aoe_sc->add_action( "azure_strike,target_if=max:target.health.pct" );
 
-  st_sc->add_action( "deep_breath,if=buff.strafing_run.remains<=gcd.max*2,cancel_if=gcd.remains=0", "Scalemander 1 / 2 Target List" );
+  st_sc->add_action( "deep_breath,if=buff.strafing_run.remains<=gcd.max*2|cooldown.deep_breath.up,cancel_if=gcd.remains=0", "Scalecommander 1 / 2 Target List — Deep Breath on CD per Wowhead" );
   st_sc->add_action( "dragonrage,if=target.time_to_die>=30&raid_event.adds.in>=60|!raid_event.adds.exists|raid_event.adds.in=0" );
   st_sc->add_action( "hover,use_off_gcd=1,if=raid_event.movement.in<6&!buff.hover.up&gcd.remains>=0.5|talent.slipstream&gcd.remains>=0.5" );
   st_sc->add_action( "tip_the_scales,use_off_gcd=1,if=buff.dragonrage.up" );

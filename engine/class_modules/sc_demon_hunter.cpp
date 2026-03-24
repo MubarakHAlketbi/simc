@@ -8978,7 +8978,7 @@ struct metamorphosis_buff_t : public demon_hunter_buff_t<buff_t>
         demon_hunter_buff_t::set_default_value_from_effect_type( A_HASTE_ALL );
         // MID1 4pc: Haste increased by an additional 6% during Metamorphosis
         if ( p->sets->has_set_bonus( DEMON_HUNTER_HAVOC, MID1, B4 ) )
-          set_default_value( default_value + p->sets->set( DEMON_HUNTER_HAVOC, MID1, B4 )->effectN( 1 ).percent() );
+          default_value += p->sets->set( DEMON_HUNTER_HAVOC, MID1, B4 )->effectN( 1 ).percent();
         add_invalidate( CACHE_HASTE );
         add_invalidate( CACHE_LEECH );
         break;

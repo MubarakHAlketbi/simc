@@ -217,7 +217,7 @@ void subtlety( player_t* p )
   default_->add_action( "variable,name=stealth,value=buff.shadow_dance.up|buff.stealth.up|buff.vanish.up" );
   default_->add_action( "variable,name=targets,value=spell_targets.shuriken_storm" );
   default_->add_action( "variable,name=racial_sync,value=(buff.shadow_blades.up&buff.shadow_dance.up)|fight_remains<20" );
-  default_->add_action( "variable,name=shd_cp,value=combo_points>=6" );
+  default_->add_action( "variable,name=shd_cp,value=combo_points>=6|hero_tree.deathstalker&combo_points<=2", "Deathstalker enters Shadow Dance at low CP, Trickster at 6+ CP" );
   default_->add_action( "call_action_list,name=race" );
   default_->add_action( "call_action_list,name=item" );
   default_->add_action( "call_action_list,name=cds" );
@@ -250,7 +250,7 @@ void subtlety( player_t* p )
   finish->add_action( "eviscerate,if=cooldown.secret_technique.remains>=3|buff.shadow_dance.up|buff.shadow_blades.up|talent.deathstalkers_mark", "Pool some Shadow Technique Stacks before entering Shadow Dance by not finishing right before." );
 
   build->add_action( "shuriken_storm,if=prev.shadow_dance&buff.premeditation.up&talent.danse_macabre" );
-  build->add_action( "shadowstrike,if=!debuff.deathstalkers_mark.up&talent.deathstalkers_mark&!buff.darkest_night.up|variable.targets<=2|variable.priority_rotation" );
+  build->add_action( "shadowstrike,if=!debuff.deathstalkers_mark.up&talent.deathstalkers_mark&!buff.darkest_night.up|variable.targets<=3|variable.priority_rotation", "Shadowstrike AoE threshold raised to 3 per Wowhead" );
   build->add_action( "shuriken_storm,if=variable.targets>1" );
   build->add_action( "goremaws_bite,if=combo_points.deficit>=3" );
   build->add_action( "gloomblade,if=variable.targets<2" );

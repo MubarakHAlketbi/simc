@@ -57,6 +57,7 @@ void default_apl( monk_t* player )
   pre->add_action( "potion" );
 
   def->add_action( "auto_attack", "Default List" );
+  def->add_action( "touch_of_death", "Touch of Death — #1 priority per Wowhead" );
   def->add_action( "potion" );
   def->add_action( "call_action_list,name=race_actions" );
   def->add_action( "call_action_list,name=item_actions" );
@@ -82,9 +83,10 @@ void default_apl( monk_t* player )
   def->add_action( "keg_smash,if=cooldown.keg_smash.charges=1" );
   def->add_action( "breath_of_fire" );
   def->add_action( "empty_the_cellar" );
+  def->add_action( "blackout_kick", "Blackout Kick higher per Wowhead — enforce BoK > Tiger Palm for Blackout Combo" );
   def->add_action( "rushing_jade_wind" );
   def->add_action( "keg_smash" );
-  def->add_action( "blackout_kick" );
+  def->add_action( "spinning_crane_kick,if=active_enemies>=3", "SCK as AoE filler per Wowhead" );
   def->add_action( "tiger_palm,if=buff.aspect_of_harmony_spender.up&energy>50-energy.regen*2" );
   def->add_action( "tiger_palm,if=energy>65-energy.regen" );
   def->add_action( "expel_harm" );

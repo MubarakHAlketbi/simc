@@ -326,10 +326,10 @@ void unholy( player_t* p )
   aoe->add_action( "death_and_decay,if=!death_and_decay.ticking&talent.desecrate", "Aoe Rotation" );
   aoe->add_action( "festering_strike,if=talent.festering_scythe&(buff.festering_scythe.up&(buff.festering_scythe.remains<=3|debuff.festering_scythe_debuff.remains<3)|!buff.festering_scythe.up&debuff.festering_scythe_debuff.remains<3)" );
   aoe->add_action( "epidemic,if=variable.spending_rp&variable.epidemic_prio" );
+  aoe->add_action( "putrefy", "Putrefy higher in AoE per Wowhead — strong AoE DPS when charges available" );
   aoe->add_action( "death_coil,if=variable.spending_rp&!variable.epidemic_prio" );
   aoe->add_action( "festering_strike,if=buff.lesser_ghoul_ready.stack=0" );
   aoe->add_action( "scourge_strike,if=buff.lesser_ghoul_ready.stack>=1" );
-  aoe->add_action( "putrefy" );
   aoe->add_action( "epidemic,if=variable.epidemic_prio" );
   aoe->add_action( "death_coil,if=!variable.epidemic_prio" );
 
@@ -350,7 +350,7 @@ void unholy( player_t* p )
   racials->add_action( "fireblood,if=variable.cds_active" );
   racials->add_action( "lights_judgment,if=runic_power<20&rune<2" );
 
-  single_target->add_action( "soul_reaper,if=target.health.pct<=35", "Single Target Rotation" );
+  single_target->add_action( "soul_reaper", "Single Target Rotation — Soul Reaper on CD per Wowhead (no HP gate)" );
   single_target->add_action( "festering_strike,if=talent.festering_scythe&(buff.festering_scythe.up&(buff.festering_scythe.remains<=3|debuff.festering_scythe_debuff.remains<3)|!buff.festering_scythe.up&debuff.festering_scythe_debuff.remains<3)" );
   single_target->add_action( "death_coil,if=variable.spending_rp" );
   single_target->add_action( "festering_strike,if=buff.lesser_ghoul_ready.stack=0" );
@@ -363,7 +363,7 @@ void unholy( player_t* p )
   trinkets->add_action( "use_item,slot=trinket1,if=!variable.trinket_1_buffs&(variable.damage_trinket_priority=1|!variable.trinket_2_buffs|!trinket.2.has_cooldown)" );
   trinkets->add_action( "use_item,slot=trinket2,if=!variable.trinket_2_buffs&(variable.damage_trinket_priority=2|!variable.trinket_1_buffs|!trinket.1.has_cooldown)" );
 
-  variables->add_action( "variable,name=spending_rp,value=rune<2|buff.forbidden_knowledge.up&rune<4|buff.sudden_doom.react", "Variables" );
+  variables->add_action( "variable,name=spending_rp,value=runic_power>=80|rune<2|buff.forbidden_knowledge.up&rune<4|buff.sudden_doom.react", "Variables — spend RP at 80+ threshold per Wowhead" );
   variables->add_action( "variable,name=st_planning,op=setif,value=1,value_else=0,condition=active_enemies=1&(!raid_event.adds.exists|!raid_event.adds.in|raid_event.adds.in>15)" );
   variables->add_action( "variable,name=adds_remain,value=active_enemies>=2&(!raid_event.adds.exists|!raid_event.pull.exists&raid_event.adds.remains>5|raid_event.pull.exists&raid_event.adds.in>20)" );
   variables->add_action( "variable,name=cds_active,value=pet.lesser_ghoul_army.active|buff.forbidden_knowledge.up|buff.dark_transformation.up&buff.dark_transformation.remains>5" );

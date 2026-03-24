@@ -306,6 +306,7 @@ void frost( player_t* p )
   ff_aoe->add_action( "blizzard,if=buff.freezing_rain.up" );
   ff_aoe->add_action( "flurry,if=buff.brain_freeze.react&buff.thermal_void.down" );
   ff_aoe->add_action( "frozen_orb" );
+  ff_aoe->add_action( "ice_lance,if=buff.fingers_of_frost.react>=2", "Spend FoF at 2 stacks before Glacial Spike to avoid munching" );
   ff_aoe->add_action( "glacial_spike" );
   ff_aoe->add_action( "comet_storm" );
   ff_aoe->add_action( "blizzard,if=active_enemies>=(5-talent.freezing_rain-talent.freezing_winds)&(cooldown.frozen_orb.remains>12*spell_haste|!talent.freezing_rain)", "Only hardcast Blizzard at 4 (with one Blizzard talent) or 5 (without any Blizzard talents) targets. Holding it when Frozen Orb is about to come up is mostly QOL with a minimal impact on sim-dps." );
@@ -318,6 +319,7 @@ void frost( player_t* p )
 
   ff_st->add_action( "flurry,if=buff.brain_freeze.react&buff.thermal_void.down" );
   ff_st->add_action( "frozen_orb" );
+  ff_st->add_action( "ice_lance,if=buff.fingers_of_frost.react>=2", "Spend FoF at 2 stacks before Glacial Spike to avoid munching" );
   ff_st->add_action( "glacial_spike" );
   ff_st->add_action( "comet_storm" );
   ff_st->add_action( "ice_lance,if=buff.fingers_of_frost.react" );
