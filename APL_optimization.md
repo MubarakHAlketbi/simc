@@ -1046,6 +1046,120 @@ Validated at both 1,000 and 10,000 iterations — results are consistent.
 
 These C++ APL generators need immediate updating to match .simc content.
 
+### 15.6 Root Cause Analysis — Why Upstream Wins (detailed, 10k iter validated)
+
+#### Rogue Assassination (UP +2.2% = ~2,065 DPS)
+**5 mechanical reasons**, ranked by DPS impact:
+1. **Crimson Tempest bleed spreading** — upstream adds AoE override in generate list at 5+ targets
+   that forces generators to fire even at 5 CP when bleeds aren't fully spread. Our version goes to
+   the spend list and fires Envenom instead, losing massive AoE DoT uptime on HecticAddCleave (HAC
+   shows -3.9% for this reason — almost all the gap is HAC).
+2. **Trinket timing** — upstream's base_trinket_condition adds `&!cooldown.deathmark.ready` to
+   prevent trinket activation when Deathmark is also ready, ensuring stat buff snapshots INTO the
+   Deathmark window. Ours can fire trinket one GCD before Deathmark, losing overlap.
+3. **Vanish condition** — upstream uses simple `!cooldown.deathmark.ready`; ours uses complex
+   `cooldown.deathmark.remains<5|cooldown.deathmark.remains>target.time_to_die-10` which causes
+   Vanish to fire at suboptimal times, reducing Improved Garrote uptime.
+4. **time_to_die guards on Deathmark + Kingsbane** — our added `target.time_to_die>10` delays both
+   CDs unnecessarily. In standard sims this rarely triggers but adds logic complexity that can cause
+   edge-case delays.
+5. **Potion gating** — our `dot.rupture.ticking` condition on potion can delay potion on pull when
+   rupture isn't yet up but bloodlust is.
+
+**Fix plan:** Remove time_to_die guards. Import upstream's bleed spreading override and trinket
+timing condition. Simplify Vanish to `!cooldown.deathmark.ready`. Remove rupture potion gate.
+
+#### Rogue Subtlety (UP +1.9% = ~3,447 DPS)
+**6 mechanical reasons**, ranked by DPS impact:
+1. **energy>60 build gate** (BIGGEST) — our version refuses to build combo points below 60 energy
+   outside stealth. Subtlety builders cost 35-40 energy, so the character literally idles and
+   auto-attacks for many GCDs between 40-60 energy. This is the #1 DPS loss. Upstream calls build
+   unconditionally.
+2. **Shadow Dance entry at low CP** — our shd_cp allows Dance at <=2 CP for Deathstalker. This
+   wastes 2+ Shadow Dance GCDs building CP instead of using finishers. Shadow Dance is the primary
+   damage window — every wasted GCD in Dance is a large DPS loss.
+3. **Secret Technique outside Dance** — our version adds a fallback that fires Secret Technique
+   outside Shadow Dance when CD is short. ST without Shadow Dance loses the dance damage multiplier,
+   making it a much weaker use.
+4. **Shadowstrike target threshold** — our `targets<=3` uses Shadowstrike at 3 targets where
+   Shuriken Storm generates more total CP. Upstream correctly uses `targets<=2`.
+5. **Shadow Dance conditions** — upstream's elegant `shadow_blades.remains>=cooldown.secret_technique.remains`
+   naturally gets two Dances per Shadow Blades when haste allows. Our complex haste_trinket_snapshot
+   variable adds unnecessary gating that can miss Dance windows.
+6. **Shadow Blades holding** — ours requires `secret_technique.ready` strictly; upstream allows
+   Blades for Deathstalker even without ST ready, since Deathstalker gets value from Blades+Dance alone.
+
+**Fix plan:** Remove energy>60 build gate. Change shd_cp to `combo_points>=6` (upstream). Remove
+Secret Technique outside-Dance fallback. Change Shadowstrike to `targets<=2`. Simplify Shadow
+Dance condition. Add Deathstalker Shadow Blades fallback.
+
+#### Warrior Arms (UP +1.3% = ~1,431 DPS)
+**4 mechanical reasons**, ranked by DPS impact:
+1. **Sweeping Strikes timing** — ours waits `colossus_smash.remains>10` (too conservative);
+   upstream uses `>5` and `>4`. This means ours misses valid Sweeping Strikes windows where
+   CS is 5-10s away, losing cleave damage in HecticAddCleave.
+2. **Demolish stack threshold** — ours holds Demolish until `stack=10` (max); upstream fires at
+   `stack>=5`. Colossal Might at 5 stacks already provides strong bonus damage. Holding to 10
+   often means CS expires before Demolish fires, wasting the entire CS window.
+3. **Bladestorm in AoE** — ours gates Bladestorm on `colossus_smash.up`; upstream uses it
+   unconditionally. In AoE, Bladestorm is always strong — delaying it for CS alignment wastes damage.
+4. **Mortal Strike in AoE and Execute** — ours uses MS unconditionally in AoE (weak without
+   Executioner's Precision stacks) and fires MS during execute with `colossus_smash.up` even at
+   0 EP stacks. Upstream correctly restricts MS to `executioners_precision.stack=2` only.
+
+**Fix plan:** Change Sweeping Strikes to `>5`. Change Demolish to `stack>=5`. Remove CS gate from
+Bladestorm. Add `executioners_precision.stack=2` to Mortal Strike in AoE and Execute.
+
+#### Monk Brewmaster (UP +0.8% = ~670 DPS)
+**1 dominant mechanical reason:**
+1. **Celestial Brew Aspect of Harmony threshold** — ours uses `>0.95*health.max` (95% accumulated);
+   upstream uses `>0.3*health.max` with `charges_fractional>1.9` guard. The 0.95 threshold is
+   WRONG — it means Celestial Brew almost never fires for Aspect of Harmony damage, because
+   accumulating 95% of max health takes too long. Upstream's 0.3 threshold fires more frequently
+   with moderate-sized Aspect of Harmony damage bursts, which produces more total damage over the
+   fight. The charges_fractional>1.9 guard prevents wasting the ability when a charge is nearly
+   available.
+
+**Fix plan:** Change celestial_brew threshold from 0.95 to 0.3 with charges_fractional>1.9 guard.
+
+### 15.7 Root Cause Analysis — C++ vs .simc Override Gap
+
+#### Warlock Affliction (C++ -7.7%)
+**Root cause:** C++ generator uses `drain_life` as filler when `talent.gorefiends_avarice` is
+talented. The .simc override uses `drain_soul` unconditionally (no drain_life at all). Drain Soul
+deals significantly more damage than Drain Life. Since the profile's Soul Harvester build has
+Gorefiend's Avarice talented, the C++ wastes ~30% of filler GCDs on weak Drain Life instead of
+Drain Soul.
+**Fix:** Remove drain_life filler from C++ APL generator. Use drain_soul unconditionally.
+
+#### Warrior Fury (C++ -6.7%)
+**Root cause:** 5 priority ordering differences in C++ vs .simc:
+1. C++ places Recklessness before Odyn's Fury; .simc uses Odyn's Fury first (better because
+   Odyn's Fury benefits from its own haste-scaled ticks rather than needing Recklessness up first)
+2. C++ gates Execute on `target.health.pct<20|buff.sudden_death.up`; .simc uses Execute
+   unconditionally (leveraging Improved Execute at all health ranges)
+3. C++ places Crushing Blow before Execute; .simc reverses (Execute is higher priority)
+4. C++ places Rampage before Execute; .simc reverses
+5. C++ has extra `bloodthirst,if=!buff.enrage.up` enrage maintenance that .simc removes
+   (enrage is maintained via other abilities in the priority)
+**Fix:** Reorder C++ Fury APL to match .simc: Odyn's Fury > Recklessness, Execute unconditional
+and above Crushing Blow/Rampage, remove explicit bloodthirst enrage line.
+
+#### Shaman Enhancement (C++ -5.0%)
+**Root cause:** C++ has unconditional `lava_lash` in single_sb list; .simc uses
+`lava_lash,if=buff.hot_hand.up` — only casting Lava Lash when Hot Hand procs. Without the
+Hot Hand guard, the C++ wastes GCDs on unproced Lava Lash (lower damage than alternatives).
+Also missing `frost_shock` as last-resort filler.
+**Fix:** Add `buff.hot_hand.up` condition to lava_lash in single_sb list. Add frost_shock filler.
+
+#### Monk Brewmaster (C++ -4.4%)
+**Root cause:** Our C++ Batch 6 rewrite moved Blackout Kick BEFORE rushing_jade_wind/keg_smash,
+but the .simc file has rushing_jade_wind > keg_smash > blackout_kick order. The reordering makes
+Blackout Kick fire when Keg Smash (higher priority) should fire instead.
+Also C++ added touch_of_death and spinning_crane_kick which .simc doesn't have — these are
+correct additions but the priority reordering hurts more than they help.
+**Fix:** Reorder Blackout Kick back below Keg Smash and Rushing Jade Wind in C++ generator.
+
 ### 15.5 Priority Action List (re-ordered by SIM-VALIDATED DPS impact)
 
 #### A. Import upstream .simc APL (4 specs, upstream clearly better)
