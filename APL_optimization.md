@@ -1014,21 +1014,42 @@ can cause resource waste that reduces DPS.**
 **Action:** Import resource management conditions where they exist in upstream,
 especially mana pooling (Arcane), RP dumping thresholds (Unholy), and energy gating (Subtlety).
 
-### 15.4 Priority Import List (ordered by expected DPS impact)
+### 15.4 Sim-Validated Results (2026-03-24, 1000 iterations, PW+HAC composite 50/50)
 
-| Priority | Spec | Import | Expected Impact |
-|----------|------|--------|-----------------|
-| 1 | Warlock Demonology | Full structural rewrite to hero-branched sub-lists | HIGH — current flat APL fundamentally wrong for hero talent routing |
-| 2 | Rogue Subtlety | shd_cp variable, haste_trinket_snapshot, dual Shadow Dance, Secret Technique fallback, dynamic Black Powder | HIGH — multiple DPS-relevant changes |
-| 3 | Evoker Devastation | tip_the_scales usable_in comparison, azure_sweep restoration, charged_blast pyre | MEDIUM-HIGH |
-| 4 | Mage Arcane | Pooling variables, dynamic pulse_aoe_count, mana management | MEDIUM-HIGH |
-| 5 | Mage Fire | Pyroclasm awareness, execute-phase fire blast, flamestrike threshold validation | MEDIUM |
-| 6 | Mage Frost | Named trinkets, separate ST/AoE opener, ray_of_frost icicle gating | MEDIUM |
-| 7 | DK Unholy | Commander of the Dead putrefy gating, AoE spending thresholds | MEDIUM |
-| 8 | Monk Brewmaster | celestial_brew 0.3 threshold, tiger_palm blackout_combo | MEDIUM |
-| 9 | Druid Feral | Dungeon fight_style awareness, tigers_fury berserk alignment | MEDIUM |
-| 10 | Druid Guardian | Feline_potential cat-weaving, maul rage>=55 | LOW-MEDIUM |
-| 11 | Hunter Marksmanship | max_prio_damage targeting, trueshot opener, trick_shots guard | LOW-MEDIUM |
-| 12 | Paladin Retribution | Hammer of Light conditional logic | LOW-MEDIUM |
-| 13 | Rogue Assassination | time_to_die guards, ambush opener | LOW |
-| 14 | Evoker Augmentation | Power Infusion call, time_skip AND logic | LOW |
+Full report: `results/apl_compare/COMPARISON_REPORT.md`
+
+**Overall: UPSTREAM wins 7, OURS wins 4, TIES 12 (out of 23 specs with differences)**
+
+| Spec | UP Composite | OURS Composite | Delta | Winner |
+|------|-------------|---------------|-------|--------|
+| deathknight_unholy | 154,935 | 161,491 | +4.2% | **OURS** — RP>=80 threshold + putrefy reposition + soul_reaper ungating |
+| rogue_assassination | 95,636 | 93,526 | -2.2% | **UPSTREAM** — cycle_targets, time_to_die guards, ambush opener |
+| rogue_subtlety | 183,185 | 179,633 | -1.9% | **UPSTREAM** — haste_trinket_snapshot, dual Shadow Dance, Secret Tech |
+| mage_frost | 140,362 | 142,674 | +1.6% | **OURS** — splinterstorm comet_storm check + FoF 2-stack priority |
+| priest_shadow | 81,945 | 83,078 | +1.4% | **OURS** — consolidated tentacle_slam + aggressive mind_flay interrupt |
+| paladin_retribution | 107,010 | 108,443 | +1.3% | **OURS** — crusade support + tempest_of_the_lightbringer threshold |
+| warrior_arms | 112,693 | 111,500 | -1.1% | **UPSTREAM** — slayer AoE ravager, sweeping_strikes timing |
+| monk_brewmaster | 80,087 | 79,366 | -0.9% | **UPSTREAM** — celestial_brew 0.3 threshold, tiger_palm combo |
+| warlock_demonology | 285,730 | 283,383 | -0.8% | **UPSTREAM** — hero-branched sub-lists vs flat priority |
+| druid_guardian | 13,424 | 13,323 | -0.8% | **UPSTREAM** — feline_potential cat-weaving |
+| warlock_affliction | 116,904 | 116,265 | -0.5% | **UPSTREAM** — cycling_variable min_agony |
+
+12 specs within ±0.5% (TIE): DK Blood, DK Frost, Druid Balance (UP=0 broken), Druid Feral,
+Evoker Aug, Evoker Dev, Hunter MM, Hunter Surv, Mage Arcane, Mage Fire, Monk WW, Warrior Fury.
+
+### 15.5 Priority Import List (re-ordered by SIM-VALIDATED DPS impact)
+
+| Priority | Spec | Import | Measured Delta | Action |
+|----------|------|--------|---------------|--------|
+| 1 | Rogue Assassination | Restore cycle_targets, time_to_die guards, ambush opener | **-2.2% (ours worse)** | IMPORT from upstream |
+| 2 | Rogue Subtlety | shd_cp variable, haste_trinket_snapshot, dual Shadow Dance, Secret Technique fallback, dynamic Black Powder | **-1.9% (ours worse)** | IMPORT from upstream |
+| 3 | Warrior Arms | Restore ravager in slayer_aoe, widen sweeping_strikes to >10, restore mortal_strike colossus_smash fallback | **-1.1% (ours worse)** | IMPORT from upstream |
+| 4 | Monk Brewmaster | Change celestial_brew threshold 0.95→0.3, restore tiger_palm blackout_combo, breath_of_fire flurry_strikes | **-0.9% (ours worse)** | IMPORT from upstream |
+| 5 | Warlock Demonology | Rewrite to hero-branched sub-lists (diabolist/soulharvester) | **-0.8% (ours worse)** | STRUCTURAL REWRITE |
+| 6 | Druid Guardian | Import feline_potential/wildpower_surge cat-weaving, maul rage>=55 | **-0.8% (ours worse)** | IMPORT from upstream |
+| 7 | Warlock Affliction | Import cycling_variable for min_agony multi-target DoT spreading | **-0.5% (ours worse)** | IMPORT from upstream |
+| — | **KEEP** our improvements: | | | |
+| — | DK Unholy | Our RP>=80, putrefy reposition, soul_reaper ungating | **+4.2% (ours better)** | KEEP ours |
+| — | Mage Frost | Our splinterstorm check, FoF 2-stack priority | **+1.6% (ours better)** | KEEP ours |
+| — | Priest Shadow | Our tentacle_slam consolidation, mind_flay interrupt | **+1.4% (ours better)** | KEEP ours |
+| — | Paladin Retribution | Our crusade support, tempest_of_the_lightbringer | **+1.3% (ours better)** | KEEP ours |
