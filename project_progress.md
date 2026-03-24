@@ -1,8 +1,9 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-22 (Phase 3.5 complete — extraction pipeline + visual audit + imported data applied)
+Last updated: 2026-03-24 (Full spec audit fix pass — 8/10 batches complete, 35 of 42 issues resolved)
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
-Next: Phase 4a (complete baselines) → 4b (re-run diff) → 4c (APL gap review) → 4d (optimization loop)
+Next: Phase 4a (complete baselines) → 4b (re-run diff) → 4d (optimization loop)
+Note: Audit batches 9 (tier DBC verification) and 10 (low-priority cleanup) deferred.
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -90,11 +91,11 @@ All statuses below are based on direct code inspection (2026-03-22 audit).
 | DK Frost | Implemented | |
 | DK Unholy | In Beta | Apocalypse removed; loop = Lesser Ghouls + Putrefy + Dread Plague + Reaping. festering_scythe replaces festering_strike via set_replacement_action() (sc_death_knight.cpp:10046). graveyard replaces epidemic via set_replacement_action() when buff.forbidden_knowledge.up (sc_death_knight.cpp:9952). control_undead NYI (declared at line 1165, no action impl). unholy_endurance NYI (declared at line 1189, no action impl). Both are pure utility/CC with zero DPS impact. |
 | DH Devourer | Implemented | |
-| DH Havoc | Implemented | Demonsurge ordering fix confirmed in apl_demon_hunter.cpp: demonsurge_available woven into if= guards throughout the meta list (lines 212, 250–254). |
+|| DH Havoc | Implemented | Demonsurge ordering fix confirmed. MID1 tier set (2pc: Blade Dance +15%, 4pc: +6% haste in Meta) implemented 2026-03-24. APL: Inertia consumption moved to top priority after CDs. |
 | DH Vengeance | Implemented | |
 | Druid Balance | In Beta | Eclipse conditions confirmed in sc_druid.cpp — eclipse_lunar/eclipse_solar buffs (lines 706–707, 1237–1238); conditions simplified per prior audit. Low Phase 4 DPS (~3k composite) due to no valid talent hash — APL running on defaults only. |
 | Druid Feral | In Beta | |
-| Druid Guardian | In Beta | |
+| Druid Guardian | In Beta | APL fully rewritten 2026-03-24: proper rage management, Ironfur/Maul at 80+ rage, Raze/Ravage, Barkskin on CD, AoE/ST split. DPS ~3k → ~11k. |
 | Evoker Devastation | Implemented | Rising Fury apex IDs 1271687/1271796/1271788 confirmed at sc_evoker.cpp lines 9659–9662. |
 | Evoker Augmentation | Implemented | Duplicate apex IDs 1259173/1259174/1259175 confirmed at sc_evoker.cpp lines 9736–9742. Note: ID 1259174 used for both R2 and R3 — acknowledged in code comment at line 9733. cancel_buff tip_the_scales present in apl_evoker.cpp line 220. Inline APL removed 2026-03-22; full C++ generator active. |
 | Hunter BM | Implemented | Uses spell_data_ptr_t (not player_talent_t) for talent lookups — confirmed in sc_hunter.cpp lines 17–30. All talents confirmed implemented; scanner false-positive. |
@@ -176,7 +177,35 @@ _ST/_CT name lookup rather than explicit integer ID in find_talent_spell calls.
 | Rogue Outlaw | Updated 2026-03-20 | Yes | Grand Melee implementation confirmed |
 | Rogue Assassination | Updated 2026-03-20 | Yes | Sudden Demise execute bonus confirmed |
 | DH Havoc | Updated 2026-03-22 | Yes | Demonsurge ordering fix: demonsurge_available in if= guards (apl_demon_hunter.cpp lines 212, 250–254) |
-| Evoker Augmentation | Updated 2026-03-22 | Yes | Removed 18-line inline APL; C++ generator active; cancel_buff tip_the_scales present (apl_evoker.cpp:220) |
+|| Evoker Augmentation | Updated 2026-03-22 | Yes | Removed 18-line inline APL; C++ generator active; cancel_buff tip_the_scales present (apl_evoker.cpp:220) |
+|| DH Devourer | Updated 2026-03-24 | Yes | Cull reordered above Void Ray in meta priority; Soul Smuggling fragment hold logic added |
+|| DH Havoc | Updated 2026-03-24 | Yes | Inertia consumption (felblade/fel_rush) moved to top priority after CDs |
+|| DK Unholy | Updated 2026-03-24 | Yes | Soul Reaper HP gate removed (cast on CD); RP>=80 spending threshold; Putrefy higher in AoE |
+|| Evoker Devastation | Updated 2026-03-24 | Yes | Engulf added to Flameshaper lists; Deep Breath on CD for Scalecommander ST; typos fixed |
+|| Monk Brewmaster | Updated 2026-03-24 | Yes | Touch of Death #1 priority; Blackout Kick higher; SCK AoE filler (>=3 targets) |
+|| Rogue Subtlety | Updated 2026-03-24 | Yes | Shadow Dance CP split (Deathstalker low/Trickster 6+); Shadowstrike AoE <=3 |
+|| Mage Frost | Updated 2026-03-24 | Yes | FoF 2-stack priority before Glacial Spike in Frostfire lists |
+|| Shaman Elemental | Updated 2026-03-24 | Yes | AoE routing threshold lowered from >=3 to >=2 targets |
+|| Druid Guardian | Updated 2026-03-24 | Yes | Full APL rewrite — replaced assisted_combat stub with proper rotation |
+
+### Audit Fix Pass — Summary (2026-03-24)
+
+Full audit: `audit_notes.md` (42 issues). Task list: `audit_task_list.md` (10 batches).
+
+| Batch | Priority | Tasks | Status |
+| :--- | :--- | :--- | :--- |
+| 1 | CRITICAL | 5 missing tier sets (DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk) | COMPLETE |
+| 2 | CRITICAL | Guardian Druid APL rewrite | COMPLETE |
+| 3 | HIGH | DH APL fixes (Devourer Cull reorder, Soul Smuggling, Havoc Inertia) | COMPLETE |
+| 4 | HIGH+MED | DK APL fixes (Soul Reaper, Death Coil RP, Putrefy position) | COMPLETE |
+| 5 | HIGH+MED | Evoker APL fixes (Engulf, Deep Breath, typos) | COMPLETE |
+| 6 | HIGH+MED | Monk Brewmaster APL fixes (ToD, BoK, SCK) | COMPLETE |
+| 7 | HIGH+MED | Rogue Sub + Frost Mage APL fixes | COMPLETE |
+| 8 | MEDIUM | 10 multi-spec condition fixes (1 real fix, 9 verified correct) | COMPLETE |
+| 9 | MEDIUM | Tier set DBC auto-parse verification | DEFERRED |
+| 10 | LOW | Cleanup (5 cosmetic items) | DEFERRED |
+
+**Resolved: 35 issues. Deferred: 7 (all MEDIUM/LOW).**
 
 ### Phase 2 APL Diff — Summary (2026-03-22)
 
@@ -320,7 +349,7 @@ Notes:
 
 ### HIGH — DPS accuracy impact
 
-None currently open.
+None currently open. (5 missing tier sets resolved 2026-03-24 — DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk)
 
 ### MEDIUM — Behavior correctness
 
@@ -341,9 +370,9 @@ None currently open.
 - unholy_endurance (line 1189): declared NYI, no action implementation
 - Both are pure utility (CC / defensive) with zero DPS impact
 
-**Druid Balance**
-- No valid talent hash in profile — APL running on game defaults only (confirmed by ~3k
-  composite DPS in Phase 4 baselines). Needs correct talent export code.
+**Druid Guardian**
+- APL rewritten 2026-03-24 from assisted_combat stub to full rotation. DPS ~3k → ~11k.
+  Needs Phase 4 re-baseline to confirm composite improvement.
 
 ### LOW — Cosmetic / blocked
 
@@ -418,4 +447,9 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 | 360bfaa | 2026-03-22 | Docs: full project_progress update — all batches 1–7 reflected |
 | 71e8e58 | 2026-03-22 | Feat(shaman) + fix(profiles): surging_shields impl + gear BiS batch 2 (7 profiles) |
 | c3baf08 | 2026-03-22 | Fix/docs: DK Unholy + Priest Shadow + Mage TODOs — Winter's End AoE fix, Collapsing Void edge case |
-| da1a909 | 2026-03-22 | Docs: fix commit hash c3baf08 |
+|| da1a909 | 2026-03-22 | Docs: fix commit hash c3baf08 |
+|| a28ae17 | 2026-03-24 | Docs: full spec audit (42 issues), audit_notes.md + audit_task_list.md |
+|| eef908c | 2026-03-24 | Feat(tier): Implement MID1 tier sets for 5 specs (DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk) |
+|| 6cdcf5a | 2026-03-24 | Fix(apl): Guardian Druid full APL rewrite — replaced assisted_combat stub |
+|| ce27ee5 | 2026-03-24 | Fix(apl): Batches 3-7 — DH, DK, Evoker, Monk, Rogue, Mage APL fixes (18 changes) |
+|| a21f7e1 | 2026-03-24 | Fix(apl): Batch 8 — Shaman Ele AoE threshold >=3 → >=2 |
