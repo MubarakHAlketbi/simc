@@ -1,8 +1,8 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-24 (Full spec audit fix pass — 8/10 batches complete, 35 of 42 issues resolved)
+Last updated: 2026-03-24 (Upstream APL comparison complete — 198 sims at 10k iter across all 33 specs)
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
-Next: Phase 4a (complete baselines) → 4b (re-run diff) → 4d (optimization loop)
+Next: Fix 4 upstream-inferior APLs → sync 4 C++-lagging APL generators → Phase 4 optimization loop
 Note: Audit batches 9 (tier DBC verification) and 10 (low-priority cleanup) deferred.
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
@@ -207,6 +207,47 @@ Full audit: `audit_notes.md` (42 issues). Task list: `audit_task_list.md` (10 ba
 
 **Resolved: 35 issues. Deferred: 7 (all MEDIUM/LOW).**
 
+### Upstream APL Comparison — 3-Way Sim Study (2026-03-24)
+
+Full analysis: `APL_optimization.md` Section 15.
+Reports: `results/apl_compare_all/FULL_COMPARISON_10K.md`
+Test script: `scripts/run_apl_compare_all.py`
+
+**Method:** 198 sims (33 specs × 3 APL variants × 2 fight styles) at 10,000 iterations each.
+Three-way comparison: UPSTREAM (.simc override) vs OURS (.simc override) vs C++ (engine default).
+
+**Results: UPSTREAM wins 4 | OURS wins 1 | C++ wins 1 | TIES 27**
+
+#### Specs where upstream is better (import needed):
+
+| Spec | Gap | Root Cause | Fix |
+| :--- | :--- | :--- | :--- |
+| Rogue Assassination | UP +2.2% | Missing CT bleed spreading in AoE, trinket timing, complex Vanish, time_to_die guards | Import bleed spread override, simplify Vanish, remove guards |
+| Rogue Subtlety | UP +1.9% | energy>60 build gate (idles!), low-CP dance entry, ST outside Dance | Remove energy gate, change shd_cp to CP>=6, simplify Dance |
+| Warrior Arms | UP +1.3% | Sweeping Strikes >10 (should be >5), Demolish held to stack=10 (should be >=5), Bladestorm CS gate, MS without EP stacks | Loosen all thresholds, remove CS gate |
+| Monk Brewmaster | UP +0.8% | Celestial Brew at 0.95 health (never fires — should be 0.3) | Change threshold to 0.3 with charges_fractional guard |
+
+#### Specs where our C++ generator lags .simc overrides (sync needed):
+
+| Spec | C++ vs .simc Gap | Root Cause | Fix |
+| :--- | :--- | :--- | :--- |
+| Warlock Affliction | -7.7% | C++ uses drain_life filler with Gorefiend's Avarice; .simc uses drain_soul (higher DPS) | Remove drain_life from C++ generator |
+| Warrior Fury | -6.7% | 5 priority ordering issues: Execute gating, Odyn's Fury placement, Crushing Blow order | Reorder C++ APL to match .simc |
+| Shaman Enhancement | -5.0% | C++ unconditional lava_lash; .simc gates on buff.hot_hand.up | Add hot_hand guard to C++ lava_lash |
+| Monk Brewmaster | -4.4% | Batch 6 moved Blackout Kick above Keg Smash/RJW (wrong priority) | Reorder BK below KS/RJW in C++ |
+
+#### Specs where ours is better or tied:
+
+| Spec | Result | Our Advantage |
+| :--- | :--- | :--- |
+| Druid Balance | OURS +3.4% | Upstream APL produces 0 DPS (broken for Midnight) |
+| Druid Guardian | C++ +11.3% | Our Batch 2 C++ rewrite beats both .simc files |
+| DK Unholy | TIE | Our RP>=80 spending + putrefy reposition integrated into all 3 variants |
+| Mage Frost | TIE | Our splinterstorm check + FoF 2-stack integrated |
+| Priest Shadow | TIE | Our tentacle_slam consolidation integrated |
+| Paladin Retribution | TIE | Our crusade + tempest_of_the_lightbringer integrated |
+| 27 other specs | TIE | All three APL variants within ±0.3% |
+
 ### Phase 2 APL Diff — Summary (2026-03-22)
 
 Full report: `wowhead/APL_diff_report.md` (2317 lines)
@@ -262,9 +303,11 @@ Full specification: `APL_optimization.md`
 | Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fixed), "null" JSON key fixed | COMPLETE — 17/17 previously-failing specs now parse; APL diff re-run: HIGH=11, MEDIUM=21, LOW=1 |
 | Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; 3 profiles fixed |
 | Phase 3.5d | Visual audit of all 33 specs + hero talent extraction fixes | COMPLETE — 3 extractor bugs fixed (prefix matching, apostrophe normalization, hyphen-to-space); 5 specs with 3 build variants now captured; 33/33 validated |
+| Phase 3.6 | Upstream APL comparison — 3-way sim study (198 sims, 10k iter, all 33 specs) | COMPLETE — 4 upstream wins, 1 ours win, 1 C++ win, 27 ties. Root cause analysis in APL_optimization.md §15.6-15.7 |
+| Phase 4-pre | Fix 8 APL issues found by upstream comparison (4 .simc imports + 4 C++ syncs) | NOT STARTED — see §7 HIGH issues |
 | Phase 4a | Complete baselines — 4 missing HAC sims + re-run 5 changed profiles (Druid Bal x3, Evoker Aug x2) | NOT STARTED |
 | Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | NOT STARTED |
-| Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | NOT STARTED |
+| Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | PARTIALLY DONE — upstream comparison identified the real gaps |
 | Phase 4d | Optimization loop — permutation candidates, condition sweeps, composite scoring (50% PW + 50% HAC) | NOT STARTED |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
@@ -349,7 +392,19 @@ Notes:
 
 ### HIGH — DPS accuracy impact
 
-None currently open. (5 missing tier sets resolved 2026-03-24 — DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk)
+**C++ APL generator desync (4 specs losing 4-8% DPS vs .simc overrides):**
+- Warlock Affliction: C++ uses drain_life filler (-7.7%) — should use drain_soul unconditionally
+- Warrior Fury: C++ priority ordering wrong (-6.7%) — Execute, Odyn's Fury, Crushing Blow misordered
+- Shaman Enhancement: C++ unconditional lava_lash (-5.0%) — needs buff.hot_hand.up guard
+- Monk Brewmaster: C++ Blackout Kick above Keg Smash (-4.4%) — Batch 6 reorder was wrong
+
+**APL .simc overrides inferior to upstream (4 specs losing 0.8-2.2%):**
+- Rogue Assassination: missing bleed spreading, trinket timing, complex Vanish (-2.2%)
+- Rogue Subtlety: energy>60 build gate causes idling, bad dance entry (-1.9%)
+- Warrior Arms: Sweeping Strikes/Demolish thresholds too conservative (-1.3%)
+- Monk Brewmaster: Celestial Brew 0.95 threshold too restrictive (-0.8%)
+
+Previously resolved: 5 missing tier sets (2026-03-24 — DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk)
 
 ### MEDIUM — Behavior correctness
 
@@ -453,3 +508,9 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 || 6cdcf5a | 2026-03-24 | Fix(apl): Guardian Druid full APL rewrite — replaced assisted_combat stub |
 || ce27ee5 | 2026-03-24 | Fix(apl): Batches 3-7 — DH, DK, Evoker, Monk, Rogue, Mage APL fixes (18 changes) |
 || a21f7e1 | 2026-03-24 | Fix(apl): Batch 8 — Shaman Ele AoE threshold >=3 → >=2 |
+|| 2921854 | 2026-03-24 | Docs: update project_progress.md — 2026-03-24 audit fix pass |
+|| 6f34a78 | 2026-03-24 | Docs: APL upstream comparison study — 35 spec line-by-line diff analysis (Section 15) |
+|| 61fe4a5 | 2026-03-24 | Docs+data: 1k iter 3-way APL comparison — 198 sims, all 33 specs |
+|| 873d6ff | 2026-03-24 | Docs+data: unused (superseded by 10k run) |
+|| 76ddf55 | 2026-03-24 | Data: 10k iteration APL comparison — 198 sims, all 33 specs confirmed |
+|| ccdff14 | 2026-03-24 | Docs: Root cause analysis for all APL gaps — Sections 15.6 + 15.7 |
