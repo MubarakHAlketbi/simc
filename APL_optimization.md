@@ -1014,23 +1014,24 @@ can cause resource waste that reduces DPS.**
 **Action:** Import resource management conditions where they exist in upstream,
 especially mana pooling (Arcane), RP dumping thresholds (Unholy), and energy gating (Subtlety).
 
-### 15.4 Sim-Validated Results (2026-03-24, 1000 iter, ALL 33 specs, 3-way comparison)
+### 15.4 Sim-Validated Results (2026-03-24, 10,000 iter, ALL 33 specs, 3-way comparison)
 
-Full report: `results/apl_compare_all/FULL_COMPARISON_REPORT.md`
+Full report: `results/apl_compare_all/FULL_COMPARISON_10K.md`
 Test script: `scripts/run_apl_compare_all.py` (198 sims: 33 specs × 3 variants × 2 fight styles)
 
 Three-way comparison: UPSTREAM (.simc override) vs OURS (.simc override) vs C++ (engine default)
+Validated at both 1,000 and 10,000 iterations — results are consistent.
 
 **Overall: UPSTREAM wins 4, OURS wins 1, C++ wins 1, TIES 27 (out of 33 specs)**
 
 | Spec | UPSTREAM | OURS | C++ Default | Winner | Delta |
 |------|---------|------|------------|--------|-------|
-| rogue_assassination | **95,499** | 93,440 | 93,457 | **UP +2.2%** | cycle_targets, time_to_die guards, ambush opener |
-| rogue_subtlety | **183,089** | 179,676 | 179,623 | **UP +1.9%** | haste_trinket_snapshot, dual Shadow Dance, Secret Tech |
-| warrior_arms | **112,725** | 111,438 | 111,379 | **UP +1.2%** | slayer AoE ravager, sweeping_strikes timing |
-| monk_brewmaster | **80,002** | 79,493 | 76,683 | **UP +0.6%** | celestial_brew 0.3 threshold, tiger_palm combo |
-| druid_balance | 0 (broken) | **77,380** | 74,857 | **OURS +3.4%** | upstream APL incompatible with Midnight profile |
-| druid_guardian | 13,451 | 13,344 | **14,954** | **C++ +11.2%** | our Batch 2 C++ rewrite beats both .simc files |
+| rogue_assassination | **95,533** | 93,468 | 93,467 | **UP +2.2%** | cycle_targets, time_to_die guards, ambush opener |
+| rogue_subtlety | **183,197** | 179,750 | 179,766 | **UP +1.9%** | haste_trinket_snapshot, dual Shadow Dance, Secret Tech |
+| warrior_arms | **112,753** | 111,322 | 111,321 | **UP +1.3%** | slayer AoE ravager, sweeping_strikes timing |
+| monk_brewmaster | **80,065** | 79,395 | 76,557 | **UP +0.8%** | celestial_brew 0.3 threshold, tiger_palm combo |
+| druid_balance | 0 (broken) | **77,328** | 74,819 | **OURS +3.4%** | upstream APL incompatible with Midnight profile |
+| druid_guardian | 13,435 | 13,335 | **14,947** | **C++ +11.3%** | our Batch 2 C++ rewrite beats both .simc files |
 
 27 specs within ±0.5% (TIE): all three APL variants produce equivalent DPS.
 
@@ -1038,10 +1039,10 @@ Three-way comparison: UPSTREAM (.simc override) vs OURS (.simc override) vs C++ 
 
 | Spec | .simc Best | C++ Default | Gap | Root Cause |
 |------|-----------|------------|-----|------------|
-| Warlock Affliction | 116,846 | 107,672 | **-7.8%** | C++ generator not synced with .simc improvements |
-| Warrior Fury | 121,699 | 113,481 | **-6.7%** | C++ generator missing trinket updates |
-| Shaman Enhancement | 95,626 | 90,401 | **-5.5%** | C++ generator not synced |
-| Monk Brewmaster | 80,002 | 76,683 | **-4.1%** | C++ generator missing upstream improvements |
+| Warlock Affliction | 116,736 | 107,694 | **-7.7%** | C++ generator not synced with .simc improvements |
+| Warrior Fury | 121,578 | 113,453 | **-6.7%** | C++ generator missing trinket updates |
+| Shaman Enhancement | 95,580 | 90,799 | **-5.0%** | C++ generator not synced |
+| Monk Brewmaster | 80,065 | 76,557 | **-4.4%** | C++ generator missing upstream improvements |
 
 These C++ APL generators need immediate updating to match .simc content.
 
