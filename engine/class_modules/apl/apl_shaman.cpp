@@ -63,7 +63,7 @@ void elemental( player_t* p )
   default_->add_action( "natures_swiftness" );
   default_->add_action( "invoke_external_buff,name=power_infusion", "Use Power Infusion on Cooldown." );
   default_->add_action( "potion,if=buff.bloodlust.up|cooldown.ascendance.ready&cooldown.stormkeeper.remains>15|fight_remains<31" );
-  default_->add_action( "run_action_list,name=aoe,if=spell_targets.chain_lightning>=3" );
+  default_->add_action( "run_action_list,name=aoe,if=spell_targets.chain_lightning>=2", "AoE at 2+ targets per Wowhead" );
   default_->add_action( "run_action_list,name=single_target" );
 
   aoe->add_action( "stormkeeper,if=cooldown.ascendance.remains>10|cooldown.ascendance.remains<gcd|fight_remains<20", "Stormkeeper on CD, unless sub 10s hold for Asc or the fight is about to end." );
@@ -137,7 +137,7 @@ void elemental_ptr( player_t* p )
   default_->add_action( "natures_swiftness" );
   default_->add_action( "invoke_external_buff,name=power_infusion", "Use Power Infusion on Cooldown." );
   default_->add_action( "potion,if=buff.bloodlust.up|cooldown.ascendance.ready&cooldown.stormkeeper.remains>15|fight_remains<31" );
-  default_->add_action( "run_action_list,name=aoe,if=spell_targets.chain_lightning>=3" );
+  default_->add_action( "run_action_list,name=aoe,if=spell_targets.chain_lightning>=2", "AoE at 2+ targets per Wowhead" );
   default_->add_action( "run_action_list,name=single_target" );
 
   aoe->add_action( "stormkeeper,if=cooldown.ascendance.remains>10|cooldown.ascendance.remains<gcd|fight_remains<20", "Stormkeeper on CD, unless sub 10s hold for Asc or the fight is about to end." );
