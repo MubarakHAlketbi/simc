@@ -1,6 +1,6 @@
 # AGENTS.md - SimulationCraft Midnight Expansion Update
 
-**Last Updated: 2026-03-22 (APL optimization pipeline + Wowhead browser extraction added)**
+**Last Updated: 2026-03-24 (extracted/ is now the canonical data source; info_base.md deprecated)**
 
 ## Objective
 
@@ -88,31 +88,19 @@ wowhead/
 Class and spec names use lowercase hyphenated slugs matching Wowhead URL conventions
 (e.g. `beast-mastery`, `death-knight`).
 
-### What `info_base.md` Contains (2026-03-17 snapshot)
+### `info_base.md` — DEPRECATED (2026-03-17 snapshot)
 
-Each file is a self-contained reference document with these sections:
+> **WARNING:** `info_base.md` is OUT OF DATE (2026-03-17) and INCOMPLETE — it was built with
+> Firecrawl/web_extract which missed all JS-tab content (rotations, talent builds, gear).
+> **DO NOT USE `info_base.md` for any task.** Always use `extracted/` files instead.
+> The only remaining use for `info_base.md` is as a fallback for spell ID lookups if the
+> talent tree table is needed and `extracted/talents.md` doesn't have the ID.
 
-| Section | Contents |
-|---------|----------|
-| **Sources** | All URLs used — guide pages and talent-calc pages |
-| **Overview** | Role, playstyle identity, strengths/weaknesses |
-| **Stat Priority** | Exact stat ranking per hero talent variant |
-| **Core Abilities** | Key spells and resource mechanics |
-| **Abilities & Talents Detail** | Full ability list with descriptions |
-| **Rotation / Priority** | ST opener, priority list, AoE rotation, cooldown usage |
-| **Enchants, Gems, Consumables** | Recommended enchants per slot, gems, potions, food |
-| **Talent Tree — Class & Spec** | Complete table: Spell ID \| Name \| Max Rank \| Wowhead link |
-| **Hero Talent Tree 1** | Complete table for first hero tree |
-| **Hero Talent Tree 2** | Complete table for second hero tree |
-| **SimC Implementation Notes** | Callouts for mechanically complex talents |
-
-### What `extracted/` Contains (2026-03-22 snapshot)
+### `extracted/` — CANONICAL DATA SOURCE (2026-03-22 snapshot)
 
 The `extracted/` subdirectory contains **browser-extracted content** from JS-rendered Wowhead pages. Wowhead hides rotation priorities, talent builds, and gear behind JavaScript tabs — `web_extract` and curl cannot access this content. The browser extractor clicks through every tab combination and captures the result.
 
-**Critical difference from `info_base.md`:**
-- `info_base.md` was built with Firecrawl/web_extract — missed JS-tab content
-- `extracted/rotation.md` was built with the Playwright browser extractor — has ALL tab content including per-hero-talent priority lists, AoE priorities, openers, and cooldown sub-tabs
+**This is the ONLY reliable source.** `info_base.md` missed JS-tab content and is deprecated.
 
 **`extracted/rotation.md` structure:**
 ```
@@ -136,14 +124,16 @@ directly imported into SimC profiles via the `talents=` field.
 
 | Task | Use |
 |------|-----|
-| Look up spell IDs / talent tree | `info_base.md` → Talent Tree section |
-| Get rotation priority for a spec | `extracted/rotation.md` (NOT info_base.md — it misses tab content) |
+| Get rotation priority for a spec | `extracted/rotation.md` |
 | Get talent build export codes | `extracted/talents.md` |
 | Get BiS gear for a profile | `extracted/bis.md` |
 | Get enchants/consumables for a profile | `extracted/consumables.md` |
 | Get tier set bonus effects | `extracted/tier.md` |
-| Verify a spell ID | `info_base.md` Talent Tree table |
+| Look up spell IDs / talent tree | `extracted/talents.md` first, then `info_base.md` as fallback only |
 | Get Wowhead URL for fresh fetch | `info_links.md` Sources section |
+
+> **Rule:** Always start with `extracted/` files. Only fall back to `info_base.md` for
+> spell ID lookups not available in extracted data.
 
 ### When to Re-Fetch from Wowhead
 
@@ -226,7 +216,7 @@ The APL optimization pipeline improves Action Priority Lists for all specs using
 - **Two fight styles**: Patchwerk (50% weight) + HecticAddCleave (50% weight)
 - **Multi-build validation**: APL must work for ALL talent builds (up to 8 per spec)
 - **Automated loop**: permutation candidates, condition sweeps, convergence at <0.1% delta
-- **LLM-assisted review**: optional final step using spec's info_base.md for non-obvious synergies
+- **LLM-assisted review**: optional final step using spec's extracted data for non-obvious synergies
 
 ### Phases
 
@@ -336,8 +326,8 @@ Update it immediately when a task is completed.
 
 **1. Session Start Protocol**
 - Read `AGENTS.md` and `project_progress.md`
-- For rotation/APL work: read `wowhead/{class}/{spec}/extracted/rotation.md` (NOT info_base.md)
-- For talent/spell IDs: read `wowhead/{class}/{spec}/info_base.md`
+- For ANY spec work: read files from `wowhead/{class}/{spec}/extracted/` (rotation.md, tier.md, talents.md, bis.md, consumables.md)
+- **DO NOT use `info_base.md`** — it is outdated and incomplete
 - Check `task_dossiers/` for existing dossier before creating a new one
 
 **2. Task Selection**
@@ -383,9 +373,12 @@ Update it immediately when a task is completed.
 
 | Task | Tool |
 |------|------|
-| Look up spell IDs for a spec | Read `wowhead/{class}/{spec}/info_base.md` Talent Tree section |
 | Get rotation priority | Read `wowhead/{class}/{spec}/extracted/rotation.md` |
 | Get talent build export codes | Read `wowhead/{class}/{spec}/extracted/talents.md` |
+| Get BiS gear | Read `wowhead/{class}/{spec}/extracted/bis.md` |
+| Get tier set bonuses | Read `wowhead/{class}/{spec}/extracted/tier.md` |
+| Get consumables/enchants | Read `wowhead/{class}/{spec}/extracted/consumables.md` |
+| Look up spell IDs for a spec | Read `wowhead/{class}/{spec}/extracted/talents.md`, fallback to `info_base.md` |
 | Fetch a spec's full talent tree (live) | Firecrawl + `talent_extraction.md` |
 | Look up single spell by ID | `web_extract("https://www.wowhead.com/beta/spell=XXXXX")` |
 | Re-extract rotation/BiS/consumables | `python3 wowhead/extract_wowhead_tabs.py {class} {spec} --pages rotation` |
@@ -424,8 +417,8 @@ Maps issue types → source files, explains SimC architecture for Midnight devel
 | Class modules | `engine/class_modules/sc_{class}.cpp` |
 | Midnight gear | `engine/player/unique_gear_midnight.cpp` |
 | MID1 profiles | `profiles/MID1/MID1_{Spec}_{HeroTree}.simc` |
-| Wowhead info base | `wowhead/{class}/{spec}/info_base.md` |
-| Wowhead extracted | `wowhead/{class}/{spec}/extracted/` |
+| Wowhead extracted (PRIMARY) | `wowhead/{class}/{spec}/extracted/` |
+| Wowhead info base (DEPRECATED) | `wowhead/{class}/{spec}/info_base.md` — outdated, do not use |
 | APL optimization guide | `APL_optimization.md` |
 | APL diff report | `wowhead/APL_diff_report.md` |
 | Extraction script | `wowhead/extract_wowhead_tabs.py` |
@@ -445,13 +438,15 @@ Maps issue types → source files, explains SimC architecture for Midnight devel
 | `project_structure.md` | Codebase navigation — maps tasks to source files (740 lines) |
 | `APL_optimization.md` | Full APL optimization guide — structure rules, automated loop, composite scoring |
 | `talent_extraction.md` | MANDATORY for any talent work — Firecrawl methodology |
-| `wowhead/{class}/{spec}/info_base.md` | Pre-fetched spec knowledge base (talent IDs, stat priority) |
-| `wowhead/{class}/{spec}/extracted/rotation.md` | Browser-extracted rotation priorities (use this for APL work) |
+| `wowhead/{class}/{spec}/extracted/rotation.md` | **PRIMARY** — Browser-extracted rotation priorities |
 | `wowhead/{class}/{spec}/extracted/talents.md` | Talent build export codes |
 | `wowhead/{class}/{spec}/extracted/bis.md` | BiS gear recommendations |
 | `wowhead/{class}/{spec}/extracted/consumables.md` | Enchants, gems, potions, food |
 | `wowhead/{class}/{spec}/extracted/tier.md` | Tier set bonus effects |
 | `wowhead/APL_diff_report.md` | Phase 2 APL diff — 33 specs, MISSING/ORDER_DIFF/MATCH |
+| `audit_notes.md` | Full spec audit findings — 42 issues by severity (2026-03-24) |
+| `audit_task_list.md` | Batched fix task list — 10 batches, prioritized (2026-03-24) |
+| `full_spec_audit_2026-03-24.md` | Complete audit report with all 13 per-class reports |
 | `TASK_DOSSIER_TEMPLATE.md` | Template for new task dossiers |
 | `ISSUE_TAGS.md` | All GitHub issue labels |
 | `task_dossiers/talent_audit_wowhead_2026-03-16.md` | Full talent audit results |
@@ -485,7 +480,8 @@ Maps issue types → source files, explains SimC architecture for Midnight devel
 - Maintain backward compatibility where possible
 - Use meaningful variable names and add comments for complex logic
 - Wowhead as of 2026-03-22 is the reference; note if newer data differs
-- The `extracted/` data is the authoritative source for rotation priorities — always prefer it over `info_base.md` for APL work
+- The `extracted/` data is the ONLY authoritative source for ALL spec data — `info_base.md` is deprecated and must not be used
+- Full spec audit completed 2026-03-24: findings in `audit_notes.md` and `audit_task_list.md`
 
 ---
 
