@@ -2136,6 +2136,7 @@ public:
   double non_stacking_movement_modifier() const override;
   double stacking_movement_modifier() const override;
   double composite_attribute( attribute_e ) const override;
+  double composite_mastery() const override;
   double composite_player_critical_damage_multiplier( const action_state_t* s, school_e school ) const override;
   double composite_player_target_multiplier( player_t* target, school_e school ) const override;
   double composite_maelstrom_gain_coefficient( const action_state_t* /* state */ = nullptr ) const
@@ -4587,6 +4588,12 @@ struct stormstrike_attack_t : public shaman_attack_t
       m *= p()->talent.stormflurry->effectN( 2 ).percent();
     }
 
+    // MID1 2pc: Stormstrike damage increased by 15%
+    if ( p()->sets->has_set_bonus( SHAMAN_ENHANCEMENT, MID1, B2 ) )
+    {
+      m *= 1.0 + p()->sets->set( SHAMAN_ENHANCEMENT, MID1, B2 )->effectN( 1 ).percent();
+    }
+
     return m;
   }
 
@@ -5146,6 +5153,12 @@ struct lava_lash_t : public shaman_attack_t
     if ( p()->off_hand_weapon.buff_type == FLAMETONGUE_IMBUE )
     {
       m *= 1.0 + data().effectN( 2 ).percent();
+    }
+
+    // MID1 2pc: Lava Lash damage increased by 15%
+    if ( p()->sets->has_set_bonus( SHAMAN_ENHANCEMENT, MID1, B2 ) )
+    {
+      m *= 1.0 + p()->sets->set( SHAMAN_ENHANCEMENT, MID1, B2 )->effectN( 1 ).percent();
     }
 
     return m;
@@ -12501,6 +12514,9 @@ void shaman_t::create_buffs()
       : buff_stack_behavior::DEFAULT
     )
     ->set_chance( talent.crash_lightning.ok() ? 1.0 : 0.0 );
+  // MID1 4pc: Crash Lightning stacks increase Mastery by 2% per stack
+  if ( sets->has_set_bonus( SHAMAN_ENHANCEMENT, MID1, B4 ) )
+    buff.crash_lightning->add_invalidate( CACHE_MASTERY );
   // Buffs crash lightning with extra damage, after using chain lightning
   buff.cl_crash_lightning = new cl_crash_lightning_buff_t( this );
 
@@ -13422,6 +13438,21 @@ double shaman_t::composite_attribute( attribute_e attr ) const
   }
 
   return a;
+}
+
+// shaman_t::composite_mastery ===============================================
+
+double shaman_t::composite_mastery() const
+{
+  double m = parse_player_effects_t::composite_mastery();
+
+  // MID1 4pc: Crash Lightning weapon enhancement increases Mastery by 2% per stack
+  if ( sets->has_set_bonus( SHAMAN_ENHANCEMENT, MID1, B4 ) && buff.crash_lightning->check() )
+  {
+    m += buff.crash_lightning->check() * sets->set( SHAMAN_ENHANCEMENT, MID1, B4 )->effectN( 1 ).base_value();
+  }
+
+  return m;
 }
 
 // shaman_t::composite_player_target_multiplier ==============================

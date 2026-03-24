@@ -4331,6 +4331,13 @@ struct empowered_release_spell_t : public empowered_release_t<evoker_spell_t>
       m *= 1 + p()->buff.jackpot->check_stack_value();
     }
 
+    // MID1 4pc: While Ebon Might is active, empower spells deal 20% more damage
+    if ( !background && p()->sets->has_set_bonus( EVOKER_AUGMENTATION, MID1, B4 ) &&
+         p()->buff.ebon_might_self_buff->check() )
+    {
+      m *= 1.0 + p()->sets->set( EVOKER_AUGMENTATION, MID1, B4 )->effectN( 1 ).percent();
+    }
+
     return m;
   }
 
@@ -4378,6 +4385,15 @@ struct empowered_release_spell_t : public empowered_release_t<evoker_spell_t>
 
     if ( p()->talent.scalecommander.mass_eruption.ok() )
       p()->buff.mass_eruption_stacks->trigger();
+
+    // MID1 4pc: While Ebon Might is active, empower spells cool down 20% faster
+    if ( p()->sets->has_set_bonus( EVOKER_AUGMENTATION, MID1, B4 ) &&
+         p()->buff.ebon_might_self_buff->check() )
+    {
+      double cdr_mult = p()->sets->set( EVOKER_AUGMENTATION, MID1, B4 )->effectN( 2 ).percent();
+      if ( cooldown && cooldown->duration > timespan_t::zero() )
+        cooldown->adjust( -cooldown->duration * cdr_mult );
+    }
   }
 };
 
@@ -5529,6 +5545,10 @@ struct eruption_t : public essence_spell_t
     if ( p()->buff.essence_burst->check() && p()->sets->has_set_bonus( EVOKER_AUGMENTATION, TWW2, B4 ) )
       da *= 1.0 + tww2_4pc_mult;
 
+    // MID1 2pc: Eruption damage increased by 15%
+    if ( p()->sets->has_set_bonus( EVOKER_AUGMENTATION, MID1, B2 ) )
+      da *= 1.0 + p()->sets->set( EVOKER_AUGMENTATION, MID1, B2 )->effectN( 1 ).percent();
+
     return da;
   }
 
@@ -5548,6 +5568,10 @@ struct eruption_t : public essence_spell_t
     essence_spell_t::execute();
 
     p()->extend_ebon( extend_ebon );
+
+    // MID1 2pc: Eruption extends Ebon Might by an additional 0.3 sec
+    if ( p()->sets->has_set_bonus( EVOKER_AUGMENTATION, MID1, B2 ) )
+      p()->extend_ebon( p()->sets->set( EVOKER_AUGMENTATION, MID1, B2 )->effectN( 2 ).time_value() );
 
     if ( p()->buff.trembling_earth->check() && t31_4pc_eruption )
     {

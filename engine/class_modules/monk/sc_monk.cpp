@@ -1665,6 +1665,17 @@ struct whirling_dragon_punch_t : public monk_melee_attack_t
       background = dual = true;
     }
 
+    double action_multiplier() const override
+    {
+      double m = monk_melee_attack_t::action_multiplier();
+
+      // MID1 2pc: Whirling Dragon Punch damage increased by 30%
+      if ( p()->tier.mid1.ww_2pc->ok() )
+        m *= 1.0 + p()->tier.mid1.ww_2pc->effectN( 1 ).percent();
+
+      return m;
+    }
+
     using monk_melee_attack_t::execute;
     void execute( bool first )
     {
@@ -1726,6 +1737,10 @@ struct whirling_dragon_punch_t : public monk_melee_attack_t
 
     if ( p()->rng().roll( p()->talent.windwalker.revolving_whirl->effectN( 1 ).percent() ) )
       p()->buff.dance_of_chiji->increment();  // increment is used to not incur the rppm cooldown
+
+    // MID1 4pc: Whirling Dragon Punch cooldown reduced by 5 sec
+    if ( p()->tier.mid1.ww_4pc->ok() )
+      cooldown->adjust( -p()->tier.mid1.ww_4pc->effectN( 1 ).time_value() );
   }
 
   bool ready() override
@@ -1763,6 +1778,17 @@ struct strike_of_the_windlord_t : public monk_melee_attack_t
         default:
           assert( false );
       }
+    }
+
+    double action_multiplier() const override
+    {
+      double m = monk_melee_attack_t::action_multiplier();
+
+      // MID1 2pc: Strike of the Windlord damage increased by 30%
+      if ( p()->tier.mid1.ww_2pc->ok() )
+        m *= 1.0 + p()->tier.mid1.ww_2pc->effectN( 1 ).percent();
+
+      return m;
     }
 
     double composite_aoe_multiplier( const action_state_t *state ) const override
@@ -1841,6 +1867,10 @@ struct strike_of_the_windlord_t : public monk_melee_attack_t
 
     if ( p()->rng().roll( p()->talent.windwalker.revolving_whirl->effectN( 1 ).percent() ) )
       p()->buff.dance_of_chiji->increment();
+
+    // MID1 4pc: Strike of the Windlord cooldown reduced by 5 sec
+    if ( p()->tier.mid1.ww_4pc->ok() )
+      cooldown->adjust( -p()->tier.mid1.ww_4pc->effectN( 1 ).time_value() );
   }
 };
 
@@ -5657,6 +5687,8 @@ void monk_t::init_spells()
     tier.mid1.brm_2pc            = sets->set( MONK_BREWMASTER, MID1, B2 );
     tier.mid1.brm_4pc            = sets->set( MONK_BREWMASTER, MID1, B4 );
     tier.mid1.brm_4pc_extra_kick = find_spell( 1272464 );
+    tier.mid1.ww_2pc             = sets->set( MONK_WINDWALKER, MID1, B2 );
+    tier.mid1.ww_4pc             = sets->set( MONK_WINDWALKER, MID1, B4 );
   }
 
   // Register passives

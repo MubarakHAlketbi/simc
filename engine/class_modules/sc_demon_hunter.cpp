@@ -964,6 +964,8 @@ public:
     const spell_data_t* stars_fury;  // MID1 Devourer 4pc Energize
 
     // Havoc
+    const spell_data_t* mid1_havoc_2pc;  // MID1 2pc: Blade Dance +15% damage
+    const spell_data_t* mid1_havoc_4pc;  // MID1 4pc: +6% haste during Metamorphosis
 
     // Vengeance
     const spell_data_t* mid1_vengeance_4pc;
@@ -6914,6 +6916,11 @@ struct blade_dance_base_t
     {
       double m = base_t::composite_da_multiplier( s );
       m *= 1.0 + p()->talent.havoc.first_blood->effectN( 1 ).percent();
+
+      // MID1 2pc: Blade Dance damage increased by 15%
+      if ( p()->set_bonuses.mid1_havoc_2pc->ok() )
+        m *= 1.0 + p()->set_bonuses.mid1_havoc_2pc->effectN( 1 ).percent();
+
       return m;
     }
 
@@ -6961,6 +6968,17 @@ struct blade_dance_base_t
       glaive_tempest_targets = as<unsigned>( p->talent.havoc.glaive_tempest->effectN( 2 ).base_value() );
       if ( p->talent.havoc.first_blood->ok() )
         target_filter_callback = secondary_targets_only();
+    }
+
+    double composite_da_multiplier( const action_state_t* s ) const override
+    {
+      double m = demon_hunter_attack_t::composite_da_multiplier( s );
+
+      // MID1 2pc: Blade Dance damage increased by 15%
+      if ( p()->set_bonuses.mid1_havoc_2pc->ok() )
+        m *= 1.0 + p()->set_bonuses.mid1_havoc_2pc->effectN( 1 ).percent();
+
+      return m;
     }
 
     void impact( action_state_t* s ) override
@@ -8958,6 +8976,9 @@ struct metamorphosis_buff_t : public demon_hunter_buff_t<buff_t>
         break;
       case DEMON_HUNTER_HAVOC:
         demon_hunter_buff_t::set_default_value_from_effect_type( A_HASTE_ALL );
+        // MID1 4pc: Haste increased by an additional 6% during Metamorphosis
+        if ( p->sets->has_set_bonus( DEMON_HUNTER_HAVOC, MID1, B4 ) )
+          set_default_value( default_value + p->sets->set( DEMON_HUNTER_HAVOC, MID1, B4 )->effectN( 1 ).percent() );
         add_invalidate( CACHE_HASTE );
         add_invalidate( CACHE_LEECH );
         break;
@@ -11079,6 +11100,8 @@ void demon_hunter_t::init_spells()
 
   // Set Bonus Items ========================================================
 
+  set_bonuses.mid1_havoc_2pc     = sets->set( DEMON_HUNTER_HAVOC, MID1, B2 );
+  set_bonuses.mid1_havoc_4pc     = sets->set( DEMON_HUNTER_HAVOC, MID1, B4 );
   set_bonuses.mid1_vengeance_4pc = sets->set( DEMON_HUNTER_VENGEANCE, MID1, B4 );
 
   // Set Bonus Auxilliary ===================================================

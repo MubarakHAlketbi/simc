@@ -1105,6 +1105,8 @@ public:
       const spell_data_t *brm_2pc;
       const spell_data_t *brm_4pc;
       const spell_data_t *brm_4pc_extra_kick;
+      const spell_data_t *ww_2pc;   // MID1 2pc: SotWL + WDP +30% damage
+      const spell_data_t *ww_4pc;   // MID1 4pc: SotWL + WDP CDR by 5s
     } mid1;
 
     struct
