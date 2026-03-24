@@ -1,7 +1,8 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-22 (ground-truth audit pass — every claim verified against actual code)
+Last updated: 2026-03-22 (Phase 3.5 complete — extraction pipeline + visual audit + imported data applied)
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
+Next: Phase 4a (complete baselines) → 4b (re-run diff) → 4c (APL gap review) → 4d (optimization loop)
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -103,7 +104,7 @@ All statuses below are based on direct code inspection (2026-03-22 audit).
 | Mage Fire | In Beta | Fired Up IDs 1257343/1257349/1257348 confirmed at lines 6060–6072. Burnout: code reads effectN(1).percent() from spell data dynamically (line 1468); comment states 75% (line 2531). Pyromaniac confirmed correct. |
 | Mage Frost | In Beta | Hand of Frost IDs 1262935/1262981/1263249 confirmed at lines 6117–6133. Winter's End AoE: reduced_aoe_targets set at line 4337 with NO p->bugs guard — confirmed real in-game behavior per inline comment citing spell ID 1247775. |
 | Monk Brewmaster | In Beta | |
-| Monk Windwalker | In Beta | Ascension energy regen effect#2 confirmed in sc_monk.cpp lines 6677–6678 (effectN(2).percent()). Weapon of Wind (ID 1272678): talent REGISTERED at sc_monk.cpp line 5526 and in DBC, but NO effect code exists (no parse_effects, no buff, no action). Effectively a stub/NYI despite prior claim of implementation. |
+| Monk Windwalker | In Beta | Ascension energy regen effect#2 confirmed in sc_monk.cpp lines 6677–6678 (effectN(2).percent()). Weapon of Wind (ID 1272678): IMPLEMENTED 2026-03-22 — +10% damage during Zenith via parse_effects(buff.zenith, talent.weapon_of_wind). |
 | Paladin Protection | In Beta | Uses const spell_data_t* pattern (not player_talent_t) in paladin/sc_paladin.cpp — scanner false-positive. All talents confirmed implemented. |
 | Paladin Retribution | In Beta | Same const spell_data_t* pattern. All confirmed implemented. |
 | Priest Shadow | Implemented | tormenting_whispers (ID 1250492): +15% SW:Madness via composite_persistent_multiplier confirmed at sc_priest_shadow.cpp lines 944–946. surge_of_insanity (ID 391399): +15% Mind Flay via composite_ta_multiplier confirmed at lines 53–55. Collapsing Void target_ready() early return confirmed at sc_priest.cpp line 1446. |
@@ -232,7 +233,10 @@ Full specification: `APL_optimization.md`
 | Phase 3.5b | Downstream consumer fixes — gen_apl_diff.py parser (17 specs fixed), "null" JSON key fixed | COMPLETE — 17/17 previously-failing specs now parse; APL diff re-run: HIGH=11, MEDIUM=21, LOW=1 |
 | Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; 3 profiles fixed |
 | Phase 3.5d | Visual audit of all 33 specs + hero talent extraction fixes | COMPLETE — 3 extractor bugs fixed (prefix matching, apostrophe normalization, hyphen-to-space); 5 specs with 3 build variants now captured; 33/33 validated |
-| Phase 4 | Optimization loop — Patchwerk + HecticAddCleave composite scoring | IN PROGRESS — baselines PARTIAL (see note below); permutation loop not yet run |
+| Phase 4a | Complete baselines — 4 missing HAC sims + re-run 5 changed profiles (Druid Bal x3, Evoker Aug x2) | NOT STARTED |
+| Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | NOT STARTED |
+| Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | NOT STARTED |
+| Phase 4d | Optimization loop — permutation candidates, condition sweeps, composite scoring (50% PW + 50% HAC) | NOT STARTED |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
 ### Phase 4 Baseline Status (2026-03-22) — PARTIAL, not complete as previously claimed
@@ -250,10 +254,12 @@ Full specification: `APL_optimization.md`
 **Total JSONs: 108** (not 112 as previously claimed — 4 HAC runs never completed)
 
 **Remaining Phase 4 work:**
-1. Run 4 missing HecticAddCleave baseline sims (DK Blood x2, Evoker Dev x2)
-2. Run permutation candidates per spec (APL condition sweeps)
-3. Accept changes only when composite improves AND neither fight style regresses >1%
-4. Phase 5: trinket combinatorics (BiS pair sims per spec)
+1. (4a) Run 4 missing HecticAddCleave baseline sims (DK Blood x2, Evoker Dev x2)
+2. (4a) Re-run PW + HAC baselines for 5 profiles with changed talents (Druid Bal x3, Evoker Aug x2) — DPS will change significantly now that real talent strings are applied
+3. (4b) Re-run gen_apl_diff.py — extraction pipeline fixed 6 hero talents + 5 build variants since last run; diff results will change
+4. (4c) Review 12 HIGH-priority specs in APL_diff_report.md — determine real gaps vs false positives
+5. (4d) Run permutation candidates per spec (APL condition sweeps); accept only when composite improves AND neither fight style regresses >1%
+6. Phase 5: trinket combinatorics (BiS pair sims per spec)
 
 **Composite DPS baseline (1000 iter, 2026-03-22) — top 10 (52 complete pairs only):**
 | Profile | Patchwerk | HecticAC | Composite |
@@ -269,16 +275,15 @@ Full specification: `APL_optimization.md`
 | MID1_Demon_Hunter_Devourer_Void-Scarred | 108,553 | 204,002 | 156,277 |
 | MID1_Demon_Hunter_Devourer | 105,777 | 203,082 | 154,429 |
 
-**Extraction pipeline audit:** `wowhead/EXTRACTION_PIPELINE_AUDIT.md` + `MANUAL_IMPORT_CHECKLIST.md`
-All original 9 problems resolved. Visual audit of all 33 specs (Phase 3.5d) found and fixed
-3 additional hero talent matching bugs + discovered 5 specs with 3 build variants. Current
-state: 33/33 specs extract all hero builds with real differentiated rotation content.
-Remaining manual items: 2 talent strings, 1 NYI talent (Weapon of Wind), APL gap review.
+**Extraction pipeline:** FULLY RESOLVED. See `wowhead/EXTRACTION_PIPELINE_AUDIT.md` + `MANUAL_IMPORT_CHECKLIST.md`.
+33/33 specs extract all hero builds (including 5 specs with 3 build variants).
+All manual import items resolved: talent strings applied, Weapon of Wind implemented,
+apex talent data corrected.
 
-**Outliers needing APL investigation:**
+**Outliers needing APL investigation (baselines stale — re-run needed):**
 - MID1_Rogue_Assassination (~13k composite) — APL likely needs DPS-spec tuning
-- MID1_Evoker_Augmentation (~8k) — support spec, low raw DPS expected
-- MID1_Druid_Balance (~3k) — no valid talent hash, APL using defaults only
+- MID1_Evoker_Augmentation (~8k) — support spec, low raw DPS expected; talent string now applied, re-baseline will show real DPS
+- MID1_Druid_Balance (~3k) — talent string now applied (was defaults), re-baseline expected to show major improvement
 
 ---
 
@@ -320,9 +325,9 @@ None currently open.
 ### MEDIUM — Behavior correctness
 
 **Monk Windwalker (sc_monk.cpp)**
-- Weapon of Wind (ID 1272678): talent REGISTERED and ID confirmed in DBC, but no effect
-  code exists (no parse_effects, no buff, no action). Prior claim of "Implemented" was
-  incorrect — this is a STUB. Needs effectN() implementation.
+- Weapon of Wind (ID 1272678): IMPLEMENTED 2026-03-22. +10% damage during Zenith via
+  `parse_effects( p()->buff.zenith, p()->talent.windwalker.weapon_of_wind )`. DBC spell
+  1272678 modifies Zenith effectN #2 and #4 by +10 flat. Build clean, smoke test passes.
 
 **Mage (sc_mage.cpp — 61 TODO/FIXME comments remaining)**
 - Exact count from grep: 61 (previously stated ~62)
