@@ -651,3 +651,384 @@ This section defines the end-to-end pipeline for each spec.
     HecticAddCleave:  +0.4%
     Composite:        +0.2%
     ACCEPTED.
+
+---
+
+## 15. UPSTREAM APL COMPARISON STUDY (2026-03-24)
+
+A line-by-line diff comparison of all 35 spec APLs between the upstream SimC
+project (`ActionPriorityLists/cloned_default/`) and our fork's APL
+(`ActionPriorityLists/default/`) was conducted. This section documents every
+difference, categorizes the divergence patterns, and provides actionable
+recommendations for aligning or intentionally diverging.
+
+### 15.1 Overall Diff Summary
+
+| Category | Specs | List |
+|----------|-------|------|
+| IDENTICAL (no diff) | 12 | DH Havoc, DH Devourer, Rogue Outlaw, Warlock Destruction, Shaman Elemental, Shaman Enhancement, Hunter BM, Paladin Protection, Warrior Protection, DH Vengeance, Monk Mistweaver, Druid Restoration (assisted_combat — both stubs) |
+| MINOR diffs (1-15 lines) | 6 | DK Frost, DK Blood, Hunter Survival, Monk Windwalker, Monk Brewmaster, Priest Shadow |
+| MODERATE diffs (16-60 lines) | 10 | DK Unholy, Evoker Devastation, Evoker Augmentation, Warrior Fury, Warrior Arms, Hunter Marksmanship, Paladin Retribution, Druid Balance, Druid Feral, Druid Guardian |
+| SIGNIFICANT diffs (60+ lines) | 4 | Mage Frost, Mage Fire, Mage Arcane, Warlock Affliction |
+| MASSIVE rewrite | 1 | Warlock Demonology |
+| UPSTREAM-ONLY (no ours equiv) | 1 | Druid Restoration (upstream has full cat-weave APL; ours is an assisted_combat stub) |
+
+### 15.2 Detailed Per-Spec Findings
+
+#### DK Unholy
+Upstream has three improvements our fork lacks:
+1. **Commander of the Dead talent awareness** on putrefy — upstream gates putrefy
+   on `runic_power<90&(talent.commander_of_the_dead&!cooldown.dark_transformation.ready|!talent.commander_of_the_dead)`.
+   Our version drops the RP<90 check and the commander_of_the_dead sub-condition entirely.
+2. **AoE spending_rp thresholds** — upstream adds `|active_enemies>=6` and
+   `|active_enemies>=7` to the spending_rp variable for big-pull AoE dumps.
+   Our version is simpler but misses this optimization.
+3. **raid_event.pull.exists checks** in st_planning and adds_remain variables —
+   upstream handles pull-timer-aware sequencing. Ours ignores pull events.
+
+**Recommendation:** Import upstream's commander_of_the_dead putrefy gating and
+AoE spending thresholds. The pull event checks are sim-specific and low priority.
+
+#### DK Frost
+Minor reorganization only:
+- Our version moves `potion` from the trinkets list to the cooldowns list.
+- A stray `target_if` comment exists in our version.
+- Functionally equivalent. **No action needed** except removing the stray comment.
+
+#### DK Blood
+- Upstream has specific named item lines (`light_company_guidon` with DRW cooldown
+  sync, `algethar_puzzle_box` with fight_remains check). Our version collapses to
+  a single `use_items,use_off_gcd=1`.
+- **Recommendation:** Add specific trinket lines for current-season items with
+  cooldown sync to Dancing Rune Weapon.
+
+#### Evoker Devastation
+Upstream has several improvements:
+1. **tip_the_scales** — upstream compares `action.fire_breath.usable_in<=action.eternity_surge.usable_in`
+   to decide which empower to tip. Our version just uses `buff.dragonrage.up` (no priority comparison).
+2. **Extra pyre line** for exactly 3 targets without feed_the_flames/volatility — upstream has
+   finer target-count granularity.
+3. **azure_sweep** present in upstream's aoe_sc and st_sc lists — our version removes azure_sweep
+   entirely from Scalecommander sub-lists.
+4. **charged_blast>=18 pyre** — upstream has a separate high-stack charged_blast pyre that ours removes.
+
+**Recommendation:** Restore tip_the_scales usable_in comparison (significant DPS routing decision).
+Restore azure_sweep to Scalecommander lists. Sim the charged_blast pyre threshold.
+
+#### Evoker Augmentation
+1. **invoke_external_buff** (Power Infusion) during Duplicate buff — upstream has this, ours removes it.
+2. **time_skip condition** — upstream uses `&cooldown.breath_of_eons.remains>=15` (AND logic);
+   ours uses `|` (OR logic), making it less restrictive.
+
+**Recommendation:** Restore Power Infusion call. Evaluate time_skip condition with sims — the AND
+vs OR difference could significantly affect breath_of_eons alignment.
+
+#### Warrior Fury
+- **Trinket updates only** — our version correctly updates from old-season `algethar_puzzle_box`
+  to current-season `treacherous_transmitter`, `cursed_stone_idol`, `unyielding_netherprism`.
+- **Our version is MORE current.** No upstream import needed.
+
+#### Warrior Arms
+Our version has substantial rework relative to upstream:
+1. **Trinket updates** — same current-season pattern as Fury. Correct.
+2. **sweeping_strikes timing** — ours uses `cooldown.colossus_smash.remains>5` (upstream: >10).
+   Our version is more aggressive. Needs sim validation.
+3. **demolish threshold** — ours consolidates to `stack>=5&debuff.colossus_smash.remains>=2`
+   (upstream has separate `stack=10` line + `colossus_smash` check). Ours is simpler.
+4. **Slayer AoE** — ours adds overpower with opportunist/dreadnaught, restricts mortal_strike
+   to executioners_precision.stack=2, removes ravager. Upstream keeps ravager and unrestricted
+   mortal_strike. Our version represents a different rotation philosophy.
+5. **execute lists** — ours removes `debuff.colossus_smash.up` fallback from mortal_strike.
+
+**Recommendation:** Sim-validate the sweeping_strikes timing change. The slayer AoE changes are
+intentional rework — sim-compare both approaches. The demolish consolidation should be validated.
+
+#### Hunter Marksmanship
+1. **target_if logic** — upstream uses `max:debuff.spotters_mark.down|action.aimed_shot.in_flight_to_target|max_prio_damage`;
+   our version uses simpler `1+debuff.spotters_mark.down|remains`. Upstream's `max_prio_damage` token
+   provides better multi-target prioritization.
+2. **trueshot_ready variable** — upstream adds `|time<10` for opener. Ours doesn't.
+3. **rapid_fire conditions** — upstream gates on `buff.trick_shots.remains>execute_time`;
+   ours is unconditional. Upstream prevents clipping.
+4. **Trinkets** — upstream has 4 granular trinket lines with `check_existing=0` and detailed
+   buff-sync; ours has 2 simpler lines.
+
+**Recommendation:** Import upstream's target_if with max_prio_damage for better target selection.
+Add trueshot_ready opener time<10 check. Add trick_shots remains guard on rapid_fire.
+
+#### Rogue Subtlety — CRITICAL DIVERGENCE
+This is one of our most simplified specs. Upstream has substantially more sophisticated logic:
+
+1. **shd_cp variable** — upstream: `combo_points<=2&talent.deathstalkers_mark|combo_points>=6&talent.unseen_blade|variable.targets>=5`.
+   Our fork: `combo_points>=6|hero_tree.deathstalker&combo_points<=2`. Upstream properly handles
+   both hero specs AND AoE (5+ targets), while ours uses hero_tree check (works but different token).
+
+2. **haste_trinket_snapshot variable** — upstream tracks haste trinket windows for unseen_blade
+   Shadow Dance timing. Our fork removes this entirely. This is a meaningful DPS loss for
+   Trickster builds with haste trinkets.
+
+3. **Shadow Dance** — upstream has TWO shadow_dance lines (one for unseen_blade with haste snapshot,
+   one standard). Ours has a single consolidated line. The upstream version better handles the
+   different Dance entry windows for Trickster vs Deathstalker.
+
+4. **Secret Technique** — upstream adds `|cooldown.secret_technique.duration<18&!cooldown.shadow_dance.ready`
+   fallback for using ST outside Dance when Dance isn't available. Our version only fires in Dance.
+
+5. **Black Powder** — upstream: `variable.targets>=3-talent.potent_powder` (dynamic threshold);
+   ours: flat `variable.targets>=2`. Upstream is correct for both talent states.
+
+6. **Build gating** — upstream gates build call on `variable.stealth|energy>60`;
+   ours always calls build unconditionally. Upstream avoids building at low energy outside stealth.
+
+7. **Vanish thresholds** — upstream: `energy>=50, combo_points.deficit>=2`;
+   ours: `energy>=40, combo_points.deficit>=3`. Different tuning.
+
+**Recommendation:** HIGH PRIORITY — import upstream's shd_cp variable, haste_trinket_snapshot,
+dual Shadow Dance lines, Secret Technique fallback, and dynamic Black Powder threshold. These
+represent significant DPS improvements especially for Trickster builds.
+
+#### Rogue Assassination
+Our version has meaningful improvements AND missing features:
+1. **Trinket handling** — ours is MORE current with 6 named current-season trinkets vs upstream's
+   single algethar_puzzle_box. Our version is superior here.
+2. **Crimson Tempest AoE spreading** — ours adds CT bleed spreading override at 5+ targets.
+   Upstream doesn't have this. Our improvement.
+3. **REMOVED cycle_targets** — ours removes garrote/rupture cycle_targets lines. May lose
+   multi-target DoT spreading efficiency. Needs sim validation.
+4. **REMOVED time_to_die guards** — upstream has `target.time_to_die>10|fight_remains<20`
+   safety checks on deathmark and kingsbane. Ours removes them. Upstream prevents wasting CDs
+   on dying targets.
+5. **REMOVED ambush opener** — upstream has ambush for blindside+improved_ambush at fight start.
+   Ours drops it.
+
+**Recommendation:** Restore time_to_die guards on deathmark/kingsbane. Restore ambush opener.
+Keep our trinket improvements and CT AoE spreading.
+
+#### Mage Frost — SIGNIFICANT DIVERGENCE
+1. **AoE thresholds** — upstream Spellslinger AoE at 4+ targets; ours at 3+. Different tuning.
+2. **CDS list** — upstream has specific named item lines (nevermelting_ice_crystal, freightrunners_flask,
+   vaelgors_final_stare) with detailed conditions. Ours just has potion.
+3. **Opener sequences** — upstream has separate ST vs AoE openers (ice_lance for ST, flurry+frozen_orb
+   for AoE). Ours has a unified opener.
+4. **FoF 2-stack ice_lance** — upstream has explicit `buff.fingers_of_frost.react=2` ice_lance
+   that ours removes (we added it back in Batch 7, but only in the C++ APL, not the simc file).
+5. **ray_of_frost** — upstream gates on `icicles<3|time-action.potion.last_used<25`;
+   ours is unconditional.
+6. **comet_storm** — upstream Spellslinger is unconditional; ours adds `buff.splinterstorm.down` check.
+
+**Recommendation:** Import upstream's named trinket items for current season. Add separate ST/AoE
+openers. Restore ray_of_frost icicle gating. Sim-validate AoE threshold (3 vs 4) and comet_storm
+splinterstorm check — these may be intentional optimizations.
+
+#### Mage Fire — SIGNIFICANT DIVERGENCE
+1. **Flamestrike thresholds** — upstream uses 8 for ff_filler (non-spellfire); ours uses 4.
+   Upstream uses 4 for sf_filler; ours uses 3. Our thresholds are much more aggressive.
+2. **nonsteroid_trinket_equipped variable** — upstream has this plus 8 specific named trinket
+   lines. Ours has a single simplified use_items line.
+3. **Pyroclasm awareness** — upstream has complex pyroclasm conditions on fireblast calls during
+   combustion. Ours simplified to just `call_action_list,name=fireblast`.
+4. **Execute-phase fire blast** — upstream has 2 extra lines for Frostfire execute-phase
+   fire blast logic at `target.health.pct<30`. Ours removes these.
+5. **Meteor timing** — upstream uses simpler `remains>2`; ours has burnout-aware timing
+   with sunfury_execution checks (more sophisticated).
+
+**Recommendation:** The flamestrike threshold differences are major — sim both approaches.
+Import upstream's pyroclasm awareness and execute-phase fire blast lines. Keep our meteor
+timing improvements. Import trinket handling for current season.
+
+#### Mage Arcane — SIGNIFICANT DIVERGENCE
+1. **Pooling variables** — upstream has `time_for_pooling` and `did_not_pool` variables based
+   on `fight_remains%%95` (modulo fight timing). Ours removes these entirely. This is a fight-
+   length optimization that matters for raid bosses with known kill times.
+2. **pulse_aoe_count** — upstream: `3+talent.orb_mastery`; ours: flat `3`. Upstream dynamically
+   adjusts AoE threshold based on talent.
+3. **Sub-list routing** — upstream routes sunfury with `!talent.splintering_sorcery`; ours uses
+   `talent.spellfire_spheres`. Different but functionally equivalent for most builds.
+4. **arcane_orb** — upstream has pooling-aware lines tied to did_not_pool variable. Ours doesn't.
+5. **Spellslinger mana management** — upstream adds `mana.pct>50` checks on arcane_pulse.
+   Ours doesn't, risking OOM in long fights.
+
+**Recommendation:** Import pooling variables — they represent significant optimization for raid
+encounters. Import dynamic pulse_aoe_count. Add mana management checks on arcane_pulse.
+
+#### Warlock Affliction — SIGNIFICANT DIVERGENCE
+Both versions have different approaches with different strengths:
+1. **Nightfall capping prevention** — our version adds 3 top-level lines preventing nightfall
+   stack overflow (malefic_grasp/drain_soul/shadow_bolt). Upstream doesn't have these.
+   **Our improvement.**
+2. **HC_AOE seed_of_corruption** — ours splits by sow_the_seeds talent and adds UA line.
+   Upstream uses unconditional seed. **Our improvement.**
+3. **Haunt conditions** — upstream uses unconditional haunt; ours adds `cooldown.haunt.ready`
+   or `buff.nightfall.react<2` gates. Different approaches.
+4. **Darkglare syncing** — upstream uses `pet.darkglare.remains<gcd` for general use; ours uses
+   `pet.darkglare.active`. Different precision levels.
+5. **SH_ST restructure** — upstream summons darkglare after dark_harvest CD check; ours reverses
+   order and adds cascading_calamity condition. Different priority philosophy.
+6. **Variables** — upstream has `cycling_variable` for `min_agony` target selection. Ours removes it.
+7. **OGCD racials** — upstream uses `variable.cds_active` on racials; ours uses explicit darkglare checks.
+
+**Recommendation:** Keep our nightfall capping prevention and HC_AOE improvements. Evaluate
+importing upstream's cycling_variable for min_agony (affects multi-target DoT spreading).
+Sim-compare darkglare syncing approaches.
+
+#### Warlock Demonology — MASSIVE REWRITE (highest priority)
+This is the most diverged spec. Completely different APL architecture:
+
+- **Upstream:** Uses hero-talent-branched sub-lists (`diabolist`, `soulharvest`) with
+  dedicated ST, cleave, and AoE sub-lists per hero tree. Has 9 precombat variable lines
+  for trinket sync. Complex dreadstalker timing with reign_of_tyranny. Tyrant at 5 shards.
+  7 lines of sophisticated trinket logic with buff duration, sync, and priority calculations.
+
+- **Ours:** Flat inline priority list with ALL abilities directly in the default list.
+  No hero-talent branching. No trinket sync variables. Simple grimoire/dreadstalker/tyrant
+  ordering. 16 tracking variables (next_tyrant_cd, imp_despawn calculations, etc.) but
+  no sub-list structure.
+
+**Recommendation:** HIGHEST PRIORITY — our Demonology APL needs a full structural rewrite
+to adopt upstream's hero-talent-branched architecture. The flat inline list cannot properly
+handle the different rotation priorities between Diabolist and Soul Harvester. The trinket
+sync logic is also significantly better in upstream.
+
+#### Paladin Retribution
+1. **Crusade support** — ours adds crusade duration checking in trinket sync variables.
+   Upstream only checks avenging_wrath. **Our improvement.**
+2. **Cooldown ordering** — upstream leads with algethar_puzzle_box (outdated); ours leads
+   with potion, external buffs, and current racials. Different but ours is more current.
+3. **Hammer of Light** — upstream has complex conditional logic (holy_flames, lights_guidance
+   checks); ours is unconditional. Upstream is more sophisticated.
+4. **Finisher logic** — upstream ds_castable uses flat `active_enemies>=3`; ours uses
+   `active_enemies>=(3-talent.tempest_of_the_lightbringer)`. **Our improvement.**
+
+**Recommendation:** Import upstream's Hammer of Light conditional logic. Keep our crusade
+support and tempest_of_the_lightbringer dynamic threshold.
+
+#### Monk Windwalker
+- Upstream has an extra zenith fallback line for no-trinket-buff scenarios with
+  `!trinket.1.has_use_buff&!trinket.2.has_use_buff` check.
+- **Recommendation:** Import the extra zenith fallback line.
+
+#### Monk Brewmaster
+1. **celestial_brew threshold** — upstream: `>0.3*health.max&cooldown.celestial_brew.charges_fractional>1.9`;
+   ours: `>0.95*health.max`. Upstream is much less restrictive (30% health stored vs 95%).
+2. **invoke_niuzao ordering** — upstream places it earlier with a tiger_palm combo line.
+3. **breath_of_fire** — upstream has an extra line for flurry_strikes talent. Ours removes it.
+
+**Recommendation:** Import upstream's celestial_brew threshold (0.3 is correct game behavior;
+0.95 is too restrictive and wastes healing). Import tiger_palm blackout_combo line.
+
+#### Druid Balance
+Mixed changes:
+1. **fury_of_elune** — ours has ec-specific logic with ca_inc.ready and trinket timing.
+   Different approach.
+2. **Solar Eclipse** — ours uses `charges_fractional=2` (upstream: `charges=2`). Ours is
+   more precise.
+3. **Force of Nature ordering** — upstream places it BEFORE convoke; ours moves it AFTER.
+   Different burst window sequencing.
+4. **Starsurge conditions** — upstream has complex multi-buff cost calculation; ours simplified
+   to `astral_power>80|buff.eclipse_solar.up`.
+
+**Recommendation:** Sim-validate force_of_nature ordering relative to convoke. Our
+charges_fractional improvement should be kept. Evaluate if starsurge simplification
+loses DPS compared to upstream's multi-buff approach.
+
+#### Druid Feral
+1. **Dungeon awareness** — upstream has `fight_style.dungeonslice|fight_style.dungeonroute`
+   checks for berserk holding, convoke holding, and frantic_frenzy gating. Ours removes
+   these entirely. **Upstream superior for M+ optimization.**
+2. **Tigers Fury** — upstream adds `cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10`
+   for berserk alignment. Ours simplified.
+3. **Trinket puzzle_box** — upstream has raid_event.adds awareness on algethar_puzzle_box.
+
+**Recommendation:** Import dungeon fight_style awareness for berserk/convoke holding.
+Import tigers_fury berserk alignment check.
+
+#### Druid Guardian
+Upstream has more nuanced shapeshifting logic:
+1. **cat_form precombat** — upstream allows cat_form with heart_of_the_wild.
+2. **Feline potential** — upstream has `!buff.feline_potential.up` on bear_form and
+   `fluid_form&buff.feline_potential_counter.stack=6&talent.wildpower_surge` on rake.
+   Ours removes all of this.
+3. **Maul threshold** — upstream: rage>=55; ours: rage>=60. Different tuning.
+4. **moonkin_form awareness** — upstream has moonkin_form checks for fount_of_strength.
+5. **HotW forms** — upstream has complex talent.moonkin_form conditions; ours simplified
+   to active_enemies and rage checks.
+
+**Recommendation:** Import upstream's feline_potential/wildpower_surge interactions
+(DPS gain from cat-weaving). Import lower maul threshold (rage>=55).
+
+#### Priest Shadow
+Minor differences, ours is actually slightly better:
+1. **tentacle_slam** — ours consolidates two upstream lines into one more comprehensive
+   line handling all cases (void_apparitions, maddening_tentacles, refreshable, raid_event,
+   insanity cost). **Our improvement.**
+2. **mind_flay interrupt** — ours interrupts at ticks>=2 (upstream: ticks>=3). More
+   aggressive interrupting for higher DPS.
+
+**Recommendation:** Keep our improvements. No upstream import needed.
+
+#### Hunter Survival
+- Ours adds `harpoon,if=prev.kill_command` to the cooldowns list.
+- Minor addition, likely correct for mobility. **Keep.**
+
+### 15.3 Systemic Patterns and Lessons
+
+#### Pattern 1: Trinket Handling
+Upstream generally has MORE specific named-trinket lines (algethar_puzzle_box era),
+while our fork either updates to current-season items (Warriors, Assassination) or
+simplifies to generic `use_items`. **Best practice:** Named trinket lines with cooldown
+sync to spec's major CD produce higher DPS than generic use_items.
+
+**Action:** For each spec, add 2-4 named trinket lines for the current season's BiS
+trinkets, synced to the spec's primary cooldown window.
+
+#### Pattern 2: Hero Talent Branching Depth
+Upstream maintains deeper hero-talent-specific sub-lists (especially Demonology with
+diabolist/soulharvester, Subtlety with deathstalker/trickster variables). Our fork
+tends to simplify into unified priorities. **The upstream approach produces better DPS**
+because hero talents fundamentally change rotation priorities.
+
+**Action:** For any spec where hero trees change the rotation meaningfully, ensure
+separate sub-lists or at minimum hero-tree-gated conditions on key abilities.
+
+#### Pattern 3: Dungeon/Fight Style Awareness
+Upstream Feral and other specs include `fight_style.dungeonslice|fight_style.dungeonroute`
+checks for M+ optimization (holding CDs for pulls, burst windows). Our fork strips these.
+**This matters for HecticAddCleave composite scoring.**
+
+**Action:** Restore dungeon fight_style checks on specs where CD holding matters
+(Feral, any spec with 2+ minute CDs that benefit from add alignment).
+
+#### Pattern 4: Safety Checks (time_to_die, fight_remains)
+Upstream has more `target.time_to_die>N` checks on major cooldowns to prevent wasting
+CDs on dying targets. Our fork often removes these. **In raid sims with dying adds,
+these checks prevent DPS loss.**
+
+**Action:** Restore time_to_die guards on all major cooldowns (deathmark, kingsbane,
+metamorphosis, etc.) — use `target.time_to_die>10|fight_remains<20` as the standard pattern.
+
+#### Pattern 5: Resource Management Sophistication
+Upstream tends to have more nuanced resource management (arcane mana pooling, unholy RP
+thresholds for AoE, subtlety energy gating). Our fork simplifies these. **The simplifications
+can cause resource waste that reduces DPS.**
+
+**Action:** Import resource management conditions where they exist in upstream,
+especially mana pooling (Arcane), RP dumping thresholds (Unholy), and energy gating (Subtlety).
+
+### 15.4 Priority Import List (ordered by expected DPS impact)
+
+| Priority | Spec | Import | Expected Impact |
+|----------|------|--------|-----------------|
+| 1 | Warlock Demonology | Full structural rewrite to hero-branched sub-lists | HIGH — current flat APL fundamentally wrong for hero talent routing |
+| 2 | Rogue Subtlety | shd_cp variable, haste_trinket_snapshot, dual Shadow Dance, Secret Technique fallback, dynamic Black Powder | HIGH — multiple DPS-relevant changes |
+| 3 | Evoker Devastation | tip_the_scales usable_in comparison, azure_sweep restoration, charged_blast pyre | MEDIUM-HIGH |
+| 4 | Mage Arcane | Pooling variables, dynamic pulse_aoe_count, mana management | MEDIUM-HIGH |
+| 5 | Mage Fire | Pyroclasm awareness, execute-phase fire blast, flamestrike threshold validation | MEDIUM |
+| 6 | Mage Frost | Named trinkets, separate ST/AoE opener, ray_of_frost icicle gating | MEDIUM |
+| 7 | DK Unholy | Commander of the Dead putrefy gating, AoE spending thresholds | MEDIUM |
+| 8 | Monk Brewmaster | celestial_brew 0.3 threshold, tiger_palm blackout_combo | MEDIUM |
+| 9 | Druid Feral | Dungeon fight_style awareness, tigers_fury berserk alignment | MEDIUM |
+| 10 | Druid Guardian | Feline_potential cat-weaving, maul rage>=55 | LOW-MEDIUM |
+| 11 | Hunter Marksmanship | max_prio_damage targeting, trueshot opener, trick_shots guard | LOW-MEDIUM |
+| 12 | Paladin Retribution | Hammer of Light conditional logic | LOW-MEDIUM |
+| 13 | Rogue Assassination | time_to_die guards, ambush opener | LOW |
+| 14 | Evoker Augmentation | Power Infusion call, time_skip AND logic | LOW |
