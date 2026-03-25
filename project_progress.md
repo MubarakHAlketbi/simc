@@ -1,10 +1,29 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
 Last updated: 2026-03-25
-56/56 profiles pass. 112/112 baselines (PW+HAC). 4,410 spells, 0 gaps. Build: gcc-14 clean.
-Phase 4-pre COMPLETE: Group A (.simc imports, 4 specs) + Group B (C++ sync, 4 specs) all done.
-Phase 4a baselines COMPLETE (DK Blood engine bug fixed). Phase 4d optimization NOT STARTED.
-Release gap analysis: see RELEASE_GAPS.md
+
+## Status at a Glance
+
+| Metric | Value |
+|--------|-------|
+| Profiles (compile + 1-iter sim) | 56/56 PASS |
+| Phase 4 baselines (PW + HAC) | 112/112 COMPLETE |
+| Spell database | 4,410 spells, 0 genuine gaps |
+| Tier sets implemented | 33/33 |
+| Apex talents implemented | 33/33 |
+| Audit issues resolved | 35/42 (batches 1-8; 9-10 deferred) |
+| APL fixes (upstream comparison) | 8/8 COMPLETE (Group A + B) |
+| Engine bugs | DK Blood HAC crash FIXED |
+| Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
+
+## What's Next (in priority order)
+
+1. **Guardian Druid profile** — remove `assisted_combat` stub from MID1_Druid_Guardian.simc so the C++ APL (guardian_apl.inc, rewritten 2026-03-24) is used. Re-run baselines.
+2. **Phase 4b** — re-run `gen_apl_diff.py` with updated extraction data
+3. **Phase 4d** — APL optimization loop (permutation candidates, condition sweeps, convergence)
+4. **Phase 5** — trinket combinatorics (BiS pair sims per spec)
+5. **Batch 9** — tier set DBC value verification (7 specs, MEDIUM priority)
+6. **Batch 10** — low-priority cleanup (5 items)
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -191,7 +210,7 @@ _ST/_CT name lookup rather than explicit integer ID in find_talent_spell calls.
 
 ### Audit Fix Pass — Summary (2026-03-24)
 
-Full audit: `audit_notes.md` (42 issues). Task list: `audit_task_list.md` (10 batches).
+Full audit: `full_spec_audit_2026-03-24.md` (42 issues, 10 batches).
 
 | Batch | Priority | Tasks | Status |
 | :--- | :--- | :--- | :--- |
@@ -344,7 +363,7 @@ Full specification: `APL_optimization.md`
 | MID1_Demon_Hunter_Devourer_Void-Scarred | 108,553 | 204,002 | 156,277 |
 | MID1_Demon_Hunter_Devourer | 105,777 | 203,082 | 154,429 |
 
-**Extraction pipeline:** FULLY RESOLVED. See `wowhead/EXTRACTION_PIPELINE_AUDIT.md` + `MANUAL_IMPORT_CHECKLIST.md`.
+**Extraction pipeline:** FULLY RESOLVED.
 33/33 specs extract all hero builds (including 5 specs with 3 build variants).
 All manual import items resolved: talent strings applied, Weapon of Wind implemented,
 apex talent data corrected.
