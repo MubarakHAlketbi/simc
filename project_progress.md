@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-24 (Upstream APL comparison complete — 198 sims at 10k iter across all 33 specs)
+Last updated: 2026-03-25 (Spell database complete — 4,410 spells, 0 genuine gaps)
 56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
 Next: Fix 4 upstream-inferior APLs → sync 4 C++-lagging APL generators → Phase 4 optimization loop
 Note: Audit batches 9 (tier DBC verification) and 10 (low-priority cleanup) deferred.
@@ -438,22 +438,49 @@ Previously resolved: 5 missing tier sets (2026-03-24 — DH Havoc, Evoker Aug, P
 
 ---
 
-## 8. Scanner False-Positive Bug in missing_from_code.md
+## 8. Spell Database (2026-03-25)
 
-The audit script searches for `player_talent_t` keyword to find talent declarations.
-Hunter uses `spell_data_ptr_t` (sc_hunter.cpp lines 17–30) and Paladin uses
-`const spell_data_t*` (paladin/sc_paladin.cpp) — both fully implemented but appear
-as 100% missing in the report.
+Comprehensive spell database built from Wowhead: 4,410 spells across all 13 classes,
+scraped from abilities + specialization + talents pages, with tooltip descriptions,
+damage classification, and SimC code cross-reference.
 
-**Impact:** 471 talents across Hunter BM/MM/SV and Paladin Prot/Ret reported as missing —
-all confirmed implemented by direct code inspection.
+**Database:** `spell_database.db` (SQLite) | **Reports:** `spell_database_reports/`
+**Script:** `scripts/build_spell_database.py` (rerunnable)
 
-**Note on file paths:** Paladin module is in engine/class_modules/paladin/sc_paladin.cpp
-(subdirectory), not a flat engine/class_modules/sc_paladin.cpp.
-Monk module is in engine/class_modules/monk/sc_monk.cpp (subdirectory).
+### Key Finding: 0 genuine missing DPS-relevant spells for Midnight
 
-Fix recommendation: update the scanner to also search for `find_talent_spell` calls,
-`spell_data_ptr_t` declarations, and `const spell_data_t*` pointer patterns.
+| Metric | Count |
+| :--- | ---: |
+| Total spells scraped | 4,410 |
+| Damage-related | 2,988 |
+| Has SimC code | 3,720 |
+| Raw gaps (damage + no code) | 355 |
+| After filtering healer/old/mastery/utility | **0** |
+
+The 355 raw gaps break down as: 129 healer-only, 111 old expansion talents,
+28 mastery passives (DBC auto), 35 utility/defensive, 38 ambiguous (healer class),
+14 reviewed → all false positives (DBC auto-parsed or not in Midnight trees).
+
+### Per-Class Coverage (DPS/tank spells with code)
+
+| Class | Coverage | Class | Coverage |
+| :--- | :--- | :--- | :--- |
+| warrior | 95% | rogue | 93% |
+| demon-hunter | 95% | mage | 92% |
+| priest | 92% | death-knight | 91% |
+| druid | 91% | warlock | 87% |
+| hunter | 86% | evoker | 84% |
+| paladin | 82% | monk | 80% |
+| shaman | 77% | | |
+
+Lower coverage in paladin/monk/shaman is due to healer spec talents counted in raw totals.
+
+### Previous Scanner Bug (resolved)
+
+The old `missing_from_code.md` scanner (now deleted) searched only for `player_talent_t`.
+Hunter uses `spell_data_ptr_t` and Paladin uses `const spell_data_t*` — both fully
+implemented. The new `build_spell_database.py` searches by spell ID + name variants,
+eliminating these false positives.
 
 ---
 

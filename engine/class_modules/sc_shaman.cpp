@@ -13132,7 +13132,7 @@ void shaman_t::init_action_list_enhancement()
   single_sb->add_action( "tempest,if=buff.maelstrom_weapon.stack=10" );
   single_sb->add_action( "lightning_bolt,if=buff.maelstrom_weapon.stack=10" );
   single_sb->add_action( "stormstrike,if=charges_fractional>=1.8" );
-  single_sb->add_action( "lava_lash" );
+  single_sb->add_action( "lava_lash,if=buff.hot_hand.up" );
   single_sb->add_action( "stormstrike" );
   single_sb->add_action( "voltaic_blaze" );
   single_sb->add_action( "sundering" );
@@ -13140,6 +13140,7 @@ void shaman_t::init_action_list_enhancement()
   single_sb->add_action( "crash_lightning" );
   single_sb->add_action( "lightning_bolt,if=buff.maelstrom_weapon.stack>=5" );
   single_sb->add_action( "flame_shock" );
+  single_sb->add_action( "frost_shock" );
 
   // Totemic Single Target
   single_totemic->add_action( "voltaic_blaze,if=dot.flame_shock.remains=0" );
@@ -13164,6 +13165,7 @@ void shaman_t::init_action_list_enhancement()
   single_totemic->add_action( "crash_lightning" );
   single_totemic->add_action( "lightning_bolt,if=buff.maelstrom_weapon.stack>=5" );
   single_totemic->add_action( "flame_shock" );
+  single_totemic->add_action( "frost_shock" );
 
 // def->add_action( "call_action_list,name=opener" );
 }

@@ -53,18 +53,17 @@ void fury( player_t* p )
   default_->add_action( "run_action_list,name=thane,if=talent.lightning_strikes&active_enemies=1" );
   default_->add_action( "run_action_list,name=thane_aoe,if=talent.lightning_strikes&active_enemies>1" );
 
+  slayer->add_action( "odyns_fury" );
   slayer->add_action( "recklessness" );
   slayer->add_action( "avatar" );
+  slayer->add_action( "execute" );
   slayer->add_action( "rampage,if=buff.enrage.remains<gcd|rage>=100" );
-  slayer->add_action( "bloodthirst,if=!buff.enrage.up" );
   slayer->add_action( "crushing_blow" );
   slayer->add_action( "bladestorm,if=(buff.enrage.up&talent.deft_experience|buff.enrage.remains>1)&(buff.recklessness.up|cooldown.recklessness.remains>30)" );
-  slayer->add_action( "odyns_fury" );
   slayer->add_action( "bloodbath" );
   slayer->add_action( "rampage,if=buff.recklessness.up" );
   slayer->add_action( "rampage" );
   slayer->add_action( "bloodthirst" );
-  slayer->add_action( "execute,if=target.health.pct<20|buff.sudden_death.up" );
   slayer->add_action( "wrecking_throw" );
   slayer->add_action( "rend,if=dot.rend.duration<6" );
   slayer->add_action( "raging_blow" );
@@ -90,19 +89,18 @@ void fury( player_t* p )
   slayer_aoe->add_action( "raging_blow" );
   slayer_aoe->add_action( "storm_bolt,if=buff.bladestorm.up" );
 
+  thane->add_action( "odyns_fury" );
   thane->add_action( "recklessness" );
   thane->add_action( "avatar" );
+  thane->add_action( "execute" );
   thane->add_action( "rampage,if=buff.enrage.remains<gcd|rage>=100" );
-  thane->add_action( "bloodthirst,if=!buff.enrage.up" );
   thane->add_action( "crushing_blow" );
-  thane->add_action( "odyns_fury" );
   thane->add_action( "thunder_blast,if=buff.thunder_blast.stack=2" );
   thane->add_action( "bloodbath" );
   thane->add_action( "rampage,if=buff.recklessness.up" );
   thane->add_action( "thunder_blast,if=buff.avatar.up" );
   thane->add_action( "bloodthirst" );
   thane->add_action( "rampage" );
-  thane->add_action( "execute,if=target.health.pct<20|buff.sudden_death.up" );
   thane->add_action( "thunder_blast" );
   thane->add_action( "raging_blow" );
   thane->add_action( "thunder_clap" );
