@@ -1,488 +1,250 @@
-# AGENTS.md - SimulationCraft Midnight Expansion Update
+# AGENTS.md — SimulationCraft Midnight Agent Guide
 
-**Last Updated: 2026-03-24 (extracted/ is now the canonical data source; info_base.md deprecated)**
+**Last Updated: 2026-03-25**
 
-## Objective
-
-Update SimulationCraft to fully support World of Warcraft's new "Midnight" expansion, ensuring accurate simulation of all new class talents, spells, abilities, gear, and game mechanics. Continuously improve APL (Action Priority List) quality for all 33 DPS/tank specs using automated optimization.
-
-## Context
-
-**SimulationCraft** is an open-source combat simulation engine for World of Warcraft. It models player characters, enemies, and combat mechanics to evaluate DPS, HPS, and other performance metrics. Players and theorycrafters rely on it for gear optimization, talent comparisons, and stat weight calculations.
-
-The "Midnight" expansion introduces significant changes including:
-- New talent trees and revamped class abilities
-- Updated itemization and gear systems
-- New combat mechanics and buff/debuff systems
-- Level cap changes and new spells
-- Class-specific changes and reworks
+This document is the operating manual for AI agents working on the SimulationCraft
+Midnight expansion. It covers project context, tools, data sources, workflows,
+and a complete file index. Read this first in every session.
 
 ---
 
-## Primary Data Source: Wowhead
+## 1. Project Overview
 
-**Wowhead (www.wowhead.com/midnight) is the canonical ground truth** for all Midnight expansion data. This includes:
+**SimulationCraft** is an open-source WoW combat simulator. We are updating it for
+the **Midnight** expansion — new talents, spells, gear, tier sets, and APLs for all
+33 DPS/tank specs.
 
-- Spell IDs, tooltips, and descriptions
-- Talent trees and ranks
-- Item stats, set bonuses, and special effects
-- Class changes and ability updates
-- Rotation priorities and cooldown usage
-- BiS gear recommendations
-- Enchants, gems, consumables
-- Tier set bonus effects
+**Current state (2026-03-25):** ~85% to first stable release.
+- 56/56 profiles compile and sim
+- 4,410 spells, 0 genuine gaps
+- 33/33 tier sets and apex talents implemented
+- 112/112 Phase 4 baselines (Patchwerk + HecticAddCleave)
+- 4/4 C++ APL generator syncs done
+- Remaining: 4 .simc APL imports, Guardian Druid profile fix, optimization loop
 
-**General Procedure:**
-1. Always verify data against Wowhead's Midnight database
-2. Record the URL or build ID used for each piece of data
-3. Note the retrieval date (format: YYYY-MM-DD) in comments
-4. If Wowhead is unclear, cross-reference with official Blizzard patch notes
-
-Example: `# Source: https://www.wowhead.com/spell=123456&expand=1 (2026-03-15)`
-
-**Special Procedure for Trinkets and Gear with Special Effects:**
-
-Many trinkets and gear effects use "dummy" or "token" spells to handle scaling. The item page shows a summary, but the full mechanics are defined in a separate spell page.
-
-**Steps:**
-1. On the item page, locate the spell ID linked in the "Item Effect" section.
-2. Extract the item page data: base numbers, cooldown, description text.
-3. Navigate to the spell page (https://www.wowhead.com/spell=SPELL_ID) for detailed mechanics.
-4. If the spell page references a "Scaling Token" or "Dummy" spell, fetch that too.
-5. Determine if displayed numbers are static or item-level dependent.
-
-**Important:** Document both the item URL and the spell URL(s) in code comments.
+**Primary status file:** `project_progress.md` — always read it at session start.
+**Release gap analysis:** `RELEASE_GAPS.md` — prioritized list of remaining work.
 
 ---
 
-## Wowhead Knowledge Base (`wowhead/` folder)
+## 2. File Index — What Lives Where
 
-A pre-fetched, structured knowledge base lives in the `wowhead/` directory at the repo root.
-It covers all 33 DPS/tank specs and was built from live Wowhead Midnight data.
+### Core Documentation (project root)
 
-### Folder Layout
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| `AGENTS.md` | This file — agent workflow and reference index | Every session start |
+| `project_progress.md` | Master status tracker — profiles, mechanics, APL, pipeline | Every session start |
+| `RELEASE_GAPS.md` | Prioritized gap analysis for first stable release | When planning work |
+| `NEXT_STEPS.md` | Prioritized TODO with specific fix descriptions | When picking next task |
+| `APL_optimization.md` | Full APL guide — structure rules, optimization loop, sim commands | When doing APL work |
+| `project_structure.md` | Codebase navigation — maps task types to source files (740 lines) | When touching code |
+| `audit_notes.md` | 42-issue audit findings by severity | When investigating spec issues |
+| `audit_task_list.md` | 10 batches of fixes from the audit | When checking what's been done |
+| `full_spec_audit_2026-03-24.md` | Complete per-class audit reports (5000+ lines) | Deep-dive into specific spec |
+| `spell_database_task.md` | Spell database methodology | If spell DB needs updating |
+
+### Wowhead Data (the canonical source for all game data)
 
 ```
 wowhead/
-  generate_links.sh          — generates info_links.md for every spec
-  extract_wowhead_tabs.py    — browser extractor for JS-tabbed Wowhead pages
-  gen_apl_diff.py            — APL diff analysis script (compares wowhead vs SimC APL)
+  extract_wowhead_tabs.py    — browser extractor (Playwright/Chromium)
+  gen_apl_diff.py            — APL diff: Wowhead rotation vs SimC APL
+  generate_links.sh          — generates info_links.md per spec
   APL_diff_report.md         — Phase 2 diff results for all 33 specs
-  {class}/
-    {spec}/
-      info_links.md          — canonical Wowhead URLs (guides + talent-calc + bis + tier)
-      info_base.md           — comprehensive pre-fetched information base (2026-03-17)
-      extracted/             — browser-extracted JS-tab content (2026-03-22)
-        rotation.md          — full rotation content: all hero talents × all tabs
-        rotation.json        — same, machine-readable
-        talents.md           — all talent builds with export codes
-        talents.json
-        bis.md               — BiS gear by slot
-        bis.json
-        consumables.md       — enchants, gems, potions, food, flasks
-        consumables.json
-        tier.md              — tier set bonuses (2pc and 4pc effects)
-        tier.json
+  {class}/{spec}/
+    extracted/               — ★ CANONICAL DATA — browser-extracted from Wowhead
+      rotation.md / .json    — rotation priorities (all hero talents × all tabs)
+      talents.md / .json     — talent builds with export codes
+      bis.md / .json         — BiS gear by slot
+      consumables.md / .json — enchants, gems, potions, food, flasks
+      tier.md / .json        — tier set bonus effects (2pc + 4pc)
+    info_links.md            — Wowhead URLs for this spec
+    info_base.md             — ⚠️ DEPRECATED (2026-03-17, misses JS content)
 ```
 
-Class and spec names use lowercase hyphenated slugs matching Wowhead URL conventions
-(e.g. `beast-mastery`, `death-knight`).
+**Rule:** Always use `extracted/` files. Never use `info_base.md` for decisions.
 
-### `info_base.md` — DEPRECATED (2026-03-17 snapshot)
+### Source Code
 
-> **WARNING:** `info_base.md` is OUT OF DATE (2026-03-17) and INCOMPLETE — it was built with
-> Firecrawl/web_extract which missed all JS-tab content (rotations, talent builds, gear).
-> **DO NOT USE `info_base.md` for any task.** Always use `extracted/` files instead.
-> The only remaining use for `info_base.md` is as a fallback for spell ID lookups if the
-> talent tree table is needed and `extracted/talents.md` doesn't have the ID.
+| What | Where |
+|------|-------|
+| Class modules | `engine/class_modules/sc_{class}.cpp` |
+| APL generators (C++) | `engine/class_modules/apl/apl_{class}.cpp` |
+| APL generators (warlock/mage) | `engine/class_modules/apl/warlock.cpp`, `mage.cpp` |
+| APL generators (druid) | `engine/class_modules/apl/druid/*.inc` |
+| APL overrides (.simc) | `ActionPriorityLists/default/{spec}.simc` |
+| APL upstream reference | `ActionPriorityLists/cloned_default/{spec}.simc` |
+| Enhancement shaman APL | `engine/class_modules/apl/shaman/enhancement.simc` |
+| Midnight gear/trinkets | `engine/player/unique_gear_midnight.cpp` |
+| Core action engine | `engine/action/action.cpp`, `engine/action/dot.cpp` |
+| Player scheduling | `engine/player/player.cpp` |
 
-### `extracted/` — CANONICAL DATA SOURCE (2026-03-22 snapshot)
+### Profiles and Results
 
-The `extracted/` subdirectory contains **browser-extracted content** from JS-rendered Wowhead pages. Wowhead hides rotation priorities, talent builds, and gear behind JavaScript tabs — `web_extract` and curl cannot access this content. The browser extractor clicks through every tab combination and captures the result.
+| What | Where |
+|------|-------|
+| MID1 profiles (56 total) | `profiles/MID1/MID1_{Class}_{Spec}[_{Variant}].simc` |
+| Phase 4 baselines (112 JSONs) | `results/phase4/MID1_{name}_{patchwerk|hecticaddcleave}.json` |
+| APL comparison results | `results/apl_compare/`, `results/apl_compare_all/` |
+| Sim scripts | `scripts/run_apl_compare.py`, `scripts/run_apl_compare_all.py` |
+| Spell database | `spell_database.db` (SQLite), reports in `spell_database_reports/` |
 
-**This is the ONLY reliable source.** `info_base.md` missed JS-tab content and is deprecated.
+### Build
 
-**`extracted/rotation.md` structure:**
-```
-## Hero Talent: HeroName
-### tab_group_0 — Tabs: [Single-Target Priority, AoE Priority, Opener, Pre-Combat Checks]
-#### Single-Target Priority
-Cast  Haunt.
-Cast  Agony.
-Cast  Wither.
-...
-### tab_group_1 — Tabs: [Darkglare, Dark Harvest, Malevolence]  <- cooldown sub-tabs
-#### Darkglare
-...
-```
+| What | Where |
+|------|-------|
+| Binary (built) | `engine/simc` (or `build/simc` after cmake build) |
+| CMake build | `cmake -B build -DBUILD_GUI=OFF -DSC_NO_NETWORKING=ON && cmake --build build -j$(nproc)` |
+| Copy to engine | `cp build/simc engine/simc` |
 
-**`extracted/talents.md` structure:**
-Contains all talent build names and export codes (base64 talent strings) that can be
-directly imported into SimC profiles via the `talents=` field.
+---
 
-### When to Use Which Source
+## 3. Agent Workflow
 
-| Task | Use |
-|------|-----|
-| Get rotation priority for a spec | `extracted/rotation.md` |
-| Get talent build export codes | `extracted/talents.md` |
-| Get BiS gear for a profile | `extracted/bis.md` |
-| Get enchants/consumables for a profile | `extracted/consumables.md` |
-| Get tier set bonus effects | `extracted/tier.md` |
-| Look up spell IDs / talent tree | `extracted/talents.md` first, then `info_base.md` as fallback only |
-| Get Wowhead URL for fresh fetch | `info_links.md` Sources section |
+### Session Start
+1. Read `AGENTS.md` (this file)
+2. Read `project_progress.md` for current status
+3. Read `NEXT_STEPS.md` or `RELEASE_GAPS.md` to pick work
+4. For spec-specific work: read `wowhead/{class}/{spec}/extracted/rotation.md`
 
-> **Rule:** Always start with `extracted/` files. Only fall back to `info_base.md` for
-> spell ID lookups not available in extracted data.
+### Before Editing Code
+1. Read `project_structure.md` to find the right file
+2. For APL work: read `APL_optimization.md` for rules and conventions
+3. Check `audit_task_list.md` to see if the issue was already addressed
 
-### When to Re-Fetch from Wowhead
+### After Completing Work
+1. Verify: `./engine/simc profiles/MID1/{profile}.simc iterations=1 output=/dev/null`
+2. Update `project_progress.md` with what changed
+3. Commit with descriptive message: `Fix(apl): {spec} — {what changed}`
 
-The knowledge base reflects Wowhead data as of 2026-03-22. Re-fetch when:
+### Validation Checklist
+- [ ] Code compiles: `cmake --build build -j$(nproc)`
+- [ ] 1-iter smoke test passes for affected profiles
+- [ ] No regressions in unrelated specs
+- [ ] Source data documented (Wowhead URLs/dates in comments)
+- [ ] `project_progress.md` updated
 
-1. A spell was patched after that date.
-2. A talent is missing and not explained by known false negatives.
-3. You need an exact damage formula not captured in the guide text.
+### APL-Specific Checklist
+- [ ] All actions appear in sim report (no 0-execute without conditions)
+- [ ] DPS >= baseline on BOTH Patchwerk AND HecticAddCleave
+- [ ] No talent build regresses >2%
+- [ ] DoT uptime >= 95% for maintained DoTs
+- [ ] Resource waste (overcap) < 5%
 
-To re-extract a single spec's rotation:
+---
+
+## 4. Sim Commands Reference
+
 ```bash
+# Build
+cmake -B build -DBUILD_GUI=OFF -DSC_NO_NETWORKING=ON
+cmake --build build -j$(nproc)
+cp build/simc engine/simc
+
+# Smoke test (1 iteration)
+./engine/simc profiles/MID1/MID1_Warrior_Fury.simc iterations=1 output=/dev/null
+
+# Baseline sim (Patchwerk, target_error convergence)
+./engine/simc profiles/MID1/MID1_Warrior_Fury.simc \
+  fight_style=Patchwerk target_error=0.1 threads=16 \
+  json2=results/phase4/MID1_Warrior_Fury_patchwerk.json output=/dev/null
+
+# Baseline sim (HecticAddCleave)
+./engine/simc profiles/MID1/MID1_Warrior_Fury.simc \
+  fight_style=HecticAddCleave target_error=0.1 threads=16 \
+  json2=results/phase4/MID1_Warrior_Fury_hecticaddcleave.json output=/dev/null
+
+# APL comparison (all specs)
+python3 scripts/run_apl_compare_all.py
+
+# APL diff vs Wowhead
+python3 wowhead/gen_apl_diff.py
+
+# Re-extract Wowhead data for one spec
 python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 ```
 
-To re-extract all specs:
+**Sim parameters (Phase 4 baselines):**
+- `target_error=0.1` (adaptive iterations, typically 8k-15k)
+- `max_time=300` (5 minutes), `vary_combat_length=0.2`
+- `threads=16-32` (use nproc)
+- Composite DPS = 0.50 × Patchwerk + 0.50 × HecticAddCleave
+
+---
+
+## 5. Data Source Hierarchy
+
+| Priority | Source | Use For |
+|----------|--------|---------|
+| 1 | `wowhead/{class}/{spec}/extracted/` | All game data: rotations, talents, gear, tier, consumables |
+| 2 | Wowhead live (via browser) | When extracted data is stale or missing |
+| 3 | DBC spell data (in-engine) | Spell coefficients, scaling, proc rates |
+| 4 | `info_base.md` | Last resort for spell ID lookups only |
+
+**Wowhead is the canonical ground truth.** Always verify against it.
+The `extracted/` data is from 2026-03-22. Re-extract if a spell was patched after that date.
+
+---
+
+## 6. Key Architecture Notes
+
+### APL Generation: Two Paths
+1. **C++ generators** (`apl_{class}.cpp`): Compile into the engine binary. Used when no .simc override exists.
+2. **.simc overrides** (`ActionPriorityLists/default/`): Loaded at runtime, override C++ APL. Used when we need faster iteration than recompiling.
+3. **Profile inline APL**: `actions=` lines in profile .simc files override everything. Should be avoided (Guardian Druid stub is a known bug).
+
+### Empowered Charges (DK Blood, Evoker)
+- Channeled spells with a release spell on completion
+- `last_tick()` schedules `release_spell->schedule_execute()`
+- Hack: `d->current_action = release_spell` prevents double schedule_ready
+- Bug fixed 2026-03-25: `player_t::interrupt()` now checks `!executing` before calling `schedule_ready()` — prevents crash when movement interrupts an empowered charge
+
+### Fight Styles
+- **Patchwerk**: Pure single-target, 300s, no movement
+- **HecticAddCleave**: Adds spawn periodically (5 adds, ~5% uptime), movement events. Simulates M+/raid with adds.
+
+---
+
+## 7. Wowhead Extraction Tool
+
+`wowhead/extract_wowhead_tabs.py` — browser-based extractor using Playwright/Chromium.
+
+**Why:** Wowhead uses React/JS for rotation priorities, talent builds, and gear.
+Plain HTTP returns empty shells. Only a real browser can click tabs and capture content.
+
+**Design:** Discovery-based — doesn't hardcode tab names. Discovers `[role="tab"]` groups,
+hero switches, and talent toggles. Clicks every combination. Handles Wowhead quirks
+(data-active deselection, DOM re-renders, duplicate text artifacts).
+
 ```bash
+# Install
+pip install playwright && playwright install chromium
+
+# Usage
+python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 python3 wowhead/extract_wowhead_tabs.py --all --pages rotation,talents,bis,consumables,tier
 ```
 
 ---
 
-## Browser Extraction Tool (`wowhead/extract_wowhead_tabs.py`)
-
-**Purpose:** Extracts content from JS-rendered Wowhead guide pages by running a real browser
-(Playwright/Chromium) and clicking through all tab combinations.
-
-**Why it exists:** Wowhead uses React/JS to render rotation priorities, talent builds, and gear
-recommendations inside tab components. Plain HTTP fetches (web_extract, curl, Firecrawl) return
-only a placeholder "Please select a Hero Talent" string. Only a real browser can click the tabs
-and capture the rendered content.
-
-**Discovery-based design:** The script does NOT hardcode tab names or positions. It:
-1. Discovers all `[role="tab"]` groups, hero talent switch buttons, and talent toggle buttons
-2. Classifies each element (hero switch vs content tab vs talent toggle)
-3. Clicks through every combination, re-discovering after each click
-4. Handles specs where hero switches appear above tabs (Warlock) vs inside tab panels (Warrior)
-5. Handles varying tab counts (2 groups for Rogue, 3 groups for Warrior/Warlock)
-
-**Known Wowhead quirks handled:**
-- Hero talent buttons use `data-active="true"` — clicking an already-active button DESELECTS it (adds placeholder). Script checks before clicking.
-- After clicking the last tab in a group, Wowhead re-renders hero switch buttons as duplicated-text artifacts (`"SlayerSlayer"`). Fix: reload the page for each hero talent iteration.
-- JS-based clicking by text (not element handles) — immune to stale DOM references.
-
-**Requirements:**
-```bash
-pip install playwright
-playwright install chromium
-```
-
-**Usage:**
-```bash
-# Single spec, single page
-python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
-
-# Single spec, all pages
-python3 wowhead/extract_wowhead_tabs.py warrior fury --pages rotation,talents,bis,consumables,tier
-
-# All specs, rotation only
-python3 wowhead/extract_wowhead_tabs.py --all --pages rotation
-
-# All specs, all pages (takes ~60 min)
-python3 wowhead/extract_wowhead_tabs.py --all
-
-# All specs excluding tanks
-python3 wowhead/extract_wowhead_tabs.py --all --dps-only
-```
-
-**Output:** For each spec/page: `.md` (human-readable) and `.json` (machine-readable) in
-`wowhead/{class}/{spec}/extracted/`.
-
----
-
-## APL Optimization Pipeline
-
-Full specification: `APL_optimization.md`
-
-### Overview
-
-The APL optimization pipeline improves Action Priority Lists for all specs using:
-- **Two fight styles**: Patchwerk (50% weight) + HecticAddCleave (50% weight)
-- **Multi-build validation**: APL must work for ALL talent builds (up to 8 per spec)
-- **Automated loop**: permutation candidates, condition sweeps, convergence at <0.1% delta
-- **LLM-assisted review**: optional final step using spec's extracted data for non-obvious synergies
-
-### Phases
-
-| Phase | Description | Status |
-| :--- | :--- | :--- |
-| Phase 1 | Browser extraction (rotation, talents, bis, consumables, tier) | COMPLETE |
-| Phase 2 | APL validation — diff all specs vs Wowhead | COMPLETE — 2 fixes |
-| Phase 3 | Profile updates — BiS gear + talent builds from extracted data | NEXT |
-| Phase 4 | Optimization loop — composite DPS scoring | PENDING |
-| Phase 5 | Trinket combinatorics — sim all BiS pairs | PENDING |
-
-### Sim Commands
-
-```bash
-# Build the binary
-cd engine && make -j$(nproc)
-
-# 1-iteration smoke test
-./engine/simc profiles/MID1/PROFILE.simc iterations=1 output=/dev/null
-
-# Patchwerk baseline
-./engine/simc input=profiles/MID1/PROFILE.simc iterations=10000 \
-  fight_style=Patchwerk desired_targets=1 json2=results/SPEC_patchwerk.json
-
-# HecticAddCleave baseline
-./engine/simc input=profiles/MID1/PROFILE.simc iterations=10000 \
-  fight_style=HecticAddCleave desired_targets=1 json2=results/SPEC_hecticaddcleave.json
-```
-
-### APL Rules (quick reference — full rules in APL_optimization.md)
-
-1. One `variables` sub-list, called first
-2. Trinkets always in a separate `trinkets` sub-list
-3. Hero-tree routing is mandatory (`run_action_list,if=hero_tree.X`)
-4. DoT refresh threshold: `dot.X.remains<=gcd` (never hard-code times)
-5. Never cap resources
-6. Cooldowns fire inside buff windows
-7. Execute-phase branching via `variable.execute_phase`
-8. Racials/externals before hero routing, aligned with primary CD
-9. No redundant conditions inside gated sub-lists
-10. Use `op=setif` for ternary variable assignments
-
----
-
-## APL Diff Tool (`wowhead/gen_apl_diff.py`)
-
-**Purpose:** Compares Wowhead rotation guide priorities against current SimC APL for every spec.
-
-**How it works:**
-1. Parses `extracted/rotation.md` to extract "Cast X" priority steps
-2. Reads SimC APL from both profile `.simc` files and C++ generator files
-3. Maps Wowhead spell names → SimC action names (300+ entry mapping table)
-4. Categorizes each action: MATCH / MISSING / ORDER_DIFF / CONDITION_DIFF / EXTRA
-5. Outputs `wowhead/APL_diff_report.md`
-
-**Usage:**
-```bash
-python3 wowhead/gen_apl_diff.py
-```
-
-**Important caveats when reading the report:**
-- MISSING flags are often false positives: engine-managed replacement actions, passive features,
-  or buff procs that don't have standalone castable actions
-- ORDER_DIFF is usually acceptable — SimC APLs optimize for sim accuracy, not 1:1 human guide order
-- NEEDS_MANUAL_REVIEW means the parser couldn't extract steps (usually because Wowhead used a
-  timeline image instead of text for the opener)
-- Always verify before acting on a MISSING flag
-
----
-
-## Task Dossier System
-
-**MANDATORY:** Before implementing any task, create a complete dossier in `task_dossiers/` that consolidates all necessary information.
-
-### Process
-
-1. **Pick a task** from `project_progress.md`
-2. **Create a dossier** in `task_dossiers/` using `TASK_DOSSIER_TEMPLATE.md`
-3. **Fetch and populate** all ground truth data (Wowhead URLs, formulas, spell IDs)
-4. **Complete the dossier** including target files, verification checklist, code change plan
-5. **Edit code** based ONLY on the dossier contents
-6. **After completion**, add dossier to git and reference it in commit
-
-### Existing Dossiers
-
-| File | Scope |
-|------|-------|
-| `rogue_general_2026-03-16.md` | Rogue Assassination/Outlaw/Subtlety general changes |
-| `shaman_elemental_2026-03-16.md` | Elemental Shaman general changes + APL |
-| `warlock_general_2026-03-16.md` | Warlock Affliction/Demo/Destro general changes |
-| `talent_audit_wowhead_2026-03-16.md` | Full talent audit: all 33 specs vs Wowhead |
-
----
-
-## Project Tracking
-
-**`project_progress.md`** is the primary source of truth for all implementation status.
-
-Statuses: **Implemented** | **In Beta** | **NYI** | **N/A**
-
-**Before making changes, always consult `project_progress.md`.**
-Update it immediately when a task is completed.
-
----
-
-## Agent Development Workflow
-
-**1. Session Start Protocol**
-- Read `AGENTS.md` and `project_progress.md`
-- For ANY spec work: read files from `wowhead/{class}/{spec}/extracted/` (rotation.md, tier.md, talents.md, bis.md, consumables.md)
-- **DO NOT use `info_base.md`** — it is outdated and incomplete
-- Check `task_dossiers/` for existing dossier before creating a new one
-
-**2. Task Selection**
-- Prioritize: NYI → In Beta → Implemented (for verification)
-- For APL work: follow Phase 3 → 4 → 5 pipeline in project_progress.md
-- Focus on one class/spec at a time
-
-**3. Validation Checklist** (before marking "Implemented"):
-- [ ] Code compiles without warnings/errors (`cd engine && make -j$(nproc)`)
-- [ ] 1-iter sim passes for all affected profiles
-- [ ] No regressions in unrelated specs
-- [ ] Source data documented in code (Wowhead URLs and dates)
-- [ ] `project_progress.md` updated
-
-**4. APL-specific checklist** (before marking an APL change as done):
-- [ ] 1-iter sim: PASS
-- [ ] All actions appear in sim report (no 0-execute actions without conditions)
-- [ ] DPS >= previous baseline on BOTH Patchwerk AND HecticAddCleave
-- [ ] No talent build regresses >2%
-- [ ] DoT uptime >= 95% for maintained DoTs
-- [ ] Resource waste (overcap) < 5% of total generated
-
-**5. GitHub Issues**
-- Use for: ambiguous mechanics questions, review requests, blockers
-- Tag with: `expansion:midnight`, task type, class/spec, status labels from `ISSUE_TAGS.md`
-- Search existing issues before starting to avoid duplicate work
-- Post summary after completing: what changed, rows updated, PR/commit links
-
-**6. Error Handling**
-- No Wowhead data: mark NYI, note "requires manual testing"
-- Unclear mechanics: open GitHub Issue labeled `needs-data`
-- Risky changes: separate branch, request testing
-
----
-
-## Talent Data Extraction
-
-> **MANDATORY:** Any time you need to fetch or verify talent data from Wowhead, use the
-> methodology in **`talent_extraction.md`**. The Wowhead talent calculator is a React SPA —
-> plain HTTP returns an empty shell. Only Firecrawl (which runs JS) returns talent tree data.
-
-### Quick Reference
-
-| Task | Tool |
-|------|------|
-| Get rotation priority | Read `wowhead/{class}/{spec}/extracted/rotation.md` |
-| Get talent build export codes | Read `wowhead/{class}/{spec}/extracted/talents.md` |
-| Get BiS gear | Read `wowhead/{class}/{spec}/extracted/bis.md` |
-| Get tier set bonuses | Read `wowhead/{class}/{spec}/extracted/tier.md` |
-| Get consumables/enchants | Read `wowhead/{class}/{spec}/extracted/consumables.md` |
-| Look up spell IDs for a spec | Read `wowhead/{class}/{spec}/extracted/talents.md`, fallback to `info_base.md` |
-| Fetch a spec's full talent tree (live) | Firecrawl + `talent_extraction.md` |
-| Look up single spell by ID | `web_extract("https://www.wowhead.com/beta/spell=XXXXX")` |
-| Re-extract rotation/BiS/consumables | `python3 wowhead/extract_wowhead_tabs.py {class} {spec} --pages rotation` |
-| Re-run APL diff | `python3 wowhead/gen_apl_diff.py` |
-
-### Talent Audit Status (2026-03-16)
-
-Full audit completed. Coverage: ~100%. All 33 specs complete.
-Full findings: `task_dossiers/talent_audit_wowhead_2026-03-16.md`
-
-**Priority Queue for New Talent Gaps:**
-1. Talents with direct numeric DPS effects (damage %, haste %, crit %)
-2. Talents gating or modifying core rotational abilities
-3. Resource-modifying talents (energy regen, CD reduction on damaging spells)
-4. Defensive/utility — register with `// N/A for DPS` comment, no mechanic needed
-
-### Apex Talents
-
-All 33 DPS/tank specs have apex talents fully implemented. IDs and mechanics documented in:
-- `task_dossiers/talent_audit_wowhead_2026-03-16.md`
-- `project_progress.md` Section 3
-
----
-
-## Codebase Navigation
-
-**Consult `project_structure.md` before starting any implementation task.** (740 lines)
-Maps issue types → source files, explains SimC architecture for Midnight development.
-
-### Key File Locations
-
-| What | Where |
-|------|-------|
-| APL generators | `engine/class_modules/apl/apl_{class}.cpp` (or `mage.cpp`, `warlock.cpp`) |
-| APL generator (druid) | `engine/class_modules/apl/druid/` (`.inc` files) |
-| Class modules | `engine/class_modules/sc_{class}.cpp` |
-| Midnight gear | `engine/player/unique_gear_midnight.cpp` |
-| MID1 profiles | `profiles/MID1/MID1_{Spec}_{HeroTree}.simc` |
-| Wowhead extracted (PRIMARY) | `wowhead/{class}/{spec}/extracted/` |
-| Wowhead info base (DEPRECATED) | `wowhead/{class}/{spec}/info_base.md` — outdated, do not use |
-| APL optimization guide | `APL_optimization.md` |
-| APL diff report | `wowhead/APL_diff_report.md` |
-| Extraction script | `wowhead/extract_wowhead_tabs.py` |
-| Diff script | `wowhead/gen_apl_diff.py` |
-| Link generator | `wowhead/generate_links.sh` |
-
----
-
-## Resources
-
-### Project Files (read before starting any task)
-
-| File | Purpose |
-|------|---------| 
-| `AGENTS.md` | This file — agent workflow, tools, and reference index |
-| `project_progress.md` | Master status tracker — all specs, gear, talents, APL pipeline |
-| `project_structure.md` | Codebase navigation — maps tasks to source files (740 lines) |
-| `APL_optimization.md` | Full APL optimization guide — structure rules, automated loop, composite scoring |
-| `talent_extraction.md` | MANDATORY for any talent work — Firecrawl methodology |
-| `wowhead/{class}/{spec}/extracted/rotation.md` | **PRIMARY** — Browser-extracted rotation priorities |
-| `wowhead/{class}/{spec}/extracted/talents.md` | Talent build export codes |
-| `wowhead/{class}/{spec}/extracted/bis.md` | BiS gear recommendations |
-| `wowhead/{class}/{spec}/extracted/consumables.md` | Enchants, gems, potions, food |
-| `wowhead/{class}/{spec}/extracted/tier.md` | Tier set bonus effects |
-| `wowhead/APL_diff_report.md` | Phase 2 APL diff — 33 specs, MISSING/ORDER_DIFF/MATCH |
-| `audit_notes.md` | Full spec audit findings — 42 issues by severity (2026-03-24) |
-| `audit_task_list.md` | Batched fix task list — 10 batches, prioritized (2026-03-24) |
-| `full_spec_audit_2026-03-24.md` | Complete audit report with all 13 per-class reports |
-| `TASK_DOSSIER_TEMPLATE.md` | Template for new task dossiers |
-| `ISSUE_TAGS.md` | All GitHub issue labels |
-| `task_dossiers/talent_audit_wowhead_2026-03-16.md` | Full talent audit results |
-
-### Wowhead URLs
-
-| Resource | URL |
-|----------|-----|
-| Midnight home | https://www.wowhead.com/midnight |
-| Talent calculator | `https://www.wowhead.com/talent-calc/{class}/{spec}/{hero}` |
-| Apex Talents guide | https://www.wowhead.com/guide/midnight/apex-talents-overview |
-| Spell lookup | `https://www.wowhead.com/spell=SPELL_ID` |
-| Beta spell lookup | `https://www.wowhead.com/beta/spell=SPELL_ID` |
-| Item lookup | `https://www.wowhead.com/item=ITEM_ID` |
+## 8. Wowhead URLs
+
+| Resource | URL Pattern |
+|----------|-------------|
+| Midnight home | `https://www.wowhead.com/midnight` |
 | Rotation guide | `https://www.wowhead.com/guide/classes/{class}/{spec}/rotation-cooldowns-pve-{role}` |
 | Talent builds | `https://www.wowhead.com/guide/classes/{class}/{spec}/talent-builds-pve-{role}` |
 | BiS gear | `https://www.wowhead.com/guide/classes/{class}/{spec}/bis-gear` |
-| Enchants/consumables | `https://www.wowhead.com/guide/classes/{class}/{spec}/enchants-gems-pve-{role}` |
 | Tier set bonuses | `https://www.wowhead.com/guide/classes/{class}/{spec}/tier-set-bonuses` |
+| Consumables | `https://www.wowhead.com/guide/classes/{class}/{spec}/enchants-gems-pve-{role}` |
+| Spell lookup | `https://www.wowhead.com/spell={ID}` |
+| Item lookup | `https://www.wowhead.com/item={ID}` |
 
-### Spec URL Role Mapping
-
-- Tank specs (use `role=tank`): blood, vengeance, guardian, brewmaster, protection
-- All others: use `role=dps`
-
----
-
-## Notes
-
-- **Code Formatting**: All C++ must conform to `.clang-format` (Google-based). Run `clang-format -i` before committing.
-- Maintain backward compatibility where possible
-- Use meaningful variable names and add comments for complex logic
-- Wowhead as of 2026-03-22 is the reference; note if newer data differs
-- The `extracted/` data is the ONLY authoritative source for ALL spec data — `info_base.md` is deprecated and must not be used
-- Full spec audit completed 2026-03-24: findings in `audit_notes.md` and `audit_task_list.md`
+Tank specs use `role=tank`: blood, vengeance, guardian, brewmaster, protection.
+All others use `role=dps`.
 
 ---
 
-*This file guides autonomous agents working on the Midnight expansion update for SimulationCraft. Always check `project_progress.md` before starting work and update it after completing tasks.*
+*Read `project_progress.md` next. It has the complete status of every spec, every phase,
+and every known issue. Update it after completing any work.*

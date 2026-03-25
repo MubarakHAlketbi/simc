@@ -1,9 +1,10 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-25 (Spell database complete — 4,410 spells, 0 genuine gaps)
-56/56 profiles pass 1-iteration sim. Build: gcc-14 clean.
-Next: Fix 4 upstream-inferior APLs → sync 4 C++-lagging APL generators → Phase 4 optimization loop
-Note: Audit batches 9 (tier DBC verification) and 10 (low-priority cleanup) deferred.
+Last updated: 2026-03-25
+56/56 profiles pass. 112/112 baselines (PW+HAC). 4,410 spells, 0 gaps. Build: gcc-14 clean.
+Phase 4-pre COMPLETE: Group A (.simc imports, 4 specs) + Group B (C++ sync, 4 specs) all done.
+Phase 4a baselines COMPLETE (DK Blood engine bug fixed). Phase 4d optimization NOT STARTED.
+Release gap analysis: see RELEASE_GAPS.md
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -114,7 +115,7 @@ All statuses below are based on direct code inspection (2026-03-22 audit).
 | Rogue Subtlety | In Beta | |
 | Shaman Elemental | Implemented | Lava Flows (ID 1273485): Maelstrom gain on LvB Overload (lines 6677–6681) and damage bonus (lines 6704–6707, 7029–7032) confirmed. Code looks up by name via _ST("Lava Flows"), not hardcoded ID. surging_shields (ID 382033): +4 Maelstrom per LS trigger via effectN(2) confirmed at sc_shaman.cpp lines 4712–4715. gain_t* surging_shields in gains struct (line 1507) and init_gains() (line 12619) confirmed. |
 | Shaman Enhancement | Implemented | surging_shields (ID 382033): +50% MSW proc chance on LS trigger via effectN(3).percent() confirmed at sc_shaman.cpp lines 4719–4722. |
-| Warlock Affliction | In Beta | drain_life APL: confirmed in warlock.cpp line 77 as primary filler with Gorefiend's Avarice; drain_soul also present (line 78) for Nightfall proc handling alongside it — not sole filler. |
+| Warlock Affliction | In Beta | C++ APL synced 2026-03-25: drain_soul is now sole filler (drain_life removed). Gorefiend's Avarice no longer changes filler logic. |
 | Warlock Demonology | In Beta | |
 | Warlock Destruction | In Beta | |
 | Warrior Arms | Implemented | Master of Warfare IDs 1269314/1269306/1269307 confirmed at sc_warrior.cpp lines 7263–7265. |
@@ -173,7 +174,7 @@ _ST/_CT name lookup rather than explicit integer ID in find_talent_spell calls.
 | Spec | APL Source | Sim Validated | Notes |
 | :--- | :--- | :--- | :--- |
 | All 33 specs | Wowhead Midnight rotations, synced 2026-03-17 | Yes (1-iter) | |
-| Warlock Affliction | Updated 2026-03-20 | Yes | drain_life primary filler with Gorefiend's Avarice; drain_soul present for Nightfall proc handling |
+| Warlock Affliction | Updated 2026-03-25 | Yes | C++ APL synced: drain_soul unconditional filler (drain_life removed) |
 | Rogue Outlaw | Updated 2026-03-20 | Yes | Grand Melee implementation confirmed |
 | Rogue Assassination | Updated 2026-03-20 | Yes | Sudden Demise execute bonus confirmed |
 | DH Havoc | Updated 2026-03-22 | Yes | Demonsurge ordering fix: demonsurge_available in if= guards (apl_demon_hunter.cpp lines 212, 250–254) |
@@ -304,34 +305,30 @@ Full specification: `APL_optimization.md`
 | Phase 3.5c | Investigate outliers + fix 3 profile data gaps | COMPLETE — DH Devourer confirmed valid new spec; 3 profiles fixed |
 | Phase 3.5d | Visual audit of all 33 specs + hero talent extraction fixes | COMPLETE — 3 extractor bugs fixed (prefix matching, apostrophe normalization, hyphen-to-space); 5 specs with 3 build variants now captured; 33/33 validated |
 | Phase 3.6 | Upstream APL comparison — 3-way sim study (198 sims, 10k iter, all 33 specs) | COMPLETE — 4 upstream wins, 1 ours win, 1 C++ win, 27 ties. Root cause analysis in APL_optimization.md §15.6-15.7 |
-| Phase 4-pre | Fix 8 APL issues found by upstream comparison (4 .simc imports + 4 C++ syncs) | NOT STARTED — see §7 HIGH issues |
-| Phase 4a | Complete baselines — 4 missing HAC sims + re-run 5 changed profiles (Druid Bal x3, Evoker Aug x2) | NOT STARTED |
+| Phase 4-pre | Fix 8 APL issues from upstream comparison (4 .simc imports + 4 C++ syncs) | COMPLETE — All 8 specs fixed in commit d4c2cc4 (2026-03-25). Group A: Rogue Assn/Sub, Warrior Arms, Monk BM. Group B: Warlock Aff, Warrior Fury, Shaman Enh, Monk BM. |
+| Phase 4a | Complete baselines — all HAC sims + re-run changed profiles | COMPLETE — 112/112 JSONs. DK Blood engine bug fixed (player.cpp: interrupt schedule_ready race). All profiles have both PW+HAC. |
 | Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | NOT STARTED |
 | Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | PARTIALLY DONE — upstream comparison identified the real gaps |
 | Phase 4d | Optimization loop — permutation candidates, condition sweeps, composite scoring (50% PW + 50% HAC) | NOT STARTED |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
-### Phase 4 Baseline Status (2026-03-22) — PARTIAL, not complete as previously claimed
+### Phase 4 Baseline Status (2026-03-25) — COMPLETE
 
-**Actual JSON file counts (verified by ls results/phase4/):**
+**JSON file counts (verified by ls results/phase4/):**
 - Patchwerk JSONs: 56 / 56 profiles — COMPLETE
-- HecticAddCleave JSONs: 52 / 56 profiles — INCOMPLETE
+- HecticAddCleave JSONs: 56 / 56 profiles — COMPLETE
+- **Total: 112 JSON files** (all profiles × both fight styles)
 
-**Missing HecticAddCleave runs (4 profiles):**
-- MID1_Death_Knight_Blood
-- MID1_Death_Knight_Blood_Deathbringer
-- MID1_Evoker_Devastation
-- MID1_Evoker_Devastation_FS
+**Completed 2026-03-25:**
+- DK Blood x2 HAC: Engine bug fixed (`player_t::interrupt()` schedule_ready race with empowered charges). Added `!executing` guard.
+- Evoker Devastation x2 HAC: Generated successfully.
+- Druid Balance HAC: Re-run with updated talent string.
+- Evoker Augmentation x2 HAC: Re-run with updated talent strings.
 
-**Total JSONs: 108** (not 112 as previously claimed — 4 HAC runs never completed)
-
-**Remaining Phase 4 work:**
-1. (4a) Run 4 missing HecticAddCleave baseline sims (DK Blood x2, Evoker Dev x2)
-2. (4a) Re-run PW + HAC baselines for 5 profiles with changed talents (Druid Bal x3, Evoker Aug x2) — DPS will change significantly now that real talent strings are applied
-3. (4b) Re-run gen_apl_diff.py — extraction pipeline fixed 6 hero talents + 5 build variants since last run; diff results will change
-4. (4c) Review 12 HIGH-priority specs in APL_diff_report.md — determine real gaps vs false positives
-5. (4d) Run permutation candidates per spec (APL condition sweeps); accept only when composite improves AND neither fight style regresses >1%
-6. Phase 5: trinket combinatorics (BiS pair sims per spec)
+**Remaining pipeline work:**
+1. (4b) Re-run gen_apl_diff.py — extraction pipeline fixed since last run
+2. (4d) Run permutation candidates per spec — accept only when composite improves AND neither fight style regresses >1%
+3. Phase 5: trinket combinatorics
 
 **Composite DPS baseline (1000 iter, 2026-03-22) — top 10 (52 complete pairs only):**
 | Profile | Patchwerk | HecticAC | Composite |
@@ -392,19 +389,24 @@ Notes:
 
 ### HIGH — DPS accuracy impact
 
-**C++ APL generator desync (4 specs losing 4-8% DPS vs .simc overrides):**
-- Warlock Affliction: C++ uses drain_life filler (-7.7%) — should use drain_soul unconditionally
-- Warrior Fury: C++ priority ordering wrong (-6.7%) — Execute, Odyn's Fury, Crushing Blow misordered
-- Shaman Enhancement: C++ unconditional lava_lash (-5.0%) — needs buff.hot_hand.up guard
-- Monk Brewmaster: C++ Blackout Kick above Keg Smash (-4.4%) — Batch 6 reorder was wrong
+**C++ APL generator desync — RESOLVED 2026-03-25 (4 specs, Group B):**
+- ~~Warlock Affliction (-7.7%)~~: drain_soul unconditional filler (warlock.cpp) ✅
+- ~~Warrior Fury (-6.7%)~~: Odyn's Fury→Recklessness, Execute unconditional+above Crushing Blow (apl_warrior.cpp) ✅
+- ~~Shaman Enhancement (-5.0%)~~: lava_lash gated on buff.hot_hand.up, frost_shock filler added (sc_shaman.cpp) ✅
+- ~~Monk Brewmaster (-4.4%)~~: Keg Smash→RJW→Blackout Kick order restored (apl_monk.cpp) ✅
 
-**APL .simc overrides inferior to upstream (4 specs losing 0.8-2.2%):**
-- Rogue Assassination: missing bleed spreading, trinket timing, complex Vanish (-2.2%)
-- Rogue Subtlety: energy>60 build gate causes idling, bad dance entry (-1.9%)
-- Warrior Arms: Sweeping Strikes/Demolish thresholds too conservative (-1.3%)
-- Monk Brewmaster: Celestial Brew 0.95 threshold too restrictive (-0.8%)
+**APL .simc overrides — RESOLVED 2026-03-25 (4 specs, Group A):**
+- ~~Rogue Assassination (-2.2%)~~: Upstream APL imported with bleed spreading, simplified Vanish ✅
+- ~~Rogue Subtlety (-1.9%)~~: Upstream APL imported, energy gate removed, proper shd_cp ✅
+- ~~Warrior Arms (-1.3%)~~: Upstream APL imported, thresholds loosened ✅
+- ~~Monk Brewmaster (-0.8%)~~: Upstream APL imported, Celestial Brew 0.3 threshold ✅
 
-Previously resolved: 5 missing tier sets (2026-03-24 — DH Havoc, Evoker Aug, Priest Shadow, Enh Shaman, WW Monk)
+**Guardian Druid profile uses stub APL:**
+- Profile MID1_Druid_Guardian.simc has inline `actions=assisted_combat` stub (~13 actions)
+- The C++ APL in guardian_apl.inc is a full rotation (rewritten 2026-03-24)
+- Fix: remove inline APL from profile so C++ generator is used
+
+Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (2026-03-25)
 
 ### MEDIUM — Behavior correctness
 
@@ -431,10 +433,10 @@ Previously resolved: 5 missing tier sets (2026-03-24 — DH Havoc, Evoker Aug, P
 
 ### LOW — Cosmetic / blocked
 
-- Phase 4 APL optimization loop: 52/56 profiles have both PW+HAC baselines; 4 missing HAC runs
-  (DK Blood x2, Evoker Dev x2) need to be completed before composite scoring is final
-- Trinket+embellishment stacking — GitHub Issue #81, blocked on beta data
+- Phase 4d APL optimization loop: all 112 baselines complete, ready for permutation testing
+- Trinket+embellishment stacking — GitHub Issue #81, blocked on live data
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
+- 61 TODO/FIXME comments in sc_mage.cpp — code quality debt, zero DPS impact
 
 ---
 
@@ -541,3 +543,7 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 || 873d6ff | 2026-03-24 | Docs+data: unused (superseded by 10k run) |
 || 76ddf55 | 2026-03-24 | Data: 10k iteration APL comparison — 198 sims, all 33 specs confirmed |
 || ccdff14 | 2026-03-24 | Docs: Root cause analysis for all APL gaps — Sections 15.6 + 15.7 |
+|| d4c2cc4 | 2026-03-25 | Fix(apl): Priority 1B — sync 4 C++ APL generators (Warlock Aff, Warrior Fury, Shaman Enh, Monk BM) |
+|| — | 2026-03-25 | Fix(engine): DK Blood empowered charge crash — player_t::interrupt() schedule_ready race condition |
+|| — | 2026-03-25 | Phase 4a: Complete all 112 baselines (56 PW + 56 HAC), re-run changed profiles |
+|| — | 2026-03-25 | Docs: RELEASE_GAPS.md gap analysis, update project_progress.md + AGENTS.md |

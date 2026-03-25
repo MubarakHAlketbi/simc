@@ -36,10 +36,14 @@ Files: `engine/class_modules/apl/apl_{class}.cpp` for each spec
 
 ## Priority 2: Complete Phase 4 Baselines (Phase 4a)
 
-| Task | Details |
-|------|---------|
-| Run 4 missing HecticAddCleave sims | DK Blood x2, Evoker Dev x2 |
-| Re-run baselines for 5 changed profiles | Druid Bal x3, Evoker Aug x2 (talent strings changed) |
+| Task | Status | Details |
+|------|--------|---------|
+| Evoker Devastation x2 HAC | DONE | Both HAC baselines generated (Mar 25) |
+| Druid Balance HAC | DONE | Re-run with updated profile (Mar 25) |
+| Evoker Augmentation x2 HAC | DONE | Re-run with updated profiles (Mar 25) |
+| Druid Balance Elune HAC | DONE | Already current (Mar 25) |
+| Druid Balance Keeper HAC | DONE | Profile unchanged; Mar 22 baseline valid |
+| DK Blood x2 HAC | DONE | Engine bug FIXED (player.cpp): movement interrupt during empowered charge caused schedule_ready race. Root cause: player_t::interrupt() called schedule_ready() after channeling->interrupt_action() had already set executing=release_spell. Fix: added `!executing` guard to interrupt handler's schedule_ready check. |
 
 ---
 

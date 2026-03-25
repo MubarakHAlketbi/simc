@@ -7535,7 +7535,10 @@ void player_t::interrupt()
   }
   else
   {
-    if ( !readying && !current.sleeping )
+    // Don't schedule ready if a foreground action is already executing (e.g. an empowered charge's
+    // release spell was scheduled during channeling->interrupt_action() above).
+    // The action_execute_event will call schedule_ready when the action completes.
+    if ( !readying && !executing && !current.sleeping )
       schedule_ready();
 
     if ( current_execute_type == execute_type::CAST_WHILE_CASTING )
