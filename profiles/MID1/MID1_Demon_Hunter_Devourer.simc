@@ -6,7 +6,7 @@ race=night_elf
 timeofday=night
 role=spell
 position=back
-talents=CgcBAAAAAAAAAAAAAAAAAAAAAAAWmxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzYmZWmZmmlZ2mZGjZGA
+talents=CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmxMzMGzMAAAAAAAegxsNYGAAAAAAAAmxMMmZmZmZmZGzsYGjFtsxMzMzWbzMzAYYAIwMGMmB
 
 # Default consumables
 potion=potion_of_recklessness_2
