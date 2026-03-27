@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-25
+Last updated: 2026-03-27
 
 ## Status at a Glance
 
@@ -18,7 +18,7 @@ Last updated: 2026-03-25
 
 ## What's Next (in priority order)
 
-1. **Guardian Druid profile** — remove `assisted_combat` stub from MID1_Druid_Guardian.simc so the C++ APL (guardian_apl.inc, rewritten 2026-03-24) is used. Re-run baselines.
+1. ~~**Guardian Druid profile**~~ — FIXED 2026-03-27 (commit 6534f10). Removed assisted_combat stub; fixed C++ APL (ravage/thrash_bear/berserk_bear action names, moonfire precombat, invalid variables). DPS ~3k → ~10.6k.
 2. **Phase 4b** — re-run `gen_apl_diff.py` with updated extraction data
 3. **Phase 4d** — APL optimization loop (permutation candidates, condition sweeps, convergence)
 4. **Phase 5** — trinket combinatorics (BiS pair sims per spec)
@@ -420,10 +420,10 @@ Notes:
 - ~~Warrior Arms (-1.3%)~~: Upstream APL imported, thresholds loosened ✅
 - ~~Monk Brewmaster (-0.8%)~~: Upstream APL imported, Celestial Brew 0.3 threshold ✅
 
-**Guardian Druid profile uses stub APL:**
-- Profile MID1_Druid_Guardian.simc has inline `actions=assisted_combat` stub (~13 actions)
-- The C++ APL in guardian_apl.inc is a full rotation (rewritten 2026-03-24)
-- Fix: remove inline APL from profile so C++ generator is used
+**Guardian Druid profile** — RESOLVED 2026-03-27 (commit 6534f10):
+- Removed inline assisted_combat stub from profile
+- Fixed C++ APL: ravage→maul (auto-fires ravage on buff), thrash_bear→thrash, berserk_bear→berserk, removed invalid variables/precombat moonfire
+- DPS: ~3k → ~10.6k
 
 Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (2026-03-25)
 
