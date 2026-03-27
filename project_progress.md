@@ -400,7 +400,7 @@ All other Midnight trinkets/consumables status:
 
 Notes:
 - Raid trinkets registered with base proc logic; secondary effects pending beta tuning data
-- Trinket+embellishment stacking (Locus-Walker, Ranger-Captain, Resonant Roarstone): GitHub Issue #81 — blocked on live data
+- Darkmoon Deck trinket+embellishment stacking (Blood, Rot, Hunt): GitHub Issue #81 — blocked on beta data. Current code treats as mutually exclusive via find_special_effect() dedup.
 
 ---
 
@@ -453,7 +453,7 @@ Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (
 ### LOW — Cosmetic / blocked
 
 - Phase 4d APL optimization loop: all 112 baselines complete, ready for permutation testing
-- Trinket+embellishment stacking — GitHub Issue #81, blocked on live data
+- Darkmoon Deck trinket+embellishment stacking — GitHub Issue #81, blocked on beta data
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
 - 61 TODO/FIXME comments in sc_mage.cpp — code quality debt, zero DPS impact
 
