@@ -1,29 +1,34 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-27
+Last updated: 2026-03-27 (evening)
 
 ## Status at a Glance
 
 | Metric | Value |
 |--------|-------|
 | Profiles (compile + 1-iter sim) | 56/56 PASS |
-| Phase 4 baselines (PW + HAC) | 112/112 COMPLETE |
+| Phase 4 baselines (PW + HAC) | 112/112 COMPLETE (stale — talent strings changed, re-run needed) |
 | Spell database | 4,410 spells, 0 genuine gaps |
 | Tier sets implemented | 33/33 |
 | Apex talents implemented | 33/33 |
 | Audit issues resolved | 35/42 (batches 1-8; 9-10 deferred) |
 | APL fixes (upstream comparison) | 8/8 COMPLETE (Group A + B) |
+| Talent builds optimized | 29/33 profiles updated to best Wowhead build |
+| APL optimizer | Built and tested — Guardian Druid +5.28% |
 | Engine bugs | DK Blood HAC crash FIXED |
 | Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
 
 ## What's Next (in priority order)
 
-1. ~~**Guardian Druid profile**~~ — FIXED 2026-03-27 (commit 6534f10). Removed assisted_combat stub; fixed C++ APL (ravage/thrash_bear/berserk_bear action names, moonfire precombat, invalid variables). DPS ~3k → ~10.6k.
-2. **Phase 4b** — re-run `gen_apl_diff.py` with updated extraction data
-3. **Phase 4d** — APL optimization loop (permutation candidates, condition sweeps, convergence)
-4. **Phase 5** — trinket combinatorics (BiS pair sims per spec)
-5. **Batch 9** — tier set DBC value verification (7 specs, MEDIUM priority)
-6. **Batch 10** — low-priority cleanup (5 items)
+1. ~~**Guardian Druid profile**~~ — FIXED 2026-03-27 (commit 6534f10). Removed assisted_combat stub; fixed C++ APL action names. DPS ~3k → ~10.6k.
+2. ~~**Talent build optimization**~~ — DONE 2026-03-27 (commit 998745e). 29/33 profiles updated with best Wowhead builds. Biggest gains: Guardian +554%, Vengeance DH +46%, Assa Rogue +39%.
+3. **Run APL optimizer on all 33 specs** — tool built and tested, needs full run (~1h/spec × 33 = batch overnight)
+4. **Re-run Phase 4 baselines** — talent strings changed for 29 profiles, baselines are stale
+5. **Phase 4b** — re-run `gen_apl_diff.py` with updated extraction data
+6. **Talent engine** — build smart permutation system to go beyond Wowhead's curated builds (M1.3, M1.4, M2, M4 in action plan)
+7. **Phase 5** — trinket combinatorics (BiS pair sims per spec)
+8. **Batch 9** — tier set DBC value verification (7 specs, MEDIUM priority)
+9. **Batch 10** — low-priority cleanup (5 items)
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -328,7 +333,9 @@ Full specification: `APL_optimization.md`
 | Phase 4a | Complete baselines — all HAC sims + re-run changed profiles | COMPLETE — 112/112 JSONs. DK Blood engine bug fixed (player.cpp: interrupt schedule_ready race). All profiles have both PW+HAC. |
 | Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | NOT STARTED |
 | Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | PARTIALLY DONE — upstream comparison identified the real gaps |
-| Phase 4d | Optimization loop — permutation candidates, condition sweeps, composite scoring (50% PW + 50% HAC) | NOT STARTED |
+| Phase 4d-talent | Wowhead talent build comparison — sim all 262 builds across 33 specs | COMPLETE — 29/33 specs had better builds. 128s total runtime. Profiles updated (commit 998745e). |
+| Phase 4d-apl | APL optimization engine — mutation operators + multi-stage evaluation | IN PROGRESS — tool built (`scripts/apl_optimizer.py`), Guardian Druid +5.28%. Full 33-spec run pending. |
+| Phase 4d-talent2 | Talent permutation engine — smart tree search beyond Wowhead builds | NOT STARTED — design in `talent_engine_design.md`. Needs M1.3 (codec) + M1.4 (tree extractor). |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
 ### Phase 4 Baseline Status (2026-03-25) — COMPLETE
@@ -368,10 +375,35 @@ Full specification: `APL_optimization.md`
 All manual import items resolved: talent strings applied, Weapon of Wind implemented,
 apex talent data corrected.
 
-**Outliers needing APL investigation (baselines stale — re-run needed):**
-- MID1_Rogue_Assassination (~13k composite) — APL likely needs DPS-spec tuning
-- MID1_Evoker_Augmentation (~8k) — support spec, low raw DPS expected; talent string now applied, re-baseline will show real DPS
-- MID1_Druid_Balance (~3k) — talent string now applied (was defaults), re-baseline expected to show major improvement
+**Outliers — RESOLVED 2026-03-27:** Talent builds updated for all 3 outliers (and 26 other specs) via Wowhead build comparison. Re-baselines needed.
+
+### Wowhead Talent Build Comparison (2026-03-27) — Phase 4d-talent
+
+**Tool:** `scripts/talent_build_compare.py` | **Results:** `results/optimization/wowhead_comparison.md`
+
+Simmed all 262 Wowhead-recommended talent builds (4-16 per spec) across 33 specs at 500 iterations × 2 fight styles. Total runtime: 128 seconds.
+
+**Finding: 29 of 33 specs had a better Wowhead build than their current profile.**
+
+Top improvements (composite DPS):
+| Spec | Gap | Best Build |
+| :--- | ---: | :--- |
+| Guardian Druid | +554% | Druid of the Claw #1 |
+| Vengeance DH | +46% | Aldrachi Reaver #5 |
+| Rogue Assassination | +39% | Deathstalker #6 |
+| Warrior Arms | +37% | Slayer #6 |
+| Shadow Priest | +35% | Archon #2 |
+| Hunter BM | +32% | default #2 |
+| Enhancement Shaman | +32% | Stormbringer #5 |
+| Warrior Fury | +31% | Mountain Thane #5 |
+| Elemental Shaman | +28% | Farseer #4 |
+| Rogue Outlaw | +26% | Fatebound #4 |
+
+4 specs already optimal: Mage Fire, Evoker Devastation, Prot Paladin, Prot Warrior.
+
+Note: Large gaps (>20%) are mainly AoE/M+ builds dominating HecticAddCleave, which is correct for composite scoring (50% PW + 50% HAC).
+
+All 29 profiles updated in commit 998745e. 56/56 pass smoke test.
 
 ---
 
@@ -452,14 +484,51 @@ Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (
 
 ### LOW — Cosmetic / blocked
 
-- Phase 4d APL optimization loop: all 112 baselines complete, ready for permutation testing
-- Darkmoon Deck trinket+embellishment stacking — GitHub Issue #81, blocked on beta data
+- Darkmoon Deck trinket+embellishment stacking — GitHub Issue #81, blocked on beta data. Investigation report: `darkmoon_investigation.md`
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
 - 61 TODO/FIXME comments in sc_mage.cpp — code quality debt, zero DPS impact
+- Phase 4 baselines stale (29 talent strings changed) — re-run needed
 
 ---
 
-## 8. Spell Database (2026-03-25)
+## 8. Optimization System (2026-03-27)
+
+### Documentation
+
+| File | Description |
+| :--- | :--- |
+| `optimization_action_plan.md` | **Master action plan** — 7 milestones, 5-day schedule, file structure, success criteria |
+| `apl_optimizer_plan.md` | APL optimizer design — 4 components, 6 mutation operators, multi-stage evaluation, composite scoring |
+| `talent_engine_design.md` | Talent engine architecture — DAG model, DPS node classification, pivot/tuning search, talent string codec |
+| `darkmoon_investigation.md` | Darkmoon Deck/Sigil/Dominion trinket investigation — spell IDs, interaction testing plan for beta |
+
+### Tooling
+
+| Script | Description | Status |
+| :--- | :--- | :--- |
+| `scripts/lib/sim_runner.py` | SimC runner — run sims, parse JSON, parallel execution, composite scoring | DONE |
+| `scripts/lib/apl_parser.py` | APL parser/serializer — parse .simc ↔ structured data, mutation helpers | DONE |
+| `scripts/lib/apl_mutations.py` | 4 mutation operators — adjacent swap, threshold sweep, promotion, routing | DONE |
+| `scripts/apl_optimizer.py` | APL optimization loop — baseline → generate → evaluate → accept → converge | DONE (tested) |
+| `scripts/talent_build_compare.py` | Wowhead talent build comparison — sim all builds, rank, report | DONE (all 33 specs) |
+| `scripts/lib/talent_codec.py` | Talent string encoder/decoder (base64 ↔ node selections) | PLANNED |
+| `scripts/lib/talent_tree.py` | DBC talent tree extractor (trait_data → Python graph) | PLANNED |
+| `scripts/lib/node_classifier.py` | DPS/GATING/UTILITY node classifier (APL scan + spell data + code grep) | PLANNED |
+| `scripts/lib/talent_permute.py` | Talent permutation engine (pivot sweep + tuning hill-climb) | PLANNED |
+| `scripts/optimize_all.py` | Master orchestrator (talent discovery → APL optimization → validation) | PLANNED |
+
+### Results
+
+| Output | Location |
+| :--- | :--- |
+| Per-spec Wowhead build comparison | `results/optimization/{spec}/wowhead_builds.json` |
+| Per-spec APL optimization results | `results/optimization/{spec}/apl_optimization.json` |
+| Global talent summary | `results/optimization/talent_summary.md` |
+| Global comparison report | `results/optimization/wowhead_comparison.md` |
+
+---
+
+## 9. Spell Database (2026-03-25)
 
 Comprehensive spell database built from Wowhead: 4,410 spells across all 13 classes,
 scraped from abilities + specialization + talents pages, with tooltip descriptions,
@@ -505,7 +574,7 @@ eliminating these false positives.
 
 ---
 
-## 9. Build Status
+## 10. Build Status
 
 | Build Type | Status | Compiler |
 | :--- | :--- | :--- |
@@ -517,7 +586,7 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 
 ---
 
-## 10. Commit History (key milestones)
+## 11. Commit History (key milestones)
 
 | Commit | Date | Description |
 | :--- | :--- | :--- |
@@ -566,3 +635,12 @@ CI workflows: self-contained (no reusable workflow_call), ccache enabled, gcc-14
 || — | 2026-03-25 | Fix(engine): DK Blood empowered charge crash — player_t::interrupt() schedule_ready race condition |
 || — | 2026-03-25 | Phase 4a: Complete all 112 baselines (56 PW + 56 HAC), re-run changed profiles |
 || — | 2026-03-25 | Docs: RELEASE_GAPS.md gap analysis, update project_progress.md + AGENTS.md |
+|| 6534f10 | 2026-03-27 | Fix(druid): Guardian APL — ravage→maul, thrash_bear→thrash, berserk_bear→berserk, remove invalid variables |
+|| f0ee9c7 | 2026-03-27 | Fix(issue#81): Correct Darkmoon Deck item names; add darkmoon_investigation.md |
+|| dfdedce | 2026-03-27 | Docs: darkmoon_investigation.md — trinket+sigil+dominion investigation report for manual testing |
+|| 51d7e77 | 2026-03-27 | Docs: apl_optimizer_plan.md — APL optimization engine design (Phase 4d) |
+|| 43e8eec | 2026-03-27 | Docs: talent_engine_design.md — talent tree permutation system architecture |
+|| 0b66660 | 2026-03-27 | Docs: optimization_action_plan.md — unified 7-milestone action plan |
+|| 2cca63c | 2026-03-27 | Feat(tools): scripts/lib/sim_runner.py + apl_parser.py + talent_build_compare.py — Wowhead build comparison for all 33 specs |
+|| 998745e | 2026-03-27 | Feat(profiles): Update talent builds for 29/33 specs from Wowhead comparison data |
+|| a3b3d1d | 2026-03-27 | Feat(tools): scripts/apl_optimizer.py + apl_mutations.py — APL optimization engine with multi-stage evaluation |
