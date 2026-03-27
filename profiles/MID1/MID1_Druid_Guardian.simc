@@ -18,46 +18,8 @@ food=silvermoon_parade
 augmentation=void_touched
 temporary_enchant=main_hand:thalassian_phoenix_oil_2
 
-# This default action priority list is automatically created based on your character.
-# It is a attempt to provide you with a action list that is both simple and practicable,
-# while resulting in a meaningful and good simulation. It may not result in the absolutely highest possible dps.
-# Feel free to edit, adapt and improve it to your own needs.
-# SimulationCraft is always looking for updates and improvements to the default action lists.
-
-# Guardian APL can be found at https://github.com/dreamgrove/dreamgrove/blob/master/sims/bear/guardian.txt
-
-# Executed before combat begins. Accepts non-harmful actions only.
-actions.precombat=bear_form,if=buff.bear_form.down
-actions.precombat+=/snapshot_stats
-
-# Executed every time the actor is available.
-actions=auto_attack
-actions+=/call_action_list,name=cooldowns
-actions+=/call_action_list,name=assisted_combat
-
-# This is for Blizzard automation and is not included in the game's Assisted Combat system.
-actions.assisted_combat=berserk
-# This is for Blizzard automation and is not included in the game's Assisted Combat system.
-actions.assisted_combat+=/convoke_the_spirits
-actions.assisted_combat+=/thrash,if=target.distance<=8&active_enemies>3
-actions.assisted_combat+=/lunar_beam,if=target.distance<=8
-actions.assisted_combat+=/convoke_the_spirits,if=target.distance<=5
-actions.assisted_combat+=/moonfire,if=!dot.moonfire.ticking
-actions.assisted_combat+=/mangle
-actions.assisted_combat+=/thrash,if=target.distance<=8
-actions.assisted_combat+=/moonfire,if=buff.galactic_guardian.up
-actions.assisted_combat+=/maul,if=rage>=8
-actions.assisted_combat+=/swipe,if=target.distance<=8
-actions.assisted_combat+=/moonfire,if=target.distance>10
-actions.assisted_combat+=/swipe
-
-# Some cooldowns are not used by the Assisted Combat system. This simple default cooldown usage has been provided by simc.
-actions.cooldowns=use_items
-actions.cooldowns+=/potion
-actions.cooldowns+=/blood_fury
-actions.cooldowns+=/berserking
-actions.cooldowns+=/fireblood
-actions.cooldowns+=/ancestral_call
+# Uses C++ generated APL from guardian_apl.inc (rewritten 2026-03-24)
+# Full rotation: Ironfur/Maul rage management, Raze/Ravage, Berserk/Incarnation CDs, AoE/ST split
 
 head=luminant_verdicts_headgear,id=250023,bonus_id=13575,ilevel=289,gem_id=240983,enchant_id=8017
 neck=eternal_voidsong_chain,id=249368,bonus_id=12806/13577/13668,gem_id=240908
