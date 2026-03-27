@@ -441,6 +441,167 @@ Mitigations:
 
 ---
 
+---
+
+## Component 5: Talent Build Testing
+
+### The Problem
+
+The original plan only optimized spell ordering within a fixed talent build.
+But talents fundamentally change everything:
+- Which abilities exist (talents grant/replace spells)
+- Interaction mechanics (e.g., Massacre changes Execute threshold)
+- Optimal priority ordering (Slayer Fury plays differently from Mountain Thane)
+- DPS potential (some builds are just better for ST vs AoE)
+
+We have 4-16 Wowhead-recommended talent builds per spec (262 total across 33
+specs), but current profiles only test 1-2 builds each.
+
+### Data Available
+
+Per spec, `wowhead/{class}/{spec}/extracted/talents.json` contains:
+- Hero talent variants (e.g., Slayer vs Mountain Thane)
+- Multiple builds per hero path (ST, AoE, hybrid variants)
+- SimC-ready `talents=` export strings
+- Build descriptions with context (ST-focused, M+-focused, etc.)
+
+Build counts across all 33 specs:
+```
+4 builds:  5 specs (arcane, aug evoker, outlaw, shadow, affliction)
+5 builds:  4 specs (devourer, havoc, guardian, brewmaster)
+6 builds:  8 specs (frost DK, dev evoker, BM/MM hunter, frost mage, WW monk, demo lock)
+8 builds:  2 specs (feral, prot paladin)
+10 builds: 3 specs (unholy DK, balance druid, subtlety)
+12 builds: 9 specs (blood DK, survival, fire mage, ret paladin, assa rogue, ele/enh shaman, destro lock, arms/fury warrior)
+16 builds: 1 spec (vengeance DH)
+Total: ~262 builds across 33 specs
+```
+
+### Talent Optimization Strategy
+
+Three layers, run in sequence:
+
+#### Layer 1: Talent Build Discovery (find the best build per fight style)
+
+For each spec, sim ALL Wowhead builds with the DEFAULT APL:
+```python
+def discover_best_builds(spec, profile_path, talent_builds):
+    results = {}
+    for build_name, talent_string in talent_builds.items():
+        # Override just the talent string, keep APL as-is
+        override = f"input={profile_path}\ntalents={talent_string}\n"
+        pw = run_sim(override, "Patchwerk", iterations=1000)
+        hac = run_sim(override, "HecticAddCleave", iterations=1000)
+        results[build_name] = {
+            "pw": pw.dps_mean,
+            "hac": hac.dps_mean,
+            "composite": composite_dps(pw.dps_mean, hac.dps_mean),
+        }
+    return sorted(results.items(), key=lambda x: -x[1]["composite"])
+```
+
+Cost: ~262 builds × 2 fight styles × 1000 iter ≈ 524,000 iterations
+At ~1000 iter/sec = ~9 minutes total (all specs).
+
+Output: ranked build list per spec, best-ST build, best-AoE build,
+best-composite build. This alone is valuable — tells us if our current
+profile talent string is optimal.
+
+#### Layer 2: Per-Build APL Optimization
+
+Run the APL optimization loop (Component 2-4 from the original plan)
+separately for the top 2-3 builds per spec:
+```python
+def optimize_per_build(spec, profile_path, top_builds):
+    for build_name, talent_string in top_builds[:3]:
+        # Create a profile variant with this build's talents
+        override_profile = f"input={profile_path}\ntalents={talent_string}\n"
+        apl, history = optimize_spec(spec, override_profile, max_iterations=5)
+        save_result(spec, build_name, apl, history)
+```
+
+This finds the best APL for each talent build. Different builds may
+want different APLs (e.g., Mountain Thane Fury wants Thunder Clap
+higher in priority than Slayer Fury does).
+
+Cost: ~3 builds × original APL loop cost per spec.
+
+#### Layer 3: Unified APL with Talent Gates
+
+After Layer 2, we may have 2-3 different APLs for the same spec.
+If the APLs differ, create a UNIFIED APL that uses talent.X conditions
+to route between them:
+```
+# Single APL that handles both Slayer and Mountain Thane
+actions+=/thunder_clap,if=talent.mountain_thane    # Thane-specific
+actions+=/bladestorm,if=talent.slayer              # Slayer-specific
+actions+=/bloodthirst                               # Common to both
+```
+
+The SimC APL already supports `talent.X` conditions natively. The
+optimizer can detect which actions differ between build-specific APLs
+and merge them with appropriate talent gates.
+
+If the APLs are identical (common case — same priority, just different
+numbers), no merging needed.
+
+### Profile Update Strategy
+
+After optimization, update the profiles:
+
+1. **Default profile** (`MID1_{Spec}.simc`): Uses the best-composite
+   talent build. No `talents=` override needed if it matches current.
+
+2. **Hero-variant profiles** (`MID1_{Spec}_{Hero}.simc`): If the other
+   hero path has a meaningfully different best build (>2% composite gap),
+   create/update a variant profile.
+
+3. **APL overrides** (`ActionPriorityLists/default/{spec}.simc`): If
+   per-build APLs differ significantly, write a unified APL with talent
+   gates. Otherwise, the default APL works for all builds.
+
+### Validation Matrix
+
+Final validation sims all builds × all fight styles:
+```
+For each spec:
+  For each talent build (all Wowhead builds):
+    For each fight style (Patchwerk, HecticAddCleave):
+      Run sim at 10,000 iterations
+      Record DPS
+  
+  Check: no build regresses >2% vs pre-optimization baseline
+  Check: best build improved or stayed within 0.1%
+  Check: average across builds improved
+```
+
+### Integration with APL Optimizer
+
+The full pipeline becomes:
+
+```
+Phase 4d-1: Talent Discovery
+  → Sim all 262 builds at 1k iter (9 min)
+  → Identify top 2-3 builds per spec
+  → Update profiles with best talent strings
+  
+Phase 4d-2: APL Optimization (per build)
+  → Run APL optimizer on top builds (~2 min/iter × 5 iter × 3 builds × 33 specs)
+  → Accept improvements per composite scoring
+  
+Phase 4d-3: APL Merging
+  → Compare per-build APLs
+  → Create unified APL with talent gates where needed
+  → Write to ActionPriorityLists/default/
+
+Phase 4d-4: Full Validation
+  → Sim all builds × all fight styles at 10k iter
+  → Regression check
+  → Update profiles and baselines
+```
+
+---
+
 ## Priority Specs (run first)
 
 From the 3-way comparison, these specs had the largest gaps:
