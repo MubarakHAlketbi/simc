@@ -1,0 +1,66 @@
+{
+  "spec": "hunter_beast_mastery",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Hunter_Beast_Mastery.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "default #2",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsBzwQDbAAYGzyMzsYGmZmZGzMMmxMMzYmZGbzMDjZYZoZAAAAAAAAAw8AjZGwMbIgZBsZA",
+      "pw": 78071.612177286,
+      "hac": 183204.912688892,
+      "composite": 130638.262433089
+    },
+    {
+      "label": "default #6",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZGLzMziZYmZmhZMzYYGmZmZMDzMDjZGGTzAAAAAAmBAAgxYGMzAEsMzCYzA",
+      "pw": 82194.40404390749,
+      "hac": 179023.45297434545,
+      "composite": 130608.92850912648
+    },
+    {
+      "label": "default #5",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZGLzMziZYmZmhZMzYYGmZMzMjtZmhxMsM0MAAAAAgZAAAYegxMDzMABMLgND",
+      "pw": 82238.1044042035,
+      "hac": 178690.89289780016,
+      "composite": 130464.49865100184
+    },
+    {
+      "label": "default #3",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwGsAzwQDbAAYGzyMzsYGmZmZGzMMmxMMzMzYGmZGGzMMmmBAAAAAAAAAjxMAzsgglZWAbGA",
+      "pw": 77031.64448768948,
+      "hac": 181517.60567843152,
+      "composite": 129274.6250830605
+    },
+    {
+      "label": "default #4",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAYzsNwAGwMsBZsAAgZMbjZWMDzYmxMMzYYGzMjZMDzMjZMDGaGAAAAAwMAAAMzMzgZGgwwsA2MA",
+      "pw": 87395.36976900205,
+      "hac": 130336.58136006289,
+      "composite": 108865.97556453248
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGPw2YmtZGmxMDDzMGzMMzYGzwMzYGzghmBAAAAAMDAAAzMzMAzshwwsA2MA",
+      "pw": 89571.77694359708,
+      "hac": 108096.4336266471,
+      "composite": 98834.10528512209,
+      "is_current": true
+    },
+    {
+      "label": "default #1",
+      "hero": "default",
+      "talent_string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYG2GzsNzwMmZYYmxYmxMzYGzwMzYGzghmBAAAAAMDAAAzMzMAzshwwsA2MA",
+      "pw": 89090.21334865394,
+      "hac": 107242.73733383848,
+      "composite": 98166.4753412462
+    }
+  ],
+  "errors": []
+}

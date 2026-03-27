@@ -1,0 +1,58 @@
+{
+  "spec": "druid_guardian",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Druid_Guardian.simc",
+  "iterations": 500,
+  "build_count": 5,
+  "results": [
+    {
+      "label": "Druid of the Claw #1",
+      "hero": "Druid of the Claw",
+      "talent_string": "CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMPwYM2MLzMPgZZZgZDGNRzMzyMzMzYMjZAAAAAADLzAAAAQNzysMzMDAgFMzAsYGMYwy2AgZWgB",
+      "pw": 75108.98024903113,
+      "hac": 122332.79093550595,
+      "composite": 98720.88559226855
+    },
+    {
+      "label": "Druid of the Claw #2",
+      "hero": "Druid of the Claw",
+      "talent_string": "CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMPwMjxiZZMPwMLLDMbGGNRzMzyMzMzsMmhBAAAAAMsMDAAAA1MLzyMzMAAWwMPAwiZwgBLbDAmZDG",
+      "pw": 64016.98014411389,
+      "hac": 117970.53398478795,
+      "composite": 90993.75706445093
+    },
+    {
+      "label": "Druid of the Claw #5",
+      "hero": "Druid of the Claw",
+      "talent_string": "CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMjxiZZMPgZZZgZzMGNRzMziZmZmlxMAAAAAAMsNDYZbmBjZZAMFAAAYDz8ADYxMYwgltBYmBwA",
+      "pw": 43438.74501109976,
+      "hac": 90081.68961350711,
+      "composite": 66760.21731230343
+    },
+    {
+      "label": "Druid of the Claw #3",
+      "hero": "Druid of the Claw",
+      "talent_string": "CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxs4BGjxmZZmZMLLDMbwoJamZWmZmZGjZMDAAAAAYYZGw22MDGz2AYKAAAwGmZAWMDGMYZbAmZAM",
+      "pw": 44667.41699617993,
+      "hac": 76631.24354594514,
+      "composite": 60649.33027106253
+    },
+    {
+      "label": "Druid of the Claw #4",
+      "hero": "Druid of the Claw",
+      "talent_string": "CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZmlZGjxiZh5BmZZZgZzwoJamZWmZmZmlxMAAAAAAMsMDYZbmBjZZAMFAAAYzYmHAYxMYwgltBYmBwA",
+      "pw": 40806.16902857612,
+      "hac": 80207.78324188277,
+      "composite": 60506.976135229444
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "",
+      "pw": 10588.933295838393,
+      "hac": 19606.904644247537,
+      "composite": 15097.918970042965,
+      "is_current": true
+    }
+  ],
+  "errors": []
+}

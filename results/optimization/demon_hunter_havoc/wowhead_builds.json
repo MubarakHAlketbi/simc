@@ -1,0 +1,59 @@
+{
+  "spec": "demon_hunter_havoc",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Demon_Hunter_Havoc.simc",
+  "iterations": 500,
+  "build_count": 5,
+  "results": [
+    {
+      "label": "Fel-Scarred #2",
+      "hero": "Fel-Scarred",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmBmx2sNzMjxALDsNbmxwsopxMzYGbAAAADAAAgZGMAAAAM",
+      "pw": 97073.99263410612,
+      "hac": 202230.11680301846,
+      "composite": 149652.05471856229
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmZ2mZGbz28AzwYYsMw2sYGDzmmGzMjhNAAAAAAAAmZwAAAAwA",
+      "pw": 109011.55305438983,
+      "hac": 176818.51421059467,
+      "composite": 142915.03363249224,
+      "is_current": true
+    },
+    {
+      "label": "Fel-Scarred #1",
+      "hero": "Fel-Scarred",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmZ2mZGbz28AzwYYsMw2sYGDzmmGzMjhNAAAAAAAAmZwAAAAwA",
+      "pw": 109011.55305438983,
+      "hac": 176818.51421059467,
+      "composite": 142915.03363249224,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Fel-Scarred #3",
+      "hero": "Fel-Scarred",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmh5BmBbzMzYMwyAbzmZMMLaaMzMmxGAAAwAAAAYmBDAAAAD",
+      "pw": 93986.32268772343,
+      "hac": 190292.46846236577,
+      "composite": 142139.3955750446
+    },
+    {
+      "label": "Fel-Scarred #4",
+      "hero": "Fel-Scarred",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmZ2mZGLz2YGLjZMWmZbGMMW2YSGzMGWAAAAAAAAzMADAAAAD",
+      "pw": 100751.13476934473,
+      "hac": 160495.35479505282,
+      "composite": 130623.24478219877
+    },
+    {
+      "label": "Fel-Scarred #5",
+      "hero": "Fel-Scarred",
+      "talent_string": "CEkAAAAAAAAAAAAAAAAAAAAAAYmZmZmZ2mxMzMGzkxMDAAAAAAYWMmtZYmZ2GzgtZmhxwYZmtZwwYbjJZmZGzYBAAAAAAAMzAMAAAAM",
+      "pw": 91589.58807374703,
+      "hac": 168028.41795465947,
+      "composite": 129809.00301420325
+    }
+  ],
+  "errors": []
+}

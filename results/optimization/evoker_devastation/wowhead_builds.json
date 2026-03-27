@@ -1,0 +1,67 @@
+{
+  "spec": "evoker_devastation",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Evoker_Devastation.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMDMDzYmBMYMTzMzMNjx2MmZmZmHYmZGwMmxYmZZmZgBGDWglxox2AyMIYDDMzghB",
+      "pw": 115518.06371825877,
+      "hac": 175749.68356950724,
+      "composite": 145633.873643883,
+      "is_current": true
+    },
+    {
+      "label": "Scalecommander #1",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMDMDzYmBMYMTzMzMNjx2MmZmZmHYmZGwMmxYmZZmZgBGDWglxox2AyMIYDDMzghB",
+      "pw": 115518.06371825877,
+      "hac": 175749.68356950724,
+      "composite": 145633.873643883,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Scalecommander #3",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMzMDMDzMMwwYMTjZmpZMzyMmZmZGzMzAmZGDzMLzMDMADWglxox2AyMIYDDMzgZMA",
+      "pw": 114330.35678909816,
+      "hac": 176805.29492061402,
+      "composite": 145567.82585485608
+    },
+    {
+      "label": "Scalecommander #2",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZgZ8AzgBGGjZaMzMNjx2MmZmZGzMzAmZmxYmZZmZgBGDWglxox2AyMIYDzgZGMMA",
+      "pw": 113571.4961510776,
+      "hac": 176798.68896887277,
+      "composite": 145185.0925599752
+    },
+    {
+      "label": "Scalecommander #4",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZwMDGMgBjZamZmJjxyMzMzwMzMzAmxMzYmZZmZwMwMmB2ALgZYCsFsMMAmZGG",
+      "pw": 104976.16652588086,
+      "hac": 150363.1334922978,
+      "composite": 127669.65000908934
+    },
+    {
+      "label": "Scalecommander #6",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZwMDmhBmBjZamZmJjxyMzMzwMzMzAmZGDzMbzMDmBMmB2ALgZYCsFsMMAmZGG",
+      "pw": 105111.74466516127,
+      "hac": 150075.98506146818,
+      "composite": 127593.86486331472
+    },
+    {
+      "label": "Scalecommander #5",
+      "hero": "Scalecommander",
+      "talent_string": "CsbBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZGjZmZmZGzMwMGDTDzMZMWGmZGGzMzAmZmxYmxMzgZgZMDsA2AzwEYLYZYGgZmhB",
+      "pw": 91865.95388070328,
+      "hac": 163257.28810443735,
+      "composite": 127561.62099257032
+    }
+  ],
+  "errors": []
+}

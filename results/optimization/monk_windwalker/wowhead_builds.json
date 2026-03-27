@@ -1,0 +1,67 @@
+{
+  "spec": "monk_windwalker",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Monk_Windwalker.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "Shado-Pan #3",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDzEmhhBMjhZmZGmthZYWmJAgNzsNGGzMDAgNAYWmlmZmZBYYgZGAYZMEDYA",
+      "pw": 110265.0474547278,
+      "hac": 231541.02561390842,
+      "composite": 170903.03653431812
+    },
+    {
+      "label": "Shado-Pan #2",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDjwMMMgZMMzMzwsMMDzyMBAsZmtxwYmZAAsBAzys0MzMLADDMzAwYZMEDYA",
+      "pw": 110373.75798255442,
+      "hac": 230806.50086668454,
+      "composite": 170590.1294246195
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYw2wwsMzMbzAAAAAAAAAAAAsMMCzYbYAzYYmZmhZZYGmlZCAYzMbzMMmZGAAbAwsMLNzMzCAGYmBAWGDxAG",
+      "pw": 113614.07068370613,
+      "hac": 218485.83337537976,
+      "composite": 166049.95202954294,
+      "is_current": true
+    },
+    {
+      "label": "Shado-Pan #1",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYw2wwsMzMbzAAAAAAAAAAAAsMMCzYbYAzYYmZmhZZYGmlZCAYzMbzMMmZGAAbAwsMLNzMzCAGYmBAWGDxAG",
+      "pw": 113614.07068370613,
+      "hac": 218485.83337537976,
+      "composite": 166049.95202954294,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Shado-Pan #5",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYMgBLzMz2MGAAAAAAAAAAAYZYEmx2wAmxwMzMDzywMMLzEAwmZ2GjZMzMAAWMzysMmgAAGGAzAwyYImZmFD",
+      "pw": 104184.6021039098,
+      "hac": 207615.0973076823,
+      "composite": 155899.84970579605
+    },
+    {
+      "label": "Shado-Pan #6",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYMghZZmZ2mxAAAAAAAAAAAALDzEmx2wAGGmZmZY2GmhZZmAA2Mz2YYMzMAAWMzysNmgAAGGAzAM2GImZmND",
+      "pw": 99738.94913780435,
+      "hac": 209451.86946871137,
+      "composite": 154595.40930325785
+    },
+    {
+      "label": "Shado-Pan #4",
+      "hero": "Shado-Pan",
+      "talent_string": "C0QAAAAAAAAAAAAAAAAAAAAAAMzYM2GGsMzMbzAAAAAAAAAAAAsMMCzYbYAzYYmZmhZZYGmlZCAYzMbjhZmZGAALmZZ2GTQAAYAMDALjhYmZWM",
+      "pw": 108358.74881516752,
+      "hac": 200533.76000033595,
+      "composite": 154446.25440775172
+    }
+  ],
+  "errors": []
+}

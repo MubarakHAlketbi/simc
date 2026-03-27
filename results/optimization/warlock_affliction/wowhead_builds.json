@@ -1,0 +1,51 @@
+{
+  "spec": "warlock_affliction",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warlock_Affliction.simc",
+  "iterations": 500,
+  "build_count": 4,
+  "results": [
+    {
+      "label": "default #3",
+      "hero": "default",
+      "talent_string": "CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZhhZmZmlBAAYmZxyMzsMzAAjllBGwEMDbBG2GAAAmBAAwMDzMjBGmZmZGzgZmZGAwMwA",
+      "pw": 94171.16557812304,
+      "hac": 135213.8712355197,
+      "composite": 114692.51840682137
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlBAAYmZZ2mZmlxAAWgBmFjGzAysBWGAAAmBAAmZAzMjxwwMjZmZGMzMzAAmBG",
+      "pw": 87891.49410549599,
+      "hac": 127550.69121875124,
+      "composite": 107721.09266212361,
+      "is_current": true
+    },
+    {
+      "label": "default #1",
+      "hero": "default",
+      "talent_string": "CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlBAAYmZZ2mZmlxAAWgBmFjGzAysBWGAAAmBAAmZAzMjxwwMjZmZGMzMzAAmBG",
+      "pw": 87891.49410549599,
+      "hac": 127550.69121875124,
+      "composite": 107721.09266212361,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "default #4",
+      "hero": "default",
+      "talent_string": "CkQAAAAAAAAAAAAAAAAAAAAAAwMjZGNbmxmZGzyAAAmZmlZzMzyYAgx22ADYCmhtADbDAAAGAAAzMjZMzsNzYGMzMzYYmZmBAMDMA",
+      "pw": 59025.60055389187,
+      "hac": 151208.98890816083,
+      "composite": 105117.29473102634
+    },
+    {
+      "label": "default #2",
+      "hero": "default",
+      "talent_string": "CkQAAAAAAAAAAAAAAAAAAAAAAwMjZGNbmxmZGzyAAAmZmlZbmZWGDAYBGYWMaMDIzGYZAAAwAAAzMYMjZmtZGzgZmZGDzMzMAgBMA",
+      "pw": 65790.61619526835,
+      "hac": 144322.21316366494,
+      "composite": 105056.41467946664
+    }
+  ],
+  "errors": []
+}

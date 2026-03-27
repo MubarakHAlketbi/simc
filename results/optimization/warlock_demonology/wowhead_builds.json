@@ -1,0 +1,67 @@
+{
+  "spec": "warlock_demonology",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warlock_Demonology.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "Soul Harvester #2",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAAAAAAAAAAAAAAAAAAAAAAYmhZGNbmx2MzYWGAAAAAAAwYGDLwAbj2ohFjZGLz2MzwMAwMzMzMzMDwMzwMbAAgxMzMGD2mBwA",
+      "pw": 98547.23563563218,
+      "hac": 472232.03847112914,
+      "composite": 285389.63705338066
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CoQAy0jxIDofkwJmoH7WhvESoZmZMzoZjhZmxsMAAAAAAAjllZMzMsYYYmtZpNaGLGjZ2mlZmZYAgZYmZmZGMzMzMmZAAAGzMzMDzYZGDYA",
+      "pw": 97921.42214090064,
+      "hac": 469221.59058140515,
+      "composite": 283571.5063611529,
+      "is_current": true
+    },
+    {
+      "label": "Soul Harvester #1",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAy0jxIDofkwJmoH7WhvESoZmZMzoZjhZmxsMAAAAAAAjllZMzMsYYYmtZpNaGLGjZ2mlZmZYAgZYmZmZGMzMzMmZAAAGzMzMDzYZGDYA",
+      "pw": 97921.42214090064,
+      "hac": 469221.59058140515,
+      "composite": 283571.5063611529,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Soul Harvester #3",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAy0jxIDofkwJmoH7WhvESoZmhZGNbmx2MzYWGAAAAAAgxyyMmZGWMMMz2s0GNjFjZGLjZmxMDAMzMzYmZGMzMzMMzGAAYMzMjxgtZGgB",
+      "pw": 96335.74678270573,
+      "hac": 456157.36358307913,
+      "composite": 276246.5551828924
+    },
+    {
+      "label": "Soul Harvester #6",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAy0jxIDofkwJmoH7WhvESoZmhZGNbmx2MzYWGAAAAAAgxyyMmZGWMMMz2s0GNjNjZGLjZmxMDAMzMzYmZGMzMzMMzGAAYMzMjxgtZGgB",
+      "pw": 107355.74079677385,
+      "hac": 429893.2927129462,
+      "composite": 268624.51675486
+    },
+    {
+      "label": "Soul Harvester #5",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAAAAAAAAAAAAAAAAAAAAAAYmhZGNbmx2MzYWGAAAAAAgxyyADYAzwSIjNjZGLz2MzwMAwMzMzMDwMzMzwMbAAgxMzMGD2mBwA",
+      "pw": 109150.80263709798,
+      "hac": 399760.47530387493,
+      "composite": 254455.63897048647
+    },
+    {
+      "label": "Soul Harvester #4",
+      "hero": "Soul Harvester",
+      "talent_string": "CoQAy0jxIDofkwJmoH7WhvESoZmZMzoZjhZmxsMAAAAAAAjllZMzMsYYYmtZpNaGbGjZ2mlZmZYAgZYmZmZGMzMzMmZAAAGzMzMDzYZGDYA",
+      "pw": 100823.23941301991,
+      "hac": 364183.1709751583,
+      "composite": 232503.2051940891
+    }
+  ],
+  "errors": []
+}

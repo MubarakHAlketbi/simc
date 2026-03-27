@@ -1,0 +1,116 @@
+{
+  "spec": "mage_fire",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Mage_Fire.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Frostfire #2",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYDAAAAAWMzMzMAAYMDjZmZmZbAYmhwYMYGG",
+      "pw": 102078.60972329011,
+      "hac": 225968.67020052564,
+      "composite": 164023.63996190787
+    },
+    {
+      "label": "Sunfury #2",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYDAAAAAWMzMzMAAYMDjZmZmZbAYmhwYMYGG",
+      "pw": 101605.09798581236,
+      "hac": 226301.60732430543,
+      "composite": 163953.3526550589
+    },
+    {
+      "label": "Frostfire #3",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYBAAAAA2MzMzMAAYMDjZmZmZbAYmhwYMYGG",
+      "pw": 101792.12171411434,
+      "hac": 225887.50846936597,
+      "composite": 163839.81509174017
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAGAwMz0sssMDAwmZmx2YmZGAAAAAgFzMzMDAAGzwYmZmZ2GAmZIjxYwMMA",
+      "pw": 101615.28468880273,
+      "hac": 225851.54396889388,
+      "composite": 163733.4143288483,
+      "is_current": true
+    },
+    {
+      "label": "Frostfire #1",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAGAwMz0sssMDAwmZmx2YmZGAAAAAgFzMzMDAAGzwYmZmZ2GAmZIjxYwMMA",
+      "pw": 101615.28468880273,
+      "hac": 225851.54396889388,
+      "composite": 163733.4143288483,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Sunfury #1",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAGAwMz0sssMDAwmZmx2YmZGAAAAAgFzMzMDAAGzwYmZmZ2GAmZIjxYwMMA",
+      "pw": 101615.28468880273,
+      "hac": 225851.54396889388,
+      "composite": 163733.4143288483,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Sunfury #3",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwAAmZmmlltZAA2MzM2GzMzYBAAAAA2MzMzMAAYMDjZmZmZbAYmhwYMYGG",
+      "pw": 101764.21457931792,
+      "hac": 225424.3145492404,
+      "composite": 163594.26456427918
+    },
+    {
+      "label": "Frostfire #6",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAA2MzMzMAAYMjZmZmZmZDYmBMYMGMYA",
+      "pw": 99565.38911895515,
+      "hac": 191085.64261149164,
+      "composite": 145325.5158652234
+    },
+    {
+      "label": "Frostfire #5",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAAWMzMzMAAYMjZmZmZmZDYmBMYMGMYA",
+      "pw": 99442.51337186074,
+      "hac": 191041.73782754753,
+      "composite": 145242.12559970413
+    },
+    {
+      "label": "Sunfury #4",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAmZZGzMLzCEAAwiZmx2YmZGAAAAAgFzMzMDAAGzYmZmZmZ2AmZADzYMYwA",
+      "pw": 99629.47216806153,
+      "hac": 190337.99724026874,
+      "composite": 144983.73470416514
+    },
+    {
+      "label": "Sunfury #6",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAA2MzMzMAAYMjZmZmZmZDYmBMYMGMYA",
+      "pw": 99411.93568778527,
+      "hac": 190257.9456233113,
+      "composite": 144834.9406555483
+    },
+    {
+      "label": "Sunfury #5",
+      "hero": "Sunfury",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGZmxAAAwMLzYmZZWgAAAWMzM2GzMzYBAAAAAWMzMzMAAYMjZmZmZmZDYmBMYMGMYA",
+      "pw": 99420.49967439816,
+      "hac": 190158.14749799634,
+      "composite": 144789.32358619725
+    },
+    {
+      "label": "Frostfire #4",
+      "hero": "Frostfire",
+      "talent_string": "C8DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDZmZGAAAmZZGzMLzCEAAwiZmx2YmZGAAAAAgFzMzMDAAGzYmZmZmZ2AmZADzYMYwA",
+      "pw": 99421.46991414821,
+      "hac": 189864.27476235852,
+      "composite": 144642.87233825336
+    }
+  ],
+  "errors": []
+}

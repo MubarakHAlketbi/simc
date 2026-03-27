@@ -1,0 +1,148 @@
+{
+  "spec": "demon_hunter_vengeance",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Demon_Hunter_Vengeance.simc",
+  "iterations": 500,
+  "build_count": 16,
+  "results": [
+    {
+      "label": "Aldrachi Reaver #5",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYWMzMjhZMzYGzYmZYGmx2YGjBAAAAAAACYmZsBAAAgBjZmZml2mZmBAzAAAAYA",
+      "pw": 66260.65371232956,
+      "hac": 138001.3845074736,
+      "composite": 102131.01910990156
+    },
+    {
+      "label": "Annihilator #5",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYWMzMjhZMzYGzYmZYGmx2YGjBAAAAAAACYmZsBAAAgBjZmZml2mZmBAzAAAAYA",
+      "pw": 66164.39484891387,
+      "hac": 137806.33469231921,
+      "composite": 101985.36477061655
+    },
+    {
+      "label": "Annihilator #7",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMmxMmZsNmxYAAAAAAAgAmZGbAAAAYwYmZmZptZmZAwMAAAAG",
+      "pw": 65592.12842616643,
+      "hac": 138091.64924378583,
+      "composite": 101841.88883497613
+    },
+    {
+      "label": "Aldrachi Reaver #7",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMmxMmZsNmxYAAAAAAAgAmZGbAAAAYwYmZmZptZmZAwMAAAAG",
+      "pw": 65213.19080683229,
+      "hac": 138409.58611261394,
+      "composite": 101811.38845972311
+    },
+    {
+      "label": "Aldrachi Reaver #8",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjxMjMzMwiZMDmZMzYmHYGzYMzsNzYbMDGzAAAAAAAIgZmxGAAAAGMzMzMzSbzMzAADAAAgB",
+      "pw": 64577.75780199141,
+      "hac": 136424.26751116983,
+      "composite": 100501.01265658063
+    },
+    {
+      "label": "Annihilator #8",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjxMjMzMwiZMDmZMzYmHYGzYMzsNzYbMDGzAAAAAAAIgZmxGAAAAGMzMzMzSbzMzAADAAAgB",
+      "pw": 64607.45910693327,
+      "hac": 135484.05548750714,
+      "composite": 100045.7572972202
+    },
+    {
+      "label": "Aldrachi Reaver #6",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjhZkZmBWMjZwMjZGz8AzMzYYmtZGbjZMGzAAAAAAAIgZmxGAAAAGYmZmZWabmZGAMDAAAgB",
+      "pw": 64259.090641157054,
+      "hac": 134284.06907842943,
+      "composite": 99271.57985979324
+    },
+    {
+      "label": "Annihilator #6",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjhZkZmBWMjZwMjZGz8AzMzYYmtZGbjZMGzAAAAAAAIgZmxGAAAAGYmZmZWabmZGAMDAAAgB",
+      "pw": 63981.09638804837,
+      "hac": 133961.69087401373,
+      "composite": 98971.39363103105
+    },
+    {
+      "label": "Aldrachi Reaver #4",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjxMjMzMwiZMDmZMzYmHYGzYMzsNzYbMDGzAAAAwsNDGGLbMhhZmxCAAAAGMDgAMzAMAAAAG",
+      "pw": 55731.8515952978,
+      "hac": 97439.58084574594,
+      "composite": 76585.71622052186
+    },
+    {
+      "label": "Annihilator #4",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjxMjMzMwiZMDmZMzYmHYGzYMzsNzYbMDGzAAAAwsNDGGLbMhhZmxCAAAAGMDgAMzAMAAAAG",
+      "pw": 55618.70722568028,
+      "hac": 97217.38680400663,
+      "composite": 76418.04701484345
+    },
+    {
+      "label": "Annihilator #2",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjhZkZmBWMjZwMjZGz8AzMzYYmtZGbjZMGzAAAAwsNDGGLbMhhZmxCAAAAGYAEgZGwMAAAAG",
+      "pw": 55878.776312252216,
+      "hac": 96412.7273088866,
+      "composite": 76145.7518105694
+    },
+    {
+      "label": "Aldrachi Reaver #2",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjhZkZmBWMjZwMjZGz8AzMzYYmtZGbjZMGzAAAAwsNDGGLbMhhZmxCAAAAGYAEgZGwMAAAAG",
+      "pw": 55928.714976369134,
+      "hac": 95952.7865723909,
+      "composite": 75940.75077438002
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMzwMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAA",
+      "pw": 50542.212278465675,
+      "hac": 89003.14089678161,
+      "composite": 69772.67658762365,
+      "is_current": true
+    },
+    {
+      "label": "Annihilator #1",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMzwMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAA",
+      "pw": 50542.212278465675,
+      "hac": 89003.14089678161,
+      "composite": 69772.67658762365,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Aldrachi Reaver #1",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMzwMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAA",
+      "pw": 50542.212278465675,
+      "hac": 89003.14089678161,
+      "composite": 69772.67658762365,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Annihilator #3",
+      "hero": "Annihilator",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMmxMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAA",
+      "pw": 49670.735905588444,
+      "hac": 89299.03359692758,
+      "composite": 69484.88475125801
+    },
+    {
+      "label": "Aldrachi Reaver #3",
+      "hero": "Aldrachi Reaver",
+      "talent_string": "CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZGDzYmxMmxMmxMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAA",
+      "pw": 49658.9090342793,
+      "hac": 89243.83450597781,
+      "composite": 69451.37177012855
+    }
+  ],
+  "errors": []
+}

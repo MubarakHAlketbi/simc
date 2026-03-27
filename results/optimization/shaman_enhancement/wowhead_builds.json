@@ -1,0 +1,116 @@
+{
+  "spec": "shaman_enhancement",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Shaman_Enhancement.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Stormbringer #5",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZGzAAAAAAAAAALwGMjFN2GAzEsBwsMjZMWWMwMz2YZmZmZwyYGAAgxYGxMDwgxA",
+      "pw": 83059.47559863552,
+      "hac": 155133.06925232545,
+      "composite": 119096.27242548048
+    },
+    {
+      "label": "Totemic #5",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZGzAAAAAAAAAALwGMjFN2GAzEsBwsMjZMWWMwMz2YZmZmZwyYGAAgxYGxMDwgxA",
+      "pw": 83112.10203421176,
+      "hac": 155024.23022575804,
+      "composite": 119068.1661299849
+    },
+    {
+      "label": "Stormbringer #6",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMjxyyMwMjxiZmZGjFmBAAYMmZiZGAYMA",
+      "pw": 83488.78974790541,
+      "hac": 149257.95353557073,
+      "composite": 116373.37164173808
+    },
+    {
+      "label": "Totemic #6",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMjxyyMwMjxiZmZGjFmBAAYMmZiZGAYMA",
+      "pw": 83505.42633242249,
+      "hac": 149227.54316814675,
+      "composite": 116366.48475028461
+    },
+    {
+      "label": "Totemic #4",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMzMWWmBmZ2YZmZmhhxMAAGgxMTMzAAjB",
+      "pw": 85400.99381905998,
+      "hac": 146170.28572758718,
+      "composite": 115785.63977332358
+    },
+    {
+      "label": "Stormbringer #4",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMjZmZmZmZmZmZmZGAAAAAAAAAYB2gZsox2AYmgNAmlZMzMWWmBmZ2YZmZmhhxMAAGgxMTMzAAjB",
+      "pw": 85148.09476922294,
+      "hac": 146131.08213385174,
+      "composite": 115639.58845153733
+    },
+    {
+      "label": "Stormbringer #2",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2ILwMM0gFAmlZMjxyiBmZ2GLzMzMDWGzAAYYMDmJwMDGMuAA",
+      "pw": 71792.313138141,
+      "hac": 138889.01076286094,
+      "composite": 105340.66195050097
+    },
+    {
+      "label": "Totemic #3",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2IbwMM0gFAmlZMjxyyMwMz2YxMzMjxCzAAYYMDmJwMDGMuAA",
+      "pw": 71684.80396828373,
+      "hac": 138407.63381933497,
+      "composite": 105046.21889380935
+    },
+    {
+      "label": "Stormbringer #3",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2IbwMM0gFAmlZMjxyyMwMz2YxMzMjxCzAAYYMDmJwMDGMuAA",
+      "pw": 71882.27507303562,
+      "hac": 138167.921250343,
+      "composite": 105025.09816168931
+    },
+    {
+      "label": "Totemic #2",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYMzMzMzMzMzMzAAAAAAAAAsBYzMG2ILwMM0gFAmlZMjxyiBmZ2GLzMzMDWGzAAYYMDmJwMDGMuAA",
+      "pw": 71526.83083654591,
+      "hac": 138327.26179899593,
+      "composite": 104927.04631777092
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYmZmZmZmhZmZAAAAAAAAAsBYzMG2ILwMM0gFAmlZMzMWWmBmZ2YZmZmhhxMAAzwwMmZCMzAYMA",
+      "pw": 68632.00508400268,
+      "hac": 112550.57873183247,
+      "composite": 90591.29190791758,
+      "is_current": true
+    },
+    {
+      "label": "Totemic #1",
+      "hero": "Totemic",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYmZmZmZmhZmZAAAAAAAAAsBYzMG2ILwMM0gFAmlZMzMWWmBmZ2YZmZmhhxMAAzwwMmZCMzAYMA",
+      "pw": 68632.00508400268,
+      "hac": 112550.57873183247,
+      "composite": 90591.29190791758,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Stormbringer #1",
+      "hero": "Stormbringer",
+      "talent_string": "CcQAAAAAAAAAAAAAAAAAAAAAAMzMzYmZmZmZmhZmZAAAAAAAAAsBYzMG2ILwMM0gFAmlZMzMWWmBmZ2YZmZmhhxMAAzwwMmZCMzAYMA",
+      "pw": 68632.00508400268,
+      "hac": 112550.57873183247,
+      "composite": 90591.29190791758,
+      "is_current_duplicate": true
+    }
+  ],
+  "errors": []
+}

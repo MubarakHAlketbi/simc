@@ -1,0 +1,100 @@
+{
+  "spec": "rogue_subtlety",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Rogue_Subtlety.simc",
+  "iterations": 500,
+  "build_count": 10,
+  "results": [
+    {
+      "label": "Trickster #5",
+      "hero": "Trickster",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZMMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA",
+      "pw": 124743.26682455729,
+      "hac": 290025.60007109924,
+      "composite": 207384.43344782825
+    },
+    {
+      "label": "Deathstalker #5",
+      "hero": "Deathstalker",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZMMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA",
+      "pw": 124796.48084545166,
+      "hac": 289641.7436288768,
+      "composite": 207219.11223716423
+    },
+    {
+      "label": "Deathstalker #4",
+      "hero": "Deathstalker",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZwDMzMzYMbjZGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA",
+      "pw": 129916.90827740924,
+      "hac": 269631.45590281184,
+      "composite": 199774.18209011055
+    },
+    {
+      "label": "Trickster #4",
+      "hero": "Trickster",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMjZwDMzMzYMbjZGbbzMzMzMjBjZ2GAAAAGMGwY2MMwAziWoFbYGwMDmxA",
+      "pw": 129994.05162053446,
+      "hac": 269514.3343902375,
+      "composite": 199754.19300538598
+    },
+    {
+      "label": "Deathstalker #2",
+      "hero": "Deathstalker",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMjxDMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMmNzyADYBsMMhMLYGmZAmxA",
+      "pw": 117212.55599363674,
+      "hac": 244736.03372994167,
+      "composite": 180974.2948617892
+    },
+    {
+      "label": "Trickster #2",
+      "hero": "Trickster",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMjxDMzMzYMbzYGbbzMzMzMjBjZ2GAAAAGMmNzyADYBsMMhMLYGmZAmxA",
+      "pw": 117541.38251972504,
+      "hac": 243998.42240207727,
+      "composite": 180769.90246090115
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMDDmZmZGjZbMzYbbmZmZmZMYMz2AAAAwgxsYWGYALglhJkZBzwMDwMGA",
+      "pw": 126048.60846842277,
+      "hac": 233276.55274442205,
+      "composite": 179662.58060642242,
+      "is_current": true
+    },
+    {
+      "label": "Trickster #1",
+      "hero": "Trickster",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMDDmZmZGjZbMzYbbmZmZmZMYMz2AAAAwgxsYWGYALglhJkZBzwMDwMGA",
+      "pw": 126048.60846842277,
+      "hac": 233276.55274442205,
+      "composite": 179662.58060642242,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Deathstalker #1",
+      "hero": "Deathstalker",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMDDmZmZGjZbMzYbbmZmZmZMYMz2AAAAwgxsYWGYALglhJkZBzwMDwMGA",
+      "pw": 126048.60846842277,
+      "hac": 233276.55274442205,
+      "composite": 179662.58060642242,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Deathstalker #3",
+      "hero": "Deathstalker",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMDegZmZGjZbmZGbbzMzMzMjBjZ2GAAAAGMmNzyADYDsMMhMLYGmZAmxA",
+      "pw": 121675.85194962451,
+      "hac": 224821.0668696472,
+      "composite": 173248.45940963586
+    },
+    {
+      "label": "Trickster #3",
+      "hero": "Trickster",
+      "talent_string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbbjxMMDegZmZGjZbmZGbbzMzMzMjBjZ2GAAAAGMmNzyADYDsMMhMLYGmZAmxA",
+      "pw": 121388.74888650852,
+      "hac": 224821.84396758623,
+      "composite": 173105.29642704737
+    }
+  ],
+  "errors": []
+}

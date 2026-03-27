@@ -1,0 +1,84 @@
+{
+  "spec": "druid_feral",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Druid_Feral.simc",
+  "iterations": 500,
+  "build_count": 8,
+  "results": [
+    {
+      "label": "Wildstalker #4",
+      "hero": "Wildstalker",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZYmZmZMmNjtZ2mZmZegZGAAAAWCmFjhZG1MmFzMzMGzMGAAAAAADMAAAACAmlZ2aWmZZDMzAswgBAwMDAG",
+      "pw": 89793.74782899034,
+      "hac": 168583.23125861288,
+      "composite": 129188.48954380161
+    },
+    {
+      "label": "Druid of the Claw #4",
+      "hero": "Druid of the Claw",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZYmZmZMmNjtZ2mZmZegZGAAAAWCmFjhZG1MmFzMzMGzMGAAAAAADMAAAACAmlZ2aWmZZDMzAswgBAwMDAG",
+      "pw": 89780.47482448418,
+      "hac": 168560.42248341328,
+      "composite": 129170.44865394873
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAghZ2YmZmZGzmx2MbzMzMmZAAAAYJYWMGmZUzYWMzMzsMmZAAAAAAwADAAAgmZZ2mZmBEYBMzAswgBAAwMbYA",
+      "pw": 87678.10871190227,
+      "hac": 163383.19862242043,
+      "composite": 125530.65366716136,
+      "is_current": true
+    },
+    {
+      "label": "Wildstalker #1",
+      "hero": "Wildstalker",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAghZ2YmZmZGzmx2MbzMzMmZAAAAYJYWMGmZUzYWMzMzsMmZAAAAAAwADAAAgmZZ2mZmBEYBMzAswgBAAwMbYA",
+      "pw": 87678.10871190227,
+      "hac": 163383.19862242043,
+      "composite": 125530.65366716136,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Druid of the Claw #1",
+      "hero": "Druid of the Claw",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAghZ2YmZmZGzmx2MbzMzMmZAAAAYJYWMGmZUzYWMzMzsMmZAAAAAAwADAAAgmZZ2mZmBEYBMzAswgBAAwMbYA",
+      "pw": 87678.10871190227,
+      "hac": 163383.19862242043,
+      "composite": 125530.65366716136,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Druid of the Claw #2",
+      "hero": "Druid of the Claw",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGG",
+      "pw": 81574.02337243716,
+      "hac": 166899.19223393776,
+      "composite": 124236.60780318746
+    },
+    {
+      "label": "Wildstalker #2",
+      "hero": "Wildstalker",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGG",
+      "pw": 81754.3067152258,
+      "hac": 166064.78503688308,
+      "composite": 123909.54587605444
+    },
+    {
+      "label": "Druid of the Claw #3",
+      "hero": "Druid of the Claw",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlxyMbzYGzMDAAAALBzihxMjaGziZmZGjZYAAAAAAMwAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD",
+      "pw": 105042.08713805903,
+      "hac": 82026.7340348897,
+      "composite": 93534.41058647436
+    },
+    {
+      "label": "Wildstalker #3",
+      "hero": "Wildstalker",
+      "talent_string": "CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlxyMbzYGzMDAAAALBzihxMjaGziZmZGjZYAAAAAAMwAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD",
+      "pw": 105057.21899924826,
+      "hac": 81716.81308974347,
+      "composite": 93387.01604449586
+    }
+  ],
+  "errors": []
+}

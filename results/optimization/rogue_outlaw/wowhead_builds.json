@@ -1,0 +1,51 @@
+{
+  "spec": "rogue_outlaw",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Rogue_Outlaw.simc",
+  "iterations": 500,
+  "build_count": 4,
+  "results": [
+    {
+      "label": "Fatebound #4",
+      "hero": "Fatebound",
+      "talent_string": "CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGzMzMzsNzMzYmHYmFGmx0ygtZAAAAAAz22MzMMzMzMmZmtBAAAgBwAbwMGNmNAbTYhBAzMDM",
+      "pw": 97784.97270861987,
+      "hac": 212037.51952795841,
+      "composite": 154911.24611828913
+    },
+    {
+      "label": "Fatebound #2",
+      "hero": "Fatebound",
+      "talent_string": "CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGzMzMzsNzMzYmHYmNeAmx0ygtZAAAAAAz22MzMMzMzMmZmtBAAAgxAgxsZYIDMLsQLsxAMzgBG",
+      "pw": 93657.73877241882,
+      "hac": 208139.74673629293,
+      "composite": 150898.7427543559
+    },
+    {
+      "label": "Fatebound #3",
+      "hero": "Fatebound",
+      "talent_string": "CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGjZMzsNzMzMjHwswDMzMLTLD2mBAAAAAMbbzMzwMzMzYmZ2GAAAAGADsBzY0Y2AsNhFGAMzMwA",
+      "pw": 103014.23935588045,
+      "hac": 156996.16238569363,
+      "composite": 130005.20087078704
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGjZMzsNzMzY8AmNegZmZZaZw2MAAAAAgZbbmZGmZmZGzMz2AAAAwYAwY2MMkBmFWoN2YAmZwAD",
+      "pw": 97472.3864552946,
+      "hac": 149334.52322064992,
+      "composite": 123403.45483797227,
+      "is_current": true
+    },
+    {
+      "label": "Fatebound #1",
+      "hero": "Fatebound",
+      "talent_string": "CQQAAAAAAAAAAAAAAAAAAAAAAAgx2MGjZMzsNzMzY8AmNegZmZZaZw2MAAAAAgZbbmZGmZmZGzMz2AAAAwYAwY2MMkBmFWoN2YAmZwAD",
+      "pw": 97472.3864552946,
+      "hac": 149334.52322064992,
+      "composite": 123403.45483797227,
+      "is_current_duplicate": true
+    }
+  ],
+  "errors": []
+}

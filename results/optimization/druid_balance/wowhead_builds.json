@@ -1,0 +1,100 @@
+{
+  "spec": "druid_balance",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Druid_Balance.simc",
+  "iterations": 500,
+  "build_count": 10,
+  "results": [
+    {
+      "label": "Keeper of the Grove #2",
+      "hero": "Keeper of the Grove",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgZZmlZWmxM2GLzsMGjxCGAMALbjNMNzsMCAAAwmZmHYmBbGzYMAMzAADA",
+      "pw": 59645.930583494046,
+      "hac": 95308.48223541015,
+      "composite": 77477.2064094521
+    },
+    {
+      "label": "Elune's Chosen #2",
+      "hero": "Elune's Chosen",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgZZmlZWmxM2GLzsMGjxCGAMALbjNMNzsMCAAAwmZmHYmBbGzYMAMzAADA",
+      "pw": 59404.13866127217,
+      "hac": 95264.53866561627,
+      "composite": 77334.33866344421
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDMmlZmZmBYYWmZbYGzYjlZMzMjZ2wAgBYZbshpZmlRAAAA2MzMzMYzYYMDgZGAYA",
+      "pw": 60320.14173476849,
+      "hac": 89321.56111123154,
+      "composite": 74820.85142300001,
+      "is_current": true
+    },
+    {
+      "label": "Elune's Chosen #1",
+      "hero": "Elune's Chosen",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDMmlZmZmBYYWmZbYGzYjlZMzMjZ2wAgBYZbshpZmlRAAAA2MzMzMYzYYMDgZGAYA",
+      "pw": 60320.14173476849,
+      "hac": 89321.56111123154,
+      "composite": 74820.85142300001,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Keeper of the Grove #1",
+      "hero": "Keeper of the Grove",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDMmlZmZmBYYWmZbYGzYjlZMzMjZ2wAgBYZbshpZmlRAAAA2MzMzMYzYYMDgZGAYA",
+      "pw": 60320.14173476849,
+      "hac": 89321.56111123154,
+      "composite": 74820.85142300001,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Elune's Chosen #3",
+      "hero": "Elune's Chosen",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMwMmZbsNjZsNzyMGjBLYAwAssN2w0MzyIAAAAbMzMzgNjZMmBwMDAMA",
+      "pw": 57281.47746371614,
+      "hac": 88293.45945103593,
+      "composite": 72787.46845737603
+    },
+    {
+      "label": "Keeper of the Grove #3",
+      "hero": "Keeper of the Grove",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMwMmZbsNjZsNzyMGjBLYAwAssN2w0MzyIAAAAbMzMzgNjZMmBwMDAMA",
+      "pw": 57248.90739166136,
+      "hac": 88029.5775125083,
+      "composite": 72639.24245208483
+    },
+    {
+      "label": "Elune's Chosen #4",
+      "hero": "Elune's Chosen",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMYYmZMzyMLmZGLjlZWGjBLYAwYZbmBjZbEYCAAAwiZmZmBbGGjBAgZGYA",
+      "pw": 46090.51163483411,
+      "hac": 77957.19419764414,
+      "composite": 62023.85291623913
+    },
+    {
+      "label": "Keeper of the Grove #4",
+      "hero": "Keeper of the Grove",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMYYmZMzyMLmZGLjlZWGjBLYAwYZbmBjZbEYCAAAwiZmZmBbGGjBAgZGYA",
+      "pw": 46001.10121678103,
+      "hac": 77479.87699175732,
+      "composite": 61740.489104269174
+    },
+    {
+      "label": "Elune's Chosen #5",
+      "hero": "Elune's Chosen",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZmlxyMLjZGshBAjltZGMmtRgJAAAALMzMzgNjZMGAAmZgB",
+      "pw": 43496.45911881174,
+      "hac": 73077.22060959961,
+      "composite": 58286.83986420567
+    },
+    {
+      "label": "Keeper of the Grove #5",
+      "hero": "Keeper of the Grove",
+      "talent_string": "CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZmlxyMLjZGshBAjltZGMmtRgJAAAALMzMzgNjZMGAAmZgB",
+      "pw": 43499.147469396135,
+      "hac": 72963.74354194089,
+      "composite": 58231.44550566851
+    }
+  ],
+  "errors": []
+}

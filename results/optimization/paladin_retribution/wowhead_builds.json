@@ -1,0 +1,116 @@
+{
+  "spec": "paladin_retribution",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Paladin_Retribution.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Herald of the Sun #2",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxMDzYjNMAAkZm2mZ2mBAsBYAwYGGYGjZDLzghxMGM",
+      "pw": 90223.3558024517,
+      "hac": 143110.48571190922,
+      "composite": 116666.92075718046
+    },
+    {
+      "label": "Templar #2",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxMDzYjNMAAkZm2mZ2mBAsBYAwYGGYGjZDLzghxMGM",
+      "pw": 90268.28466221382,
+      "hac": 143065.05458374976,
+      "composite": 116666.66962298179
+    },
+    {
+      "label": "Templar #3",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYjtBAAkZm2mZ2mBAsBYAAzwMYYmZBLzgxMmxgB",
+      "pw": 82694.22529354633,
+      "hac": 148374.69106357987,
+      "composite": 115534.4581785631
+    },
+    {
+      "label": "Herald of the Sun #3",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYjtBAAkZm2mZ2mBAsBYAAzwMYYmZBLzgxMmxgB",
+      "pw": 82552.8545209459,
+      "hac": 148296.74737998695,
+      "composite": 115424.80095046642
+    },
+    {
+      "label": "Templar #5",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxYYGLshBMLz2Mzs1gAAAWAMAYMDDMjZmNgZmhxMGM",
+      "pw": 83781.3640983483,
+      "hac": 144054.92983869743,
+      "composite": 113918.14696852287
+    },
+    {
+      "label": "Herald of the Sun #5",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAMa22mZmlxMzMAAAAAAmpMMMzYbY2GmZbGjxYYGLshBMLz2Mzs1gAAAWAMAYMDDMjZmNgZmhxMGM",
+      "pw": 83546.04607488631,
+      "hac": 143828.4276305309,
+      "composite": 113687.23685270861
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQz22MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGbsNMAAkZm2mZ2mBAsBYAwYGmBzYMbYZGMMmxgB",
+      "pw": 91645.05838475232,
+      "hac": 125176.55398088398,
+      "composite": 108410.80618281815,
+      "is_current": true
+    },
+    {
+      "label": "Herald of the Sun #1",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQz22MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGbsNMAAkZm2mZ2mBAsBYAwYGmBzYMbYZGMMmxgB",
+      "pw": 91645.05838475232,
+      "hac": 125176.55398088398,
+      "composite": 108410.80618281815,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Templar #1",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQz22MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGbsNMAAkZm2mZ2mBAsBYAwYGmBzYMbYZGMMmxgB",
+      "pw": 91645.05838475232,
+      "hac": 125176.55398088398,
+      "composite": 108410.80618281815,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Templar #4",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzy2MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGLsNMgZZ2mZmtGEAAwCgBAjZYGMjxsAMzMMmxgB",
+      "pw": 90169.10571879549,
+      "hac": 122311.92362160757,
+      "composite": 106240.51467020152
+    },
+    {
+      "label": "Herald of the Sun #4",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzy2MzsMMzAAAAAAwoMmhZGbDz2wMbzYMmZYGLsNMgZZ2mZmtGEAAwCgBAjZYGMjxsAMzMMmxgB",
+      "pw": 90086.64790273244,
+      "hac": 122232.44089543869,
+      "composite": 106159.54439908557
+    },
+    {
+      "label": "Herald of the Sun #6",
+      "hero": "Herald of the Sun",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYhtBgZZ2mZmtGEAAwCgBAMDzghZmFgZmxMmxgB",
+      "pw": 74176.4171956498,
+      "hac": 136418.53870600238,
+      "composite": 105297.47795082608
+    },
+    {
+      "label": "Templar #6",
+      "hero": "Templar",
+      "talent_string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQzyyMzsMzMzMDAAAAAwMlxMYGbzY2GmZbGMegZwYhtBgZZ2mZmtGEAAwCgBAMDzghZmFgZmxMmxgB",
+      "pw": 74187.0697728103,
+      "hac": 136106.84520725577,
+      "composite": 105146.95749003303
+    }
+  ],
+  "errors": []
+}

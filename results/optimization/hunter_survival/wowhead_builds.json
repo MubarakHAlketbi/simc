@@ -1,0 +1,116 @@
+{
+  "spec": "hunter_survival",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Hunter_Survival.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Pack Leader #5",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNzMzMmxyAAAAAAgZMzMDzYYMDGTzAAAAAGAALbzMziZmZmZGzMAMDbgxYmZhB",
+      "pw": 97453.05527505145,
+      "hac": 179487.73613380306,
+      "composite": 138470.39570442727
+    },
+    {
+      "label": "Sentinel #5",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNzMzMmxyAAAAAAgZMzMDzYYMDGTzAAAAAGAALbzMziZmZmZGzMAMDbgxYmZhB",
+      "pw": 97601.29145725835,
+      "hac": 179104.7938403159,
+      "composite": 138353.04264878712
+    },
+    {
+      "label": "Sentinel #6",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNzMzMmxyAAAAAAgZmZmZsNjhxMDjpZAAAAADAgltZmZzMzMDjxAwMsBzYMzswA",
+      "pw": 95166.80769618205,
+      "hac": 180069.87620257933,
+      "composite": 137618.3419493807
+    },
+    {
+      "label": "Pack Leader #6",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNzMzMmxyAAAAAAgZmZmZsNjhxMDjpZAAAAADAgltZmZzMzMDjxAwMsBzYMzswA",
+      "pw": 95203.08326215294,
+      "hac": 179169.88562464964,
+      "composite": 137186.48444340128
+    },
+    {
+      "label": "Sentinel #2",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFzMzMzwyAAAAAAgZMzMDzYYMDGTzAAAAAGAALLzMziZmZmZGzMgZ2AgxYmZhB",
+      "pw": 82612.02728055805,
+      "hac": 176212.23153255568,
+      "composite": 129412.12940655687
+    },
+    {
+      "label": "Pack Leader #2",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFzMzMzwyAAAAAAgZMzMDzYYMDGTzAAAAAGAALLzMziZmZmZGzMgZ2AgxYmZhB",
+      "pw": 82776.76892432787,
+      "hac": 175623.0688321139,
+      "composite": 129199.9188782209
+    },
+    {
+      "label": "Sentinel #3",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFzMzMzwyAAAAAAgZMzMjtZMMmZYMNDAAAAYAAssMzMbmZmZMjxAmZDAzYMzgB",
+      "pw": 81313.15693860679,
+      "hac": 174090.57734478582,
+      "composite": 127701.8671416963
+    },
+    {
+      "label": "Pack Leader #3",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFzMzMzwyAAAAAAgZMzMjtZMMmZYMNDAAAAYAAssMzMbmZmZMjxAmZDAzYMzgB",
+      "pw": 81361.05221588761,
+      "hac": 173777.7713119894,
+      "composite": 127569.41176393851
+    },
+    {
+      "label": "Pack Leader #4",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNjZmxMPwy8AAAAAAAMjZmZYGDjZwYaGAAAAwAAYZbmZWMzMzYmZMAMDbMMGzYjB",
+      "pw": 98677.45177745809,
+      "hac": 152484.11365293254,
+      "composite": 125580.78271519532
+    },
+    {
+      "label": "Sentinel #4",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMWgBmxoxyAYmgNjZmxMPwy8AAAAAAAMjZmZYGDjZwYaGAAAAwAAYZbmZWMzMzYmZMAMDbMMGzYjB",
+      "pw": 98641.31104905978,
+      "hac": 152268.37195248733,
+      "composite": 125454.84150077356
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFjZmZmxyAAAAAAgZMzMDzYYMDGTzAAAAAAAGLLzMziZmZmZGjBMzGgZxYMjNG",
+      "pw": 88047.35552268586,
+      "hac": 150375.84615004086,
+      "composite": 119211.60083636336,
+      "is_current": true
+    },
+    {
+      "label": "Sentinel #1",
+      "hero": "Sentinel",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFjZmZmxyAAAAAAgZMzMDzYYMDGTzAAAAAAAGLLzMziZmZmZGjBMzGgZxYMjNG",
+      "pw": 88047.35552268586,
+      "hac": 150375.84615004086,
+      "composite": 119211.60083636336,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Pack Leader #1",
+      "hero": "Pack Leader",
+      "talent_string": "C8PAAAAAAAAAAAAAAAAAAAAAAMgxMG2ILwMM0gFjZmZmxyAAAAAAgZMzMDzYYMDGTzAAAAAAAGLLzMziZmZmZGjBMzGgZxYMjNG",
+      "pw": 88047.35552268586,
+      "hac": 150375.84615004086,
+      "composite": 119211.60083636336,
+      "is_current_duplicate": true
+    }
+  ],
+  "errors": []
+}

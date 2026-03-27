@@ -1,0 +1,67 @@
+{
+  "spec": "mage_frost",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Mage_Frost.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "Spellslinger #2",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAMzwYZmZmFmZmYGmZmZmZWMzMMjZAAAgZmZWWmZaDAAWAAAAWAYbbMzMDmthxMjNAAAmZDYmMGwMYA",
+      "pw": 106266.35017579744,
+      "hac": 212042.39124878438,
+      "composite": 159154.37071229093
+    },
+    {
+      "label": "Spellslinger #3",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzEzMzMzMzMziZmhZMDAAAMzMzyyMTbAAAAAAgFA22GzMzgZbYMzYDAAgZ2AmJjBMDGA",
+      "pw": 105862.47358501784,
+      "hac": 212253.24690531733,
+      "composite": 159057.86024516757
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmxMjZMziZmZmZMDAAAMzMzyyMTbAAAAAAgNA22GzMzgZZeAjZYBAAgZWAmJjBMDGA",
+      "pw": 113189.1140040115,
+      "hac": 172154.78459428455,
+      "composite": 142671.94929914802,
+      "is_current": true
+    },
+    {
+      "label": "Spellslinger #1",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmxMjZMziZmZmZMDAAAMzMzyyMTbAAAAAAgNA22GzMzgZZeAjZYBAAgZWAmJjBMDGA",
+      "pw": 113189.1140040115,
+      "hac": 172154.78459428455,
+      "composite": 142671.94929914802,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Spellslinger #5",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAMzwYZmZmFmZmYGmZmZmZWMzMzMGzsMTzMLzCAAAaBAAWAAAAWAYbbMzMDGGzMzYDAAAMzgZyYAgB",
+      "pw": 87481.83752249248,
+      "hac": 167462.0208240299,
+      "composite": 127471.92917326119
+    },
+    {
+      "label": "Spellslinger #6",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzEzMzMzMzMziZmZmxYmlZamZZWAAAQLAAAAAAgFA22GzMzghxMzM2AAAAzMYmMGAYA",
+      "pw": 87847.54566177756,
+      "hac": 166865.83855974185,
+      "composite": 127356.6921107597
+    },
+    {
+      "label": "Spellslinger #4",
+      "hero": "Spellslinger",
+      "talent_string": "CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmxMjZMziZmZmxMzsMTzMLzCAAAaBAAAAAAsBw22YmZGYZGjZstAAAAmZwMZMgBGA",
+      "pw": 94700.46189538154,
+      "hac": 138166.7600000694,
+      "composite": 116433.61094772546
+    }
+  ],
+  "errors": []
+}

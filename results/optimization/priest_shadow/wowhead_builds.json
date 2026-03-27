@@ -1,0 +1,51 @@
+{
+  "spec": "priest_shadow",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Priest_Shadow.simc",
+  "iterations": 500,
+  "build_count": 4,
+  "results": [
+    {
+      "label": "Archon #2",
+      "hero": "Archon",
+      "talent_string": "CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAghZxMGLzMMzyMDzw2MzYmZGbIzYxMNAzAMziZY2MAkxYBAzYIjZmZMbjZ2WGgZiB",
+      "pw": 83633.51578883149,
+      "hac": 141365.83797114372,
+      "composite": 112499.6768799876
+    },
+    {
+      "label": "Archon #4",
+      "hero": "Archon",
+      "talent_string": "CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAgBLmxYZmxMzyMDzw2MzYmZGbIzYxMNAzMzAABY2mtFwsxAMzMjMmZmxsxMYmBzED",
+      "pw": 63509.3584716198,
+      "hac": 129167.7863258078,
+      "composite": 96338.5723987138
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAgxYxMGLzMY2mZGzw2MzYmZGbIzYxMNAzAMzmZY2MAkxYBAzAZMzMjZbMz2yAMTMA",
+      "pw": 86006.72663352461,
+      "hac": 80143.05048027217,
+      "composite": 83074.8885568984,
+      "is_current": true
+    },
+    {
+      "label": "Archon #1",
+      "hero": "Archon",
+      "talent_string": "CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAgxYxMGLzMY2mZGzw2MzYmZGbIzYxMNAzAMzmZY2MAkxYBAzAZMzMjZbMz2yAMTMA",
+      "pw": 86006.72663352461,
+      "hac": 80143.05048027217,
+      "composite": 83074.8885568984,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Archon #3",
+      "hero": "Archon",
+      "talent_string": "CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAgxYxMGLzMY2mZGzw2MzYmZGbIzYxMNAzMzAABY2mtFwsxAMDkxMzMmtxMYmBzED",
+      "pw": 79245.23250431364,
+      "hac": 84638.2244970679,
+      "composite": 81941.72850069078
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,67 @@
+{
+  "spec": "hunter_marksmanship",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Hunter_Marksmanship.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "Sentinel #2",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGNWGAzgNAAAAAAAAgZMzMjtZMzMmhlx0MGjZ222MzMDzMsMzsMGzywMDAAgxYAYmpFGGgNM",
+      "pw": 98470.64708921005,
+      "hac": 164105.52503280723,
+      "composite": 131288.08606100862
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGNWGAzgNAAAAAAAAgZMjZYGzMjZwYaGjZmZbbzMzMMzgZmlxYWGMDAAYMzMDAzMttBDw2wA",
+      "pw": 102781.29529714253,
+      "hac": 151697.70243755527,
+      "composite": 127239.4988673489,
+      "is_current": true
+    },
+    {
+      "label": "Sentinel #1",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGNWGAzgNAAAAAAAAgZMjZYGzMjZwYaGjZmZbbzMzMMzgZmlxYWGMDAAYMzMDAzMttBDw2wA",
+      "pw": 102781.29529714253,
+      "hac": 151697.70243755527,
+      "composite": 127239.4988673489,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Sentinel #6",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYJwsAAAAAAAAAMjZmZsNjZmxMsMmmxgZW22mZmhHYmZsMjNGzywMDAAgxYmZmBMhhBYDD",
+      "pw": 82263.19976903933,
+      "hac": 167186.77410052603,
+      "composite": 124724.98693478268
+    },
+    {
+      "label": "Sentinel #5",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYJwsAAAAAAAAAMjZmZsNjZmxMsMmmxgZW22mZmhHYmZsMjFGzywMDAAgxYmZmBMhhBYDD",
+      "pw": 82319.53193808711,
+      "hac": 166426.75279187944,
+      "composite": 124373.14236498327
+    },
+    {
+      "label": "Sentinel #3",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAwCMwMGN2GAzgNAAAAAAAAgZMjZYGzMjZGeATzYMmZbZzMzMMzwyMz2YMbDzMAAgZGDAMz0GWmBYDD",
+      "pw": 89420.64968995705,
+      "hac": 155288.55480062455,
+      "composite": 122354.6022452908
+    },
+    {
+      "label": "Sentinel #4",
+      "hero": "Sentinel",
+      "talent_string": "C4PAAAAAAAAAAAAAAAAAAAAAAYzsNwAmgZYLwsAAAAAAAAAMjZMDzYmZMDGTzYwMbbMzMWmZGjZmNmZWGMDAAYMzMzMzMgJbwAshB",
+      "pw": 94631.49754309448,
+      "hac": 138467.75155126292,
+      "composite": 116549.6245471787
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,51 @@
+{
+  "spec": "mage_arcane",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Mage_Arcane.simc",
+  "iterations": 500,
+  "build_count": 4,
+  "results": [
+    {
+      "label": "default #2",
+      "hero": "default",
+      "talent_string": "C4DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzswMzQzMGAAAGAAEwMzMLLzMxCAAbzYmZMbmlZmZMzYMmZmZswMzMGAADAAgZWAADAMM",
+      "pw": 89296.71872554465,
+      "hac": 227238.6821793927,
+      "composite": 158267.70045246868
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzQzMzAAAwAAgAmZmZZZmZYBAgtxMzMmtFLzMzYmxYMzMGLMzMjZAAGAAAzsAAmBADD",
+      "pw": 91516.56238597429,
+      "hac": 209446.7157076009,
+      "composite": 150481.6390467876,
+      "is_current": true
+    },
+    {
+      "label": "default #1",
+      "hero": "default",
+      "talent_string": "C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzQzMzAAAwAAgAmZmZZZmZYBAgtxMzMmtFLzMzYmxYMzMGLMzMjZAAGAAAzsAAmBADD",
+      "pw": 91516.56238597429,
+      "hac": 209446.7157076009,
+      "composite": 150481.6390467876,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "default #4",
+      "hero": "default",
+      "talent_string": "C4DAAAAAAAAAAAAAAAAAAAAAAMzwMLzMzsgZGamxAAAwAAmZmmlttZAgYDAgNDzMDbzyMzMLzwYGzMDLMzMzDMDAwAAAMAzMgZAwwA",
+      "pw": 80218.14644264014,
+      "hac": 198150.79328964656,
+      "composite": 139184.46986614336
+    },
+    {
+      "label": "default #3",
+      "hero": "default",
+      "talent_string": "C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMzQzMzAAAwAAmZmmlltZAgYDAgNmZmxYzyMzMLzMGjZmxYhZmZMDAwAAAMAzMgZAwwA",
+      "pw": 83937.03078373577,
+      "hac": 154089.85621094998,
+      "composite": 119013.44349734287
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,97 @@
+{
+  "spec": "death_knight_unholy",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Death_Knight_Unholy.simc",
+  "iterations": 500,
+  "build_count": 10,
+  "results": [
+    {
+      "label": "San'layn #2",
+      "hero": "San'layn",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZMDz2MzMTDzMmZGDAAAAAAAAzMMzAglhZmtZmxMGgFzmhhMwsxQjFMgZAYMzMMAzMDzYA",
+      "pw": 104577.11971568316,
+      "hac": 228566.72686111796,
+      "composite": 166571.92328840058
+    },
+    {
+      "label": "Rider of the Apocalypse #2",
+      "hero": "Rider of the Apocalypse",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZMDz2MzMTDzMmZGDAAAAAAAAzMMzAglhZmtZmxMGgFzmhhMwsxQjFMgZAYMzMMAzMDzYA",
+      "pw": 104538.51026827969,
+      "hac": 228386.86722999046,
+      "composite": 166462.68874913506
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTzmZmZMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGwmZxwQGY2YoxCAmBAmZGzAMzMjZMA",
+      "pw": 110011.16929845605,
+      "hac": 212856.37271183846,
+      "composite": 161433.77100514725,
+      "is_current": true
+    },
+    {
+      "label": "Rider of the Apocalypse #1",
+      "hero": "Rider of the Apocalypse",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTzmZmZMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGwmZxwQGY2YoxCAmBAmZGzAMzMjZMA",
+      "pw": 110011.16929845605,
+      "hac": 212856.37271183846,
+      "composite": 161433.77100514725,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "San'layn #1",
+      "hero": "San'layn",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTzmZmZMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGwmZxwQGY2YoxCAmBAmZGzAMzMjZMA",
+      "pw": 110011.16929845605,
+      "hac": 212856.37271183846,
+      "composite": 161433.77100514725,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Rider of the Apocalypse #5",
+      "hero": "Rider of the Apocalypse",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZYY2mZmZaYmxMzYAAAAAAAAYmhZGAsMMzsNzMmxwADMjFNWWAsMxGGwMAMmZGGMzgZMjB",
+      "pw": 100017.68639206821,
+      "hac": 216792.93565332983,
+      "composite": 158405.31102269902
+    },
+    {
+      "label": "San'layn #5",
+      "hero": "San'layn",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZYY2mZmZaYmxMzYAAAAAAAAYmhZGAsMMzsNzMmxwADMjFNWWAsMxGGwMAMmZGGMzgZMjB",
+      "pw": 100038.77982845136,
+      "hac": 216624.88187678106,
+      "composite": 158331.8308526162
+    },
+    {
+      "label": "San'layn #4",
+      "hero": "San'layn",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTziZGzMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGDMwMW0YZDwyEbAYGAYmZMDmZwMmxA",
+      "pw": 105988.42569021403,
+      "hac": 203030.1910206357,
+      "composite": 154509.30835542487
+    },
+    {
+      "label": "Rider of the Apocalypse #4",
+      "hero": "Rider of the Apocalypse",
+      "talent_string": "CwPAAAAAAAAAAAAAAAAAAAAAAAwMjZMDDz2MzMTziZGzMjBAAAAAAAgZeAmZAwyMmZ2mZGzYGDMwMW0YZDwyEbAYGAYmZMDmZwMmxA",
+      "pw": 106027.43889223144,
+      "hac": 202238.43063213394,
+      "composite": 154132.9347621827
+    }
+  ],
+  "errors": [
+    {
+      "label": "Rider of the Apocalypse #3",
+      "hero": "Rider of the Apocalypse",
+      "talent_string": "[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB",
+      "error": "SimC error: Error: Initialization error: Player 'MID1_Death_Knight_Unholy_Rider': Hash '[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB': Invalid character '[' found."
+    },
+    {
+      "label": "San'layn #3",
+      "hero": "San'layn",
+      "talent_string": "[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB",
+      "error": "SimC error: Error: Initialization error: Player 'MID1_Death_Knight_Unholy_Rider': Hash '[CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMjZY2mZmZa2MzYmZMAAAAAAAAMzwMDAWGmZ2mZGzYAWMLGGyAzCDNWwAmBgxMzwAMzMMjB': Invalid character '[' found."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "spec": "death_knight_frost",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Death_Knight_Frost.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "DEATHBRINGER #3",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxYYGgZmZmZmZmZAAAAAAAAAwY2GYALglhJkxCmZmZmBGAGmZAmBM",
+      "pw": 104657.62611855578,
+      "hac": 188014.50031249263,
+      "composite": 146336.0632155242
+    },
+    {
+      "label": "DEATHBRINGER #5",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAYAmZMzMDY2mZmZmZxMjmZMGmZGGzMwMzMzMDAAAAAAAAAAbmNDDMwsphG2wMzMzMwMAGAmZmBM",
+      "pw": 91539.36473340809,
+      "hac": 190937.57531923853,
+      "composite": 141238.4700263233
+    },
+    {
+      "label": "DEATHBRINGER #6",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAYAzMMjZMDzmZmZmZxMjmZMGmZGGPwMmZmZmZmZAAAAAAAAAAYzsZYgBmNN0wGmZmZmBAwAwMzMgB",
+      "pw": 90167.15459696321,
+      "hac": 187143.8328244004,
+      "composite": 138655.4937106818
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAwY2GYALglhJkxCmZMzMwMAGmZAmBM",
+      "pw": 107016.70229150896,
+      "hac": 165934.59124370536,
+      "composite": 136475.64676760716,
+      "is_current": true
+    },
+    {
+      "label": "DEATHBRINGER #1",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAwY2GYALglhJkxCmZMzMwMAGmZAmBM",
+      "pw": 107016.70229150896,
+      "hac": 165934.59124370536,
+      "composite": 136475.64676760716,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "DEATHBRINGER #2",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAMAzMjZmZAz2MzMzMLmZkZMmZmZGYMzwMzMjZAAAAAAAAAwY2GYALglhJkxCmZYmBmBwwMDwMgB",
+      "pw": 92595.7777948296,
+      "hac": 175701.57525690083,
+      "composite": 134148.67652586522
+    },
+    {
+      "label": "DEATHBRINGER #4",
+      "hero": "DEATHBRINGER",
+      "talent_string": "CsPAAAAAAAAAAAAAAAAAAAAAAMDYmZMzMDY2mZmZmZxMjMjxMDzw4BMzgZmZmZAAAAAAAAAAYzsZYgBmNN0wGmZMzMwMAGAmZmBM",
+      "pw": 103476.6867386394,
+      "hac": 161460.3255257821,
+      "composite": 132468.50613221075
+    }
+  ],
+  "errors": []
+}

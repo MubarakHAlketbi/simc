@@ -1,0 +1,116 @@
+{
+  "spec": "death_knight_blood",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Death_Knight_Blood.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "San'layn #6",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMmZmZmZGzMjBAjZmZGAAAGYgZspxyGIbDYDwMMAAgZGAGA",
+      "pw": 46875.26053974564,
+      "hac": 93099.72366163565,
+      "composite": 69987.49210069065
+    },
+    {
+      "label": "Deathbringer #6",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMmZmZmZGzMjBAjZmZGAAAGYgZspxyGIbDYDwMMAAgZGAGA",
+      "pw": 46830.290644857625,
+      "hac": 93127.35399552382,
+      "composite": 69978.82232019072
+    },
+    {
+      "label": "San'layn #5",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYMmxAAAAAmZmZmZmZYGjBAjZmZGAAAGYgZspxyGILDYDwMmBAAMzADGA",
+      "pw": 45984.879302696645,
+      "hac": 93515.22624394485,
+      "composite": 69750.05277332076
+    },
+    {
+      "label": "Deathbringer #5",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYMmxAAAAAmZmZmZmZYGjBAjZmZGAAAGYgZspxyGILDYDwMmBAAMzADGA",
+      "pw": 45958.02804297154,
+      "hac": 93485.40136672754,
+      "composite": 69721.71470484954
+    },
+    {
+      "label": "San'layn #3",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMzMzMzMDzYMAYMzMzAAAYMbDMglgthJwwCgZMDAAzMAgB",
+      "pw": 44459.87529704827,
+      "hac": 91708.28857870905,
+      "composite": 68084.08193787865
+    },
+    {
+      "label": "Deathbringer #3",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMzMzMzMDzYMAYMzMzAAAYMbDMglgthJwwCgZMDAAzMAgB",
+      "pw": 44318.78092168589,
+      "hac": 91775.99207364589,
+      "composite": 68047.3864976659
+    },
+    {
+      "label": "Deathbringer #2",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwMzyMzMmxMzMMLzMz0MLGjxMGAAAAwMmZmZmZYGjBAjZmZGAAAjZbgBsEsNMBGWAMjZAAYmBwgB",
+      "pw": 42812.51238886536,
+      "hac": 90244.1098342165,
+      "composite": 66528.31111154094
+    },
+    {
+      "label": "San'layn #2",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwMzyMzMmxMzMMLzMz0MLGjxMGAAAAwMmZmZmZYGjBAjZmZGAAAjZbgBsEsNMBGWAMjZAAYmBwgB",
+      "pw": 42888.84038206611,
+      "hac": 89969.28308921357,
+      "composite": 66429.06173563984
+    },
+    {
+      "label": "Deathbringer #4",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmxMjhZZmZmmZxYmxMmBAAAAzMzMzMzMDzYMAgZmZGAAAGYgZspxyGILDYDwMMDAAMzADGA",
+      "pw": 47312.86767286513,
+      "hac": 85150.0533564401,
+      "composite": 66231.46051465262
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmxMjhZZmZmmZxYmxMmBAAAAzMzMzMzMDzYMAgZmZGAAAjZbgBsEsMMBGWAMDzAAYmBwgB",
+      "pw": 46551.621532355115,
+      "hac": 85835.0743962268,
+      "composite": 66193.34796429097,
+      "is_current": true
+    },
+    {
+      "label": "San'layn #1",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmxMjhZZmZmmZxYmxMmBAAAAzMzMzMzMDzYMAgZmZGAAAjZbgBsEsMMBGWAMDzAAYmBwgB",
+      "pw": 46551.621532355115,
+      "hac": 85835.0743962268,
+      "composite": 66193.34796429097,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Deathbringer #1",
+      "hero": "Deathbringer",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmxMjhZZmZmmZxYmxMmBAAAAzMzMzMzMDzYMAgZmZGAAAjZbgBsEsMMBGWAMDzAAYmBwgB",
+      "pw": 46551.621532355115,
+      "hac": 85835.0743962268,
+      "composite": 66193.34796429097,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "San'layn #4",
+      "hero": "San'layn",
+      "talent_string": "CoPAAAAAAAAAAAAAAAAAAAAAAwYWGzMmxMjhZZmZmmZxYmxMmBAAAAzMzMzMzMDzYMAgZmZGAAAGYgZspxyGILDYDwMMDAAMzADGA",
+      "pw": 47300.01698559903,
+      "hac": 84875.14475403236,
+      "composite": 66087.58086981569
+    }
+  ],
+  "errors": []
+}

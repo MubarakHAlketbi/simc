@@ -1,0 +1,59 @@
+{
+  "spec": "monk_brewmaster",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Monk_Brewmaster.simc",
+  "iterations": 500,
+  "build_count": 5,
+  "results": [
+    {
+      "label": "default #2",
+      "hero": "default",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAwMLbGDzwyM2MmZAAAAAAAYZBmYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAgNEAAgZbWamZmNG2AYmhpxAGAwA",
+      "pw": 55952.76982402982,
+      "hac": 108608.48531490115,
+      "composite": 82280.62756946549
+    },
+    {
+      "label": "default #3",
+      "hero": "default",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZZzYGzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAgNEAAgZbWamZmFG2AYmhpxAGAwA",
+      "pw": 55425.30193740241,
+      "hac": 108587.16972574905,
+      "composite": 82006.23583157573
+    },
+    {
+      "label": "default #5",
+      "hero": "default",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZZzYGzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAglZZaZ2mZZAAgAYYDMzAmGDYAAD",
+      "pw": 60274.91436544024,
+      "hac": 103458.31354415006,
+      "composite": 81866.61395479515
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sMMLAAwGCAAwsNLNzMziZYDgZGmGDAAYA",
+      "pw": 51267.10703670715,
+      "hac": 102132.65516219393,
+      "composite": 76699.88109945055,
+      "is_current": true
+    },
+    {
+      "label": "default #1",
+      "hero": "default",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sMMLAAwGCAAwsNLNzMziZYDgZGmGDAAYA",
+      "pw": 51267.10703670715,
+      "hac": 102132.65516219393,
+      "composite": 76699.88109945055,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "default #4",
+      "hero": "default",
+      "talent_string": "CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sMMLAAwysMtMbzsMAAQAmhNwMDYaMAAgB",
+      "pw": 56232.1117163224,
+      "hac": 93750.10841981825,
+      "composite": 74991.11006807032
+    }
+  ],
+  "errors": []
+}

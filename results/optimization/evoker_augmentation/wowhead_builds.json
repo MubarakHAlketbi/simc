@@ -1,0 +1,51 @@
+{
+  "spec": "evoker_augmentation",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Evoker_Augmentation.simc",
+  "iterations": 500,
+  "build_count": 4,
+  "results": [
+    {
+      "label": "Scalecommander #3",
+      "hero": "Scalecommander",
+      "talent_string": "CEcBAAAAAAAAAAAAAAAAAAAAAMmxMbzMzMWGYmlZMGmZDAAAAAGAAMzMwgxUjZmZAAAAwMmZGzMbjZGYmNjBLwyYYsNAmJiNMzAzMAG",
+      "pw": 73119.99247830427,
+      "hac": 117067.1314538733,
+      "composite": 95093.56196608878
+    },
+    {
+      "label": "Scalecommander #4",
+      "hero": "Scalecommander",
+      "talent_string": "CEcBAAAAAAAAAAAAAAAAAAAAAMmZmZbmZmxyAzsMjxwMAAAAAAAAYmBmBjHoGzMzAAAAgZmZmxMzyYmBmZzYwCsMGGbDgZiYDzMDmZAM",
+      "pw": 71793.03406663956,
+      "hac": 115597.55591328445,
+      "composite": 93695.29498996201
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CEcBAAAAAAAAAAAAAAAAAAAAAMmxMbzMzMWGYmlZMGmZDAAAAAGAAMzMwgxUjZmZAAAAwMmZGzMbjZGYmNDMmxCLwAzwQjYBzMmZAgB",
+      "pw": 71242.76409466883,
+      "hac": 101481.04334861368,
+      "composite": 86361.90372164125,
+      "is_current": true
+    },
+    {
+      "label": "Scalecommander #1",
+      "hero": "Scalecommander",
+      "talent_string": "CEcBAAAAAAAAAAAAAAAAAAAAAMmxMbzMzMWGYmlZMGmZDAAAAAGAAMzMwgxUjZmZAAAAwMmZGzMbjZGYmNDMmxCLwAzwQjYBzMmZAgB",
+      "pw": 71242.76409466883,
+      "hac": 101481.04334861368,
+      "composite": 86361.90372164125,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Scalecommander #2",
+      "hero": "Scalecommander",
+      "talent_string": "CEcBAAAAAAAAAAAAAAAAAAAAAMmZmZbmZmxyAzsMjxwMAAAAAAAAYmBmBjHoGzMzAAAAgZmZmxMzyYmBmZzAjZswCMwMM0IWwMzMzAAD",
+      "pw": 69831.58528331926,
+      "hac": 101365.97860158204,
+      "composite": 85598.78194245065
+    }
+  ],
+  "errors": []
+}

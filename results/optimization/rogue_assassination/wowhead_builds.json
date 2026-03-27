@@ -1,0 +1,116 @@
+{
+  "spec": "rogue_assassination",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Rogue_Assassination.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Deathstalker #6",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZmZxgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmBPwMzMzYYmxYAMwCMjRjZDklBsZsBYmhxA",
+      "pw": 81369.71283029605,
+      "hac": 178344.88679634352,
+      "composite": 129857.29981331978
+    },
+    {
+      "label": "Fatebound #6",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZmZxgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmBPwMzMzYYmxYAMwCMjRjZDklBsZsBYmhxA",
+      "pw": 81301.55980044004,
+      "hac": 178062.3333292567,
+      "composite": 129681.94656484837
+    },
+    {
+      "label": "Fatebound #3",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZmZxgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmBPwMzMzYYmxYA2MLDMglgthJwwixmZGAGD",
+      "pw": 78235.92411196341,
+      "hac": 170096.49302414912,
+      "composite": 124166.20856805626
+    },
+    {
+      "label": "Deathstalker #3",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZmZxgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmBPwMzMzYYmxYA2MLDMglgthJwwixmZGAGD",
+      "pw": 78251.83258032906,
+      "hac": 169775.41735901206,
+      "composite": 124013.62496967056
+    },
+    {
+      "label": "Deathstalker #5",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYMjZZGMAAAAAwsMYbGAAAAAQbbzMzMzMjxMzMz2MLzMDMjZmZMzMzYAMwCMjRjZBklBsZsBYmZwA",
+      "pw": 87888.39561067597,
+      "hac": 137792.06330560477,
+      "composite": 112840.22945814037
+    },
+    {
+      "label": "Fatebound #5",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYMjZZGMAAAAAwsMYbGAAAAAQbbzMzMzMjxMzMz2MLzMDMjZmZMzMzYAMwCMjRjZBklBsZsBYmZwA",
+      "pw": 87799.53575656154,
+      "hac": 137549.86309184908,
+      "composite": 112674.69942420532
+    },
+    {
+      "label": "Deathstalker #2",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmZGMmZmZMzYYA2MLDMglglhJwwiBzMADG",
+      "pw": 89753.47695587439,
+      "hac": 103365.49805527819,
+      "composite": 96559.48750557628
+    },
+    {
+      "label": "Fatebound #2",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmZGMmZmZMzYYA2MLDMglglhJwwiBzMADG",
+      "pw": 89703.1113798193,
+      "hac": 103330.20486045654,
+      "composite": 96516.65812013792
+    },
+    {
+      "label": "Deathstalker #4",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmZGMmZmZMzYYAMwCMjRjZBklBsZAwMzgB",
+      "pw": 92136.62342691011,
+      "hac": 98176.8528212959,
+      "composite": 95156.73812410301
+    },
+    {
+      "label": "Fatebound #4",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmlBbzAAAAAAabbmZmZmZMmZmZ2mZZmZGMmZmZMzYYAMwCMjRjZBklBsZAwMzgB",
+      "pw": 92104.24413256659,
+      "hac": 97998.90007036018,
+      "composite": 95051.57210146339
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmtBbzAAAAAAy2MzMzMzYMzMzsNz2MzMYMzMzYmxwAsZWGYALBbDTghFDmZAGjB",
+      "pw": 88931.79997203476,
+      "hac": 98055.52355375905,
+      "composite": 93493.6617628969,
+      "is_current": true
+    },
+    {
+      "label": "Fatebound #1",
+      "hero": "Fatebound",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmtBbzAAAAAAy2MzMzMzYMzMzsNz2MzMYMzMzYmxwAsZWGYALBbDTghFDmZAGjB",
+      "pw": 88931.79997203476,
+      "hac": 98055.52355375905,
+      "composite": 93493.6617628969,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Deathstalker #1",
+      "hero": "Deathstalker",
+      "talent_string": "CMQAAAAAAAAAAAAAAAAAAAAAAYmZMbzgBAAAAAmtBbzAAAAAAy2MzMzMzYMzMzsNz2MzMYMzMzYmxwAsZWGYALBbDTghFDmZAGjB",
+      "pw": 88931.79997203476,
+      "hac": 98055.52355375905,
+      "composite": 93493.6617628969,
+      "is_current_duplicate": true
+    }
+  ],
+  "errors": []
+}

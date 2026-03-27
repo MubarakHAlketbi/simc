@@ -1,0 +1,116 @@
+{
+  "spec": "warlock_destruction",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warlock_Destruction.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Diabolist #5",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMjZGNLmxiZGzysNzYsYmZZZmBAAzgZmZxCMwsY0YGAzWsxAAAjZYAAwMDGzMmZDAAwMzMDAAzwA",
+      "pw": 84710.57203813214,
+      "hac": 175025.9710612337,
+      "composite": 129868.27154968292
+    },
+    {
+      "label": "Hellcaller #5",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMjZGNLmxiZGzysNzYsYmZZZmBAAzgZmZxCMwsY0YGAzWsxAAAjZYAAwMDGzMmZDAAwMzMDAAzwA",
+      "pw": 84644.47596631049,
+      "hac": 174841.46822056378,
+      "composite": 129742.97209343713
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsAGzYYhMw2wGNWYAAgxAjNAMzAYmxYAAAYmZmBAwMDD",
+      "pw": 103128.53796398772,
+      "hac": 148851.7881149487,
+      "composite": 125990.1630394682,
+      "is_current": true
+    },
+    {
+      "label": "Diabolist #1",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsAGzYYhMw2wGNWYAAgxAjNAMzAYmxYAAAYmZmBAwMDD",
+      "pw": 103128.53796398772,
+      "hac": 148851.7881149487,
+      "composite": 125990.1630394682,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Hellcaller #1",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsAGzYYhMw2wGNWYAAgxAjNAMzAYmxYAAAYmZmBAwMDD",
+      "pw": 103128.53796398772,
+      "hac": 148851.7881149487,
+      "composite": 125990.1630394682,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Hellcaller #6",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLjxMLGz2CDAAmZGzMzCYMjhFyAbDb0YhBAAGDM2AwMDwMzYMbAAAmZmBAgZGG",
+      "pw": 99412.22365136894,
+      "hac": 150230.94328968867,
+      "composite": 124821.5834705288
+    },
+    {
+      "label": "Diabolist #6",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLjxMLGz2CDAAmZGzMzCYMjhFyAbDb0YhBAAGDM2AwMDwMzYMbAAAmZmBAgZGG",
+      "pw": 99278.67913002436,
+      "hac": 149635.9724628449,
+      "composite": 124457.32579643463
+    },
+    {
+      "label": "Diabolist #4",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsYBGYWMaMDgZL2YAAgxAjNAgZGYmxYAAAYmZmBAwMDD",
+      "pw": 102531.90372692372,
+      "hac": 141807.53868758515,
+      "composite": 122169.72120725444
+    },
+    {
+      "label": "Hellcaller #4",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmZmlZjxMLGjFzAAgZmxMzsYBGYWMaMDgZL2YAAgxAjNAgZGYmxYAAAYmZmBAwMDD",
+      "pw": 102381.55420283921,
+      "hac": 141551.36528364205,
+      "composite": 121966.45974324063
+    },
+    {
+      "label": "Hellcaller #2",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzDMzoZzM2MzYWmNMzsMzMLLzMAAgZMzMLgxMGWIDsNsQjFGAAYAzAAmZAGzYmZDAAwMzMAAYGG",
+      "pw": 79759.46849874679,
+      "hac": 154373.4896678599,
+      "composite": 117066.47908330333
+    },
+    {
+      "label": "Diabolist #2",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzDMzoZzM2MzYWmNMzsMzMLLzMAAgZMzMLgxMGWIDsNsQjFGAAYAzAAmZAGzYmZDAAwMzMAAYGG",
+      "pw": 79701.44881905781,
+      "hac": 154239.18341984606,
+      "composite": 116970.31611945193
+    },
+    {
+      "label": "Hellcaller #3",
+      "hero": "Hellcaller",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLDzMLGzyiZAAwYGzMzCYMjhFyAbDb0YhBAAGgxGAmZAmZGjZDAAwMzMAAMzwA",
+      "pw": 84756.04681444088,
+      "hac": 139503.43254140433,
+      "composite": 112129.7396779226
+    },
+    {
+      "label": "Diabolist #3",
+      "hero": "Diabolist",
+      "talent_string": "CsQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZjhZmxsMLDzMLGzyiZAAwYGzMzCYMjhFyAbDb0YhBAAGgxGAmZAmZGjZDAAwMzMAAMzwA",
+      "pw": 84555.91973426008,
+      "hac": 139519.37642621456,
+      "composite": 112037.64808023733
+    }
+  ],
+  "errors": []
+}

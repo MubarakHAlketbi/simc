@@ -1,0 +1,116 @@
+{
+  "spec": "shaman_elemental",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Shaman_Elemental.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Farseer #4",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMmZmZZbbgxMDAAAAAsYGDbwCMjGasBAzyMzMGbLmwMzyYZmZmxwysMjFzMjZWAAGAzMwwwA",
+      "pw": 116227.63719896477,
+      "hac": 184063.75679478192,
+      "composite": 150145.69699687336
+    },
+    {
+      "label": "Stormbringer #4",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMmZmZZbbgxMDAAAAAsYGDbwCMjGasBAzyMzMGbLmwMzyYZmZmxwysMjFzMjZWAAGAzMwwwA",
+      "pw": 116653.5474123,
+      "hac": 183220.2016060361,
+      "composite": 149936.87450916806
+    },
+    {
+      "label": "Farseer #5",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMzYML2mhZMzAAAAAALmxwGsAzohGbAwsMzMjx2ipNmZMWmZmZMsMLGLmZGzsAAMDwMDMMMA",
+      "pw": 113772.92382509196,
+      "hac": 182010.97207809915,
+      "composite": 147891.94795159556
+    },
+    {
+      "label": "Stormbringer #5",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMzYML2mhZMzAAAAAALmxwGsAzohGbAwsMzMjx2ipNmZMWmZmZMsMLGLmZGzsAAMDwMDMMMA",
+      "pw": 113336.03277341742,
+      "hac": 180895.1552090556,
+      "composite": 147115.59399123653
+    },
+    {
+      "label": "Farseer #6",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbLLjxMmZAAAAAAmxwGAmRoxGAMLzMzYmtFTYmxYZmZmxwysYsgZmZWAAmBYmBGGG",
+      "pw": 89129.6599584993,
+      "hac": 162358.07163413716,
+      "composite": 125743.86579631822
+    },
+    {
+      "label": "Stormbringer #6",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbLLjxMmZAAAAAAmxwGAmRoxGAMLzMzYmtFTYmxYZmZmxwysYsgZmZWAAmBYmBGGG",
+      "pw": 88941.4664290374,
+      "hac": 162164.10497326215,
+      "composite": 125552.78570114978
+    },
+    {
+      "label": "Farseer #3",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZbZZMmxMDAAAAYzMbwAGwsxEysAAzyMzMGbLmwMjxyMzMzMjFLGLYMzsAAMAwMjhhB",
+      "pw": 93807.13409091457,
+      "hac": 150538.32126108132,
+      "composite": 122172.72767599794
+    },
+    {
+      "label": "Stormbringer #3",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZbZZMmxMDAAAAYzMbwAGwsxEysAAzyMzMGbLmwMjxyMzMzMjFLGLYMzsAAMAwMjhhB",
+      "pw": 93950.29573118982,
+      "hac": 150344.07449125656,
+      "composite": 122147.1851112232
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbbbjxMmZAAAAAbmZDGwAmNmQmFAYWmZmxYbxEmZWGLzMzMGWsMjFMzMzCAwMAYmxwwA",
+      "pw": 91833.00051834111,
+      "hac": 143503.59105496184,
+      "composite": 117668.29578665148,
+      "is_current": true
+    },
+    {
+      "label": "Stormbringer #1",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbbbjxMmZAAAAAbmZDGwAmNmQmFAYWmZmxYbxEmZWGLzMzMGWsMjFMzMzCAwMAYmxwwA",
+      "pw": 91833.00051834111,
+      "hac": 143503.59105496184,
+      "composite": 117668.29578665148,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Farseer #1",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZZmxMzMbbbjxMmZAAAAAbmZDGwAmNmQmFAYWmZmxYbxEmZWGLzMzMGWsMjFMzMzCAwMAYmxwwA",
+      "pw": 91833.00051834111,
+      "hac": 143503.59105496184,
+      "composite": 117668.29578665148,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Farseer #2",
+      "hero": "Farseer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZZbbMmxMAAAAALGbAAwsxEysAAzyMzMGbLmwMjxyMzMzMsMLGLYmZmFAgBAmZMMMA",
+      "pw": 85185.98626604975,
+      "hac": 127728.62376770555,
+      "composite": 106457.30501687765
+    },
+    {
+      "label": "Stormbringer #2",
+      "hero": "Stormbringer",
+      "talent_string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZZbbMmxMAAAAALGbAAwsxEysAAzyMzMGbLmwMjxyMzMzMsMLGLYmZmFAgBAmZMMMA",
+      "pw": 85017.07385856954,
+      "hac": 127527.52933912515,
+      "composite": 106272.30159884735
+    }
+  ],
+  "errors": []
+}

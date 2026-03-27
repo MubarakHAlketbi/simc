@@ -1,0 +1,116 @@
+{
+  "spec": "warrior_arms",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warrior_Arms.simc",
+  "iterations": 500,
+  "build_count": 12,
+  "results": [
+    {
+      "label": "Slayer #6",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMzYGAAAghphxwMbLzMzMjZGzMAAAAAGbmB2iBsZGDLwAzoNaMYBYGMGMbmtBzMAgZmhB",
+      "pw": 74836.02432244438,
+      "hac": 229479.16931455105,
+      "composite": 152157.59681849772
+    },
+    {
+      "label": "Colossus #6",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMzYGAAAghphxwMbLzMzMjZGzMAAAAAGbmB2iBsZGDLwAzoNaMYBYGMGMbmtBzMAgZmhB",
+      "pw": 74752.19365463567,
+      "hac": 229042.1782831296,
+      "composite": 151897.18596888264
+    },
+    {
+      "label": "Colossus #5",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMzYGAAAghphZYmxyMzMzgxMDAAAAgxmZglYAbmxwGMwMajGDWAmxmZbwsZ2GMzAAmZGGA",
+      "pw": 76403.39135997949,
+      "hac": 217215.77084907968,
+      "composite": 146809.58110452958
+    },
+    {
+      "label": "Slayer #5",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMzYGAAAghphZYmxyMzMzgxMDAAAAgxmZglYAbmxwGMwMajGDWAmxmZbwsZ2GMzAAmZGGA",
+      "pw": 76336.87429951293,
+      "hac": 216713.84034799054,
+      "composite": 146525.35732375173
+    },
+    {
+      "label": "Colossus #3",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmZmFzMzYGAAAghphxwMbLzMzMjZGzMAAAAAGLmBEzYZZgFwAmhJkZwGwMYMY2mZbAmZAYmZYA",
+      "pw": 83806.27589997365,
+      "hac": 185201.64404214296,
+      "composite": 134503.9599710583
+    },
+    {
+      "label": "Slayer #3",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAgZmZmFzMzYGAAAghphxwMbLzMzMjZGzMAAAAAGLmBEzYZZgFwAmhJkZwGwMYMY2mZbAmZAYmZYA",
+      "pw": 83761.97640516543,
+      "hac": 184854.96132041203,
+      "composite": 134308.46886278872
+    },
+    {
+      "label": "Colossus #2",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzYmZAAAAMMNMGzMWmZmZGMmZAAAAAMzyMDslxYZZgFwAmhJkZwGwM2MbjBzsNAzMAMjhB",
+      "pw": 88462.66082501879,
+      "hac": 138382.2526315752,
+      "composite": 113422.456728297
+    },
+    {
+      "label": "Slayer #2",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzYmZAAAAMMNMGzMWmZmZGMmZAAAAAMzyMDslxYZZgFwAmhJkZwGwM2MbjBzsNAzMAMjhB",
+      "pw": 88589.77029233839,
+      "hac": 138028.83326154103,
+      "composite": 113309.30177693971
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMzMDAAAghphxYmxyMzMzgxMDAAAAgZWmZAZMWWGYBMgZYCZGsBMjNz2YwMGgZGAmxwA",
+      "pw": 89852.27308704433,
+      "hac": 132638.3465926637,
+      "composite": 111245.30983985402,
+      "is_current": true
+    },
+    {
+      "label": "Slayer #1",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMzMDAAAghphxYmxyMzMzgxMDAAAAgZWmZAZMWWGYBMgZYCZGsBMjNz2YwMGgZGAmxwA",
+      "pw": 89852.27308704433,
+      "hac": 132638.3465926637,
+      "composite": 111245.30983985402,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Colossus #1",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMzMDAAAghphxYmxyMzMzgxMDAAAAgZWmZAZMWWGYBMgZYCZGsBMjNz2YwMGgZGAmxwA",
+      "pw": 89852.27308704433,
+      "hac": 132638.3465926637,
+      "composite": 111245.30983985402,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Slayer #4",
+      "hero": "Slayer",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMzMDAAAghphZYmxyMzMzgxMDAAAAgZMzAyMgNzYYDGYGtRjBLAzYzsNGMjBzMAgZMMA",
+      "pw": 82459.3576637501,
+      "hac": 126587.63176872379,
+      "composite": 104523.49471623695
+    },
+    {
+      "label": "Colossus #4",
+      "hero": "Colossus",
+      "talent_string": "CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMzMDAAAghphZYmxyMzMzgxMDAAAAgZMzAyMgNzYYDGYGtRjBLAzYzsNGMjBzMAgZMMA",
+      "pw": 82311.94971976016,
+      "hac": 126238.00853859927,
+      "composite": 104274.97912917972
+    }
+  ],
+  "errors": []
+}

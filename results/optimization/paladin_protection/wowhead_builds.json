@@ -1,0 +1,84 @@
+{
+  "spec": "paladin_protection",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Paladin_Protection.simc",
+  "iterations": 500,
+  "build_count": 8,
+  "results": [
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsZm5BYWGLzMjZGbLjxYmFbzYAAGAAAAAAkmZWMjZmxYmt2AwAGwgNAAwMTbzMLzAAsBmxAYMDjBAYZGgZGkB",
+      "pw": 58677.15598838127,
+      "hac": 107668.29312750485,
+      "composite": 83172.72455794306,
+      "is_current": true
+    },
+    {
+      "label": "Templar #1",
+      "hero": "Templar",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsZm5BYWGLzMjZGbLjxYmFbzYAAGAAAAAAkmZWMjZmxYmt2AwAGwgNAAwMTbzMLzAAsBmxAYMDjBAYZGgZGkB",
+      "pw": 58677.15598838127,
+      "hac": 107668.29312750485,
+      "composite": 83172.72455794306,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Lightsmith #1",
+      "hero": "Lightsmith",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsZm5BYWGLzMjZGbLjxYmFbzYAAGAAAAAAkmZWMjZmxYmt2AwAGwgNAAwMTbzMLzAAsBmxAYMDjBAYZGgZGkB",
+      "pw": 58677.15598838127,
+      "hac": 107668.29312750485,
+      "composite": 83172.72455794306,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Lightsmith #2",
+      "hero": "Lightsmith",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsNjBzyYZMjZmZZZMzwsMLzYAAGAAAAAA00MziZMzwws1GAGYAzgNAAwMTbzMLzAAsZGMAYMDjBAYZGgZGkB",
+      "pw": 52401.33975444524,
+      "hac": 110905.25095075498,
+      "composite": 81653.29535260011
+    },
+    {
+      "label": "Templar #2",
+      "hero": "Templar",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsNjBzyYZMjZmZZZMzwsMLzYAAGAAAAAA00MziZMzwws1GAGYAzgNAAwMTbzMLzAAsZGMAYMDjBAYZGgZGkB",
+      "pw": 52469.95417463268,
+      "hac": 110518.43684151226,
+      "composite": 81494.19550807247
+    },
+    {
+      "label": "Templar #4",
+      "hero": "Templar",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsZMYWGLzMjZmZZZMzwsMLzYAAAAAAAAgmmZWMjZGGGBADYAD2GAAABYmZZbplZGLmhZMAGzwYAwMDAzMDyA",
+      "pw": 42800.10829596956,
+      "hac": 94413.58629684255,
+      "composite": 68606.84729640605
+    },
+    {
+      "label": "Lightsmith #4",
+      "hero": "Lightsmith",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsZMYWGLzMjZmZZZMzwsMLzYAAAAAAAAgmmZWMjZGGGBADYAD2GAAABYmZZbplZGLmhZMAGzwYAwMDAzMDyA",
+      "pw": 42560.397151581135,
+      "hac": 94202.30997482363,
+      "composite": 68381.35356320238
+    },
+    {
+      "label": "Lightsmith #3",
+      "hero": "Lightsmith",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsNzMYWmZZMjZmxyYmhZhZMAADAAAAAASzMLmxMDzMzWbAYgZAwGAAABYmZbbptZGLGMjBwYGGDAmZAwMDyA",
+      "pw": 46225.41407163568,
+      "hac": 84154.35554219762,
+      "composite": 65189.88480691665
+    },
+    {
+      "label": "Templar #3",
+      "hero": "Templar",
+      "talent_string": "CIEAAAAAAAAAAAAAAAAAAAAAAsNzMYWmZZMjZmxyYmhZhZMAADAAAAAASzMLmxMDzMzWbAYgZAwGAAABYmZbbptZGLGMjBwYGGDAmZAwMDyA",
+      "pw": 46258.9260691545,
+      "hac": 84102.1143359992,
+      "composite": 65180.52020257685
+    }
+  ],
+  "errors": []
+}

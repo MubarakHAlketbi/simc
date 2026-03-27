@@ -1,0 +1,68 @@
+{
+  "spec": "warrior_protection",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warrior_Protection.simc",
+  "iterations": 500,
+  "build_count": 6,
+  "results": [
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAA0yAAAzMzYmZGzMzmxsMjxYmGmZYZMzMDzYmBAAAALDAzYAGYDWWMaMDgZLmZDmxMDmtBAzMAAMAD",
+      "pw": 65948.6585595661,
+      "hac": 118878.09545709462,
+      "composite": 92413.37700833037,
+      "is_current": true
+    },
+    {
+      "label": "Mountain Thane #1",
+      "hero": "Mountain Thane",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAA0yAAAzMzYmZGzMzmxsMjxYmGmZYZMzMDzYmBAAAALDAzYAGYDWWMaMDgZLmZDmxMDmtBAzMAAMAD",
+      "pw": 65948.6585595661,
+      "hac": 118878.09545709462,
+      "composite": 92413.37700833037,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Colossus #1",
+      "hero": "Colossus",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAA0yAAAzMzYmZGzMzmxsMjxYmGmZYZMzMDzYmBAAAALDAzYAGYDWWMaMDgZLmZDmxMDmtBAzMAAMAD",
+      "pw": 65948.6585595661,
+      "hac": 118878.09545709462,
+      "composite": 92413.37700833037,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Colossus #3",
+      "hero": "Colossus",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzMzMzMmxsZmZZGjxMNmxwyYmZYmxMDAAAAWGAmxAMwGssY0YGAzWMzGMzMzgZZAwMDAADwA",
+      "pw": 65037.19005079374,
+      "hac": 116780.31348092269,
+      "composite": 90908.75176585821
+    },
+    {
+      "label": "Mountain Thane #3",
+      "hero": "Mountain Thane",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzMzMzMmxsZmZZGjxMNmxwyYmZYmxMDAAAAWGAmxAMwGssY0YGAzWMzGMzMzgZZAwMDAADwA",
+      "pw": 65122.821889804734,
+      "hac": 116530.94685924493,
+      "composite": 90826.88437452483
+    },
+    {
+      "label": "Colossus #2",
+      "hero": "Colossus",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzYmZmZmxsZmZZYMmpxMGWGzMzwMmZAAAAwyAwMGAYzMG2IDMDL0YmFGzMzMY2GAgZGAwAMA",
+      "pw": 60698.70939014605,
+      "hac": 104572.42688602637,
+      "composite": 82635.56813808621
+    },
+    {
+      "label": "Mountain Thane #2",
+      "hero": "Mountain Thane",
+      "talent_string": "CkEAAAAAAAAAAAAAAAAAAAAAAkBAAGzYmZmZmxsZmZZYMmpxMGWGzMzwMmZAAAAwyAwMGAYzMG2IDMDL0YmFGzMzMY2GAgZGAwAMA",
+      "pw": 60498.6701700808,
+      "hac": 104529.42698815593,
+      "composite": 82514.04857911836
+    }
+  ],
+  "errors": []
+}

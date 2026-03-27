@@ -1,0 +1,59 @@
+{
+  "spec": "demon_hunter_devourer",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Demon_Hunter_Devourer.simc",
+  "iterations": 500,
+  "build_count": 5,
+  "results": [
+    {
+      "label": "default #3",
+      "hero": "default",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmxMzMGzMAAAAAAAegxsNYGAAAAAAAAmxMMmZmZmZmZGzsYGjFtsxMzMzWbzMzAYYAIwMGMmB",
+      "pw": 109012.25922965008,
+      "hac": 205681.94776547953,
+      "composite": 157347.1034975648
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAAWmxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzYmZWmZmmlZ2mZGjZGA",
+      "pw": 104799.61916726478,
+      "hac": 203451.16824999294,
+      "composite": 154125.39370862886,
+      "is_current": true
+    },
+    {
+      "label": "default #1",
+      "hero": "default",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAAWmxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzYmZWmZmmlZ2mZGjZGA",
+      "pw": 104799.61916726478,
+      "hac": 203451.16824999294,
+      "composite": 154125.39370862886,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "default #4",
+      "hero": "default",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAA2mxMzMzMzMGmBAAAAAAgxsNYGAAAAAAAAmxMMmZmZmZmZGzsYGjFtsxMzMzWLzMzAYYAIwMGMmB",
+      "pw": 106836.09812382827,
+      "hac": 201308.98437266448,
+      "composite": 154072.5412482464
+    },
+    {
+      "label": "default #5",
+      "hero": "default",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmZmZmxwMAAAAAAAmxAmBAAAAAAAgZMDjZmZmZmZmxMLmxYRLbMzMzs1yMzMAGzAQgZMYMD",
+      "pw": 106984.22022981897,
+      "hac": 201129.05343598442,
+      "composite": 154056.63683290168
+    },
+    {
+      "label": "default #2",
+      "hero": "default",
+      "talent_string": "CgcBAAAAAAAAAAAAAAAAAAAAAAA2MmZmxMzMGzMAAAAAAALzYADAAAAAAAAmxMMmZmZmZmZYmtZGjNZDABMAzMzMzyMz0sNz2MzYMzA",
+      "pw": 104665.39269355158,
+      "hac": 202728.15305864115,
+      "composite": 153696.77287609637
+    }
+  ],
+  "errors": []
+}
