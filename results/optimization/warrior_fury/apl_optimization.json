@@ -1,0 +1,11 @@
+{
+  "spec": "warrior_fury",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warrior_Fury.simc",
+  "baseline_composite": 148086.5717626418,
+  "final_composite": 148086.5717626418,
+  "improvement_pct": 0.0,
+  "iterations": 0,
+  "history": [
+    148086.5717626418
+  ]
+}

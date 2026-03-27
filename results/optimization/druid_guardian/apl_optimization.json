@@ -1,0 +1,13 @@
+{
+  "spec": "druid_guardian",
+  "profile": "/home/mubarak/simc/profiles/MID1/MID1_Druid_Guardian.simc",
+  "baseline_composite": 98598.10406466428,
+  "final_composite": 103807.91001954101,
+  "improvement_pct": 5.283880460277361,
+  "iterations": 2,
+  "history": [
+    98598.10406466428,
+    102958.10703823846,
+    103807.91001954101
+  ]
+}
