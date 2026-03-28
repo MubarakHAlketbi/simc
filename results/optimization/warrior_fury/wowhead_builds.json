@@ -1,116 +1,351 @@
 {
   "spec": "warrior_fury",
   "profile": "/home/mubarak/simc/profiles/MID1/MID1_Warrior_Fury.simc",
-  "iterations": 500,
+  "iterations": 1000,
   "build_count": 12,
   "results": [
     {
-      "label": "Mountain Thane #5",
-      "hero": "Mountain Thane",
+      "label": "[CURRENT]",
+      "hero": "current",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
-      "pw": 87008.82591198376,
-      "hac": 209044.11800233033,
-      "composite": 148026.47195715705
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current": true
     },
     {
       "label": "Slayer #5",
       "hero": "Slayer",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
-      "pw": 86690.73757667048,
-      "hac": 208184.6450564957,
-      "composite": 147437.69131658308
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
     },
     {
-      "label": "Slayer #6",
-      "hero": "Slayer",
-      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
-      "pw": 86824.57103173164,
-      "hac": 204991.19693136076,
-      "composite": 145907.8839815462
+      "label": "Mountain Thane #5",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
     },
     {
       "label": "Mountain Thane #6",
       "hero": "Mountain Thane",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
-      "pw": 86885.43108567547,
-      "hac": 204197.73450991433,
-      "composite": 145541.5827977949
+      "pw": 86956.47355514049,
+      "hac": 204952.4675376757,
+      "composite": 145954.4705464081
     },
     {
-      "label": "Slayer #3",
+      "label": "Slayer #6",
       "hero": "Slayer",
-      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
-      "pw": 87975.48735182843,
-      "hac": 180866.4950531596,
-      "composite": 134420.991202494
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
+      "pw": 86970.45913316803,
+      "hac": 204347.15145842495,
+      "composite": 145658.80529579648
     },
     {
       "label": "Mountain Thane #3",
       "hero": "Mountain Thane",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
-      "pw": 87735.34149324776,
-      "hac": 180824.9558122246,
-      "composite": 134280.14865273618
+      "pw": 87933.75384429572,
+      "hac": 181506.53972742718,
+      "composite": 134720.14678586146
+    },
+    {
+      "label": "Slayer #3",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+      "pw": 87813.97002291879,
+      "hac": 181273.3981500114,
+      "composite": 134543.6840864651
     },
     {
       "label": "Mountain Thane #2",
       "hero": "Mountain Thane",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
-      "pw": 87021.03884201018,
-      "hac": 179548.49524334946,
-      "composite": 133284.76704267983
+      "pw": 87363.58794503052,
+      "hac": 179231.8234088602,
+      "composite": 133297.70567694536
     },
     {
       "label": "Slayer #2",
       "hero": "Slayer",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
-      "pw": 87212.1985931273,
-      "hac": 178760.74437932752,
-      "composite": 132986.4714862274
-    },
-    {
-      "label": "[CURRENT]",
-      "hero": "current",
-      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
-      "pw": 87101.95440381307,
-      "hac": 139831.2424240967,
-      "composite": 113466.5984139549,
-      "is_current": true
+      "pw": 87019.41406355116,
+      "hac": 179151.51219598483,
+      "composite": 133085.463129768
     },
     {
       "label": "Slayer #1",
       "hero": "Slayer",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
-      "pw": 87101.95440381307,
-      "hac": 139831.2424240967,
-      "composite": 113466.5984139549,
-      "is_current_duplicate": true
+      "pw": 87308.22308655953,
+      "hac": 140178.4788650524,
+      "composite": 113743.35097580597
     },
     {
       "label": "Mountain Thane #1",
       "hero": "Mountain Thane",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
-      "pw": 87101.95440381307,
-      "hac": 139831.2424240967,
-      "composite": 113466.5984139549,
-      "is_current_duplicate": true
+      "pw": 87166.83011972312,
+      "hac": 139874.13349827702,
+      "composite": 113520.48180900008
     },
     {
       "label": "Mountain Thane #4",
       "hero": "Mountain Thane",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
-      "pw": 87339.48141493037,
-      "hac": 134688.63964228446,
-      "composite": 111014.06052860741
+      "pw": 87284.15112966821,
+      "hac": 134827.66789324168,
+      "composite": 111055.90951145496
     },
     {
       "label": "Slayer #4",
       "hero": "Slayer",
       "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
-      "pw": 87346.75307555616,
-      "hac": 134351.15237373015,
-      "composite": 110848.95272464315
+      "pw": 87293.81309697144,
+      "hac": 134514.55231006234,
+      "composite": 110904.18270351688
     }
   ],
+  "results_pw_ranked": [
+    {
+      "label": "Mountain Thane #3",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+      "pw": 87933.75384429572,
+      "hac": 181506.53972742718,
+      "composite": 134720.14678586146
+    },
+    {
+      "label": "Slayer #3",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+      "pw": 87813.97002291879,
+      "hac": 181273.3981500114,
+      "composite": 134543.6840864651
+    },
+    {
+      "label": "Mountain Thane #2",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87363.58794503052,
+      "hac": 179231.8234088602,
+      "composite": 133297.70567694536
+    },
+    {
+      "label": "Slayer #1",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87308.22308655953,
+      "hac": 140178.4788650524,
+      "composite": 113743.35097580597
+    },
+    {
+      "label": "Slayer #4",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
+      "pw": 87293.81309697144,
+      "hac": 134514.55231006234,
+      "composite": 110904.18270351688
+    },
+    {
+      "label": "Mountain Thane #4",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
+      "pw": 87284.15112966821,
+      "hac": 134827.66789324168,
+      "composite": 111055.90951145496
+    },
+    {
+      "label": "Mountain Thane #1",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87166.83011972312,
+      "hac": 139874.13349827702,
+      "composite": 113520.48180900008
+    },
+    {
+      "label": "Slayer #2",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87019.41406355116,
+      "hac": 179151.51219598483,
+      "composite": 133085.463129768
+    },
+    {
+      "label": "Slayer #6",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
+      "pw": 86970.45913316803,
+      "hac": 204347.15145842495,
+      "composite": 145658.80529579648
+    },
+    {
+      "label": "Mountain Thane #6",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
+      "pw": 86956.47355514049,
+      "hac": 204952.4675376757,
+      "composite": 145954.4705464081
+    },
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current": true
+    },
+    {
+      "label": "Slayer #5",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Mountain Thane #5",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
+    }
+  ],
+  "results_hac_ranked": [
+    {
+      "label": "[CURRENT]",
+      "hero": "current",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current": true
+    },
+    {
+      "label": "Slayer #5",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Mountain Thane #5",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+      "pw": 86838.05881614964,
+      "hac": 209213.88433584978,
+      "composite": 148025.97157599972,
+      "is_current_duplicate": true
+    },
+    {
+      "label": "Mountain Thane #6",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
+      "pw": 86956.47355514049,
+      "hac": 204952.4675376757,
+      "composite": 145954.4705464081
+    },
+    {
+      "label": "Slayer #6",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjZMz2yMzMjZmxMjZMjZWmZGjZmlxMzAAAhB2glFjGzAysgZsAYGMGAMzAYYmZGMYA",
+      "pw": 86970.45913316803,
+      "hac": 204347.15145842495,
+      "composite": 145658.80529579648
+    },
+    {
+      "label": "Mountain Thane #3",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+      "pw": 87933.75384429572,
+      "hac": 181506.53972742718,
+      "composite": 134720.14678586146
+    },
+    {
+      "label": "Slayer #3",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+      "pw": 87813.97002291879,
+      "hac": 181273.3981500114,
+      "composite": 134543.6840864651
+    },
+    {
+      "label": "Mountain Thane #2",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87363.58794503052,
+      "hac": 179231.8234088602,
+      "composite": 133297.70567694536
+    },
+    {
+      "label": "Slayer #2",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzYmlZmxYmZbMzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87019.41406355116,
+      "hac": 179151.51219598483,
+      "composite": 133085.463129768
+    },
+    {
+      "label": "Slayer #1",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87308.22308655953,
+      "hac": 140178.4788650524,
+      "composite": 113743.35097580597
+    },
+    {
+      "label": "Mountain Thane #1",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjxMsMzMzMDjZmZGzMzsMzMGzMbDzMAAQMWWGYBMBzwEYG2AmZ2Y2GAAMzYYMzMMYA",
+      "pw": 87166.83011972312,
+      "hac": 139874.13349827702,
+      "composite": 113520.48180900008
+    },
+    {
+      "label": "Mountain Thane #4",
+      "hero": "Mountain Thane",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
+      "pw": 87284.15112966821,
+      "hac": 134827.66789324168,
+      "composite": 111055.90951145496
+    },
+    {
+      "label": "Slayer #4",
+      "hero": "Slayer",
+      "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzMzYmZmlZmxYmZZYmBAACDsBLLGNmBkZBzYBwMY2GAMzAYYMzMMYA",
+      "pw": 87293.81309697144,
+      "hac": 134514.55231006234,
+      "composite": 110904.18270351688
+    }
+  ],
+  "best_pw": {
+    "label": "Mountain Thane #3",
+    "hero": "Mountain Thane",
+    "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDjhZ2WmZmZmZmxMjZMjZWmZGjZmtxMzAAAxYZZgFwEMDTgZYDwMYMAAYmxwMzMDDG",
+    "pw": 87933.75384429572,
+    "hac": 181506.53972742718,
+    "composite": 134720.14678586146
+  },
+  "best_hac": {
+    "label": "[CURRENT]",
+    "hero": "current",
+    "talent_string": "CgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGDDzMjlZmZmZYMzYGzYmlZmxYmZZMzMAAQYgNYZxoxMgMLYGLAmZjZbAwMDghZmZwgB",
+    "pw": 86838.05881614964,
+    "hac": 209213.88433584978,
+    "composite": 148025.97157599972,
+    "is_current": true
+  },
   "errors": []
 }
