@@ -1,7 +1,7 @@
 # Optimization System — Full Action Plan
 
 Generated: 2026-03-27
-Based on: `apl_optimizer_plan.md` + `talent_engine_design.md`
+Consolidates the former `apl_optimizer_plan.md` + `talent_engine_design.md` (both deleted)
 
 ## Overview
 

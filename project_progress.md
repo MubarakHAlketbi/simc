@@ -215,7 +215,7 @@ _ST/_CT name lookup rather than explicit integer ID in find_talent_spell calls.
 
 ### Audit Fix Pass — Summary (2026-03-24)
 
-Full audit: `full_spec_audit_2026-03-24.md` (42 issues, 10 batches).
+Full audit: `docs/archive/full_spec_audit_2026-03-24.md` (42 issues, 10 batches).
 
 | Batch | Priority | Tasks | Status |
 | :--- | :--- | :--- | :--- |
@@ -275,7 +275,7 @@ Three-way comparison: UPSTREAM (.simc override) vs OURS (.simc override) vs C++ 
 
 ### Phase 2 APL Diff — Summary (2026-03-22)
 
-Full report: `wowhead/APL_diff_report.md` (2317 lines)
+Full report: `docs/archive/APL_diff_report.md` (2317 lines)
 Analysis script: `wowhead/gen_apl_diff.py`
 
 | Priority | Count | Result |
@@ -335,7 +335,7 @@ Full specification: `APL_optimization.md`
 | Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | PARTIALLY DONE — upstream comparison identified the real gaps |
 | Phase 4d-talent | Wowhead talent build comparison — sim all 262 builds across 33 specs | COMPLETE — 29/33 specs had better builds. 128s total runtime. Profiles updated (commit 998745e). |
 | Phase 4d-apl | APL optimization engine — mutation operators + multi-stage evaluation | IN PROGRESS — tool built (`scripts/apl_optimizer.py`), Guardian Druid +5.28%. Full 33-spec run pending. |
-| Phase 4d-talent2 | Talent permutation engine — smart tree search beyond Wowhead builds | NOT STARTED — design in `talent_engine_design.md`. Needs M1.3 (codec) + M1.4 (tree extractor). |
+| Phase 4d-talent2 | Talent permutation engine — smart tree search beyond Wowhead builds | DONE — `scripts/lib/talent_permute.py`. Design in `optimization_action_plan.md` M4. |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
 ### Phase 4 Baseline Status (2026-03-25) — COMPLETE
@@ -498,8 +498,8 @@ Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (
 | File | Description |
 | :--- | :--- |
 | `optimization_action_plan.md` | **Master action plan** — 7 milestones, 5-day schedule, file structure, success criteria |
-| `apl_optimizer_plan.md` | APL optimizer design — 4 components, 6 mutation operators, multi-stage evaluation, composite scoring |
-| `talent_engine_design.md` | Talent engine architecture — DAG model, DPS node classification, pivot/tuning search, talent string codec |
+| ~~`apl_optimizer_plan.md`~~ | Deleted — merged into `optimization_action_plan.md` |
+| ~~`talent_engine_design.md`~~ | Deleted — merged into `optimization_action_plan.md` |
 | `darkmoon_investigation.md` | Darkmoon Deck/Sigil/Dominion trinket investigation — spell IDs, interaction testing plan for beta |
 
 ### Tooling
@@ -534,7 +534,7 @@ Comprehensive spell database built from Wowhead: 4,410 spells across all 13 clas
 scraped from abilities + specialization + talents pages, with tooltip descriptions,
 damage classification, and SimC code cross-reference.
 
-**Database:** `spell_database.db` (SQLite) | **Reports:** `spell_database_reports/`
+**Database:** `spell_database.db` (SQLite) | **Summary:** `spell_database_reports/summary.md`
 **Script:** `scripts/build_spell_database.py` (rerunnable)
 
 ### Key Finding: 0 genuine missing DPS-relevant spells for Midnight
