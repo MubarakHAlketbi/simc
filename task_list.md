@@ -60,26 +60,27 @@ Tank specs (Blood, Guardian, Brewmaster, Protection x2, Vengeance) skip HAC if i
 
 ---
 
-## Batch 4 — Talent Permutation (Phase 4d-talent2)
-**Estimate: ~4h compute, ~1h integration code**
-**Why now:** APLs are optimized. Now search talent space beyond Wowhead's curated builds.
-**Depends on:** Batch 3 (optimized APLs are the evaluation harness for talent search)
+## Batch 4 — Talent Local Search (Seed + Neighborhood Hill-Climb)
+**Estimate: ~5h compute, ~4.5h code**
+**Why now:** APLs optimized. Wowhead builds cover strategic axes. Local search finds SimC-specific micro-gains.
+**Depends on:** Batch 3 (optimized APLs are the evaluation harness)
 
-| # | Task | Command | Output |
-|---|------|---------|--------|
-| 4.1 | Build talent trees for all 33 specs | `python3 scripts/lib/talent_tree.py` (verify all 33 parse) | 33 tree objects |
-| 4.2 | Classify nodes for all 33 specs | Run node_classifier on each tree + APL | classification.md per spec |
-| 4.3 | Pivot sweep — PW (all specs) | For each spec: enumerate pivot combos, sim at 200 iter PW | pivot_sweep_pw.json per spec |
-| 4.4 | Pivot sweep — HAC (all specs) | Same for HecticAddCleave | pivot_sweep_hac.json per spec |
-| 4.5 | Tuning hill-climb on top 10 pivots (PW) | 1000 iter per toggle, per spec | tuning_sweep_pw.json per spec |
-| 4.6 | Tuning hill-climb on top 10 pivots (HAC) | Same for HecticAddCleave | tuning_sweep_hac.json per spec |
-| 4.7 | Confirm winners at 10k iter | Run top build per style per spec at 10k | Confirmed DPS |
+**Architecture:** Wowhead builds (seeds) → screen per style → single-node neighborhood → hill-climb → confirm.
+Old classify-then-permute approach ABANDONED (wrong regex, wrong abstraction). See `optimization_action_plan.md`.
+
+| # | Task | File | Output |
+|---|------|------|--------|
+| 4.1 | Implement constraint validation + neighbor generator | `scripts/lib/talent_neighbor.py` (~250 lines) | New file |
+| 4.2 | Implement seed screening + hill-climb local search | `scripts/talent_local_search.py` (~250 lines) | New file |
+| 4.3 | Rewrite talent_optimizer.py — wire seeds → local search | `scripts/talent_optimizer.py` | Rewritten |
+| 4.4 | Add --talent flag to optimize_all.py | `scripts/optimize_all.py` | Updated |
+| 4.5 | Test on warrior_fury (both styles) | CLI | Validate pipeline |
+| 4.6 | Full 33-spec run — PW | `python3 scripts/optimize_all.py --talent --all --fight-style Patchwerk` | 33 × talent_local_search_pw.json |
+| 4.7 | Full 33-spec run — HAC | Same with HecticAddCleave | 33 × talent_local_search_hac.json |
 | 4.8 | Update profiles with winning talent strings | If >0.5% gain, update talents= in .simc | Updated profiles |
 | 4.9 | Create _M+ variant profiles where HAC best ≠ PW best | New .simc files with HAC-optimal talents | New profile files |
 
-**Exit criteria:** best_build_pw.txt and best_build_hac.txt per spec. Profiles updated. _M+ variants created where fight styles diverge.
-
-**Note:** Tasks 4.1-4.2 need a small orchestrator script (wire talent_tree → node_classifier → talent_permute per-style). ~1h coding to glue the existing libraries.
+**Exit criteria:** best_build_pw.txt and best_build_hac.txt per spec. Each ≥ best Wowhead build for that style. Profiles updated. _M+ variants created where styles diverge.
 
 ---
 
@@ -163,14 +164,14 @@ Batch 2 (APL diff) ──> Batch 3 (APL optimization)
 
 | Batch | Code | Compute | Total |
 |-------|------|---------|-------|
-| 1. Baselines | 0h | 0.5h | 0.5h |
-| 2. APL Diff | 0h-1h | 0.2h | 0.2-1.2h |
+| 1. Baselines | 0h | 0.5h | 0.5h ✅ |
+| 2. APL Diff | 0h | 0.2h | 0.2h ✅ |
 | 3. APL Optimization | 0h | 2-6h | 2-6h |
-| 4. Talent Permutation | 1h | 4h | 5h |
+| 4. Talent Local Search | 4.5h | 5h | 9.5h |
 | 5. Re-baseline | 0h | 1h | 1h |
 | 6. Trinket Combos | 2h | 4h | 6h |
 | 7. Verification + Docs | 1h | 0.5h | 1.5h |
-| **TOTAL** | **4h** | **12-16h** | **16-21h** |
+| **TOTAL** | **7.5h** | **13-17h** | **20-25h** |
 
-Compute is parallelizable — with 16 threads, wall-clock time drops significantly.
-Batches 3 and 4 are the big compute batches; can run overnight.
+Compute is parallelizable — with 2x parallel specs, compute drops ~50%.
+Batches 3 and 4 are the big batches; can run overnight.

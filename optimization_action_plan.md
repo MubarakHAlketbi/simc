@@ -1,492 +1,249 @@
-# Optimization System — Full Action Plan
+# Optimization Action Plan
 
-Generated: 2026-03-27
-Consolidates the former `apl_optimizer_plan.md` + `talent_engine_design.md` (both deleted)
+Last updated: 2026-03-28
 
-## Overview
+## Architecture
 
-A unified system to find the best talent build AND the best APL for every
-spec. Two engines (talent + APL) work in sequence, with shared infrastructure.
+Two independent optimization loops, each producing results per fight style:
 
-**Total estimated effort:** ~18 hours implementation + ~8 hours compute
-**Deliverables:** Optimized profiles for all 33 specs with validated talent
-builds and APLs, plus reusable automation tooling for future patches.
+```
+TALENT OPTIMIZATION                    APL OPTIMIZATION
+  Wowhead builds (seeds)                Extract current APL
+       |                                     |
+  Screen at 1k iter                     Generate mutations
+       |                                     |
+  Local search (neighbors)              Multi-stage evaluation
+       |                                     |
+  Hill-climb to convergence             Accept best per style
+       |                                     |
+  Confirm at 10k iter                   Confirm at 10k iter
+```
+
+Each spec produces TWO independent optimal talent/APL builds — one for Patchwerk, one for HecticAddCleave.
 
 ---
 
-## Prerequisites (before starting)
+## Talent Optimization — Seed + Local Search
 
-These must be true before optimization work begins:
+### Why Not Classify-Then-Permute
 
-- [x] 56/56 profiles compile and sim (DONE)
-- [x] 112/112 Phase 4 baselines exist (DONE)
-- [x] Guardian Druid APL fixed (DONE 2026-03-27)
-- [x] All 8 upstream APL fixes applied (DONE)
-- [x] Wowhead extraction pipeline working (DONE, 33/33 specs)
-- [ ] Phase 4b: re-run gen_apl_diff.py with fresh data (10 min)
+The old approach (node_classifier.py + talent_permute.py) is broken:
+
+1. **Code scanner regex wrong** — matches `talent.spec.X` but C++ uses `talents.fury.X` (plural, spec-name prefix). Result: 0 code-classified DPS nodes for Warrior.
+2. **APL scanner too narrow** — only finds talents in `if=` conditions (5/106 for Fury). Core abilities never appear in conditions because they're always taken.
+3. **Wrong abstraction** — talent optimization is DAG budget allocation across competing sub-tree paths, not independent node toggles. Even a perfect classifier can't decompose this correctly.
+
+### New Approach: Seed + Local Search
+
+**Phase 1 — Seed Screening** (already implemented in `talent_build_compare.py`):
+- Sim all Wowhead builds (4-16 per spec) at 1000 iter × both fight styles
+- Rank per fight style independently
+- Pick top 3 seeds per fight style
+
+**Phase 2 — Neighborhood Generation** (NEW: `scripts/lib/talent_neighbor.py`):
+Starting from a decoded talent build (dict of node_id → rank/choice), generate all single-step neighbors:
+
+| Mutation | Description | Constraint |
+|----------|-------------|-----------|
+| REMOVE | Drop a selected non-granted node (rank → 0) | No child depends solely on it; row-gate still met |
+| ADD | Take an unselected node (0 → max_ranks) | Prerequisites met; sub-tree budget allows |
+| SWAP_CHOICE | Switch a choice node to its other option | Always valid (same point cost) |
+| SWAP_POINT | Remove node A + add node B in same sub-tree | Budget-neutral; both individually valid |
+
+Each build has ~15-25 flexible nodes → ~30-50 single-step neighbors.
+
+**Phase 3 — Hill-Climb** (NEW: `scripts/talent_local_search.py`):
+```
+for each seed (top 3 per fight style):
+    current = seed
+    for iteration in range(5):
+        neighbors = generate_neighbors(current)
+        screen at 500 iter → keep top 5
+        confirm at 2000 iter → keep best
+        if best > current + 0.1%:
+            current = best
+        else:
+            break  # converged
+    confirm winner at 10000 iter
+```
+
+### Constraint Rules
+
+A talent build must satisfy:
+1. **Sub-tree point budgets**: CLASS ≤ 31, SPEC ≤ 30, HERO ≤ ~10 (varies)
+2. **Row gates**: `req_points` on each node — must spend N points in sub-tree before this row unlocks
+3. **Edge prerequisites**: every parent edge must have at least one selected parent
+4. **Choice exclusivity**: only one option per choice node
+5. **Granted nodes**: hero starting nodes (row=1) and spec-starter class nodes are auto-granted, always present
+
+### Validation Strategy
+
+Belt-and-suspenders:
+1. `validate_build()` checks all 5 constraint rules in Python
+2. `encode_talent_string()` → SimC will error on invalid builds (catches edge cases)
+3. Skip neighbors with DPS within noise threshold (±0.2% at 500 iter)
 
 ---
 
-## Milestone 1: Shared Infrastructure
-**Estimate: 3 hours | Priority: CRITICAL | Blocks everything**
+## APL Optimization — Mutation + Multi-Stage
 
-All subsequent milestones depend on this core plumbing.
+Already implemented and working (`scripts/apl_optimizer.py`). Per fight style:
 
-### Task 1.1 — SimC Runner Module
-**File:** `scripts/lib/sim_runner.py`
+1. Extract current APL via `save_actions`
+2. Generate 4 mutation types: adjacent swap, threshold sweep, promotion, routing
+3. Three-stage funnel: 100 iter (coarse) → 1000 iter (medium) → 10000 iter (confirm)
+4. Accept if DPS improves for that fight style
+5. Converge when <0.1% improvement
 
-A reusable Python module that runs SimC sims and parses results.
-
-```
-Inputs:  profile path, optional overrides (talents=, actions=), 
-         fight_style, iterations, threads
-Output:  SimResult(dps_mean, dps_error, action_breakdown, fight_style)
-```
-
-Capabilities:
-- Write temp .simc override files (input= + overrides)
-- Run simc binary, parse JSON2 output
-- Parallel execution (asyncio subprocess pool, configurable concurrency)
-- Per-fight-style DPS scoring (Patchwerk and HecticAddCleave optimized independently)
-- Acceptance logic: candidate DPS must improve for the fight style being optimized
-- Each spec produces TWO optimal talent/APL builds — one per fight style
-
-Acceptance test: Run Warrior Fury with default APL vs a deliberately
-worse APL override, verify DPS difference matches expectations.
-
-### Task 1.2 — APL Parser/Serializer
-**File:** `scripts/lib/apl_parser.py`
-
-Parse .simc APL text into structured data, serialize back to text.
-
-```
-Input:   raw .simc text (from save_actions or .simc file)
-Output:  APL object (dict of action lists, each a list of APLAction)
-```
-
-Capabilities:
-- Parse actions.{list}+=/action,if=condition,key=value format
-- Preserve ordering within each sub-list
-- Deep copy for mutation
-- Serialize back to valid .simc text
-- Extract all talent/buff/debuff references from conditions
-
-Acceptance test: Parse a saved APL, serialize it, run both — DPS identical.
-
-### Task 1.3 — Talent String Codec
-**File:** `scripts/lib/talent_codec.py`
-
-Decode and encode SimC base64 talent strings.
-
-```
-Input:   base64 talent string + spec info
-Output:  dict of {node_id: (rank, choice_index)}
-```
-
-Capabilities:
-- Decode: base64 → node selections (matching SimC's bit layout exactly)
-- Encode: node selections → base64 (with zero-filled tree hash)
-- Must replicate SimC's `generate_tree_nodes` node ordering
-- Round-trip validation: decode(encode(decode(s))) == decode(s)
-
-Acceptance test: Decode an existing profile's talent string, re-encode,
-run sim — DPS identical to original.
-
-### Task 1.4 — DBC Tree Extractor
-**File:** `scripts/lib/talent_tree.py`
-
-Build the talent tree graph from SimC's DBC data.
-
-```
-Input:   spec name
-Output:  TalentTree object (nodes, edges, constraints)
-```
-
-Approach options (try in order):
-1. Parse `engine/dbc/generated/trait_data.inc` directly (static data)
-2. Run SimC in debug mode and capture tree node dump
-3. Write a minimal C++ tool that queries trait_data_t::data()
-
-Capabilities:
-- Build TalentTree with all nodes, types, prerequisites, spell IDs
-- Resolve prerequisite edges (point gates + direct pathing)
-- Identify hero tree options per spec
-- Map spell_id → tokenized SimC name
-
-Acceptance test: Build tree for Warrior Fury, verify it has ~70 nodes,
-verify known talents (Rampage, Bloodthirst, etc.) appear with correct data.
+Warrior Fury test: PW +0.00% (optimal), HAC +0.44% (rampage threshold 100→80).
 
 ---
 
-## Milestone 2: Node Classification Engine
-**Estimate: 2 hours | Priority: HIGH | Blocks Milestones 4-5**
+## Files to Create
 
-### Task 2.1 — APL Talent Reference Scanner
-**File:** `scripts/lib/node_classifier.py`
+### `scripts/lib/talent_neighbor.py` (~250 lines)
 
-Scan saved APL text for all `talent.X` references.
+```python
+# Core functions:
 
-```
-Input:   APL text (from save_actions)
-Output:  set of talent names referenced
-```
+def get_subtree_budget(tree, selections, tree_index) -> (spent, max_budget):
+    """Count points spent in a sub-tree vs max allowed."""
 
-Method: regex scan for `talent.{name}` patterns in if= conditions
-and action names.
+def can_remove_node(tree, selections, node_id) -> bool:
+    """Check if removing a node breaks any child prerequisites or row gates."""
 
-### Task 2.2 — Spell Effect Scanner
+def can_add_node(tree, selections, node_id) -> bool:
+    """Check if adding a node is valid (prereqs met, budget allows)."""
 
-Check each talent's spell_data for DPS-relevant effects.
+def find_removable_nodes(tree, selections) -> set[int]:
+    """All nodes that can be safely removed."""
 
-```
-Input:   TalentTree
-Output:  set of node_ids with damage/stat effects
-```
+def find_addable_nodes(tree, selections) -> set[int]:
+    """All unselected nodes whose prerequisites are satisfied and budget allows."""
 
-Method: Use SimC's spell_query or parse DBC effect data for:
-- A_SCHOOL_DAMAGE, A_WEAPON_DAMAGE (direct damage)
-- A_ADD_PCT_MODIFIER on damage amounts
-- A_MOD_STAT, A_MOD_RATING (stat buffs)
-- A_ADD_PCT_LABEL_MODIFIER (label-based damage mods)
-- Proc effects that trigger damage spells
-- Resource generation/cost reduction (indirect DPS)
-- Cooldown reduction effects
+def generate_neighbors(tree, selections, codec_nodes, spec_id, purchased_flags)
+    -> list[tuple[str, str]]:  # [(talent_string, description), ...]
+    """Generate all single-step neighbor talent strings."""
+    # 1. REMOVE: for each removable node, drop it
+    # 2. ADD: for each addable node, take it at max ranks
+    # 3. SWAP_CHOICE: for each selected choice node, switch to other option
+    # 4. SWAP_POINT: for each (removable, addable) pair in same sub-tree, swap
+    #    (capped at ~50 swaps to avoid combinatorial explosion)
 
-### Task 2.3 — Combined Classifier
-
-Merge all sources and classify: DPS / GATING / UTILITY.
-
-```
-Input:   TalentTree + APL text + class module code
-Output:  TalentTree with dps_relevance set on all nodes
+def validate_build(tree, selections) -> tuple[bool, str]:
+    """Full constraint validation. Returns (valid, reason)."""
 ```
 
-Additional logic:
-- GATING: utility nodes required to path to a DPS node
-- Pivot detection: choice nodes, ability-granting nodes, APL-routing nodes
-- Per-spec classification report (human-readable .md)
+### `scripts/talent_local_search.py` (~250 lines)
 
-### Task 2.4 — Validation
+```python
+def screen_seeds(spec_name, fight_style, seeds, threads) -> list:
+    """Sim all seeds at 1000 iter, return sorted by DPS."""
 
-Spot-check 3 specs manually:
-- Warrior Fury: verify Rampage, Bladestorm, Odyn's Fury = DPS
-- Rogue Assassination: verify Mutilate, Garrote = DPS; Cloak = UTILITY
-- Mage Frost: verify Glacial Spike, Icy Veins = DPS
+def search_neighborhood(spec_name, fight_style, base_ts, tree, codec_nodes,
+                        spec_id, purchased_flags, threads) -> tuple[str, float]:
+    """One hill-climb pass: generate neighbors, screen, confirm."""
 
-Fix any misclassifications, tune heuristics.
+def optimize_from_seeds(spec_name, fight_style, seeds, threads=8,
+                        max_passes=5) -> dict:
+    """Full local search from Wowhead seeds.
+    Returns {talent_string, dps, improvement_pct, passes, neighbors_tested}."""
 
----
-
-## Milestone 3: APL Optimization Engine
-**Estimate: 3 hours | Priority: HIGH | Independent of Milestones 4-5**
-
-### Task 3.1 — Mutation Generators
-**File:** `scripts/lib/apl_mutations.py`
-
-Six mutation operators:
-
-| ID | Mutation | Description |
-|----|----------|-------------|
-| M1 | Adjacent Swap | Swap two adjacent actions in same sub-list |
-| M2 | Condition Tightening | Add condition to unconditional action |
-| M3 | Condition Loosening | Remove/simplify a condition clause |
-| M4 | Threshold Sweep | Vary numeric thresholds ±30% |
-| M5 | Promotion/Demotion | Move action up/down N positions |
-| M6 | Sub-list Routing | Change AoE breakpoint or list entry condition |
-
-Each generator takes an APL + action_breakdown ranking and yields
-candidate (APL, mutation_description) pairs.
-
-### Task 3.2 — Multi-Stage Evaluation Pipeline
-**File:** `scripts/lib/evaluator.py`
-
-Three-stage filtering to reduce sim cost:
-
-| Stage | Iterations | Purpose | Keep |
-|-------|-----------|---------|------|
-| 1 | 100 | Coarse filter all candidates | Top 20% or top 10 |
-| 2 | 1,000 | Medium filter survivors | >0.3% improvement |
-| 3 | 10,000 | Confirm top 3 | Best with regression check |
-
-### Task 3.3 — Optimization Loop Controller
-**File:** `scripts/apl_optimizer.py`
-
-Main loop: baseline → generate → evaluate → accept → converge.
-
-Features:
-- Checkpoint/resume (saves state per iteration)
-- Per-spec timeout (max 10 iterations)
-- Convergence: stop when <0.1% improvement
-- Report generation per spec
-
-### Task 3.4 — Smoke Test
-
-Run on Warrior Fury (well-understood APL, fast sims):
-- Verify loop completes in ~10 min
-- Verify accepted mutations are sensible
-- Verify no regression in either fight style
-- Verify output APL is valid and sims correctly
-
----
-
-## Milestone 4: Talent Permutation Engine
-**Estimate: 3 hours | Priority: HIGH | Depends on Milestones 1-2**
-
-### Task 4.1 — Pivot Node Identifier
-**File:** `scripts/lib/talent_permute.py`
-
-Classify DPS nodes into PIVOT (rotation-changing) vs TUNING (% modifier).
-
-Heuristics:
-- Choice nodes = always PIVOT
-- Nodes with replace_spell_id != 0 = PIVOT (grants/replaces ability)
-- Nodes referenced in APL call_action_list routing = PIVOT
-- Nodes with only A_ADD_PCT_MODIFIER effects = TUNING
-- Everything else = TUNING by default
-
-### Task 4.2 — Constraint-Aware Build Generator
-
-Backtracking generator that produces valid talent builds:
-- Respects point budgets per tree (class ~31, spec ~30)
-- Respects row gates (req_points)
-- Respects direct prerequisite edges
-- Handles choice exclusivity
-- Fixes utility nodes to current values
-- Fixes gating nodes to required values
-
-### Task 4.3 — Two-Phase Search
-
-Phase 1 — Pivot Sweep:
-- Fix tuning nodes to Wowhead defaults
-- Enumerate all valid pivot combinations (~100-500 per spec)
-- Sim each at 200 iterations × 2 fight styles
-- Keep top 10
-
-Phase 2 — Tuning Sweep:
-- Per winning pivot combo, hill-climb tuning nodes
-- Toggle one tuning node at a time, keep if DPS improves
-- Sim at 1000 iterations
-- Confirm winner at 10,000 iterations
-
-### Task 4.4 — DPS Fingerprint Cache
-
-Before simming any build, compute DPS-fingerprint (hash of only
-DPS+GATING node selections). Skip if fingerprint already simmed.
-
-### Task 4.5 — Smoke Test
-
-Run on Warrior Fury:
-- Verify tree extraction produces ~70 nodes
-- Verify classification: ~20 DPS, ~5 GATING, ~45 UTILITY
-- Verify generated builds are all valid (iterations=0 test)
-- Verify pivot sweep finds ~200 combinations
-- Verify best build DPS >= Wowhead #1 build DPS
-- Total runtime < 15 minutes
-
----
-
-## Milestone 5: Wowhead Build Comparison (Quick Win)
-**Estimate: 1 hour | Priority: MEDIUM | Depends on Milestone 1**
-
-### Task 5.1 — Build Extractor
-**File:** `scripts/talent_build_compare.py`
-
-Parse all `wowhead/{class}/{spec}/extracted/talents.json` files.
-Extract: hero path, build name/description, talent string.
-
-### Task 5.2 — Batch Sim Runner
-
-For each spec:
-- Load all Wowhead builds (4-16 per spec)
-- Sim each with default APL at 1,000 iterations × 2 fight styles
-- Rank builds independently per fight style (best PW build, best HAC build)
-- Composite shown for reference only
-
-### Task 5.3 — Report
-
-Output per spec:
-```
-Warrior Fury (12 builds):
-  #1  Slayer Build 1       PW: 87,400  HAC: 145,200  Comp: 116,300  [CURRENT]
-  #2  Slayer Build 4       PW: 86,900  HAC: 146,800  Comp: 116,850  +0.5%
-  #3  Mountain Thane B2    PW: 83,100  HAC: 151,400  Comp: 117,250  +0.8%
-  ...
+def optimize_spec(spec_name, fight_styles=None, threads=8) -> list[dict]:
+    """Top-level: load Wowhead builds, run local search per fight style."""
 ```
 
-This is the fastest win — tells us immediately if current profile
-talent strings are optimal, before any permutation search.
+### Modify `scripts/talent_optimizer.py`
 
-**Total: 262 builds × 2 fight styles × 1k iter ≈ 9 minutes all specs.**
-
----
-
-## Milestone 6: Full Integration Run
-**Estimate: 2 hours coding + 8 hours compute | Priority: MEDIUM**
-
-### Task 6.1 — Master Orchestrator
-**File:** `scripts/optimize_all.py`
-
-Runs the full pipeline for all 33 specs:
-
-```
-For each spec, for EACH fight style (Patchwerk + HecticAddCleave independently):
-  Step 1: Wowhead build comparison (Task 5.2)
-          → identify best Wowhead build FOR THIS FIGHT STYLE
-          
-  Step 2: Talent engine pivot sweep (Task 4.3 Phase 1)
-          → identify best pivot combination FOR THIS FIGHT STYLE
-          
-  Step 3: Talent engine tuning sweep (Task 4.3 Phase 2)
-          → refine best build FOR THIS FIGHT STYLE
-          
-  Step 4: APL optimization (Task 3.3)
-          → optimize APL for winning talent build FOR THIS FIGHT STYLE
-          
-  Step 5: Cross-validation
-          → sim winning APL × top 3 talent builds (same fight style)
-          → sim winning build × current APL (before optimization)
-          → verify improvement is from talent AND APL combined
-          
-  Step 6: If APLs differ between builds → merge with talent gates
-
-Result: 2 optimal builds per spec (Patchwerk best + HecticAddCleave best)
+Replace the classify → permute pipeline with:
+```python
+1. Load Wowhead builds via talent_build_compare.load_wowhead_builds()
+2. For each fight style:
+   a. optimize_from_seeds() — screens seeds + local search
+   b. Save results per fight style
+3. Compare PW-best vs HAC-best — report if they differ
 ```
 
-### Task 6.2 — Parallel Execution
+### Modify `scripts/optimize_all.py`
 
-Run 4 specs concurrently (each uses 8 threads for SimC):
-- 33 specs / 4 parallel = ~8 batches
-- ~1 hour per batch (talent sweep + APL optimization)
-- Total: ~8 hours compute
-
-### Task 6.3 — Profile Updates
-
-For each spec where improvement > 0.5% on either fight style:
-- The MID1 profile keeps the Patchwerk-optimal build as default (raid boss = primary use case)
-- HecticAddCleave-optimal build stored as `_M+` variant profile if it differs from PW build
-- Update APL in `ActionPriorityLists/default/` if changed
-- Create hero-variant profiles if second hero path is >2% different
-- Re-run baselines for both fight styles independently
-
-### Task 6.4 — Final Validation Matrix
-
+Add `--talent` flag alongside existing `--apl`:
 ```
-For each spec:
-  For each Wowhead build (all 4-16):
-    For each fight style (PW, HAC):
-      Sim at 10,000 iterations
-      
-  Assert: no build regresses >2% vs pre-optimization
-  Assert: best build improved or within 0.1%
-  Assert: average across builds improved
-```
-
-### Task 6.5 — Summary Report
-
-```
-results/optimization/summary.md
-
-Spec                    | Before  | After   | Δ     | Source
-Warrior Fury            | 116,300 | 118,900 | +2.2% | talent + APL
-Rogue Assassination     |  13,400 |  58,200 | +334% | talent (was broken)
-Druid Balance           |  11,200 |  45,600 | +307% | talent (was wrong)
-...
-Total average           |  XX,XXX |  XX,XXX | +X.X%
+python3 scripts/optimize_all.py --talent --all          # talent optimize all specs
+python3 scripts/optimize_all.py --talent --apl --all    # both talent + APL
+python3 scripts/optimize_all.py --talent --spec warrior_fury --fight-style Patchwerk
 ```
 
 ---
 
-## Milestone 7: Documentation and Skill Save
-**Estimate: 1 hour | Priority: LOW**
+## Files to Deprecate
 
-### Task 7.1 — Update project_progress.md
-- Phase 4d status → COMPLETE
-- New baseline numbers
-- Per-spec improvements
-
-### Task 7.2 — Save as Hermes Skill
-- Save the optimization workflow as a reusable skill
-- Includes: how to re-run after patch changes, common pitfalls
-
-### Task 7.3 — Update APL_optimization.md
-- Section 13 tooling checklist → mark completed items
-- Add talent engine documentation
+| File | Reason | Action |
+|------|--------|--------|
+| `scripts/lib/node_classifier.py` | Wrong regex, wrong abstraction | Keep in repo, remove from pipeline |
+| `scripts/lib/talent_permute.py` | Generates 0 combos, structurally limited | Keep in repo, remove from pipeline |
 
 ---
 
-## Execution Schedule
+## Results Structure
 
-| Day | Milestones | Hours | Output |
-|-----|-----------|-------|--------|
-| 1 | M1 (infrastructure) + M5 (Wowhead compare) | 4h code + 10min compute | SimC runner, APL parser, talent codec, build comparison for all 33 specs |
-| 2 | M2 (classification) + M3 (APL optimizer) | 5h code + 30min testing | Node classifier, 6 mutation operators, multi-stage evaluator, loop controller |
-| 3 | M4 (talent permutation) | 3h code + 30min testing | Pivot/tuning split, constraint generator, two-phase search |
-| 4 | M6 (full run) | 2h code + 8h compute | All 33 specs optimized, profiles updated, baselines re-run |
-| 5 | M7 (docs) + fixes | 1h + buffer | Progress doc, skill save, any regressions fixed |
-
-**Total: ~15h coding + ~9h compute = 4-5 working days**
+```
+results/optimization/{spec}/
+  wowhead_builds.json               # all Wowhead builds per-style ranked
+  talent_local_search_pw.json       # PW local search results
+  talent_local_search_hac.json      # HAC local search results
+  best_build_pw.txt                 # PW-optimal talent string
+  best_build_hac.txt                # HAC-optimal talent string
+  apl_optimization_pw.json          # PW APL optimizer results
+  apl_optimization_hac.json         # HAC APL optimizer results
+  optimized_apl_pw.simc             # PW-optimal APL (if improved)
+  optimized_apl_hac.simc            # HAC-optimal APL (if improved)
+```
 
 ---
 
-## File Structure
+## Compute Estimates
 
-```
-scripts/
-  lib/
-    __init__.py
-    sim_runner.py          # M1.1 — run sims, parse JSON
-    apl_parser.py          # M1.2 — parse/serialize APLs
-    talent_codec.py        # M1.3 — encode/decode talent strings
-    talent_tree.py         # M1.4 — build tree from DBC
-    node_classifier.py     # M2.1-2.3 — classify DPS/GATING/UTILITY
-    apl_mutations.py       # M3.1 — 6 mutation operators
-    evaluator.py           # M3.2 — multi-stage sim evaluation
-    talent_permute.py      # M4.1-4.4 — pivot/tuning search
-  apl_optimizer.py         # M3.3 — APL optimization loop
-  talent_engine.py         # M4 entry point
-  talent_build_compare.py  # M5 — Wowhead build comparison
-  optimize_all.py          # M6 — master orchestrator
+Per spec, per fight style:
+| Phase | Sims | Time |
+|-------|------|------|
+| Seed screening (8-12 builds × 1k iter) | 12 | 36s |
+| Neighborhood gen + screen (40 neighbors × 500 iter) | 40 | 60s |
+| Confirmation (top 5 × 2k iter) | 5 | 25s |
+| Hill-climb pass 2 (if improved) | 45 | 85s |
+| Hill-climb pass 3 (diminishing) | 30 | 50s |
+| Final confirm (10k iter) | 2 | 14s |
+| **Total per style** | **~134** | **~4.5 min** |
 
-results/
-  optimization/
-    {spec}/
-      tree.json
-      classification.md
-      wowhead_builds.json           # all builds simmed, ranked per style
-      pivot_sweep_pw.json           # Patchwerk pivot results
-      pivot_sweep_hac.json          # HecticAddCleave pivot results
-      tuning_sweep_pw.json
-      tuning_sweep_hac.json
-      apl_optimization_pw.json      # Patchwerk APL optimizer output
-      apl_optimization_hac.json     # HecticAddCleave APL optimizer output
-      optimized_apl_pw.simc         # best APL for Patchwerk
-      optimized_apl_hac.simc        # best APL for HecticAddCleave
-      best_build_pw.txt             # best talent string for Patchwerk
-      best_build_hac.txt            # best talent string for HecticAddCleave
-      report.md
-    wowhead_comparison.md           # all specs, per-style rankings
-    talent_summary.md               # per-style summary table
-    checkpoint.json
-```
+Per spec (2 styles): ~9 min
+All 33 specs: ~5 hours
+With 2x parallelism: ~2.5 hours
+
+Combined with APL optimization (~6 min/spec/style):
+All 33 specs, talent + APL: ~10 hours
+With 2x parallelism: ~5 hours
+
+---
+
+## Implementation Order
+
+| Step | What | Effort | Blocks |
+|------|------|--------|--------|
+| 1 | `talent_neighbor.py` — constraint validation + neighbor generation | 2h | Steps 2-3 |
+| 2 | `talent_local_search.py` — screen + hill-climb + optimize_from_seeds | 1.5h | Step 3 |
+| 3 | Rewrite `talent_optimizer.py` — wire seeds → local search | 0.5h | Step 4 |
+| 4 | Update `optimize_all.py` — add --talent flag | 0.5h | — |
+| 5 | Test on warrior_fury (both styles) | 0.5h | Step 6 |
+| 6 | Full 33-spec run | 5h compute | Step 7 |
+| 7 | Apply results — update profiles, create _M+ variants | 1h | — |
+
+**Total: ~6h coding + ~5h compute**
 
 ---
 
 ## Success Criteria
 
-1. **All 33 specs have validated best talent builds per fight style** — best
-   Patchwerk build AND best HecticAddCleave build, each >= best Wowhead build
-   for that fight style (or within 0.3% if already optimal)
-
-2. **All 33 specs have optimized APLs per fight style** — Patchwerk APL and
-   HecticAddCleave APL independently optimized for their respective builds
-
-3. **No regression**: no spec's DPS drops for the fight style being optimized
-
-4. **Automation**: the full pipeline can be re-run with a single command
-   (`python3 scripts/optimize_all.py`) after any patch/data update.
-   Per-style: `--fight-style Patchwerk` or `--fight-style HecticAddCleave`
-
-5. **56/56 profiles still pass** compilation and smoke tests after updates
-
-6. **Results structure**: each spec produces `apl_optimization_pw.json`,
-   `apl_optimization_hac.json`, `optimized_apl_pw.simc`, `optimized_apl_hac.simc`
+1. Every spec's PW-best talent build DPS ≥ best Wowhead build for PW
+2. Every spec's HAC-best talent build DPS ≥ best Wowhead build for HAC
+3. Local search finds ≥ 0.1% improvement over Wowhead for ≥ 5 specs
+4. All generated talent strings pass encode → SimC smoke test
+5. Pipeline runs end-to-end: `python3 scripts/optimize_all.py --talent --all`
