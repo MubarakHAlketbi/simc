@@ -47,8 +47,9 @@ Capabilities:
 - Write temp .simc override files (input= + overrides)
 - Run simc binary, parse JSON2 output
 - Parallel execution (asyncio subprocess pool, configurable concurrency)
-- Composite DPS scoring (50% PW + 50% HAC)
-- Acceptance logic (composite improves, no fight style regresses >1%)
+- Per-fight-style DPS scoring (Patchwerk and HecticAddCleave optimized independently)
+- Acceptance logic: candidate DPS must improve for the fight style being optimized
+- Each spec produces TWO optimal talent/APL builds — one per fight style
 
 Acceptance test: Run Warrior Fury with default APL vs a deliberately
 worse APL override, verify DPS difference matches expectations.
@@ -298,8 +299,8 @@ Extract: hero path, build name/description, talent string.
 For each spec:
 - Load all Wowhead builds (4-16 per spec)
 - Sim each with default APL at 1,000 iterations × 2 fight styles
-- Compute composite DPS
-- Rank builds
+- Rank builds independently per fight style (best PW build, best HAC build)
+- Composite shown for reference only
 
 ### Task 5.3 — Report
 
@@ -328,25 +329,27 @@ talent strings are optimal, before any permutation search.
 Runs the full pipeline for all 33 specs:
 
 ```
-For each spec:
+For each spec, for EACH fight style (Patchwerk + HecticAddCleave independently):
   Step 1: Wowhead build comparison (Task 5.2)
-          → identify best Wowhead build
+          → identify best Wowhead build FOR THIS FIGHT STYLE
           
   Step 2: Talent engine pivot sweep (Task 4.3 Phase 1)
-          → identify best pivot combination
+          → identify best pivot combination FOR THIS FIGHT STYLE
           
   Step 3: Talent engine tuning sweep (Task 4.3 Phase 2)
-          → refine best build
+          → refine best build FOR THIS FIGHT STYLE
           
   Step 4: APL optimization (Task 3.3)
-          → optimize APL for winning talent build
+          → optimize APL for winning talent build FOR THIS FIGHT STYLE
           
   Step 5: Cross-validation
-          → sim winning APL × top 3 talent builds
+          → sim winning APL × top 3 talent builds (same fight style)
           → sim winning build × current APL (before optimization)
           → verify improvement is from talent AND APL combined
           
   Step 6: If APLs differ between builds → merge with talent gates
+
+Result: 2 optimal builds per spec (Patchwerk best + HecticAddCleave best)
 ```
 
 ### Task 6.2 — Parallel Execution
@@ -358,11 +361,12 @@ Run 4 specs concurrently (each uses 8 threads for SimC):
 
 ### Task 6.3 — Profile Updates
 
-For each spec where improvement > 0.5%:
-- Update `talents=` in MID1 profile
+For each spec where improvement > 0.5% on either fight style:
+- The MID1 profile keeps the Patchwerk-optimal build as default (raid boss = primary use case)
+- HecticAddCleave-optimal build stored as `_M+` variant profile if it differs from PW build
 - Update APL in `ActionPriorityLists/default/` if changed
 - Create hero-variant profiles if second hero path is >2% different
-- Re-run baselines (Patchwerk + HecticAddCleave at target_error=0.1)
+- Re-run baselines for both fight styles independently
 
 ### Task 6.4 — Final Validation Matrix
 
@@ -448,14 +452,20 @@ results/
     {spec}/
       tree.json
       classification.md
-      wowhead_comparison.md
-      pivot_sweep.json
-      tuning_sweep.json
-      apl_iterations/
-      best_build.txt
-      best_apl.simc
+      wowhead_builds.json           # all builds simmed, ranked per style
+      pivot_sweep_pw.json           # Patchwerk pivot results
+      pivot_sweep_hac.json          # HecticAddCleave pivot results
+      tuning_sweep_pw.json
+      tuning_sweep_hac.json
+      apl_optimization_pw.json      # Patchwerk APL optimizer output
+      apl_optimization_hac.json     # HecticAddCleave APL optimizer output
+      optimized_apl_pw.simc         # best APL for Patchwerk
+      optimized_apl_hac.simc        # best APL for HecticAddCleave
+      best_build_pw.txt             # best talent string for Patchwerk
+      best_build_hac.txt            # best talent string for HecticAddCleave
       report.md
-    summary.md
+    wowhead_comparison.md           # all specs, per-style rankings
+    talent_summary.md               # per-style summary table
     checkpoint.json
 ```
 
@@ -463,16 +473,20 @@ results/
 
 ## Success Criteria
 
-1. **All 33 specs have a validated best talent build** with composite DPS
-   >= best Wowhead build (or within 0.3% if Wowhead is already optimal)
+1. **All 33 specs have validated best talent builds per fight style** — best
+   Patchwerk build AND best HecticAddCleave build, each >= best Wowhead build
+   for that fight style (or within 0.3% if already optimal)
 
-2. **All 33 specs have an optimized APL** for their best build, with
-   composite DPS >= current APL (or within 0.1% if already optimal)
+2. **All 33 specs have optimized APLs per fight style** — Patchwerk APL and
+   HecticAddCleave APL independently optimized for their respective builds
 
-3. **No regression**: no spec's DPS drops >1% on any fight style vs
-   current baselines
+3. **No regression**: no spec's DPS drops for the fight style being optimized
 
 4. **Automation**: the full pipeline can be re-run with a single command
-   (`python3 scripts/optimize_all.py`) after any patch/data update
+   (`python3 scripts/optimize_all.py`) after any patch/data update.
+   Per-style: `--fight-style Patchwerk` or `--fight-style HecticAddCleave`
 
 5. **56/56 profiles still pass** compilation and smoke tests after updates
+
+6. **Results structure**: each spec produces `apl_optimization_pw.json`,
+   `apl_optimization_hac.json`, `optimized_apl_pw.simc`, `optimized_apl_hac.simc`

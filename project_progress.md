@@ -1,17 +1,17 @@
 # SimulationCraft — Midnight Expansion (MID1) Project Progress
 
-Last updated: 2026-03-27 (evening)
+Last updated: 2026-03-28
 
 ## Status at a Glance
 
 | Metric | Value |
 |--------|-------|
 | Profiles (compile + 1-iter sim) | 56/56 PASS |
-| Phase 4 baselines (PW + HAC) | 112/112 COMPLETE (stale — talent strings changed, re-run needed) |
+| Phase 4 baselines (PW + HAC) | 112/112 FRESH (re-run 2026-03-28 with updated talent strings) |
 | Spell database | 4,410 spells, 0 genuine gaps |
 | Tier sets implemented | 33/33 |
 | Apex talents implemented | 33/33 |
-| Audit issues resolved | 35/42 (batches 1-8; 9-10 deferred) |
+| Audit issues resolved | 35/42 (batches 1-8; batch 9 deferred, batch 10 removed) |
 | APL fixes (upstream comparison) | 8/8 COMPLETE (Group A + B) |
 | Talent builds optimized | 29/33 profiles updated to best Wowhead build |
 | APL optimizer | Built and tested — Guardian Druid +5.28% |
@@ -20,15 +20,24 @@ Last updated: 2026-03-27 (evening)
 
 ## What's Next (in priority order)
 
-1. ~~**Guardian Druid profile**~~ — FIXED 2026-03-27 (commit 6534f10). Removed assisted_combat stub; fixed C++ APL action names. DPS ~3k → ~10.6k.
-2. ~~**Talent build optimization**~~ — DONE 2026-03-27 (commit 998745e). 29/33 profiles updated with best Wowhead builds. Biggest gains: Guardian +554%, Vengeance DH +46%, Assa Rogue +39%.
-3. **Run APL optimizer on all 33 specs** — tool built and tested, needs full run (~1h/spec × 33 = batch overnight)
-4. **Re-run Phase 4 baselines** — talent strings changed for 29 profiles, baselines are stale
-5. **Phase 4b** — re-run `gen_apl_diff.py` with updated extraction data
-6. **Talent engine** — build smart permutation system to go beyond Wowhead's curated builds (M1.3, M1.4, M2, M4 in action plan)
-7. **Phase 5** — trinket combinatorics (BiS pair sims per spec)
-8. **Batch 9** — tier set DBC value verification (7 specs, MEDIUM priority)
-9. **Batch 10** — low-priority cleanup (5 items)
+**Full task list with dependencies and commands: `task_list.md`**
+
+| Batch | Description | Status | Estimate |
+|-------|-------------|--------|----------|
+| 1 | Fresh baselines (56 PW + 56 HAC) | COMPLETE 2026-03-28 | 30 min compute |
+| 2 | APL diff re-run (Phase 4b) + triage | COMPLETE 2026-03-28 — 0 real gaps (58 false positives) | 10 min |
+| 3 | APL optimization — all 33 specs × 2 fight styles | PENDING | 2-6h compute |
+| 4 | Talent permutation — pivot sweep + tuning per fight style | PENDING | 5h (1h code + 4h compute) |
+| 5 | Re-baseline + cross-validation | PENDING | 1h compute |
+| 6 | Trinket combinatorics (Phase 5) | PENDING | 6h (2h code + 4h compute) |
+| 7 | Tier set DBC verification + final docs | PENDING | 1.5h |
+
+**Completed:**
+1. ~~Guardian Druid profile~~ — FIXED 2026-03-27 (commit 6534f10)
+2. ~~Talent build optimization~~ — DONE 2026-03-27 (commit 998745e). 29/33 profiles updated.
+
+**Design:** Each spec produces TWO independent optimal builds (Patchwerk + HecticAddCleave).
+See `task_list.md` for dependency graph and per-task commands.
 
 Ground-truth audit methodology: all statements below verified by direct code inspection
 (grep + read_file on actual source). Discrepancies from prior version are annotated.
@@ -228,9 +237,8 @@ Full audit: `docs/archive/full_spec_audit_2026-03-24.md` (42 issues, 10 batches)
 | 7 | HIGH+MED | Rogue Sub + Frost Mage APL fixes | COMPLETE |
 | 8 | MEDIUM | 10 multi-spec condition fixes (1 real fix, 9 verified correct) | COMPLETE |
 | 9 | MEDIUM | Tier set DBC auto-parse verification | DEFERRED |
-| 10 | LOW | Cleanup (5 cosmetic items) | DEFERRED |
 
-**Resolved: 35 issues. Deferred: 7 (all MEDIUM/LOW).**
+**Resolved: 35 issues. Deferred: Batch 9 only (MEDIUM — tier set DBC verification). Batch 10 removed (5 LOW items: all cosmetic/intentional).**
 
 ### Upstream APL Comparison — 3-Way Sim Study (2026-03-24)
 
@@ -331,10 +339,10 @@ Full specification: `APL_optimization.md`
 | Phase 3.6 | Upstream APL comparison — 3-way sim study (198 sims, 10k iter, all 33 specs) | COMPLETE — 4 upstream wins, 1 ours win, 1 C++ win, 27 ties. Root cause analysis in APL_optimization.md §15.6-15.7 |
 | Phase 4-pre | Fix 8 APL issues from upstream comparison (4 .simc imports + 4 C++ syncs) | COMPLETE — All 8 specs fixed in commit d4c2cc4 (2026-03-25). Group A: Rogue Assn/Sub, Warrior Arms, Monk BM. Group B: Warlock Aff, Warrior Fury, Shaman Enh, Monk BM. |
 | Phase 4a | Complete baselines — all HAC sims + re-run changed profiles | COMPLETE — 112/112 JSONs. DK Blood engine bug fixed (player.cpp: interrupt schedule_ready race). All profiles have both PW+HAC. |
-| Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | NOT STARTED |
-| Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | PARTIALLY DONE — upstream comparison identified the real gaps |
+| Phase 4b | Re-run APL diff with fresh extracted data (6 fixed heroes + 5 build variants) | COMPLETE 2026-03-28 — 0 real gaps (58 MISSING all false positives: parser artifacts + engine-managed actions) |
+| Phase 4c | APL gap review — triage 12 HIGH-priority specs from diff report, separate real gaps from false positives | COMPLETE 2026-03-28 — all 58 MISSING confirmed false positives, 0 real gaps remain |
 | Phase 4d-talent | Wowhead talent build comparison — sim all 262 builds across 33 specs | COMPLETE — 29/33 specs had better builds. 128s total runtime. Profiles updated (commit 998745e). |
-| Phase 4d-apl | APL optimization engine — mutation operators + multi-stage evaluation | IN PROGRESS — tool built (`scripts/apl_optimizer.py`), Guardian Druid +5.28%. Full 33-spec run pending. |
+| Phase 4d-apl | APL optimization engine — per-fight-style mutation + multi-stage evaluation | IN PROGRESS — tool built (`scripts/apl_optimizer.py`), each spec optimized independently for PW + HAC. Full 33-spec run pending. |
 | Phase 4d-talent2 | Talent permutation engine — smart tree search beyond Wowhead builds | DONE — `scripts/lib/talent_permute.py`. Design in `optimization_action_plan.md` M4. |
 | Phase 5 | Trinket combinatorics — sim all BiS trinket pairs | NOT STARTED |
 
@@ -353,7 +361,7 @@ Full specification: `APL_optimization.md`
 
 **Remaining pipeline work:**
 1. (4b) Re-run gen_apl_diff.py — extraction pipeline fixed since last run
-2. (4d) Run permutation candidates per spec — accept only when composite improves AND neither fight style regresses >1%
+2. (4d) Run permutation candidates per spec — optimized independently per fight style (PW + HAC)
 3. Phase 5: trinket combinatorics
 
 **Composite DPS baseline (1000 iter, 2026-03-22) — top 10 (52 complete pairs only):**
@@ -401,7 +409,7 @@ Top improvements (composite DPS):
 
 4 specs already optimal: Mage Fire, Evoker Devastation, Prot Paladin, Prot Warrior.
 
-Note: Large gaps (>20%) are mainly AoE/M+ builds dominating HecticAddCleave, which is correct for composite scoring (50% PW + 50% HAC).
+Note: Large gaps (>20%) are mainly AoE/M+ builds dominating HecticAddCleave. Optimization now uses per-fight-style ranking (not composite) — each spec has independent best builds for Patchwerk and HAC.
 
 All 29 profiles updated in commit 998745e. 56/56 pass smoke test.
 
@@ -487,7 +495,7 @@ Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (
 - Darkmoon Deck trinket+embellishment stacking — GitHub Issue #81, blocked on beta data. Investigation report: `darkmoon_investigation.md`
 - Stale "TODO: 81-89" comments in sc_extra_data.inc (base stats) — data is correct, cosmetic
 - 61 TODO/FIXME comments in sc_mage.cpp — code quality debt, zero DPS impact
-- Phase 4 baselines stale (29 talent strings changed) — re-run needed
+- ~~Phase 4 baselines stale~~ — RESOLVED 2026-03-28, all 112 re-run with updated talent strings
 
 ---
 
@@ -511,11 +519,12 @@ Previously resolved: 5 missing tier sets (2026-03-24), DK Blood HAC engine bug (
 | `scripts/lib/apl_mutations.py` | 4 mutation operators — adjacent swap, threshold sweep, promotion, routing | DONE |
 | `scripts/apl_optimizer.py` | APL optimization loop — baseline → generate → evaluate → accept → converge | DONE (tested) |
 | `scripts/talent_build_compare.py` | Wowhead talent build comparison — sim all builds, rank, report | DONE (all 33 specs) |
-| `scripts/lib/talent_codec.py` | Talent string encoder/decoder (base64 ↔ node selections) | PLANNED |
-| `scripts/lib/talent_tree.py` | DBC talent tree extractor (trait_data → Python graph) | PLANNED |
-| `scripts/lib/node_classifier.py` | DPS/GATING/UTILITY node classifier (APL scan + spell data + code grep) | PLANNED |
-| `scripts/lib/talent_permute.py` | Talent permutation engine (pivot sweep + tuning hill-climb) | PLANNED |
-| `scripts/optimize_all.py` | Master orchestrator (talent discovery → APL optimization → validation) | PLANNED |
+| `scripts/lib/talent_codec.py` | Talent string encoder/decoder (base64 ↔ node selections) | DONE (491 lines, 33/33 round-trip PASS) |
+| `scripts/lib/talent_tree.py` | DBC talent tree extractor (trait_data → Python graph) | DONE (598 lines, 38 specs parsed) |
+| `scripts/lib/tree_codec_bridge.py` | Bridge — connects tree + codec, high-level API | DONE (239 lines) |
+| `scripts/lib/node_classifier.py` | DPS/GATING/UTILITY node classifier (APL scan + spell data + code grep) | DONE (122 lines) |
+| `scripts/lib/talent_permute.py` | Talent permutation engine (pivot sweep + tuning hill-climb) | DONE (90 lines) |
+| `scripts/optimize_all.py` | Master orchestrator (talent discovery → APL optimization → validation) | DONE (107 lines) |
 
 ### Results
 

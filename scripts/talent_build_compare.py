@@ -208,9 +208,13 @@ def compare_builds_for_spec(
                 "error": str(e),
             })
 
-    # Sort by composite DPS
+    # Sort by composite DPS (kept for backward compatibility)
     valid_results = [r for r in results if "composite" in r]
     valid_results.sort(key=lambda x: -x["composite"])
+
+    # Also rank independently per fight style
+    pw_ranked = sorted(valid_results, key=lambda x: -x["pw"])
+    hac_ranked = sorted(valid_results, key=lambda x: -x["hac"])
 
     return {
         "spec": spec_name,
@@ -218,16 +222,25 @@ def compare_builds_for_spec(
         "iterations": iterations,
         "build_count": len(builds),
         "results": valid_results,
+        "results_pw_ranked": pw_ranked,
+        "results_hac_ranked": hac_ranked,
+        "best_pw": pw_ranked[0] if pw_ranked else None,
+        "best_hac": hac_ranked[0] if hac_ranked else None,
         "errors": [r for r in results if "error" in r and not r.get("is_current")],
     }
 
 
 def write_report(all_results: list[dict], output_dir: Path):
-    """Write summary report."""
+    """Write summary report with per-fight-style rankings.
+
+    Each spec gets independent best-build identification for Patchwerk and
+    HecticAddCleave. The composite column is kept for reference only.
+    """
     output_dir.mkdir(parents=True, exist_ok=True)
 
     lines = ["# Wowhead Talent Build Comparison\n"]
     lines.append(f"Generated: {time.strftime('%Y-%m-%d %H:%M')}\n")
+    lines.append("**Note:** Each spec has independent best builds for Patchwerk and HecticAddCleave.\n")
 
     summary_rows = []
 
@@ -240,15 +253,20 @@ def write_report(all_results: list[dict], output_dir: Path):
             continue
 
         lines.append(f"\n## {spec} ({spec_data['build_count']} builds)\n")
-        lines.append(f"| Rank | Build | Patchwerk | HecticAC | Composite | vs Current |")
-        lines.append(f"|------|-------|-----------|----------|-----------|------------|")
 
-        current_comp = None
+        # Find current build's DPS for each style
+        current_pw = current_hac = None
         for r in results:
             if r.get("is_current") or r.get("is_current_duplicate"):
-                current_comp = r["composite"]
+                current_pw = r["pw"]
+                current_hac = r["hac"]
                 break
 
+        # Table: ranked by composite (reference), but show per-style bests
+        lines.append(f"| Rank | Build | Patchwerk | HecticAC | Composite | vs Current (comp) |")
+        lines.append(f"|------|-------|-----------|----------|-----------|-------------------|")
+
+        current_comp = (current_pw + current_hac) * 0.5 if current_pw and current_hac else None
         for rank, r in enumerate(results, 1):
             label = r["label"]
             delta = ""
@@ -263,34 +281,58 @@ def write_report(all_results: list[dict], output_dir: Path):
                 f"{r['composite']:,.0f} | {delta} |"
             )
 
-        # Summary: is current build optimal?
-        best = results[0]
-        if best.get("is_current") or best.get("is_current_duplicate"):
-            status = "OPTIMAL"
-            gap = 0
-        else:
-            gap = (best["composite"] - current_comp) / current_comp * 100 if current_comp else 0
-            status = f"SUBOPTIMAL (-{gap:.1f}%)"
+        # Per-fight-style bests
+        best_pw = spec_data.get("best_pw")
+        best_hac = spec_data.get("best_hac")
+        if best_pw:
+            pw_delta = f" ({(best_pw['pw'] - current_pw) / current_pw * 100:+.1f}%)" if current_pw else ""
+            lines.append(f"\n**Best for Patchwerk:** {best_pw['label']} — {best_pw['pw']:,.0f} DPS{pw_delta}")
+        if best_hac:
+            hac_delta = f" ({(best_hac['hac'] - current_hac) / current_hac * 100:+.1f}%)" if current_hac else ""
+            lines.append(f"**Best for HecticAddCleave:** {best_hac['label']} — {best_hac['hac']:,.0f} DPS{hac_delta}")
 
-        summary_rows.append((spec, status, gap, best["label"], best["composite"]))
+        # Summary row
+        pw_gap = ((best_pw["pw"] - current_pw) / current_pw * 100) if best_pw and current_pw else 0
+        hac_gap = ((best_hac["hac"] - current_hac) / current_hac * 100) if best_hac and current_hac else 0
+
+        summary_rows.append({
+            "spec": spec,
+            "best_pw_build": best_pw["label"] if best_pw else "?",
+            "best_pw_dps": best_pw["pw"] if best_pw else 0,
+            "pw_gap": pw_gap,
+            "best_hac_build": best_hac["label"] if best_hac else "?",
+            "best_hac_dps": best_hac["hac"] if best_hac else 0,
+            "hac_gap": hac_gap,
+        })
 
     # Write per-spec report
     report_path = output_dir / "wowhead_comparison.md"
     with open(report_path, "w") as f:
         f.write("\n".join(lines))
 
-    # Write summary table
+    # Write summary table — per fight style
     summary_path = output_dir / "talent_summary.md"
     with open(summary_path, "w") as f:
-        f.write("# Talent Build Summary\n\n")
+        f.write("# Talent Build Summary (Per Fight Style)\n\n")
         f.write(f"Generated: {time.strftime('%Y-%m-%d %H:%M')}\n\n")
-        f.write("| Spec | Status | Gap | Best Build | Best Composite |\n")
-        f.write("|------|--------|-----|------------|----------------|\n")
-        for spec, status, gap, best_label, best_comp in sorted(summary_rows):
-            f.write(f"| {spec} | {status} | {gap:+.1f}% | {best_label} | {best_comp:,.0f} |\n")
+        f.write("Each spec is independently ranked for Patchwerk (ST) and HecticAddCleave (AoE/M+).\n\n")
 
-        suboptimal = [r for r in summary_rows if r[2] > 0.5]
-        f.write(f"\n**{len(suboptimal)} specs with suboptimal talent builds (>0.5% gap)**\n")
+        f.write("## Patchwerk Best Builds\n\n")
+        f.write("| Spec | Best Build | DPS | vs Current |\n")
+        f.write("|------|-----------|-----|------------|\n")
+        for row in sorted(summary_rows, key=lambda x: -x["pw_gap"]):
+            f.write(f"| {row['spec']} | {row['best_pw_build']} | {row['best_pw_dps']:,.0f} | {row['pw_gap']:+.1f}% |\n")
+
+        f.write("\n## HecticAddCleave Best Builds\n\n")
+        f.write("| Spec | Best Build | DPS | vs Current |\n")
+        f.write("|------|-----------|-----|------------|\n")
+        for row in sorted(summary_rows, key=lambda x: -x["hac_gap"]):
+            f.write(f"| {row['spec']} | {row['best_hac_build']} | {row['best_hac_dps']:,.0f} | {row['hac_gap']:+.1f}% |\n")
+
+        pw_subopt = [r for r in summary_rows if r["pw_gap"] > 0.5]
+        hac_subopt = [r for r in summary_rows if r["hac_gap"] > 0.5]
+        f.write(f"\n**Patchwerk:** {len(pw_subopt)} specs with suboptimal builds (>0.5% gap)\n")
+        f.write(f"**HecticAddCleave:** {len(hac_subopt)} specs with suboptimal builds (>0.5% gap)\n")
 
     print(f"\nReports written to {output_dir}/")
     return summary_rows
@@ -337,13 +379,18 @@ def main():
 
     # Print quick summary
     if summary:
-        suboptimal = [(s, g) for s, _, g, _, _ in summary if g > 0.5]
-        if suboptimal:
-            print(f"\n  Specs with suboptimal talent builds:")
-            for spec, gap in sorted(suboptimal, key=lambda x: -x[1]):
-                print(f"    {spec:35s} {gap:+.1f}%")
-        else:
-            print(f"\n  All specs are using optimal talent builds!")
+        pw_sub = [r for r in summary if r["pw_gap"] > 0.5]
+        hac_sub = [r for r in summary if r["hac_gap"] > 0.5]
+        if pw_sub:
+            print(f"\n  Patchwerk — specs with suboptimal builds:")
+            for r in sorted(pw_sub, key=lambda x: -x["pw_gap"]):
+                print(f"    {r['spec']:35s} {r['pw_gap']:+.1f}%  -> {r['best_pw_build']}")
+        if hac_sub:
+            print(f"\n  HecticAddCleave — specs with suboptimal builds:")
+            for r in sorted(hac_sub, key=lambda x: -x["hac_gap"]):
+                print(f"    {r['spec']:35s} {r['hac_gap']:+.1f}%  -> {r['best_hac_build']}")
+        if not pw_sub and not hac_sub:
+            print(f"\n  All specs are using optimal talent builds for both fight styles!")
 
 
 if __name__ == "__main__":

@@ -276,8 +276,9 @@ and the automated improvement loop design. Both are now implemented:
   MISTAKE: Midnight apex talent checked with .ok() when rank 4 specific behavior needed
   FIX: Use talent.APEX_4.ok() for the capstone. Use talent.APEX_1.ok() for rank-1.
 
-  MISTAKE: APL optimized only for Patchwerk, underperforms on HecticAddCleave
-  FIX: Always validate both fight styles. Use composite scoring (Section 6.1).
+  MISTAKE: APL optimized only for one fight style without considering the other
+  FIX: Optimize each fight style independently. Each spec has TWO optimal APLs:
+       one for Patchwerk (ST) and one for HecticAddCleave (AoE/M+).
 
   MISTAKE: APL works for one talent build but breaks another
   FIX: Gate build-specific actions with talent.X.ok(). Validate all builds (Section 6.2).
@@ -289,7 +290,8 @@ and the automated improvement loop design. Both are now implemented:
   [ ] 1-iteration sim completes with no crash or assertion failure
   [ ] All actions appear in sim report (zero actions with 0 executes and no condition)
   [ ] action_dpet table has no unexpected zeros for normally-cast spells
-  [ ] DPS is >= previous baseline on BOTH fight styles (Patchwerk + HecticAddCleave)
+  [ ] DPS is >= previous baseline for the fight style being optimized
+  [ ] Both fight styles have independently validated optimal APLs
   [ ] No single talent build regresses more than 2%
   [ ] All talents referenced in conditions are registered in init_spells()
   [ ] No DEAD_CONDITION flags (unknown buff/debuff/talent names)

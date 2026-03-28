@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Master Orchestrator — talent discovery -> APL optimization -> validation.
 
+Each spec is optimized independently for Patchwerk and HecticAddCleave,
+producing TWO optimal talent/APL builds per spec.
+
 Usage:
-  python3 scripts/optimize_all.py --report          # Show current baselines
-  python3 scripts/optimize_all.py --apl --all       # APL optimize all specs
+  python3 scripts/optimize_all.py --report          # Show current baselines (both styles)
+  python3 scripts/optimize_all.py --apl --all       # APL optimize all specs (both styles)
   python3 scripts/optimize_all.py --spec warrior_fury --apl  # Single spec
+  python3 scripts/optimize_all.py --spec warrior_fury --apl --fight-style Patchwerk
 """
 
 import argparse
@@ -41,28 +45,46 @@ PROFILE_MAP = {
 
 
 def generate_report():
-    """Generate summary report from Phase 4 baselines."""
+    """Generate summary report from Phase 4 baselines — shows each fight style independently."""
     baselines = []
     for pw_file in sorted(glob.glob("results/phase4/*_patchwerk.json")):
         name = os.path.basename(pw_file).replace("_patchwerk.json", "")
         hac_file = pw_file.replace("_patchwerk.json", "_hecticaddcleave.json")
-        if not os.path.exists(hac_file):
-            continue
         try:
             with open(pw_file) as f:
                 pw_dps = json.load(f)["sim"]["players"][0]["collected_data"]["dps"]["mean"]
+        except Exception as e:
+            print(f"Error reading PW {name}: {e}")
+            pw_dps = 0
+        try:
             with open(hac_file) as f:
                 hac_dps = json.load(f)["sim"]["players"][0]["collected_data"]["dps"]["mean"]
-            comp = 0.5 * pw_dps + 0.5 * hac_dps
-            baselines.append((name, pw_dps, hac_dps, comp))
-        except Exception as e:
-            print(f"Error reading {name}: {e}")
+        except Exception:
+            hac_dps = 0
+        baselines.append((name, pw_dps, hac_dps))
 
-    baselines.sort(key=lambda x: -x[3])
-    print(f"\n{'Profile':<55} {'Patchwerk':>10} {'HAC':>10} {'Composite':>10}")
-    print("-" * 90)
-    for name, pw, hac, comp in baselines:
-        print(f"{name:<55} {pw:>10,.0f} {hac:>10,.0f} {comp:>10,.0f}")
+    # Report 1: Patchwerk ranking
+    print(f"\n=== PATCHWERK RANKING ===")
+    print(f"{'Profile':<55} {'DPS':>10}")
+    print("-" * 67)
+    for name, pw, _ in sorted(baselines, key=lambda x: -x[1]):
+        if pw > 0:
+            print(f"{name:<55} {pw:>10,.0f}")
+
+    # Report 2: HecticAddCleave ranking
+    print(f"\n=== HECTICADDCLEAVE RANKING ===")
+    print(f"{'Profile':<55} {'DPS':>10}")
+    print("-" * 67)
+    for name, _, hac in sorted(baselines, key=lambda x: -x[2]):
+        if hac > 0:
+            print(f"{name:<55} {hac:>10,.0f}")
+
+    # Report 3: Combined view (for reference only, NOT used for optimization)
+    print(f"\n=== COMBINED VIEW (reference only — optimization uses per-style) ===")
+    print(f"{'Profile':<55} {'Patchwerk':>10} {'HAC':>10}")
+    print("-" * 80)
+    for name, pw, hac in sorted(baselines, key=lambda x: -(x[1] + x[2])):
+        print(f"{name:<55} {pw:>10,.0f} {hac:>10,.0f}")
     print(f"\nTotal: {len(baselines)} profiles")
     return baselines
 
@@ -74,6 +96,8 @@ def main():
     parser.add_argument("--apl", action="store_true", help="Run APL optimization")
     parser.add_argument("--report", action="store_true", help="Show baseline report")
     parser.add_argument("--max-iter", type=int, default=5, help="Max APL optimizer iterations")
+    parser.add_argument("--fight-style", type=str, default=None,
+                        help="Single fight style (Patchwerk or HecticAddCleave). Default: both independently")
     args = parser.parse_args()
 
     if args.report:
@@ -85,8 +109,11 @@ def main():
         parser.print_help()
         return
 
+    fight_styles = [args.fight_style] if args.fight_style else None
+
     print(f"=== SimC Midnight Optimization ===")
     print(f"Specs: {len(specs)}, APL: {args.apl}, Max iter: {args.max_iter}")
+    print(f"Fight styles: {fight_styles or ['Patchwerk', 'HecticAddCleave']} (independently)")
 
     if args.apl:
         from apl_optimizer import optimize_spec
@@ -97,7 +124,8 @@ def main():
                 continue
             print(f"  [{i+1}/{len(specs)}] {spec}: optimizing...")
             try:
-                optimize_spec(spec, profile, max_iterations=args.max_iter)
+                optimize_spec(spec, max_iterations=args.max_iter,
+                              fight_styles=fight_styles)
                 print(f"  [{i+1}/{len(specs)}] {spec}: DONE")
             except Exception as e:
                 print(f"  [{i+1}/{len(specs)}] {spec}: ERROR {e}")

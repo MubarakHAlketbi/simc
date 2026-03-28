@@ -120,7 +120,10 @@ python3 scripts/optimize_all.py --apl --all
 python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 ```
 
-Composite DPS = 0.50 × Patchwerk + 0.50 × HecticAddCleave.
+**Optimization model:** Each spec has TWO independent optimal talent/APL builds:
+one for Patchwerk (single-target raid) and one for HecticAddCleave (M+/AoE).
+Composite DPS (0.50 × PW + 0.50 × HAC) is reported for reference only — it is
+NOT used for optimization decisions. Always optimize each fight style separately.
 
 ---
 
@@ -201,8 +204,8 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   files. Always compare 3 variants: upstream .simc, our .simc, C++ default (no override).
 - **C++ and .simc APLs drift apart** — after any .simc improvement, sync the C++ generator too.
   Otherwise players using the engine default don't benefit.
-- **Tank specs in HecticAddCleave** — may produce 0 DPS or crash. Use Patchwerk-only for tanks,
-  or use composite with awareness that HAC may be meaningless.
+- **Tank specs in HecticAddCleave** — may produce 0 DPS or crash. Use Patchwerk-only for tanks.
+  Since each fight style is optimized independently, tank specs simply skip HAC optimization.
 - **DK Blood HAC crash** — FIXED. `consumption_release` empowered charge race condition.
   `engine/player/player.cpp:7546`: added `!executing` guard in `interrupt()`.
 - **Druid Balance upstream APL = 0 DPS** — incompatible with Midnight. Always verify upstream
@@ -218,9 +221,11 @@ Multi-stage filtering cuts to ~2 min/iteration:
 - Stage 3: 10,000 iter on top 3 → confirm with 1% regression cap per fight style
 
 ### Acceptance Criteria
-A candidate APL/build is accepted only if:
-1. Composite DPS improves
-2. Neither Patchwerk nor HecticAddCleave regresses more than 1%
+A candidate APL/build is accepted only if it improves DPS for the fight style
+being optimized. Each fight style is optimized independently — there is no
+cross-style regression check. Each spec produces TWO optimal builds:
+1. Best Patchwerk talent/APL (single-target raid)
+2. Best HecticAddCleave talent/APL (M+/AoE)
 
 ### Common Upstream Superiority Patterns
 1. Resource gating that idles GCDs (Subtlety `energy>60`)

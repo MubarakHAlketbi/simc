@@ -30,7 +30,12 @@ class SimResult:
 
 @dataclass
 class CompositeResult:
-    """Combined result across fight styles."""
+    """Combined result across fight styles.
+
+    NOTE: composite is kept for backward compatibility / reporting, but
+    optimization should treat Patchwerk and HecticAddCleave independently.
+    Each spec should have two optimal talent/APL builds — one per fight style.
+    """
     pw: SimResult
     hac: SimResult
     composite: float = 0.0
@@ -153,7 +158,7 @@ def run_composite(
 
 def should_accept(candidate: CompositeResult, baseline: CompositeResult,
                   regression_cap: float = 0.01) -> bool:
-    """Check if candidate should replace baseline.
+    """Check if candidate should replace baseline (composite mode — legacy).
 
     Rules:
     - Composite must improve
@@ -166,6 +171,16 @@ def should_accept(candidate: CompositeResult, baseline: CompositeResult,
     if candidate.hac.dps_mean < baseline.hac.dps_mean * (1 - regression_cap):
         return False
     return True
+
+
+def should_accept_single(candidate: SimResult, baseline: SimResult) -> bool:
+    """Check if candidate improves DPS for a single fight style.
+
+    Used by per-fight-style optimization (the primary mode).
+    Each spec should be optimized independently for Patchwerk and
+    HecticAddCleave, producing two optimal talent/APL builds.
+    """
+    return candidate.dps_mean > baseline.dps_mean
 
 
 async def run_sim_async(
