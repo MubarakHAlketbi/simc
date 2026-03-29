@@ -1,6 +1,6 @@
 # Optimization Action Plan
 
-Updated: 2026-03-28
+Updated: 2026-03-29
 
 ## Architecture
 
@@ -12,7 +12,7 @@ TALENT OPTIMIZATION                    APL OPTIMIZATION
        |                                     |
   Screen at 1k iter per style           Generate mutations (swap/sweep/route)
        |                                     |
-  Local search (single-node swaps)      Multi-stage eval (100→1k→10k iter)
+  Local search (single-node swaps)      Multi-stage eval (300→3k→10k iter)
        |                                     |
   Hill-climb to convergence             Accept best per style
        |                                     |
@@ -23,54 +23,78 @@ Each spec produces TWO independent optimal talent/APL builds — one for Patchwe
 
 ---
 
-## Talent Optimization — Seed + Local Search
+## Talent Optimization — Real Edges + Validated Neighbors
 
-### Why Not Classify-Then-Permute
+### Data Sources
 
-The old approach (node_classifier.py + talent_permute.py) was abandoned:
+| Data | Source | Details |
+|------|--------|---------|
+| Node definitions | `engine/dbc/generated/trait_data.inc` | 3,420 entries, build 12.0.1.66384 |
+| Prerequisite edges | `engine/dbc/generated/TraitEdge.csv` | 6,409 Type 2 edges (class/spec/hero) |
+| Edge origin | DB2 `TraitEdge` table via wago.tools | Build 12.0.1.66384 (release) |
 
-1. **Code scanner regex wrong** — matches `talent.spec.X` but C++ uses `talents.fury.X` (plural, spec-name prefix). 0 matches from 239 references.
-2. **APL scanner too narrow** — only finds talents in `if=` conditions (5/106 for Fury). Core abilities never gated.
-3. **Wrong abstraction** — talent optimization is DAG budget allocation, not independent node toggles.
+Old heuristic edges (row-adjacency, col-distance ≤ 1) had 77.7% precision, 90.1% recall.
+Replaced with real DB2 edges. 40 nodes have no edges (33 apex row-11, row-1 roots) — use req_points gates only.
 
-### Current Approach
+### Constraints (enforced by `talent_validator.py`)
+
+| Constraint | Rule |
+|------------|------|
+| Class budget | ≤ 34 purchased points (granted nodes free) |
+| Spec budget | ≤ 34 purchased points |
+| Hero tree | Auto-granted (15 points), one tree selected |
+| req_points | Node requires N total points in sub-tree before unlocking |
+| Prerequisites | At least 1 parent must be selected (real TraitEdge.csv edges) |
+| Choice nodes | Exactly 1 option selected |
+| Granted nodes | Auto-detected via id_spec_starter + undocumented grants (warlock Soul Leech) |
+
+### Granted Class Talents
+
+Not all specs have 1 free talent. Actual counts:
+
+| Grants | Specs |
+|--------|-------|
+| 0 | Warlock (Soul Leech undocumented, hardcoded in validator) |
+| 1 | DH, DK, Hunter, Mage, Rogue, Shaman (18 specs) |
+| 2 | Evoker, Monk, Priest, Warrior (13 specs) |
+| 3 | Druid, Paladin (10 specs) |
+
+### Hero Tree Handling
+
+Hero trees are shared between 2 specs. Key discoveries:
+- Internal hero nodes may have id_spec tagging for only one spec (Scalecommander nodes tagged Devastation-only, but Aug can use them)
+- SimC's parser skips spec validation for hero talents (player.cpp ~line 2929)
+- Selection nodes identify available sub-trees (fixes Evoker Aug + Chronowarden which has no Aug-tagged starting node)
+- Each hero tree has 2 different row-1 starting nodes (one per spec), rest are shared
+
+### Search Pipeline
 
 **Phase 1 — Seed Screening** (`talent_build_compare.py`):
 - Sim all Wowhead builds (4-16 per spec) at 1000 iter × both fight styles
 - Rank per fight style independently, pick top 3 seeds
 
-**Phase 2 — Neighborhood Generation** (`talent_neighbor.py`):
+**Phase 2 — Neighborhood Generation** (`talent_validator.py :: generate_neighbors()`):
 
 | Mutation | Description | Count (Fury) |
 |----------|-------------|-------------|
-| REMOVE | Drop a selected non-granted node | 45 |
-| SWAP_POINT | Remove A + add B in same sub-tree (budget-neutral) | 60 |
-| SWAP_CHOICE | Switch a choice node to its other option | 9 |
+| SWAP_CLASS | Remove class leaf + add eligible class node | ~100 |
+| SWAP_SPEC | Remove spec leaf + add eligible spec node | ~100 |
+| CHOICE_SWAP | Switch a choice node to its other option | ~9 |
+| RANK_CHANGE | Adjust tiered node rank up or down | ~1 |
+| **Total** | | **~216** |
 
-Budget-strict: no ADDs beyond current point cap per sub-tree.
+All neighbors are valid by construction — budget, prerequisites, and req_points checked during generation.
 
 **Phase 3 — Hill-Climb** (`talent_local_search.py`):
-- Per seed: generate neighbors → screen at 500 iter → confirm top 5 at 2000 iter → adopt best
-- Repeat until <0.1% improvement (typically 1-2 passes)
-- Final confirm at 10k iter
+- Per seed: generate neighbors → Stage 1 (300 iter) → Stage 2 (3k iter) → Stage 3 (10k iter)
+- Accept best improvement, repeat until no gain
+- Typically converges in 1-2 passes
 
-### Constraints
-
-All builds must satisfy (validated by `talent_neighbor.validate_build()`):
-1. Sub-tree point budgets: CLASS=36, SPEC=34, HERO=15 for Warrior Fury (varies per spec)
-2. Row gates: req_points thresholds per node
-3. Edge prerequisites: at least one parent selected
-4. Choice exclusivity: one option per choice node
-5. Granted nodes: hero starting nodes and spec-starter class nodes always present
-
-### Test Results — Warrior Fury
+### Test Results — Warrior Fury (2026-03-29)
 
 | Style | Baseline | Optimized | Gain | Passes | Key Finding |
 |-------|----------|-----------|------|--------|-------------|
-| Patchwerk | 86,904 | 88,178 | +1.52% | 2 | Stance Mastery replaces utility |
-| HecticAddCleave | 209,221 | 210,582 | +0.65% | 2 | Stance Mastery + Fast Footwork |
-
-Converges in 1-2 passes with ~114 neighbors per pass. This is the ceiling for single-node mutations. Builds differ between PW and HAC (8 vs 5 unique nodes).
+| Patchwerk | 86,897 | 89,777 | +3.31% | 2 | -Reckless Abandon +Wrath and Fury, -Pain and Gain +Stance Mastery |
 
 ---
 
@@ -80,17 +104,17 @@ Implemented in `apl_optimizer.py`. Per fight style:
 
 1. Extract current APL via `save_actions`
 2. Generate mutations: adjacent swap, threshold sweep, routing changes
-3. Three-stage funnel: 100 iter → 1000 iter → 10000 iter
+3. Three-stage funnel: 300 iter → 3,000 iter → 10,000 iter
 4. Accept if DPS improves for that fight style
 
-### Test Results — Warrior Fury
+### Test Results — Warrior Fury (2026-03-28)
 
 | Style | Result | Detail |
 |-------|--------|--------|
 | Patchwerk | +0.00% | Converged immediately — APL already optimal |
 | HecticAddCleave | +0.44% | Rampage threshold 100→80 in thane_aoe |
 
-Manual APL changes also tested (execute repositioning, rend/wrecking_throw additions). All regressed (-1.52% PW, -0.86% HAC). The upstream-imported APL is battle-tested and at its ceiling.
+Manual APL changes all regressed. Upstream APLs are at their ceiling for well-tuned specs.
 
 ---
 
@@ -98,26 +122,28 @@ Manual APL changes also tested (execute repositioning, rend/wrecking_throw addit
 
 ### Active Pipeline
 
-| Script | Lines | Purpose |
-|--------|-------|---------|
-| `scripts/lib/sim_runner.py` | 307 | SimC runner, JSON parse, scoring |
-| `scripts/lib/apl_parser.py` | 278 | APL parse/serialize |
-| `scripts/lib/apl_mutations.py` | 262 | Mutation operators |
-| `scripts/lib/talent_tree.py` | 598 | DBC tree parser |
-| `scripts/lib/talent_codec.py` | 491 | Talent string codec |
-| `scripts/lib/tree_codec_bridge.py` | 239 | Tree↔codec bridge |
-| `scripts/lib/talent_neighbor.py` | 290 | Constraint-aware neighbors |
-| `scripts/apl_optimizer.py` | 288 | APL optimization loop |
-| `scripts/talent_local_search.py` | 310 | Talent seed + hill-climb |
-| `scripts/talent_build_compare.py` | 397 | Wowhead build comparison |
-| `scripts/optimize_all.py` | 145 | Master orchestrator |
+| Script | Purpose |
+|--------|---------|
+| `scripts/lib/sim_runner.py` | SimC runner, JSON parse, scoring |
+| `scripts/lib/apl_parser.py` | APL parse/serialize |
+| `scripts/lib/apl_mutations.py` | Mutation operators: swap, sweep, route |
+| `scripts/lib/talent_tree.py` | DBC tree parser + real TraitEdge.csv edges |
+| `scripts/lib/talent_codec.py` | Base64 talent string encode/decode |
+| `scripts/lib/tree_codec_bridge.py` | Tree↔codec bridge |
+| `scripts/lib/talent_validator.py` | Build validation + neighbor generation (NEW) |
+| `scripts/apl_optimizer.py` | APL optimization loop |
+| `scripts/talent_local_search.py` | Talent seed + hill-climb (NEW) |
+| `scripts/talent_build_compare.py` | Wowhead build comparison |
+| `scripts/validate_all_profiles.py` | Full profile validation (NEW) |
+| `scripts/optimize_all.py` | Master orchestrator |
 
 ### Deprecated (kept, not called)
 
 | Script | Reason |
 |--------|--------|
-| `scripts/lib/node_classifier.py` | Wrong regex (`talent.` vs `talents.`), wrong abstraction |
-| `scripts/lib/talent_permute.py` | Produces 0 combos with correct budgets |
+| `scripts/lib/node_classifier.py` | Wrong regex, wrong abstraction |
+| `scripts/lib/talent_permute.py` | Generates 0 combos with correct budgets |
+| `scripts/lib/talent_neighbor.py` | Superseded by talent_validator.py |
 
 ---
 
@@ -128,13 +154,13 @@ Per spec, per fight style:
 | Phase | Sims | Time |
 |-------|------|------|
 | Seed screening (12 builds × 1k iter) | 12 | 36s |
-| Neighborhood screen (114 neighbors × 500 iter) | 114 | 170s |
-| Confirmation (top 5 × 2k iter) | 5 | 25s |
-| Hill-climb pass 2 | ~100 | ~150s |
-| Final confirm (10k iter) | 2 | 14s |
-| **Total per style** | **~233** | **~6.5 min** |
+| Neighborhood screen (~216 × 300 iter) | 216 | ~120s |
+| Stage 2 (top 20% × 3k iter) | ~43 | ~90s |
+| Stage 3 (top 3 × 10k iter) | 3 | ~30s |
+| Hill-climb pass 2 | ~200 | ~150s |
+| **Total per style** | **~474** | **~7 min** |
 
-All 33 specs × 2 styles: ~7 hours. With 2x parallelism: ~3.5 hours.
+All 33 specs × 2 styles: ~8 hours. With 2x parallelism: ~4 hours.
 
 ---
 
@@ -142,6 +168,6 @@ All 33 specs × 2 styles: ~7 hours. With 2x parallelism: ~3.5 hours.
 
 1. Every spec's PW-best talent build ≥ best Wowhead build for PW
 2. Every spec's HAC-best talent build ≥ best Wowhead build for HAC
-3. All talent strings budget-compliant (verified: points match Wowhead totals)
+3. All talent strings pass `validate_all_profiles.py` (56/56)
 4. All generated builds pass SimC smoke test
 5. Pipeline runs end-to-end: `python3 scripts/optimize_all.py --talent --apl --all`

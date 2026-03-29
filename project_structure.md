@@ -136,7 +136,8 @@ dbc/
     ├── sc_spell_data_ptr.inc
     ├── item_data.inc            # ~25MB - ALL item data
     ├── item_data_ptr.inc
-    ├── trait_data.inc           # Talent/trait definitions
+    ├── trait_data.inc           # Talent/trait definitions (3,420 entries)
+    ├── TraitEdge.csv            # Real prerequisite edges from DB2 (7,116 edges)
     ├── spelltext_data.inc       # Spell names, descriptions
     ├── item_bonus.inc           # Item bonus mappings
     ├── item_set_bonus.inc       # Set bonus definitions
@@ -311,9 +312,29 @@ void register_special_effects()
 
 ### Data Flow
 
-1. **DBC Extraction**: Talent definitions come from `Trait.dbc` (and related tables). Generated into `generated/trait_data.inc`.
-2. **Access**: `trait_data_t` structures define talent nodes, spells, requirements.
-3. **Selection**: Player talents are selected via `player->talents` and `player_talent_t` wrapper.
+1. **DBC Extraction**: Talent definitions come from `Trait.dbc` (and related tables). Generated into `generated/trait_data.inc` (3,420 entries).
+2. **Prerequisite Edges**: `engine/dbc/generated/TraitEdge.csv` — 6,409 real Type 2 edges from DB2 `TraitEdge` table (build 12.0.1.66384). Replaces old heuristic edge builder.
+3. **Access**: `trait_data_t` structures define talent nodes, spells, requirements.
+4. **Selection**: Player talents are selected via `player->talents` and `player_talent_t` wrapper.
+
+### Talent Validation & Optimization Tooling
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/lib/talent_tree.py` | DBC tree parser + real TraitEdge.csv edges |
+| `scripts/lib/talent_codec.py` | Base64 talent string encode/decode |
+| `scripts/lib/tree_codec_bridge.py` | Tree↔codec bridge, high-level API |
+| `scripts/lib/talent_validator.py` | Build validation (budget, prereqs, gates) + neighbor generation |
+| `scripts/talent_local_search.py` | Hill-climbing talent optimizer |
+| `scripts/talent_build_compare.py` | Wowhead build comparison |
+| `scripts/validate_all_profiles.py` | Validate all 56 profiles against tree constraints |
+
+### Midnight Point Budgets
+
+- **Class tree**: 34 purchasable points + granted nodes (0-3 depending on spec)
+- **Spec tree**: 34 purchasable points
+- **Hero tree**: 15 nodes auto-granted (one hero tree chosen via selection node)
+- Hero trees are shared between 2 specs; internal nodes may be tagged with only one spec's id_spec but both can use them
 
 ### Where to Modify Talent Logic
 
@@ -670,7 +691,8 @@ Spell IDs are typically defined as constants:
 | Class APL (default) | `engine/class_modules/apl/apl_<class>.cpp` | Default action priority list generation |
 | Spell data | `engine/dbc/generated/sc_spell_data.inc` | Raw spell properties (auto-generated) |
 | Item data | `engine/dbc/generated/item_data.inc` | Raw item properties |
-| Talent data | `engine/dbc/generated/trait_data.inc` | Talent tree definitions |
+| Talent data | `engine/dbc/generated/trait_data.inc` | Talent tree definitions (3,420 entries) |
+| Talent edges | `engine/dbc/generated/TraitEdge.csv` | Real prerequisite edges (6,409 Type 2) |
 | Trinket/unique item logic | `engine/player/unique_gear_<expansion>.cpp` | Custom item procs/special effects |
 | Set bonuses | `engine/player/set_bonus.cpp` + `unique_gear_<exp>.cpp` | Tier/class set handling |
 | Base stats/scaling | `engine/dbc/generated/sc_extra_data.inc` | Base stats by level/class |
