@@ -146,6 +146,24 @@ env/
 __pycache__/
 *.pyc
 
+# One-off investigation scripts (not part of pipeline)
+add_apex_comments.py
+fetch_guides.py
+fix_hero_talents.py
+investigate*.py
+process_remaining.py
+process_specs.py
+scrape_talents*.py
+apl_comparison_report.txt
+build_error.txt
+hermes_conversation_*.json
+
+# Deprecated optimization scripts
+scripts/build_spell_database.py
+scripts/lib/node_classifier.py
+scripts/lib/talent_neighbor.py
+scripts/lib/talent_permute.py
+
 # Generated databases and temp files
 spell_database.db
 spell_database_raw.json

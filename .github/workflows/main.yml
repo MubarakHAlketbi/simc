@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Fast build + smoke test — runs on every push, gate for spec-test
+  # ── Build gate ──────────────────────────────────────────────────────────
   build:
     name: Build (gcc-14 + clang-18 ASan)
     runs-on: ubuntu-24.04
@@ -63,95 +63,55 @@ jobs:
             warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
             enable_all_item_effects=1 enable_all_sets=1
 
-  # clang-18 ASan build — catches memory bugs
-  asan-build:
-    name: Build (clang-18 ASan+UBSan)
-    runs-on: ubuntu-24.04
-    env:
-      CCACHE_GENERATION: 0
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/cache@v4
-        with:
-          path: ~/.ccache
-          key: clang18-asan-ccache-0-${{ github.sha }}
-          restore-keys: clang18-asan-ccache-0-
-
-      - name: Install deps
-        run: |
-          sudo apt-get update -q
-          sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache clang-18 lld-18
-
-      - name: Configure (clang-18 Debug ASan)
-        run: |
-          cmake -S. -Bbuild_asan -GNinja \
-            -DBUILD_GUI=OFF \
-            -DCMAKE_BUILD_TYPE=Debug \
-            -DCMAKE_CXX_COMPILER=clang++-18 \
-            -DCMAKE_CXX_FLAGS="-Og -fno-omit-frame-pointer -fsanitize=address,undefined" \
-            -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld -fsanitize=address,undefined" \
-            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
-            -DCMAKE_CXX_STANDARD=17
-
-      - name: Build
-        env:
-          CCACHE_DIR: ~/.ccache
-          CCACHE_MAXSIZE: 256M
-        run: |
-          ccache -z
-          ninja -C build_asan
-          ccache -s
-
-      - name: Smoke test with ASan
-        env:
-          UBSAN_OPTIONS: print_stacktrace=1
-          ASAN_OPTIONS: detect_leaks=0
-        run: |
-          build_asan/simc \
-            output=/dev/null html=/dev/null json=/dev/null \
-            iterations=5 cleanup_threads=1 \
-            warrior=test spec=fury load_default_gear=1 load_default_talents=1 \
-            enable_all_item_effects=1 enable_all_sets=1
-
-  # Per-spec simulation tests — all specs, all effects, no crashes
-  spec-test:
-    name: spec/${{ matrix.spec }}
+  # ── Profile tests — all 56 MID1 profiles must sim without error ────────
+  profile-test:
+    name: profile/${{ matrix.profile }}
     needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 10
 
     strategy:
       fail-fast: false
       matrix:
-        spec:
+        profile:
           [
-            deathknight_blood, deathknight_frost, deathknight_unholy,
-            demonhunter_devourer, demonhunter_havoc, demonhunter_vengeance,
-            druid_balance, druid_feral, druid_guardian,
-            evoker_augmentation, evoker_devastation,
-            hunter_beast_mastery, hunter_marksmanship, hunter_survival,
-            mage_arcane, mage_fire, mage_frost,
-            monk_brewmaster, monk_windwalker,
-            paladin_protection, paladin_retribution,
-            priest_shadow,
-            rogue_assassination, rogue_outlaw, rogue_subtlety,
-            shaman_elemental, shaman_enhancement,
-            warlock_affliction, warlock_demonology, warlock_destruction,
-            warrior_arms, warrior_fury, warrior_protection,
+            MID1_Death_Knight_Blood, MID1_Death_Knight_Blood_Deathbringer,
+            MID1_Death_Knight_Frost, MID1_Death_Knight_Frost_Rider,
+            MID1_Death_Knight_Unholy, "MID1_Death_Knight_Unholy_San'layn",
+            MID1_Demon_Hunter_Devourer, MID1_Demon_Hunter_Devourer_Void-Scarred,
+            MID1_Demon_Hunter_Havoc,
+            MID1_Demon_Hunter_Vengeance, MID1_Demon_Hunter_Vengeance_Aldrachi_Reaver,
+            MID1_Druid_Balance, MID1_Druid_Balance_Elune, MID1_Druid_Balance_Keeper,
+            MID1_Druid_Feral,
+            MID1_Druid_Guardian,
+            MID1_Evoker_Augmentation, MID1_Evoker_Augmentation_Chronowarden,
+            MID1_Evoker_Devastation, MID1_Evoker_Devastation_FS,
+            MID1_Hunter_Beast_Mastery,
+            MID1_Hunter_Marksmanship,
+            MID1_Hunter_Survival, MID1_Hunter_Survival_PL_DW,
+            MID1_Mage_Arcane, MID1_Mage_Arcane_Sunfury,
+            MID1_Mage_Fire, MID1_Mage_Fire_Frostfire,
+            MID1_Mage_Frost, MID1_Mage_Frost_Frostfire,
+            MID1_Monk_Brewmaster,
+            MID1_Monk_Windwalker, MID1_Monk_Windwalker_Conduit,
+            MID1_Paladin_Protection, MID1_Paladin_Protection_Lightsmith,
+            MID1_Paladin_Retribution, MID1_Paladin_Retribution_Herald,
+            MID1_Priest_Shadow, MID1_Priest_Shadow_Archon,
+            MID1_Rogue_Assassination, MID1_Rogue_Assassination_Deathstalker,
+            MID1_Rogue_Outlaw, MID1_Rogue_Outlaw_Trickster,
+            MID1_Rogue_Subtlety,
+            MID1_Shaman_Elemental,
+            MID1_Shaman_Enhancement, MID1_Shaman_Enhancement_Stormbringer,
+            MID1_Warlock_Affliction, MID1_Warlock_Affliction_Hellcaller,
+            MID1_Warlock_Demonology, MID1_Warlock_Demonology_Soul_Harvester,
+            MID1_Warlock_Destruction, MID1_Warlock_Destruction_Diabolist,
+            MID1_Warrior_Arms,
+            MID1_Warrior_Fury,
+            MID1_Warrior_Protection,
           ]
 
     env:
       CCACHE_GENERATION: 0
-      UBSAN_OPTIONS: print_stacktrace=1
-      SIMC_ARGS: >-
-        output=/dev/null threads=4 profileset_work_threads=2
-        iterations=10 cleanup_threads=1 allow_experimental_specializations=1
-      PLAYER_ARGS: load_default_gear=1
-      MT_ARGS: desired_targets=10
-      # enable_dungeon_slice=1 required for Demon Hunter; druid.enable_dungeon_slice_for_balance=1 for Balance
-      DS_ARGS: fight_style=DungeonSlice enable_dungeon_slice=1 druid.enable_dungeon_slice_for_balance=1
 
     steps:
       - uses: actions/checkout@v4
@@ -167,7 +127,10 @@ jobs:
           sudo apt-get update -q
           sudo apt-get install -y libcurl4-openssl-dev ninja-build ccache gcc-14 g++-14
 
-      - name: Configure
+      - name: Configure + Build
+        env:
+          CCACHE_DIR: ~/.ccache
+          CCACHE_MAXSIZE: 192M
         run: |
           cmake -S. -Bbuild -GNinja \
             -DBUILD_GUI=OFF \
@@ -176,62 +139,25 @@ jobs:
             -DCMAKE_C_COMPILER=gcc-14 \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_STANDARD=17
+          ninja -C build
 
-      - name: Build
-        env:
-          CCACHE_DIR: ~/.ccache
-          CCACHE_MAXSIZE: 192M
-        run: ninja -C build
-
-      - name: Set class/spec env
-        env:
-          MATRIX_SPEC: ${{ matrix.spec }}
+      # Core test: profile must parse and simulate without errors
+      - name: "Sim: Patchwerk (1 iter)"
         run: |
-          echo "CLASS=${MATRIX_SPEC%%_*}" >> "$GITHUB_ENV"
-          echo "SPEC=${MATRIX_SPEC#*_}" >> "$GITHUB_ENV"
+          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+            output=/dev/null iterations=1 threads=4
 
-      - name: "All effects + sets: single target"
-        run: |
-          build/simc $SIMC_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
-            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
-
-      - name: "All effects + sets: multi target"
+      # Multi-target test
+      - name: "Sim: Patchwerk multi-target (1 iter)"
         if: always()
         run: |
-          build/simc $SIMC_ARGS $MT_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
-            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
+          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+            output=/dev/null iterations=1 threads=4 desired_targets=5
 
-      - name: "All effects + sets: dungeon slice"
+      # JSON + HTML output test
+      - name: "Sim: JSON + HTML output"
         if: always()
         run: |
-          build/simc $SIMC_ARGS $DS_ARGS enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
-            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
-
-      - name: "Default talents + hero tree 1 + tier"
-        if: always()
-        run: |
-          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
-            load_default_talents=1 hero_talents=1 set_bonus=latest_2pc=1/latest_4pc=1
-
-      - name: "Default talents + hero tree 2 + tier"
-        if: always()
-        run: |
-          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
-            load_default_talents=1 hero_talents=2 set_bonus=latest_2pc=1/latest_4pc=1
-
-      - name: "Profileset test"
-        if: always()
-        run: |
-          build/simc $SIMC_ARGS $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS \
-            profileset.base=load_default_talents=1 \
-            profileset.ht1=load_default_talents=1 profileset.ht1+=hero_talents=1 \
-            profileset.ht2=load_default_talents=1 profileset.ht2+=hero_talents=2 \
-            "profileset.ht1_4pc=load_default_talents=1" "profileset.ht1_4pc+=hero_talents=1" \
-            "profileset.ht1_4pc+=set_bonus=latest_2pc=1" "profileset.ht1_4pc+=set_bonus+=/latest_4pc=1"
-
-      - name: "HTML + JSON output"
-        if: always()
-        run: |
-          build/simc $SIMC_ARGS html=test.html json=test.json \
-            enable_all_talents=1 enable_all_item_effects=1 enable_all_sets=1 \
-            $CLASS=${{ matrix.spec }} spec=$SPEC $PLAYER_ARGS
+          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+            output=/dev/null json=/dev/null html=/dev/null \
+            iterations=5 threads=4

@@ -3,6 +3,7 @@ name: Build
 on:
   push:
     branches: [midnight]
+    tags: ['midnight-*', 'v*']
     paths-ignore:
       - "ActionPriorityLists/**"
       - "SpellDataDump/**"
@@ -214,7 +215,7 @@ jobs:
     name: Create GitHub Release
     runs-on: ubuntu-24.04
     needs: [gcc-build, clang-asan, windows-cli, windows-gui]
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/')
 
     permissions:
       contents: write
