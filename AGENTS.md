@@ -1,6 +1,6 @@
 # AGENTS.md — SimulationCraft Midnight Agent Guide
 
-**Last Updated: 2026-03-28**
+**Last Updated: 2026-03-29**
 
 Read this file first every session. Then read `project_progress.md` — it is the
 single source of truth for all project status, known issues, and what to do next.
@@ -21,7 +21,7 @@ See `project_progress.md` for complete status.
 | `project_progress.md` | **THE master doc** — status, issues, next steps, all data |
 | `APL_optimization.md` | APL technical reference — syntax, expressions, rules, common mistakes |
 | `project_structure.md` | Codebase navigation — maps task types to source files |
-| `optimization_action_plan.md` | Optimization design — 7 milestones, talent engine + APL optimizer |
+| `optimization_action_plan.md` | Optimization design — talent local search + APL optimizer |
 | `darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
 
 ### Archived (historical reference only)
@@ -36,14 +36,20 @@ See `project_progress.md` for complete status.
 | `scripts/optimize_all.py` | Master orchestrator — `--report`, `--apl --all`, `--spec X` |
 | `scripts/apl_optimizer.py` | APL optimization loop — mutation + multi-stage evaluation |
 | `scripts/talent_build_compare.py` | Wowhead talent build comparison (all 33 specs) |
+| `scripts/talent_local_search.py` | Hill-climbing talent optimizer with validated neighbors |
+| `scripts/validate_all_profiles.py` | Validate all 56 profiles against tree constraints |
 | `scripts/lib/sim_runner.py` | SimC runner — parallel sims, JSON parse, composite scoring |
 | `scripts/lib/apl_parser.py` | APL parser/serializer — .simc ↔ structured data |
 | `scripts/lib/apl_mutations.py` | 4 mutation operators — swap, sweep, promote, route |
-| `scripts/lib/talent_tree.py` | DBC talent tree parser — builds DAG for any spec (3420 entries) |
+| `scripts/lib/talent_tree.py` | DBC talent tree parser + real TraitEdge.csv prerequisite edges |
 | `scripts/lib/talent_codec.py` | Talent string codec — decode/encode base64 talent strings |
 | `scripts/lib/tree_codec_bridge.py` | Bridge — connects tree + codec, high-level API |
-| `scripts/lib/node_classifier.py` | Node classifier — DPS/GATING/UTILITY from APL + code |
-| `scripts/lib/talent_permute.py` | Talent permutation — pivot sweep + tuning hill-climb |
+| `scripts/lib/talent_validator.py` | Build validation (budget, prereqs, gates) + neighbor generation |
+
+Deprecated (kept in repo, not called):
+- `scripts/lib/node_classifier.py` — wrong regex, wrong abstraction
+- `scripts/lib/talent_permute.py` — generates 0 combos with correct budgets
+- `scripts/lib/talent_neighbor.py` — superseded by talent_validator.py
 
 ### Wowhead Data (canonical game data source)
 | Path | What |
@@ -69,6 +75,7 @@ See `project_progress.md` for complete status.
 | MID1 profiles | `profiles/MID1/MID1_{Class}_{Spec}[_{Variant}].simc` |
 | Phase 4 baselines | `results/phase4/*.json` (112 files) |
 | DBC talent data | `engine/dbc/generated/trait_data.inc` (3420 entries) |
+| Talent prerequisite edges | `engine/dbc/generated/TraitEdge.csv` (6409 Type 2 edges) |
 | Talent string parse/encode | `engine/player/player.cpp` lines 2675-3030 |
 
 ### Build
@@ -86,7 +93,8 @@ cp build/simc engine/simc
 2. **Before code:** Read `project_structure.md` for file locations. For APL work, read `APL_optimization.md`.
 3. **For spec work:** Read `wowhead/{class}/{spec}/extracted/rotation.md`
 4. **After work:** Verify with `./engine/simc profiles/MID1/{profile}.simc iterations=1 output=/dev/null`
-5. **Update** `project_progress.md` with what changed. Commit.
+5. **After talent changes:** Run `python3 scripts/validate_all_profiles.py` to ensure 56/56 pass
+6. **Update** `project_progress.md` with what changed. Commit.
 
 ---
 
@@ -116,6 +124,12 @@ python3 scripts/apl_optimizer.py --spec warrior_fury --max-iter 5
 # APL optimization (all specs)
 python3 scripts/optimize_all.py --apl --all
 
+# Talent optimization (single spec)
+python3 scripts/talent_local_search.py --spec warrior_fury --fight-style Patchwerk --max-iter 3
+
+# Validate all profiles against tree constraints (should be 56/56)
+python3 scripts/validate_all_profiles.py
+
 # Re-extract Wowhead data
 python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 ```
@@ -128,6 +142,44 @@ NOT used for optimization decisions. Always optimize each fight style separately
 ---
 
 ## Domain Knowledge — SimC Internals
+
+### Midnight Point Budgets (Level 90)
+- **Class tree**: 34 purchasable points + granted nodes (free, don't cost points)
+- **Spec tree**: 34 purchasable points
+- **Hero tree**: 15 nodes auto-granted (one hero tree chosen via selection node)
+
+### Granted Class Talents per Spec
+Not every spec has 1 free talent — it varies:
+
+| Grants | Specs |
+|--------|-------|
+| 0 | Warlock (all 3 — Soul Leech granted via undocumented DBC mechanism, hardcoded in validator) |
+| 1 | DH, DK, Hunter, Mage, Rogue, Shaman (18 specs) |
+| 2 | Evoker, Monk, Priest, Warrior (13 specs) |
+| 3 | Druid, Paladin (10 specs) |
+
+Granted nodes are detected by `id_spec_starter` containing the spec ID, PLUS hero tree
+starting nodes (row=1), PLUS undocumented grants (Warlock Soul Leech node 71933).
+
+### Hero Tree Sharing
+Hero trees are shared between 2 specs per class. Critical facts:
+- Internal hero nodes may be tagged with only ONE spec's `id_spec`, but BOTH specs can use them.
+  Example: Scalecommander nodes are all tagged `spec=[1467]` (Devastation) but Augmentation uses them too.
+- SimC's parser confirms: "hero talents don't seem to require a matching id_spec_set" (player.cpp ~line 2929).
+- Each hero tree has 2 different row-1 starting nodes (one per spec), rest shared.
+- Some hero trees are only discoverable via **selection nodes** (tree_index=4), not starting nodes.
+  Example: Evoker Aug + Chronowarden — no Aug-tagged starting node exists, but selection node 99825
+  references subtree 38 (Chronowarden) with spec=[1473] (Aug).
+- The talent tree builder uses a 2-pass approach: first discover available sub-trees from both
+  hero starting nodes AND selection nodes, then include ALL nodes from those sub-trees.
+
+### Talent Prerequisite Edges
+- **TraitEdge.csv**: 6,409 real Type 2 edges from DB2 `TraitEdge` table (build 12.0.1.66384).
+- **Type 2** = class/spec/hero talent prerequisites. **Type 0** = professions/dragonriding (ignored).
+- Direction: `LeftTraitNodeID` (parent) → `RightTraitNodeID` (child). Child requires at least 1 parent selected (OR logic).
+- 40 nodes have NO edges: 33 row-11 apex talents + row-1 roots. These use `req_points` gates only.
+- Old heuristic (row-adjacency, col-distance ≤ 1) had 77.7% precision, 90.1% recall — replaced with real edges.
+- Source: DB2 `TraitEdge` table via wago.tools. For PTR builds, re-download from `https://wago.tools/db2/TraitEdge/csv`.
 
 ### Midnight 4-Rank Apex Talents
 Every spec has ONE new 4-rank talent using 3 spell IDs:
@@ -198,6 +250,22 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
 
 ## Pitfalls & Hard-Won Lessons
 
+### Talent Tree
+- **Heuristic edges are wrong** — row-adjacency/col-distance heuristic had 39 false edges and
+  15 missed edges for warrior_fury alone (77.7% precision). Always use real TraitEdge.csv edges.
+- **Hero tree nodes ignore spec filtering** — internal hero nodes may be tagged with only one spec's
+  id_spec, but both specs in the pair can use them. SimC itself doesn't enforce this.
+  Our tree builder includes ALL nodes from available hero sub-trees regardless of id_spec.
+- **Selection nodes discover hero trees** — some hero trees have no spec-matching starting node
+  (e.g., Evoker Aug + Chronowarden). Must check selection nodes (tree_index=4) to find them.
+- **Spec name ambiguity** — `spec=frost` matches both `dk_frost` and `mage_frost`. Always use
+  class context (from filename or profile) to disambiguate. The validate script uses filename-based
+  class prefix mapping.
+- **Wowhead builds can be over-budget** — Prot Paladin Templar builds 1 and 3 from Wowhead have
+  35 class points (1 over budget). Always validate Wowhead exports before using them.
+- **Granted node counts vary widely** — druids and paladins have 3 free class talents, warlocks
+  have 0 in DBC (Soul Leech granted via undocumented mechanism). Don't hardcode budget assumptions.
+
 ### Simulation
 - **10k iterations minimum** for APL comparison validity. At 1k, noise gives ±0.5% false positives.
 - **"Identical .simc files" ≠ identical DPS** — the C++ APL generator can differ from both .simc
@@ -213,12 +281,12 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
 - **Talent builds dominate APL optimization** — Wowhead comparison found 29/33 specs had better
   builds. Gaps up to +554% (Guardian). Always compare talent builds BEFORE optimizing APL.
 
-### Multi-Stage APL Evaluation
-Running all ~73 candidates at 10k iterations is too slow (~25 min/iteration).
-Multi-stage filtering cuts to ~2 min/iteration:
-- Stage 1: 100 iter on all candidates → keep top 20%
-- Stage 2: 1,000 iter on survivors → keep >0.3% gains
-- Stage 3: 10,000 iter on top 3 → confirm with 1% regression cap per fight style
+### Multi-Stage Evaluation
+Running all candidates at 10k iterations is too slow.
+Multi-stage filtering (used by both APL optimizer and talent local search):
+- Stage 1: 300 iter on all candidates → keep top 20%
+- Stage 2: 3,000 iter on survivors → keep improvements over baseline
+- Stage 3: 10,000 iter on top 3 → confirm
 
 ### Acceptance Criteria
 A candidate APL/build is accepted only if it improves DPS for the fight style
