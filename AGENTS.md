@@ -22,7 +22,7 @@ See `project_progress.md` for complete status.
 | `APL_optimization.md` | APL technical reference — syntax, expressions, rules, common mistakes |
 | `project_structure.md` | Codebase navigation — maps task types to source files |
 | `optimization_action_plan.md` | Optimization design — talent local search + APL optimizer |
-| `darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
+| `docs/internal/darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
 
 ### Archived (historical reference only)
 | File | What |
@@ -46,10 +46,10 @@ See `project_progress.md` for complete status.
 | `scripts/lib/tree_codec_bridge.py` | Bridge — connects tree + codec, high-level API |
 | `scripts/lib/talent_validator.py` | Build validation (budget, prereqs, gates) + neighbor generation |
 
-Deprecated (kept in repo, not called):
-- `scripts/lib/node_classifier.py` — wrong regex, wrong abstraction
-- `scripts/lib/talent_permute.py` — generates 0 combos with correct budgets
-- `scripts/lib/talent_neighbor.py` — superseded by talent_validator.py
+Deprecated (removed from repo):
+- `node_classifier.py` — wrong regex, wrong abstraction
+- `talent_permute.py` — generates 0 combos with correct budgets
+- `talent_neighbor.py` — superseded by talent_validator.py
 
 ### Wowhead Data (canonical game data source)
 | Path | What |

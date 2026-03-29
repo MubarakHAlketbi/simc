@@ -174,6 +174,7 @@ Full report: `python3 scripts/optimize_all.py --report`
 | `AGENTS.md` | Agent guide — file map, sim commands, domain knowledge, pitfalls |
 | `APL_optimization.md` | APL syntax reference, rules, common mistakes |
 | `optimization_action_plan.md` | Optimization design — talent local search + APL mutation |
-| `darkmoon_investigation.md` | Darkmoon trinket stacking investigation (Issue #81) |
 | `project_structure.md` | Codebase navigation — maps task types to source files |
+| `docs/internal/darkmoon_investigation.md` | Darkmoon trinket stacking investigation (Issue #81) |
+| `docs/internal/task_list.md` | Remaining work batches |
 | `docs/archive/` | Historical audit data, APL diff reports |
