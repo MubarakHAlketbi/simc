@@ -189,11 +189,13 @@ def generate_neighbors(
     child_map = _build_child_map(tree)
     parent_map = _build_parent_map(tree)
 
-    # Infer budget caps from current build + small headroom
+    # Infer budget caps from current build — NO headroom.
+    # All valid builds for a spec use the same total points per sub-tree.
+    # Adding headroom creates invalid builds with extra talent points.
     budget = {}
     for ti in (TREE_CLASS, TREE_SPEC, TREE_HERO):
         pts, _ = get_subtree_points(tree, selections, ti)
-        budget[ti] = pts + 2  # allow slight over-budget for exploration
+        budget[ti] = pts  # strict budget: can only add if you also remove
 
     neighbors = []
 
@@ -253,6 +255,8 @@ def generate_neighbors(
                 pass
 
     # 4. SWAP_POINT mutations (budget-neutral: remove A, add B in same sub-tree)
+    # With strict budgets, addable may be empty. We need to check what becomes
+    # addable AFTER each removal (freeing budget + potentially opening row gates).
     swap_count = 0
     for remove_nid in removable:
         if swap_count >= max_swaps:
@@ -260,20 +264,27 @@ def generate_neighbors(
         remove_node = tree.nodes[remove_nid]
         ti = remove_node.tree_index
 
-        for add_nid in addable:
+        # Create selection with this node removed
+        reduced_sel = dict(selections)
+        del reduced_sel[remove_nid]
+
+        # Compute a relaxed budget that accounts for the freed points
+        relaxed_budget = dict(budget)
+        relaxed_budget[ti] = budget[ti]  # same cap — removal frees room
+
+        # Find what's addable after this removal
+        for add_nid in tree.nodes:
             if swap_count >= max_swaps:
                 break
+            if add_nid in reduced_sel or add_nid == remove_nid:
+                continue
             add_node = tree.nodes.get(add_nid)
             if not add_node or add_node.tree_index != ti:
                 continue
-            if add_nid == remove_nid:
+            if not can_add_node(tree, reduced_sel, add_nid, relaxed_budget, parent_map):
                 continue
 
-            new_sel = dict(selections)
-            del new_sel[remove_nid]
-            # Re-check addability after removal
-            if not can_add_node(tree, new_sel, add_nid, budget, parent_map):
-                continue
+            new_sel = dict(reduced_sel)
             choice_idx = 0 if add_node.node_type == NODE_CHOICE else -1
             new_sel[add_nid] = (add_node.max_ranks, choice_idx)
 
