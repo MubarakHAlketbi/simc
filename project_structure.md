@@ -755,8 +755,11 @@ Spell IDs are typically defined as constants:
 - **`CONTRIBUTING.md`** - Contribution guidelines
 - **`README.md`** - Project overview and build instructions
 - **`project_progress.md`** - Current development status and tasks
+- **`OPTIMIZATION_HOWTO.md`** - Step-by-step manual guide to optimize any spec (talents + APL)
+- **`APL_optimization.md`** - APL syntax reference, expression tokens, rules, common mistakes
+- **`optimization_action_plan.md`** - Optimization architecture, data sources, compute estimates
 
 ---
 
-*Last updated: March 15, 2026*  
+*Last updated: March 29, 2026*  
 *SimulationCraft codebase analysis for Midnight expansion development*

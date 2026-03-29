@@ -22,6 +22,7 @@ See `project_progress.md` for complete status.
 | `APL_optimization.md` | APL technical reference — syntax, expressions, rules, common mistakes |
 | `project_structure.md` | Codebase navigation — maps task types to source files |
 | `optimization_action_plan.md` | Optimization design — talent local search + APL optimizer |
+| `OPTIMIZATION_HOWTO.md` | Step-by-step manual guide — exact commands to optimize any spec |
 | `docs/internal/darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
 
 ### Archived (historical reference only)
