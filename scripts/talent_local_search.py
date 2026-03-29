@@ -1,322 +1,300 @@
 #!/usr/bin/env python3
-"""Talent Local Search — Wowhead seeds + neighborhood hill-climb.
+"""
+talent_local_search.py — Hill-climbing talent optimizer using valid neighbors.
 
-Optimizes talent builds per fight style independently:
-1. Screen Wowhead builds (seeds) at medium precision
-2. From top seeds, generate single-node neighbors
-3. Hill-climb: screen neighbors, adopt best, repeat
-4. Confirm winner at high precision
+Starts from a seed build (Wowhead/profile), generates valid 1-step mutations,
+sims them in multi-stage filtering, and greedily accepts improvements.
 
 Usage:
-    python3 scripts/talent_local_search.py warrior_fury
-    python3 scripts/talent_local_search.py warrior_fury --fight-style Patchwerk
-    python3 scripts/talent_local_search.py --all
+  python3 scripts/talent_local_search.py --spec warrior_fury [--fight-style Patchwerk]
+  python3 scripts/talent_local_search.py --spec warrior_fury --max-iter 3
+  python3 scripts/talent_local_search.py --all
 """
 
 import argparse
 import json
 import os
+import subprocess
 import sys
 import time
-from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.lib.talent_tree import build_talent_tree, SPEC_MAP
+from scripts.lib.talent_tree import SPEC_MAP, build_talent_tree
+from scripts.lib.talent_validator import (
+    TreeConstraints, validate_build, count_points, generate_neighbors,
+)
+from scripts.lib.tree_codec_bridge import (
+    decode_profile_talents, encode_profile_talents,
+)
 from scripts.lib.talent_codec import decode_talent_string, encode_talent_string
-from scripts.lib.tree_codec_bridge import tree_to_codec_nodes
-from scripts.lib.talent_neighbor import generate_neighbors
-from scripts.lib.sim_runner import run_sim, find_profile
-from scripts.talent_build_compare import load_wowhead_builds
 
-RESULTS_DIR = Path(__file__).resolve().parent.parent / "results" / "optimization"
-FIGHT_STYLES = ["Patchwerk", "HecticAddCleave"]
+# ─── Constants ────────────────────────────────────────────────────────────────
+
+SIMC_BIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "engine", "simc")
+
+PROFILE_MAP = {}
+for _spec in SPEC_MAP:
+    parts = _spec.split("_")
+    # Build profile path from spec name
+    if _spec.startswith("dk_"):
+        cls = "Death_Knight"
+        spc = parts[1].title()
+    elif _spec.startswith("dh_"):
+        cls = "Demon_Hunter"
+        spc = parts[1].title()
+    elif _spec.startswith("hunter_bm"):
+        cls = "Hunter"
+        spc = "Beast_Mastery"
+    elif _spec.startswith("hunter_mm"):
+        cls = "Hunter"
+        spc = "Marksmanship"
+    else:
+        cls = parts[0].title()
+        spc = "_".join(p.title() for p in parts[1:])
+    PROFILE_MAP[_spec] = f"profiles/MID1/MID1_{cls}_{spc}.simc"
 
 
-def _get_current_talents(profile_path: str) -> str:
-    with open(profile_path) as f:
-        for line in f:
-            if line.startswith("talents="):
-                return line.strip().split("=", 1)[1]
-    raise ValueError(f"No talents= in {profile_path}")
+# ─── Sim Runner ───────────────────────────────────────────────────────────────
 
-
-def screen_seeds(
+def run_sim(
     profile_path: str,
-    fight_style: str,
-    seeds: list[tuple[str, str]],  # [(label, talent_string), ...]
+    talent_override: str,
+    fight_style: str = "Patchwerk",
     iterations: int = 1000,
-    threads: int = 8,
-) -> list[tuple[str, str, float]]:
-    """Sim all seeds, return sorted by DPS descending."""
-    results = []
-    for label, talent_str in seeds:
-        try:
-            r = run_sim(profile_path, fight_style, iterations=iterations,
-                       threads=threads, overrides=[f"talents={talent_str}"])
-            results.append((label, talent_str, r.dps_mean))
-        except Exception as e:
-            pass  # skip broken builds
-    results.sort(key=lambda x: -x[2])
-    return results
+    threads: int = 16,
+) -> Optional[float]:
+    """Run SimC and return DPS. Returns None on error."""
+    cmd = [
+        SIMC_BIN,
+        profile_path,
+        f"talents={talent_override}",
+        f"fight_style={fight_style}",
+        f"iterations={iterations}",
+        f"threads={threads}",
+        "json2=/tmp/talent_search_result.json",
+        "output=/dev/null",
+    ]
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, timeout=120)
+        if result.returncode != 0:
+            return None
+        with open("/tmp/talent_search_result.json") as f:
+            data = json.load(f)
+        return data["sim"]["players"][0]["collected_data"]["dps"]["mean"]
+    except (subprocess.TimeoutExpired, json.JSONDecodeError, KeyError, FileNotFoundError):
+        return None
 
 
-def search_one_pass(
+# ─── Multi-Stage Filter ──────────────────────────────────────────────────────
+
+def multi_stage_eval(
+    candidates: List[Tuple[str, str]],  # (description, talent_string)
     profile_path: str,
     fight_style: str,
-    base_talent_str: str,
-    base_dps: float,
-    tree, codec_nodes, spec_id, purchased_flags,
-    threads: int = 8,
-) -> tuple[str, float, str]:
-    """One hill-climb pass: generate neighbors, screen, confirm.
-
-    Returns (best_talent_str, best_dps, best_desc) or (base_talent_str, base_dps, "")
-    if no improvement found.
+    baseline_dps: float,
+    threads: int = 16,
+) -> List[Tuple[str, str, float]]:
     """
-    # Decode current build
-    _, selections, pf = decode_talent_string(base_talent_str, codec_nodes)
-    if purchased_flags is None:
-        purchased_flags = pf
+    Multi-stage filtering of candidates.
+    Stage 1: 300 iter on all -> keep top 20% or > -0.5%
+    Stage 2: 3000 iter on survivors -> keep > 0% improvement
+    Stage 3: 10000 iter on top 3 -> confirm improvement
+    """
+    if not candidates:
+        return []
 
-    # Generate neighbors
-    neighbors = generate_neighbors(tree, selections, codec_nodes, spec_id, purchased_flags)
-    if not neighbors:
-        return base_talent_str, base_dps, ""
+    # Stage 1: coarse filter
+    stage1 = []
+    for desc, tstr in candidates:
+        dps = run_sim(profile_path, tstr, fight_style, iterations=300, threads=threads)
+        if dps is not None:
+            stage1.append((desc, tstr, dps))
 
-    # Quick screen at 500 iter
-    screened = []
-    for talent_str, desc in neighbors:
-        try:
-            r = run_sim(profile_path, fight_style, iterations=500,
-                       threads=threads, overrides=[f"talents={talent_str}"])
-            screened.append((talent_str, desc, r.dps_mean))
-        except Exception:
-            pass
+    if not stage1:
+        return []
 
-    if not screened:
-        return base_talent_str, base_dps, ""
+    # Keep top 20% or those within 0.5% of best
+    stage1.sort(key=lambda x: -x[2])
+    cutoff = max(len(stage1) // 5, 3)
+    best_s1 = stage1[0][2]
+    survivors = [x for x in stage1[:cutoff] if x[2] >= best_s1 * 0.995]
+    # Also keep anything that beats baseline
+    for x in stage1[cutoff:]:
+        if x[2] > baseline_dps:
+            survivors.append(x)
 
-    # Keep top 5
-    screened.sort(key=lambda x: -x[2])
-    top5 = screened[:5]
+    if not survivors:
+        return []
 
-    # Confirm at 2000 iter
-    confirmed = []
-    for talent_str, desc, _ in top5:
-        try:
-            r = run_sim(profile_path, fight_style, iterations=2000,
-                       threads=threads, overrides=[f"talents={talent_str}"])
-            if r.dps_mean > base_dps:
-                confirmed.append((talent_str, desc, r.dps_mean))
-        except Exception:
-            pass
+    # Stage 2: medium filter
+    stage2 = []
+    for desc, tstr, _ in survivors:
+        dps = run_sim(profile_path, tstr, fight_style, iterations=3000, threads=threads)
+        if dps is not None and dps > baseline_dps:
+            stage2.append((desc, tstr, dps))
 
-    if not confirmed:
-        return base_talent_str, base_dps, ""
+    if not stage2:
+        return []
 
-    confirmed.sort(key=lambda x: -x[2])
-    best_ts, best_desc, best_dps = confirmed[0]
-    return best_ts, best_dps, best_desc
+    # Stage 3: confirm top 3
+    stage2.sort(key=lambda x: -x[2])
+    stage3 = []
+    for desc, tstr, _ in stage2[:3]:
+        dps = run_sim(profile_path, tstr, fight_style, iterations=10000, threads=threads)
+        if dps is not None:
+            stage3.append((desc, tstr, dps))
+
+    stage3.sort(key=lambda x: -x[2])
+    return stage3
 
 
-def optimize_from_seeds(
+# ─── Main Search Loop ────────────────────────────────────────────────────────
+
+def local_search(
     spec_name: str,
-    fight_style: str,
-    seeds: list[tuple[str, str]],
-    threads: int = 8,
-    max_passes: int = 5,
-    top_seeds: int = 3,
-) -> dict:
-    """Full local search from Wowhead seeds for one spec + one fight style."""
+    fight_style: str = "Patchwerk",
+    max_iterations: int = 5,
+    threads: int = 16,
+) -> Tuple[Optional[str], float, str]:
+    """
+    Hill-climbing talent optimization.
 
-    profile_path = find_profile(spec_name)
-    style_tag = "pw" if fight_style == "Patchwerk" else "hac"
+    Returns (best_talent_string, best_dps, description).
+    """
+    profile_path = PROFILE_MAP.get(spec_name)
+    if not profile_path or not os.path.exists(profile_path):
+        print(f"ERROR: Profile not found for {spec_name}")
+        return None, 0.0, "no profile"
 
-    tree = build_talent_tree(spec_name)
-    class_id, spec_id = SPEC_MAP[spec_name]
-    codec_nodes = tree_to_codec_nodes(tree, spec_id)
+    # Load seed build
+    with open(profile_path) as f:
+        content = f.read()
+    talent_str = None
+    for line in content.split("\n"):
+        if line.startswith("talents="):
+            talent_str = line.strip().split("=", 1)[1]
+            break
 
-    print(f"\n  --- {spec_name} / {fight_style} ---")
+    if not talent_str:
+        print(f"ERROR: No talents= in {profile_path}")
+        return None, 0.0, "no talents"
 
-    # Screen seeds
-    print(f"  Screening {len(seeds)} seeds @ 1000 iter...", end="", flush=True)
-    seed_results = screen_seeds(profile_path, fight_style, seeds, iterations=1000, threads=threads)
-    if not seed_results:
-        print(f" all failed")
-        return {"spec": spec_name, "fight_style": fight_style, "error": "all seeds failed"}
+    # Build constraint data
+    tc = TreeConstraints.build(spec_name)
+    selections = decode_profile_talents(talent_str, spec_name)
 
-    print(f" best: {seed_results[0][0]} ({seed_results[0][2]:.0f})")
-    for label, ts, dps in seed_results[:5]:
-        print(f"    {label:30s} {dps:>10,.0f}")
+    # Validate seed
+    result = validate_build(selections, tc)
+    if not result.valid:
+        print(f"ERROR: Seed build is invalid: {result.errors[:3]}")
+        return None, 0.0, "invalid seed"
 
-    # Also sim current profile as baseline
-    current_ts = _get_current_talents(profile_path)
-    baseline = run_sim(profile_path, fight_style, iterations=1000, threads=threads)
-    print(f"  Current profile baseline: {baseline.dps_mean:.0f}")
+    cp, sp, hp = count_points(selections, tc)
+    print(f"Seed: class={cp}/34 spec={sp}/34 hero={hp}")
 
-    # Pick top seeds (include current if not already best)
-    top = seed_results[:top_seeds]
-    current_in_top = any(ts == current_ts for _, ts, _ in top)
-    if not current_in_top:
-        top.append(("current", current_ts, baseline.dps_mean))
+    # Baseline DPS
+    print(f"Running baseline ({fight_style}, 10k iter)...")
+    baseline_dps = run_sim(profile_path, talent_str, fight_style, iterations=10000, threads=threads)
+    if baseline_dps is None:
+        print("ERROR: Baseline sim failed")
+        return None, 0.0, "sim failed"
 
-    # Get purchased_flags from current build
-    _, _, purchased_flags = decode_talent_string(current_ts, codec_nodes)
+    print(f"Baseline DPS: {baseline_dps:,.0f}")
 
-    # Hill-climb from each top seed
-    overall_best_ts = seed_results[0][1]
-    overall_best_dps = seed_results[0][2]
-    overall_best_label = seed_results[0][0]
-    total_neighbors = 0
+    best_str = talent_str
+    best_dps = baseline_dps
+    best_desc = "seed"
 
-    for seed_label, seed_ts, seed_dps in top:
-        current_ts_local = seed_ts
-        current_dps = seed_dps
+    for iteration in range(max_iterations):
+        print(f"\n=== Iteration {iteration + 1}/{max_iterations} ===")
 
-        for pass_num in range(1, max_passes + 1):
-            # Decode for neighbor count
-            _, sel, _ = decode_talent_string(current_ts_local, codec_nodes)
-            nbrs = generate_neighbors(tree, sel, codec_nodes, spec_id, purchased_flags)
-            total_neighbors += len(nbrs)
+        # Decode current best
+        selections = decode_profile_talents(best_str, spec_name)
 
-            print(f"  [{seed_label}] Pass {pass_num}: {len(nbrs)} neighbors...", end="", flush=True)
+        # Generate all valid neighbors
+        neighbors = list(generate_neighbors(selections, tc))
+        print(f"Generated {len(neighbors)} valid neighbors")
 
-            new_ts, new_dps, new_desc = search_one_pass(
-                profile_path, fight_style, current_ts_local, current_dps,
-                tree, codec_nodes, spec_id, purchased_flags, threads
-            )
+        if not neighbors:
+            print("No neighbors to explore. Done.")
+            break
 
-            if new_dps > current_dps * 1.001:  # >0.1% improvement
-                improvement = (new_dps - current_dps) / current_dps * 100
-                print(f" +{improvement:.2f}% ({new_desc})")
-                current_ts_local = new_ts
-                current_dps = new_dps
-            else:
-                print(f" converged")
-                break
+        # Encode neighbors to talent strings
+        # We need purchased_flags for round-trip safety
+        class_id, spec_id = SPEC_MAP[spec_name]
+        from scripts.lib.tree_codec_bridge import tree_to_codec_nodes
+        codec_nodes = tree_to_codec_nodes(tc.tree, spec_id)
+        _, _, purchased_flags = decode_talent_string(best_str, codec_nodes)
 
-        if current_dps > overall_best_dps:
-            overall_best_ts = current_ts_local
-            overall_best_dps = current_dps
-            overall_best_label = seed_label
+        candidates = []
+        for desc, new_selections in neighbors:
+            try:
+                new_str = encode_profile_talents(new_selections, spec_name, purchased_flags)
+                candidates.append((desc, new_str))
+            except Exception:
+                continue
 
-    # Final confirmation at 10k iter
-    print(f"  Final confirm @ 10000 iter...", end="", flush=True)
-    final = run_sim(profile_path, fight_style, iterations=10000, threads=threads,
-                   overrides=[f"talents={overall_best_ts}"])
-    final_baseline = run_sim(profile_path, fight_style, iterations=10000, threads=threads)
-    total_improvement = (final.dps_mean - final_baseline.dps_mean) / final_baseline.dps_mean * 100
-    print(f" {final.dps_mean:.0f} vs baseline {final_baseline.dps_mean:.0f} ({total_improvement:+.2f}%)")
+        print(f"Encoded {len(candidates)} candidates")
 
-    # Save results
-    spec_dir = RESULTS_DIR / spec_name
-    spec_dir.mkdir(parents=True, exist_ok=True)
+        # Multi-stage evaluation
+        results = multi_stage_eval(candidates, profile_path, fight_style, best_dps, threads)
 
-    result = {
-        "spec": spec_name,
-        "fight_style": fight_style,
-        "baseline_dps": final_baseline.dps_mean,
-        "best_dps": final.dps_mean,
-        "improvement_pct": total_improvement,
-        "best_talent_str": overall_best_ts,
-        "best_seed": overall_best_label,
-        "seeds_tested": len(seeds),
-        "neighbors_tested": total_neighbors,
-        "current_talent_str": _get_current_talents(profile_path),
-    }
-
-    with open(spec_dir / f"talent_local_search_{style_tag}.json", "w") as f:
-        json.dump(result, f, indent=2)
-
-    if total_improvement > 0.5:
-        with open(spec_dir / f"best_build_{style_tag}.txt", "w") as f:
-            f.write(overall_best_ts + "\n")
-
-    return result
-
-
-def optimize_spec(
-    spec_name: str,
-    fight_styles: list[str] | None = None,
-    threads: int = 8,
-    max_passes: int = 5,
-) -> list[dict]:
-    """Top-level: load Wowhead builds, run local search per fight style."""
-    styles = fight_styles or FIGHT_STYLES
-
-    print(f"\n{'='*60}")
-    print(f"  TALENT LOCAL SEARCH: {spec_name}")
-    print(f"{'='*60}")
-
-    # Load seeds
-    try:
-        builds = load_wowhead_builds(spec_name)
-        seeds = [(b["label"], b["talent_string"]) for b in builds]
-        print(f"  Loaded {len(seeds)} Wowhead builds")
-    except Exception as e:
-        print(f"  No Wowhead builds available ({e}), using current profile only")
-        profile_path = find_profile(spec_name)
-        current_ts = _get_current_talents(profile_path)
-        seeds = [("current", current_ts)]
-
-    results = []
-    for style in styles:
-        result = optimize_from_seeds(spec_name, style, seeds, threads, max_passes)
-        results.append(result)
-
-    # Summary
-    print(f"\n  === {spec_name} TALENT SUMMARY ===")
-    for r in results:
-        if "error" in r:
-            print(f"    {r['fight_style']:20s}: ERROR — {r['error']}")
+        if results and results[0][2] > best_dps:
+            desc, new_str, new_dps = results[0]
+            gain = (new_dps - best_dps) / best_dps * 100
+            print(f"IMPROVEMENT: {desc}")
+            print(f"  {best_dps:,.0f} -> {new_dps:,.0f} (+{gain:.2f}%)")
+            best_str = new_str
+            best_dps = new_dps
+            best_desc = desc
         else:
-            print(f"    {r['fight_style']:20s}: {r['baseline_dps']:.0f} -> {r['best_dps']:.0f} ({r['improvement_pct']:+.2f}%) seed={r['best_seed']}")
+            print("No improvement found. Local optimum reached.")
+            break
 
-    return results
+    return best_str, best_dps, best_desc
 
+
+# ─── CLI ──────────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="Talent Local Search Optimizer")
-    parser.add_argument("spec", nargs="?", help="Spec to optimize")
-    parser.add_argument("--all", action="store_true")
-    parser.add_argument("--fight-style", type=str, default=None)
-    parser.add_argument("--threads", type=int, default=8)
-    parser.add_argument("--max-passes", type=int, default=5)
+    parser = argparse.ArgumentParser(description="Talent hill-climbing optimizer")
+    parser.add_argument("--spec", type=str, help="Spec to optimize (e.g., warrior_fury)")
+    parser.add_argument("--fight-style", type=str, default="Patchwerk",
+                        help="Fight style (Patchwerk or HecticAddCleave)")
+    parser.add_argument("--max-iter", type=int, default=5, help="Max hill-climb iterations")
+    parser.add_argument("--threads", type=int, default=16, help="Sim threads")
+    parser.add_argument("--all", action="store_true", help="Run on all valid specs")
+
     args = parser.parse_args()
 
     if args.all:
-        from scripts.talent_build_compare import SPEC_MAP as SM
-        specs = sorted(SM.values())
+        specs = sorted(SPEC_MAP.keys())
+        for spec in specs:
+            profile = PROFILE_MAP.get(spec)
+            if not profile or not os.path.exists(profile):
+                continue
+            print(f"\n{'='*60}")
+            print(f"  {spec} — {args.fight_style}")
+            print(f"{'='*60}")
+            best_str, best_dps, desc = local_search(
+                spec, args.fight_style, args.max_iter, args.threads,
+            )
+            if best_str:
+                print(f"\nResult: {best_dps:,.0f} DPS ({desc})")
     elif args.spec:
-        specs = [args.spec]
+        best_str, best_dps, desc = local_search(
+            args.spec, args.fight_style, args.max_iter, args.threads,
+        )
+        if best_str:
+            print(f"\n{'='*60}")
+            print(f"Final: {best_dps:,.0f} DPS")
+            print(f"Mutation: {desc}")
+            print(f"Talent string: {best_str}")
     else:
         parser.print_help()
-        return
-
-    styles = [args.fight_style] if args.fight_style else None
-    start = time.time()
-
-    all_results = []
-    for spec in specs:
-        try:
-            results = optimize_spec(spec, fight_styles=styles,
-                                    threads=args.threads, max_passes=args.max_passes)
-            all_results.extend(results)
-        except Exception as e:
-            print(f"\n  ERROR on {spec}: {e}")
-            import traceback; traceback.print_exc()
-
-    elapsed = time.time() - start
-    print(f"\n{'='*60}")
-    print(f"  DONE — {len(specs)} specs in {elapsed:.0f}s")
-    print(f"{'='*60}")
-
-    improved = [r for r in all_results if r.get("improvement_pct", 0) > 0.3]
-    if improved:
-        print(f"\n  Improved specs:")
-        for r in sorted(improved, key=lambda x: -x["improvement_pct"]):
-            print(f"    {r['spec']:30s} {r['fight_style']:20s} {r['improvement_pct']:+.2f}%")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # mage/frost — Talents (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/frost/talent-builds-pve-dps
-Generated: 2026-03-23 01:18
+Generated: 2026-03-29 09:58
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Spellslinger']
