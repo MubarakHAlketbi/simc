@@ -5,7 +5,7 @@ level=90
 race=mechagnome
 role=tank
 position=front
-talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMmZmZmZGzMjBAjZmZGAAAGYgZspxyGIbDYDwMMAAgZGAGA
+talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAYmZmZGmZGzMjBAjZmZGAAAGYgZspxyGIbDYDwMMAAgZGAGA
 
 # Default consumables
 potion=lights_potential_2
@@ -21,67 +21,12 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 # SimulationCraft is always looking for updates and improvements to the default action lists.
 
 # Executed before combat begins. Accepts non-harmful actions only.
-actions.precombat=snapshot_stats
-actions.precombat+=/deaths_caress
 
 # Executed every time the actor is available.
-actions=auto_attack
-actions+=/use_items,use_off_gcd=1
-actions+=/fireblood,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<8
-actions+=/blood_fury,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<12
-actions+=/berserking,if=cooldown.dancing_rune_weapon.remains>78|fight_remains<=15
-actions+=/ancestral_call,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<15
-actions+=/potion,if=cooldown.dancing_rune_weapon.remains>78|fight_remains<=30
-actions+=/vampiric_blood,if=!buff.vampiric_blood.up
-actions+=/call_action_list,name=high_prio_actions
-actions+=/run_action_list,name=deathbringer,if=hero_tree.deathbringer
-actions+=/run_action_list,name=san_gift,if=hero_tree.sanlayn&buff.gift_of_the_sanlayn.up
-actions+=/run_action_list,name=sanlayn,if=hero_tree.sanlayn
 
-actions.deathbringer=death_strike,if=(runic_power.deficit<20|(runic_power.deficit<26&buff.dancing_rune_weapon.up))
-actions.deathbringer+=/deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5)&rune<4
-actions.deathbringer+=/marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5
-actions.deathbringer+=/death_and_decay,if=!buff.death_and_decay.up
-actions.deathbringer+=/reapers_mark
-actions.deathbringer+=/marrowrend,if=buff.exterminate.up
-actions.deathbringer+=/blood_boil,if=buff.dancing_rune_weapon.up&!dot.blood_plague.ticking
-actions.deathbringer+=/blood_boil,if=charges=2
-actions.deathbringer+=/death_strike
-actions.deathbringer+=/blood_boil,if=buff.boiling_point.up
-actions.deathbringer+=/consumption,empower_to=1,if=!buff.dancing_rune_weapon.up
-actions.deathbringer+=/blood_boil
-actions.deathbringer+=/heart_strike
-actions.deathbringer+=/consumption,empower_to=1
-actions.deathbringer+=/arcane_torrent,if=runic_power.deficit>20
 
-actions.high_prio_actions=raise_dead,use_off_gcd=1
-actions.high_prio_actions+=/death_strike,if=buff.coagulopathy.up&buff.coagulopathy.remains<=gcd
-actions.high_prio_actions+=/dancing_rune_weapon,if=!buff.exterminate.up&!debuff.reapers_mark_debuff.up&!buff.dancing_rune_weapon.up&(fight_remains>95|fight_remains<25|time>300)
 
-actions.san_gift=heart_strike,if=buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains
-actions.san_gift+=/death_strike,if=runic_power.deficit<36
-actions.san_gift+=/blood_boil,if=!drw.bp_ticking
-actions.san_gift+=/any_dnd,if=buff.crimson_scourge.remains
-actions.san_gift+=/heart_strike,if=buff.essence_of_the_blood_queen.stack<7
-actions.san_gift+=/death_strike
-actions.san_gift+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
-actions.san_gift+=/heart_strike
-actions.san_gift+=/blood_boil
 
-actions.sanlayn=deaths_caress,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<=1
-actions.sanlayn+=/blood_boil,if=dot.blood_plague.remains<3
-actions.sanlayn+=/heart_strike,if=(buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains&buff.vampiric_strike.remains)
-actions.sanlayn+=/death_strike,if=runic_power.deficit<20
-actions.sanlayn+=/deaths_caress,if=buff.bone_shield.stack<6
-actions.sanlayn+=/marrowrend,if=buff.bone_shield.stack<6
-actions.sanlayn+=/any_dnd,if=buff.crimson_scourge.remains
-actions.sanlayn+=/heart_strike,if=buff.vampiric_strike.up
-actions.sanlayn+=/death_strike
-actions.sanlayn+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
-actions.sanlayn+=/consumption,empower_to=1
-actions.sanlayn+=/heart_strike,if=rune>=2
-actions.sanlayn+=/blood_boil
-actions.sanlayn+=/heart_strike
 
 head=relentless_riders_crown,id=249970,ilevel=289,gem_id=240983
 neck=eternal_voidsong_chain,id=249368,ilevel=289,gem_id=240890/240890
@@ -112,3 +57,58 @@ main_hand=garfrosts_two_ton_hammer,id=133486,bonus_id=12806/13577,enchant_id=623
 # set_bonus=voidlight_bindings_2pc=1
 # set_bonus=midnight_season_1_2pc=1
 # set_bonus=midnight_season_1_4pc=1
+actions.precombat=/snapshot_stats
+actions.precombat+=/deaths_caress
+actions=/auto_attack
+actions+=/use_items,use_off_gcd=1
+actions+=/fireblood,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<8
+actions+=/blood_fury,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<12
+actions+=/berserking,if=cooldown.dancing_rune_weapon.remains>78|fight_remains<=15
+actions+=/ancestral_call,if=fight_remains>120|cooldown.dancing_rune_weapon.remains>78|fight_remains<15
+actions+=/potion,if=cooldown.dancing_rune_weapon.remains>78|fight_remains<=30
+actions+=/vampiric_blood,if=!buff.vampiric_blood.up
+actions+=/call_action_list,name=high_prio_actions
+actions+=/run_action_list,name=deathbringer,if=hero_tree.deathbringer
+actions+=/run_action_list,name=san_gift,if=hero_tree.sanlayn&buff.gift_of_the_sanlayn.up
+actions+=/run_action_list,name=sanlayn,if=hero_tree.sanlayn
+actions.deathbringer=/death_strike,if=(runic_power.deficit<20|(runic_power.deficit<26&buff.dancing_rune_weapon.up))
+actions.deathbringer+=/deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5)&rune<4
+actions.deathbringer+=/marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5
+actions.deathbringer+=/death_and_decay,if=!buff.death_and_decay.up
+actions.deathbringer+=/reapers_mark
+actions.deathbringer+=/marrowrend,if=buff.exterminate.up
+actions.deathbringer+=/blood_boil,if=buff.dancing_rune_weapon.up&!dot.blood_plague.ticking
+actions.deathbringer+=/blood_boil,if=charges=2
+actions.deathbringer+=/death_strike
+actions.deathbringer+=/blood_boil,if=buff.boiling_point.up
+actions.deathbringer+=/consumption,if=!buff.dancing_rune_weapon.up,empower_to=1
+actions.deathbringer+=/blood_boil
+actions.deathbringer+=/heart_strike
+actions.deathbringer+=/consumption,empower_to=1
+actions.deathbringer+=/arcane_torrent,if=runic_power.deficit>20
+actions.high_prio_actions=/raise_dead,use_off_gcd=1
+actions.high_prio_actions+=/death_strike,if=buff.coagulopathy.up&buff.coagulopathy.remains<=gcd
+actions.high_prio_actions+=/dancing_rune_weapon,if=!buff.exterminate.up&!debuff.reapers_mark_debuff.up&!buff.dancing_rune_weapon.up&(fight_remains>95|fight_remains<25|time>300)
+actions.san_gift=/heart_strike,if=buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains
+actions.san_gift+=/heart_strike,if=buff.essence_of_the_blood_queen.stack<7
+actions.san_gift+=/death_strike
+actions.san_gift+=/death_strike,if=runic_power.deficit<36
+actions.san_gift+=/blood_boil,if=!drw.bp_ticking
+actions.san_gift+=/any_dnd,if=buff.crimson_scourge.remains
+actions.san_gift+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
+actions.san_gift+=/heart_strike
+actions.san_gift+=/blood_boil
+actions.sanlayn=/deaths_caress,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<=1
+actions.sanlayn+=/blood_boil,if=dot.blood_plague.remains<3
+actions.sanlayn+=/heart_strike,if=(buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains&buff.vampiric_strike.remains)
+actions.sanlayn+=/death_strike,if=runic_power.deficit<20
+actions.sanlayn+=/deaths_caress,if=buff.bone_shield.stack<6
+actions.sanlayn+=/marrowrend,if=buff.bone_shield.stack<6
+actions.sanlayn+=/any_dnd,if=buff.crimson_scourge.remains
+actions.sanlayn+=/heart_strike,if=buff.vampiric_strike.up
+actions.sanlayn+=/death_strike
+actions.sanlayn+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
+actions.sanlayn+=/consumption,empower_to=1
+actions.sanlayn+=/heart_strike,if=rune>=2
+actions.sanlayn+=/blood_boil
+actions.sanlayn+=/heart_strike
