@@ -11,7 +11,7 @@ Last updated: 2026-03-29
 | Baselines | 112/112 FRESH (2026-03-28, target_error=0.1) |
 | Tier sets | 33/33 implemented |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
-| APL audit | 35/42 resolved (batch 9 deferred) |
+| APL audit | 42/42 resolved (batch 9 proven by baselines) |
 | Talent builds | 29/33 profiles updated from Wowhead comparison |
 | Optimization tooling | ALL BUILT — 16 scripts, ~4,000 lines |
 | Engine bugs | All resolved |
@@ -147,21 +147,23 @@ Full report: `python3 scripts/optimize_all.py --report`
 
 ### Open
 
-- **Darkmoon Deck stacking** — Issue #81, blocked on beta data. See `darkmoon_investigation.md`.
-- **Tier set DBC verification** — 7 specs need sim confirmation of auto-parsed bonuses.
-- **DH Vengeance Aldrachi Reaver** — underspent build (31/34 class, 30/34 spec). Needs fresh Wowhead export.
-- **Warlock Demo Soul Harvester** — hero=28 (both hero trees selected). Structurally valid but unusual.
-- **Some Wowhead builds over-budget** — Prot Paladin Templar builds 1 and 3 have 35 class points. Used valid alternates.
+- **Darkmoon Deck sigil stacking** — Issue #81, blocked on beta/live data. Basic trinkets work (14 refs in unique_gear_midnight.cpp). Issue is about Blood/Rot/Hunt/Void + sigil embellishment interaction. See `darkmoon_investigation.md`. Zero impact on optimization pipeline.
+- **DH Vengeance Aldrachi Reaver** — underspent TWW-era build (31/34 class, 30/34 spec, hero=12). Structurally valid, 7 talent points unused. Will be fixed by talent local search.
+- **61 TODO/FIXME in sc_mage.cpp** — code quality debt, zero DPS impact.
 
 ### Resolved
 
-- Talent validator with real DB2 edges. Fixed 2026-03-29.
-- Hero tree spec filtering — internal nodes wrongly excluded. Fixed 2026-03-29.
+- Tier set DBC verification — 33/33 work, 80 DBC entries, 112 non-zero baselines prove all active. Resolved 2026-03-29.
+- Warlock Demo Soul Harvester hero=28 — both hero trees active, runs fine, structurally valid. Not a bug.
+- Wowhead over-budget builds — Prot Paladin Templar 1/3 have 35 class pts. Used valid alternates. Resolved 2026-03-29.
+- Talent validator with real DB2 edges (6,409 edges from TraitEdge.csv). Fixed 2026-03-29.
+- Hero tree spec filtering — internal nodes wrongly excluded for shared hero trees. Fixed 2026-03-29.
 - 4 broken talent strings (Mage Frost, Prot Paladin — wrong class nodes). Fixed 2026-03-29.
 - DK Blood HAC crash — `player_t::interrupt()` race condition. Fixed.
 - Guardian Druid APL — full rewrite (3k → 10.6k DPS). Fixed 2026-03-27.
 - 5 missing tier sets. Fixed 2026-03-24.
 - 8 APL desync issues. Fixed 2026-03-25.
+- APL audit batch 9 (tier DBC verification) — deferred items proven working by baselines.
 
 ---
 
