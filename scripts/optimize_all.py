@@ -94,6 +94,7 @@ def main():
     parser.add_argument("--spec", type=str, help="Single spec to optimize")
     parser.add_argument("--all", action="store_true", help="All 33 specs")
     parser.add_argument("--apl", action="store_true", help="Run APL optimization")
+    parser.add_argument("--talent", action="store_true", help="Run talent local search optimization")
     parser.add_argument("--report", action="store_true", help="Show baseline report")
     parser.add_argument("--max-iter", type=int, default=5, help="Max APL optimizer iterations")
     parser.add_argument("--fight-style", type=str, default=None,
@@ -112,8 +113,18 @@ def main():
     fight_styles = [args.fight_style] if args.fight_style else None
 
     print(f"=== SimC Midnight Optimization ===")
-    print(f"Specs: {len(specs)}, APL: {args.apl}, Max iter: {args.max_iter}")
+    print(f"Specs: {len(specs)}, APL: {args.apl}, Talent: {args.talent}, Max iter: {args.max_iter}")
     print(f"Fight styles: {fight_styles or ['Patchwerk', 'HecticAddCleave']} (independently)")
+
+    if args.talent:
+        from talent_local_search import optimize_spec as talent_optimize
+        for i, spec in enumerate(specs):
+            print(f"\n  [{i+1}/{len(specs)}] TALENT: {spec}")
+            try:
+                talent_optimize(spec, fight_styles=fight_styles,
+                                threads=8, max_passes=args.max_iter)
+            except Exception as e:
+                print(f"  [{i+1}/{len(specs)}] {spec}: ERROR {e}")
 
     if args.apl:
         from apl_optimizer import optimize_spec
@@ -122,11 +133,10 @@ def main():
             if not os.path.exists(profile):
                 print(f"  [{i+1}/{len(specs)}] {spec}: SKIP (no profile)")
                 continue
-            print(f"  [{i+1}/{len(specs)}] {spec}: optimizing...")
+            print(f"  [{i+1}/{len(specs)}] APL: {spec}")
             try:
                 optimize_spec(spec, max_iterations=args.max_iter,
                               fight_styles=fight_styles)
-                print(f"  [{i+1}/{len(specs)}] {spec}: DONE")
             except Exception as e:
                 print(f"  [{i+1}/{len(specs)}] {spec}: ERROR {e}")
 
