@@ -194,8 +194,8 @@ def optimize_spec_single_style(
     with open(spec_dir / f"apl_optimization_{style_tag}.json", "w") as f:
         json.dump(result_data, f, indent=2)
 
-    # Save optimized APL if it changed
-    if total_improvement > 0.1:
+    # Save optimized APL if any improvement exists
+    if total_improvement > 0.0:
         with open(spec_dir / f"optimized_apl_{style_tag}.simc", "w") as f:
             f.write(best_apl.to_simc())
 

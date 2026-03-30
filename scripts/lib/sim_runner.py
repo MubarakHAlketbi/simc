@@ -268,17 +268,43 @@ def extract_apl(profile_path: str, simc_bin: Optional[str] = None) -> str:
             os.unlink(actions_path)
 
 
-def find_profile(spec_name: str) -> str:
-    """Find MID1 profile path for a spec name like 'warrior_fury'."""
-    # Convert warrior_fury -> MID1_Warrior_Fury
-    parts = spec_name.split("_")
-    profile_name = "MID1_" + "_".join(p.capitalize() for p in parts)
+_CLASS_ALIASES = {
+    "dk": "Death_Knight",
+    "dh": "Demon_Hunter",
+}
 
+_SPEC_ALIASES = {
+    "bm": "Beast_Mastery",
+    "mm": "Marksmanship",
+    "ww": "Windwalker",
+}
+
+
+def find_profile(spec_name: str) -> str:
+    """Find MID1 profile path for a spec name like 'warrior_fury' or 'dk_unholy'."""
+    parts = spec_name.split("_")
+
+    # Resolve class alias (dk -> Death_Knight, dh -> Demon_Hunter)
+    cls_key = parts[0].lower()
+    if cls_key in _CLASS_ALIASES:
+        cls = _CLASS_ALIASES[cls_key]
+        spec_parts = parts[1:]
+    else:
+        cls = parts[0].capitalize()
+        spec_parts = parts[1:]
+
+    # Resolve spec alias (bm -> Beast_Mastery, mm -> Marksmanship)
+    if len(spec_parts) == 1 and spec_parts[0].lower() in _SPEC_ALIASES:
+        spc = _SPEC_ALIASES[spec_parts[0].lower()]
+    else:
+        spc = "_".join(p.capitalize() for p in spec_parts)
+
+    profile_name = f"MID1_{cls}_{spc}"
     path = PROFILES_DIR / f"{profile_name}.simc"
     if path.exists():
         return str(path)
 
-    # Try variations
+    # Try fuzzy match as fallback
     for p in PROFILES_DIR.glob("MID1_*.simc"):
         if spec_name.replace("_", "").lower() in p.stem.replace("_", "").lower():
             return str(p)
