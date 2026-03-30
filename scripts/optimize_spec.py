@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """optimize_spec.py — Full optimization pipeline for a single spec.
 
-Runs talent optimization (both styles) → picks HAC-optimized talents →
-applies to profile + variants → runs APL optimization → applies APL →
-validates → commits.
+Each spec produces TWO independent optimal profiles:
+  - profiles/MID1/<Base>.simc          → PW-optimized (talent + APL best for Patchwerk)
+  - profiles/MID1/<Base>_HAC.simc      → HAC-optimized (talent + APL best for HecticAddCleave)
+
+Flow per spec:
+  1. Talent optimize for Patchwerk   → best PW talent string
+  2. Talent optimize for HAC         → best HAC talent string
+  3. Apply PW talent to base profile → APL optimize for Patchwerk
+  4. Create HAC profile copy         → apply HAC talent → APL optimize for HAC
+  5. Smoke test both → validate → commit
 
 Usage:
   python3 scripts/optimize_spec.py dk_unholy
-  python3 scripts/optimize_spec.py --all          # all specs sequentially
-  python3 scripts/optimize_spec.py --all --dry-run # just show what would be done
+  python3 scripts/optimize_spec.py --all
+  python3 scripts/optimize_spec.py --all --dry-run
 """
 
 import argparse
@@ -16,6 +23,7 @@ import glob
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -25,7 +33,6 @@ sys.path.insert(0, ROOT)
 
 from scripts.lib.sim_runner import find_profile
 
-# Maps short spec name → profile base name (without .simc)
 PROFILE_MAP = {
     "warrior_arms": "MID1_Warrior_Arms", "warrior_fury": "MID1_Warrior_Fury",
     "warrior_protection": "MID1_Warrior_Protection",
@@ -51,60 +58,74 @@ PROFILE_MAP = {
 
 PROFILES_DIR = os.path.join(ROOT, "profiles", "MID1")
 RESULTS_DIR = os.path.join(ROOT, "results", "optimization")
+SIMC_BIN = os.path.join(ROOT, "engine", "simc")
 
 
-def find_variants(base_profile_name: str) -> list[str]:
-    """Find variant profiles that share the same base.
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
-    E.g., MID1_Death_Knight_Frost → [MID1_Death_Knight_Frost_Rider.simc]
-    """
-    pattern = os.path.join(PROFILES_DIR, f"{base_profile_name}_*.simc")
-    base_path = os.path.join(PROFILES_DIR, f"{base_profile_name}.simc")
-    variants = []
-    for f in sorted(glob.glob(pattern)):
-        if f != base_path:
-            variants.append(f)
-    return variants
-
-
-def get_profile_talent(profile_path: str) -> str | None:
-    """Extract the talents= line from a profile."""
-    with open(profile_path) as f:
+def get_profile_talent(path: str) -> str | None:
+    with open(path) as f:
         for line in f:
             if line.startswith("talents="):
                 return line.strip().split("=", 1)[1]
     return None
 
 
-def set_profile_talent(profile_path: str, talent_str: str):
-    """Replace the talents= line in a profile."""
-    with open(profile_path) as f:
+def set_profile_talent(path: str, talent_str: str):
+    with open(path) as f:
         content = f.read()
     content = re.sub(r"^talents=.*$", f"talents={talent_str}", content, flags=re.MULTILINE)
-    with open(profile_path, "w") as f:
+    with open(path, "w") as f:
         f.write(content)
 
 
-def apply_optimized_apl(profile_path: str, apl_path: str):
-    """Replace all actions= lines in profile with those from optimized APL."""
+def apply_apl_file(profile_path: str, apl_path: str):
+    """Replace all actions= lines in profile with those from APL file."""
     with open(profile_path) as f:
         lines = f.readlines()
     with open(apl_path) as f:
         apl_lines = f.readlines()
-
-    # Keep non-action lines
     non_action = [l for l in lines if not l.lstrip().startswith("actions")]
-    # Ensure trailing newline
     if non_action and not non_action[-1].endswith("\n"):
         non_action[-1] += "\n"
-
     with open(profile_path, "w") as f:
         f.writelines(non_action)
         f.writelines(apl_lines)
 
 
+def smoke_test(path: str) -> bool:
+    r = subprocess.run(
+        [SIMC_BIN, path, "iterations=1", "output=/dev/null"],
+        capture_output=True, timeout=60, cwd=ROOT,
+    )
+    return r.returncode == 0
+
+
+def find_opt_dir(spec: str, base_name: str) -> str:
+    """Find or create the results/optimization/<spec> directory."""
+    # apl_optimizer uses the full class name from find_profile, so the dir
+    # may be under various aliases. Try common patterns.
+    candidates = [
+        spec,
+        base_name.replace("MID1_", "").lower().replace(" ", "_"),
+        spec.replace("dk_", "death_knight_").replace("dh_", "demon_hunter_")
+            .replace("hunter_bm", "hunter_beast_mastery")
+            .replace("hunter_mm", "hunter_marksmanship"),
+    ]
+    for name in candidates:
+        d = os.path.join(RESULTS_DIR, name)
+        if os.path.isdir(d):
+            return d
+    # Fallback: create using first candidate
+    d = os.path.join(RESULTS_DIR, candidates[0])
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+# ── Talent search ────────────────────────────────────────────────────────────
+
 def run_talent_search(spec: str, fight_style: str, max_iter: int = 5) -> tuple[str | None, float]:
-    """Run talent local search, return (talent_string, dps) or (None, 0)."""
+    """Run talent local search. Returns (talent_string, dps) or (None, 0)."""
     cmd = [
         sys.executable, os.path.join(ROOT, "scripts", "talent_local_search.py"),
         "--spec", spec, "--fight-style", fight_style, "--max-iter", str(max_iter),
@@ -115,7 +136,6 @@ def run_talent_search(spec: str, fight_style: str, max_iter: int = 5) -> tuple[s
         print(f"  TALENT ERROR: {result.stderr[-500:]}")
         return None, 0.0
 
-    # Parse output for talent string and DPS
     talent_str = None
     final_dps = 0.0
     for line in result.stdout.split("\n"):
@@ -129,186 +149,108 @@ def run_talent_search(spec: str, fight_style: str, max_iter: int = 5) -> tuple[s
     return talent_str, final_dps
 
 
-def run_apl_optimizer(spec: str, max_iter: int = 5) -> dict:
-    """Run APL optimizer for both styles. Returns summary dict."""
-    # Use the full class name for apl_optimizer since we fixed find_profile
+# ── APL optimization ─────────────────────────────────────────────────────────
+
+def run_apl_optimizer_single(spec: str, fight_style: str, max_iter: int = 5):
+    """Run APL optimizer for a single fight style."""
     cmd = [
         sys.executable, os.path.join(ROOT, "scripts", "apl_optimizer.py"),
-        spec, "--max-iter", str(max_iter),
+        spec, "--fight-style", fight_style, "--max-iter", str(max_iter),
     ]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=3600, cwd=ROOT)
     print(result.stdout)
     if result.returncode != 0:
         print(f"  APL ERROR: {result.stderr[-500:]}")
-    return {}
 
 
-def run_sim_dps(profile_path: str, talent_str: str, fight_style: str,
-                iterations: int = 10000, threads: int = 16) -> float:
-    """Run a single sim and return DPS. Returns 0.0 on error."""
-    simc = os.path.join(ROOT, "engine", "simc")
-    json_out = f"/tmp/optimize_spec_crosseval_{fight_style.lower()}.json"
-    cmd = [
-        simc, profile_path,
-        f"talents={talent_str}",
-        f"fight_style={fight_style}",
-        f"iterations={iterations}",
-        f"threads={threads}",
-        f"json2={json_out}",
-        "output=/dev/null",
-    ]
-    try:
-        subprocess.run(cmd, capture_output=True, timeout=120, cwd=ROOT)
-        with open(json_out) as f:
-            data = json.load(f)
-        return data["sim"]["players"][0]["collected_data"]["dps"]["mean"]
-    except Exception:
-        return 0.0
-
-
-def cross_evaluate(profile_path: str, pw_talent: str | None, pw_dps: float,
-                   hac_talent: str | None, hac_dps: float) -> tuple[str | None, str]:
-    """Cross-evaluate talent builds and pick the one with best Patchwerk DPS.
-
-    Strategy:
-    - PW is always the priority (raid DPS matters most to players).
-    - If the two builds differ, test each on the other fight style.
-    - Pick the build with highest Patchwerk DPS.
-    - Tie-break on composite (0.5*PW + 0.5*HAC).
-
-    Returns (chosen_talent_string, label).
-    """
-    # If only one build found, use it
-    if not pw_talent and not hac_talent:
-        return None, "none"
-    if not hac_talent:
-        return pw_talent, "PW-optimized"
-    if not pw_talent:
-        return hac_talent, "HAC-optimized"
-
-    # Same talent → no cross-eval needed
-    if pw_talent == hac_talent:
-        return pw_talent, "PW-optimized (same as HAC)"
-
-    # Cross-evaluate: test each build on the other fight style
-    print(f"\n--- Cross-evaluating talent builds (10k iter each) ---")
-
-    # PW-optimized build on HAC
-    print(f"  PW-opt on HAC...", end="", flush=True)
-    pw_on_hac = run_sim_dps(profile_path, pw_talent, "HecticAddCleave")
-    print(f" {pw_on_hac:,.0f}")
-
-    # HAC-optimized build on PW
-    print(f"  HAC-opt on PW...", end="", flush=True)
-    hac_on_pw = run_sim_dps(profile_path, hac_talent, "Patchwerk")
-    print(f" {hac_on_pw:,.0f}")
-
-    # PW-opt: PW=pw_dps, HAC=pw_on_hac
-    # HAC-opt: PW=hac_on_pw, HAC=hac_dps
-    pw_composite = 0.5 * pw_dps + 0.5 * pw_on_hac
-    hac_composite = 0.5 * hac_on_pw + 0.5 * hac_dps
-
-    print(f"\n  PW-opt  build: PW={pw_dps:,.0f}, HAC={pw_on_hac:,.0f}, Comp={pw_composite:,.0f}")
-    print(f"  HAC-opt build: PW={hac_on_pw:,.0f}, HAC={hac_dps:,.0f}, Comp={hac_composite:,.0f}")
-
-    # Decision: prefer PW DPS first, then composite as tie-break
-    if pw_dps >= hac_on_pw:
-        # PW-opt build has better or equal Patchwerk
-        print(f"  -> Choosing PW-optimized (PW {pw_dps:,.0f} >= {hac_on_pw:,.0f})")
-        return pw_talent, "PW-optimized"
-    else:
-        # HAC-opt build somehow has better Patchwerk too
-        print(f"  -> Choosing HAC-optimized (PW {hac_on_pw:,.0f} > {pw_dps:,.0f})")
-        return hac_talent, "HAC-optimized"
-
-
-def smoke_test(profile_path: str) -> bool:
-    """Run 1-iteration smoke test."""
-    simc = os.path.join(ROOT, "engine", "simc")
-    result = subprocess.run(
-        [simc, profile_path, "iterations=1", "output=/dev/null"],
-        capture_output=True, timeout=60, cwd=ROOT,
-    )
-    return result.returncode == 0
-
+# ── Main pipeline ────────────────────────────────────────────────────────────
 
 def optimize_one_spec(spec: str, max_iter: int = 5, dry_run: bool = False):
-    """Full optimization pipeline for one spec."""
     base_name = PROFILE_MAP.get(spec)
     if not base_name:
         print(f"  SKIP: {spec} not in PROFILE_MAP")
         return
 
-    profile_path = os.path.join(PROFILES_DIR, f"{base_name}.simc")
-    if not os.path.exists(profile_path):
-        print(f"  SKIP: {profile_path} does not exist")
-        return
+    pw_profile = os.path.join(PROFILES_DIR, f"{base_name}.simc")
+    hac_profile = os.path.join(PROFILES_DIR, f"{base_name}_HAC.simc")
 
-    variants = find_variants(base_name)
-    all_profiles = [profile_path] + variants
-    variant_names = [os.path.basename(v) for v in variants]
+    if not os.path.exists(pw_profile):
+        print(f"  SKIP: {pw_profile} does not exist")
+        return
 
     print(f"\n{'='*70}")
     print(f"  OPTIMIZING: {spec}")
-    print(f"  Base profile: {base_name}.simc")
-    if variant_names:
-        print(f"  Variants: {', '.join(variant_names)}")
+    print(f"  PW  profile: {base_name}.simc")
+    print(f"  HAC profile: {base_name}_HAC.simc")
     print(f"{'='*70}")
 
     if dry_run:
-        print("  [DRY RUN] would optimize talent + APL")
+        print("  [DRY RUN] would create two optimized profiles")
         return
 
     start = time.time()
 
-    # Step 1: Talent optimization — both fight styles
-    print(f"\n--- Step 1: Talent optimization (Patchwerk) ---")
+    # ── 1. Talent optimization (independent per style) ───────────────────
+    print(f"\n--- Step 1a: Talent optimization (Patchwerk) ---")
     pw_talent, pw_dps = run_talent_search(spec, "Patchwerk", max_iter)
 
-    print(f"\n--- Step 2: Talent optimization (HecticAddCleave) ---")
+    print(f"\n--- Step 1b: Talent optimization (HecticAddCleave) ---")
     hac_talent, hac_dps = run_talent_search(spec, "HecticAddCleave", max_iter)
 
-    # Step 2: Choose talent build via cross-evaluation
-    # Priority: Patchwerk DPS (raid) > composite > HAC
-    original_talent = get_profile_talent(profile_path)
-    chosen_talent, chosen_label = cross_evaluate(
-        profile_path, pw_talent, pw_dps, hac_talent, hac_dps
-    )
-
-    if chosen_talent and chosen_talent != original_talent:
-        print(f"\n--- Step 3: Applying {chosen_label} talents ---")
-        for p in all_profiles:
-            set_profile_talent(p, chosen_talent)
-            print(f"  Updated: {os.path.basename(p)}")
+    # ── 2. Apply PW talent to base profile ───────────────────────────────
+    if pw_talent:
+        print(f"\n--- Step 2a: Applying PW-optimized talent to {base_name}.simc ---")
+        set_profile_talent(pw_profile, pw_talent)
+        print(f"  PW talent applied ({pw_dps:,.0f} DPS)")
     else:
-        print(f"\n--- Step 3: No talent change needed ---")
+        print(f"\n--- Step 2a: No PW talent improvement, keeping original ---")
 
-    # Step 3: APL optimization
-    print(f"\n--- Step 4: APL optimization ---")
-    run_apl_optimizer(spec, max_iter)
+    # ── 3. Create HAC profile (copy base, then override talent) ──────────
+    print(f"\n--- Step 2b: Creating HAC profile {base_name}_HAC.simc ---")
+    shutil.copy2(pw_profile, hac_profile)
+    if hac_talent:
+        set_profile_talent(hac_profile, hac_talent)
+        print(f"  HAC talent applied ({hac_dps:,.0f} DPS)")
+    else:
+        print(f"  No HAC talent improvement, HAC profile uses PW talent")
 
-    # Apply optimized APL if it exists
-    spec_opt_dir = os.path.join(RESULTS_DIR, spec.replace("dk_", "death_knight_").replace("dh_", "demon_hunter_").replace("hunter_bm", "hunter_beast_mastery").replace("hunter_mm", "hunter_marksmanship"))
-    # Try the direct name mapping used by find_profile
-    for possible_dir_name in [spec, base_name.replace("MID1_", "").lower().replace(" ", "_")]:
-        d = os.path.join(RESULTS_DIR, possible_dir_name)
-        if os.path.isdir(d):
-            spec_opt_dir = d
-            break
+    # ── 4. APL optimization (independent per style) ──────────────────────
+    print(f"\n--- Step 3a: APL optimization (Patchwerk) ---")
+    run_apl_optimizer_single(spec, "Patchwerk", max_iter)
 
-    for style_tag in ["pw", "hac"]:
-        apl_file = os.path.join(spec_opt_dir, f"optimized_apl_{style_tag}.simc")
-        if os.path.exists(apl_file):
-            print(f"  Applying optimized APL ({style_tag}) to base profile")
-            apply_optimized_apl(profile_path, apl_file)
+    # Apply PW APL to base profile if it exists
+    opt_dir = find_opt_dir(spec, base_name)
+    pw_apl = os.path.join(opt_dir, "optimized_apl_pw.simc")
+    if os.path.exists(pw_apl):
+        apply_apl_file(pw_profile, pw_apl)
+        print(f"  Applied PW APL to {base_name}.simc")
 
-    # Step 4: Smoke test all profiles
-    print(f"\n--- Step 5: Smoke test ---")
+    # For HAC APL: temporarily point find_profile at the HAC profile
+    # We need to set the HAC profile talent first, then run APL optimizer
+    # But apl_optimizer uses find_profile which finds the base. So we swap:
+    print(f"\n--- Step 3b: APL optimization (HecticAddCleave) ---")
+    # Backup base, put HAC in its place, run optimizer, restore
+    pw_backup = pw_profile + ".pw_backup"
+    shutil.copy2(pw_profile, pw_backup)
+    shutil.copy2(hac_profile, pw_profile)
+    run_apl_optimizer_single(spec, "HecticAddCleave", max_iter)
+    # Restore base profile
+    shutil.copy2(pw_backup, pw_profile)
+    os.unlink(pw_backup)
+
+    # Apply HAC APL to HAC profile if it exists
+    hac_apl = os.path.join(opt_dir, "optimized_apl_hac.simc")
+    if os.path.exists(hac_apl):
+        apply_apl_file(hac_profile, hac_apl)
+        print(f"  Applied HAC APL to {base_name}_HAC.simc")
+
+    # ── 5. Smoke test ────────────────────────────────────────────────────
+    print(f"\n--- Step 4: Smoke test ---")
     all_pass = True
-    for p in all_profiles:
-        ok = smoke_test(p)
+    for label, path in [("PW", pw_profile), ("HAC", hac_profile)]:
+        ok = smoke_test(path)
         status = "PASS" if ok else "FAIL"
-        print(f"  {status}: {os.path.basename(p)}")
+        print(f"  {status}: {label} — {os.path.basename(path)}")
         if not ok:
             all_pass = False
 
@@ -316,14 +258,23 @@ def optimize_one_spec(spec: str, max_iter: int = 5, dry_run: bool = False):
         print("  WARNING: Some profiles failed smoke test!")
         return
 
-    # Step 5: Git commit
-    print(f"\n--- Step 6: Commit ---")
-    changed = [p for p in all_profiles]
-    subprocess.run(["git", "add"] + changed, cwd=ROOT)
-    # Check if anything actually changed
-    diff = subprocess.run(["git", "diff", "--cached", "--stat"], capture_output=True, text=True, cwd=ROOT)
+    # ── 6. Git commit ────────────────────────────────────────────────────
+    print(f"\n--- Step 5: Commit ---")
+    subprocess.run(["git", "add", pw_profile, hac_profile], cwd=ROOT)
+    diff = subprocess.run(["git", "diff", "--cached", "--stat"],
+                          capture_output=True, text=True, cwd=ROOT)
     if diff.stdout.strip():
-        msg = f"optimize({spec}): {chosen_label} talents; APL optimized; validates"
+        parts = []
+        if pw_talent:
+            parts.append(f"PW talent {pw_dps:,.0f}")
+        if hac_talent:
+            parts.append(f"HAC talent {hac_dps:,.0f}")
+        if os.path.exists(pw_apl):
+            parts.append("PW APL improved")
+        if os.path.exists(hac_apl):
+            parts.append("HAC APL improved")
+        detail = "; ".join(parts) if parts else "no changes"
+        msg = f"optimize({spec}): {detail}"
         subprocess.run(["git", "commit", "-m", msg], cwd=ROOT)
         print(f"  Committed: {msg}")
     else:
@@ -334,7 +285,8 @@ def optimize_one_spec(spec: str, max_iter: int = 5, dry_run: bool = False):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Full spec optimization pipeline")
+    parser = argparse.ArgumentParser(
+        description="Full spec optimization — produces two profiles per spec (PW + HAC)")
     parser.add_argument("spec", nargs="?", help="Spec to optimize (e.g., dk_unholy)")
     parser.add_argument("--all", action="store_true", help="Optimize all specs")
     parser.add_argument("--max-iter", type=int, default=5, help="Max iterations per optimizer")
@@ -343,7 +295,7 @@ def main():
 
     if args.all:
         specs = sorted(PROFILE_MAP.keys())
-        print(f"Optimizing {len(specs)} specs sequentially...")
+        print(f"Optimizing {len(specs)} specs — each gets PW + HAC profiles...")
         for i, spec in enumerate(specs, 1):
             print(f"\n[{i}/{len(specs)}]")
             optimize_one_spec(spec, args.max_iter, args.dry_run)
