@@ -5,7 +5,7 @@ level=90
 race=mechagnome
 role=tank
 position=front
-talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZZGjxMGAAAAYmZmZGmZGzMjZAgZmZGAAAGYgZspx2GIbDYDwMMAAgZGAGA
+talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMGzMMLzMz0MLGzMmxAAAAAzMzMzwMzYmZMAYMzMzAAAwADMjNNW2AZbAbAmhBAAMzADGA
 
 # Default consumables
 potion=lights_potential_2
@@ -106,8 +106,8 @@ actions.sanlayn+=/deaths_caress,if=buff.bone_shield.stack<6
 actions.sanlayn+=/marrowrend,if=buff.bone_shield.stack<6
 actions.sanlayn+=/any_dnd,if=buff.crimson_scourge.remains
 actions.sanlayn+=/heart_strike,if=buff.vampiric_strike.up
-actions.sanlayn+=/death_strike
 actions.sanlayn+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
+actions.sanlayn+=/death_strike
 actions.sanlayn+=/consumption,empower_to=1
 actions.sanlayn+=/heart_strike,if=rune>=2
 actions.sanlayn+=/blood_boil
