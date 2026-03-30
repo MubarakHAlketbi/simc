@@ -143,6 +143,85 @@ def run_apl_optimizer(spec: str, max_iter: int = 5) -> dict:
     return {}
 
 
+def run_sim_dps(profile_path: str, talent_str: str, fight_style: str,
+                iterations: int = 10000, threads: int = 16) -> float:
+    """Run a single sim and return DPS. Returns 0.0 on error."""
+    simc = os.path.join(ROOT, "engine", "simc")
+    json_out = f"/tmp/optimize_spec_crosseval_{fight_style.lower()}.json"
+    cmd = [
+        simc, profile_path,
+        f"talents={talent_str}",
+        f"fight_style={fight_style}",
+        f"iterations={iterations}",
+        f"threads={threads}",
+        f"json2={json_out}",
+        "output=/dev/null",
+    ]
+    try:
+        subprocess.run(cmd, capture_output=True, timeout=120, cwd=ROOT)
+        with open(json_out) as f:
+            data = json.load(f)
+        return data["sim"]["players"][0]["collected_data"]["dps"]["mean"]
+    except Exception:
+        return 0.0
+
+
+def cross_evaluate(profile_path: str, pw_talent: str | None, pw_dps: float,
+                   hac_talent: str | None, hac_dps: float) -> tuple[str | None, str]:
+    """Cross-evaluate talent builds and pick the one with best Patchwerk DPS.
+
+    Strategy:
+    - PW is always the priority (raid DPS matters most to players).
+    - If the two builds differ, test each on the other fight style.
+    - Pick the build with highest Patchwerk DPS.
+    - Tie-break on composite (0.5*PW + 0.5*HAC).
+
+    Returns (chosen_talent_string, label).
+    """
+    # If only one build found, use it
+    if not pw_talent and not hac_talent:
+        return None, "none"
+    if not hac_talent:
+        return pw_talent, "PW-optimized"
+    if not pw_talent:
+        return hac_talent, "HAC-optimized"
+
+    # Same talent → no cross-eval needed
+    if pw_talent == hac_talent:
+        return pw_talent, "PW-optimized (same as HAC)"
+
+    # Cross-evaluate: test each build on the other fight style
+    print(f"\n--- Cross-evaluating talent builds (10k iter each) ---")
+
+    # PW-optimized build on HAC
+    print(f"  PW-opt on HAC...", end="", flush=True)
+    pw_on_hac = run_sim_dps(profile_path, pw_talent, "HecticAddCleave")
+    print(f" {pw_on_hac:,.0f}")
+
+    # HAC-optimized build on PW
+    print(f"  HAC-opt on PW...", end="", flush=True)
+    hac_on_pw = run_sim_dps(profile_path, hac_talent, "Patchwerk")
+    print(f" {hac_on_pw:,.0f}")
+
+    # PW-opt: PW=pw_dps, HAC=pw_on_hac
+    # HAC-opt: PW=hac_on_pw, HAC=hac_dps
+    pw_composite = 0.5 * pw_dps + 0.5 * pw_on_hac
+    hac_composite = 0.5 * hac_on_pw + 0.5 * hac_dps
+
+    print(f"\n  PW-opt  build: PW={pw_dps:,.0f}, HAC={pw_on_hac:,.0f}, Comp={pw_composite:,.0f}")
+    print(f"  HAC-opt build: PW={hac_on_pw:,.0f}, HAC={hac_dps:,.0f}, Comp={hac_composite:,.0f}")
+
+    # Decision: prefer PW DPS first, then composite as tie-break
+    if pw_dps >= hac_on_pw:
+        # PW-opt build has better or equal Patchwerk
+        print(f"  -> Choosing PW-optimized (PW {pw_dps:,.0f} >= {hac_on_pw:,.0f})")
+        return pw_talent, "PW-optimized"
+    else:
+        # HAC-opt build somehow has better Patchwerk too
+        print(f"  -> Choosing HAC-optimized (PW {hac_on_pw:,.0f} > {pw_dps:,.0f})")
+        return hac_talent, "HAC-optimized"
+
+
 def smoke_test(profile_path: str) -> bool:
     """Run 1-iteration smoke test."""
     simc = os.path.join(ROOT, "engine", "simc")
@@ -189,18 +268,12 @@ def optimize_one_spec(spec: str, max_iter: int = 5, dry_run: bool = False):
     print(f"\n--- Step 2: Talent optimization (HecticAddCleave) ---")
     hac_talent, hac_dps = run_talent_search(spec, "HecticAddCleave", max_iter)
 
-    # Step 2: Choose talent build
-    # Strategy: use HAC-optimized talent if it improved, else use PW-optimized
-    chosen_talent = None
-    chosen_label = "none"
+    # Step 2: Choose talent build via cross-evaluation
+    # Priority: Patchwerk DPS (raid) > composite > HAC
     original_talent = get_profile_talent(profile_path)
-
-    if hac_talent and hac_dps > 0:
-        chosen_talent = hac_talent
-        chosen_label = "HAC-optimized"
-    elif pw_talent and pw_dps > 0:
-        chosen_talent = pw_talent
-        chosen_label = "PW-optimized"
+    chosen_talent, chosen_label = cross_evaluate(
+        profile_path, pw_talent, pw_dps, hac_talent, hac_dps
+    )
 
     if chosen_talent and chosen_talent != original_talent:
         print(f"\n--- Step 3: Applying {chosen_label} talents ---")
