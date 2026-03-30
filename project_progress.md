@@ -1,14 +1,14 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-03-29
+Last updated: 2026-03-30
 
 ## Status
 
 | Metric | Value |
 |--------|-------|
-| Profiles | 56/56 PASS (compile + 1-iter sim + talent validation) |
-| Talent validation | 56/56 PASS (budget, prereqs, req_points gates) |
-| Baselines | 112/112 FRESH (2026-03-28, target_error=0.1) |
+| Profiles | 60/60 PASS (compile + 1-iter sim + talent validation) |
+| Talent validation | 60/60 PASS (budget, prereqs, req_points gates) |
+| Baselines | 112/112 FRESH (2026-03-28, target_error=0.1) — needs refresh for optimized specs |
 | Tier sets | 33/33 implemented |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
 | APL audit | 42/42 resolved (batch 9 proven by baselines) |
@@ -37,20 +37,16 @@ one for HecticAddCleave (M+/AoE). See `OPTIMIZATION_HOWTO.md` § "Profile File C
 
 ### Optimization Progress (Batch 3)
 
-| Spec | PW Talent | PW APL | HAC Talent | HAC APL | _HAC.simc | Commit |
-|------|-----------|--------|------------|---------|-----------|--------|
-| DK Unholy | +DONE | +DONE | +DONE | +DONE | YES | 1ea57c2 |
-| DK Frost | +7.12% | no change | done | done | MISSING | 8875b96 |
-| DK Blood | +DONE | +DONE | done | done | SKIP(tank) | 242530d |
-| DH Havoc | +14.28% | no change | done | done | MISSING | 8875b96 |
-| DH Vengeance | +3.30% | no change | done | done | SKIP(tank) | 8875b96 |
-| DH Devourer | +2.85% | +0.62% | done | done | MISSING | 8875b96 |
-| Warrior Fury | +3.31%(PW) | +0.44%(HAC) | - | - | MISSING | test only |
-| *27 other specs* | PENDING | PENDING | PENDING | PENDING | PENDING | - |
-
-**NOTE:** DK Frost, DH Havoc, DH Devourer were optimized for both fight styles
-but _HAC.simc files were NOT created — only the base profile was updated with
-the PW-best talent string. These need _HAC.simc files with HAC-optimized talents.
+| Spec | PW DPS | HAC DPS | Key HAC talent swaps | _HAC.simc | Commit |
+|------|--------|---------|---------------------|-----------|--------|
+| DK Unholy | 107,884 | 236,310 | different build | YES | 1ea57c2 |
+| DK Frost | 108,269 | 190,946 | +Cryogenic Chamber, +Everfrost | YES | 66cabda |
+| DK Blood | DONE | SKIP(tank) | — | SKIP | 242530d |
+| DH Havoc | 111,990 | 215,359 | +Glaive Tempest, +Essence Break, +Blind Fury, +Chaos Theory | YES | d976e25 |
+| DH Vengeance | 67,896 | SKIP(tank) | — | SKIP | 8875b96 |
+| DH Devourer | 112,082 | 206,038 | +Eradicate, +Pursuit, Scythe choice swap | YES | e4d8552 |
+| Warrior Fury | +3.31%(PW) | +0.44%(HAC) | — | PENDING | test only |
+| *27 other specs* | PENDING | PENDING | — | PENDING | — |
 
 ---
 
