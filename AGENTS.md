@@ -78,6 +78,8 @@ Deprecated (removed from repo):
 | Phase 4 baselines | `results/phase4/*.json` (112 files) |
 | DBC talent data | `engine/dbc/generated/trait_data.inc` (3420 entries) |
 | Talent prerequisite edges | `engine/dbc/generated/TraitEdge.csv` (6409 Type 2 edges) |
+| Talent gate conditions | `engine/dbc/generated/TraitCond.csv`, `TraitNodeGroup*.csv` |
+| Talent node DB2 data | `engine/dbc/generated/TraitNode.csv`, `TraitNodeXTraitNodeEntry.csv` |
 | Talent string parse/encode | `engine/player/player.cpp` lines 2675-3030 |
 
 ### Build
@@ -149,6 +151,16 @@ NOT used for optimization decisions. Always optimize each fight style separately
 - **Class tree**: 34 purchasable points + granted nodes (free, don't cost points)
 - **Spec tree**: 34 purchasable points
 - **Hero tree**: 15 nodes auto-granted (one hero tree chosen via selection node)
+
+### Talent Gate System (req_points)
+The game uses a **currency-based gate system**, not a simple "total ranks" check:
+- Each tree has 2-3 gates at specific `req_points` thresholds (e.g., Warrior class: 8, 23)
+- Gates require `SpentAmountRequired` of a specific `TraitCurrencyID` to be spent
+- **Only PURCHASED nodes consume currency** — granted nodes cost 0
+- Currency 2801 = class talent points, Currency 2800 = spec talent points
+- Gate check: `purchased_ranks_in_nodes_with_req_points_less_than_gate >= gate`
+- DB2 chain: TraitNodeGroup → TraitNodeGroupXTraitCond → TraitCond
+- Hero tree nodes are exempt from gate checks (auto-granted package)
 
 ### Granted Class Talents per Spec
 Not every spec has 1 free talent — it varies:
@@ -267,6 +279,15 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   35 class points (1 over budget). Always validate Wowhead exports before using them.
 - **Granted node counts vary widely** — druids and paladins have 3 free class talents, warlocks
   have 0 in DBC (Soul Leech granted via undocumented mechanism). Don't hardcode budget assumptions.
+- **req_points gates count PURCHASED points only** — The game uses TraitCond.SpentAmountRequired
+  against a TraitCurrencyID. Granted nodes (purchased_flag=0) cost 0 currency and do NOT count
+  toward gate thresholds. Gate check: count purchased ranks in nodes with req_points < gate,
+  within the same sub-tree (class or spec). Hero tree nodes are exempt from gates entirely.
+  DB2 tables: TraitNodeGroup → TraitNodeGroupXTraitCond → TraitCond (CondType=0 + SpentAmountRequired).
+  Currency 2801 = class points, Currency 2800 = spec points.
+  **This was a critical bug fixed 2026-03-30** — old validator used total ranks (including granted)
+  and checked total tree points instead of per-gate points, letting the optimizer create builds
+  that the game client rejected at the second gate threshold.
 
 ### Simulation
 - **10k iterations minimum** for APL comparison validity. At 1k, noise gives ±0.5% false positives.

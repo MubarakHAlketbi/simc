@@ -386,3 +386,16 @@ evoker_devastation, evoker_augmentation
 6. **Each fight style is independent.**
    A talent swap that improves Patchwerk might hurt HecticAddCleave.
    Each spec produces TWO optimal builds, not one compromise.
+
+7. **SimC is lenient, the game is strict about talent gates.**
+   SimC accepts any talent string that passes its parser. The game client
+   enforces req_points gates using a currency system — only PURCHASED nodes
+   (not granted) count toward gate thresholds. Always verify talent strings
+   import into the actual game client, not just SimC.
+
+8. **Granted nodes don't count toward gates.**
+   Classes with granted talents (Warrior: 2, Druid/Paladin: 3) effectively
+   have fewer points to meet higher gates. For Warrior (2 granted), the
+   game sees 32 purchasable class points, and 23 must be spent before the
+   second gate — leaving only 9 for the final tier. The optimizer must
+   respect this tighter budget.

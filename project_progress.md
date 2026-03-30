@@ -40,11 +40,12 @@ one for HecticAddCleave (M+/AoE). See `OPTIMIZATION_HOWTO.md` § "Profile File C
 | Spec | PW DPS | HAC DPS | Key HAC talent swaps | _HAC.simc | Commit |
 |------|--------|---------|---------------------|-----------|--------|
 | DK Unholy | 107,884 | 236,310 | different build | YES | 1ea57c2 |
-| DK Frost | 108,269 | 190,946 | +Cryogenic Chamber, +Everfrost | YES | 66cabda |
+|| DK Frost | REVERTED | REVERTED | gate-invalid, needs re-opt | NO | reverted |
 | DK Blood | DONE | SKIP(tank) | — | SKIP | 242530d |
-| DH Havoc | 111,990 | 215,359 | +Glaive Tempest, +Essence Break, +Blind Fury, +Chaos Theory | YES | d976e25 |
-| DH Vengeance | 67,896 | SKIP(tank) | — | SKIP | 8875b96 |
+| DH Havoc | REVERTED | REVERTED | gate-invalid, needs re-opt | NO | reverted |
+| DH Vengeance | REVERTED | REVERTED | gate-invalid, needs re-opt | NO | reverted |
 | DH Devourer | 112,082 | 206,038 | +Eradicate, +Pursuit, Scythe choice swap | YES | e4d8552 |
+| Warrior Prot | 67,574 | 121,997 | +Barbaric Training, +Snap Induction, +Massacre | YES | e50fd77 |
 | Warrior Fury | +3.31%(PW) | +0.44%(HAC) | — | PENDING | test only |
 | *27 other specs* | PENDING | PENDING | — | PENDING | — |
 
@@ -63,8 +64,10 @@ Real DB2 prerequisite edges replaced the heuristic edge builder:
 
 Validation checks per build:
 1. **Point budget**: 34 class + 34 spec purchased (hero auto-granted)
+   - Granted nodes (id_spec_starter) cost 0 currency, don't count toward budget
 2. **Rank validity**: 1..max_ranks per node
-3. **req_points gates**: enough points spent in sub-tree to unlock tier
+3. **req_points gates**: enough PURCHASED points (excl. granted) in nodes with
+   req_points < gate threshold, per sub-tree. Hero nodes exempt. (Fixed 2026-03-30)
 4. **Prerequisite edges**: at least 1 parent selected (OR logic)
 
 Neighbor generator produces ~200+ valid mutations per spec for hill-climbing.
@@ -174,6 +177,9 @@ Full report: `python3 scripts/optimize_all.py --report`
 - Warlock Demo Soul Harvester hero=28 — both hero trees active, runs fine, structurally valid. Not a bug.
 - Wowhead over-budget builds — Prot Paladin Templar 1/3 have 35 class pts. Used valid alternates. Resolved 2026-03-29.
 - Talent validator with real DB2 edges (6,409 edges from TraitEdge.csv). Fixed 2026-03-29.
+- **req_points gate validator was broken** — counted total ranks (incl. granted) against total tree
+  instead of purchased-only ranks against per-gate threshold. Caused 6 invalid profiles that SimC
+  accepted but the game client rejected. Fixed 2026-03-30 with DB2 TraitCond analysis.
 - Hero tree spec filtering — internal nodes wrongly excluded for shared hero trees. Fixed 2026-03-29.
 - 4 broken talent strings (Mage Frost, Prot Paladin — wrong class nodes). Fixed 2026-03-29.
 - DK Blood HAC crash — `player_t::interrupt()` race condition. Fixed.
