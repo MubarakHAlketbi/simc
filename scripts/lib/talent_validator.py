@@ -176,46 +176,35 @@ def validate_build(
                 errors.append(f"{node.name}: invalid choice index {choice_idx} (has {len(node.options)} options)")
 
     # ── 3. req_points gates ──────────────────────────────────────────────
-    # Count points spent per sub-tree (class, spec)
-    class_spent = 0
-    spec_spent = 0
-    for nid, (rank, _) in selections.items():
-        node = tree.nodes.get(nid)
-        if not node:
-            continue
-        if node.tree_index == TREE_CLASS:
-            # Granted nodes still count toward the gate threshold
-            class_spent += rank
-        elif node.tree_index == TREE_SPEC:
-            spec_spent += rank
-
+    # The game requires N points spent in nodes with req_points < N before
+    # unlocking nodes with req_points == N. This is a "points before gate"
+    # check, NOT a "total points" check. Granted nodes count toward gates.
     for nid, (rank, _) in selections.items():
         node = tree.nodes.get(nid)
         if not node or node.req_points == 0:
             continue
-        # Skip selection nodes
+        # Skip selection nodes and hero tree nodes (auto-granted, no gate)
         if nid in tree.selection_nodes:
             continue
+        if node.tree_index == TREE_HERO:
+            continue
 
-        if node.tree_index == TREE_CLASS:
-            if class_spent < node.req_points:
-                # More precise: count points in nodes with LOWER req_points
-                pts_before = sum(
-                    r for n, (r, _) in selections.items()
-                    if tree.nodes.get(n) and tree.nodes[n].tree_index == TREE_CLASS
-                    and tree.nodes[n].req_points < node.req_points
-                )
-                # Include same-tier nodes? No — req_points means "points in earlier tiers"
-                # Actually, req_points just means total points spent, so we use class_spent
-                # But we need to exclude THIS node's own points from the check
-                # The gate is: total class points (excluding this node) >= req_points
-                # Actually in-game it's just: total points spent >= req_points (including granted)
-                pass  # Use the simple check below
+        # Count points spent in nodes with STRICTLY LOWER req_points
+        # within the same sub-tree (class or spec).
+        # Only count class nodes for class gates, spec nodes for spec gates.
+        pts_before = sum(
+            r for n, (r, _) in selections.items()
+            if tree.nodes.get(n)
+            and tree.nodes[n].tree_index == node.tree_index
+            and tree.nodes[n].req_points < node.req_points
+        )
 
-        if node.tree_index == TREE_CLASS and class_spent < node.req_points:
-            errors.append(f"{node.name}: requires {node.req_points} class points, only {class_spent} spent")
-        elif node.tree_index == TREE_SPEC and spec_spent < node.req_points:
-            errors.append(f"{node.name}: requires {node.req_points} spec points, only {spec_spent} spent")
+        if pts_before < node.req_points:
+            tree_name = "class" if node.tree_index == TREE_CLASS else "spec"
+            errors.append(
+                f"{node.name}: requires {node.req_points} {tree_name} points "
+                f"before gate, only {pts_before} spent"
+            )
 
     # ── 4. Prerequisite edges ────────────────────────────────────────────
     for nid in selections:
@@ -271,11 +260,29 @@ def points_spent_in_tree(
     tree: TalentTree,
     tree_index: int,
 ) -> int:
-    """Total points (including granted) spent in a sub-tree. Used for req_points checks."""
+    """Count total points spent in a specific sub-tree."""
     total = 0
     for nid, (rank, _) in selections.items():
         node = tree.nodes.get(nid)
         if node and node.tree_index == tree_index:
+            total += rank
+    return total
+
+
+def points_before_gate(
+    selections: Dict[int, Tuple[int, int]],
+    tree: TalentTree,
+    tree_index: int,
+    gate: int,
+) -> int:
+    """Count points spent in nodes with req_points < gate within a sub-tree.
+
+    The game requires this many points before unlocking nodes at the gate tier.
+    """
+    total = 0
+    for nid, (rank, _) in selections.items():
+        node = tree.nodes.get(nid)
+        if node and node.tree_index == tree_index and node.req_points < gate:
             total += rank
     return total
 
@@ -315,16 +322,21 @@ def _is_removable(
     # Check req_points: would removal break any remaining node's gate?
     rank = selections[nid][0]
     tree_idx = node.tree_index
-    current_pts = points_spent_in_tree(selections, tree, tree_idx)
-    new_pts = current_pts - rank
 
-    for other_nid, (_, _) in selections.items():
-        if other_nid == nid:
-            continue
+    # Build a temporary selection without this node
+    tmp_sel = dict(selections)
+    del tmp_sel[nid]
+
+    # For each remaining selected node that has a gate, check the gate is still met
+    for other_nid in tmp_sel:
         other = tree.nodes.get(other_nid)
-        if other and other.tree_index == tree_idx and other.req_points > 0:
-            if new_pts < other.req_points:
-                return False
+        if not other or other.tree_index != tree_idx or other.req_points == 0:
+            continue
+        if other.tree_index == TREE_HERO:
+            continue
+        pts = points_before_gate(tmp_sel, tree, tree_idx, other.req_points)
+        if pts < other.req_points:
+            return False
 
     return True
 
@@ -356,12 +368,10 @@ def _can_add(
         if sp + rank > SPEC_POINT_BUDGET:
             return False
 
-    # req_points check
-    if node.req_points > 0:
-        current_pts = points_spent_in_tree(selections, tree, node.tree_index)
-        # New node's own points count toward the total, but req_points is checked
-        # against points BEFORE adding this node (you need X points to unlock the tier)
-        if current_pts < node.req_points:
+    # req_points check: need enough points in nodes with lower req_points
+    if node.req_points > 0 and node.tree_index != TREE_HERO:
+        pts = points_before_gate(selections, tree, node.tree_index, node.req_points)
+        if pts < node.req_points:
             return False
 
     # Prerequisite check
