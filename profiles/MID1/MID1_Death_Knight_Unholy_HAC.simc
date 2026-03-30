@@ -5,7 +5,7 @@ level=90
 race=troll
 role=attack
 position=back
-talents=CwPAAAAAAAAAAAAAAAAAAAAAAAYmhZMzYGz2MmZaMzMmZGDAAAAAAAAzMMzAglhZmtZmxMmBsYWMMkBmNGasAgZAYMzMMAzMMzYA
+talents=CwPAAAAAAAAAAAAAAAAAAAAAAAYmZMjZGDz2MzMTzyMzYmZMAAAAAAAAMzgZAwywMz2MzYGzAWMLGGyAzGDNWwAMAMmZGGgZGMjB
 
 # Default consumables
 potion=potion_of_recklessness_2
@@ -110,9 +110,9 @@ actions.racials+=/fireblood,if=variable.cds_active
 actions.racials+=/lights_judgment,if=runic_power<20&rune<2
 actions.single_target=/soul_reaper,if=target.health.pct<=35
 actions.single_target+=/festering_strike,if=talent.festering_scythe&(buff.festering_scythe.up&(buff.festering_scythe.remains<=3|debuff.festering_scythe_debuff.remains<3)|!buff.festering_scythe.up&debuff.festering_scythe_debuff.remains<3)
+actions.single_target+=/scourge_strike,if=buff.lesser_ghoul_ready.stack>=1
 actions.single_target+=/death_coil,if=variable.spending_rp
 actions.single_target+=/festering_strike,if=buff.lesser_ghoul_ready.stack=0
-actions.single_target+=/scourge_strike,if=buff.lesser_ghoul_ready.stack>=1
 actions.single_target+=/putrefy,if=!talent.soul_reaper&cooldown.dark_transformation.remains>12
 actions.single_target+=/death_coil
 actions.trinkets=/use_item,if=variable.trinket_1_buffs&(variable.trinket_priority=1|!variable.trinket_2_buffs|!trinket.2.has_cooldown)&(variable.cds_active),slot=trinket1
