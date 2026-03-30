@@ -6,7 +6,7 @@ race=night_elf
 timeofday=night
 role=spell
 position=back
-talents=CgcBAAAAAAAAAAAAAAAAAAAAAAA2mxMzMzMmxYmBAAAAAAYxMjBzAAAAAAAAwMmhxMzMDzMzYmFzYsotNmZmZ2abmZGADDABmZGMmB
+talents=CgcBAAAAAAAAAAAAAAAAAAAAAAA2mxMzMzwMGzMAAAAAAALmZMYGAAAAAAAAmxMMmZmZMzMzYmFzYsotNmZmZ2abmZGADDABmZGMmB
 
 # Default consumables
 potion=potion_of_recklessness_2
@@ -93,7 +93,7 @@ actions+=/pierce_the_veil,if=buff.moment_of_craving.up&action.collapsing_star.re
 actions+=/voidblade,if=buff.void_metamorphosis_stack.at_max_stacks&talent.devourers_bite&talent.voidsurge
 actions+=/the_hunt,if=buff.void_metamorphosis_stack.at_max_stacks&talent.devourers_bite&talent.voidsurge
 actions+=/metamorphosis,if=buff.eradicate.up|!talent.eradicate|active_enemies=1
-actions+=/call_action_list,name=reaps,if=talent.moment_of_craving&action.reap.souls_consumed>=4&buff.metamorphosis.up&!talent.voidfall&cooldown.void_ray.remains<=gcd.max&((buff.collapsing_star_stacking.stack+action.reap.souls_consumed)<=buff.collapsing_star_stacking.max_stack|!variable.should_use_star)
+actions+=/call_action_list,name=reaps,if=talent.moment_of_craving&action.reap.souls_consumed>=5&buff.metamorphosis.up&!talent.voidfall&cooldown.void_ray.remains<=gcd.max&((buff.collapsing_star_stacking.stack+action.reap.souls_consumed)<=buff.collapsing_star_stacking.max_stack|!variable.should_use_star)
 actions+=/void_ray,if=!buff.eradicate.up|active_enemies=1
 actions+=/reap,if=!talent.voidfall&full_recharge_time<=gcd.max*2&!buff.metamorphosis.up
 actions+=/voidblade,if=buff.moment_of_craving.up&(buff.collapsing_star_stacking.at_max_stacks|buff.collapsing_star_stacking.stack+soul_fragments>=buff.collapsing_star_stacking.max_stack)&talent.devourers_bite
