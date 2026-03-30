@@ -73,7 +73,8 @@ Deprecated (removed from repo):
 | APL overrides (.simc) | `ActionPriorityLists/default/` |
 | Upstream APL reference | `ActionPriorityLists/cloned_default/` |
 | Midnight gear/trinkets | `engine/player/unique_gear_midnight.cpp` |
-| MID1 profiles | `profiles/MID1/MID1_{Class}_{Spec}[_{Variant}].simc` |
+| MID1 profiles (PW) | `profiles/MID1/MID1_{Class}_{Spec}[_{Variant}].simc` |
+| MID1 profiles (HAC) | `profiles/MID1/MID1_{Class}_{Spec}[_{Variant}]_HAC.simc` |
 | Phase 4 baselines | `results/phase4/*.json` (112 files) |
 | DBC talent data | `engine/dbc/generated/trait_data.inc` (3420 entries) |
 | Talent prerequisite edges | `engine/dbc/generated/TraitEdge.csv` (6409 Type 2 edges) |
@@ -293,8 +294,12 @@ Multi-stage filtering (used by both APL optimizer and talent local search):
 A candidate APL/build is accepted only if it improves DPS for the fight style
 being optimized. Each fight style is optimized independently — there is no
 cross-style regression check. Each spec produces TWO optimal builds:
-1. Best Patchwerk talent/APL (single-target raid)
-2. Best HecticAddCleave talent/APL (M+/AoE)
+1. Best Patchwerk talent/APL (single-target raid) → `MID1_{Class}_{Spec}.simc`
+2. Best HecticAddCleave talent/APL (M+/AoE) → `MID1_{Class}_{Spec}_HAC.simc`
+
+Tank specs (Blood, Guardian, Brewmaster, Protection) skip HAC — PW profile only.
+Variant profiles (hero talent alternatives) follow the same `_HAC` suffix rule.
+See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for full naming rules.
 
 ### Common Upstream Superiority Patterns
 1. Resource gating that idles GCDs (Subtlety `energy>60`)

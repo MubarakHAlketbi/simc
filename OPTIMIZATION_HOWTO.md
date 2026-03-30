@@ -220,6 +220,49 @@ Some actions don't work as expected (see `APL_optimization.md` §5):
 
 ---
 
+## Profile File Convention
+
+Each spec produces TWO independent optimal profiles with distinct talent
+builds and APLs — one for Patchwerk (ST raid), one for HecticAddCleave (M+/AoE).
+
+### Naming Rules
+
+| File | Purpose |
+|------|---------|
+| `MID1_{Class}_{Spec}.simc` | PW-optimized (default — raid/ST) |
+| `MID1_{Class}_{Spec}_HAC.simc` | HAC-optimized (M+/AoE) |
+
+Variant profiles (hero talent alternatives) follow the same pattern:
+
+| File | Purpose |
+|------|---------|
+| `MID1_{Class}_{Spec}_{Variant}.simc` | PW-optimized variant |
+| `MID1_{Class}_{Spec}_{Variant}_HAC.simc` | HAC-optimized variant |
+
+### Rules
+
+1. **Every optimized spec gets BOTH files.** The base `.simc` is PW-optimized,
+   the `_HAC.simc` copy has the HAC-optimized talent string and APL.
+2. **Tank specs skip HAC** — they only produce PW profiles (no `_HAC.simc`).
+3. **_HAC profiles are full copies**, not references. They duplicate gear,
+   consumables, and other non-talent lines so they can be simmed standalone.
+4. **Variant profiles get _HAC too** if their talent/APL differs between
+   fight styles. If PW and HAC produce the same talent string, skip _HAC.
+5. **Profile count grows** as optimization proceeds. Track total via
+   `ls profiles/MID1/*.simc | wc -l` and `python3 scripts/validate_all_profiles.py`.
+6. **optimize_spec.py automates this** — it creates both files, applies the
+   right talent string to each, and runs APL optimization independently.
+
+### Example: DK Unholy (first spec fully optimized)
+
+```
+MID1_Death_Knight_Unholy.simc       → PW talents (107,884 DPS)
+MID1_Death_Knight_Unholy_HAC.simc   → HAC talents (236,310 DPS)
+MID1_Death_Knight_Unholy_San'layn.simc → variant (not yet optimized)
+```
+
+---
+
 ## Step 4: Verify and Commit
 
 After making changes, always verify:

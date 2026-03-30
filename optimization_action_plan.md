@@ -20,6 +20,8 @@ TALENT OPTIMIZATION                    APL OPTIMIZATION
 ```
 
 Each spec produces TWO independent optimal talent/APL builds — one for Patchwerk, one for HecticAddCleave.
+File convention: `<Base>.simc` = PW-optimized, `<Base>_HAC.simc` = HAC-optimized.
+Tank specs skip HAC. See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for details.
 
 ---
 

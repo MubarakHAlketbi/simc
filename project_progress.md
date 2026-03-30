@@ -19,17 +19,38 @@ Last updated: 2026-03-29
 
 ## What's Next
 
-Each spec produces TWO independent optimal builds — one for Patchwerk (ST raid), one for HecticAddCleave (M+/AoE).
+Each spec produces TWO independent optimal profiles — one for Patchwerk (ST raid),
+one for HecticAddCleave (M+/AoE). See `OPTIMIZATION_HOWTO.md` § "Profile File Convention".
+
+- **Base `.simc`** = PW-optimized talent + APL
+- **`_HAC.simc`** = HAC-optimized talent + APL (separate file, full standalone copy)
+- **Tank specs** skip HAC (PW only)
 
 | Batch | Description | Status |
 |-------|-------------|--------|
 | 1 | Fresh baselines (56 PW + 56 HAC) | DONE |
 | 2 | APL diff re-run + triage | DONE — 0 real gaps |
-| 3 | APL optimization — warrior_fury tested | PW +0.00%, HAC +0.44% — full run PENDING |
-| 4 | Talent local search — warrior_fury tested | PW +2.79%, HAC pending — full run PENDING |
-| 5 | Re-baseline + cross-validation | PENDING |
-| 6 | Trinket combinatorics (Phase 5) | PENDING |
-| 7 | Final docs + cleanup | PENDING |
+| 3 | Talent + APL optimization (per spec) | IN PROGRESS — see table below |
+| 4 | Re-baseline + cross-validation | PENDING |
+| 5 | Trinket combinatorics (Phase 5) | PENDING |
+| 6 | Final docs + cleanup | PENDING |
+
+### Optimization Progress (Batch 3)
+
+| Spec | PW Talent | PW APL | HAC Talent | HAC APL | _HAC.simc | Commit |
+|------|-----------|--------|------------|---------|-----------|--------|
+| DK Unholy | +DONE | +DONE | +DONE | +DONE | YES | 1ea57c2 |
+| DK Frost | +7.12% | no change | done | done | MISSING | 8875b96 |
+| DK Blood | +DONE | +DONE | done | done | SKIP(tank) | 242530d |
+| DH Havoc | +14.28% | no change | done | done | MISSING | 8875b96 |
+| DH Vengeance | +3.30% | no change | done | done | SKIP(tank) | 8875b96 |
+| DH Devourer | +2.85% | +0.62% | done | done | MISSING | 8875b96 |
+| Warrior Fury | +3.31%(PW) | +0.44%(HAC) | - | - | MISSING | test only |
+| *27 other specs* | PENDING | PENDING | PENDING | PENDING | PENDING | - |
+
+**NOTE:** DK Frost, DH Havoc, DH Devourer were optimized for both fight styles
+but _HAC.simc files were NOT created — only the base profile was updated with
+the PW-best talent string. These need _HAC.simc files with HAC-optimized talents.
 
 ---
 
