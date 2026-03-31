@@ -313,7 +313,7 @@ Variant profiles (hero talent alternatives) follow the same pattern:
 
 1. **Every optimized spec gets BOTH files.** The base `.simc` is PW-optimized,
    the `_HAC.simc` copy has the HAC-optimized talent string and APL.
-2. **Tank specs skip HAC** — they only produce PW profiles (no `_HAC.simc`).
+2. **All specs get both profiles** — including tanks. HAC profiles are optimized for M+/AoE.
 3. **_HAC profiles are full copies**, not references. They duplicate gear,
    consumables, and other non-talent lines so they can be simmed standalone.
 4. **Variant profiles get _HAC too** if their talent/APL differs between

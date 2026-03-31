@@ -8,7 +8,7 @@ Each spec has TWO independent optimal builds:
 - **Patchwerk** (single-target raid boss)
 - **HecticAddCleave** (M+/AoE/target switching)
 
-Tank specs (Blood, Guardian, Brewmaster, Protection x2, Vengeance) skip HAC if it produces 0 DPS.
+All specs get both PW and HAC profiles, including tanks.
 
 ---
 

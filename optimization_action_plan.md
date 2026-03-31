@@ -41,7 +41,7 @@ PHASE 0: ENGINE VERIFICATION         PHASE 1: TALENT OPT           PHASE 2: APL 
 
 Each spec produces TWO independent optimal talent/APL builds — one for Patchwerk, one for HecticAddCleave.
 File convention: `<Base>.simc` = PW-optimized, `<Base>_HAC.simc` = HAC-optimized.
-Tank specs skip HAC. See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for details.
+All specs get both profiles, including tanks. See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for details.
 
 ---
 

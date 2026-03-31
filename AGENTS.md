@@ -456,7 +456,7 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
 - **10k iterations minimum** for comparison validity. At 1k, noise gives ±0.5% false positives.
 - **"Identical .simc files" ≠ identical DPS** — the C++ APL generator can differ from .simc files.
 - **C++ and .simc APLs drift apart** — sync the C++ generator after .simc improvements.
-- **Tank specs in HecticAddCleave** — may produce 0 DPS or crash. PW-only for tanks.
+- **Tank specs in HecticAddCleave** — FIXED. All 6 tank specs sim cleanly in HAC. All specs get both PW and HAC profiles.
 - **DK Blood HAC crash** — FIXED. `consumption_release` race condition in `player_t::interrupt()`.
 - **Druid Balance upstream APL = 0 DPS** — incompatible with Midnight. Verify before declaring "better".
 - **Talent builds dominate APL optimization** — +3-6% from talents vs +0-1% from APL tuning.
@@ -475,6 +475,6 @@ Each spec produces TWO optimal builds:
 1. Best Patchwerk talent/APL → `MID1_{Class}_{Spec}.simc`
 2. Best HecticAddCleave talent/APL → `MID1_{Class}_{Spec}_HAC.simc`
 
-Tank specs (Blood, Guardian, Brewmaster, Protection) skip HAC — PW profile only.
+All specs get both PW and HAC profiles, including tanks.
 Variant profiles (hero talent alternatives) follow the same `_HAC` suffix rule.
 See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for full naming rules.
