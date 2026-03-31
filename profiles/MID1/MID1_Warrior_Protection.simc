@@ -5,7 +5,7 @@ level=90
 race=mechagnome
 role=tank
 position=front
-talents=CkEAAAAAAAAAAAAAAAAAAAAAA02AAAzMjZmZmZmZ2MGzYMmphZGWGzMzwMmZAAAAwyAwMGgB2glFjGzAY2iZ2gZYGmZbAwMDAADwA
+talents=CkEAAAAAAAAAAAAAAAAAAAAAA02AAAzMjZmZmZmZ2MGzYMmphZGWGzMzwMmZAAAAwyAwMGgB2glFjGzAY2iZ2gZYGmZZAwMDAADwA
 
 # Default consumables
 potion=draught_of_rampant_abandon_2
