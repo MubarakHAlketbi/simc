@@ -10547,7 +10547,7 @@ void rogue_t::create_buffs()
       talent.subtlety.shadow_blades->effectN( 1 ).percent() +
       set_bonuses.mid1_subtlety_4pc->effectN( 2 ).percent(), 1 );
     // Extend buff duration by 4s from effectN(1)
-    buffs.shadow_blades->modify_duration( timespan_t::from_seconds( set_bonuses.mid1_subtlety_4pc->effectN( 1 ).base_value() ) );
+    buffs.shadow_blades->modify_duration( set_bonuses.mid1_subtlety_4pc->effectN( 1 ).time_value() );
   }
 
   buffs.shadow_dance = new buffs::shadow_dance_t( this );
