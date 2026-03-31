@@ -1,15 +1,21 @@
 # How to Optimize Talents and APL — Step by Step
 
-This guide walks through the exact commands to improve a spec's DPS by
-optimizing its talent build and action priority list (APL). Each fight
-style (Patchwerk for ST raid, HecticAddCleave for M+/AoE) is optimized
-independently — a spec produces TWO optimal builds.
+This guide covers the optimization phase of SimC maintenance. Optimization is
+ONE activity among many — see `AGENTS.md` for the full scope (upstream sync,
+engine fixes, bug hunting, feature implementation, testing, APL work, profiles).
+
+**Optimization is only meaningful when the engine is correct.** Always complete
+Steps 0a-0c below before optimizing. If upstream has pending engine fixes, or
+if proc chains / scaling / tier set math haven't been verified, optimization
+results will be wrong.
+
+Each fight style (Patchwerk for ST raid, HecticAddCleave for M+/AoE) is
+optimized independently — a spec produces TWO optimal builds.
 
 **Related docs:**
-- `APL_optimization.md` — APL syntax reference, expression tokens, rules,
-  common mistakes. Read this before making manual APL edits.
-- `optimization_action_plan.md` — Architecture of the automated optimizer,
-  data sources, constraint details, compute estimates.
+- `AGENTS.md` — Full maintenance scope, session workflow, engine verification methods
+- `APL_optimization.md` — APL syntax reference, expression tokens, rules, common mistakes
+- `optimization_action_plan.md` — Optimizer architecture, data sources, constraints
 
 ---
 
@@ -24,6 +30,70 @@ cp build/simc engine/simc
 # Verify build works
 ./engine/simc profiles/MID1/MID1_Warrior_Fury.simc iterations=1 output=/dev/null
 ```
+
+---
+
+## Step 0: Upstream Sync + Engine Verification (MANDATORY)
+
+**Do this BEFORE any optimization.** Optimization on a broken engine produces
+sharper wrong answers. We learned this the hard way — see `FORK_VS_UPSTREAM_REVIEW.md`.
+
+### 0a. Sync upstream
+
+```bash
+git fetch upstream midnight
+git log --oneline HEAD..upstream/midnight | head -30   # review new commits
+git rebase upstream/midnight
+cmake --build build -j$(nproc) && cp build/simc engine/simc
+python3 scripts/validate_all_profiles.py               # must still pass
+```
+
+### 0b. Review upstream changes for the spec you're optimizing
+
+```bash
+# What changed in the class module?
+git log --oneline upstream/midnight ^HEAD -- engine/class_modules/sc_{class}.cpp
+# What changed in the APL generator?
+git log --oneline upstream/midnight ^HEAD -- engine/class_modules/apl/apl_{class}.cpp
+# What changed in DBC data?
+git log --oneline upstream/midnight ^HEAD -- engine/dbc/generated/
+```
+
+If upstream has engine fixes for your spec (proc chains, scaling, tier set math),
+your previous baselines are INVALID. Re-run Step 1 after syncing.
+
+### 0c. Verify engine correctness for your spec
+
+```bash
+CLASS=warrior  # change to your class
+SPEC=MID1_Warrior_Fury
+
+# Check for TODOs/FIXMEs
+grep -n 'TODO\|FIXME\|HACK' engine/class_modules/sc_${CLASS}.cpp | head -20
+
+# Multi-target sweep (catches AoE scaling bugs invisible to PW+HAC tests)
+for N in 1 3 5 10; do
+  ./engine/simc profiles/MID1/${SPEC}.simc fight_style=Patchwerk \
+    desired_targets=$N iterations=1000 threads=16 \
+    json2=/tmp/${SPEC}_${N}t.json output=/dev/null
+  python3 -c "
+import json
+with open('/tmp/${SPEC}_${N}t.json') as f:
+    dps = json.load(f)['sim']['players'][0]['collected_data']['dps']['mean']
+print(f'  {N} targets: {dps:,.0f} DPS ({dps/$N if $N > 0 else 0:,.0f} per target)')
+"
+done
+
+# Tier set on/off comparison
+./engine/simc profiles/MID1/${SPEC}.simc iterations=3000 threads=16 \
+  json2=/tmp/${SPEC}_tier_on.json output=/dev/null
+./engine/simc profiles/MID1/${SPEC}.simc iterations=3000 threads=16 \
+  set_bonus=tier33_2pc=0 set_bonus=tier33_4pc=0 \
+  json2=/tmp/${SPEC}_tier_off.json output=/dev/null
+```
+
+If per-target DPS scales suspiciously (e.g., ST ability damage doubles at 2 targets)
+or tier set provides 0% gain, there's likely an engine bug. Check upstream first.
 
 ---
 
@@ -362,6 +432,14 @@ evoker_devastation, evoker_augmentation
 
 ## Key Lessons from Testing
 
+0. **Sync upstream BEFORE optimizing. Engine correctness > optimization.**
+   We spent 331 commits optimizing APLs and talents while upstream fixed
+   181 commits of engine bugs (proc chains, segfaults, scaling formulas,
+   tier set math). Our baselines were precise measurements of INCORRECT
+   simulations. The Enhancement 4PC mastery bug halved the value — every
+   Enhancement optimization result was based on wrong numbers.
+   See `FORK_VS_UPSTREAM_REVIEW.md` for the full post-mortem.
+
 1. **Talent optimization gives bigger gains than APL changes.**
    Warrior Fury: +3.31% from talents, +0.44% from APL.
    Always optimize talents before APL.
@@ -399,3 +477,16 @@ evoker_devastation, evoker_augmentation
    game sees 32 purchasable class points, and 23 must be spent before the
    second gate — leaving only 9 for the final tier. The optimizer must
    respect this tighter budget.
+
+9. **"Implemented" ≠ "correct". "Non-zero DPS" ≠ "correct DPS".**
+   Our tier set audit declared "33/33 implemented" based on DBC entry
+   existence and non-zero baselines. But the Enhancement 4PC was implemented
+   with the WRONG mastery value. A baseline is a MEASUREMENT, not a
+   VALIDATION. Always verify behavior (mechanic + numeric values) against
+   tooltips, not just existence.
+
+10. **APL optimization is the 10% above water. Engine code is the 90% below.**
+    Our APL optimizer has 4 mutation types, multi-stage filtering, and
+    multi-target evaluation. But it cannot detect that a proc chain is
+    broken, a scaling formula is wrong, or a timer is missing. C++ code
+    review and upstream sync are the only ways to catch engine-layer bugs.

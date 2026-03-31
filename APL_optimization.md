@@ -3,6 +3,27 @@
 
 ---
 
+## 0. CONTEXT: APL WORK WITHIN SimC MAINTENANCE
+
+APL development is one part of maintaining SimulationCraft. The full scope includes
+upstream sync, engine fixes (C++ proc chains, scaling formulas, event sequencing),
+bug hunting, feature implementation, testing, and profiles. See `AGENTS.md`.
+
+**APL work is meaningless if the engine's damage formulas are wrong.** Before
+writing or optimizing APLs, verify the engine is correct for that spec:
+1. Upstream is synced — no pending engine fixes
+2. Proc chains match tooltips — cross-reference sc_{class}.cpp against Wowhead
+3. Tier set behavior is correct — not just "implemented" but right values
+4. Scaling is sane — multi-target sweep shows reasonable per-target DPS
+
+The APL layer can reorder actions, adjust thresholds, and change routing. It
+CANNOT detect or fix engine-layer problems like broken proc chains, wrong scaling
+formulas, incorrect tier set math, or crash bugs. Those require C++ code review
+and engine work. See `FORK_VS_UPSTREAM_REVIEW.md` for examples of engine bugs
+that our APL-focused workflow missed.
+
+---
+
 ## 1. ANATOMY OF AN APL
 
 An APL (Action Priority List) is an ordered list of instructions evaluated top-to-bottom
@@ -287,6 +308,14 @@ and the automated improvement loop design. Both are now implemented:
 
 ## 9. QUICK VALIDATION CHECKLIST (before committing any APL change)
 
+  ### Engine Correctness (verify BEFORE APL work — see AGENTS.md)
+  [ ] Upstream is synced (no pending engine fixes for this class)
+  [ ] C++ class module reviewed (no unresolved TODO/FIXME/NYI)
+  [ ] Multi-target sweep (1,3,5,10) shows sane scaling
+  [ ] Tier set on/off shows tooltip-matching DPS delta
+  [ ] Proc rates in JSON match expected RPPM/ICD from tooltips
+
+  ### APL Changes (after making changes)
   [ ] 1-iteration sim completes with no crash or assertion failure
   [ ] All actions appear in sim report (zero actions with 0 executes and no condition)
   [ ] action_dpet table has no unexpected zeros for normally-cast spells

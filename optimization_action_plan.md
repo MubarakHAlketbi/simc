@@ -1,27 +1,70 @@
 # Optimization Action Plan
 
-Updated: 2026-03-29
+Updated: 2026-03-31
+
+## Context
+
+This document covers the optimization phase of SimC maintenance. Optimization is
+ONE activity among many — see `AGENTS.md` for the full scope (upstream sync,
+engine fixes, bug hunting, feature implementation, testing, APL work, profiles).
+
+**Optimization is only meaningful when the engine is correct.** Before running
+any optimization:
+
+1. **Upstream is synced** — no pending engine fixes or DBC updates
+2. **Engine is verified** — proc chains, scaling formulas, tier set math checked
+3. **Baselines are fresh** — reflect current engine state
+
+Our 2026-03-29 review found 181 upstream commits missing, including proc chain
+fixes, scaling bugs, tier set math errors, crash fixes, and event sequencing bugs.
+All optimization results from before the upstream sync are PROVISIONAL.
+See `FORK_VS_UPSTREAM_REVIEW.md`.
+
+---
 
 ## Architecture
 
-Two independent optimization loops per spec, each producing results per fight style:
+Three phases per spec, in strict order:
 
 ```
-TALENT OPTIMIZATION                    APL OPTIMIZATION
-  Wowhead builds (seeds)                Extract current APL
-       |                                     |
-  Screen at 1k iter per style           Generate mutations (swap/sweep/route)
-       |                                     |
-  Local search (single-node swaps)      Multi-stage eval (300→3k→10k iter)
-       |                                     |
-  Hill-climb to convergence             Accept best per style
-       |                                     |
-  Confirm at 10k iter                   Confirm at 10k iter
+PHASE 0: ENGINE VERIFICATION         PHASE 1: TALENT OPT           PHASE 2: APL OPT
+  Upstream sync                        Wowhead seeds                  Extract current APL
+       |                                    |                              |
+  Rebuild + re-validate                Screen at 1k iter             Generate mutations
+       |                                    |                              |
+  C++ code review (proc chains)        Local search (swaps)          Multi-stage eval
+       |                                    |                              |
+  Multi-target sweep                   Hill-climb                    Accept best
+       |                                    |                              |
+  Tier set value check                 Confirm at 10k iter           Confirm at 10k iter
 ```
 
 Each spec produces TWO independent optimal talent/APL builds — one for Patchwerk, one for HecticAddCleave.
 File convention: `<Base>.simc` = PW-optimized, `<Base>_HAC.simc` = HAC-optimized.
 Tank specs skip HAC. See `OPTIMIZATION_HOWTO.md` § "Profile File Convention" for details.
+
+---
+
+## Phase 0 — Engine Verification (NEW — added 2026-03-31)
+
+Before optimizing a spec, verify the engine is correct for that spec:
+
+| Check | How | What It Catches |
+|-------|-----|-----------------|
+| Upstream sync | `git fetch upstream && git log HEAD..upstream/midnight` | All engine-layer fixes |
+| C++ TODO/FIXME | `grep -n 'TODO\|FIXME' sc_{class}.cpp` | Known incomplete implementations |
+| Multi-target sweep | Sim at 1,3,5,10 targets, compare per-target DPS | AoE scaling bugs (Void Ray) |
+| Tier set delta | Sim with/without tier, compare vs tooltip | Tier math errors (Enh 4PC halving) |
+| Proc rate check | Compare JSON proc counts vs expected RPPM/ICD | Broken proc chains (Star Cascade) |
+
+**If any check fails, fix the engine BEFORE optimizing.** Optimizing on broken
+simulation math produces sharper wrong answers.
+
+---
+
+## Phase 1 — Talent Optimization
+
+Two independent optimization loops per spec, each producing results per fight style.
 
 ---
 
@@ -168,8 +211,10 @@ All 33 specs × 2 styles: ~8 hours. With 2x parallelism: ~4 hours.
 
 ## Success Criteria
 
-1. Every spec's PW-best talent build ≥ best Wowhead build for PW
-2. Every spec's HAC-best talent build ≥ best Wowhead build for HAC
-3. All talent strings pass `validate_all_profiles.py` (56/56)
-4. All generated builds pass SimC smoke test
-5. Pipeline runs end-to-end: `python3 scripts/optimize_all.py --talent --apl --all`
+0. **Engine is current** — upstream synced, no pending class fixes, build number matches
+1. **Engine is correct** — multi-target sweep + tier set delta + proc rate checks pass for all specs
+2. Every spec's PW-best talent build ≥ best Wowhead build for PW
+3. Every spec's HAC-best talent build ≥ best Wowhead build for HAC
+4. All talent strings pass `validate_all_profiles.py`
+5. All generated builds pass SimC smoke test
+6. Pipeline runs end-to-end: `python3 scripts/optimize_all.py --talent --apl --all`
