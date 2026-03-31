@@ -5,7 +5,7 @@ level=90
 race=troll
 role=spell
 position=back
-talents=C4DAAAAAAAAAAAAAAAAAAAAAAMzwYxMzsYZmZoZmZAAAYAAQAzMzssMzELAAsNjZmxsZWmZmxMjxYmZMWYGzYGAgBAAwMLAgZAwwA
+talents=C4DAAAAAAAAAAAAAAAAAAAAAAMzwYxMzsYZmZoZmZAAAYAAQAzMzssMzELAAsNjZmxYZWmZmxMjxwMzMWYGzYGAgBAAwMLAgZAwwA
 
 # Default consumables
 potion=lights_potential_2
