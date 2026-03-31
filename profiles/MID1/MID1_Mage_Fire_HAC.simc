@@ -5,7 +5,7 @@ level=90
 race=orc
 role=spell
 position=ranged_back
-talents=C8DAAAAAAAAAAAAAAAAAAAAAAYmFjFzMzCjhMzMDAAADAYmZaWWWmBAYzMzYbMzMDAAAAAwiZmZmBAAjZYMzMzMbDAzMkZGjBzwA
+talents=C8DAAAAAAAAAAAAAAAAAAAAAAYmFDzMzsMYIzMzAAAwAAmZmmlllZAA2MzM2GzMzAAAAAAsYmZmZAAwYGGzMzMz2AwMDZmxYwMMA
 
 # Default consumables
 potion=lights_potential_2
