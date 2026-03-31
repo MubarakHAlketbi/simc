@@ -2533,7 +2533,7 @@ void swirling_sands( special_effect_t& effect )
       add_stat( STAT_CRIT_RATING, power.value( 1 ) );
     }
 
-    void extend_duration( player_t* p, timespan_t extra_seconds ) override
+    void extend_duration( timespan_t extra_seconds ) override
     {
       if ( !check() || cooldown -> down() )
         return;
@@ -2542,7 +2542,7 @@ void swirling_sands( special_effect_t& effect )
       if ( extra_seconds == timespan_t::zero() )
         return;
 
-      stat_buff_t::extend_duration( p, extra_seconds );
+      stat_buff_t::extend_duration( extra_seconds );
       current_extension += extra_seconds;
       cooldown -> start();
     }
@@ -2578,7 +2578,7 @@ void swirling_sands( special_effect_t& effect )
 
     void execute( action_t* a, action_state_t* ) override
     {
-      proc_buff -> extend_duration( a -> player, extension );
+      proc_buff -> extend_duration( extension );
     }
   };
 
@@ -2943,8 +2943,8 @@ void meticulous_scheming( special_effect_t& effect )
   secondary->spell_id = 273685;
   secondary->type = effect.type;
   secondary->source = effect.source;
-  secondary->proc_flags_ = PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_HEAL |
-                           PF_NONE_SPELL | PF_MAGIC_SPELL | PF_MAGIC_HEAL;
+  secondary->proc_flags_ = PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_HELPFUL |
+                           PF_NONE_HARMFUL | PF_MAGIC_SPELL | PF_MAGIC_HEAL;
   secondary->proc_flags2_ = PF2_ALL_CAST;
   effect.player -> special_effects.push_back( secondary );
 
@@ -2978,8 +2978,8 @@ void meticulous_scheming( special_effect_t& effect )
   effect.custom_buff = base_buff;
   // Spell data has no proc flags for the base spell, so make something up that would resemble
   // "spells and abilities"
-  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_HEAL |
-                       PF_NONE_SPELL | PF_MAGIC_SPELL | PF_MAGIC_HEAL | PF_PERIODIC;
+  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_HELPFUL |
+                       PF_NONE_HARMFUL | PF_MAGIC_SPELL | PF_MAGIC_HEAL | PF_PERIODIC;
 
   new dbc_proc_callback_t( effect.player, effect );
 }
@@ -3063,7 +3063,7 @@ void ricocheting_inflatable_pyrosaw( special_effect_t& effect )
   effect.execute_action = unique_gear::create_proc_action<rip_t>( "r.i.p.",
       effect, power );
   // Just the DPS effect for now
-  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED_ABILITY | PF_NONE_SPELL | PF_MAGIC_SPELL |
+  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED_ABILITY | PF_NONE_HARMFUL | PF_MAGIC_SPELL |
     PF_PERIODIC;
 
   new dbc_proc_callback_t( effect.player, effect );
@@ -3964,7 +3964,7 @@ void the_crucible_of_flame( special_effect_t& effect )
   action->dot_max_stack +=
     as<int>(essence.spell_ref( 3U, essence_spell::UPGRADE, essence_type::MINOR ).effectN( 1 ).base_value());
 
-  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED_ABILITY | PF_NONE_SPELL | PF_MAGIC_SPELL | PF_PERIODIC;
+  effect.proc_flags_ = PF_MELEE_ABILITY | PF_RANGED_ABILITY | PF_NONE_HARMFUL | PF_MAGIC_SPELL | PF_PERIODIC;
   effect.type = SPECIAL_EFFECT_EQUIP;
   effect.execute_action = action;
 
@@ -4133,7 +4133,7 @@ struct memory_of_lucid_dreams_t : public azerite_essence_major_t
 
     if ( ! player -> in_combat && precombat_time > 0 )
     {
-      player -> buffs.memory_of_lucid_dreams -> extend_duration( player, timespan_t::from_seconds( -precombat_time ) );
+      player -> buffs.memory_of_lucid_dreams -> extend_duration( timespan_t::from_seconds( -precombat_time ) );
       cooldown -> adjust( timespan_t::from_seconds( -precombat_time ), false );
 
       sim -> print_debug( "{} used Memory of Lucid Dreams in precombat with precombat time = {}, adjusting duration and remaining cooldown.",
@@ -5315,7 +5315,7 @@ struct worldvein_resonance_t : public azerite_essence_major_t
 
     if ( ! player -> in_combat && precombat_time > 0 )
     {
-      worldvein_resonance -> extend_duration( player, timespan_t::from_seconds( -precombat_time ) );
+      worldvein_resonance -> extend_duration( timespan_t::from_seconds( -precombat_time ) );
       cooldown -> adjust( timespan_t::from_seconds( -precombat_time ), false );
 
       sim -> print_debug( "{} used Worldvein Resonance in precombat with precombat time = {}, adjusting duration and remaining cooldown.",

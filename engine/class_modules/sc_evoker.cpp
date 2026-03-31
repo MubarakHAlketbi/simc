@@ -31,8 +31,6 @@ static const spell_data_t* resolve_spell_data( V data )
     return &data->data();
   else
     static_assert( static_false<V>, "Could not resolve find_effect argument to spell data." );
-
-  return nullptr;
 }
 
 // finds a spell effect
@@ -62,8 +60,6 @@ static const spelleffect_data_t& find_effect( T val, U type, Ts&&... args )
     else
       return spell_data_t::find_spelleffect( *data, *affected, E_APPLY_AURA );
   }
-
-  return spelleffect_data_t::nil();
 }
 
 // Forward declarations
@@ -372,7 +368,7 @@ struct simplified_player_t : public player_t
   // Options
   struct options_t
   {
-    int item_level      = 240;
+    int item_level      = 265;
     std::string variant = "default";
   } option;
 
@@ -1089,6 +1085,7 @@ struct evoker_t : public player_t
     int upheaval_default_rank                                  = 0;
     bool allow_precombat_buffs_for_debug                       = false;
     int estimated_raid_dps_allies                              = 13;
+    bool patchwerk_in_dungeon                                  = false;
   } option;
 
   // Action pointers
@@ -2146,7 +2143,7 @@ struct evoker_pet_t : public pet_t
     was_empowering = false;
   }
 
-  void moving()
+  void moving() override
   {
     // If we are mid-empower and forced to move, we don't want player_t::interrupt() to schedule_ready as the release
     // action will handle that for us. We set the bool here and override player_t::schedule_ready to return if bool is
@@ -2157,7 +2154,7 @@ struct evoker_pet_t : public pet_t
     player_t::moving();
   }
 
-  void analyze( sim_t& sim )
+  void analyze( sim_t& sim ) override
   {
     // For proper DPET analysis, we need to treat empowered spell stat objs as non-channelled so the dot ticks from fire
     // breath do not get summed up into total execute time. All empowered spells have a release spell that is pushed
@@ -2172,7 +2169,7 @@ struct evoker_pet_t : public pet_t
     player_t::analyze( sim );
   }
 
-  void schedule_ready( timespan_t delta_time, bool waiting )
+  void schedule_ready( timespan_t delta_time, bool waiting ) override
   {
     if ( was_empowering )
       return;
@@ -3006,7 +3003,7 @@ struct essence_base_t : public BASE
     {
       if ( BASE::p()->buff.time_convergence_intellect->check() )
       {
-        BASE::p()->buff.time_convergence_intellect->extend_duration( BASE::player, time_convergence_extension );
+        BASE::p()->buff.time_convergence_intellect->extend_duration( time_convergence_extension );
       }
     }
 
@@ -3018,7 +3015,7 @@ struct essence_base_t : public BASE
         auto td = BASE::p()->get_target_data( p_ );
         if ( td->debuffs.bombardments->check() )
         {
-          td->debuffs.bombardments->extend_duration( BASE::player, extended_battle_duration );
+          td->debuffs.bombardments->extend_duration( extended_battle_duration );
         }
       }
     }
@@ -3124,7 +3121,7 @@ struct empowered_release_t : public empowered_base_t<BASE>
         target_list.push_back( t );
       }
 
-      if ( target_list.size() <= n_targets() )
+      if ( as<int>( target_list.size() ) <= n_targets() )
         return target_list.size();
 
       auto shifting_point = std::partition( target_list.begin(), target_list.end(), [ & ]( player_t* t ) {
@@ -3990,7 +3987,7 @@ struct duplicate_t : evoker_pet_t
 
   void reschedule_actor()
   {
-    if ( executing || custom_execution_pointer && custom_execution_pointer->execute_event || is_sleeping() ||
+    if ( executing || ( custom_execution_pointer && custom_execution_pointer->execute_event ) || is_sleeping() ||
          buffs.stunned->check() )
       return;
 
@@ -4357,7 +4354,7 @@ struct empowered_release_spell_t : public empowered_release_t<evoker_spell_t>
 
     if ( p()->talent.animosity.ok() && p()->buff.dragonrage->check() )
     {
-      p()->buff.dragonrage->extend_duration( p(), animosity_extend * p()->buff.dragonrage->check_value() );
+      p()->buff.dragonrage->extend_duration( animosity_extend * p()->buff.dragonrage->check_value() );
       p()->buff.dragonrage->current_value *= animosity_stack_mul;
     }
 
@@ -4371,9 +4368,9 @@ struct empowered_release_spell_t : public empowered_release_t<evoker_spell_t>
     if ( rng().roll( p()->sets->set( EVOKER_DEVASTATION, DF1, B4 )->effectN( 2 ).percent() ) )
     {
       if ( p()->buffs.bloodlust->check() )
-        p()->buffs.bloodlust->extend_duration( p(), extend_tier29_4pc );
+        p()->buffs.bloodlust->extend_duration( extend_tier29_4pc );
       else if ( p()->buff.fury_of_the_aspects->check() )
-        p()->buff.fury_of_the_aspects->extend_duration( p(), extend_tier29_4pc );
+        p()->buff.fury_of_the_aspects->extend_duration( extend_tier29_4pc );
       else
         p()->buff.fury_of_the_aspects->trigger( extend_tier29_4pc );
     }
@@ -4507,14 +4504,14 @@ public:
 
     if ( p()->buff.ebon_might_self_buff->check() )
     {
-      p()->buff.ebon_might_self_buff->extend_duration( p(), extend );
+      p()->buff.ebon_might_self_buff->extend_duration( extend );
     }
 
     for ( auto ally : p()->allies_with_my_ebon )
     {
       auto ebon = p()->get_target_data( ally )->buffs.ebon_might;
 
-      ebon->extend_duration( p(), extend );
+      ebon->extend_duration( extend );
     }
 
     if ( p()->talent.duplicate2.enabled() && p()->pets.duplicate_pet.n_active_pets() > 0 )
@@ -4612,7 +4609,7 @@ public:
       auto time = ebon_time;
       if ( crit )
         time *= 1 + p()->talent.sands_of_time->effectN( 4 ).percent();
-      buff->extend_duration( p(), time );
+      buff->extend_duration( time );
     }
   }
 
@@ -5954,9 +5951,9 @@ struct deep_breath_t : public evoker_spell_t
       {
         make_event( sim, player->gcd_ready - sim->current_time() - 1_ms, [ this ] {
           if ( p()->buffs.bloodlust->check() )
-            p()->buffs.bloodlust->extend_duration( p(), plot_duration );
+            p()->buffs.bloodlust->extend_duration( plot_duration );
           else if ( p()->buff.fury_of_the_aspects->check() )
-            p()->buff.fury_of_the_aspects->extend_duration( p(), plot_duration );
+            p()->buff.fury_of_the_aspects->extend_duration( plot_duration );
           else
           {
             p()->buff.fury_of_the_aspects->trigger( plot_duration );
@@ -7156,7 +7153,7 @@ public:
     if ( p( s )->close_as_clutchmates )
       m *= 1 + p( s )->spec.close_as_clutchmates->effectN( 1 ).percent();
 
-    size_t player_count = p( s )->allies_with_my_ebon.size();
+    int player_count = as<int>( p( s )->allies_with_my_ebon.size() );
 
     // Depower Breath of Eons in Raid Encounters
     if ( p( s ) == s->action->player && player_count > p( s )->spec.ebon_might->effectN( 3 ).base_value() &&
@@ -7265,7 +7262,7 @@ public:
       for ( auto ally : p()->allies_with_my_prescience )
       {
         p()->get_target_data( ally )->buffs.prescience->extend_duration(
-            p(), ally == s->target ? -gcd() : -cooldown->cooldown_duration( cooldown ) );
+            ally == s->target ? -gcd() : -cooldown->cooldown_duration( cooldown ) );
       }
     }
 
@@ -7607,9 +7604,9 @@ struct breath_of_eons_t : public evoker_spell_t
       {
         make_event( sim, player->gcd_ready - sim->current_time() - 1_ms, [ this ] {
           if ( p()->buffs.bloodlust->check() )
-            p()->buffs.bloodlust->extend_duration( p(), plot_duration );
+            p()->buffs.bloodlust->extend_duration( plot_duration );
           else if ( p()->buff.fury_of_the_aspects->check() )
-            p()->buff.fury_of_the_aspects->extend_duration( p(), plot_duration );
+            p()->buff.fury_of_the_aspects->extend_duration( plot_duration );
           else
           {
             p()->buff.fury_of_the_aspects->trigger( plot_duration );
@@ -9099,7 +9096,7 @@ void evoker_t::create_permanent_actors()
 
     std::vector<std::pair<std::string_view, std::string_view>> bobs;
 
-    if ( sim->fight_style == FIGHT_STYLE_DUNGEON_ROUTE || sim->fight_style == FIGHT_STYLE_DUNGEON_SLICE )
+    if ( sim->fight_style == FIGHT_STYLE_DUNGEON_ROUTE || sim->fight_style == FIGHT_STYLE_DUNGEON_SLICE || option.patchwerk_in_dungeon )
     {
       option.force_clutchmates = "yes";
       close_as_clutchmates     = true;
@@ -10078,7 +10075,7 @@ void evoker_t::create_buffs()
   buff.rising_fury = MBF( talent.rising_fury_1.ok(), this, "rising_fury", talent.rising_fury_buff )
                          ->set_duration( 0_s )
                          ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT )
-                         ->add_stack_change_callback( [ this ]( buff_t* b, int old, int n ) {
+                         ->add_stack_change_callback( [ this ]( buff_t*, int old, int n ) {
                            if ( old && !n && talent.rising_fury_3.ok() )
                            {
                              buff.risen_fury->trigger( old, old * buff.risen_fury->buff_duration() );
@@ -10095,7 +10092,7 @@ void evoker_t::create_buffs()
 
   if ( talent.rising_fury_1.enabled() )
   {
-    buff.dragonrage->add_stack_change_callback( [ this ]( buff_t* b, int old, int n ) {
+    buff.dragonrage->add_stack_change_callback( [ this ]( buff_t*, int old, int n ) {
       if ( n && !old )
       {
         buff.rising_fury->trigger();
@@ -10351,6 +10348,7 @@ void evoker_t::create_options()
   add_option( opt_int( "evoker.upheaval_default_rank", option.upheaval_default_rank, 0, 5 ) );
   add_option( opt_bool( "evoker.allow_precombat_buffs_for_debug", option.allow_precombat_buffs_for_debug ) );
   add_option( opt_int( "evoker.estimated_raid_dps_allies", option.estimated_raid_dps_allies ) );
+  add_option( opt_bool( "evoker.patchwerk_in_dungeon", option.patchwerk_in_dungeon ) );
 }
 
 void evoker_t::analyze( sim_t& sim )
@@ -10777,7 +10775,7 @@ void evoker_t::bounce_naszuro( player_t* s, timespan_t remains = timespan_t::min
   get_target_data( p )->buffs.unbound_surge->trigger( remains );
 }
 
-void evoker_t::spawn_mote_of_possibility( player_t* prospective_player, mote_buffs_e mote_buff, timespan_t delay )
+void evoker_t::spawn_mote_of_possibility( player_t* prospective_player, mote_buffs_e mote_buff, timespan_t /* delay */ )
 {
   player_t* target = prospective_player;
 
@@ -10813,7 +10811,7 @@ void evoker_t::spawn_mote_of_possibility( player_t* prospective_player, mote_buf
   {
     target                        = this;
     std::vector<player_t*> helper = sim->player_non_sleeping_list.data();
-    helper.erase( std::remove_if( helper.begin(), helper.end(), [ this ]( player_t* t ) { return t->is_pet(); } ),
+    helper.erase( std::remove_if( helper.begin(), helper.end(), []( player_t* t ) { return t->is_pet(); } ),
                   helper.end() );
 
     switch ( mote_buff )
@@ -10821,6 +10819,8 @@ void evoker_t::spawn_mote_of_possibility( player_t* prospective_player, mote_buf
       case mote_buffs_e::INFERNOS_BLESSING:
       case mote_buffs_e::PRESCIENCE:
       case mote_buffs_e::SYMBIOTIC_BLOOM:
+      case mote_buffs_e::SHIFTING_SANDS:
+      default:
 
         // Add a 3 copies of yourself. 50%~ for M+, relatively low in Raid.
         // TODO: Rework this entire system to use actions with travel times.
@@ -10828,20 +10828,6 @@ void evoker_t::spawn_mote_of_possibility( player_t* prospective_player, mote_buf
         helper.push_back( this );
         helper.push_back( this );
         target = rng().range( helper );
-        break;
-      case mote_buffs_e::SHIFTING_SANDS:
-        rng().shuffle( helper.begin(), helper.end() );
-
-        auto sands = std::partition( helper.begin(), helper.end(), [ this ]( player_t* t ) {
-          return !get_target_data( t )->buffs.shifting_sands->check();
-        } );
-
-        std::partition( helper.begin(), std::min( helper.end(), sands ), []( player_t* t ) {
-          return t->primary_role() != ROLE_HYBRID && t->primary_role() != ROLE_HEAL && t->primary_role() != ROLE_TANK &&
-                 t->specialization() != EVOKER_AUGMENTATION;
-        } );
-
-        target = helper.front();
         break;
     }
 

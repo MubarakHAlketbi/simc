@@ -2078,7 +2078,7 @@ public:
 
   void trigger_secondary_flame_shock( player_t* target, spell_variant variant = spell_variant::NORMAL ) const;
   void trigger_secondary_flame_shock( const action_state_t* state, spell_variant variant = spell_variant::NORMAL ) const;
-  void regenerate_flame_shock_dependent_target_list( const action_t* action, const bool ignore_target = false ) const;
+  void regenerate_flame_shock_dependent_target_list( const action_t* action ) const;
 
   void generate_maelstrom_weapon( const action_t* action, int stacks = 1 );
   void generate_maelstrom_weapon( const action_state_t* state, int stacks = 1 );
@@ -2672,6 +2672,11 @@ public:
   virtual void trigger_maelstrom_gain( const action_state_t* state )
   {
     if ( maelstrom_gain == 0 )
+    {
+      return;
+    }
+
+    if (!state)
     {
       return;
     }
@@ -5194,9 +5199,10 @@ struct lava_lash_t : public shaman_attack_t
       p()->trigger_elemental_overflow( execute_state, p()->action.tww3_lava_lash );
     }
 
-    if ( p()->buff.lightning_strikes->consume( this ) )
+    if ( p()->buff.lightning_strikes->up() )
     {
       p()->generate_maelstrom_weapon( this, 1 );
+      p()->buff.lightning_strikes->decrement();
     }
 
     if ( p()->talent.ashen_catalyst.ok() &&
@@ -5552,9 +5558,10 @@ struct stormstrike_base_t : public shaman_attack_t
 
     p()->trigger_awakening_storms( execute_state );
 
-    if ( p()->buff.lightning_strikes->consume( this ) )
+    if ( p()->buff.lightning_strikes->up() )
     {
       p()->generate_maelstrom_weapon( this, 1 );
+      p()->buff.lightning_strikes->decrement();
     }
   }
 };
@@ -6706,7 +6713,7 @@ struct lava_burst_overload_t : public elemental_overload_spell_t
 
     if ( is_variant( spell_variant::PURGING_FLAMES ) && p()->bugs )
     {
-      m *= p()->talent.purging_flames->effectN( 1 ).percent();
+      m *= p()->buff.purging_flames->data().effectN( 1 ).percent();
     }
 
     if ( player->specialization() == SHAMAN_ELEMENTAL )
@@ -6963,7 +6970,7 @@ struct lava_burst_t : public shaman_spell_t
 
       if ( is_variant( spell_variant::PURGING_FLAMES ) )
       {
-        aoe     = 5;
+        aoe = 5;
         if ( auto vb = p()->find_action( "voltaic_blaze" ) )
         {
           vb->add_child( this );
@@ -6991,7 +6998,6 @@ struct lava_burst_t : public shaman_spell_t
   size_t available_targets( std::vector<player_t*>& tl ) const override
   {
     shaman_spell_t::available_targets( tl );
-
     p()->regenerate_flame_shock_dependent_target_list( this );
 
     return tl.size();
@@ -7031,7 +7037,7 @@ struct lava_burst_t : public shaman_spell_t
 
     if ( is_variant( spell_variant::PURGING_FLAMES ) && p()->bugs )
     {
-      m *= p()->talent.purging_flames->effectN( 1 ).percent();
+      m *= p()->buff.purging_flames->data().effectN( 1 ).percent();
     }
 
     if (player->specialization() == SHAMAN_ELEMENTAL)
@@ -7122,12 +7128,16 @@ struct lava_burst_t : public shaman_spell_t
 
     if (p()->buff.purging_flames->check() && !background)
     {
-      p()->regenerate_flame_shock_dependent_target_list( this, true );
       assert( p()->action.lava_burst_pf );
-      p()->action.lava_burst_pf->execute();
+      for ( auto t : target_list() )
+      {
+        if (t == target)
+        {
+          continue;
+        }
+        p()->action.lava_burst_pf->execute_on_target( t );
+      }
       p()->buff.purging_flames->decrement();
-
-      this->target_cache.is_valid = false;
     }
 
     // [BUG] 2024-08-23 Supercharge works on Lava Burst in-game
@@ -8471,7 +8481,7 @@ struct ascendance_t : public shaman_spell_t
         }
       }
       assert( ( duration != timespan_t::zero() ) );
-      p()->buff.ascendance->extend_duration_or_trigger( duration, player );
+      p()->buff.ascendance->extend_duration_or_trigger( duration );
     }
     else
     {
@@ -8585,7 +8595,6 @@ struct stormkeeper_t : public shaman_spell_t
     }
 
     p()->summon_ancestor();
-    // Source: wowhead.com/spell=1264863 (2026-03-16)
     // MID1 4pc: Stormkeeper grants 1 additional stack (+1 to base 2 stacks)
     int sk_stacks = as<int>( data().effectN( 5 ).base_value() )
       + ( p()->sets->has_set_bonus( SHAMAN_ELEMENTAL, MID1, B4 )
@@ -8653,11 +8662,6 @@ struct doom_winds_t : public shaman_attack_t
     }
     else
     {
-      if ( player->action.doom_winds == nullptr )
-      {
-        p()->action.doom_winds = new doom_winds_damage_t( player,
-          variant_flag( spell_variant::NORMAL ) );
-      }
       add_child( player->action.doom_winds );
     }
   }
@@ -10590,6 +10594,11 @@ void shaman_t::create_actions()
     action.ascendance_damage = new ascendance_damage_t( this, "ascendance_damage" );
     action.ascendance->add_child( action.ascendance_damage );
   }
+
+  if ( specialization() == SHAMAN_ENHANCEMENT )
+  {
+    action.doom_winds = new doom_winds_damage_t( this, variant_flag( spell_variant::NORMAL ) );
+  }
 }
 
 // shaman_t::create_options =================================================
@@ -11341,8 +11350,7 @@ void shaman_t::summon_elemental( elemental type, timespan_t override_duration )
     timespan_t new_duration = spawner_ptr->active_pet()->expiration->remains();
     new_duration += override_duration > 0_ms ? override_duration : elemental_buff->buff_duration();
 
-    elemental_buff->extend_duration( this,
-      override_duration > 0_ms ? override_duration : elemental_buff->buff_duration() );
+    elemental_buff->extend_duration( override_duration > 0_ms ? override_duration : elemental_buff->buff_duration() );
     spawner_ptr->active_pet()->expiration->reschedule( new_duration );
     for (auto action : spawner_ptr->active_pet()->action_list)
     {
@@ -11514,7 +11522,7 @@ void shaman_t::trigger_secondary_flame_shock( const action_state_t* state, spell
   trigger_secondary_flame_shock( state->target, variant );
 }
 
-void shaman_t::regenerate_flame_shock_dependent_target_list( const action_t* action, const bool ignore_target ) const
+void shaman_t::regenerate_flame_shock_dependent_target_list( const action_t* action ) const
 {
   auto& tl = action->target_cache.list;
 
@@ -11523,11 +11531,6 @@ void shaman_t::regenerate_flame_shock_dependent_target_list( const action_t* act
   } );
 
   tl.erase( it, tl.end() );
-
-  if ( ignore_target )
-  {
-    tl.erase( std::remove( tl.begin(), tl.end(), action->target ), tl.end() );
-  }
 
   if ( sim->debug )
   {
@@ -11630,7 +11633,7 @@ void shaman_t::consume_maelstrom_weapon( const action_state_t* state, int stacks
     auto extension = timespan_t::from_seconds(
       talent.totemic_momentum->effectN( 1 ).base_value() * 0.001 * stacks );
 
-    buff.hot_hand->extend_duration( this, extension );
+    buff.hot_hand->extend_duration( extension );
 
   }
 }
@@ -11890,7 +11893,7 @@ void shaman_t::trigger_whirling_fire( const action_state_t* state )
     // Mote of Fire extends an existing Hot Hand buff, or triggers a new one with its duration
     if ( buff.hot_hand->check() )
     {
-      buff.hot_hand->extend_duration( this, buff.whirling_fire->data().effectN( 1 ).time_value() );
+      buff.hot_hand->extend_duration( buff.whirling_fire->data().effectN( 1 ).time_value() );
     }
     else
     {
@@ -12822,7 +12825,17 @@ void shaman_t::apply_player_effects()
 
   // Enhancement
   eff::source_eff_builder_t( buff.flurry ).set_flag( IGNORE_STACKS ).build( this );
-  eff::source_eff_builder_t( buff.crash_lightning ).build( this );
+  // Enable attack speed bonus individually, so we can apply a bug to the mastery bonus (12.0 4PC)
+  eff::source_eff_builder_t( buff.crash_lightning )
+    .set_effect_mask( effect_mask_t( false ).enable( 2 ) )
+    .build( this );
+  // [20260328] BUG: Enhancement 12.0 4PC gives half as much mastery as is on the tin
+  eff::source_eff_builder_t( buff.crash_lightning )
+    .set_effect_mask( effect_mask_t( false ).enable( 3 ) )
+    .set_value( [ this ]( double value ) -> double {
+      return value * ( bugs ? 0.5 : 1.0 );
+    } )
+    .build( this );
 
   // Elemental
   eff::source_eff_builder_t( mastery.elemental_overload ).build( this );
@@ -12928,7 +12941,7 @@ std::string shaman_t::default_potion() const
 
 std::string shaman_t::default_flask() const
 {
-  std::string enhancement_flask = ( true_level >= 81 ) ? "flask_of_the_shattered_sun_2" :
+  std::string enhancement_flask = ( true_level >= 81 ) ? "flask_of_the_blood_knights_2" :
                                   ( true_level >= 71 ) ? "flask_of_alchemical_chaos_3" :
                                   ( true_level >= 61 ) ? "iced_phial_of_corrupting_rage_3" :
                                   ( true_level >= 51 ) ? "spectral_flask_of_power" :

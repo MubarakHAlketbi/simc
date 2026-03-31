@@ -57,7 +57,6 @@ void default_apl( monk_t* player )
   pre->add_action( "potion" );
 
   def->add_action( "auto_attack", "Default List" );
-  def->add_action( "touch_of_death", "Touch of Death — #1 priority per Wowhead" );
   def->add_action( "potion" );
   def->add_action( "call_action_list,name=race_actions" );
   def->add_action( "call_action_list,name=item_actions" );
@@ -67,27 +66,31 @@ void default_apl( monk_t* player )
   def->add_action( "keg_smash,if=buff.aspect_of_harmony_spender.up&buff.empty_barrel.up" );
   def->add_action( "breath_of_fire,if=talent.wisdom_of_the_wall.enabled&buff.invoke_niuzao_the_black_ox.up" );
   def->add_action( "keg_smash,if=talent.wisdom_of_the_wall.enabled&buff.invoke_niuzao_the_black_ox.up" );
-  def->add_action( "celestial_brew,if=!(apex.3&buff.empty_barrel.up)&buff.aspect_of_harmony_accumulator.value>0.95*health.max" );
+  def->add_action( "blackout_kick,if=talent.blackout_combo.enabled&!buff.blackout_combo.up" );
+  def->add_action( "celestial_brew,if=!(apex.3&buff.empty_barrel.up)&buff.aspect_of_harmony_accumulator.value>0.3*health.max&cooldown.celestial_brew.charges_fractional>1.9" );
   def->add_action( "celestial_brew,if=!(apex.3&buff.empty_barrel.up)&target.time_to_die<15&buff.aspect_of_harmony_accumulator.value>0.2*health.max" );
   def->add_action( "purifying_brew,if=!(apex.1&buff.empty_barrel.up)" );
   def->add_action( "fortifying_brew,if=!(apex.3&buff.empty_barrel.up)" );
   def->add_action( "chi_burst" );
+  def->add_action( "invoke_niuzao" );
+  def->add_action( "tiger_palm,if=buff.blackout_combo.up&cooldown.blackout_kick.remains<1.3" );
   def->add_action( "exploding_keg,if=cooldown.keg_smash.charges_fractional<1" );
   def->add_action( "empty_the_cellar,if=talent.aspect_of_harmony.enabled&cooldown.celestial_brew.remains>15" );
   def->add_action( "empty_the_cellar,if=!talent.aspect_of_harmony.enabled&buff.empty_the_cellar.remains<1.5" );
-  def->add_action( "invoke_niuzao" );
-  def->add_action( "breath_of_fire,if=cooldown.blackout_kick.remains>1.5&!buff.empty_barrel.up&cooldown.keg_smash.charges<1" );
+  def->add_action( "breath_of_fire,if=cooldown.blackout_kick.remains>1.5&!buff.empty_barrel.up&cooldown.keg_smash.charges<1+talent.stormstouts_last_keg.enabled" );
+  def->add_action( "tiger_palm,if=buff.blackout_combo.up" );
   def->add_action( "celestial_brew,if=talent.flurry_strikes.enabled&!(apex.3&buff.empty_barrel.up)" );
+  def->add_action( "breath_of_fire,if=talent.flurry_strikes.enabled" );
   def->add_action( "keg_smash,if=talent.flurry_strikes.enabled" );
+  def->add_action( "keg_smash,if=talent.scalding_brew.enabled" );
   def->add_action( "keg_smash,if=buff.empty_barrel.up" );
-  def->add_action( "keg_smash,if=cooldown.keg_smash.charges=1" );
+  def->add_action( "keg_smash,if=cooldown.keg_smash.charges=1+talent.stormstouts_last_keg.enabled" );
   def->add_action( "breath_of_fire" );
   def->add_action( "empty_the_cellar" );
-  def->add_action( "keg_smash" );
   def->add_action( "rushing_jade_wind" );
+  def->add_action( "keg_smash" );
   def->add_action( "blackout_kick" );
-  def->add_action( "spinning_crane_kick,if=active_enemies>=3", "SCK as AoE filler per Wowhead" );
-  def->add_action( "tiger_palm,if=buff.aspect_of_harmony_spender.up&energy>50-energy.regen*2" );
+  def->add_action( "tiger_palm,if=talent.aspect_of_harmony.enabled&energy>50-energy.regen*2" );
   def->add_action( "tiger_palm,if=energy>65-energy.regen" );
   def->add_action( "expel_harm" );
 
@@ -158,6 +161,7 @@ void live_apl( monk_t* player )
 
   // Default List
   def->add_action( "auto_attack,target_if=max:target.time_to_die", "Default List" );
+  def->add_action( "touch_of_karma,target_if=max:target.time_to_die " );
   def->add_action( "roll,if=movement.distance>5", "Move to target" );
   def->add_action( "chi_torpedo,if=movement.distance>5" );
   def->add_action( "flying_serpent_kick,if=movement.distance>5" );
@@ -188,7 +192,7 @@ void live_apl( monk_t* player )
 
   // Trinkets and Weapons
   trinket->add_action( "use_item,slot=main_hand", "Use Weapon" );
-  trinket->add_action( "use_item,name=algethar_puzzle_box,if=!talent.flurry_strikes&(target.time_to_die>35&fight_style.dungeonroute|target.time_to_die>25)&(cooldown.potion.remains>30|fight_remains<45|fight_remains>80)&(cooldown.invoke_xuen_the_white_tiger.remains<2|talent.flurry_strikes&cooldown.zenith.up)|fight_remains<25|talent.flurry_strikes&(target.time_to_die>35&fight_style.dungeonroute|target.time_to_die>25)", "Use Algethar" );
+  trinket->add_action( "use_item,name=algethar_puzzle_box,if=!buff.zenith.up&!talent.flurry_strikes&(target.time_to_die>35&fight_style.dungeonroute|target.time_to_die>25)&(cooldown.potion.remains>30|fight_remains<45|fight_remains>80)&(cooldown.invoke_xuen_the_white_tiger.remains<2|talent.flurry_strikes&cooldown.zenith.up)|fight_remains<25|talent.flurry_strikes&(target.time_to_die>35&fight_style.dungeonroute|target.time_to_die>25)&!buff.zenith.up", "Use Algethar" );
   trinket->add_action( "use_item,slot=trinket1,if=trinket.1.has_use_buff&!trinket.2.has_use_buff&(pet.xuen_the_white_tiger.active&talent.invoke_xuen_the_white_tiger|talent.flurry_strikes&buff.zenith.remains>14)", "Stat on use with passive or DMG on use" );
   trinket->add_action( "use_item,slot=trinket2,if=trinket.2.has_use_buff&!trinket.1.has_use_buff&(pet.xuen_the_white_tiger.active&talent.invoke_xuen_the_white_tiger|talent.flurry_strikes&buff.zenith.remains>14)" );
   trinket->add_action( "use_item,slot=trinket1,if=trinket.1.has_use_buff&trinket.2.has_use_buff&(pet.xuen_the_white_tiger.active&talent.invoke_xuen_the_white_tiger|talent.flurry_strikes&buff.zenith.remains>14)", "Stat on use with Stat on use" );
@@ -214,16 +218,18 @@ void live_apl( monk_t* player )
   zen->add_action( "zenith,target_if=max:target.time_to_die,if=buff.invoke_xuen_the_white_tiger.up&(!buff.zenith.up|talent.flurry_strikes)", "Zenith Usage" );
   zen->add_action( "zenith,target_if=max:target.time_to_die,if=buff.bloodlust.remains>10&(active_enemies>2|cooldown.rising_sun_kick.remains)&!buff.zenith.up" );
   zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(buff.bloodlust.up&cooldown.celestial_conduit.remains&(cooldown.rising_sun_kick.remains|active_enemies>2)&!buff.zenith.up&talent.celestial_conduit)" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(talent.flurry_strikes&(buff.bloodlust.up|cooldown.potion.remains>295|cooldown.zenith.full_recharge_time<5)&((cooldown.rising_sun_kick.remains|active_enemies>2)&(trinket.1.is.algethar_puzzle_box&trinket.1.cooldown.remains<102|trinket.2.is.algethar_puzzle_box&trinket.2.cooldown.remains<102)|time<5))" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(!buff.bloodlust.up&(trinket.1.is.algethar_puzzle_box&trinket.1.cooldown.remains>100|trinket.2.is.algethar_puzzle_box&trinket.2.cooldown.remains>100)&(cooldown.rising_sun_kick.remains|active_enemies>2))" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(cooldown.rising_sun_kick.remains|active_enemies>2)&fight_style.dungeonslice&time>130&time<150&active_enemies>1&talent.flurry_strikes" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_style.dungeonslice&target.time_to_die>15&active_enemies>4&(talent.flurry_strikes|talent.celestial_conduit&talent.restore_balance&cooldown.invoke_xuen_the_white_tiger.remains<cooldown.zenith.full_recharge_time)&!fight_style.patchwerk" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=talent.celestial_conduit&fight_remains<cooldown.invoke_xuen_the_white_tiger.remains&(cooldown.rising_sun_kick.remains|active_enemies>2)&(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute|target.time_to_die>15&active_enemies>4)&!fight_style.patchwerk" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=talent.flurry_strikes&fight_style.dungeonroute&cooldown.zenith.full_recharge_time<30&target.time_to_die>25" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(cooldown.zenith.full_recharge_time<20&talent.flurry_strikes&(cooldown.rising_sun_kick.remains|active_enemies>2)|cooldown.zenith.full_recharge_time<cooldown.invoke_xuen_the_white_tiger.remains)&!fight_style.patchwerk&(cooldown.rising_sun_kick.remains|active_enemies>2)" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_remains<=25&(cooldown.rising_sun_kick.remains|active_enemies>2)" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_style.patchwerk&!trinket.1.is.algethar_puzzle_box&!trinket.2.is.algethar_puzzle_box&trinket.1.has_use_buff&(trinket.1.cooldown.ready|cooldown.zenith.full_recharge_time<5)" );
-  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_style.patchwerk&!trinket.1.is.algethar_puzzle_box&!trinket.2.is.algethar_puzzle_box&trinket.2.has_use_buff&(trinket.2.cooldown.ready|cooldown.zenith.full_recharge_time<5)" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(talent.flurry_strikes&(buff.bloodlust.up|cooldown.potion.remains>295))&!buff.zenith.up" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&talent.flurry_strikes&!trinket.1.has_use_buff&!trinket.2.has_use_buff&cooldown.rising_sun_kick.remains&cooldown.fists_of_fury.remains<5&(cooldown.whirling_dragon_punch.remains<10|cooldown.strike_of_the_windlord.remains<10)&cooldown.zenith.full_recharge_time<40&!fight_style.dungeonslice&!buff.zenith.up" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute)&(!buff.bloodlust.up&(trinket.1.is.algethar_puzzle_box&trinket.1.cooldown.remains>100|trinket.2.is.algethar_puzzle_box&trinket.2.cooldown.remains>100)&(cooldown.rising_sun_kick.remains|active_enemies>2|talent.drinking_horn_cover&chi<2))&!buff.zenith.up" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=(cooldown.rising_sun_kick.remains|active_enemies>2)&fight_style.dungeonslice&time>130&time<150&active_enemies>1&talent.flurry_strikes&!buff.zenith.up" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_style.dungeonslice&target.time_to_die>15&active_enemies>4&(talent.flurry_strikes|talent.celestial_conduit&talent.restore_balance&cooldown.invoke_xuen_the_white_tiger.remains<cooldown.zenith.full_recharge_time)&!fight_style.patchwerk&!buff.zenith.up" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=!buff.zenith.up&(talent.celestial_conduit&fight_remains<cooldown.invoke_xuen_the_white_tiger.remains&(cooldown.rising_sun_kick.remains|active_enemies>2)&(target.time_to_die>30&fight_style.dungeonroute|target.time_to_die>25&!fight_style.dungeonroute|target.time_to_die>15&active_enemies>4)&!fight_style.patchwerk)" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=!buff.zenith.up&talent.flurry_strikes&fight_style.dungeonroute&cooldown.zenith.full_recharge_time<30&target.time_to_die>25" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_style.patchwerk&!buff.zenith.up&cooldown.fists_of_fury.remains<10&(cooldown.whirling_dragon.remains<10|cooldown.strike_of_the_windlord.remains<10)&(cooldown.rising_sun_kick.remains|chi<2&energy<50|active_enemies>1)&cooldown.zenith.full_recharge_time<30&(!trinket.1.has_use_buff&!trinket.2.has_use_buff|trinket.1.has_use_buff&trinket.1.cooldown.remains>30|trinket.2.has_use_buff&trinket.2.cooldown.remains>30)&(fight_remains>120|fight_remains<50&fight_remains>cooldown.zenith.full_recharge_time)" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_remains<=24&(cooldown.rising_sun_kick.remains|active_enemies>2)" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=fight_remains<45&cooldown.zenith.full_recharge_time<5&(cooldown.rising_sun_kick.remains|active_enemies>1)" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=!buff.zenith.up&(fight_style.patchwerk&!trinket.1.is.algethar_puzzle_box&!trinket.2.is.algethar_puzzle_box&trinket.1.has_use_buff&(trinket.1.cooldown.ready|cooldown.zenith.full_recharge_time<5))" );
+  zen->add_action( "zenith,target_if=max:target.time_to_die,if=!buff.zenith.up&(fight_style.patchwerk&!trinket.1.is.algethar_puzzle_box&!trinket.2.is.algethar_puzzle_box&trinket.2.has_use_buff&(trinket.2.cooldown.ready|cooldown.zenith.full_recharge_time<5))" );
 
   // Racials (Good)
   racials->add_action( "berserking,if=buff.invoke_xuen_the_white_tiger.remains>15|!talent.invoke_xuen_the_white_tiger&buff.zenith.remains>14|fight_remains<20", "Racials (Good)" );

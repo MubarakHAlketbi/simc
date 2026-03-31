@@ -1,57 +1,56 @@
-// Guardian Druid APL — Midnight Season 1
-// Source: https://www.wowhead.com/guide/classes/druid/guardian/rotation-cooldowns-pve-tank (2026-03-23)
-// Covers: Druid of the Claw + Elune's Chosen hero talent paths
-// Tier set: Sprouts of the Luminous Bloom (2pc: Maul/Raze/Ravage/Moonfire +10%, 4pc: proc interactions)
-
 action_priority_list_t* precombat = get_action_priority_list( "precombat" );
 action_priority_list_t* def = get_action_priority_list( "default" );
+action_priority_list_t* bear = get_action_priority_list( "bear" );
 action_priority_list_t* cooldowns = get_action_priority_list( "cooldowns" );
-action_priority_list_t* st = get_action_priority_list( "st" );
-action_priority_list_t* aoe = get_action_priority_list( "aoe" );
 
-// === Precombat ===
-precombat->add_action( "bear_form,if=buff.bear_form.down","Ensure Bear Form before pull." );
-precombat->add_action( "heart_of_the_wild" );
+precombat->add_action( "bear_form,if=buff.bear_form.down&!talent.heart_of_the_wild.enabled","Executed before combat begins. Accepts non-harmful actions only." );
+precombat->add_action( "cat_form,if=buff.bear_form.down&talent.heart_of_the_wild.enabled" );
+precombat->add_action( "variable,name=algethar_puzzle_box_precombat_cast,value=3,if=equipped.algethar_puzzle_box" );
+precombat->add_action( "use_item,name=algethar_puzzle_box" );
 
-// === Default ===
 def->add_action( "auto_attack","Executed every time the actor is available." );
 def->add_action( "call_action_list,name=cooldowns" );
-def->add_action( "call_action_list,name=aoe,if=active_enemies>=3" );
-def->add_action( "call_action_list,name=st" );
+def->add_action( "call_action_list,name=bear" );
 
-// === Cooldowns ===
+bear->add_action( "bear_form,if=!buff.bear_form.up&!buff.feline_potential.up" );
+bear->add_action( "maul,if=buff.ravage.up&rage>=40&!talent.killing_blow.enabled" );
+bear->add_action( "maul,if=buff.ravage.up&rage>=60&talent.killing_blow.enabled" );
+bear->add_action( "maul,if=!buff.ravage.up&rage>=55&!talent.fount_of_strength.enabled" );
+bear->add_action( "mangle,if=dot.red_moon.ticking" );
+bear->add_action( "rake,if=!buff.cat_form.up&talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)&(rage<30&!talent.fount_of_strength.enabled|talent.fount_of_strength.enabled)" );
+bear->add_action( "cat_form,if=!buff.cat_form.up&!talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)&(rage<30&!talent.fount_of_strength.enabled|talent.fount_of_strength.enabled)" );
+bear->add_action( "moonkin_form,if=!buff.moonkin_form.up&cooldown.heart_of_the_wild.up&active_enemies>=6&talent.moonkin_form.enabled" );
+bear->add_action( "thrash,target_if=refreshable|(dot.thrash.stack<5&talent.flashing_claws.rank=2|dot.thrash.stack<4&talent.flashing_claws.rank=1|dot.thrash.stack<3&!talent.flashing_claws.enabled)" );
+bear->add_action( "ironfur,if=!buff.ironfur.up&!buff.ravage.up&!target.cooldown.pause_action.remains" );
+bear->add_action( "ferocious_bite,if=(buff.cat_form.up&buff.feline_potential.up&(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!dot.rip.refreshable)" );
+bear->add_action( "rake,if=!buff.cat_form.up&talent.fluid_form.enabled&buff.feline_potential_counter.stack=6&talent.wildpower_surge.enabled&active_enemies<=2" );
+bear->add_action( "rip,if=(buff.cat_form.up&buff.feline_potential.up)&active_enemies<=2" );
+bear->add_action( "red_moon,if=cooldown.mangle.up&!dot.red_moon.ticking" );
+bear->add_action( "mangle,if=((buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&buff.feline_potential_counter.stack<6&talent.wildpower_surge.enabled)" );
+bear->add_action( "shred,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&!dot.rake.refreshable&talent.fluid_form.enabled)" );
+bear->add_action( "rake,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&talent.fluid_form.enabled)" );
+bear->add_action( "thrash,if=talent.lunar_calling.enabled" );
+bear->add_action( "maul,if=!buff.ravage.up&rage>=90&talent.fount_of_strength.enabled" );
+bear->add_action( "maul,if=!(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!buff.ravage.up&rage>=40&!talent.killing_blow.enabled" );
+bear->add_action( "maul,if=!(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)&!buff.ravage.up&rage>=55&talent.killing_blow.enabled&talent.fount_of_strength.enabled" );
+bear->add_action( "mangle,if=(buff.incarnation_guardian_of_ursoc.up|buff.berserk.up)|talent.red_moon.enabled&(cooldown.red_moon.remains>3&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)))" );
+bear->add_action( "mangle,if=!talent.red_moon.enabled&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled))" );
+bear->add_action( "thrash" );
+bear->add_action( "moonfire,if=buff.galactic_guardian.up&buff.bear_form.up&talent.boundless_moonlight.enabled&!talent.red_moon.enabled" );
+bear->add_action( "swipe_bear,if=(talent.lunation.enabled&active_enemies>4)|!talent.lunation.enabled|talent.lunation.enabled&talent.red_moon.enabled" );
+bear->add_action( "moonfire,if=(talent.lunation.enabled)&buff.bear_form.up&!talent.red_moon.enabled" );
+
 cooldowns->add_action( "use_items" );
-cooldowns->add_action( "potion,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up" );
-cooldowns->add_action( "blood_fury,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up" );
-cooldowns->add_action( "berserking,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up" );
-cooldowns->add_action( "fireblood,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up" );
-cooldowns->add_action( "ancestral_call,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up" );
-cooldowns->add_action( "incarnation","Use Incarnation/Berserk on cooldown." );
-cooldowns->add_action( "berserk" );
-cooldowns->add_action( "convoke_the_spirits,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up|cooldown.berserk_bear.remains>30","Convoke during Berserk/Incarnation if possible, otherwise don't hold." );
-cooldowns->add_action( "lunar_beam" );
-cooldowns->add_action( "barkskin","Use Barkskin as frequently as possible." );
-cooldowns->add_action( "bristling_fur,if=rage<40","Generate rage when low." );
-
-// === Single Target ===
-st->add_action( "ironfur,if=!buff.ironfur.up|rage>=80","Maintain Ironfur; spend rage at 80+ to avoid capping." );
-st->add_action( "moonfire,if=buff.galactic_guardian.up","Galactic Guardian procs: free Moonfire, high priority." );
-st->add_action( "raze,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up","Raze replaces Maul during Berserk/Incarnation." );
-st->add_action( "maul,if=buff.ravage.up","Ravage (DotC proc) — maul auto-fires ravage when buff is up. High priority with 4pc." );
-st->add_action( "moonfire,if=dot.moonfire.remains<=gcd","Maintain Moonfire." );
-st->add_action( "mangle","Mangle on cooldown — core rage generator." );
-st->add_action( "thrash,if=dot.thrash.remains<=gcd|active_enemies>=2","Maintain Thrash, and use on 2+ targets." );
-st->add_action( "maul,if=rage>=80","Maul as rage dump at 80+ (Harnessed Rage/Killing Blow synergy)." );
-st->add_action( "moonfire,if=buff.galactic_guardian.up" );
-st->add_action( "swipe_bear","Filler." );
-
-// === AoE (3+ targets) ===
-aoe->add_action( "ironfur,if=!buff.ironfur.up|rage>=80","Maintain Ironfur; avoid rage cap." );
-aoe->add_action( "moonfire,if=buff.galactic_guardian.up","Galactic Guardian proc." );
-aoe->add_action( "raze,if=buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up","Raze replaces Maul in Berserk." );
-aoe->add_action( "maul,if=buff.ravage.up","Ravage proc — maul auto-fires ravage when buff is up." );
-aoe->add_action( "thrash","Thrash is the primary AoE ability." );
-aoe->add_action( "moonfire,if=dot.moonfire.remains<=gcd&active_enemies<=5","Maintain Moonfire on reasonable target counts." );
-aoe->add_action( "mangle","Mangle on cooldown." );
-aoe->add_action( "maul,if=rage>=80","Rage dump." );
-aoe->add_action( "swipe_bear","AoE filler." );
+cooldowns->add_action( "potion,if=buff.lunar_beam.up" );
+cooldowns->add_action( "blood_fury" );
+cooldowns->add_action( "berserking" );
+cooldowns->add_action( "fireblood" );
+cooldowns->add_action( "ancestral_call" );
+cooldowns->add_action( "bristling_fur,if=!target.cooldown.pause_action.remains&cooldown.mangle.remains&cooldown.thrash.remains&(rage<60&talent.killing_blow.enabled|rage<40&!talent.killing_blow.enabled)&!buff.ravage.up" );
+cooldowns->add_action( "barkskin,if=buff.bear_form.up" );
+cooldowns->add_action( "lunar_beam,if=(cooldown.incarnation_guardian_of_ursoc.up|cooldown.berserk.up)|((cooldown.incarnation_guardian_of_ursoc.remains>60|cooldown.berserk.remains>60)&!talent.lunation.enabled|(cooldown.incarnation_guardian_of_ursoc.remains>30|cooldown.berserk.remains>30)&talent.lunation.enabled)" );
+cooldowns->add_action( "heart_of_the_wild,if=(active_enemies<=5&talent.moonkin_form.enabled&buff.cat_form.up|!talent.moonkin_form.enabled&buff.cat_form.up)|buff.moonkin_form.up&active_enemies>=6&talent.moonkin_form.enabled" );
+cooldowns->add_action( "convoke_the_spirits" );
+cooldowns->add_action( "sundering_roar,if=(dot.thrash_bear.stack<5&talent.flashing_claws.rank=2|dot.thrash_bear.stack<4&talent.flashing_claws.rank=1|dot.thrash_bear.stack<3&!talent.flashing_claws.enabled)" );
+cooldowns->add_action( "berserk,if=!cooldown.heart_of_the_wild.up&(talent.heart_of_the_wild.enabled)|!talent.ravage.enabled|!talent.heart_of_the_wild.enabled" );
+cooldowns->add_action( "wild_guardian,if=(buff.ravage.up&talent.ravage.enabled)|!talent.ravage.enabled" );

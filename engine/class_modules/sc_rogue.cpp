@@ -246,6 +246,9 @@ class rogue_t : public player_t
 
 public:
 
+  // Venomous Wounds energy refund overflow
+  double venomous_wounds_accumulator;
+
   // Deadly Pursuit CDR list
   std::vector<cooldown_t*> deadly_pursuit_cooldowns;
 
@@ -1097,6 +1100,7 @@ public:
   rogue_t( sim_t* sim, util::string_view name, race_e r = RACE_NIGHT_ELF ) :
     player_t( sim, ROGUE, name, r ),
     rogue_ready_trigger_threshold( 25 ),
+    venomous_wounds_accumulator( 0 ),
     shadow_techniques_counter( 0 ),
     deathstalkers_mark_debuff( nullptr ),
     auto_attack( nullptr ), melee_main_hand( nullptr ), melee_off_hand( nullptr ),
@@ -2144,7 +2148,7 @@ public:
   { return false; }
 
   // Generic rules for proccing Cold-Blooded Killer, used by rogue_t::trigger_cold_blood()
-  virtual bool procs_cold_blood() const
+  virtual bool procs_cold_blood( const action_state_t* ) const
   { return ab::energize_type != action_energize::NONE && ab::energize_resource == RESOURCE_COMBO_POINT && ab::energize_amount > 0; }
 
   // Placeholder for actions which trigger Subtlety Shadow Clone attacks to be overridden
@@ -3518,8 +3522,8 @@ struct adrenaline_rush_t : public rogue_spell_t
     if ( precombat_seconds > 0_s && !p()->in_combat )
     {
       p()->cooldowns.adrenaline_rush->adjust( -precombat_seconds, false );
-      p()->buffs.adrenaline_rush->extend_duration( p(), -precombat_seconds );
-      p()->buffs.loaded_dice->extend_duration( p(), -precombat_seconds );
+      p()->buffs.adrenaline_rush->extend_duration( -precombat_seconds );
+      p()->buffs.loaded_dice->extend_duration( -precombat_seconds );
     }
 
     trigger_fatebound_edge_case( execute_state );
@@ -3579,7 +3583,7 @@ struct shadow_clone_t : public rogue_attack_t
     affected_by.mid1_subtlety_2pc = true;
   }
 
-  virtual double combo_point_da_multiplier( const action_state_t* s ) const
+  double combo_point_da_multiplier( const action_state_t* s ) const override
   {
     const int cp = cast_state( s )->get_combo_points();
     if ( cp > 0 )
@@ -3598,6 +3602,11 @@ struct shadow_clone_t : public rogue_attack_t
     {
       trigger_shadow_techniques_buff( execute_state );
     }
+  }
+
+  bool procs_cold_blood( const action_state_t* s ) const override
+  {
+    return cast_state( s )->get_combo_points() == 0;
   }
 };
 
@@ -4448,18 +4457,25 @@ struct garrote_t : public rogue_attack_t
   {
     rogue_attack_t::execute();
 
-    // 2022-11-28 -- Currently does not work correctly at all without Improved Garrote
-    //               Additionally works every global of Improved Garrote regardless of Subterfuge
     if ( p()->talent.assassination.shrouded_suffocation->ok() && !is_secondary_action() &&
-         ( !p()->bugs || p()->stealthed( STEALTH_IMPROVED_GARROTE ) ) &&
-         ( p()->stealthed( STEALTH_BASIC | STEALTH_ROGUE ) ||
-           ( p()->bugs && p()->stealthed( STEALTH_IMPROVED_GARROTE ) ) ) )
+         p()->stealthed( STEALTH_BASIC | STEALTH_ROGUE ) )
     {
       trigger_combo_point_gain( as<int>( p()->talent.assassination.shrouded_suffocation->effectN( 2 ).base_value() ),
                                 p()->gains.shrouded_suffocation );
     }
 
     trigger_deathstalkers_mark_debuff( execute_state );
+  }
+
+  virtual void update_state( action_state_t* s, unsigned flags, result_amount_type rt ) override
+  {
+    // 2026-03-24 -- Improved Garrote causes the entire damage calculation to snapshot
+    if ( p()->talent.assassination.improved_garrote->ok() && s->persistent_multiplier > 1.0 )
+    {
+      flags &= ~( STATE_AP | STATE_VERSATILITY | STATE_MUL_TA );
+    }
+
+    rogue_attack_t::update_state( s, flags, rt );
   }
 
   void update_ready( timespan_t cd_duration = timespan_t::min() ) override
@@ -4717,7 +4733,7 @@ struct kingsbane_t : public rogue_attack_t
       bool procs_poison() const override
       { return true; }
 
-      bool procs_cold_blood() const override
+      bool procs_cold_blood( const action_state_t* ) const override
       { return false; }
     };
 
@@ -4964,7 +4980,7 @@ struct mutilate_t : public rogue_attack_t
     bool procs_deal_fate() const override
     { return true; }
 
-    bool procs_cold_blood() const override
+    bool procs_cold_blood( const action_state_t* ) const override
     { return true; }
   };
 
@@ -5377,7 +5393,7 @@ struct shadow_blades_t : public rogue_spell_t
     if ( precombat_seconds > 0_s && !p()->in_combat )
     {
       p()->cooldowns.shadow_blades->adjust( -precombat_seconds, false );
-      p()->buffs.shadow_blades->extend_duration( p(), -precombat_seconds );
+      p()->buffs.shadow_blades->extend_duration( -precombat_seconds );
     }
   }
 };
@@ -5619,11 +5635,30 @@ struct black_powder_t: public rogue_attack_t
 
 struct shuriken_storm_t: public rogue_attack_t
 {
-  action_t* clone_attack;
+  struct shuriken_storm_shadow_clone_t : public shadow_clone_t
+  {
+    shuriken_storm_shadow_clone_t( util::string_view name, rogue_t* p, const spell_data_t* s ) :
+      shadow_clone_t( name, p, s )
+    {
+      aoe = -1;
+      reduced_aoe_targets = data().effectN( 4 ).base_value();
+    }
+
+    double action_multiplier() const override
+    {
+      double m = rogue_attack_t::action_multiplier();
+
+      if ( p()->stealthed( STEALTH_STANCE ) )
+      {
+        m *= 1.0 + p()->spec.shuriken_storm_rank_2->effectN( 1 ).percent();
+      }
+
+      return m;
+    }
+  };
 
   shuriken_storm_t( util::string_view name, rogue_t* p, util::string_view options_str = {} ):
-    rogue_attack_t( name, p, p->spec.shuriken_storm, options_str ),
-    clone_attack( nullptr )
+    rogue_attack_t( name, p, p->spec.shuriken_storm, options_str )
   {
     energize_type = action_energize::PER_HIT;
     energize_resource = RESOURCE_COMBO_POINT;
@@ -5645,7 +5680,7 @@ struct shuriken_storm_t: public rogue_attack_t
   {
     double m = rogue_attack_t::action_multiplier();
 
-    if ( p()->stealthed( STEALTH_BASIC ) )
+    if ( p()->stealthed( STEALTH_STANCE ) )
     {
       m *= 1.0 + p()->spec.shuriken_storm_rank_2->effectN( 1 ).percent();
     }
@@ -7325,7 +7360,7 @@ struct roll_the_bones_t : public buff_t
         std::max( 0_s, std::min( duration, ( 60_s - buff->remains() ) ) ) :
         duration;
 
-      buff->extend_duration( rogue, extend_duration );
+      buff->extend_duration( extend_duration );
     }
   }
 
@@ -7460,14 +7495,27 @@ void rogue_t::trigger_venomous_wounds_death( player_t* target )
   unsigned full_ticks_remaining =
       (unsigned)( td->dots.rupture->remains() / td->dots.rupture->current_action->base_tick_time );
 
-  // 2025-04-12 -- The death effect was never updated to use the new VW value of 8 Energy, and still uses the old value of 10
   // MIDNIGHT TOCHECK -- Assume this was revised with the new tick values based on patch notes, maybe reduced more
-  int replenish = as<int>( talent.assassination.venomous_wounds->effectN( 1 ).base_value() );
-  
-  sim->print_log( "{} venomous_wounds replenish on death: full_ticks={}, ticks_left={}, vw_replenish={}, remaining_time={}",
-                  *this, full_ticks_remaining, td->dots.rupture->ticks_left(), replenish, td->dots.rupture->remains() );
+  double poisoned_bleeds = 0;
+  for ( auto t : sim->target_non_sleeping_list )
+  {
+    rogue_td_t* tdata = get_target_data( t );
+    if ( tdata->is_poisoned() )
+    {
+      poisoned_bleeds += tdata->dots.garrote->is_ticking() + tdata->dots.rupture->is_ticking();
+    }
+  }
 
-  resource_gain( RESOURCE_ENERGY, full_ticks_remaining * replenish, gains.venomous_wounds_death,
+  // 2026-03-24 -- Logs indicate the descripted formula is closer to #bleeds / 2 rather than #bleeds
+  const double refund_amount = poisoned_bleeds <= 2 ?
+    talent.assassination.venomous_wounds->effectN( 1 ).base_value() :
+    talent.assassination.venomous_wounds->effectN( 1 ).base_value() /
+    std::pow( poisoned_bleeds / 2.0, talent.assassination.venomous_wounds->effectN( 3 ).percent() );
+
+  sim->print_log( "{} venomous_wounds replenish on death: full_ticks={}, ticks_left={}, vw_replenish={}, remaining_time={}",
+                  *this, full_ticks_remaining, td->dots.rupture->ticks_left(), refund_amount, td->dots.rupture->remains() );
+
+  resource_gain( RESOURCE_ENERGY, full_ticks_remaining * refund_amount, gains.venomous_wounds_death,
                  td->dots.rupture->current_action );
 }
 
@@ -7696,24 +7744,31 @@ void actions::rogue_action_t<Base>::trigger_venomous_wounds( const action_state_
   if ( !p()->rng().roll( chance ) )
     return;
 
-  int poisoned_bleeds = 1;
+  double poisoned_bleeds = 0;
   for ( auto t : ab::sim->target_non_sleeping_list )
   {
-    if ( t == state->target )
-      continue;
-
     rogue_td_t* tdata = p()->get_target_data( t );
-    if ( tdata->is_lethal_poisoned() )
+    if ( tdata->is_poisoned() )
     {
       poisoned_bleeds += tdata->dots.garrote->is_ticking() + tdata->dots.rupture->is_ticking();
     }
   }
 
-  // MIDNIGHT TOCHECK -- Currently diminishes to 1 when any AoE units are present
-  double energy_gain = ( poisoned_bleeds > 1 ?
-                         p()->talent.assassination.venomous_wounds->effectN( 2 ).base_value() :
-                         p()->talent.assassination.venomous_wounds->effectN( 1 ).base_value() );
-  p()->resource_gain( RESOURCE_ENERGY, energy_gain, p()->gains.venomous_wounds );
+  // 2026-03-24 -- Logs indicate the descripted formula is closer to #bleeds / 2 rather than #bleeds
+  const double refund_amount = poisoned_bleeds <= 2 ?
+    p()->talent.assassination.venomous_wounds->effectN( 1 ).base_value() :
+    p()->talent.assassination.venomous_wounds->effectN( 1 ).base_value() /
+    std::pow( poisoned_bleeds / 2.0, p()->talent.assassination.venomous_wounds->effectN( 3 ).percent() );
+
+  p()->venomous_wounds_accumulator += refund_amount;
+  p()->sim->print_debug( "{} {} accumulates {} Venomous Wounds ({})", *p(), *this, refund_amount, p()->venomous_wounds_accumulator );
+
+  const int energize = as<int>( std::floor( p()->venomous_wounds_accumulator ) );
+  if ( energize >= 1 )
+  {
+    p()->resource_gain( RESOURCE_ENERGY, energize, p()->gains.venomous_wounds );
+    p()->venomous_wounds_accumulator -= energize;
+  }
 }
 
 template <typename Base>
@@ -7822,7 +7877,7 @@ void actions::rogue_action_t<Base>::trigger_shadow_techniques_buff( const action
 }
 
 template <typename Base>
-void actions::rogue_action_t<Base>::trigger_shadow_techniques_cp( const action_state_t* state )
+void actions::rogue_action_t<Base>::trigger_shadow_techniques_cp( const action_state_t* )
 {
   if ( !p()->spec.shadow_techniques->ok() || !p()->buffs.shadow_techniques->up() || ab::energize_amount == 0 )
     return;
@@ -8005,8 +8060,8 @@ void actions::rogue_action_t<Base>::trigger_hand_of_fate( const action_state_t* 
   if ( p()->talent.fatebound.controlled_chaos->ok() )
   {
     int streak = as<int>( p()->talent.fatebound.controlled_chaos->effectN( 1 ).base_value() );
-    if ( p()->buffs.fatebound_coin_tails->total_stack() >= streak && result == fatebound_t::coinflip_e::HEADS ||
-         p()->buffs.fatebound_coin_heads->total_stack() >= streak && result == fatebound_t::coinflip_e::TAILS )
+    if ( ( p()->buffs.fatebound_coin_tails->total_stack() >= streak && result == fatebound_t::coinflip_e::HEADS ) ||
+         ( p()->buffs.fatebound_coin_heads->total_stack() >= streak && result == fatebound_t::coinflip_e::TAILS ) )
     {
       // 250ms so it does not coincide with an Overflowing Purse roll at the same time for now
       trigger_fatebound_coinflip( state, result, 250_ms + current_delay );
@@ -8162,7 +8217,7 @@ void actions::rogue_action_t<Base>::trigger_keep_it_rolling()
   timespan_t extend_duration = timespan_t::from_millis( p()->talent.outlaw.keep_it_rolling->effectN( 1 ).base_value() );
   debug_cast<buffs::roll_the_bones_t*>( p()->buffs.roll_the_bones )->extend_secondary_buffs( extend_duration );
   // Extend container buff so buffs.roll_the_bones->check_value() works during the extended secondary buffs
-  p()->buffs.roll_the_bones->extend_duration( p(), extend_duration );
+  p()->buffs.roll_the_bones->extend_duration( extend_duration );
 }
 
 template <typename Base>
@@ -8320,7 +8375,7 @@ void actions::rogue_action_t<Base>::trigger_cut_to_the_chase( const action_state
   // Max duration it extends to is the maximum possible full pandemic duration, i.e. around 46s without and 54s with Deeper Stratagem.
   timespan_t max_duration = ( p()->consume_cp_max() + 1 ) * p()->buffs.slice_and_dice->data().duration() * 1.3;
   timespan_t effective_extend = std::min( timespan_t::from_seconds( extend_duration ), max_duration - p()->buffs.slice_and_dice->remains() );
-  p()->buffs.slice_and_dice->extend_duration_or_trigger( effective_extend, p() );
+  p()->buffs.slice_and_dice->extend_duration_or_trigger( effective_extend );
 }
 
 template <typename Base>
@@ -8393,9 +8448,6 @@ template <typename Base>
 bool actions::rogue_action_t<Base>::trigger_deathstalkers_mark_debuff( const action_state_t* state, bool from_darkest_night )
 {
   if ( !p()->talent.deathstalker.deathstalkers_mark->ok() )
-    return false;
-
-  if ( !p()->stealthed( STEALTH_BASIC | STEALTH_ROGUE ) && !from_darkest_night )
     return false;
 
   buff_t*& debuff = p()->deathstalkers_mark_debuff;
@@ -8594,7 +8646,7 @@ void actions::rogue_action_t<Base>::trigger_cold_blood( const action_state_t* st
   if ( !p()->talent.rogue.cold_blooded_killer->ok() )
     return;
 
-  if ( !procs_cold_blood() )
+  if ( !procs_cold_blood( state ) )
     return;
 
   if ( state->result != RESULT_CRIT )
@@ -10026,7 +10078,11 @@ void rogue_t::init_spells()
   register_passive_effect_mask( talent.outlaw.summarily_dispatched, effect_mask_t( true ).disable( 2 ) );
 
   // Improved Secret Technique effect 1 does not directly affect the pet damage spell
-  register_passive_affect_list( talent.subtlety.improved_secret_technique, affect_list_t( 1 ).remove_spell( 282449 ) );
+  // 2026-03-20 -- Appears this is now double-dipping in-game
+  if ( !bugs )
+  {
+    register_passive_affect_list( talent.subtlety.improved_secret_technique, affect_list_t( 1 ).remove_spell( 282449 ) );
+  }
 
   // Corrupt the blood effects are exclusive per spec
   register_passive_effect_mask( talent.deathstalker.corrupt_the_blood, specialization() == ROGUE_ASSASSINATION ?
@@ -10133,16 +10189,13 @@ void rogue_t::init_spells()
       secondary_trigger::SHADOW_CLONE, "shadow_clone_secret_technique", spec.shadow_clone_secret_technique_attack );
     active.shadow_clone_attack.shadowstrike = get_secondary_trigger_action<actions::shadow_clone_t>(
       secondary_trigger::SHADOW_CLONE, "shadow_clone_shadowstrike", spec.shadow_clone_shadowstrike_attack );
-    active.shadow_clone_attack.shuriken_storm = get_secondary_trigger_action<actions::shadow_clone_t>(
+    active.shadow_clone_attack.shuriken_storm = get_secondary_trigger_action<actions::shuriken_storm_t::shuriken_storm_shadow_clone_t>(
       secondary_trigger::SHADOW_CLONE, "shadow_clone_shuriken_storm", spec.shadow_clone_shuriken_storm_attack );
     active.shadow_clone_attack.shuriken_toss = get_secondary_trigger_action<actions::shadow_clone_t>(
       secondary_trigger::SHADOW_CLONE, "shadow_clone_shuriken_toss", spec.shadow_clone_shuriken_toss_attack );
 
     active.shadow_clone_attack.eviscerate->affected_by.darkest_night = true;
     active.shadow_clone_attack.eviscerate->affected_by.darkest_night_crit = true;
-
-    active.shadow_clone_attack.shuriken_storm->aoe = -1;
-    active.shadow_clone_attack.shuriken_storm->reduced_aoe_targets = spec.shadow_clone_shuriken_storm_attack->effectN( 4 ).base_value();
   }
 
   if ( talent.subtlety.weaponmaster->ok() )
@@ -11121,6 +11174,8 @@ void rogue_t::init_finished()
 void rogue_t::reset()
 {
   player_t::reset();
+
+  venomous_wounds_accumulator = 0;
 
   if( options.initial_shadow_techniques >= 0 )
     shadow_techniques_counter = options.initial_shadow_techniques;

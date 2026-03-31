@@ -6321,7 +6321,7 @@ void improvised_seaforium_pacemaker( special_effect_t& effect )
     void execute( action_t*, action_state_t* ) override
     {
       if ( extensions++ < max_extensions )
-        crit_buff->extend_duration( listener, extension );
+        crit_buff->extend_duration( extension );
     }
 
     void activate() override
@@ -6862,13 +6862,13 @@ void suspicious_energy_drink( special_effect_t& effect )
 
     void start( int s, double v, timespan_t d ) override
     {
-      for ( auto& s : stats )
+      for ( auto& stat : stats )
       {
-        s.amount = base_buff_value;
+        stat.amount = base_buff_value;
         if ( player->health_percentage() < hp_limit ||
              player->rng().roll( player->thewarwithin_opts.suspicious_energy_drink_bonus_chance ) )
         {
-          s.amount += bonus_value;
+          stat.amount += bonus_value;
         }
       }
 
@@ -11886,8 +11886,7 @@ void legendary_skippers_citrine( special_effect_t& effect )
     {
       background = true;
 
-      auto driver = effect.player->find_spell( LEGENDARY_SKIPPERS_CITRINE );
-      multiplier  = driver->effectN( 3 ).percent();
+      multiplier  = effect.player->find_spell( LEGENDARY_SKIPPERS_CITRINE )->effectN( 3 ).percent();
 
       for ( auto driver : possible_stones )
       {

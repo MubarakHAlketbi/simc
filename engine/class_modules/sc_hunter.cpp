@@ -1502,8 +1502,10 @@ public:
     ab::tick( dot );
 
     if ( p()->rng().roll( dire_beast_chance ) && p()->cooldowns.dire_beast->up() )
+    {
       p()->spawn_dire_beast( p()->talents.dire_beast_summon->duration() );
       p()->cooldowns.dire_beast->start();
+    }
   }
 
   void update_ready( timespan_t cd ) override
@@ -1579,7 +1581,7 @@ public:
     const bool triggered = buff -> trigger(duration);
     if ( triggered && ab::is_precombat && !in_combat && precast_time > 0_ms )
     {
-      buff -> extend_duration( ab::player, -std::min( precast_time, buff -> buff_duration() ) );
+      buff -> extend_duration( -std::min( precast_time, buff -> buff_duration() ) );
       buff -> cooldown -> adjust( -precast_time );
     }
     return triggered;
@@ -2680,8 +2682,10 @@ public:
     ab::tick( dot );
 
     if ( o()->rng().roll( dire_beast_chance ) && o()->cooldowns.dire_beast->up() )
+    {
       o()->spawn_dire_beast( o()->talents.dire_beast_summon->duration() );
       o()->cooldowns.dire_beast->start();
+    }
   }
 
   T_PET* p() { return static_cast<T_PET*>( ab::player ); }
@@ -3994,7 +3998,6 @@ struct auto_shot_base_t : public auto_attack_base_t<ranged_attack_t>
     if ( rng().roll( lock_and_load_chance ) )
     {
       p()->buffs.lock_and_load->trigger();
-      p()->cooldowns.aimed_shot->reset( true );
     }
 
     if ( p()->talents.lethal_barbs.ok() )
@@ -4123,6 +4126,18 @@ struct arcane_shot_base_t: public hunter_ranged_attack_t
   action_state_t* new_state() override
   {
     return new state_t( this, target );
+  }
+
+  double composite_crit_chance() const override
+  {
+    double cc = hunter_ranged_attack_t::composite_crit_chance();
+
+    if ( p()->talents.critical_precision.ok() && p()->buffs.precise_shots->up() )
+    {
+      cc += p()->talents.critical_precision->effectN( 1 ).percent();
+    }
+
+    return cc;
   }
 
   void snapshot_internal( action_state_t* s, unsigned flags, result_amount_type rt ) override
@@ -4828,6 +4843,21 @@ struct boar_charge_t final : hunter_ranged_attack_t
       // target_filter_callback = secondary_targets_only();
     }
 
+    double composite_da_multiplier( const action_state_t* s ) const override
+    {
+      double am = hunter_ranged_attack_t::composite_da_multiplier( s );
+
+      // 2026-03-30: Boar Charges double dip Spirit Bond's bonus
+      if ( p()->bugs )
+      {
+        double bonus = p()->cache.mastery() * p()->mastery.spirit_bond->effectN( affected_by.spirit_bond.direct ).mastery_value();
+        bonus *= 1 + p()->mastery.spirit_bond_buff->effectN( 1 ).percent();
+        am *= 1 + bonus;
+      }
+
+      return am;
+    }
+
     void impact( action_state_t* s ) override
     {
       hunter_ranged_attack_t::impact( s );
@@ -4845,6 +4875,21 @@ struct boar_charge_t final : hunter_ranged_attack_t
     travel_speed = 50; // 2026-01-19: Not in spelldata, estimating based on log data.
 
     add_child( cleave );
+  }
+
+  double composite_da_multiplier( const action_state_t* s ) const override
+  {
+    double am = hunter_ranged_attack_t::composite_da_multiplier( s );
+
+    // 2026-03-30: Boar Charges double dip Spirit Bond's bonus
+    if ( p()->bugs )
+    {
+      double bonus = p()->cache.mastery() * p()->mastery.spirit_bond->effectN( affected_by.spirit_bond.direct ).mastery_value();
+      bonus *= 1 + p()->mastery.spirit_bond_buff->effectN( 1 ).percent();
+      am *= 1 + bonus;
+    }
+
+    return am;
   }
 
   void execute() override
@@ -4959,7 +5004,7 @@ struct cobra_shot_base_t: public hunter_ranged_attack_t
     if ( p()->talents.barbed_scales.ok() )
       p()->cooldowns.barbed_shot->adjust( -p()->talents.barbed_scales->effectN( 1 ).time_value() );
 
-    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( p(), -p()->talents.dire_summons->effectN( 3 ).time_value() );
+    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( -p()->talents.dire_summons->effectN( 3 ).time_value() );
 
     p()->buffs.hogstrider->expire();
 
@@ -5205,7 +5250,6 @@ struct multishot_t: public hunter_ranged_attack_t
   {
     double cc = hunter_ranged_attack_t::composite_crit_chance();
 
-    // TODO confirm if crit bonus stacks with Windrunner Quiver
     if ( p()->talents.critical_precision.ok() && p()->buffs.precise_shots->up() )
     {
       cc += p()->talents.critical_precision->effectN( 1 ).percent();
@@ -5988,7 +6032,7 @@ struct melee_focus_spender_t: hunter_melee_attack_t
   {
     hunter_melee_attack_t::execute();
 
-    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( p(), -p()->talents.dire_summons->effectN( 4 ).time_value() );
+    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( -p()->talents.dire_summons->effectN( 4 ).time_value() );
   }
 
   bool ready() override
@@ -6536,11 +6580,11 @@ struct kill_command_t: public hunter_spell_t
 
     p()->cooldowns.wildfire_bomb->adjust( -p()->talents.wildfire_infusion->effectN( 1 ).time_value() );
 
-    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( p(), -p()->talents.dire_summons->effectN( p()->specialization() == HUNTER_BEAST_MASTERY ? 1 : 2 ).time_value() );
+    p()->buffs.howl_of_the_pack_leader_cooldown->extend_duration( -p()->talents.dire_summons->effectN( p()->specialization() == HUNTER_BEAST_MASTERY ? 1 : 2 ).time_value() );
     
     if ( p()->buffs.wyverns_cry->check() && p()->state.fury_of_the_wyvern_extension < fury_of_the_wyvern.cap )
     {
-      p()->buffs.wyverns_cry->extend_duration( p(), fury_of_the_wyvern.extension );
+      p()->buffs.wyverns_cry->extend_duration( fury_of_the_wyvern.extension );
       p()->state.fury_of_the_wyvern_extension += fury_of_the_wyvern.extension;
       p()->state.fury_of_the_wyvern_extendable = p()->state.fury_of_the_wyvern_extension < fury_of_the_wyvern.cap;
     }
@@ -7039,6 +7083,14 @@ struct wildfire_bomb_t: public wildfire_bomb_base_t
     }
   }
 
+  timespan_t travel_time() const override
+  {
+    if ( is_precombat )
+      return timespan_t::from_millis( 0 );
+
+    return wildfire_bomb_base_t::travel_time();
+  }
+
   void execute() override
   {
     // Tip of the Spear is decremented in execute() so run here
@@ -7050,7 +7102,7 @@ struct wildfire_bomb_t: public wildfire_bomb_base_t
 
     if ( p()->buffs.wyverns_cry->check() && p()->state.fury_of_the_wyvern_extension < fury_of_the_wyvern.cap )
     {
-      p()->buffs.wyverns_cry->extend_duration( p(), fury_of_the_wyvern.extension );
+      p()->buffs.wyverns_cry->extend_duration( fury_of_the_wyvern.extension );
       p()->state.fury_of_the_wyvern_extension += fury_of_the_wyvern.extension;
       p()->state.fury_of_the_wyvern_extendable = p()->state.fury_of_the_wyvern_extension < fury_of_the_wyvern.cap;
     }
@@ -7890,7 +7942,12 @@ void hunter_t::create_buffs()
     make_buff( this, "trick_shots", talents.trick_shots_buff );
   
   buffs.lock_and_load =
-    make_buff( this, "lock_and_load", talents.lock_and_load_buff );
+    make_buff( this, "lock_and_load", talents.lock_and_load_buff )
+      ->set_stack_change_callback(
+        [ this ]( buff_t*, int _old, int _new ) {
+          if ( _new > _old )
+            cooldowns.aimed_shot->reset( true );
+        } );
 
   buffs.in_the_rhythm = 
     make_buff( this, "in_the_rhythm", talents.in_the_rhythm_buff )
@@ -7902,7 +7959,7 @@ void hunter_t::create_buffs()
       ->set_refresh_behavior( buff_refresh_behavior::EXTEND )
       ->add_invalidate( cache_e::CACHE_CRIT_CHANCE )
       ->set_stack_change_callback(
-        [ this ]( buff_t*, int, int cur ) {
+        [ this ]( buff_t*, int, int ) {
           cooldowns.aimed_shot->adjust_recharge_multiplier();
           cooldowns.rapid_fire->adjust_recharge_multiplier();
         } );

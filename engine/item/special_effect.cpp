@@ -25,21 +25,21 @@ struct proc_parse_opt_t
 
 constexpr proc_parse_opt_t __proc_opts[] =
 {
-  { "genericspell", PF_NONE_SPELL                                               },
-  { "spell",        PF_MAGIC_SPELL | PF_PERIODIC                                },
-  { "directspell",  PF_MAGIC_SPELL                                              },
-  { "periodic",     PF_PERIODIC                                                 },
-  { "genericheal",  PF_NONE_HEAL                                                },
-  { "heal",         PF_MAGIC_HEAL | PF_PERIODIC                                 },
-  { "directheal",   PF_MAGIC_HEAL                                               },
-  { "attack",       PF_MELEE | PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY },
-  { "wattack",      PF_MELEE | PF_RANGED                                        },
-  { "sattack",      PF_MELEE_ABILITY | PF_RANGED_ABILITY                        },
-  { "melee",        PF_MELEE | PF_MELEE_ABILITY                                 },
-  { "wmelee",       PF_MELEE                                                    },
-  { "smelee",       PF_MELEE_ABILITY                                            },
-  { "wranged",      PF_RANGED                                                   },
-  { "sranged",      PF_RANGED_ABILITY                                           },
+  { "genericharmful",  PF_NONE_HARMFUL                                             },
+  { "spell",           PF_MAGIC_SPELL | PF_PERIODIC                                },
+  { "directspell",     PF_MAGIC_SPELL                                              },
+  { "periodic",        PF_PERIODIC                                                 },
+  { "generichelpful",  PF_NONE_HELPFUL                                             },
+  { "heal",            PF_MAGIC_HEAL | PF_PERIODIC                                 },
+  { "directheal",      PF_MAGIC_HEAL                                               },
+  { "attack",          PF_MELEE | PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY },
+  { "wattack",         PF_MELEE | PF_RANGED                                        },
+  { "sattack",         PF_MELEE_ABILITY | PF_RANGED_ABILITY                        },
+  { "melee",           PF_MELEE | PF_MELEE_ABILITY                                 },
+  { "wmelee",          PF_MELEE                                                    },
+  { "smelee",          PF_MELEE_ABILITY                                            },
+  { "wranged",         PF_RANGED                                                   },
+  { "sranged",         PF_RANGED_ABILITY                                           },
 };
 
 constexpr proc_parse_opt_t __proc2_opts[] =
@@ -441,27 +441,31 @@ special_effect_buff_e special_effect_t::buff_type() const
 
 buff_t* special_effect_t::create_buff() const
 {
-  if ( buff_type() != SPECIAL_EFFECT_BUFF_CUSTOM && buff_type() != SPECIAL_EFFECT_BUFF_NONE &&
-       buff_type() != SPECIAL_EFFECT_BUFF_DISABLED )
-  {
-    buff_t* b = buff_t::find( player, name() );
-    if ( b )
-    {
-      return b;
-    }
-  }
+  buff_t* buff = nullptr;
 
   switch ( buff_type() )
   {
     case SPECIAL_EFFECT_BUFF_CUSTOM:
-      return custom_buff;
+      buff = custom_buff;
+      break;
     case SPECIAL_EFFECT_BUFF_STAT:
-      return initialize_stat_buff();
+      buff = initialize_stat_buff();  // method has buff_t::find
+      break;
     case SPECIAL_EFFECT_BUFF_ABSORB:
-      return initialize_absorb_buff();
+      buff = initialize_absorb_buff();  // method has buff_t::find
+      break;
+    case SPECIAL_EFFECT_BUFF_NONE:
+    case SPECIAL_EFFECT_BUFF_DISABLED:
+      break;
     default:
-      return nullptr;
+      buff = buff_t::find( player, name() );
+      break;
   }
+
+  if ( buff && !range::contains( buff_list, buff ) )
+    buff_list.push_back( buff );
+
+  return buff;
 }
 
 action_t* special_effect_t::create_action() const

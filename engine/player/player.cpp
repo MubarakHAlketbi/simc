@@ -1400,15 +1400,9 @@ void player_t::init()
   // Validate current fight style is supported by the actor's module.
   if ( !validate_fight_style( sim->fight_style ) )
   {
-    sim->error( error_level_e::SEVERE, "{} does not support fight style {}, results may be unreliable.", *this,
+    sim->error( error_level_e::SEVERE,
+                "{} does not support fight style {}, results are inaccurate and should not be used.", *this,
                 util::fight_style_string( sim->fight_style ) );
-  }
-
-  // Fight style dependent option defaults. Note that these options must be of type player_option_t<T>
-  if ( sim->fight_style == FIGHT_STYLE_DUNGEON_ROUTE || sim->fight_style == FIGHT_STYLE_DUNGEON_SLICE )
-  {
-    if ( dragonflight_opts.balefire_branch_loss_rng_type.is_default() )
-      dragonflight_opts.balefire_branch_loss_rng_type = "rppm";
   }
 
   // Ensure the precombat and default lists are the first listed
@@ -2251,6 +2245,39 @@ void player_t::create_special_effects()
     }
   }
 
+  if ( dragonflight_opts.emerald_coachs_whistle_ally_ilvl > 0 )
+  {
+    struct emerald_coachs_whistle_ally_t : public special_effect_t
+    {
+      std::unique_ptr<item_t> _item;
+
+      emerald_coachs_whistle_ally_t( player_t* p ) : special_effect_t( p )
+      {
+        // make a fake
+        _item = std::make_unique<item_t>(
+          p, fmt::format( ",id=193718,ilevel={}", p->dragonflight_opts.emerald_coachs_whistle_ally_ilvl ) );
+        _item->parse_options();
+        _item->initialize_data();
+        _item->init();
+
+        // validate data
+        auto it = range::find( _item->parsed.data.effects, ITEM_SPELLTRIGGER_ON_EQUIP, &item_effect_t::type );
+        if ( it == _item->parsed.data.effects.end() )
+        {
+          throw sc_invalid_player_argument(
+            "Cannot find on-equip effect on item id=193718 for 'dragonflight.emerald_coachs_whistle_ally_ilvl'." );
+        }
+
+        spell_id = p->dragonflight_opts.emerald_coachs_whistle_ally_is_healer ? 386578 : it->spell_id;
+        name_str = "emerald_coachs_whistle_ally";
+        item = _item.get();
+
+        unique_gear::initialize_special_effect( *this, spell_id );
+      }
+    };
+
+    special_effects.push_back( new emerald_coachs_whistle_ally_t( this ) );
+  }
 
   unique_gear::initialize_racial_effects( this );
 
@@ -5051,7 +5078,7 @@ void player_t::create_buffs()
         ->set_cooldown( timespan_t::from_seconds( 5.0 ) );
 
     // Dragonflight Raid Damage Modifier Debuffs
-    debuffs.hunters_mark = make_buff( this, "hunters_mark", find_spell( 257284 ) )
+    debuffs.hunters_mark = make_buff( this, "hunters_mark", find_spell( 259556 ) )
         ->disable_ticking( true )
         ->set_default_value_from_effect_type( A_MOD_DAMAGE_PERCENT_TAKEN );
   }
@@ -6377,7 +6404,9 @@ void player_t::combat_begin()
           if ( first_cast )
           {
             if ( !is_enemy() )
-              sequence_add( action, action->target );
+              sequence_add( action, action->target, [ action ]( std::string&, std::string& t_str ) {
+                t_str = action->target->name_str;
+              } );
 
             action->execute();
             first_cast = false;
@@ -6390,7 +6419,9 @@ void player_t::combat_begin()
         else
         {
           if ( !is_enemy() )
-            sequence_add( action, action->target );
+            sequence_add( action, action->target, [ action ]( std::string&, std::string& t_str ) {
+              t_str = action->target->name_str; 
+            } );
 
           action->execute();
         }
@@ -7648,7 +7679,9 @@ action_t* player_t::execute_action()
         off_gcdactions.push_back( action );
 
       if ( !is_enemy() )
-        sequence_add( action, action->target );
+        sequence_add( action, action->target, [ action ]( std::string&, std::string& t_str ) {
+          t_str = action->target->name_str;
+        } );
     }
   }
 
@@ -7804,7 +7837,7 @@ double player_t::resource_gain( resource_e resource_type, double amount, gain_t*
     iteration_resource_gained[ resource_type ] += actual_amount;
   }
   double overflow_amount = amount - actual_amount;
-  if (overflow_amount > 0)
+  if ( overflow_amount > 0 )
   {
     iteration_resource_overflowed[ resource_type ] += overflow_amount;
   }
@@ -7829,6 +7862,15 @@ double player_t::resource_gain( resource_e resource_type, double amount, gain_t*
                     name(), actual_amount, amount, resource_type,
                     source ? source->name() : action ? action->name() : "unknown",
                     resources.current[ resource_type ], resources.max[ resource_type ] );
+  }
+
+  // energize_power from actions can trigger generic helpful proc effects
+  if ( action && resource_type > RESOURCE_MANA && resource_type < RESOURCE_MAX )
+  {
+    if ( action->callbacks && action->caster_callbacks && !action->suppress_callback_from_energize )
+    {
+      trigger_callbacks( PROC1_NONE_HELPFUL, PROC2_HIT, action, action->energize_state.get() );
+    }
   }
 
   return actual_amount;
@@ -10664,8 +10706,8 @@ struct use_items_t : public action_t
           return;
 
         // Find out if the item is worn
-        auto it = range::find_if( player->items, [ action ]( const item_t& item ) {
-          return util::str_compare_ci( item.name(), action->item_name );
+        auto it = range::find_if( player->items, [ action ]( const item_t& i ) {
+          return util::str_compare_ci( i.name(), action->item_name );
         } );
 
         // Worn item, remove slot if necessary
@@ -10695,9 +10737,9 @@ struct use_items_t : public action_t
           return;
 
         // Find out if the item is worn
-        auto it = range::find_if( player->items, [ action ]( const item_t& item ) {
-          return item.has_use_special_effect() &&
-                 util::str_compare_ci( item.special_effect( SPECIAL_EFFECT_SOURCE_NONE, SPECIAL_EFFECT_USE )->name(),
+        auto it = range::find_if( player->items, [ action ]( const item_t& i ) {
+          return i.has_use_special_effect() &&
+                 util::str_compare_ci( i.special_effect( SPECIAL_EFFECT_SOURCE_NONE, SPECIAL_EFFECT_USE )->name(),
                                        action->effect_name );
         } );
 
@@ -11548,16 +11590,16 @@ static player_talent_t create_talent_obj( const player_t* player, const trait_da
 }
 
 player_talent_t player_t::find_talent_spell( hero_tree_e tree, std::string_view name, bool name_tokenized,
-                                             unsigned index ) const
+                                             unsigned idx ) const
 {
-  return find_talent_spell( talent_tree::HERO, name, _spec, name_tokenized, index, tree );
+  return find_talent_spell( talent_tree::HERO, name, _spec, name_tokenized, idx, tree );
 }
 
 player_talent_t player_t::find_talent_spell( talent_tree tree, std::string_view name, specialization_e s,
-                                             bool name_tokenized, unsigned index, hero_tree_e hero_tree ) const
+                                             bool name_tokenized, unsigned idx, hero_tree_e hero_tree ) const
 {
   auto trait = trait_data_t::find( tree, name, util::class_id( type ), s == SPEC_NONE ? _spec : s, dbc->ptr,
-                                   name_tokenized, index, static_cast<unsigned>( hero_tree ) );
+                                   name_tokenized, idx, static_cast<unsigned>( hero_tree ) );
 
   if ( trait == &trait_data_t::nil() )
   {
@@ -11569,9 +11611,9 @@ player_talent_t player_t::find_talent_spell( talent_tree tree, std::string_view 
   return create_talent_obj( this, trait );
 }
 
-player_talent_t player_t::find_talent_spell( talent_tree tree, std::string_view name, unsigned index ) const
+player_talent_t player_t::find_talent_spell( talent_tree tree, std::string_view name, unsigned idx ) const
 {
-  return find_talent_spell( tree, name, SPEC_NONE, false, index );
+  return find_talent_spell( tree, name, SPEC_NONE, false, idx );
 }
 
 player_talent_t player_t::find_talent_spell( talent_tree tree, unsigned spell_id, specialization_e s ) const
@@ -12420,12 +12462,16 @@ std::unique_ptr<expr_t> player_t::create_expression( util::string_view expressio
     }
     else if ( splits[ 0 ] == "cooldown" )
     {
-      if ( cooldown_t* cooldown = get_cooldown( splits[ 1 ] ) )
+      // since we have no fallback system for cooldowns, all cooldowns must be created if not found.
+      auto _cooldown = find_cooldown( splits[ 1 ] );
+
+      if ( !_cooldown )
       {
-        return cooldown->create_expression( splits[ 2 ] );
+        sim->print_debug( "{} cooldown '{}' not found, creating placeholder.", *this, splits[ 1 ] );
+        _cooldown = get_cooldown( splits[ 1 ] );
       }
 
-      throw sc_invalid_apl_argument( fmt::format( "Cooldown '{}' not found.", splits[ 1 ] ) );
+      return _cooldown->create_expression( splits[ 2 ] );
     }
     else if ( splits[ 0 ] == "swing" )
     {
@@ -12486,11 +12532,11 @@ std::unique_ptr<expr_t> player_t::create_expression( util::string_view expressio
         }
       }
 
-      auto index = util::to_unsigned( splits[ 1 ] ) - 1;
-      if ( index >= apex_traits.size() )
+      auto _index = util::to_unsigned( splits[ 1 ] ) - 1;
+      if ( _index >= apex_traits.size() )
         throw sc_invalid_apl_argument( fmt::format( "Apex talent index '{}' not found.", splits[ 1 ] ) );
 
-      _talent = create_talent_obj( this, apex_traits[ index ] );
+      _talent = create_talent_obj( this, apex_traits[ _index ] );
     }
     else if ( splits[ 0 ] == "talent" )
     {
@@ -13002,7 +13048,7 @@ std::string player_t::create_profile( save_e stype )
     auto print_option = [ &profile_str, term ]( std::string_view n, auto option ) {
       if ( !option.is_default() )
       {
-        if constexpr ( std::is_same_v<decltype( option ), player_option_t<bool>> )
+        if constexpr ( std::is_same_v<decltype( option ), default_value_t<bool>> )
           profile_str += fmt::format( "{}={}{}", n, static_cast<int>( option ), term );
         else
           profile_str += fmt::format( "{}={}{}", n, option, term );
@@ -13703,6 +13749,8 @@ void player_t::create_options()
   add_option( opt_int( "dragonflight.brilliance_party", dragonflight_opts.brilliance_party, 0, 4 ) );
   add_option( opt_int( "dragonflight.windweaver_party", dragonflight_opts.windweaver_party, 0, 4 ) );
   add_option( opt_string( "dragonflight.windweaver_party_ilvls", dragonflight_opts.windweaver_party_ilvls ) );
+  add_option( opt_int( "dragonflight.emerald_coachs_whistle_ally_ilvl", dragonflight_opts.emerald_coachs_whistle_ally_ilvl ) );
+  add_option( opt_bool( "dragonflight.emerald_coachs_whistle_ally_is_healer", dragonflight_opts.emerald_coachs_whistle_ally_is_healer ) );
 
   // The War Within options
   add_option( opt_string( "thewarwithin.sikrans_endless_arsenal_stance",
@@ -13785,14 +13833,28 @@ void player_t::create_options()
                         thewarwithin_opts.attuned_to_the_aether ) );
 
   // Midnight options
-  add_option( opt_string( "midnight.darkmoon_hunt_race", midnight_opts.darkmoon_hunt_race ) );
-  add_option( opt_timespan( "midnight.sealed_chaos_urn_dispell_time", midnight_opts.sealed_chaos_urn_dispell_time,
-                            500_ms, 5_s ) );
-  add_option( opt_bool( "midnight.sealed_chaos_urn_dispell", midnight_opts.sealed_chaos_urn_dispell ) );
-  add_option( opt_float( "midnight.refueling_orb_heal_chance", midnight_opts.refueling_orb_heal_chance, 0, 1 ) );
-  add_option( opt_bool( "midnight.crucible_of_erratic_energies_violence", midnight_opts.crucible_of_erratic_energies_violence ) );
-  add_option( opt_bool( "midnight.crucible_of_erratic_energies_sustenance", midnight_opts.crucible_of_erratic_energies_sustenance ) );
-  add_option( opt_bool( "midnight.crucible_of_erratic_energies_predation", midnight_opts.crucible_of_erratic_energies_predation ) );
+  add_option(   opt_string( "midnight.darkmoon_hunt_race",
+                            midnight_opts.darkmoon_hunt_race ) );
+  add_option( opt_timespan( "midnight.sealed_chaos_urn_dispell_time",
+                            midnight_opts.sealed_chaos_urn_dispell_time, 500_ms, 5_s ) );
+  add_option(     opt_bool( "midnight.sealed_chaos_urn_dispell",
+                            midnight_opts.sealed_chaos_urn_dispell ) );
+  add_option(    opt_float( "midnight.refueling_orb_heal_chance",
+                            midnight_opts.refueling_orb_heal_chance, 0, 1 ) );
+  add_option(     opt_bool( "midnight.crucible_of_erratic_energies_violence",
+                            midnight_opts.crucible_of_erratic_energies_violence ) );
+  add_option(     opt_bool( "midnight.crucible_of_erratic_energies_sustenance",
+                            midnight_opts.crucible_of_erratic_energies_sustenance ) );
+  add_option(     opt_bool( "midnight.crucible_of_erratic_energies_predation",
+                            midnight_opts.crucible_of_erratic_energies_predation ) );
+  add_option(    opt_float( "midnight.vessel_of_tortured_souls_miss_chance",
+                            midnight_opts.vessel_of_tortured_souls_miss_chance, 0, 1 ) );
+  add_option(
+      opt_float( "midnight.arcanoweave_trappings_uptime", midnight_opts.arcanoweave_trappings_uptime, 0.0, 1.0 ) );
+  add_option( opt_timespan( "midnight.arcanoweave_trappings_update_interval",
+                            midnight_opts.arcanoweave_trappings_update_interval, 1_s, timespan_t::max() ) );
+  add_option( opt_timespan( "midnight.arcanoweave_trappings_update_interval_stddev",
+                            midnight_opts.arcanoweave_trappings_update_interval_stddev, 1_s, timespan_t::max() ) );
 }
 
 player_t* player_t::create( sim_t*, const player_description_t& )
@@ -15007,8 +15069,8 @@ void player_t::register_creature_type_buff( buff_t* buff, const spell_data_t* s_
 
   assert( _strs.size() );
 
-  sim->print_debug( "{} {} ({}) granting {}% increased damage {}against creature type: {}", *this, s_data->name_cstr(),
-                    s_data->id(), effect.base_value(), buff ? "with buff '" + std::string( buff->name() ) + "' " : "",
+  sim->print_debug( "{} {} granting {}% increased damage {}against creature type: {}", *this, *s_data,
+                    effect.base_value(), buff ? "with buff '" + std::string( buff->name() ) + "' " : "",
                     fmt::join( _strs, ", " ) );
 
   buffs.creature_type_buffs.emplace_back( buff, effect.misc_value1(), effect.percent() );
@@ -15358,10 +15420,10 @@ std::array<double, 3> player_t::get_passive_value( const spell_data_t& spell, st
     return get_owner_or_self()->get_passive_value( spell, field );
 
   auto id = as<int>( spell.id() );
-  auto type = get_type_from_field( field );
+  auto field_type = get_type_from_field( field );
 
-  auto it = range::find_if( passive_spell_modifiers_, [ id, type ]( const auto& mod ) {
-    return mod.id == id && mod.field_id == type;
+  auto it = range::find_if( passive_spell_modifiers_, [ id, field_type ]( const auto& mod ) {
+    return mod.id == id && mod.field_id == field_type;
   } );
   if ( it == passive_spell_modifiers_.end() )
     return { spell.get_field( field ) * mul, 0.0, 1.0 };
@@ -15376,10 +15438,10 @@ std::array<double, 3> player_t::get_passive_value( const spellpower_data_t& powe
     return get_owner_or_self()->get_passive_value( power, field );
 
   auto id = as<int>( power.id() );
-  auto type = get_type_from_field( field );
+  auto field_type = get_type_from_field( field );
 
-  auto it = range::find_if( passive_power_modifiers_, [ id, type ]( const auto& mod ) {
-    return mod.id == id && mod.field_id == type;
+  auto it = range::find_if( passive_power_modifiers_, [ id, field_type ]( const auto& mod ) {
+    return mod.id == id && mod.field_id == field_type;
   } );
   if ( it == passive_power_modifiers_.end() )
     return { power.get_field( field ) / power.cost_divisor( false ), 0.0, 1.0 };
@@ -15394,10 +15456,10 @@ std::array<double, 3> player_t::get_passive_value( const spelleffect_data_t& eff
     return get_owner_or_self()->get_passive_value( eff, field );
 
   auto id = as<int>( eff.id() );
-  auto type = get_type_from_field( field );
+  auto field_type = get_type_from_field( field );
 
-  auto it = range::find_if( passive_effect_modifiers_, [ id, type ]( const auto& mod ) {
-    return mod.id == id && mod.field_id == type;
+  auto it = range::find_if( passive_effect_modifiers_, [ id, field_type ]( const auto& mod ) {
+    return mod.id == id && mod.field_id == field_type;
   } );
   if ( it == passive_effect_modifiers_.end() )
     return { eff.get_field( field ), 0.0, 1.0 };
@@ -15411,10 +15473,10 @@ double player_t::get_passive_player_value( double base_val, std::string_view fie
   if ( is_pet() )
     return get_owner_or_self()->get_passive_player_value( base_val, field, misc_type );
 
-  auto id_type = get_type_from_field( field );
+  auto field_type = get_type_from_field( field );
 
-  auto it = range::find_if( passive_player_modifiers_, [ id_type, misc_type ]( const auto& mod ) {
-    return mod.id == id_type && mod.field_id == misc_type;
+  auto it = range::find_if( passive_player_modifiers_, [ field_type, misc_type ]( const auto& mod ) {
+    return mod.id == field_type && mod.field_id == misc_type;
   } );
   if ( it == passive_player_modifiers_.end() )
     return base_val;
@@ -15651,12 +15713,17 @@ bool player_t::register_passive_effect( const spelleffect_data_t& modifying_eff,
     }
 
     auto do_debug = [ & ]( std::string type_str, const auto& prev, const auto& now ) {
+      if ( !sim->debug )
+        return;
+
       std::string field_str = type_str.empty() ? id_field : fmt::format( "{}_{}", type_str, id_field );
-      sim->print_debug(
-        "{} ({}) eff#{} {} {} {} by {:.7g}{} (orig={:.7g} prev={:.7g}[{:.7g}/{:.7g}%] now={:.7g}[{:.7g}/{:.7g}%])",
-        modifying_spell->name_cstr(), modifying_spell->id(), modifying_eff.index() + 1,
-        remove ? "reverting" : "modifying", *this, field_str, flat_val ? flat_val : pct_val * 100, flat_val ? "" : "%",
-        now.orig, prev.value(), prev.flat, prev.pct * 100, now.value(), now.flat, now.pct * 100 );
+      std::string _tmp_full_message_tmp_ = fmt::format(
+        "{} eff#{} {} {} {} by {:.7g}{} (orig={:.7g} prev={:.7g}[{:.7g}/{:.7g}%] now={:.7g}[{:.7g}/{:.7g}%])",
+        *modifying_spell, modifying_eff.index() + 1, remove ? "reverting" : "modifying", *this, field_str,
+        flat_val ? flat_val : pct_val * 100, flat_val ? "" : "%", now.orig, prev.value(), prev.flat, prev.pct * 100,
+        now.value(), now.flat, now.pct * 100 );
+      sim->print_debug( "{}", _tmp_full_message_tmp_ );
+      registered_passive_debug_printout.push_back( _tmp_full_message_tmp_ );
     };
 
     auto add_reporting = [ & ]( int type ) {
@@ -15961,9 +16028,14 @@ bool player_t::register_passive_effect( const spelleffect_data_t& modifying_eff,
     }
 
     auto do_debug = [ & ]( std::string msg ) {
-      sim->print_debug( "{} ({}) eff#{} {} {} ({}) {}", modifying_spell->name_cstr(), modifying_spell->id(),
-                        modifying_eff.index() + 1, remove ? "reverting" : "modifying", spell->name_cstr(), spell->id(),
-                        msg );
+      if ( !sim->debug )
+        return;
+
+      std::string _tmp_full_message_tmp_ =
+        fmt::format( "{} eff#{} {} {} {}", *modifying_spell, modifying_eff.index() + 1,
+                     remove ? "reverting" : "modifying", *spell, msg );
+      sim->print_debug( "{}", _tmp_full_message_tmp_ );
+      registered_passive_debug_printout.push_back( _tmp_full_message_tmp_ );
     };
 
     auto add_reporting = [ & ]( std::string field ) {
@@ -16162,9 +16234,8 @@ bool player_t::register_passive_effect( const spelleffect_data_t& modifying_eff,
     {
       if ( as<int>( spell->effect_count() ) < eff_idx )
       {
-        sim->print_debug( "{} ({}) only has {} effects, but {} ({}) is trying to modify eff#{}, ignoring.",
-                          spell->name_cstr(), spell->id(), spell->effect_count(), modifying_spell->name_cstr(),
-                          modifying_spell->id(), eff_idx );
+        sim->print_debug( "{} only has {} effects, but {} is trying to modify eff#{}, ignoring.", *spell,
+                          spell->effect_count(), *modifying_spell, eff_idx );
         continue;
       }
       // populate all effects in case of P_EFFECTS
@@ -16187,8 +16258,7 @@ bool player_t::register_passive_effect( const spelleffect_data_t& modifying_eff,
         {
           if ( sim->debug )
           {
-            sim->print_debug( "De-register {} ({}) eff#{}", eff->spell()->name_cstr(), eff->spell()->id(),
-                              eff->index() + 1 );
+            sim->print_debug( "De-register {} eff#{}", *eff->spell(), eff->index() + 1 );
           }
 
           register_passive_effect( *eff, true );
@@ -16217,8 +16287,7 @@ bool player_t::register_passive_effect( const spelleffect_data_t& modifying_eff,
         // re-register if necessary
         if ( deregister )
         {
-          sim->print_debug( "Re-register {} ({}) eff#{}", eff->spell()->name_cstr(), eff->spell()->id(),
-                            eff->index() + 1 );
+          sim->print_debug( "Re-register {} eff#{}", *eff, eff->index() + 1 );
 
           register_passive_effect( *eff );
         }
@@ -16237,19 +16306,19 @@ void player_t::parse_passive_effects( const spell_data_t* spell, bool force, par
   if ( !force &&
        range::contains( registered_passive_spells_, spell->id(), &std::pair<unsigned, parse_source_e>::first ) )
   {
-    sim->error( "Unable to register {} ({}), spell already registered.", spell->name_cstr(), spell->id() );
+    sim->error( "Unable to register {}, spell already registered.", *spell );
     return;
   }
 
   if ( !force && range::contains( deregistered_passive_spells_, spell->id() ) )
   {
-    sim->print_debug( "Unable to register {} ({}), spell has been de-registered.", spell->name_cstr(), spell->id() );
+    sim->print_debug( "Unable to register {}, spell has been de-registered.", *spell );
     return;
   }
 
   if ( !force && !spell->flags( SX_PASSIVE ) )
   {
-    sim->error( "Unable to register {} ({}), spell is not passive.", spell->name_cstr(), spell->id() );
+    sim->error( "Unable to register {}, spell is not passive.", *spell );
     return;
   }
 
@@ -16261,8 +16330,7 @@ void player_t::parse_passive_effects( const spell_data_t* spell, bool force, par
     // filter out ignore list
     if ( range::contains( registered_effect_ignore_list_, eff.id() ) )
     {
-      sim->print_debug( "Skipping {} ({}) eff#{} ({}), effect has been de-registered.", spell->name_cstr(), spell->id(),
-                        eff.index() + 1, eff.id() );
+      sim->print_debug( "Skipping {} eff#{} ({}), effect has been de-registered.", *spell, eff.index() + 1, eff.id() );
       continue;
     }
 
@@ -16282,8 +16350,7 @@ void player_t::deregister_passive_spell( const spell_data_t* spell )
   if ( !spell || !spell->ok() || range::contains( deregistered_passive_spells_, spell->id() ) )
     return;
 
-  sim->print_debug( "De-registering {} ({}), current and all future parsing on this spell blocked.", spell->name_cstr(),
-                    spell->id() );
+  sim->print_debug( "De-registering {}, current and all future parsing on this spell blocked.", *spell );
 
   deregistered_passive_spells_.push_back( spell->id() );
 
@@ -16316,8 +16383,8 @@ void player_t::deregister_passive_effect( const spelleffect_data_t& effect )
   bool deregister =
     range::contains( registered_passive_spells_, effect.spell()->id(), &std::pair<unsigned, parse_source_e>::first );
 
-  sim->print_debug( "De-registering {} ({}) eff#{} ({}), current and all future parsing of this effect blocked.",
-                    effect.spell()->name_cstr(), effect.spell()->id(), effect.index() + 1, effect.id() );
+  sim->print_debug( "De-registering {} eff#{} ({}), current and all future parsing of this effect blocked.",
+                    *effect.spell(), effect.index() + 1, effect.id() );
 
   registered_effect_ignore_list_.push_back( effect.id() );
 
@@ -16339,8 +16406,7 @@ void player_t::register_passive_effect_mask( const spell_data_t* spell, uint32_t
     if ( mask_ & 1 )
       msg.push_back( std::to_string( i ) );
 
-  sim->print_debug( "Registering {} ({}) effect_mask eff#{} ({:#b})", spell->name_cstr(), spell->id(),
-                    util::string_join( msg, "," ), mask );
+  sim->print_debug( "Registering {} effect_mask eff#{} ({:#b})", *spell, util::string_join( msg, "," ), mask );
 
   for ( const auto& eff : spell->effects() )
   {
@@ -16350,8 +16416,7 @@ void player_t::register_passive_effect_mask( const spell_data_t* spell, uint32_t
 
       if ( deregister )
       {
-        sim->print_debug( "De-register {} ({}) eff#{} ({})", spell->name_cstr(), spell->id(), eff.index() + 1,
-                          eff.id() );
+        sim->print_debug( "De-register {} eff#{} ({})", *spell, eff.index() + 1, eff.id() );
         register_passive_effect( eff, true );
       }
     }
@@ -16374,8 +16439,8 @@ void player_t::register_passive_affect_list( const spell_data_t* spell, const af
   if ( !mod.family.empty() )
     list_str.push_back( fmt::format( "family_flag={}", fmt::join( mod.family, ", " ) ) );
 
-  sim->print_debug( "Registering {} ({}) eff#{} affect_list ({})", spell->name_cstr(), spell->id(),
-                    fmt::join( mod.idx, "," ), fmt::join( list_str, ", " ) );
+  sim->print_debug( "Registering {} eff#{} affect_list ({})", *spell, fmt::join( mod.idx, "," ),
+                    fmt::join( list_str, ", " ) );
 
   for ( auto idx : mod.idx )
   {
@@ -16403,7 +16468,7 @@ void player_t::register_passive_affect_list( const spell_data_t* spell, const af
       {
         if ( deregister )
         {
-          sim->print_debug( "De-register {} ({}) eff#{}", spell->name_cstr(), spell->id(), idx );
+          sim->print_debug( "De-register {} eff#{}", *spell, idx );
           register_passive_effect( eff, true );
         }
 
@@ -16411,7 +16476,7 @@ void player_t::register_passive_affect_list( const spell_data_t* spell, const af
 
         if ( deregister )
         {
-          sim->print_debug( "Re-register {} ({}) eff#{}", spell->name_cstr(), spell->id(), idx );
+          sim->print_debug( "Re-register {} eff#{}", *spell, idx );
           register_passive_effect( eff );
         }
       }
@@ -16434,12 +16499,12 @@ void player_t::parse_all_class_passives()
   // spec passives & spec-only rank spells
   auto mastery_id = mastery_spell_entry_t::find( specialization(), dbc->ptr ).spell_id;
 
-  for ( const auto& spec_spell : specialization_spell_entry_t::data( dbc->ptr ) )
+  for ( const auto& spec_entry : specialization_spell_entry_t::data( dbc->ptr ) )
   {
-    if ( spec_spell.specialization_id == static_cast<unsigned>( specialization() ) &&
-         spec_spell.spell_id != mastery_id )
+    if ( spec_entry.specialization_id == static_cast<unsigned>( specialization() ) &&
+         spec_entry.spell_id != mastery_id )
     {
-      auto spell = find_spell( spec_spell.spell_id );
+      auto spell = find_spell( spec_entry.spell_id );
       if ( spell->flags( SX_PASSIVE ) )
         parse_passive_effects( spell, false, PARSE_SOURCE_SPEC );
     }
@@ -16479,8 +16544,8 @@ void player_t::parse_all_passive_talents()
 
 void player_t::parse_all_passive_sets()
 {
-  for ( const auto& type : sets->set_bonus_spec_data )
-    for ( const auto& bonus : type )
+  for ( const auto& bonus_type : sets->set_bonus_spec_data )
+    for ( const auto& bonus : bonus_type )
       for ( const auto& data : bonus )
         if ( data.enabled )
           parse_passive_effects( data.spell, false, PARSE_SOURCE_SET );

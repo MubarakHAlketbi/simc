@@ -253,10 +253,10 @@ static constexpr std::array<proc_map_entry_t, 39> _proc_flag_map { {
   { PF_RANGED_TAKEN,           "White Ranged Taken"          },
   { PF_RANGED_ABILITY,         "Yellow Ranged"               },
   { PF_RANGED_ABILITY_TAKEN,   "Yellow Ranged Taken"         },
-  { PF_NONE_HEAL,              "Generic Heal"                },
-  { PF_NONE_HEAL_TAKEN,        "Generic Heal Taken"          },
-  { PF_NONE_SPELL,             "Generic Hostile Spell"       },
-  { PF_NONE_SPELL_TAKEN,       "Generic Hostile Spell Taken" },
+  { PF_NONE_HELPFUL,           "Generic Helpful"             },
+  { PF_NONE_HELPFUL_TAKEN,     "Generic Helpful Taken"       },
+  { PF_NONE_HARMFUL,           "Generic Hostile Spell"       },
+  { PF_NONE_HARMFUL_TAKEN,     "Generic Hostile Spell Taken" },
   { PF_MAGIC_HEAL,             "Magic Heal"                  },
   { PF_MAGIC_HEAL_TAKEN,       "Magic Heal Taken"            },
   { PF_MAGIC_SPELL,            "Magic Hostile Spell"         },
@@ -1458,7 +1458,7 @@ static constexpr auto _effect_subtype_strings = util::make_static_map<unsigned, 
   { A_MOD_ATTACK_POWER,                      "Modify Attack Power"                               },
   { A_MOD_RESISTANCE_PCT,                    "Modify Armor%"                                     },
   { A_MOD_MELEE_ATTACK_POWER_VERSUS,         "Modify Melee Attack Power vs Race"                 },
-  { A_MOD_TOTAL_THREAT,                      "Temporary Thread Reduction"                        },
+  { A_MOD_TOTAL_THREAT,                      "Temporary Threat Reduction"                        },
   { A_WATER_WALK,                            "Modify Attack Power"                               },
   { A_HOVER,                                 "Levitate"                                          },
   { A_ADD_FLAT_MODIFIER,                     "Add Flat Modifier"                                 },
@@ -1846,9 +1846,9 @@ std::string label_str( int label, const dbc_t& dbc, size_t wrap )
 
   return wrap_concatenate( affected_spells, [ first = affected_spells.front() ]( const spell_data_t* spell ) {
     if ( spell == first )
-      return fmt::format( "Affected Spells (Label): {} ({})", spell->name_cstr(), spell->id() );
+      return fmt::format( "Affected Spells (Label): {}", *spell );
     else
-      return fmt::format( "{} ({})", spell->name_cstr(), spell->id() );
+      return fmt::format( "{}", *spell );
   }, wrap );
 }
 
@@ -2357,9 +2357,9 @@ std::ostringstream& spell_info::effect_to_str( const dbc_t& dbc, const spell_dat
     s << "                   ";
     s << wrap_concatenate( affected_spells, [ first = affected_spells.front() ]( const spell_data_t* spell ) {
       if ( spell == first )
-        return fmt::format( "Affected Spells: {} ({})", spell->name_cstr(), spell->id() );
+        return fmt::format( "Affected Spells: {}", *spell );
       else
-        return fmt::format( "{} ({})", spell->name_cstr(), spell->id() );
+        return fmt::format( "{}", *spell );
     }, wrap );
     s << std::endl;
   }
@@ -2401,7 +2401,7 @@ std::ostringstream& spell_info::effect_to_str( const dbc_t& dbc, const spell_dat
       {
         s << "                   Affected Spells (Category): ";
         s << wrap_concatenate( affected, []( const spell_data_t* spell ) {
-          return fmt::format( "{} ({})", spell->name_cstr(), spell->id() );
+          return fmt::format( "{}", *spell );
         }, wrap );
         s << std::endl;
       }
@@ -3205,7 +3205,7 @@ std::string spell_info::to_str( const dbc_t& dbc, const spell_data_t* spell, int
   {
     s << "Triggered By     : ";
     s << wrap_concatenate( spell->drivers(), []( const spell_data_t* spell ) {
-      return fmt::format( "{} ({})", spell->name_cstr(), spell->id() );
+      return fmt::format( "{}", *spell );
     }, wrap );
     s << std::endl;
   }

@@ -53,7 +53,10 @@ namespace paladin {
     }
     set_refresh_behavior( buff_refresh_behavior::NONE );
 
-    cooldown->duration = p->spells.sentinel->effectN( 14 ).time_value() * (p->talents.righteous_protector->ok() ? (1.0-(abs(p->talents.righteous_protector->effectN(2).percent()))) : 1.0);
+    cooldown->duration = p->spells.sentinel->effectN( 14 ).time_value() *
+                         ( p->talents.righteous_protector->ok()
+                             ? ( 1.0 - ( std::abs( p->talents.righteous_protector->effectN( 2 ).percent() ) ) )
+                             : 1.0 );
 
     add_invalidate( CACHE_STAMINA );
   }
@@ -108,6 +111,17 @@ struct avengers_shield_base_t : public paladin_spell_t
       // Glory of the Vanguard hits every enemy in a line. For now, just assume it hits everything
       // Theoretically, it also has a chance to miss completely, for whatever reasons. Drunk Paladins.
       aoe = -1;
+    }
+    void execute() override
+    {
+      paladin_spell_t::execute();
+      if ( p()->talents.glory_of_the_vanguard_2->ok() )
+      {
+        p()->resource_gain( RESOURCE_HOLY_POWER, p()->talents.glory_of_the_vanguard_2->effectN( 2 ).base_value(),
+                            p()->gains.hp_glory_of_the_vanguard_2 );
+      }
+      if ( p()->talents.glory_of_the_vanguard_3->ok() )
+        p()->buffs.valor->trigger();
     }
   };
 
@@ -256,14 +270,7 @@ struct avengers_shield_base_t : public paladin_spell_t
       if (!isApex3)
         p()->buffs.vanguard->decrement();
 
-      glory_of_the_vanguard->execute_on_target( target );
-      if (p()->talents.glory_of_the_vanguard_2->ok())
-      {
-        p()->resource_gain( RESOURCE_HOLY_POWER, p()->talents.glory_of_the_vanguard_2->effectN( 2 ).base_value(),
-                            p()->gains.hp_glory_of_the_vanguard_2 );
-      }
-      if ( p()->talents.glory_of_the_vanguard_3->ok() )
-        p()->buffs.valor->trigger();
+      make_event<delayed_execute_event_t>( *sim, p(), glory_of_the_vanguard, execute_state->target, 300_ms );
     }
   }
 };
@@ -857,7 +864,7 @@ void paladin_t::target_mitigation( school_e school,
   }
 }
 
-void paladin_t::trigger_grand_crusader( grand_crusader_source source )
+void paladin_t::trigger_grand_crusader( grand_crusader_source /* source */ )
 {
   // escape if we don't have Grand Crusader
   if ( ! talents.grand_crusader->ok() )

@@ -262,7 +262,7 @@ struct expurgation_t : public paladin_spell_t
     return new state_t( this, target );
   }
 
-  double composite_rolling_ta_multiplier( const action_state_t* s ) const
+  double composite_rolling_ta_multiplier( const action_state_t* s ) const override
   {
     auto s_ = static_cast<const state_t*>( s );
     // Copied from base composite_rolling_ta_multiplier
@@ -415,6 +415,15 @@ struct divine_storm_second_sunrise_tempest_t : public holy_power_consumer_t<pala
     triggers_crusade_stacks  = false;
     triggers_righteous_cause = false;
   }
+  void impact(action_state_t* s) override
+  {
+    holy_power_consumer_t::impact( s );
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
+      p()->trigger_expurgation( execute_state->target, mult );
+    }
+  }
 };
 
 struct divine_storm_tempest_t : public holy_power_consumer_t<paladin_melee_attack_t>
@@ -432,6 +441,15 @@ struct divine_storm_tempest_t : public holy_power_consumer_t<paladin_melee_attac
     triggers_divine_purpose  = true;
     triggers_crusade_stacks  = false;
     triggers_righteous_cause = false;
+  }
+  void impact( action_state_t* s ) override
+  {
+    holy_power_consumer_t::impact( s );
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
+      p()->trigger_expurgation( execute_state->target, mult );
+    }
   }
 };
 
@@ -467,6 +485,15 @@ struct divine_storm_second_sunrise_t : public holy_power_consumer_t<paladin_mele
 
     if ( p()->talents.tempest_of_the_lightbringer->ok() )
       tempest->schedule_execute();
+  }
+  void impact( action_state_t* s ) override
+  {
+    holy_power_consumer_t::impact( s );
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
+      p()->trigger_expurgation( execute_state->target, mult );
+    }
   }
 };
 
@@ -542,8 +569,6 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
     if ( p()->talents.tempest_of_the_lightbringer->ok() )
       tempest->schedule_execute();
 
-    bool has_echo = false;
-
     if ( sunrise_echo && p()->cooldowns.second_sunrise_icd->up() )
     {
       if ( rng().roll( p()->talents.herald_of_the_sun.second_sunrise->effectN( 1 ).percent() ) )
@@ -551,14 +576,13 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
         p()->cooldowns.second_sunrise_icd->start();
         // TODO(mserrano): validate the correct delay here
         sunrise_echo->start_action_execute_event( 200_ms );
-        has_echo = true;
       }
     }
     // MID1 4pc: Divine Storm applies Expurgation at 50% effectiveness (from spell effect #2)
     if ( !background && p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
     {
       double mult = p()->spells.mid1_ret_4pc->effectN( 2 ).base_value() / 100.0;
-      if ( has_echo )
+      if ( sunrise_echo )
         mult *= 2;
       if ( p()->talents.tempest_of_the_lightbringer->ok() )
         mult *= 1.2;
@@ -582,6 +606,11 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
         p()->active.sun_sear->target = s->target;
         p()->active.sun_sear->execute();
       }
+    }
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->sets->set(PALADIN_RETRIBUTION, MID1, B4)->effectN(2).percent() * base_multiplier;
+      p()->trigger_expurgation( execute_state->target, mult );
     }
   }
 };
@@ -651,7 +680,7 @@ struct templars_verdict_t : public holy_power_consumer_t<paladin_melee_attack_t>
       p()->resource_gain( RESOURCE_HOLY_POWER, c, p()->gains.hp_templars_verdict_refund );
     }
 
-    
+
     // MID1 4pc: Templar's Verdict/Final Verdict applies Expurgation at 100% effectiveness (from spell effect #1)
     if ( !background && p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
     {
@@ -682,6 +711,15 @@ struct templars_verdict_t : public holy_power_consumer_t<paladin_melee_attack_t>
         if ( p()->cooldowns.hammer_of_wrath != nullptr )
           p()->cooldowns.hammer_of_wrath->reset( true );
       }
+    }
+  }
+  void impact(action_state_t* s) override
+  {
+    holy_power_consumer_t::impact(s);
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 1 ).percent() * base_multiplier;
+      p()->trigger_expurgation( execute_state->target, mult );
     }
   }
 };
@@ -1011,11 +1049,7 @@ void paladin_t::accumulate_es_damage( action_state_t* s, double mult )
 void paladin_t::trigger_es_explosion( player_t* target )
 {
   double ta = 0.0;
-  double perc        = talents.execution_sentence->effectN( 2 ).percent();
-  // 14.02.26 Fluttershy - ES still only accumulates 10% of the damage
-  if ( bugs )
-    perc = .1;
-  double accumulated = buffs.execution_sentence->check_value() * perc;
+  double accumulated = buffs.execution_sentence->check_value() * talents.execution_sentence->effectN( 2 ).percent();
 
   sim->print_debug( "{}'s execution_sentence has accumulated {} total additional damage.", target->name(), accumulated );
   ta += accumulated;

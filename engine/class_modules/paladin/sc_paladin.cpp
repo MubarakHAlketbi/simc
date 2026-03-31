@@ -1307,7 +1307,7 @@ struct word_of_glory_t : public holy_power_consumer_t<paladin_heal_t>
         timespan_t trigger_duration = timespan_t::from_seconds( p()->talents.awakening->effectN( 2 ).base_value() );
         if ( main_buff->check() )
         {
-          p()->buffs.avenging_wrath->extend_duration( p(), trigger_duration );
+          p()->buffs.avenging_wrath->extend_duration( trigger_duration );
         }
         else
         {
@@ -1355,7 +1355,7 @@ hammer_and_anvil_t::hammer_and_anvil_t( paladin_t* p, util::string_view n )
 }
 
 bool trigger_hammer_and_anvil( paladin_t* p, player_t* target, hammer_and_anvil_t* haa,
-                               hammer_and_anvil_source haas = HAA_JUDGMENT )
+                               hammer_and_anvil_source = HAA_JUDGMENT )
 {
   if ( p->talents.lightsmith.hammer_and_anvil->ok() )
   {
@@ -1409,12 +1409,12 @@ void judgment_base_t::execute()
 
     if ( p()->buffs.avenging_wrath->up() )
     {
-      p()->buffs.avenging_wrath->extend_duration( p(), extension );
+      p()->buffs.avenging_wrath->extend_duration( extension );
     }
 
     if ( p()->buffs.sentinel->up() )
     {
-      p()->buffs.sentinel->extend_duration( p(), extension );
+      p()->buffs.sentinel->extend_duration( extension );
     }
   }
 
@@ -1503,12 +1503,11 @@ void judgment_t::execute()
     trigger_hammer_and_anvil( p(), execute_state->target, hammer_and_anvil, HAA_JUDGMENT );
   }
 }
+
 bool judgment_t::action_ready()
 {
   return judgment_base_t::action_ready() && !p()->buffs.hammer_of_wrath->up();
 }
-
-
 
 // Judgment - Retribution =================================================================
 
@@ -1530,8 +1529,6 @@ struct judgment_ret_t : public judgment_t
     : judgment_t( p, name, options_str, s ),
       holy_power_generation( as<int>( p->find_spell( 220637 )->effectN( 1 ).base_value() ) )
   {
-    parse_options( options_str );
-
     if ( p->talents.blessed_champion->ok() )
     {
       base_aoe_multiplier *= 1.0 - p->talents.blessed_champion->effectN( 3 ).percent();
@@ -1549,6 +1546,7 @@ struct judgment_ret_t : public judgment_t
     }
   }
 };
+
 struct divine_toll_judgment_ret_t :judgment_ret_t
 {
   divine_toll_judgment_ret_t( paladin_t* p ) : judgment_ret_t( p, "judgment_divine_toll", p->spells.judgment_ret_dt )
@@ -1559,6 +1557,7 @@ struct divine_toll_judgment_ret_t :judgment_ret_t
     cooldown->duration = 0_ms;
   }
 };
+
 struct divine_resonance_judgment_t :judgment_ret_t
 {
   divine_resonance_judgment_t(paladin_t* p) : judgment_ret_t(p, "judgment_divine_resonance", p->spells.judgment_ret)
@@ -1568,6 +1567,7 @@ struct divine_resonance_judgment_t :judgment_ret_t
     cooldown->duration = 0_ms;
   }
 };
+
 struct divine_exaction_judgment_t : public judgment_ret_t
 {
   divine_exaction_judgment_t( paladin_t* p ) : judgment_ret_t( p, "judgment_divine_exaction", p->spells.judgment_ret_dt )
@@ -1584,6 +1584,7 @@ struct divine_exaction_judgment_t : public judgment_ret_t
     cooldown->duration = 0_ms;
   }
 };
+
 struct divine_toll_hammer_of_wrath_ret_t : hammer_of_wrath_t
 {
   divine_toll_hammer_of_wrath_ret_t( paladin_t* p )
@@ -1597,6 +1598,7 @@ struct divine_toll_hammer_of_wrath_ret_t : hammer_of_wrath_t
     cooldown->duration        = 0_ms;
   }
 };
+
 struct divine_resonance_hammer_of_wrath_t :hammer_of_wrath_t
 {
   divine_resonance_hammer_of_wrath_t(paladin_t* p)
@@ -1609,7 +1611,8 @@ struct divine_resonance_hammer_of_wrath_t :hammer_of_wrath_t
     cooldown->duration        = 0_ms;
   }
 };
-  struct divine_exaction_hammer_of_wrath_t :public hammer_of_wrath_t
+
+struct divine_exaction_hammer_of_wrath_t :public hammer_of_wrath_t
 {
   divine_exaction_hammer_of_wrath_t(paladin_t* p)
     : hammer_of_wrath_t(p, "hammer_of_wrath_divine_exaction", p->spells.hammer_of_wrath_ret_dt)
@@ -1629,58 +1632,58 @@ struct divine_resonance_hammer_of_wrath_t :hammer_of_wrath_t
   }
 };
 
-  hammer_of_wrath_t::hammer_of_wrath_t(paladin_t* p, util::string_view n, const spell_data_t* s)
-    : judgment_base_t(p, n, s)
-  {
-    background = true;
-    triggers_divine_resonance = true;
-    triggers_second_sunrise   = false;
-    cooldown->duration        = 0_ms;
-  }
+hammer_of_wrath_t::hammer_of_wrath_t(paladin_t* p, util::string_view n, const spell_data_t* s)
+  : judgment_base_t(p, n, s)
+{
+  background = true;
+  triggers_divine_resonance = true;
+  triggers_second_sunrise   = false;
+  cooldown->duration        = 0_ms;
+}
 
 hammer_of_wrath_t::hammer_of_wrath_t( paladin_t* p, util::string_view name, util::string_view options_str,
-                                        const spell_data_t* s )
-    : judgment_base_t( p, name, options_str, s ), echo( nullptr )
+                                      const spell_data_t* s )
+  : judgment_base_t( p, name, options_str, s ), echo( nullptr )
+{
+  if ( p->talents.adjudication->ok() )
   {
-    if ( p->talents.adjudication->ok() )
-    {
-      add_child( p->active.background_blessed_hammer );
-    }
-    triggers_higher_calling   = true;
-    triggers_second_sunrise   = !background;
-    triggers_divine_resonance = !background;
-    may_block = may_parry = may_dodge = false;
-    // force effect 1 to be used for direct ratios
-    parse_effect_data( data().effectN( 1 ) );
-
-    if ( p->talents.blessed_champion->ok() )
-    {
-      aoe = as<int>( 1 + p->talents.blessed_champion->effectN( 4 ).base_value() );
-      base_aoe_multiplier *= 1.0 - p->talents.blessed_champion->effectN( 3 ).percent();
-    }
-
-    if ( p->talents.herald_of_the_sun.second_sunrise->ok() )
-    {
-      echo = new hammer_of_wrath_t( p, "hammer_of_wrath_second_sunrise", p->spells.hammer_of_wrath_ret );
-      echo->base_multiplier         = base_multiplier;
-      echo->aoe                     = aoe;
-      echo->base_aoe_multiplier     = base_aoe_multiplier;
-      echo->crit_bonus_multiplier   = crit_bonus_multiplier;
-      echo->triggers_higher_calling = true;
-      echo->base_multiplier *= p->talents.herald_of_the_sun.second_sunrise->effectN( 2 ).percent();
-    }
-    if ( p->specialization() == PALADIN_PROTECTION )
-    {
-      if ( p->cooldowns.judgment == nullptr )
-        p->cooldowns.judgment = cooldown;
-      else
-        cooldown = p->cooldowns.judgment;
-    }
-    else
-    {
-      p->cooldowns.hammer_of_wrath = cooldown;
-    }
+    add_child( p->active.background_blessed_hammer );
   }
+  triggers_higher_calling   = true;
+  triggers_second_sunrise   = !background;
+  triggers_divine_resonance = !background;
+  may_block = may_parry = may_dodge = false;
+  // force effect 1 to be used for direct ratios
+  parse_effect_data( data().effectN( 1 ) );
+
+  if ( p->talents.blessed_champion->ok() )
+  {
+    aoe = as<int>( 1 + p->talents.blessed_champion->effectN( 4 ).base_value() );
+    base_aoe_multiplier *= 1.0 - p->talents.blessed_champion->effectN( 3 ).percent();
+  }
+
+  if ( p->talents.herald_of_the_sun.second_sunrise->ok() )
+  {
+    echo = new hammer_of_wrath_t( p, "hammer_of_wrath_second_sunrise", p->spells.hammer_of_wrath_ret );
+    echo->base_multiplier         = base_multiplier;
+    echo->aoe                     = aoe;
+    echo->base_aoe_multiplier     = base_aoe_multiplier;
+    echo->crit_bonus_multiplier   = crit_bonus_multiplier;
+    echo->triggers_higher_calling = true;
+    echo->base_multiplier *= p->talents.herald_of_the_sun.second_sunrise->effectN( 2 ).percent();
+  }
+  if ( p->specialization() == PALADIN_PROTECTION )
+  {
+    if ( p->cooldowns.judgment == nullptr )
+      p->cooldowns.judgment = cooldown;
+    else
+      cooldown = p->cooldowns.judgment;
+  }
+  else
+  {
+    p->cooldowns.hammer_of_wrath = cooldown;
+  }
+}
 
 void hammer_of_wrath_t::execute()
 {
@@ -1689,7 +1692,6 @@ void hammer_of_wrath_t::execute()
   // Hammer of Wrath generates an additional Holy Power for Prot with Sanctified Wrath
   if ( result_is_hit( execute_state->result ) && p()->talents.sanctified_wrath->ok() && p()->wings_up() )
     p()->resource_gain( RESOURCE_HOLY_POWER, 1, p()->gains.judgment );
-  
 
   if ( triggers_divine_resonance && p()->specialization() == PALADIN_RETRIBUTION && p()->buffs.divine_resonance->up() )
   {
@@ -1753,18 +1755,17 @@ bool hammer_of_wrath_t::action_ready()
   return judgment_base_t::action_ready() && p()->buffs.hammer_of_wrath->up();
 }
 
-void paladin_t::trigger_greater_judgment( paladin_td_t* targetdata, bool remove_stack )
+void paladin_t::trigger_greater_judgment( paladin_td_t* targetdata )
 {
   if ( !targetdata->target->in_combat )
     return;
 
   auto stack = spells.judgment_debuff->initial_stacks();
-  if ( remove_stack )
-    stack--;
 
   if ( stack )
-    targetdata->debuff.judgment->trigger( stack );
+    targetdata->debuff.judgment->execute( stack );
 }
+
 struct divine_toll_t : public paladin_spell_t
 {
   divine_toll_judgment_ret_t* judgment;
@@ -2062,6 +2063,15 @@ struct hammer_of_light_t : public holy_power_consumer_t<paladin_melee_attack_t>
 
     void execute() override
     {
+      if ( p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
+           p()->talents.greater_judgment->ok() )
+      {
+        auto tl = target_list();
+        for ( size_t i = 0; i < std::min( as<size_t>( n_targets() ), tl.size() ); i++ )
+        {
+          p()->trigger_greater_judgment( td( tl[ i ] ) );
+        }
+      }
       snapshot_state( pre_execute_state, amount_type( pre_execute_state ) );
       holy_power_consumer_t::execute();
       if ( p()->talents.templar.shake_the_heavens->ok() )
@@ -2076,28 +2086,6 @@ struct hammer_of_light_t : public holy_power_consumer_t<paladin_melee_attack_t>
         }
         else
           p()->buffs.templar.shake_the_heavens->execute();
-      }
-    }
-
-    void impact( action_state_t* s ) override
-    {
-      // 02.05.25 Fluttershy - Hammer of Light should apply Judgment and consume it instantly to increase damage. It
-      // currently doesn't
-      if ( !p()->bugs && p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
-           p()->talents.greater_judgment->ok() )
-      {
-        p()->trigger_greater_judgment( td( s->target ) );
-      }
-
-      holy_power_consumer_t<paladin_melee_attack_t>::impact( s );
-
-      if ( p()->bugs && p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
-           p()->talents.greater_judgment->ok() )
-      {
-        // 02.05.25 Fluttershy - If target has no Judgment Debuffs, Hammer of Light consumes one stack without damage
-        // increase
-        bool removeStack = td( s->target )->debuff.judgment->stack() == 0;
-        p()->trigger_greater_judgment( td( s->target ), removeStack );
       }
     }
   };
@@ -2156,6 +2144,13 @@ struct hammer_of_light_t : public holy_power_consumer_t<paladin_melee_attack_t>
 
    void execute() override
    {
+     if ( p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
+          p()->talents.greater_judgment->ok() )
+     {
+       auto tl = target_list();
+       if ( tl.size() )
+        p()->trigger_greater_judgment( td( tl[ 0 ] ) );
+     }
      holy_power_consumer_t<paladin_melee_attack_t>::execute();
      auto state    = static_cast<state_t*>( cleave_hammer->get_state() );
      state->target = execute_state->target;
@@ -2207,32 +2202,10 @@ struct hammer_of_light_t : public holy_power_consumer_t<paladin_melee_attack_t>
    }
    void impact( action_state_t* s ) override
    {
-     // 02.05.25 Fluttershy - Hammer of Light should apply Judgment and consume it instantly to increase damage. It currently doesn't
-     if ( !p()->bugs && p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
-          p()->talents.greater_judgment->ok() )
-     {
-       p()->trigger_greater_judgment( td( s->target ) );
-     }
-
      holy_power_consumer_t<paladin_melee_attack_t>::impact( s );
 
      if ( p()->talents.templar.undisputed_ruling->ok() )
        p()->buffs.templar.undisputed_ruling->execute();
-
-     if ( p()->bugs && p()->specialization() == PALADIN_RETRIBUTION && p()->talents.templar.undisputed_ruling->ok() &&
-          p()->talents.greater_judgment->ok() )
-     {
-       // 02.05.25 Fluttershy - If target has no Judgment Debuffs, Hammer of Light consumes one stack without damage increase
-       bool removeStack = td( s->target )->debuff.judgment->stack() == 0;
-       // 21.12.25 Fluttershy - Currently, the main target just never gets a Judgment stack
-       if ( !p()->bugs )
-         p()->trigger_greater_judgment( td( s->target ), removeStack );
-     }
-     // 25.02.26 Fluttershy - Same bug which affects Ret now also affects Prot. We will lose a Judgment stack for free.
-     else if ( p()->bugs && p()->specialization() == PALADIN_PROTECTION && p()->talents.greater_judgment->ok() )
-     {
-       make_event( *sim, 600_ms, [ this, s ]() { td( s->target )->debuff.judgment->decrement(); } );
-     }
    }
 };
 
@@ -2718,7 +2691,7 @@ void paladin_t::cast_holy_armaments( player_t* target, armament usedArmament, ar
   }
   if ( talents.lightsmith.masterwork->ok() && src != LS_DIVINE_INSPIRATION )
   {
-    int amount = talents.lightsmith.masterwork->effectN( 1 ).base_value();
+    int amount = as<int>( talents.lightsmith.masterwork->effectN( 1 ).base_value() );
     if ( usedArmament == HOLY_BULWARK )
       buffs.lightsmith.masterwork_bulwark->trigger( amount );
     else
@@ -2870,7 +2843,7 @@ struct shield_of_the_righteous_t : public holy_power_consumer_t<paladin_melee_at
     blaze_of_glory_t( paladin_t* p ) : paladin_spell_t( "blaze_of_glory", p, p->spells.blaze_of_glory )
     {
       background             = true;
-      aoe                    = p->talents.glory_of_the_vanguard_3->effectN( 1 ).base_value();
+      aoe                    = as<int>( p->talents.glory_of_the_vanguard_3->effectN( 1 ).base_value() );
       target_filter_callback = secondary_targets_only();
     }
   };
@@ -4025,6 +3998,19 @@ bool paladin_t::validate_fight_style( fight_style_e style ) const
   return true;
 }
 
+// paladin_t::validate_actor ================================================
+bool paladin_t::validate_actor()
+{
+  if ( specialization() == PALADIN_HOLY )
+  {
+    if ( !quiet )
+      sim->error( "Holy Paladin for {} is not currently supported.", *this );
+    return false;
+  }
+
+  return true;
+}
+
 void paladin_t::init_special_effects()
 {
   player_t::init_special_effects();
@@ -4079,7 +4065,7 @@ void paladin_t::init_special_effects()
     divine_inspiration_driver->rppm_scale_ = RPPM_HASTE;
     divine_inspiration_driver->type        = SPECIAL_EFFECT_EQUIP;
     divine_inspiration_driver->proc_flags_ =
-        PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_SPELL | PF_MAGIC_SPELL | PF_ALL_HEAL;
+        PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY | PF_NONE_HARMFUL | PF_MAGIC_SPELL | PF_ALL_HEAL;
     special_effects.push_back( divine_inspiration_driver );
 
     auto cb = new divine_inspiration_cb_t( this, *divine_inspiration_driver );
@@ -5180,7 +5166,7 @@ public:
   }
 
 private:
-  paladin_t& p;
+  [[maybe_unused]] paladin_t& p;
 };
 
 // PALADIN MODULE INTERFACE =================================================
