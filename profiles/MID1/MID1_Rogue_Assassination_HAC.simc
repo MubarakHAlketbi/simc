@@ -1,0 +1,121 @@
+# Created 2026-03-16 — Assassination Rogue MID1 base profile
+# Updated 2026-03-17 — Synced with Wowhead Midnight rotation + APL rework
+rogue="MID1_Rogue_Assassination"
+source=default
+spec=assassination
+level=90
+race=blood_elf
+role=attack
+position=back
+talents=CMQAAAAAAAAAAAAAAAAAAAAAAYmZmZzgBAAAAAmtBbzAAAAAAabbmZmZmZMmZmZ2mZbmBPwMzMGzYmxYAMwCMjRjZBklBsZsBYmhxA
+
+# Default consumables (Wowhead Midnight Season 1)
+potion=lights_potential_2
+flask=flask_of_the_shattered_sun_2
+food=silvermoon_parade
+augmentation=void_touched
+temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix_oil_2
+
+# This default action priority list is automatically created based on your character.
+# It is a attempt to provide you with a action list that is both simple and practicable,
+# while resulting in a meaningful and good simulation. It may not result in the absolutely highest possible dps.
+# Feel free to edit, adapt and improve it to your own needs.
+# SimulationCraft is always looking for updates and improvements to the default action lists.
+
+# Executed before combat begins. Accepts non-harmful actions only.
+# Check which trinket slots have Stat Values (updated: treacherous_transmitter + house_of_cards checks)
+
+# Executed every time the actor is available.
+
+# Cooldown list
+# Deathmark if bleeds are active, kingsbane is ready, and we have envenom
+
+# Vanish list
+
+# DoT list
+
+# Generator List
+
+# Spend List
+# Hero tree branching: Deathstalker/Fatebound — Implacable tracker gated spend
+# AoE: Crimson Tempest to maintain bleed spread at 4+ targets when spending
+
+# Special Case Trinkets
+
+# Miscellaneous Cooldowns
+
+head=masquerade_of_the_grim_jest,id=250006,bonus_id=12676/13338/13534/13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,gem_id=240983
+neck=eternal_voidsong_chain,id=249368,bonus_id=13534,ilevel=289,gem_id=240900
+shoulders=venom_casks_of_the_grim_jest,id=250004,bonus_id=13574/13574/13574/13574/13574/13574/13574/13574/13574/13574,ilevel=289
+back=defiant_defenders_drape,id=260312,bonus_id=4795,ilevel=289
+chest=fantastic_finery_of_the_grim_jest,id=250009,bonus_id=13575/13575/13575/13575/13575/13575/13575/13575/13575/13575,ilevel=289,enchant_id=7987
+wrists=voidskinned_bracers,id=249327,bonus_id=13534,ilevel=289,gem_id=240900
+hands=sleight_of_hand_of_the_grim_jest,id=250007,bonus_id=13574/13574/13574/13574/13574/13574/13574/13574/13574/13574,ilevel=289
+waist=scornscarred_shulkas_belt,id=249374,bonus_id=13534,ilevel=289,gem_id=240900
+legs=shaggy_wyrmleather_leggings,id=133499,ilevel=289,enchant_id=8163
+feet=balancing_boots_of_the_grim_jest,id=250008,ilevel=289
+finger1=eye_of_midnight,id=249920,bonus_id=13534,ilevel=289,gem_id=240900/240900,enchant_id=7967
+finger2=sindorei_band_of_hope,id=249919,bonus_id=13534,ilevel=289,gem_id=240900,enchant_id=7967
+trinket1=light_company_guidon,id=249344,ilevel=289
+trinket2=algethar_puzzle_box,id=193701,ilevel=289
+main_hand=hungering_victory,id=249925,ilevel=289,enchant_id=8039
+off_hand=farstriders_mercy,id=237837,bonus_id=8791/8960/12214/12214/12214/12214/12214/12693,ilevel=285,enchant_id=8041
+
+# Gear Summary
+# gear_ilvl=288.50
+# gear_agility=1244
+# gear_stamina=17247
+# gear_crit_rating=804
+# gear_haste_rating=623
+# gear_mastery_rating=1024
+# gear_versatility_rating=82
+# gear_armor=874
+# set_bonus=midnight_season_1_2pc=1
+# set_bonus=midnight_season_1_4pc=1
+actions.precombat=/apply_poison
+actions.precombat+=/snapshot_stats
+actions.precombat+=/variable,name=trinket_sync_slot,if=trinket.1.has_use_buff&(!trinket.2.has_use_buff|trinket.1.cooldown.duration>=trinket.2.cooldown.duration)&!trinket.2.is.treacherous_transmitter|trinket.1.is.treacherous_transmitter|trinket.1.is.house_of_cards,value=1
+actions.precombat+=/variable,name=trinket_sync_slot,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.2.cooldown.duration>trinket.1.cooldown.duration)&!trinket.1.is.treacherous_transmitter|trinket.2.is.treacherous_transmitter|trinket.2.is.house_of_cards,value=2
+actions.precombat+=/stealth
+actions.precombat+=/slice_and_dice,precombat_seconds=1
+actions=/stealth
+actions+=/kick
+actions+=/variable,name=single_target,value=spell_targets.fan_of_knives=1
+actions+=/thistle_tea,if=energy.pct<50&fight_remains<10
+actions+=/call_action_list,name=cds
+actions+=/call_action_list,name=core_dot
+actions+=/call_action_list,name=generate,if=!buff.darkest_night.up&combo_points<5|buff.darkest_night.up&combo_points.deficit>0|(talent.crimson_tempest&spell_targets.fan_of_knives>=5&(active_dot.garrote<spell_targets.fan_of_knives|active_dot.rupture<spell_targets.fan_of_knives))
+actions+=/call_action_list,name=spend,if=!buff.darkest_night.up&combo_points>=5|buff.darkest_night.up&combo_points.deficit=0
+actions.cds=/deathmark,if=dot.garrote.ticking&dot.rupture.ticking&cooldown.kingsbane.remains<=2&buff.envenom.up
+actions.cds+=/call_action_list,name=items
+actions.cds+=/call_action_list,name=misc_cds
+actions.cds+=/kingsbane,if=dot.garrote.ticking&dot.rupture.ticking&(dot.deathmark.ticking|cooldown.deathmark.remains>52)
+actions.cds+=/call_action_list,name=vanish,if=!stealthed.rogue
+actions.core_dot=/garrote,if=(buff.improved_garrote.up|stealthed.rogue)&(pmultiplier<=1|remains<=15+6*talent.razor_wire+4*!variable.single_target)
+actions.core_dot+=/garrote,if=combo_points.deficit>=1&(pmultiplier<=1|!variable.single_target)&refreshable&target.time_to_die-remains>12
+actions.core_dot+=/rupture,if=combo_points>=5&refreshable&target.time_to_die-remains>12&(!buff.darkest_night.up|!dot.rupture.ticking)
+actions.generate=/crimson_tempest,if=!variable.single_target&(active_dot.garrote<spell_targets.fan_of_knives|active_dot.rupture<spell_targets.fan_of_knives)
+actions.generate+=/shiv,if=buff.darkest_night.up&combo_points.deficit=1&spell_targets.fan_of_knives<=3&talent.toxic_stiletto
+actions.generate+=/ambush,if=spell_targets.fan_of_knives<=1+talent.blindside
+actions.generate+=/mutilate,if=spell_targets.fan_of_knives<=1+talent.blindside
+actions.generate+=/fan_of_knives,if=spell_targets.fan_of_knives>1+talent.blindside
+actions.items=/variable,name=base_trinket_condition,value=dot.rupture.ticking&cooldown.deathmark.remains<2&!cooldown.deathmark.ready|dot.deathmark.ticking|fight_remains<=22
+actions.items+=/use_item,name=astral_gladiators_badge_of_ferocity,if=dot.kingsbane.ticking|dot.deathmark.ticking|(cooldown.kingsbane.remains>60|cooldown.deathmark.remains>60),use_off_gcd=1
+actions.items+=/use_item,name=treacherous_transmitter,if=variable.base_trinket_condition,use_off_gcd=1
+actions.items+=/use_item,name=unyielding_netherprism,if=dot.deathmark.ticking&(buff.latent_energy.stack>=16|fight_remains<=90|(!trinket.2.cooldown.ready|!trinket.1.cooldown.ready))|fight_remains<=20,use_off_gcd=1
+actions.items+=/use_item,name=mad_queens_mandate,if=cooldown.deathmark.remains>=30&!dot.deathmark.ticking|fight_remains<=3
+actions.items+=/use_item,name=junkmaestros_mega_magnet,if=cooldown.deathmark.remains>=30&!dot.deathmark.ticking&(!talent.deathstalkers_mark|buff.lingering_darkness.up&buff.junkmaestros_mega_magnet.stack>5)|fight_remains<=10
+actions.items+=/do_treacherous_transmitter_task,if=dot.deathmark.ticking&variable.single_target|buff.realigning_nexus_convergence_divergence.up&buff.realigning_nexus_convergence_divergence.remains<=2|buff.cryptic_instructions.up&buff.cryptic_instructions.remains<=2|buff.errant_manaforge_emission.up&buff.errant_manaforge_emission.remains<=2|fight_remains<=15,use_off_gcd=1
+actions.items+=/use_item,name=imperfect_ascendancy_serum,if=variable.base_trinket_condition,use_off_gcd=1
+actions.items+=/use_items,if=(variable.trinket_sync_slot=1&(debuff.deathmark.up)|(variable.trinket_sync_slot=2&!trinket.2.cooldown.ready&cooldown.deathmark.remains>20))|!variable.trinket_sync_slot|fight_remains<=20,slots=trinket1
+actions.items+=/use_items,if=(variable.trinket_sync_slot=2&(debuff.deathmark.up)|(variable.trinket_sync_slot=1&!trinket.1.cooldown.ready&cooldown.deathmark.remains>20))|!variable.trinket_sync_slot|fight_remains<=20,slots=trinket2
+actions.misc_cds=/potion,if=buff.bloodlust.react|fight_remains<30|debuff.deathmark.up
+actions.misc_cds+=/blood_fury,if=debuff.deathmark.up,use_off_gcd=1
+actions.misc_cds+=/berserking,if=debuff.deathmark.up,use_off_gcd=1
+actions.misc_cds+=/fireblood,if=debuff.deathmark.up,use_off_gcd=1
+actions.misc_cds+=/ancestral_call,if=debuff.deathmark.up,use_off_gcd=1
+actions.spend=/envenom,if=buff.implacable_tracker.stack<4|!talent.implacable
+actions.spend+=/envenom,if=energy.pct>70
+actions.spend+=/crimson_tempest,if=!variable.single_target&spell_targets.fan_of_knives>=4&refreshable
+actions.vanish=/vanish,if=variable.single_target&talent.improved_garrote&dot.garrote.pmultiplier<=1&!cooldown.deathmark.ready&!raid_event.adds.in<=30
+actions.vanish+=/vanish,if=!variable.single_target&talent.improved_garrote&dot.garrote.pmultiplier<=1&(raid_event.adds.remains>=10|!raid_event.adds.in<=30)
