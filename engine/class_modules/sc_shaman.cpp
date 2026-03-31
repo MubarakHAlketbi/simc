@@ -3664,7 +3664,7 @@ struct pet_action_t : public T_ACTION
 
     if ( affected_by_elemental_unity_se_ta && o()->talent.elemental_unity.ok() )
     {
-      m *= 1.0 + o()->buff.storm_elemental->data().effectN( 5 ).percent();
+      m *= 1.0 + o()->buff.storm_elemental->data().effectN( 4 ).percent();
     }
 
     return m;
