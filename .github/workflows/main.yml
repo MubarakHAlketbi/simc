@@ -144,20 +144,20 @@ jobs:
       # Core test: profile must parse and simulate without errors
       - name: "Sim: Patchwerk (1 iter)"
         run: |
-          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+          build/simc "profiles/MID1/${{ matrix.profile }}.simc" \
             output=/dev/null iterations=1 threads=4
 
       # Multi-target test
       - name: "Sim: Patchwerk multi-target (1 iter)"
         if: always()
         run: |
-          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+          build/simc "profiles/MID1/${{ matrix.profile }}.simc" \
             output=/dev/null iterations=1 threads=4 desired_targets=5
 
       # JSON + HTML output test
       - name: "Sim: JSON + HTML output"
         if: always()
         run: |
-          build/simc profiles/MID1/${{ matrix.profile }}.simc \
+          build/simc "profiles/MID1/${{ matrix.profile }}.simc" \
             output=/dev/null json=/dev/null html=/dev/null \
             iterations=5 threads=4
