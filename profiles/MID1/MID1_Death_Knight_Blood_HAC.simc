@@ -5,7 +5,7 @@ level=90
 race=mechagnome
 role=tank
 position=front
-talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMGzMMLzMz0MLGzMmxAAAAAzMzMzwMzYmZMAYMzMzAAAwADMjNNW2AZbAbAmhBAAMzADGA
+talents=CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMGzMMLzMz0MLzYMmxAAAAAzMzMzwMDzYMAYMzMzAAAwADMjNN22AZbAbAmhZGAAMzAGGA
 
 # Default consumables
 potion=lights_potential_2
@@ -71,7 +71,7 @@ actions+=/call_action_list,name=high_prio_actions
 actions+=/run_action_list,name=deathbringer,if=hero_tree.deathbringer
 actions+=/run_action_list,name=san_gift,if=hero_tree.sanlayn&buff.gift_of_the_sanlayn.up
 actions+=/run_action_list,name=sanlayn,if=hero_tree.sanlayn
-actions.deathbringer=/death_strike,if=(runic_power.deficit<20|(runic_power.deficit<26&buff.dancing_rune_weapon.up))
+actions.deathbringer=/death_strike,if=(runic_power.deficit<22|(runic_power.deficit<26&buff.dancing_rune_weapon.up))
 actions.deathbringer+=/deaths_caress,if=(!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5)&rune<4
 actions.deathbringer+=/marrowrend,if=!buff.bone_shield.up|buff.bone_shield.remains<3|buff.bone_shield.stack<5
 actions.deathbringer+=/death_and_decay,if=!buff.death_and_decay.up
@@ -107,8 +107,8 @@ actions.sanlayn+=/marrowrend,if=buff.bone_shield.stack<6
 actions.sanlayn+=/any_dnd,if=buff.crimson_scourge.remains
 actions.sanlayn+=/heart_strike,if=buff.vampiric_strike.up
 actions.sanlayn+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
-actions.sanlayn+=/death_strike
 actions.sanlayn+=/consumption,empower_to=1
+actions.sanlayn+=/death_strike
 actions.sanlayn+=/heart_strike,if=rune>=2
 actions.sanlayn+=/blood_boil
 actions.sanlayn+=/heart_strike
