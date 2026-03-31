@@ -1,6 +1,6 @@
 # AGENTS.md — SimulationCraft Midnight Agent Guide
 
-**Last Updated: 2026-03-31**
+**Last Updated: 2026-03-31 (v0.2)**
 
 Read this file first every session. Then read `project_progress.md` — it is the
 single source of truth for all project status, known issues, and what to do next.
@@ -148,6 +148,9 @@ Talent hill-climbing and APL mutation optimization.
 | `scripts/lib/talent_codec.py` | Talent string codec — decode/encode base64 talent strings |
 | `scripts/lib/tree_codec_bridge.py` | Bridge — connects tree + codec, high-level API |
 | `scripts/lib/talent_validator.py` | Build validation (budget, prereqs, gates) + neighbor generation |
+| `scripts/verify_spell_ids.py` | Level 1 spell ID existence + name verification (568 Midnight IDs) |
+| `scripts/deep_audit.py` | Level 2 variable→spell tracing + effectN OOB scan (3132 reads) |
+| `scripts/audit_class_spells.py` | Level 1.5 direct effectN + missing spell check |
 
 ### Wowhead Data (reference game data)
 | Path | What |
@@ -219,7 +222,7 @@ done
 ./engine/simc profiles/MID1/${SPEC}.simc iterations=3000 threads=16 \
   json2=/tmp/tier_on.json output=/dev/null
 ./engine/simc profiles/MID1/${SPEC}.simc iterations=3000 threads=16 \
-  set_bonus=tier33_2pc=0 set_bonus=tier33_4pc=0 \
+  "set_bonus=midnight_season_1_2pc=0/midnight_season_1_4pc=0" \
   json2=/tmp/tier_off.json output=/dev/null
 
 # Extract engine-generated APL
@@ -243,6 +246,12 @@ python3 wowhead/extract_wowhead_tabs.py warlock affliction --pages rotation
 
 # Check class module for known issues
 grep -n 'TODO\|FIXME\|HACK\|NYI' engine/class_modules/sc_warrior.cpp
+
+# Engine audit — verify spell IDs exist in DBC
+python3 scripts/verify_spell_ids.py --all
+
+# Deep audit — trace effectN reads to spell IDs, check OOB
+python3 scripts/deep_audit.py --all
 ```
 
 **Optimization model:** Each spec has TWO independent optimal talent/APL builds:
@@ -395,6 +404,26 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   while halving mastery.
 - **"Implemented" ≠ "correct"** — our tier set audit checked existence, not behavioral correctness.
   A tier set can reference the right DBC entry but apply the wrong multiplier.
+
+### Engine Audit Lessons (v0.2, 2026-03-31)
+- **`from_seconds(base_value())` is a bug magnet.** DBC stores durations inconsistently:
+  talent spells use seconds (base_value=5 → 5s), tier set/buff spells use milliseconds
+  (base_value=4000 → 4000ms). `from_seconds(4000)` = 4000 seconds = permanent buff.
+  **Always use `time_value()` for duration effects** — it calls `from_millis()` internally.
+  Found: Rogue Sub 4pc (permanent Shadow Blades, -19.6% DPS correction).
+- **effectN(N) OOB returns 0 silently.** No crash, no warning — just wrong values.
+  A spell with 4 effects returns 0 for effectN(5). Found: Shaman Storm Elemental
+  Elemental Unity TA bonus was silently 0% instead of +6%.
+- **Passive auras auto-apply via `apply_affecting_auras()`.** Manual code that also
+  adjusts the same value causes double-dip or cancellation. Found: Monk WW 4pc
+  manually added -5s CDR that cancelled the auto-applied -5s.
+- **Upstream uses `parse_effects()` (data-driven) for most Midnight spells.** Manual
+  effectN reads are rare and concentrated in tier set implementations and older class
+  modules (Hunter, Rogue, DK, Mage have 0 parse_effects calls).
+- **Multiple spells share the same name.** `find_spell(ID)` returns a helper/proc spell
+  while `find_talent_spell("Name")` returns the talent version — same name, different
+  spell IDs, different effect counts. Audit scanners must trace the actual variable
+  assignment, not just match by name.
 
 ### Engine & C++ Work
 - **The engine is not a black box.** Proc chains, scaling formulas, event sequencing, and
