@@ -210,7 +210,7 @@ Multiple "Update Generated Files" commits — automated profile generation from 
 |-----------|------|----------|
 | **Data Source** | Wowhead browser extraction (JS tab content) | DBC/casc extraction + C++ code generation |
 | **Data Storage** | Markdown + JSON files (human-readable) | Generated C++ code + binary DBC data |
-| **Game Build** | 12.0.1.66384 | 12.0.5.66709 |
+| **Game Build** | 12.0.1.66384 | 12.0.1.66709 (Live) |
 | **APL Strategy** | Upstream reference + local optimization tooling | C++ generated defaults + occasional .simc overrides |
 | **Profile Format** | MID1 profiles (56) + baselines (112 JSONs) | Auto-generated profiles via `generate_profiles.sh` |
 | **Validation** | Explicit talent validator with real DB2 edges | Implicit through compilation |
@@ -307,7 +307,7 @@ Multiple "Update Generated Files" commits — automated profile generation from 
 
 ### High Priority
 
-1. **Build Divergence** — Fork is on Build 12.0.1.66384, upstream is on 66709 (12.0.5). This means:
+1. **Build Divergence** — Fork was on Build 12.0.1.66384, upstream on 66709 (12.0.1 Live). This means:
    - Missing ~2 months of balance changes, new spells, changed mechanics
    - Simulation results may be invalid for current Midnight beta
    - Class fixes upstream (Balance star cascade, Paladin judgment scaling, etc.) are not present

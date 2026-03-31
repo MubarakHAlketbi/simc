@@ -2,19 +2,21 @@
 
 Last updated: 2026-03-31
 
+**Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
+
 ## Status
 
 | Metric | Value |
 |--------|-------|
 | Profiles | 60/60 PASS (compile + 1-iter sim + talent validation) |
 | Talent validation | 60/60 PASS (budget, prereqs, req_points gates) |
-| Baselines | 112/112 (2026-03-28) — **STALE, needs re-run post upstream sync** |
+| Baselines | 120/120 FRESH (2026-03-31, Build 66709, target_error=0.1) |
 | Tier sets | 33/33 exist in C++ — **behavioral correctness not yet verified** |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
 | APL audit | 42/42 resolved |
 | Talent builds | 29/33 profiles updated from Wowhead comparison |
 | Tooling | 16 scripts, ~4,000 lines (optimization + validation + extraction) |
-| Upstream sync | **181 commits behind** — BLOCKING |
+| Upstream sync | **SYNCED** — Build 66709, merged 2026-03-31 |
 | Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
 
 ---
@@ -25,11 +27,11 @@ Priority order reflects our full maintenance scope — not just optimization.
 
 | # | Task | Type | Status |
 |---|------|------|--------|
-| **1** | **Upstream sync** — rebase onto latest upstream (181 commits), rebuild, re-validate | Engine | **BLOCKING** |
-| **2** | **Review upstream C++ fixes** — understand each class module change, verify with our profiles | Engine | PENDING |
+| ~~1~~ | ~~Upstream sync~~ — merged 359 commits, Build 66709 | Engine | **DONE** |
+| ~~2~~ | ~~Re-baseline all specs~~ — 120/120 fresh on Build 66709 | Testing | **DONE** |
 | **3** | **Engine correctness audit** — multi-target sweeps, tier set value verification, proc rate checks for all 33 specs | Testing | PENDING |
-| 4 | Re-extract Wowhead data if build number changed | Data | PENDING |
-| 5 | Re-baseline all specs (fresh 112 baselines post-sync) | Testing | PENDING |
+| 4 | Re-extract Wowhead data (build changed 66384→66709) | Data | PENDING |
+| 5 | Review upstream C++ fixes — understand class module changes for each spec | Engine | PENDING |
 | 6 | Bug hunting — scan class modules for TODO/FIXME/NYI, compare proc chains against tooltips | Engine | PENDING |
 | 7 | Talent + APL optimization (per spec, both fight styles) | Optimization | IN PROGRESS |
 | 8 | Trinket combinatorics | Optimization | PENDING |

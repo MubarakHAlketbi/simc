@@ -9,7 +9,10 @@ single source of truth for all project status, known issues, and what to do next
 
 ## Mission
 
-We maintain a SimulationCraft fork for the WoW Midnight expansion. That means
+We maintain a SimulationCraft fork for the WoW Midnight expansion.
+**Current game build: 12.0.1.66709 Live.** We target Live builds only — ignore
+12.0.5.x PTR data. If upstream merges PTR-specific changes, skip or revert them.
+That means
 the FULL scope of software maintenance:
 
 - **Upstream sync** — merge engine fixes, DBC updates, class module patches
@@ -60,9 +63,15 @@ Upstream SimC is actively developed. Engine-level fixes (proc chains, scaling
 formulas, crash fixes, event sequencing) affect simulation CORRECTNESS. No
 amount of APL optimization matters if the underlying math is wrong.
 
-**How:** `git fetch upstream midnight`, review commits, rebase, rebuild, test.
+**How:** `git fetch upstream midnight`, review commits, merge, rebuild, test.
 When upstream fixes a class module, read the diff, understand what changed, and
 verify it works with our profiles.
+
+**PTR policy:** We target **12.0.1 Live builds only**. Upstream sometimes merges
+12.0.5.x PTR changes (spell data, mechanics changes for future patches). Skip
+or revert PTR-specific commits — they apply to unreleased game data and will
+break our Live-targeted profiles. Look for `[test]`, `PTR`, or `12.0.5` in
+commit messages to identify them.
 
 ### 2. Bug Hunting & Fixing
 Actively look for bugs in the engine — don't wait for upstream to find them.
