@@ -11,7 +11,7 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 | Release | **v0.2** (tagged 2026-03-31) |
 | Profiles | 66/66 PASS (compile + 1-iter sim + talent validation) |
 | Talent validation | 66/66 PASS (budget, prereqs, req_points gates) |
-| Baselines | 120/120 FRESH (2026-03-31, Build 66709, target_error=0.1) — 3 new tank HAC need baselines |
+| Baselines | 126/126 FRESH (2026-03-31, Build 66709, target_error=0.1) |
 | Tier sets | 33/33 behaviorally verified — all effectN reads checked against DBC |
 | Engine audit | **COMPLETE** — 3132 effectN reads scanned, 6 bugs found+fixed |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
