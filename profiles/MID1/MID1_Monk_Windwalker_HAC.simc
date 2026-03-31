@@ -5,7 +5,7 @@ level=90
 race=troll
 role=attack
 position=back
-talents=C0QAAAAAAAAAAAAAAAAAAAAAAMzYMYMMLzMzyMAAAAAAAAAAAALDzEmhhBMjhZmZwsNYYWmJAgNzsNGzYmZAAsBAzys0MzMLAMDMzAwYZMEDYA
+talents=C0QAAAAAAAAAAAAAAAAAAAAAAMzYAMMLzMz2MAAAAAAAAAAAALDzEmhhBMjhZmZwsNMDzyMBAsMzsNGzYmZAAsBAzys0MzMLADDMzAwYZMEDYA
 
 # Default consumables
 potion=potion_of_recklessness_2
