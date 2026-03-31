@@ -6,7 +6,7 @@ race=night_elf
 timeofday=night
 role=tank
 position=front
-talents=CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZmZYGzMmxMmxwMmZsxMGDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAAA
+talents=CUkAAAAAAAAAAAAAAAAAAAAAAAAYMzMjZmZkZmZYYmZmZYGzMmxMmZwMmZsNmBDAAAAYMDGGwEGmZGLAAAAYwAQAmZAGAAAAA
 
 # Default consumables
 potion=lights_potential_2
@@ -225,10 +225,10 @@ actions.ar_cooldowns+=/immolation_aura,if=variable.fiery_demise_active&!talent.c
 actions.ar_fillers=/immolation_aura,if=variable.aoe&in_combat
 actions.ar_fillers+=/fracture,if=soul_fragments.total<variable.fragment_target
 actions.ar_fillers+=/spirit_bomb,if=soul_fragments>=variable.fragment_target
+actions.ar_fillers+=/soul_cleave
 actions.ar_fillers+=/fracture,if=buff.metamorphosis.up
 actions.ar_fillers+=/sigil_of_flame,if=variable.aoe
 actions.ar_fillers+=/immolation_aura,if=!variable.is_dungeon|in_combat
-actions.ar_fillers+=/soul_cleave
 actions.ar_fillers+=/fracture
 actions.ar_fillers+=/felblade
 actions.ar_fillers+=/sigil_of_flame
@@ -236,10 +236,10 @@ actions.ar_fillers+=/vengeful_retreat,if=talent.unhindered_assault,use_off_gcd=1
 actions.ar_fillers+=/throw_glaive
 actions.ar_glaive_cycle=/reavers_glaive,if=buff.reavers_glaive.up&!buff.rending_strike.up&!buff.glaive_flurry.up
 actions.ar_glaive_cycle+=/fracture,if=buff.rending_strike.up&buff.glaive_flurry.up&variable.aoe
+actions.ar_glaive_cycle+=/soul_cleave,if=buff.glaive_flurry.up&!buff.rending_strike.up
 actions.ar_glaive_cycle+=/soul_cleave,if=buff.rending_strike.up&buff.glaive_flurry.up
 actions.ar_glaive_cycle+=/fracture,if=buff.rending_strike.up&!buff.glaive_flurry.up
 actions.ar_glaive_cycle+=/spirit_bomb,if=buff.glaive_flurry.up&!buff.rending_strike.up&soul_fragments>=5
-actions.ar_glaive_cycle+=/soul_cleave,if=buff.glaive_flurry.up&!buff.rending_strike.up
 actions.externals=/invoke_external_buff,name=power_infusion
 actions.trinkets=/use_item,if=!trinket.1.is.tome_of_lights_devotion&(!variable.trinket_1_buffs|(buff.metamorphosis.up|cooldown.metamorphosis.remains<10|cooldown.metamorphosis.remains>trinket.1.cooldown.duration|(variable.trinket_2_buffs&trinket.2.cooldown.remains<cooldown.metamorphosis.remains))),slot=trinket1
 actions.trinkets+=/use_item,if=!trinket.2.is.tome_of_lights_devotion&(!variable.trinket_2_buffs|(buff.metamorphosis.up|cooldown.metamorphosis.remains<10|cooldown.metamorphosis.remains>trinket.2.cooldown.duration|(variable.trinket_1_buffs&trinket.1.cooldown.remains<cooldown.metamorphosis.remains))),slot=trinket2
