@@ -1741,9 +1741,9 @@ struct whirling_dragon_punch_t : public monk_melee_attack_t
     if ( p()->rng().roll( p()->talent.windwalker.revolving_whirl->effectN( 1 ).percent() ) )
       p()->buff.dance_of_chiji->increment();  // increment is used to not incur the rppm cooldown
 
-    // MID1 4pc: Whirling Dragon Punch cooldown reduced by 5 sec
-    if ( p()->tier.mid1.ww_4pc->ok() )
-      cooldown->adjust( -p()->tier.mid1.ww_4pc->effectN( 1 ).time_value() );
+    // MID1 4pc: WDP cooldown reduced by 5s — handled by passive aura auto-apply (spell 1264843).
+    // Do NOT manually adjust here — the engine's apply_affecting_auras() already reduces base CD.
+    // Previous manual adjust(-time_value()) was double-negating: -(-5s) = +5s, undoing the reduction.
   }
 
   bool ready() override
@@ -1871,9 +1871,8 @@ struct strike_of_the_windlord_t : public monk_melee_attack_t
     if ( p()->rng().roll( p()->talent.windwalker.revolving_whirl->effectN( 1 ).percent() ) )
       p()->buff.dance_of_chiji->increment();
 
-    // MID1 4pc: Strike of the Windlord cooldown reduced by 5 sec
-    if ( p()->tier.mid1.ww_4pc->ok() )
-      cooldown->adjust( -p()->tier.mid1.ww_4pc->effectN( 1 ).time_value() );
+    // MID1 4pc: SotWL cooldown reduced by 5s — handled by passive aura auto-apply (spell 1264843).
+    // Do NOT manually adjust here — same double-negation bug as WDP above.
   }
 };
 

@@ -1,0 +1,462 @@
+================================================================================
+BEHAVIORAL AUDIT: MID1 TIER SET BONUSES
+Wowhead Tooltips vs SimC C++ Implementation
+Generated: 2026-03-31
+================================================================================
+
+================================================================================
+1. MONK WINDWALKER - Way of Ra-den's Chosen
+================================================================================
+
+--- 2pc (Spell 1264842) ---
+Tooltip: "Strike of the Windlord and Whirling Dragon Punch's damage is
+         increased by 30%."
+Spell Data: Apply Aura: Modifies Damage/Healing Done, Value=30%,
+            PVP Mult=0.5, Affects: WDP(152175,158221,451767), SotWL(392983,395519,395521)
+
+Code (sc_monk.cpp):
+  - WDP at line 1675-1677: action_multiplier() += ww_2pc->effectN(1).percent()
+  - SotWL at line 1790-1792: action_multiplier() += ww_2pc->effectN(1).percent()
+
+Behavioral Claims:
+  [OK] Affects WDP: Yes, action_multiplier in whirling_dragon_punch_t
+  [OK] Affects SotWL: Yes, action_multiplier in strike_of_the_windlord_t
+  [OK] +30% value: Uses effectN(1).percent() which reads 0.30 from data
+  [OK] Pipeline stage: action_multiplier is correct for "Modifies Damage/Healing Done"
+  [OK] Applies to all sub-spells: WDP has tick spell variants; the multiplier
+       is on the parent, which cascades.
+
+Potential Issues:
+  [MINOR] WDP has multiple damage ticks (3 hits). The multiplier is on the
+          parent action_multiplier which should apply to all tick damage. Verify
+          WDP sub-actions inherit the parent's action_multiplier correctly.
+  [INFO] PVP multiplier (0.5) is not modeled in SimC (by design).
+
+VERDICT: CORRECT
+
+--- 4pc (Spell 1264843) ---
+Tooltip: "The cooldowns of Strike of the Windlord and Whirling Dragon Punch
+         are reduced by 5 sec."
+Spell Data: Apply Aura: Modifies Cooldown (11), Value=-5 seconds,
+            PVP Mult=0.5, Affects same spells as 2pc
+
+Code (sc_monk.cpp):
+  - WDP at line 1744-1746: cooldown->adjust(-ww_4pc->effectN(1).time_value())
+    in execute(), AFTER the ability is cast
+  - SotWL at line 1874-1876: cooldown->adjust(-ww_4pc->effectN(1).time_value())
+    in execute()
+
+Behavioral Claims:
+  [WARN] "Cooldowns are reduced" = passive base cooldown reduction.
+         The spell data type "Modifies Cooldown (11)" is a base cooldown modifier,
+         meaning it should reduce the BASE cooldown permanently while the set is
+         equipped (e.g., 24s -> 19s for WDP).
+
+         The code instead uses cooldown->adjust() inside execute(), which
+         subtracts 5 seconds from the REMAINING cooldown after each cast.
+
+         These are NOT equivalent with haste:
+           Passive base CDR: effective_cd = (base - 5) / (1 + haste)
+           Per-cast adjust:  effective_cd = base / (1 + haste) - 5
+
+         At 30% haste: passive = 14.6s, per-cast = 13.5s
+         The per-cast adjust gives MORE CDR at higher haste levels.
+
+  [WARN] Risk of double-dipping: If SimC's spell data parsing system already
+         recognizes the "Modifies Cooldown" aura type and auto-applies it to
+         the affected spells' base cooldown, then the manual adjust() would
+         be an ADDITIONAL reduction on top. Need to verify whether the set
+         bonus aura is auto-parsed by the cooldown system.
+
+Potential Issues:
+  [BUG-RISK] Implementation method (per-cast adjust) differs from tooltip
+             behavior (passive base CD reduction). Likely overvalues the CDR
+             with haste. Should verify whether passive CD mod is auto-applied
+             and whether the manual adjust double-dips.
+
+VERDICT: NEEDS VERIFICATION - Possible haste scaling mismatch
+
+================================================================================
+2. PALADIN RETRIBUTION - Luminant Verdict's Vestments
+================================================================================
+
+--- 2pc (Spell 1264848) ---
+Tooltip: "Expurgation deals 20% increased damage."
+Spell Data: Apply Aura: Modifies Periodic Damage/Healing Done (22),
+            Value=20%, PVP Mult=0.5
+
+Code: No manual implementation found. Relies on auto-parse from spell data
+      label system (the aura modifies Expurgation's periodic damage via label).
+
+Behavioral Claims:
+  [OK] +20% Expurgation damage: The spell data labels target Expurgation's
+       periodic damage. SimC's label-based modifier system should auto-apply
+       this. No manual code is needed.
+  [OK] "Periodic" modifier: Effect type 22 (periodic damage) is correct for
+       Expurgation which is a DoT.
+
+Potential Issues:
+  [INFO] Need to verify that the label-based system actually picks up this
+         set bonus aura. If not registered, the +20% is silently missing.
+         The lack of any manual code suggests confidence it's auto-parsed.
+
+VERDICT: LIKELY CORRECT (auto-parsed), but should verify label system registers it
+
+--- 4pc (Spell 1264849) ---
+Tooltip: "[Final Verdict / Templar's Verdict] applies Expurgation at 100%
+         effectiveness, while Divine Storm applies it at 50% effectiveness."
+Spell Data: Effect #1 = Dummy, Value=100 (TV/FV), Effect #2 = Dummy, Value=50 (DS)
+            Both PVP Mult=0.5. Flag: Can Proc From Procs.
+
+Code (sc_paladin_retribution.cpp):
+
+  TV/FV execute (line 684-695):
+    mult = effectN(1).base_value()/100.0 = 1.0
+    if empyrean_legacy_up:
+      ds_mult = effectN(2).base_value()/100.0 = 0.5
+      mult += ds_mult * (tempest_of_lightbringer ? 1.2 : 1.0)
+    trigger_expurgation(target, mult)
+
+  DS execute (line 581-591):
+    mult = effectN(2).base_value()/100.0 = 0.5
+    if sunrise_echo: mult *= 2
+    if tempest_of_lightbringer: mult *= 1.2
+    trigger_expurgation(target, mult)
+
+  DS second_sunrise_tempest impact (line 421-425):
+    mult = effectN(2).percent() * base_multiplier
+    trigger_expurgation(target, mult)
+
+Behavioral Claims:
+  [OK] TV/FV applies Expurgation at 100%: effectN(1)=100 / 100 = 1.0x
+  [OK] DS applies Expurgation at 50%: effectN(2)=50 / 100 = 0.5x
+  [OK] !background check prevents duplicate triggers from background procs
+
+  [WARN] Empyrean Legacy interaction (TV path, line 688-693):
+         When Empyrean Legacy is up, TV triggers itself + a free DS.
+         The code adds DS's 50% portion to TV's 100% multiplier = 150%.
+         This means a single trigger_expurgation with 1.5x (or 1.6x with
+         tempest). The actual game might trigger TWO separate Expurgations
+         (one from TV at 100%, one from the proc'd DS at 50%).
+         If Expurgation DoT doesn't stack and just refreshes/pandemic,
+         two separate triggers would mean the DS one could overwrite the
+         TV one at lower effectiveness. The code's approach of combining
+         them into one larger trigger avoids this issue but may not match
+         game behavior exactly.
+
+  [WARN] DS second_sunrise_tempest (line 423): Uses effectN(2).percent()
+         which returns 0.50, then multiplies by base_multiplier. For the
+         second_sunrise_tempest variant, base_multiplier is default 1.0
+         (not modified in constructor). So this yields 0.5 = 50%. CORRECT.
+
+  [OK] DS tempest variant: tempest_of_lightbringer multiplier (1.2x) applied
+       to the effectiveness, meaning tempest DS applies Expurgation at 60%.
+
+  [INFO] sunrise_echo doubling (line 585-586): DS with sunrise_echo doubles
+         the multiplier from 50% to 100%. This is a design choice - assumes
+         the echo effectively applies Expurgation twice.
+
+Potential Issues:
+  [MEDIUM] Empyrean Legacy combining both TV and DS expurgation into a single
+           trigger may not match actual game behavior if Expurgation refreshes
+           would use the most recent multiplier.
+
+VERDICT: MOSTLY CORRECT with Empyrean Legacy interaction uncertainty
+
+================================================================================
+3. PRIEST SHADOW - Blind Oath's Burden
+================================================================================
+
+--- 2pc (Spell 1264854) ---
+Tooltip: "Shadow Word: Madness damage increased by 10% and Insanity cost
+         reduced by 5."
+Spell Data:
+  Effect #1: Modifies Power Cost (14), Value=-500, Affects SW:Madness + Dev Plague
+  Effect #2: Modifies Damage/Healing Done, Value=10%, Affects SW:Madness + Dev Plague
+  Effect #3: Modifies Periodic Damage/Healing Done (22), Value=10%, Affects same
+
+Code (sc_priest_shadow.cpp):
+  Cost reduction (line 863-867):
+    base_costs[RESOURCE_INSANITY] += set->effectN(1).resource(RESOURCE_INSANITY)
+    Applied in constructor. Flat cost reduction of 5 insanity (from -500 base value).
+
+  Damage increase (line 953-957):
+    composite_persistent_multiplier: m *= 1.0 + set->effectN(2).percent()
+    Uses effectN(2) = 10% applied to persistent multiplier (snapshots).
+
+Behavioral Claims:
+  [OK] SW:Madness damage +10%: effectN(2) applied in composite_persistent_multiplier
+  [OK] Insanity cost -5: effectN(1).resource() = -5, flat base cost reduction
+  [OK] Flat cost reduction: Applied to base_costs directly in constructor,
+       which is before other cost modifiers. Correct for flat reduction.
+
+  [WARN] composite_persistent_multiplier is a SNAPSHOTTING multiplier.
+         The tooltip says damage is "increased by 10%", which would normally
+         be a non-snapshotting modifier (action_multiplier or
+         composite_da_multiplier). Using composite_persistent_multiplier means
+         the +10% is snapshotted at cast time and won't dynamically update if
+         the set bonus is somehow lost mid-DoT. For a permanent set bonus aura
+         this doesn't matter, but it's technically the wrong pipeline stage.
+         
+  [WARN] Spell data Affected Spells includes BOTH SW:Madness AND Devouring
+         Plague (spell 369128). The tooltip only says "Shadow Word: Madness."
+         The code only applies the bonus to shadow_word_madness_t.
+         If the spell data is authoritative, Devouring Plague should ALSO get
+         +10% damage and -5 Insanity cost.
+
+  [WARN] effectN(3) provides +10% periodic damage separately. The code only
+         uses effectN(2) in composite_persistent_multiplier. Since
+         composite_persistent_multiplier applies to BOTH direct and periodic
+         damage, this effectively applies 10% to everything, which covers both
+         effectN(2) and effectN(3). However, it means if Blizzard later changes
+         effectN(2) and effectN(3) independently, our code would only track
+         effectN(2).
+
+Potential Issues:
+  [MEDIUM] Devouring Plague is in the Affected Spells list but not in our
+           code. If the game actually gives DP +10% damage and -5 insanity
+           cost, this is a significant missing mechanic.
+  [MINOR] Using composite_persistent_multiplier instead of action_multiplier.
+          No practical difference for a permanent buff but wrong pipeline.
+
+VERDICT: POSSIBLY INCOMPLETE - Devouring Plague might be missing the bonus
+
+--- 4pc (Spell 1264855) ---
+Tooltip: "Shadowy Apparitions and Void Apparitions damage increased by 40%."
+Spell Data: Effect #1: Modifies Damage/Healing Done, Value=40%, PVP Mult=0.5
+            Affects: Shadowy Apparition (413231), Void Apparition (1264176)
+
+Code (sc_priest_shadow.cpp, line 373-375):
+  shadowy_apparition_damage_t::composite_target_multiplier():
+    m *= 1.0 + set->effectN(1).percent()
+
+Behavioral Claims:
+  [OK] Shadowy Apparitions +40%: Applied to shadowy_apparition_damage_t
+  [OK] Void Apparitions +40%: Same class handles both (via mod parameter)
+  [OK] +40% value: effectN(1).percent() = 0.40
+
+  [WARN] Applied in composite_target_multiplier(), but the spell data says
+         "Modifies Damage/Healing Done" which is normally an action_multiplier.
+         composite_target_multiplier runs PER-TARGET and recalculates for each
+         target. Since apparitions always hit a single target, this gives the
+         correct result, but it's the wrong pipeline stage. Should be
+         action_multiplier() or composite_da_multiplier().
+
+Potential Issues:
+  [MINOR] Wrong pipeline stage: composite_target_multiplier instead of
+          action_multiplier. No practical impact since apparitions are
+          single-target, but conceptually incorrect.
+
+VERDICT: CORRECT (functionally), minor pipeline stage mismatch
+
+================================================================================
+4. SHAMAN ELEMENTAL - Mantle of the Primal Core
+================================================================================
+
+--- 2pc (Spell 1264862) ---
+Tooltip: "Casting Stormkeeper grants 15% haste for 10 sec."
+Spell Data: Apply Aura: Dummy, PVP Mult=0.5, Server-side script
+Buff spell: 1272101 (Thunderous Velocity) - grants haste
+
+Code (sc_shaman.cpp):
+  Buff creation (line 12497-12500):
+    buff.mid1_ele_2pc = make_buff("thunderous_velocity", find_spell(1272101))
+      ->set_trigger_spell(set bonus)
+      ->set_pct_buff_type(STAT_PCT_BUFF_HASTE)
+      ->set_default_value_from_effect_type(A_HASTE_ALL)
+
+  Trigger (line 8607):
+    buff.mid1_ele_2pc->trigger() on Stormkeeper execute
+
+Behavioral Claims:
+  [OK] Triggers on Stormkeeper cast: Triggered in stormkeeper execute()
+  [OK] 15% haste: Read from spell 1272101 via A_HASTE_ALL effect
+  [OK] 10 sec duration: From spell 1272101 duration data
+  [OK] Properly typed as haste buff: set_pct_buff_type(STAT_PCT_BUFF_HASTE)
+
+Potential Issues:
+  [NONE] Clean implementation.
+
+VERDICT: CORRECT
+
+--- 4pc (Spell 1264863) ---
+Tooltip: "Stormkeeper grants 1 additional stack and increases the damage of
+         Lightning Bolt and Chain Lightning by 25%."
+Spell Data:
+  Effect #1: Modifies Additional Charges, Value=+1, PVP Mult=1.0
+  Effect #2: Modifies Damage Value, Value=+25%, PVP Mult=0.5
+  Effect #3: Modifies Effect #5, Value=+1, PVP Mult=1.0
+
+Code (sc_shaman.cpp):
+  +1 stack (line 8600-8602):
+    sk_stacks += set->effectN(3).base_value()  (= +1)
+    
+  +25% damage (line 3209-3214):
+    action_multiplier: if affected_by_stormkeeper_damage_tier && SK up && !background:
+      m *= 1.0 + set->effectN(2).percent()
+
+Behavioral Claims:
+  [OK] +1 additional stack: Uses effectN(3) which adds 1 to SK stacks
+  [OK] +25% LB/CL damage during SK: effectN(2).percent() = 0.25
+  [OK] Only during Stormkeeper: Gated by buff.stormkeeper->up()
+  [OK] Only affects LB and CL: Gated by affected_by_stormkeeper_damage_tier flag
+
+  [INFO] effectN(1) is "Modifies Additional Charges" but code uses effectN(3)
+         for the +1 stack. Both have value 1. The code comment references effectN(3)
+         which modifies "Effect #5" of Stormkeeper. This appears intentional - 
+         effectN(3) directly modifies the stack count mechanism while effectN(1)
+         modifies charges (which may be a different concept).
+
+  [INFO] !background check means background-triggered LB/CL (e.g., from procs
+         like Overload) won't get the +25%. This matches the tooltip intent
+         ("Lightning Bolt and Chain Lightning" = player-cast only).
+
+  [WARN] The damage bonus is SEPARATE from Stormkeeper's own damage bonus.
+         Code checks affected_by_stormkeeper_damage_tier (separate flag from
+         affected_by_stormkeeper_damage). This means the +25% stacks
+         multiplicatively with SK's base damage bonus. Verify this matches game.
+
+Potential Issues:
+  [MINOR] The multiplicative stacking of SK base damage bonus + 4pc damage
+          bonus should be verified against game behavior.
+
+VERDICT: CORRECT
+
+================================================================================
+5. SHAMAN ENHANCEMENT - Mantle of the Primal Core
+================================================================================
+
+--- 2pc (Spell 1264864) ---
+Tooltip: "Stormstrike deals 15% increased damage and Lava Lash deals 15%
+         increased damage."
+Spell Data:
+  Effect #1: Modifies Damage/Healing Done, Value=15%, PVP Mult=0.5
+             Affects: Stormstrike(32175), SS OH(32176), Windstrike(115356,115357,
+             115360,1223950)
+  Effect #2: Modifies Damage/Healing Done, Value=15%, PVP Mult=0.5
+             Affects: Lava Lash(60103, 1249149)
+
+Code (sc_shaman.cpp):
+  Stormstrike (line 4596-4600):
+    action_multiplier: m *= 1.0 + set->effectN(1).percent()
+
+  Lava Lash (line 5163-5167):
+    action_multiplier: m *= 1.0 + set->effectN(1).percent()  <-- WRONG EFFECT INDEX
+
+Behavioral Claims:
+  [OK] Stormstrike +15%: Uses effectN(1) = 15%. Correct.
+  [BUG] Lava Lash +15%: Uses effectN(1) instead of effectN(2).
+        Currently both effects have the same value (15%), so output is correct.
+        However, the code references the WRONG spell effect. If Blizzard ever
+        changes effectN(1) and effectN(2) independently (e.g., SS to 20%, LL
+        stays 15%), the Lava Lash code would incorrectly use the Stormstrike
+        value.
+
+  [OK] Pipeline stage: action_multiplier() is correct for "Modifies Damage Done"
+  [OK] Applies to Windstrike: Windstrike inherits from stormstrike_attack_t,
+       so the multiplier applies to both Stormstrike and Windstrike variants.
+
+Potential Issues:
+  [BUG] Lava Lash uses effectN(1) instead of effectN(2). Fix: change line 5166
+        from effectN(1) to effectN(2). No current impact since both are 15%.
+
+VERDICT: MINOR BUG - Wrong effect index for Lava Lash (no current impact)
+
+--- 4pc (Spell 1264865) ---
+Tooltip: "Crash Lightning weapon enhancement effect additionally increases
+         your Mastery by 2%."
+Spell Data: Effect #1: Modifies Effect #3's Value (flat, label 23), Value=2,
+            PVP Mult=0.5
+
+Code (sc_shaman.cpp):
+  Cache invalidation (line 12521-12522):
+    if 4pc: buff.crash_lightning->add_invalidate(CACHE_MASTERY)
+
+  Mastery calculation (line 13464-13468):
+    composite_mastery():
+      m += crash_lightning->check() * set->effectN(1).base_value()
+      = stacks * 2
+
+Behavioral Claims:
+  [OK] Crash Lightning enhancement gives mastery: Gated by crash_lightning
+       buff being up, which is the weapon enhancement buff.
+  [OK] Per-stack scaling: crash_lightning->check() returns stack count.
+  [OK] Cache invalidation: CACHE_MASTERY invalidated when buff changes.
+
+  [WARN] The tooltip says "increases your Mastery by $s1%" = flat 2% mastery
+         per stack of the weapon enhancement. The spell data is a "Flat Modifier"
+         adding 2 to Crash Lightning's Effect #3 value. The code adds
+         base_value()=2 to composite_mastery() per stack.
+
+         composite_mastery() returns mastery in "rating-like points" which then
+         get multiplied by the spec's mastery coefficient elsewhere. Adding 2
+         points of mastery is NOT the same as +2% mastery. Whether this is
+         correct depends on how the Crash Lightning's Effect #3 is denominated
+         in game.
+
+         Looking at the tooltip formula from spelltext_data:
+         "Mastery increased by ${$w3*$mastery}%"
+         This means w3 (effect #3 value) * mastery_coefficient = mastery %.
+         So the tier set adds +2 to w3, giving +2*mastery_coeff mastery %.
+         For Enhancement, mastery_coefficient ≈ 2.0, so +2 → +4% mastery.
+
+         If the intent is +2% mastery flat, the code should add
+         2.0 / mastery_coefficient instead of 2.0 directly.
+
+Potential Issues:
+  [MEDIUM] The mastery value interpretation may be wrong. The code adds raw
+           mastery points (2 per stack), but the tooltip says "+2%". Due to
+           mastery coefficient scaling, the actual mastery percentage granted
+           may differ from 2% per stack. Need to verify against in-game values.
+           
+           If Enhancement mastery coefficient is 2.0, then 2 raw points
+           = 2 * 2.0 = 4% per stack, which would be double what tooltip says.
+           
+           However, the spell data mechanism is "Modifies Effect #3's Value"
+           which literally adds 2 to Crash Lightning's existing mastery value
+           per stack. If Crash Lightning's base w3 per stack is also in the same
+           units, this is internally consistent.
+
+VERDICT: NEEDS VERIFICATION - Mastery value scaling may give wrong % per stack
+
+================================================================================
+SUMMARY OF FINDINGS
+================================================================================
+
+CORRECT (no issues):
+  - Monk WW 2pc: WDP/SotWL +30% damage ✓
+  - Shaman Ele 2pc: SK grants 15% haste for 10s ✓
+  - Shaman Ele 4pc: SK +1 stack and +25% LB/CL damage ✓
+
+MINOR ISSUES (functionally correct):
+  - Priest Shadow 4pc: +40% apparition damage applied in composite_target_multiplier
+    instead of action_multiplier. No practical impact.
+  - Paladin Ret 2pc: Relies on auto-parse; no manual code to verify against.
+
+BUGS / NEEDS VERIFICATION:
+  [BUG] Shaman Enh 2pc: Lava Lash uses effectN(1) instead of effectN(2).
+        Currently no impact (both 15%) but wrong data reference.
+        File: sc_shaman.cpp line 5166
+
+  [BUG-RISK] Monk WW 4pc: Uses per-cast cooldown->adjust() instead of passive
+        base cooldown reduction. Different haste scaling behavior. May also
+        double-dip if auto-parse already applies the base CD reduction.
+        File: sc_monk.cpp lines 1746, 1876
+
+  [MEDIUM] Priest Shadow 2pc: Spell data affects both SW:Madness AND Devouring
+        Plague, but code only applies to SW:Madness. Tooltip only mentions SWM,
+        so this may be intentional, but the spell data disagrees.
+        File: sc_priest_shadow.cpp lines 863-867, 953-957
+
+  [MEDIUM] Paladin Ret 4pc: Empyrean Legacy interaction combines TV+DS
+        expurgation into a single trigger (1.5x) instead of two separate
+        triggers. May not match game refresh/pandemic behavior.
+        File: sc_paladin_retribution.cpp lines 688-694
+
+  [MEDIUM] Shaman Enh 4pc: Mastery value scaling may not correctly represent
+        "+2% mastery per stack" depending on mastery coefficient interaction.
+        File: sc_shaman.cpp line 13467
+
+================================================================================
+END OF AUDIT
+================================================================================
