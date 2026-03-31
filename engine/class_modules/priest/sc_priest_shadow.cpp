@@ -860,7 +860,10 @@ struct shadow_word_madness_t final : public priest_spell_t
     affected_by_shadow_weaving       = true;
     idol_of_nzoth_execute_stacks     = 12;
 
-    // MID1 2pc: Insanity cost reduced by 5 (effectN(1) = flat cost modifier, base=-500)
+    // MID1 2pc: effectN(1) = insanity cost -5, effectN(2) = damage +10%, effectN(3) = periodic +10%
+    // effectN(2) and effectN(3) auto-apply via apply_affecting_auras().
+    // effectN(1) cost reduction needs manual application — apply_affecting_auras handles
+    // base_cost field modification but SW:Madness uses base_costs[] array directly.
     if ( p.sets->has_set_bonus( PRIEST_SHADOW, MID1, B2 ) )
     {
       base_costs[ RESOURCE_INSANITY ] += p.sets->set( PRIEST_SHADOW, MID1, B2 )->effectN( 1 ).resource( RESOURCE_INSANITY );
@@ -950,11 +953,7 @@ struct shadow_word_madness_t final : public priest_spell_t
       m *= 1.0 + priest().talents.shadow.tormenting_whispers->effectN( 1 ).percent();
     }
 
-    // MID1 2pc: Shadow Word: Madness damage increased by 10% (effectN(2) = pct damage modifier, base=10)
-    if ( priest().sets->has_set_bonus( PRIEST_SHADOW, MID1, B2 ) )
-    {
-      m *= 1.0 + priest().sets->set( PRIEST_SHADOW, MID1, B2 )->effectN( 2 ).percent();
-    }
+    // MID1 2pc: +10% damage auto-applied via passive aura (see constructor comment)
 
     return m;
   }

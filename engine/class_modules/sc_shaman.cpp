@@ -5160,10 +5160,11 @@ struct lava_lash_t : public shaman_attack_t
       m *= 1.0 + data().effectN( 2 ).percent();
     }
 
-    // MID1 2pc: Lava Lash damage increased by 15%
+    // MID1 2pc: Lava Lash damage increased by 15% (effectN(2) = Lava Lash modifier)
+    // effectN(1) is Stormstrike's modifier — different class mask, same value (15%)
     if ( p()->sets->has_set_bonus( SHAMAN_ENHANCEMENT, MID1, B2 ) )
     {
-      m *= 1.0 + p()->sets->set( SHAMAN_ENHANCEMENT, MID1, B2 )->effectN( 1 ).percent();
+      m *= 1.0 + p()->sets->set( SHAMAN_ENHANCEMENT, MID1, B2 )->effectN( 2 ).percent();
     }
 
     return m;
