@@ -803,17 +803,22 @@ void prismatic_focusing_iris( special_effect_t& effect )
 // 1251908 Heal
 void thalassian_phoenix_torque( special_effect_t& effect )
 {
+  // DBC effects for 1251815 (build 66709):
+  //   effectN(1) = dummy (coeff=0)
+  //   effectN(2) = gem multiplier (base=1 → percent()=0.01)
+  //   effectN(3) = damage (coeff=2.497, ScClass=-8)
+  //   effectN(4) = heal (coeff=3.745, ScClass=-8)
   auto pct_per_gem = effect.driver()->effectN( 2 ).percent();
 
   auto damage         = create_proc_action<generic_proc_t>( "phoenix_flames", effect, 1251907 );
-  damage->base_dd_min = damage->base_dd_max = effect.driver()->effectN( 1 ).average( effect );
+  damage->base_dd_min = damage->base_dd_max = effect.driver()->effectN( 3 ).average( effect );
   damage->base_multiplier *= 1.0 + ( pct_per_gem * unique_gem_list( effect.player, gem_colors ).size() );
   damage->base_multiplier *= role_mult( effect );
   damage->base_multiplier *= bandolier_mul( effect.player );
 
   auto heal = create_proc_action<generic_heal_t>( "phoenix_flames_heal", effect, 1251908 );
   heal->name_str_reporting = "Heal";
-  heal->base_dd_min = heal->base_dd_max = effect.driver()->effectN( 2 ).average( effect );
+  heal->base_dd_min = heal->base_dd_max = effect.driver()->effectN( 4 ).average( effect );
   heal->base_multiplier *= 1.0 + ( pct_per_gem * unique_gem_list( effect.player, gem_colors ).size() );
   heal->base_multiplier *= role_mult( effect );
   heal->base_multiplier *= bandolier_mul( effect.player );
@@ -4184,12 +4189,14 @@ void register_special_effects()
   register_special_effect( 1259153, trinkets::wraps_of_cosmic_madness);
   register_special_effect( 1259103, DISABLED_EFFECT); // Wraps of the Cosmic Madness equip driver
   register_special_effect( 1253113, trinkets::voidreapers_libram );
-  register_special_effect( 1258275, DISABLED_EFFECT );  // litany of lightblind wrath
   register_special_effect( 1250589, trinkets::crawling_plague );  // tumor of the swarm
   register_special_effect( 1250541, trinkets::echo_of_the_evercurse );  // soulcatcher's charm
   register_special_effect( 1250546, trinkets::mindpiercers_sigil );  // mindpiercer's sigil
-  register_special_effect( 1258283, trinkets::litany_of_lightblind_wrath );  // litany of lightblind wrath on-use
   register_special_effect( 1258275, DISABLED_EFFECT );  // litany of lightblind wrath equip driver
+  register_special_effect( 1258277, DISABLED_EFFECT );  // litany of lightblind wrath heal driver
+  register_special_effect( 1258280, DISABLED_EFFECT );  // litany of lightblind wrath damage driver
+  register_special_effect( 1258281, DISABLED_EFFECT );  // litany of lightblind wrath absorb driver
+  register_special_effect( 1258283, trinkets::litany_of_lightblind_wrath );  // litany of lightblind wrath on-use
   register_special_effect( 71563, trinkets::deadly_precision );  // nevermelting ice crystal on-use
   register_special_effect( 1272091, trinkets::crucible_of_erratic_energies );
   register_special_effect( 1253114, trinkets::evercollapsing_void_fissure );
