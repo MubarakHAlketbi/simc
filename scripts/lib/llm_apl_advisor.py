@@ -240,84 +240,118 @@ STRICT RULES:
 
 
 # ---------------------------------------------------------------------------
+# .env loader
+# ---------------------------------------------------------------------------
+
+def _load_env() -> dict:
+    """Load key=value pairs from ~/simc/.env into a dict.
+
+    Does not mutate os.environ — callers read from the returned dict.
+    """
+    env = {}
+    env_path = Path(__file__).resolve().parents[2] / ".env"
+    if not env_path.exists():
+        return env
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            k, _, v = line.partition("=")
+            k = k.strip()
+            v = v.strip()
+            if k:
+                env[k] = v
+    return env
+
+
+# ---------------------------------------------------------------------------
 # LLM caller
 # ---------------------------------------------------------------------------
 
 def call_llm(prompt: str) -> str:
     """Call the LLM API and return the response text.
 
-    Uses the hermes-agent internal API if available, otherwise falls back
-    to a direct OpenAI/Anthropic call via environment variables.
+    Priority:
+      1. OpenRouter  — OPENROUTER_API_KEY + OPENROUTER_MODEL from .env
+      2. OpenAI      — OPENAI_API_KEY from env
+      3. Anthropic   — ANTHROPIC_API_KEY from env
     """
-    # Try Hermes internal model first (fastest, cheapest)
-    try:
-        import subprocess
-        result = subprocess.run(
-            ["python3", "-c",
-             f"""
-import sys, os
-sys.path.insert(0, os.path.expanduser('~/.hermes'))
-try:
-    from hermes_tools import llm_call
-    print(llm_call({repr(prompt)}, model='claude-opus-4-6'))
-except Exception as e:
-    print(f'ERROR: {{e}}')
-"""],
-            capture_output=True, text=True, timeout=120
-        )
-        out = result.stdout.strip()
-        if out and not out.startswith("ERROR:"):
-            return out
-    except Exception:
-        pass
+    import requests as _requests
 
-    # Fallback: OpenAI API
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if api_key:
+    env = _load_env()
+
+    # --- Primary: OpenRouter ---
+    or_key   = env.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY", "")
+    or_model = env.get("OPENROUTER_MODEL")   or os.environ.get("OPENROUTER_MODEL", "openai/gpt-4o")
+    if or_key:
         try:
-            import urllib.request
-            payload = json.dumps({
-                "model": "gpt-4o",
-                "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": 2000,
-                "temperature": 0.1,
-            }).encode()
-            req = urllib.request.Request(
+            resp = _requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {or_key}",
+                    "X-OpenRouter-Title": "SimC-MID1-APL-Optimizer",
+                },
+                json={
+                    "model": or_model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2000,
+                    "temperature": 0.1,
+                },
+                timeout=120,
+            )
+            resp.raise_for_status()
+            return resp.json()["choices"][0]["message"]["content"]
+        except Exception as e:
+            print(f"  [LLM] OpenRouter error: {e}")
+
+    # --- Fallback: OpenAI ---
+    oai_key = os.environ.get("OPENAI_API_KEY", "")
+    if oai_key:
+        try:
+            resp = _requests.post(
                 "https://api.openai.com/v1/chat/completions",
-                data=payload,
-                headers={"Content-Type": "application/json",
-                         "Authorization": f"Bearer {api_key}"},
+                headers={
+                    "Authorization": f"Bearer {oai_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": "gpt-4o",
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2000,
+                    "temperature": 0.1,
+                },
+                timeout=60,
             )
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                data = json.loads(resp.read())
-                return data["choices"][0]["message"]["content"]
+            resp.raise_for_status()
+            return resp.json()["choices"][0]["message"]["content"]
         except Exception as e:
-            return f"LLM_ERROR: {e}"
+            print(f"  [LLM] OpenAI error: {e}")
 
-    # Fallback: Anthropic API
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    if api_key:
+    # --- Fallback: Anthropic ---
+    ant_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if ant_key:
         try:
-            import urllib.request
-            payload = json.dumps({
-                "model": "claude-opus-4-6",
-                "max_tokens": 2000,
-                "messages": [{"role": "user", "content": prompt}],
-            }).encode()
-            req = urllib.request.Request(
+            resp = _requests.post(
                 "https://api.anthropic.com/v1/messages",
-                data=payload,
-                headers={"Content-Type": "application/json",
-                         "x-api-key": api_key,
-                         "anthropic-version": "2023-06-01"},
+                headers={
+                    "x-api-key": ant_key,
+                    "anthropic-version": "2023-06-01",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": "claude-opus-4-6",
+                    "max_tokens": 2000,
+                    "messages": [{"role": "user", "content": prompt}],
+                },
+                timeout=60,
             )
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                data = json.loads(resp.read())
-                return data["content"][0]["text"]
+            resp.raise_for_status()
+            return resp.json()["content"][0]["text"]
         except Exception as e:
-            return f"LLM_ERROR: {e}"
+            print(f"  [LLM] Anthropic error: {e}")
 
-    return "LLM_ERROR: no API key configured (set OPENAI_API_KEY or ANTHROPIC_API_KEY)"
+    return "LLM_ERROR: no API key configured (set OPENROUTER_API_KEY in .env, or OPENAI_API_KEY / ANTHROPIC_API_KEY in environment)"
 
 
 # ---------------------------------------------------------------------------
