@@ -149,10 +149,10 @@ actions.SH_cleave+=/seed_of_corruption,if=talent.patient_zero&talent.sow_the_see
 actions.SH_st=/haunt
 actions.SH_st+=/agony,if=refreshable
 actions.SH_st+=/corruption,if=refreshable
+actions.SH_st+=/drain_soul,if=buff.nightfall.react>1
 actions.SH_st+=/dark_harvest,if=soul_shard<3&execute_time<(dot.agony.remains<?dot.corruption.remains)
 actions.SH_st+=/summon_darkglare,if=cooldown.dark_harvest.remains
 actions.SH_st+=/malefic_grasp,if=buff.nightfall.react>1|pet.darkglare.remains<gcd
-actions.SH_st+=/drain_soul,if=buff.nightfall.react>1
 actions.SH_st+=/shadow_bolt,if=buff.nightfall.react>1
 actions.SH_st+=/unstable_affliction,if=soul_shard|buff.shard_instability.react
 actions.end_of_fight=/unstable_affliction,if=soul_shard&fight_remains<8&(!talent.patient_zero&!talent.sow_the_seeds)
