@@ -152,7 +152,18 @@ def decode_talent_string(talent_str, tree_nodes):
         raise ValueError(f"Invalid serialization version: {version}")
 
     spec_id = reader.get_bits(SPEC_BITS)
-    reader.get_bits(TREE_BITS)  # tree hash, ignored
+    if spec_id == 0 or spec_id > 1000:
+        raise ValueError(
+            f"Invalid spec_id {spec_id} decoded from talent string header: "
+            f"expected a value in range [1, 1000]"
+        )
+
+    tree_hash = reader.get_bits(TREE_BITS)  # tree hash — must be all-zeros in valid strings
+    if tree_hash != 0:
+        raise ValueError(
+            f"Non-zero tree hash detected in talent string header (got 0x{tree_hash:032x}). "
+            f"The talent string appears to be corrupt or from an incompatible source."
+        )
 
     selections = {}
     _purchased_flags = {}  # Track original purchased bits for round-trip fidelity

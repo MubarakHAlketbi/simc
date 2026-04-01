@@ -4173,7 +4173,7 @@ struct dancing_rune_weapon_pet_t : public death_knight_pet_t
     vampiric_strike_t( std::string_view n, dancing_rune_weapon_pet_t* p )
       : drw_action_t<melee_attack_t>( p, n, p->dk()->spell.vampiric_strike )
     {
-      attack_power_mod.direct = data().effectN( 5 ).ap_coeff();
+      attack_power_mod.direct = data().effectN( 1 ).ap_coeff(); // primary damage (1.699 AP), not secondary AoE cleave (0.907 AP)
       aoe                     = 1;
     }
   };
@@ -10900,7 +10900,7 @@ struct vampiric_strike_blood_t : public heart_strike_base_t
   vampiric_strike_blood_t( std::string_view n, death_knight_t* p, bool bloodied_blade_triggered )
     : heart_strike_base_t( n, p, p->spell.vampiric_strike )
   {
-    attack_power_mod.direct = data().effectN( 5 ).ap_coeff();
+    attack_power_mod.direct = data().effectN( 1 ).ap_coeff(); // primary damage (1.699 AP), not secondary AoE cleave (0.907 AP)
     energize_amount         = std::fabs( data().powerN( 2 ).cost() );
 
     if ( bloodied_blade_triggered )

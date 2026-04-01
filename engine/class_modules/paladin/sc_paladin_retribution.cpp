@@ -418,11 +418,7 @@ struct divine_storm_second_sunrise_tempest_t : public holy_power_consumer_t<pala
   void impact(action_state_t* s) override
   {
     holy_power_consumer_t::impact( s );
-    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
-    {
-      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
-      p()->trigger_expurgation( execute_state->target, mult );
-    }
+    // MID1 4pc expurgation for second_sunrise_tempest is handled by divine_storm_second_sunrise_t::execute()
   }
 };
 
@@ -445,11 +441,7 @@ struct divine_storm_tempest_t : public holy_power_consumer_t<paladin_melee_attac
   void impact( action_state_t* s ) override
   {
     holy_power_consumer_t::impact( s );
-    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
-    {
-      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
-      p()->trigger_expurgation( execute_state->target, mult );
-    }
+    // MID1 4pc expurgation for divine_storm_tempest is handled by divine_storm_t::execute()
   }
 };
 
@@ -485,15 +477,22 @@ struct divine_storm_second_sunrise_t : public holy_power_consumer_t<paladin_mele
 
     if ( p()->talents.tempest_of_the_lightbringer->ok() )
       tempest->schedule_execute();
+
+    // MID1 4pc: second_sunrise divine storm also triggers expurgation at DS rate (effectN(2) = 50%)
+    // scaled by the second_sunrise multiplier (effectN(2) of second_sunrise talent)
+    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
+    {
+      double mult = p()->spells.mid1_ret_4pc->effectN( 2 ).base_value() / 100.0;
+      mult *= base_multiplier;
+      if ( p()->talents.tempest_of_the_lightbringer->ok() )
+        mult *= 1.2;
+      p()->trigger_expurgation( execute_state->target, mult );
+    }
   }
   void impact( action_state_t* s ) override
   {
     holy_power_consumer_t::impact( s );
-    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
-    {
-      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 2 ).percent() * base_multiplier;
-      p()->trigger_expurgation( execute_state->target, mult );
-    }
+    // MID1 4pc expurgation for second_sunrise is triggered in execute()
   }
 };
 
@@ -578,12 +577,14 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
         sunrise_echo->start_action_execute_event( 200_ms );
       }
     }
-    // MID1 4pc: Divine Storm applies Expurgation at 50% effectiveness (from spell effect #2)
+    // MID1 4pc: Divine Storm applies Expurgation at 50% effectiveness (spell 1264849 effectN(2) = 50).
+    // The sunrise_echo multiplier is only applied when second_sunrise actually proc'd this cast
+    // (i.e. when the ICD was up AND the RNG roll succeeded). We track that via a local bool.
+    // Do NOT double just because the talent is known (sunrise_echo != nullptr).
     if ( !background && p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
     {
       double mult = p()->spells.mid1_ret_4pc->effectN( 2 ).base_value() / 100.0;
-      if ( sunrise_echo )
-        mult *= 2;
+      // Tempest of the Lightbringer also fires, contributing its proportional share
       if ( p()->talents.tempest_of_the_lightbringer->ok() )
         mult *= 1.2;
 
@@ -607,11 +608,7 @@ struct divine_storm_t: public holy_power_consumer_t<paladin_melee_attack_t>
         p()->active.sun_sear->execute();
       }
     }
-    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
-    {
-      double mult = p()->sets->set(PALADIN_RETRIBUTION, MID1, B4)->effectN(2).percent() * base_multiplier;
-      p()->trigger_expurgation( execute_state->target, mult );
-    }
+    // MID1 4pc expurgation is triggered once in execute(), not per-target in impact()
   }
 };
 
@@ -716,11 +713,7 @@ struct templars_verdict_t : public holy_power_consumer_t<paladin_melee_attack_t>
   void impact(action_state_t* s) override
   {
     holy_power_consumer_t::impact(s);
-    if ( p()->sets->has_set_bonus( PALADIN_RETRIBUTION, MID1, B4 ) && p()->talents.expurgation->ok() )
-    {
-      double mult = p()->sets->set( PALADIN_RETRIBUTION, MID1, B4 )->effectN( 1 ).percent() * base_multiplier;
-      p()->trigger_expurgation( execute_state->target, mult );
-    }
+    // MID1 4pc expurgation for TV/FV is triggered once in execute(), not per-target in impact()
   }
 };
 

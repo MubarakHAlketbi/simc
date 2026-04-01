@@ -1672,9 +1672,9 @@ struct whirling_dragon_punch_t : public monk_melee_attack_t
     {
       double m = monk_melee_attack_t::action_multiplier();
 
-      // MID1 2pc: Whirling Dragon Punch damage increased by 30%
-      if ( p()->tier.mid1.ww_2pc->ok() )
-        m *= 1.0 + p()->tier.mid1.ww_2pc->effectN( 1 ).percent();
+      // MID1 2pc: auto-applied via apply_affecting_auras() — do NOT duplicate here
+      // spell 1264842 effect#1 is Aura 108 (ADD_PCT_MODIFIER) and is listed in
+      // WDP's "Affecting Spells" — the engine applies it passively at registration.
 
       return m;
     }
@@ -1787,9 +1787,9 @@ struct strike_of_the_windlord_t : public monk_melee_attack_t
     {
       double m = monk_melee_attack_t::action_multiplier();
 
-      // MID1 2pc: Strike of the Windlord damage increased by 30%
-      if ( p()->tier.mid1.ww_2pc->ok() )
-        m *= 1.0 + p()->tier.mid1.ww_2pc->effectN( 1 ).percent();
+      // MID1 2pc: auto-applied via apply_affecting_auras() — do NOT duplicate here
+      // spell 1264842 effect#1 is Aura 108 (ADD_PCT_MODIFIER) and is listed in
+      // SotWL's "Affecting Spells" — the engine applies it passively at registration.
 
       return m;
     }
