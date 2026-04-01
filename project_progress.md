@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-03-31 — **v0.4 Signal-Guided + LLM APL Optimizer**
+Last updated: 2026-04-01 — **v0.4.1 Engine Bug Fixes**
 
 **Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
 
@@ -12,8 +12,8 @@ Last updated: 2026-03-31 — **v0.4 Signal-Guided + LLM APL Optimizer**
 | Profiles | 89/89 PASS (compile + 1-iter sim + talent validation) |
 | Talent validation | 89/89 PASS (budget, prereqs, req_points gates) |
 | Baselines | 126/126 (pre-v0.3 — need re-baseline after Layer 2+3 runs) |
-| Tier sets | 33/33 behaviorally verified — all effectN reads checked against DBC |
-| Engine audit | **COMPLETE** — 3132 effectN reads scanned, 6 bugs found+fixed |
+| Tier sets | 33/33 initial audit done; 5 NEW bugs found 2026-04-01 via reference comparison |
+| Engine audit | **v0.4.1** — 5 additional bugs found+fixed via reference profile comparison |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
 | APL Layer 1 | **DONE** — 33/33 specs, blind mutation optimizer |
 | APL Layer 2 | **IMPLEMENTED** — signal-guided optimizer (APS, buff waste, resource) |

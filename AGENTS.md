@@ -91,6 +91,28 @@ Actively look for bugs in the engine — don't wait for upstream to find them.
 - Proc rate check (compare JSON execute counts vs expected RPPM/ICD from tooltips)
 - Cross-reference Wowhead spell tooltips against C++ implementation
 - Compare sim DPS against in-game data or community benchmarks when available
+- **Reference profile comparison** (see `scripts/compare_reference_profiles.py`)
+  Run annually or after major optimization passes. Isolates engine bugs by
+  substituting reference talent strings and APLs on OUR engine. DPS gaps that
+  persist after full substitution = engine bugs.
+
+**For every manually-applied modifier in C++, run the double-apply check:**
+```bash
+./engine/simc PROFILE iterations=0 spell_query='spell.id=ABILITY_ID' output=/dev/null \
+  2>&1 | grep 'Affecting Spells'
+```
+If the tier/talent spell appears in "Affecting Spells" with Aura 107/108,
+it is AUTO-APPLIED via apply_affecting_auras(). Manual code = double-apply. Remove it.
+
+**Bidirectional tier delta:** after implementing any tier set, verify:
+- Delta < 1%: tier likely not applying (broken)
+- Delta > 2× expected: tier likely double-applying (inflated)
+  Expected = (base_value/100) × (affected_ability_dps / total_dps)
+
+**effectN semantic check:** bounds alone are insufficient. For every effectN(N),
+verify the DBC Aura type and description match the intended use. effectN(N) in-bounds
+but reading an AoE cleave coefficient instead of primary damage is a real bug class
+(found: DK vampiric_strike effectN(5) vs effectN(1), -46% damage per cast).
 
 ### 3. Feature Implementation
 New spells, trinkets, mechanics, and interactions that aren't yet in the sim.
@@ -522,6 +544,17 @@ Multi-stage filtering (used by both APL optimizer and talent local search):
 - Stage 1: 300 iter on all candidates → keep top 20%
 - Stage 2: 3,000 iter on survivors → keep improvements over baseline
 - Stage 3: 10,000 iter on top 3 → confirm
+
+### Pre-Commit APL Check
+Before committing any profile change, diff against reference:
+```bash
+diff <(grep '^actions' profiles/MID1/MID1_{Spec}.simc) \
+     <(grep '^actions' reference/simulationcraft_org/{class}/{spec}/profile.simc)
+```
+Lines ONLY IN OURS must have a comment on the preceding line explaining why.
+Lines ONLY IN REFERENCE must be documented as intentional omissions.
+Undocumented divergences are bugs until proven otherwise.
+(Found: Hellcaller drain_life line causing -17% DPS — would have been caught here.)
 
 ### Profile Convention
 Each spec produces TWO optimal builds:
