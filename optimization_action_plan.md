@@ -169,18 +169,23 @@ Manual APL changes all regressed. Upstream APLs are at their ceiling for well-tu
 
 | Script | Purpose |
 |--------|---------|
-| `scripts/lib/sim_runner.py` | SimC runner, JSON parse, scoring |
-| `scripts/lib/apl_parser.py` | APL parse/serialize |
-| `scripts/lib/apl_mutations.py` | Mutation operators: swap, sweep, route |
+| `scripts/lib/sim_runner.py` | SimC runner, JSON parse, scoring; AbilityStats/BuffStats/ResourceStats |
+| `scripts/lib/apl_parser.py` | APL parse/serialize; insert_action, replace_condition, make_action |
+| `scripts/lib/apl_mutations.py` | Layer 1 blind mutation operators: swap, sweep, promote, route |
+| `scripts/lib/apl_signal_extractor.py` | Layer 2: APS inversion, buff waste, resource overcap, interval gap signals |
+| `scripts/lib/apl_signal_mutations.py` | Layer 2: targeted mutations from signals (S-M1 through S-M4) |
+| `scripts/lib/llm_apl_advisor.py` | Layer 3: LLM prompt builder, CHANGE block parser, APL converter |
 | `scripts/lib/talent_tree.py` | DBC tree parser + real TraitEdge.csv edges |
 | `scripts/lib/talent_codec.py` | Base64 talent string encode/decode |
 | `scripts/lib/tree_codec_bridge.py` | Tree↔codec bridge |
-| `scripts/lib/talent_validator.py` | Build validation + neighbor generation (NEW) |
-| `scripts/apl_optimizer.py` | APL optimization loop |
-| `scripts/talent_local_search.py` | Talent seed + hill-climb (NEW) |
+| `scripts/lib/talent_validator.py` | Build validation + neighbor generation |
+| `scripts/apl_optimizer.py` | Layer 1 APL optimization loop |
+| `scripts/signal_apl_optimizer.py` | Layer 2+3 unified runner |
+| `scripts/talent_local_search.py` | Talent seed + hill-climb |
 | `scripts/talent_build_compare.py` | Wowhead build comparison |
-| `scripts/validate_all_profiles.py` | Full profile validation (NEW) |
+| `scripts/validate_all_profiles.py` | Full profile validation |
 | `scripts/optimize_all.py` | Master orchestrator |
+| `scripts/optimize_all_specs.py` | Full per-spec talent+APL orchestrator |
 
 ### Deprecated (kept, not called)
 

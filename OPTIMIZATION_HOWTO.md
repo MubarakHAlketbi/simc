@@ -375,6 +375,32 @@ git commit -m "optimize(warrior_fury): +X.XX% PW via talent swap / APL threshold
 
 ---
 
+## Step 3b: Signal-Guided APL Optimization (Layer 2)
+
+After Layer 1 APL optimization converges, run the signal-guided optimizer.
+It reads per-ability APS, buff expire rates, and resource flow from sim output
+to generate targeted mutations — non-adjacent promotes, buff gates, resource dumps.
+
+```bash
+# Single spec, both fight styles
+python3 scripts/signal_apl_optimizer.py warrior_fury
+
+# Single spec, signal-only (faster, no blind mutations)
+python3 scripts/signal_apl_optimizer.py warrior_fury --no-blind
+
+# With LLM advisor (Layer 3) — requires API key
+python3 scripts/signal_apl_optimizer.py warrior_fury --llm
+```
+
+The LLM advisor (Layer 3) is called automatically when:
+- A buff has high expire rate but no consumer found in the APL
+- Resource overcap > 15% that signal mutations didn't fix
+- Layers 1+2 converge at 0 improvement
+
+Set OPENAI_API_KEY or ANTHROPIC_API_KEY in environment to enable LLM calls.
+
+---
+
 ## Step 5: Full Pipeline (All Specs)
 
 To optimize everything at once:
@@ -386,8 +412,11 @@ python3 scripts/optimize_all.py --report
 # Talent optimization for all specs (both fight styles, ~8 hours)
 python3 scripts/talent_local_search.py --all --max-iter 5
 
-# APL optimization for all specs (both fight styles, ~4 hours)
+# APL Layer 1 optimization for all specs (~4 hours)
 python3 scripts/optimize_all.py --apl --all
+
+# APL Layer 2+3 signal-guided + LLM optimization (~4-8 hours)
+python3 scripts/signal_apl_optimizer.py --all --llm
 
 # Validate all profiles
 python3 scripts/validate_all_profiles.py

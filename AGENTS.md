@@ -165,6 +165,11 @@ Talent hill-climbing and APL mutation optimization.
 | Script | What |
 |--------|------|
 | `scripts/optimize_all.py` | Master orchestrator — `--report`, `--apl --all`, `--spec X` |
+| `scripts/optimize_all_specs.py` | Full per-spec talent+APL Layer 1 orchestrator |
+| `scripts/signal_apl_optimizer.py` | **Layer 2+3** — signal-guided + LLM advisor. `--all --llm` |
+| `scripts/lib/apl_signal_extractor.py` | Signal computation (APS inversion, buff waste, resource overcap, interval gap) |
+| `scripts/lib/apl_signal_mutations.py` | Targeted mutation generators (non-adjacent promote, buff gate, resource dump) |
+| `scripts/lib/llm_apl_advisor.py` | LLM prompt builder + CHANGE block parser + APL converter |
 | `scripts/apl_optimizer.py` | APL optimization loop — mutation + multi-stage evaluation |
 | `scripts/talent_build_compare.py` | Wowhead talent build comparison (all 33 specs) |
 | `scripts/talent_local_search.py` | Hill-climbing talent optimizer with validated neighbors |
