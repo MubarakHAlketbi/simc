@@ -52,6 +52,8 @@ Every session, in order:
    e. If engine fixes affect specific specs, re-baseline those specs
 4. Check project_progress.md "What's Next" for current priorities
 5. Pick work based on priority: bugs > engine fixes > features > APL/profiles > optimization
+6. If doing any C++ engine work: open docs/internal/behavioral_audit_checklist.md
+   and run every step for each spell you touch. No exceptions.
 ```
 
 ---
@@ -75,6 +77,11 @@ commit messages to identify them.
 
 ### 2. Bug Hunting & Fixing
 Actively look for bugs in the engine — don't wait for upstream to find them.
+
+**When auditing C++ spell/tier/talent implementations, always follow:**
+`docs/internal/behavioral_audit_checklist.md` — 5-step per-modifier protocol.
+Read `docs/internal/bug_postmortem_2026-04-01.md` first to understand what the
+checklist protects against and why each step is mandatory.
 
 **Categories of bugs to look for:**
 - **Proc chain errors** — spell X should trigger Y but doesn't (or does when it shouldn't)
@@ -175,7 +182,25 @@ Talent hill-climbing and APL mutation optimization.
 | `optimization_action_plan.md` | Optimization design — talent local search + APL optimizer |
 | `OPTIMIZATION_HOWTO.md` | Step-by-step manual guide — exact commands to optimize any spec |
 | `FORK_VS_UPSTREAM_REVIEW.md` | Fork vs upstream divergence analysis + post-mortem |
-| `docs/internal/darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
+
+### Internal Docs (`docs/internal/`)
+| File | What It Is |
+|------|------------|
+| `behavioral_audit_checklist.md` | **USE THIS when auditing any C++ spell implementation.** 5-step per-modifier protocol: bounds, accessor, semantic meaning, double-apply check via spell_query, bidirectional tier delta. Mandatory for every new or modified tier set, talent, or trinket. |
+| `bug_postmortem_2026-04-01.md` | Root cause analysis for 5 bugs that passed prior audits — explains exactly WHY each was missed and which checklist step would have caught it. Read before auditing. |
+| `engine_audit_2026-03-31.md` | Prior engine audit results — 3132 effectN reads, 6 bugs found. Starting point for re-audits. |
+| `behavioral_audit_2026-03-31.md` | Prior behavioral audit results — tier set tooltip vs C++. Several entries now superseded by 2026-04-01 fixes. |
+| `darkmoon_investigation.md` | Darkmoon trinket investigation — blocked on beta data (Issue #81) |
+| `APL_GUIDE.md` | APL writing guide — syntax, expressions, common patterns |
+| `llm_apl_advisor_design.md` | Layer 3 LLM advisor design doc |
+| `signal_guided_apl_design.md` | Layer 2 signal-guided optimizer design doc |
+
+### Analysis Docs (`docs/analysis/`)
+| File | What It Is |
+|------|------------|
+| `reference_profile_comparison.md` | Full 47-spec comparison vs simulationcraft.org — DPS tables, talent diffs, APL diffs, engine divergence. Run `scripts/compare_reference_profiles.py` to regenerate. |
+| `reference_comparison_findings.md` | Human-readable findings from the comparison — bugs found, talent optimizer failures, NYI gaps, key lessons. |
+| `reference_profile_comparison.json` | Raw JSON data from comparison run — per-spec DPS for all 4 variants (ours/ref_T/ref_A/ref_TA).
 
 ### Archived (historical reference only)
 | File | What |
@@ -206,6 +231,7 @@ Talent hill-climbing and APL mutation optimization.
 | `scripts/verify_spell_ids.py` | Level 1 spell ID existence + name verification (568 Midnight IDs) |
 | `scripts/deep_audit.py` | Level 2 variable→spell tracing + effectN OOB scan (3132 reads) |
 | `scripts/audit_class_spells.py` | Level 1.5 direct effectN + missing spell check |
+| `scripts/compare_reference_profiles.py` | **Reference profile comparison** — sims all 47 specs against simulationcraft.org builds using our engine. Substitutes their talents, APL, or both. Use to detect engine inflation/deflation, APL gaps, talent optimizer failures. Run periodically or after major optimization passes. |
 
 ### Wowhead Data (reference game data)
 
@@ -512,6 +538,20 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   in specific AoE scenarios. Test beyond Patchwerk + HAC.
 - **Assessor vs event pattern** — if an event chain can cause the event manager to get stuck,
   convert to an assessor (Monk ETL fix pattern).
+- **effectN bounds ≠ effectN correct.** deep_audit.py only catches N > num_effects. A spell
+  with 5 effects where code reads effectN(5) (AoE cleave) instead of effectN(1) (primary damage)
+  is in-bounds but semantically wrong. Run Step 3 of behavioral_audit_checklist.md for every
+  effectN() read. (Found: DK vampiric_strike effectN(5) vs (1), -46% damage per cast.)
+- **Every manual modifier risks double-apply.** Passives with Aura 107/108 are auto-applied
+  via apply_affecting_auras() if listed in the ability's "Affecting Spells". Manual code that
+  also applies the same modifier creates (1+X%)² instead of (1+X%). Run Step 4 of
+  behavioral_audit_checklist.md (spell_query double-apply check) for every modifier.
+  (Found: Monk WW 2pc +30% applied twice, Ret Herald 4pc multi-path expurgation.)
+- **DPS inflation is as bad as deflation.** If our engine runs >5% ABOVE the reference sim,
+  there is a bug inflating DPS. Run the reference profile comparison
+  (scripts/compare_reference_profiles.py) periodically to catch both directions.
+- **Follow docs/internal/behavioral_audit_checklist.md for ALL C++ audit work.** It contains
+  the 5-step protocol that would have caught every engine bug we've found. Not optional.
 
 ### Talent Tree
 - **Heuristic edges are wrong** — row-adjacency/col-distance heuristic had 39 false edges and
