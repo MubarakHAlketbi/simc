@@ -152,10 +152,12 @@ def decode_talent_string(talent_str, tree_nodes):
         raise ValueError(f"Invalid serialization version: {version}")
 
     spec_id = reader.get_bits(SPEC_BITS)
-    if spec_id == 0 or spec_id > 1000:
+    # Known WoW spec IDs: classic specs 62-581, Midnight new specs up to ~1500
+    # Devourer=1480, Evoker Devastation=1467, Evoker Augmentation=1473
+    if spec_id == 0 or spec_id > 2000:
         raise ValueError(
             f"Invalid spec_id {spec_id} decoded from talent string header: "
-            f"expected a value in range [1, 1000]"
+            f"expected a non-zero value (got {spec_id})"
         )
 
     tree_hash = reader.get_bits(TREE_BITS)  # tree hash — must be all-zeros in valid strings
