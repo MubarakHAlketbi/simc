@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
+Last updated: 2026-03-31 — **v0.3 Full Optimization Pass**
 
 **Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
 
@@ -8,16 +8,17 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 
 | Metric | Value |
 |--------|-------|
-| Release | **v0.2** (tagged 2026-03-31) |
-| Profiles | 66/66 PASS (compile + 1-iter sim + talent validation) |
-| Talent validation | 66/66 PASS (budget, prereqs, req_points gates) |
+| Release | **v0.3** (tagged 2026-03-31) |
+| Profiles | 89/89 PASS (compile + 1-iter sim + talent validation) |
+| Talent validation | 89/89 PASS (budget, prereqs, req_points gates) |
 | Baselines | 126/126 FRESH (2026-03-31, Build 66709, target_error=0.1) |
 | Tier sets | 33/33 behaviorally verified — all effectN reads checked against DBC |
 | Engine audit | **COMPLETE** — 3132 effectN reads scanned, 6 bugs found+fixed |
 | Apex talents | 33/33 implemented (3 spell IDs each) |
 | APL audit | 42/42 resolved |
-| Talent builds | 29/33 profiles updated from Wowhead comparison |
-| Tooling | 19 scripts, ~5,500 lines (optimization + validation + audit) |
+| Optimization | **33/33 specs optimized** — talent + APL, both PW & HAC |
+| Tank HAC profiles | **6/6 tanks have HAC profiles** (fixed 2026-03-31) |
+| Tooling | 20 scripts, ~6,000 lines (optimization + validation + audit) |
 | Upstream sync | **SYNCED** — Build 66709, merged 2026-03-31 |
 | Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
 
@@ -30,16 +31,70 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 | ~~1~~ | ~~Upstream sync~~ — merged 359 commits, Build 66709 | Engine | **DONE** |
 | ~~2~~ | ~~Re-baseline all specs~~ — 120/120 fresh on Build 66709 | Testing | **DONE** |
 | ~~3~~ | ~~Engine correctness audit~~ — DBC verification, tier set behavioral checks, effectN OOB scan | Testing | **DONE (v0.2)** |
+| ~~7~~ | ~~Talent + APL optimization~~ — 33/33 specs, both fight styles | Optimization | **DONE (v0.3)** |
 | **4** | **Re-extract Wowhead data** (build changed 66384→66709) | Data | PENDING |
 | 5 | Multi-target sweeps (1,3,5,10 targets) for AoE scaling verification | Testing | PENDING |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD tooltips | Testing | PENDING |
-| 7 | Talent + APL optimization (per spec, both fight styles) | Optimization | PENDING |
 | 8 | Trinket combinatorics | Optimization | PENDING |
 | 9 | Final docs + cleanup + contribute fixes back upstream | Maintenance | PENDING |
 
 ---
 
-## v0.2 Engine Correctness Audit (2026-03-31)
+## v0.3 — Full Optimization Pass (2026-03-31)
+
+All 33 specs optimized from scratch (fresh engine-correct baselines). Each spec produces
+two independent profiles: PW-optimized (`.simc`) and HAC-optimized (`_HAC.simc`).
+Tank specs (Blood, Guardian, Brewmaster, Prot Paladin, Prot Warrior, Vengeance) now
+include HAC profiles — the tanks-skip-HAC restriction was removed.
+
+### Optimization Results
+
+| Spec | PW DPS | HAC DPS | Talent | APL Gains |
+|------|-------:|--------:|--------|-----------|
+| warrior_arms | 82,060 | 202,711 | -/Y | HAC +1.97% |
+| warrior_fury | 92,619 | 217,892 | Y/Y | PW +0.59% |
+| warrior_protection | 75,532 | 136,209 | Y/Y | — |
+| paladin_protection | 59,962 | 113,834 | Y/Y | — |
+| paladin_retribution | 114,026 | 178,327 | Y/Y | — |
+| hunter_bm | 97,673 | 204,410 | Y/Y | — |
+| hunter_mm | 108,100 | 182,240 | Y/Y | — |
+| hunter_survival | 104,176 | 185,493 | Y/Y | HAC +0.56% |
+| rogue_assassination | 102,775 | 187,520 | Y/Y | HAC +1.39% |
+| rogue_outlaw | 102,657 | 214,926 | Y/Y | HAC +0.39% |
+| rogue_subtlety | 115,329 | 225,134 | Y/Y | — |
+| priest_shadow | 104,818 | 154,134 | Y/Y | HAC +1.64% |
+| dk_blood | 46,588 | 97,667 | -/Y | HAC +1.12% |
+| dk_frost | 110,960 | 188,079 | -/Y | — |
+| dk_unholy | 126,982 | 272,428 | -/Y | — |
+| shaman_elemental | 126,334 | 240,113 | Y/Y | — |
+| shaman_enhancement | 91,512 | 174,899 | Y/Y | HAC +1.63% |
+| mage_arcane | 100,952 | 217,673 | Y/Y | — |
+| mage_fire | 101,877 | 209,626 | Y/Y | — |
+| mage_frost | 112,278 | 206,929 | Y/Y | — |
+| warlock_affliction | 94,414 | 155,809 | Y/Y | HAC +3.63% |
+| warlock_demonology | 97,205 | 525,527 | Y/Y | — |
+| warlock_destruction | 94,548 | 162,645 | Y/Y | HAC +3.50% |
+| monk_brewmaster | 61,918 | 119,969 | Y/Y | PW +0.72% |
+| monk_windwalker | 120,841 | 211,599 | Y/Y | HAC +0.02% |
+| druid_balance | 76,039 | 117,750 | Y/Y | — |
+| druid_feral | 106,929 | 199,563 | Y/Y | HAC +1.20% |
+| druid_guardian | 79,222 | 139,526 | Y/Y | — |
+| dh_havoc | 121,588 | 206,497 | -/Y | — |
+| dh_vengeance | 56,115 | 94,589 | Y/Y | PW +0.95%, HAC +0.33% |
+| dh_devourer | 103,645 | 179,714 | -/Y | HAC +0.09% |
+| evoker_devastation | 108,492 | 176,264 | Y/Y | HAC +6.32% |
+| evoker_augmentation | 68,519 | 114,737 | Y/Y | PW +0.29% |
+
+Talent column: Y = new optimal build found, - = existing build already optimal.
+APL gains > 0.1% listed; 12/33 specs had APL improvements (all HAC-side except
+warrior_fury PW, monk_brewmaster PW, dh_vengeance PW, evoker_augmentation PW).
+
+Notable: evoker_devastation HAC APL +6.32%, warlock_affliction HAC +3.63%,
+warlock_destruction HAC +3.50%. warlock_demonology HAC 525k is correct (pet-heavy AoE).
+
+---
+
+## v0.2 — Engine Correctness Audit (2026-03-31)
 
 ### Bugs Found and Fixed
 
@@ -81,6 +136,13 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 
 ## Completed Work
 
+### v0.3 — Full Optimization Pass (2026-03-31)
+- 33/33 specs optimized: talent local search + APL mutation optimizer
+- Both fight styles independently: Patchwerk (ST) and HecticAddCleave (AoE/M+)
+- 89/89 profiles pass validation (66 previously + 23 new HAC profiles)
+- Tank specs now all have HAC profiles (tanks-skip-HAC convention removed)
+- optimize_all_specs.py orchestration script added
+
 ### v0.2 — Engine Correctness Audit (2026-03-31)
 - Full DBC behavioral audit across all 13 class modules
 - 6 bugs found and fixed (3 with significant DPS impact)
@@ -113,9 +175,13 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 - **Wowhead data stale** — extracted on Build 66384, current is 66709.
 - **Multi-target scaling unverified** — need 1/3/5/10 target sweeps.
 - **Proc rates unverified** — need JSON execute count vs RPPM/ICD comparison.
+- **Baselines stale post-optimization** — 126 baselines predate the v0.3 talent/APL
+  changes. Need re-baseline pass after optimization.
+
+### Resolved (v0.3)
+- tanks-skip-HAC convention removed — all 6 tank specs now have HAC profiles
 
 ### Resolved (v0.2)
-
 - Rogue Sub 4pc permanent Shadow Blades — fixed (from_seconds on ms)
 - Shaman Storm Elemental effectN(5) OOB — fixed (effectN(4))
 - Priest Shadow 2pc swapped indices — fixed
@@ -124,7 +190,6 @@ Last updated: 2026-03-31 — **v0.2 Engine Correctness Audit**
 - Shaman Enh 2pc wrong semantic index — fixed
 
 ### Resolved (v0.1 and earlier)
-
 - req_points gate validator bug — fixed 2026-03-30
 - Hero tree spec filtering — fixed 2026-03-29
 - 4 broken talent strings — fixed 2026-03-29

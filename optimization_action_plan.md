@@ -1,6 +1,6 @@
 # Optimization Action Plan
 
-Updated: 2026-03-31
+Updated: 2026-03-31 — v0.3 full pass complete (33/33 specs)
 
 ## Context
 
@@ -213,8 +213,8 @@ All 33 specs × 2 styles: ~8 hours. With 2x parallelism: ~4 hours.
 
 0. **Engine is current** — upstream synced, no pending class fixes, build number matches
 1. **Engine is correct** — multi-target sweep + tier set delta + proc rate checks pass for all specs
-2. Every spec's PW-best talent build ≥ best Wowhead build for PW
-3. Every spec's HAC-best talent build ≥ best Wowhead build for HAC
-4. All talent strings pass `validate_all_profiles.py`
-5. All generated builds pass SimC smoke test
-6. Pipeline runs end-to-end: `python3 scripts/optimize_all.py --talent --apl --all`
+2. Every spec's PW-best talent build ≥ best Wowhead build for PW — **MET (v0.3)**
+3. Every spec's HAC-best talent build ≥ best Wowhead build for HAC — **MET (v0.3)**
+4. All talent strings pass `validate_all_profiles.py` — **89/89 PASS (v0.3)**
+5. All generated builds pass SimC smoke test — **MET (v0.3)**
+6. Pipeline runs end-to-end: `python3 scripts/optimize_all_specs.py` — **MET (v0.3)**
