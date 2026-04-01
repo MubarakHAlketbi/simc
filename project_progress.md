@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-04-01 — **v0.4.1 Engine Bug Fixes**
+Last updated: 2026-04-01 — **v0.5 Upstream sync + APL ports + re-baseline**
 
 **Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
 
@@ -21,7 +21,7 @@ Last updated: 2026-04-01 — **v0.4.1 Engine Bug Fixes**
 | Optimization | 33/33 specs talent + APL Layer 1 done; Layer 2+3 ready to run |
 | Tank HAC profiles | 6/6 tanks have HAC profiles |
 | Tooling | 26 scripts, ~7,700 lines |
-| Upstream sync | **SYNCED** — Build 66709, merged 2026-03-31 |
+| Upstream sync | **SYNCED** — Build 66709, 24 upstream commits merged 2026-04-01 (38ee898 PTR skipped) |
 | Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
 
 ---
@@ -36,7 +36,8 @@ Last updated: 2026-04-01 — **v0.4.1 Engine Bug Fixes**
 | ~~7~~ | ~~Talent + APL Layer 1 optimization~~ — 33/33 specs | Optimization | **DONE (v0.3)** |
 | ~~7b~~ | ~~APL Layer 2 implementation~~ — signal-guided optimizer | Optimization | **DONE (v0.4)** |
 | ~~7c~~ | ~~APL Layer 3 implementation~~ — LLM advisor | Optimization | **DONE (v0.4)** |
-| **7d** | **Run Layer 2+3 on all 33 specs** — `signal_apl_optimizer.py --all --llm` | Optimization | READY |
+|| **7d** | **Run Layer 2+3 on all 33 specs** — `signal_apl_optimizer.py --all --llm` | Optimization | **RUNNING** (pid 1895302, /tmp/layer23_all.log) |
+|| **7e** | **Re-run talent optimizer** — 9 underperforming specs post-engine fixes | Optimization | **RUNNING** (pid 1894446, /tmp/talent_optimizer.log) |
 | ~~4~~ | ~~Re-extract Wowhead data~~ — rotation.md only (33 specs, build 66709) | Data | **DONE** |
 | 5 | Multi-target sweeps (1,3,5,10 targets) for AoE scaling verification | Testing | PENDING |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD | Testing | PENDING |

@@ -103,5 +103,5 @@ main_hand=belomelorn_the_shattered_talon,id=249283,bonus_id=13355/13468/13469,en
 # gear_armor=531
 # set_bonus=midnight_season_1_2pc=1
 # set_bonus=midnight_season_1_4pc=1
-soul_shards=0
-default_pet=felguard
+warlock.soul_shards=0
+warlock.default_pet=felguard
