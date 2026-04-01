@@ -301,7 +301,17 @@ def call_llm(prompt: str) -> str:
                 timeout=120,
             )
             resp.raise_for_status()
-            return resp.json()["choices"][0]["message"]["content"]
+            data = resp.json()
+            # Guard: choices may be empty or content may be null (rate-limit / context overflow)
+            choices = data.get("choices") or []
+            if not choices:
+                err = data.get("error") or data
+                print(f"  [LLM] OpenRouter returned no choices: {err}")
+            else:
+                content = choices[0].get("message", {}).get("content")
+                if content is not None:
+                    return content
+                print(f"  [LLM] OpenRouter returned null content: finish_reason={choices[0].get('finish_reason')}")
         except Exception as e:
             print(f"  [LLM] OpenRouter error: {e}")
 
@@ -517,7 +527,7 @@ def get_llm_mutations(
     prompt = build_llm_prompt(spec_name, fight_style, sim, apl_text, signals, already_tested)
     response = call_llm(prompt)
 
-    if response.startswith("LLM_ERROR"):
+    if not response or response.startswith("LLM_ERROR"):
         print(f"  [LLM] Error: {response}")
         return []
 
