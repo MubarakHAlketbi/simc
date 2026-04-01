@@ -222,6 +222,41 @@ that should return control to the parent list.
 ---
 ---
 
+## 5. Optimization Layers
+
+Three layers of APL optimization, each building on the previous:
+
+### Layer 1 — Blind Mutation Optimizer (DONE — all 33 specs)
+Generates ~200 mutations per spec (adjacent swap, threshold sweep, promote, route),
+evaluates through multi-stage funnel (300→3k→10k iter), accepts best improvement.
+Script: `scripts/apl_optimizer.py`
+
+### Layer 2 — Signal-Guided Optimizer (DESIGNED — see signal_guided_apl_design.md)
+Reads per-ability APS, buff expire rates, and resource flow from sim JSON output.
+Computes 4 signal types (APS inversion, buff waste, resource overcap, interval gap).
+Generates ~20-30 TARGETED mutations per spec instead of 200 random ones.
+Key advantage over Layer 1: can do non-adjacent promotes and add new APL constructs
+(buff gates, emergency dumps) based on evidence from the sim data.
+Script: `scripts/signal_apl_optimizer.py` (pending implementation)
+
+### Layer 3 — LLM APL Advisor (DESIGNED — see llm_apl_advisor_design.md)
+Closes the semantic gap that no formula can cross. Called when:
+  - A buff has high expire rate AND zero APL references (no consumer found programmatically)
+  - Overcap > 15% AND signal mutations didn't fix it
+  - Layers 1+2 converge with 0 improvement
+
+The LLM receives: full ability APS table, buff waste signals, resource flow, current APL,
+and spec mechanic context from Wowhead rotation guides. It follows a strict reasoning
+protocol (buff waste → APS order → resource → missing synergies) and outputs structured
+CHANGE blocks that go through the same DPS validation funnel as programmatic mutations.
+LLM suggestions that don't improve DPS are rejected. No special trust.
+
+Key capability: "manifested_demonic_soul expires 96% of time, no APL reference" →
+LLM knows this is a Soul Harvester proc consumed by drain_soul → generates the fix.
+Script: `scripts/lib/llm_apl_advisor.py` (pending implementation)
+
+---
+
 ## 5-6. Historical Pipeline & Improvement Loop
 
 These sections documented the Wowhead data extraction pipeline (Phase 1-3)

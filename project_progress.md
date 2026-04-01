@@ -35,6 +35,8 @@ Last updated: 2026-03-31 — **v0.3 Full Optimization Pass**
 | **4** | **Re-extract Wowhead data** (build changed 66384→66709) | Data | PENDING |
 | 5 | Multi-target sweeps (1,3,5,10 targets) for AoE scaling verification | Testing | PENDING |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD tooltips | Testing | PENDING |
+| 7b | **APL Layer 2** — signal-guided optimizer (APS inversion, buff waste, resource overcap) | Optimization | DESIGNED |
+| 7c | **APL Layer 3** — LLM APL advisor (missing buff consumers, semantic mechanic gaps) | Optimization | DESIGNED |
 | 8 | Trinket combinatorics | Optimization | PENDING |
 | 9 | Final docs + cleanup + contribute fixes back upstream | Maintenance | PENDING |
 

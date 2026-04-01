@@ -101,6 +101,34 @@ for TODO comments, cross-reference Wowhead patch notes against implemented featu
 ### 4. APL & Profile Work
 Write and maintain action priority lists and character profiles.
 
+**Three-layer optimization pipeline:**
+
+Layer 1 — Blind mutations (DONE for all 33 specs via `scripts/apl_optimizer.py`)
+  Swaps, threshold sweeps, promotes, routing changes. ~200 candidates per spec.
+
+Layer 2 — Signal-guided mutations (`scripts/signal_apl_optimizer.py`, pending)
+  Parses sim JSON for per-ability APS, buff expire rates, resource flow.
+  Generates targeted mutations: non-adjacent promotes, buff gate adds, emergency dumps.
+  Signals: APS inversion (wrong priority order), buff waste (proc not consumed),
+  resource overcap (spender threshold too high), interval gap (filler delay).
+  Key advantage: can ADD new APL constructs, not just modify existing ones.
+
+Layer 3 — LLM APL Advisor (`scripts/lib/llm_apl_advisor.py`, pending)
+  Called when a buff has high expire rate AND zero APL references (programmatic
+  system can't generate a fix without knowing which action consumes the buff).
+  Also called when Layers 1+2 converge with 0 improvement.
+  LLM receives: APS table, buff waste signals, resource flow, full APL, spec
+  mechanics context (from wowhead rotation.md). Follows strict protocol:
+    Step 1: Identify missing buff consumers (buff.X with no APL action)
+    Step 2: Verify APS order is correct
+    Step 3: Diagnose resource overcap cause
+    Step 4: Find missing synergy triggers (ability not gated on its amplifier)
+  Outputs structured CHANGE blocks. All go through same DPS validation — no
+  special trust for LLM suggestions. DPS delta is the final arbiter.
+  See: docs/internal/llm_apl_advisor_design.md
+
+See: docs/internal/signal_guided_apl_design.md, docs/internal/llm_apl_advisor_design.md
+
 **How:** Use Wowhead extracted data as reference, compare upstream APLs,
 run optimization tooling. Each spec has TWO profiles — Patchwerk and HAC.
 
