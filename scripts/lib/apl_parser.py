@@ -235,6 +235,51 @@ def modify_threshold(apl: APL, list_name: str, idx: int,
     return new_apl
 
 
+def insert_action(apl: APL, list_name: str, position: int, action: APLAction) -> APL:
+    """Insert a new action at position in list_name, creating the list if needed."""
+    new_apl = apl.copy()
+    if list_name not in new_apl.lists:
+        new_apl.lists[list_name] = []
+    actions = new_apl.lists[list_name]
+    action = deepcopy(action)
+    action.list_name = list_name
+    actions.insert(position, action)
+    for i, a in enumerate(actions):
+        a.line_index = i
+    return new_apl
+
+
+def replace_condition(apl: APL, list_name: str, idx: int, new_condition: str) -> APL:
+    """Replace the entire if= condition of an action."""
+    new_apl = apl.copy()
+    new_apl.lists[list_name][idx].conditions = new_condition
+    return new_apl
+
+
+def append_or_condition(apl: APL, list_name: str, idx: int, extra: str) -> APL:
+    """Append '|extra' to an action's condition."""
+    new_apl = apl.copy()
+    action = new_apl.lists[list_name][idx]
+    if action.conditions:
+        action.conditions = f"({action.conditions})|({extra})"
+    else:
+        action.conditions = extra
+    return new_apl
+
+
+def make_action(list_name: str, action_name: str, conditions: str = "",
+                **kwargs) -> APLAction:
+    """Convenience constructor for a new APLAction."""
+    return APLAction(
+        list_name=list_name,
+        action=action_name,
+        conditions=conditions,
+        args={k: str(v) for k, v in kwargs.items()},
+        line_index=0,
+        raw_line="",
+    )
+
+
 if __name__ == "__main__":
     # Quick test with sample APL text
     sample = """

@@ -15,6 +15,51 @@ PROFILES_DIR = Path(__file__).resolve().parents[2] / "profiles" / "MID1"
 
 
 @dataclass
+class AbilityStats:
+    """Per-ability statistics from a sim run."""
+    name: str
+    portion_aps: float       # DPS contributed per second (true DPET proxy)
+    portion_amount: float    # fraction of total damage (0.0-1.0)
+    executes: float          # average cast count per fight
+    interval: float          # average time between casts (seconds)
+    crit_pct: float          # crit rate (0-100)
+
+
+@dataclass
+class BuffStats:
+    """Per-buff statistics from a sim run."""
+    name: str
+    uptime: float            # % of fight buff was active
+    start_count: float       # activations per fight
+    refresh_count: float     # refreshes before expiry
+    expire_count: float      # expirations without consumption
+
+    @property
+    def expire_rate(self) -> float:
+        total = self.expire_count + self.refresh_count
+        return self.expire_count / total if total > 0 else 0.0
+
+    @property
+    def is_player_cd(self) -> bool:
+        """Heuristic: low start_count + high expire = player-activated CD (not proc)."""
+        return self.start_count < 4 and self.expire_rate > 0.8
+
+
+@dataclass
+class ResourceStats:
+    """Per-resource flow statistics from a sim run."""
+    resource: str
+    spent: float             # total resource spent per fight
+    overcap: float           # resource wasted by hitting cap
+    end_waste: float         # resource remaining at fight end
+
+    @property
+    def overcap_rate(self) -> float:
+        total = self.spent + self.overcap
+        return self.overcap / total if total > 0 else 0.0
+
+
+@dataclass
 class SimResult:
     """Result of a single sim run."""
     dps_mean: float
@@ -23,6 +68,10 @@ class SimResult:
     action_breakdown: dict[str, float] = field(default_factory=dict)  # name -> compound_amount
     profile_name: str = ""
     raw_json_path: str = ""
+    # Extended signal data (populated by parse_sim_json)
+    ability_stats: list[AbilityStats] = field(default_factory=list)
+    buff_stats: list[BuffStats] = field(default_factory=list)
+    resource_stats: list[ResourceStats] = field(default_factory=list)
 
     def __repr__(self):
         return f"SimResult(dps={self.dps_mean:.0f}±{self.dps_error:.0f}, fight={self.fight_style})"
@@ -56,10 +105,65 @@ def parse_sim_json(json_path: str, fight_style: str) -> SimResult:
     player = data["sim"]["players"][0]
     cd = player["collected_data"]
 
+    # --- action_breakdown (legacy) ---
     action_breakdown = {}
     for stat in player.get("stats", []):
         if stat["compound_amount"] > 0:
             action_breakdown[stat["name"]] = stat["compound_amount"]
+
+    # --- AbilityStats ---
+    ability_stats: list[AbilityStats] = []
+    for stat in player.get("stats", []):
+        paps_raw = stat.get("portion_aps", {})
+        paps = paps_raw.get("mean", 0.0) if isinstance(paps_raw, dict) else 0.0
+        pa = stat.get("portion_amount", 0.0)
+        ex_raw = stat.get("num_executes", {})
+        ex = ex_raw.get("mean", 0.0) if isinstance(ex_raw, dict) else 0.0
+        ti_raw = stat.get("total_intervals", {})
+        interval = ti_raw.get("mean", 0.0) if isinstance(ti_raw, dict) else 0.0
+        dr = stat.get("direct_results", {})
+        crit_pct = dr.get("crit", {}).get("pct", 0.0) if dr else 0.0
+        if ex > 0:
+            ability_stats.append(AbilityStats(
+                name=stat["name"],
+                portion_aps=paps,
+                portion_amount=pa,
+                executes=ex,
+                interval=interval,
+                crit_pct=crit_pct,
+            ))
+
+    # --- BuffStats ---
+    buff_stats: list[BuffStats] = []
+    for b in player.get("buffs", []):
+        sc = b.get("start_count", 0.0)
+        rc = b.get("refresh_count", 0.0)
+        ec = b.get("expire_count", 0.0)
+        if sc >= 1:
+            buff_stats.append(BuffStats(
+                name=b["name"],
+                uptime=b.get("uptime", 0.0),
+                start_count=sc,
+                refresh_count=rc,
+                expire_count=ec,
+            ))
+
+    # --- ResourceStats ---
+    resource_stats: list[ResourceStats] = []
+    rl = cd.get("resource_lost", {})
+    ro = cd.get("resource_overflowed", {})
+    cer = cd.get("combat_end_resource", {})
+    for rk, rv in rl.items():
+        spent = rv.get("mean", 0.0) if isinstance(rv, dict) else 0.0
+        overcap = ro.get(rk, {}).get("mean", 0.0) if rk in ro else 0.0
+        end_waste = cer.get(rk, {}).get("mean", 0.0) if rk in cer else 0.0
+        if spent + overcap > 0:
+            resource_stats.append(ResourceStats(
+                resource=rk,
+                spent=spent,
+                overcap=overcap,
+                end_waste=end_waste,
+            ))
 
     return SimResult(
         dps_mean=cd["dps"]["mean"],
@@ -68,6 +172,9 @@ def parse_sim_json(json_path: str, fight_style: str) -> SimResult:
         action_breakdown=action_breakdown,
         profile_name=player["name"],
         raw_json_path=json_path,
+        ability_stats=ability_stats,
+        buff_stats=buff_stats,
+        resource_stats=resource_stats,
     )
 
 
