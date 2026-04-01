@@ -1,6 +1,6 @@
 # rogue/subtlety — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/subtlety/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:10
+Generated: 2026-04-01 16:21
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathstalker', 'Trickster']
@@ -293,7 +293,9 @@ You always want to use  Shadow Dance with either very low combo points or finish
  Deathstalker - Prefers to start  Shadow Dance with low combo points.
  Trickster - Prefers to start  Shadow Dance with finishing combo points.
 Only use it if  Secret Technique is ready (not on cooldown).
- Shadow Dance should be used a second time during  Shadow Blades without  Secret Technique ready; it is advised not to use  Shadow Dance when  Shadow Blades has 10 seconds or less remaining to ensure two casts when it's ready.
+ Shadow Dance should be used a second time during  Shadow Blades without  Secret Technique ready; it is advised not to use  Shadow Dance when  Shadow Blades has less than 10 second remaining to ensure two casts when it's ready.
+Optimization: Tier set 4p bonus in combination with  Light Company Guidon:
+Delaying your second  Shadow Dance cast during  Shadow Blades is beneficial. Use  Shadow Dance once  Shadow Blades has 8 seconds of duration left.
 
 THE HASTE PROBLEM, AND HOW TO SOLVE IT.
  Deepening Shadows increases the duration of  Shadow Dance based on your haste value; the amount of extra time can be very low, making it important to use spells as soon as possible.
@@ -714,7 +716,9 @@ You always want to use  Shadow Dance with either very low combo points or finish
  Deathstalker - Prefers to start  Shadow Dance with low combo points.
  Trickster - Prefers to start  Shadow Dance with finishing combo points.
 Only use it if  Secret Technique is ready (not on cooldown).
- Shadow Dance should be used a second time during  Shadow Blades without  Secret Technique ready; it is advised not to use  Shadow Dance when  Shadow Blades has 10 seconds or less remaining to ensure two casts when it's ready.
+ Shadow Dance should be used a second time during  Shadow Blades without  Secret Technique ready; it is advised not to use  Shadow Dance when  Shadow Blades has less than 10 second remaining to ensure two casts when it's ready.
+Optimization: Tier set 4p bonus in combination with  Light Company Guidon:
+Delaying your second  Shadow Dance cast during  Shadow Blades is beneficial. Use  Shadow Dance once  Shadow Blades has 8 seconds of duration left.
 
 THE HASTE PROBLEM, AND HOW TO SOLVE IT.
  Deepening Shadows increases the duration of  Shadow Dance based on your haste value; the amount of extra time can be very low, making it important to use spells as soon as possible.

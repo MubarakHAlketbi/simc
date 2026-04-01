@@ -1,6 +1,6 @@
 # shaman/enhancement — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/enhancement/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:12
+Generated: 2026-04-01 16:22
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Stormbringer', 'Totemic']

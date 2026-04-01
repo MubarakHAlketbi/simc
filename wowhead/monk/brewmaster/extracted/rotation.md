@@ -1,6 +1,6 @@
 # monk/brewmaster — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/monk/brewmaster/rotation-cooldowns-pve-tank
-Generated: 2026-03-23 23:33
+Generated: 2026-04-01 16:12
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Shado Pan', 'Master of Harmony']

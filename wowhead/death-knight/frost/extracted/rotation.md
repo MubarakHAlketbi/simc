@@ -1,6 +1,6 @@
 # death-knight/frost — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/frost/rotation-cooldowns-pve-dps
-Generated: 2026-03-22 23:58
+Generated: 2026-04-01 15:49
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', 'Rider of the Apocalypse']

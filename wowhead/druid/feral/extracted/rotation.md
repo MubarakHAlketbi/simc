@@ -1,6 +1,6 @@
 # druid/feral — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/feral/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:01
+Generated: 2026-04-01 15:59
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Druid of the Claw', 'Wildstalker']

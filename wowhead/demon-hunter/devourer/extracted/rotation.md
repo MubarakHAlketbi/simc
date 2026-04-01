@@ -1,6 +1,6 @@
 # demon-hunter/devourer — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/devourer/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:00
+Generated: 2026-04-01 15:53
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Void-Scarred', 'Annihilator']
@@ -119,7 +119,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -133,7 +133,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -251,7 +251,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -265,7 +265,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -384,7 +384,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -398,7 +398,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -496,7 +496,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -510,7 +510,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -610,7 +610,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -624,7 +624,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -702,7 +702,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -716,7 +716,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -811,7 +811,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -825,7 +825,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -922,7 +922,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -936,7 +936,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1023,7 +1023,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1037,7 +1037,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1128,7 +1128,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1142,7 +1142,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1253,7 +1253,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1267,7 +1267,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1373,7 +1373,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1387,7 +1387,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1501,7 +1501,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1515,7 +1515,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1613,7 +1613,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1627,7 +1627,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1727,7 +1727,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1741,7 +1741,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1819,7 +1819,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1833,7 +1833,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -1928,7 +1928,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -1942,7 +1942,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -2039,7 +2039,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -2053,7 +2053,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -2140,7 +2140,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -2154,7 +2154,7 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit
 
@@ -2245,7 +2245,7 @@ If I'm running Annihilator, do I always use Reap before Void Ray since it resets
 
 0
 
-Yumnomi 14 days ago (Patch 12.0.1)
+Yumnomi 24 days ago (Patch 12.0.1)
 
 Often yes. But if you have the feast of souls buff running and not a lot of souls on the ground, better to just void ray then eradicate. You want to farm moment of craving which requires 10 fragments on the ground, if that helps. in your void meta, always ray first.
 
@@ -2259,6 +2259,6 @@ So, lemme get this straight, our entire rotation outside of Meta is LITERALLY ju
 
 0
 
-Fluffytooths 22 days ago (Patch 12.0.1)
+Fluffytooths on 2026/02/28 (Patch 12.0.1)
 
 That was the case when pre-patch first released, but they fixed that well before you made this comment, by massively buffing Reap and shuffling soul gain around a bit

@@ -1,6 +1,6 @@
 # rogue/assassination — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/assassination/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:09
+Generated: 2026-04-01 16:19
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathstalker', 'Fatebound']
@@ -67,7 +67,7 @@ PRIORITY
 Maintain  Garrote on your main target
 Maintain  Rupture by casting at 5 or more combo points on your main target
 Cast  Crimson Tempest to spread bleeds to secondary targets until having 5 or more combo points
-Cast  Fan of Knives until having 5 or more combo points
+Cast  Fan of Knives on 2 or more targets, until having 5 or more combo points
 Cast  Vanish followed by  Garrote to apply  Improved Garrote. In Mythic+, this is commonly held for chainpulls where you cannot stealth beforehand. Otherwise, sync with  Deathmark.
 Cast  Deathmark on cooldown
 Cast  Kingsbane on cooldown, immediately after  Deathmark when applicable
@@ -112,14 +112,16 @@ FIGHT STYLE
 Single Target
 AoE
 SINGLE TARGET SEQUENCE
-Cast  Garrote 
+Cast  Garrote
 Cast  Mutilate until 5 or more combo points
 Cast  Rupture
 Cast  Mutilate until 5 or more combo points
 Cast  Envenom before entering your cooldowns
-Cast  Deathmark
 Cast any on-use trinkets, racials, and consumables now. This can be done via macro as well
+Cast  Deathmark
 Cast  Kingsbane
+Cast  Vanish 
+Cast  Garrote 
 Cast  Envenom to dump combo points
 SAMPLE TIMELINE
 Until 5+ points
@@ -425,7 +427,7 @@ PRIORITY
 Maintain  Garrote on your main target
 Maintain  Rupture by casting at 5 or more combo points on your main target
 Cast  Crimson Tempest to spread bleeds to secondary targets until having 5 or more combo points
-Cast  Fan of Knives until having 5 or more combo points
+Cast  Fan of Knives on 2 or more targets, until having 5 or more combo points
 Cast  Vanish followed by  Garrote to apply  Improved Garrote. In Mythic+, this is commonly held for chainpulls where you cannot stealth beforehand. Otherwise, sync with  Deathmark.
 Cast  Deathmark on cooldown
 Cast  Kingsbane on cooldown, immediately after  Deathmark when applicable
@@ -470,14 +472,16 @@ FIGHT STYLE
 Single Target
 AoE
 SINGLE TARGET SEQUENCE
-Cast  Garrote 
+Cast  Garrote
 Cast  Mutilate until 5 or more combo points
 Cast  Rupture
 Cast  Mutilate until 5 or more combo points
 Cast  Envenom before entering your cooldowns
-Cast  Deathmark
 Cast any on-use trinkets, racials, and consumables now. This can be done via macro as well
+Cast  Deathmark
 Cast  Kingsbane
+Cast  Vanish 
+Cast  Garrote 
 Cast  Envenom to dump combo points
 SAMPLE TIMELINE
 Until 5+ points

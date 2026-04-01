@@ -1,6 +1,6 @@
 # hunter/survival — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/survival/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:04
+Generated: 2026-04-01 16:06
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Pack Leader', 'Sentinel']
@@ -485,7 +485,7 @@ Single Target
 AoE
 SINGLE TARGET SEQUENCE
 Pre-Cast  Hunter's Mark on the boss.
-Pre-cast  Hatchet Toss ~1 GCD (~1.25sec) before the pull timer ends, making sure to stand far away from the boss. 
+Pre-cast  Wildfire Bomb ~1 GCD (~1.25sec) before the pull timer ends, making sure to stand far away from the boss. 
 Cast  Takedown and  Harpoon together. 
 Cast  Wildfire Bomb. 
 Cast  Boomstick. 

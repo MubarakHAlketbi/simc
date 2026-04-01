@@ -1,6 +1,6 @@
 # warlock/destruction — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/destruction/rotation-cooldowns-pve-dps
-Generated: 2026-03-24 00:18
+Generated: 2026-04-01 16:24
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Hellcaller', 'Diabolist', 'Diabolist Demons']

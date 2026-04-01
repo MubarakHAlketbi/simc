@@ -1,6 +1,6 @@
 # paladin/protection — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/protection/rotation-cooldowns-pve-tank
-Generated: 2026-03-23 00:07
+Generated: 2026-04-01 16:15
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Lightsmith']

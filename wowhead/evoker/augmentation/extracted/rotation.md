@@ -1,6 +1,6 @@
 # evoker/augmentation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/augmentation/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:03
+Generated: 2026-04-01 16:02
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Chronowarden', 'Scalecommander']

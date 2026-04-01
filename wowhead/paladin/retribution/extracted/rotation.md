@@ -1,6 +1,6 @@
 # paladin/retribution — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps
-Generated: 2026-03-24 00:17
+Generated: 2026-04-01 16:16
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Templar', 'Templar RG', 'Herald of the Sun']
@@ -20,8 +20,8 @@ PRIORITY
 Cast  Avenging Wrath
 Cast  Execution Sentence
 Cast  Hammer of Light if it's castable after using  Wake of Ashes
-Cast  Hammer of Light with a  Light's Deliverance proc if:
- Avenging Wrath is up, but will end within a few seconds
+Cast  Hammer of Light with a  Light's Deliverance proc in any one of the following situations:
+ Avenging Wrath or  Execution Sentence is up, but will end within a few seconds
 You don't have the Haste buff from  Undisputed Ruling up, and  Avenging Wrath won't come off cooldown for at least 5 seconds
 The proc will expire soon, or your target will die soon
 Cast  Final Verdict with 5 Holy Power
@@ -46,15 +46,15 @@ Replies
 
 #### AoE Priority
 BEST RETRIBUTION PALADIN AOE ROTATION
-Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets, regardless of talent builds.
+Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets in almost all talent builds. When using  Tempest of the Lightbringer and not using  Jurisdiction, it can swap to the AoE priority on 2+ targets instead.
 With  Templar selected, the priority is as follows:
 The builds used below are covered in the Talents page.
 PRIORITY
 Cast  Avenging Wrath
 Cast  Execution Sentence
 Cast  Hammer of Light if it's castable after using  Wake of Ashes
-Cast  Hammer of Light with a  Light's Deliverance proc if:
- Avenging Wrath is up, but will end within a few seconds
+Cast  Hammer of Light with a  Light's Deliverance proc in any one of the following situations:
+ Avenging Wrath or  Execution Sentence is up, but will end within a few seconds
 You don't have the Haste buff from  Undisputed Ruling up, and  Avenging Wrath won't come off cooldown for at least 5 seconds
 The proc will expire soon, or your target will die soon
 Cast  Divine Storm with 5 Holy Power
@@ -193,7 +193,9 @@ Apply Weapon Oil
 Eat Food
 
 HAMMER OF LIGHT
-There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light. If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath is already active and before the proc expires.
+There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light.
+
+If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath or  Execution Sentence is about to end and before the proc expires.
 
 Subject
 
@@ -235,7 +237,7 @@ With  Templar selected, the priority is as follows:
 The builds used below are covered in the Talents page.
 PRIORITY
 Cast  Hammer of Light if it's castable after using  Wake of Ashes
-Cast  Hammer of Light with a  Light's Deliverance proc if:
+Cast  Hammer of Light with a  Light's Deliverance proc in any one of the following situations:
  Avenging Wrath is up, but will end within a few seconds
 You don't have the Haste buff from  Undisputed Ruling up
 The proc will expire soon, or your target will die soon
@@ -261,12 +263,12 @@ Replies
 
 #### AoE Priority
 BEST RETRIBUTION PALADIN AOE ROTATION
-Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets, regardless of talent builds.
+Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets in almost all talent builds. When using  Tempest of the Lightbringer and not using  Jurisdiction, it can swap to the AoE priority on 2+ targets instead.
 With  Templar selected, the priority is as follows:
 The builds used below are covered in the Talents page.
 PRIORITY
 Cast  Hammer of Light if it's castable after using  Wake of Ashes
-Cast  Hammer of Light with a  Light's Deliverance proc if:
+Cast  Hammer of Light with a  Light's Deliverance proc in any one of the following situations:
  Avenging Wrath is up, but will end within a few seconds
 You don't have the Haste buff from  Undisputed Ruling up
 The proc will expire soon, or your target will die soon
@@ -404,7 +406,9 @@ Apply Weapon Oil
 Eat Food
 
 HAMMER OF LIGHT
-There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light. If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath is already active and before the proc expires.
+There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light.
+
+If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath or  Execution Sentence is about to end and before the proc expires.
 
 Subject
 
@@ -471,7 +475,7 @@ Replies
 
 #### AoE Priority
 BEST RETRIBUTION PALADIN AOE ROTATION
-Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets, regardless of talent builds.
+Retribution in AoE uses a priority list. This means with each GCD we go top to bottom on a list, and press the button with the current highest value. Retribution swaps to the AoE priority on 3+ targets in almost all talent builds. When using  Tempest of the Lightbringer and not using  Jurisdiction, it can swap to the AoE priority on 2+ targets instead.
 With  Herald of the Sun selected, the priority is as follows:
 The builds used below are covered in the Talents page.
 PRIORITY
@@ -615,7 +619,9 @@ Apply Weapon Oil
 Eat Food
 
 HAMMER OF LIGHT
-There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light. If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath is already active and before the proc expires.
+There's two situations when  Hammer of Light will become castable: right after pressing  Wake of Ashes, where it costs 5 Holy Power, and when you reach 50 stacks of  Light's Deliverance, where it's free. You should aim to already have 2 Holy Power when using  Wake of Ashes, including effects that will give you extra before your next cast like  Crusading Strikes, so you can immediately cast  Hammer of Light.
+
+If a free  Hammer of Light proc happens just before  Avenging Wrath comes off cooldown it's a good idea to hold it, and it can also be held a few seconds if  Undisputed Ruling is already active, but make sure to use it if  Avenging Wrath or  Execution Sentence is about to end and before the proc expires.
 
 Subject
 

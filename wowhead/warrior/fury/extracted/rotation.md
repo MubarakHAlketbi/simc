@@ -1,6 +1,6 @@
 # warrior/fury — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/fury/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:15
+Generated: 2026-04-01 16:26
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Slayer', 'Mountain Thane']

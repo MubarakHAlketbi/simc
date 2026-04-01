@@ -1,6 +1,6 @@
 # rogue/outlaw — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/rogue/outlaw/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:09
+Generated: 2026-04-01 16:20
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Trickster', 'Fatebound']

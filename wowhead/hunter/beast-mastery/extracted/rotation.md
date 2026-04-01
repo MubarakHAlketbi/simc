@@ -1,6 +1,6 @@
 # hunter/beast-mastery — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/beast-mastery/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:03
+Generated: 2026-04-01 16:04
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Pack Leader', 'Dark Ranger']

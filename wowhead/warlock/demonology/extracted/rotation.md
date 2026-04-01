@@ -1,6 +1,6 @@
 # warlock/demonology — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warlock/demonology/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:13
+Generated: 2026-04-01 16:23
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Diabolist', 'Soul Harvester']

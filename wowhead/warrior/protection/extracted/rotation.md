@@ -1,6 +1,6 @@
 # warrior/protection — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/warrior/protection/rotation-cooldowns-pve-tank
-Generated: 2026-03-23 00:15
+Generated: 2026-04-01 16:26
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Colossus', 'Mountain Thane']

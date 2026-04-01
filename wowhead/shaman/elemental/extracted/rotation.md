@@ -1,6 +1,6 @@
 # shaman/elemental — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/shaman/elemental/rotation-cooldowns-pve-dps
-Generated: 2026-03-24 00:21
+Generated: 2026-04-01 16:22
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Farseer', 'Stormbringer', 'Farseer AoE']
@@ -56,7 +56,7 @@ Replies
 
 #### AoE Priority
 BEST ELEMENTAL SHAMAN AOE ROTATION
-For Elemental Shaman there is effectively no overlap between Single Target and AoE. AoE starts at 2 targets and focusses on spamming  Chain Lightning and [
+For Elemental Shaman there is very little overlap between Single Target and AoE. AoE starts at 3 targets where we replace  Lightning Bolt with  Chain Lightning. The breakpoint for your spenders depends on your chosen talents.
 With  Farseer selected, the priority is as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 PRIORITY
@@ -102,14 +102,14 @@ The Elemental opener is pretty basic. You stack your cooldowns and just try to g
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
 SAMPLE TIMELINE
 Pull
-Proceed With Rotation
+Continue With Normal Rotation
 OPENER SEQUENCE
  Stormkeeper
  Lava Burst
  Ascendance
  Ancestral Swiftness
- Lightning Bolt
  Lava Burst
+ Lightning Bolt
  Lightning Bolt
 Continue with normal priority
 
@@ -381,10 +381,9 @@ Replies
 
 #### AoE Priority
 BEST ELEMENTAL SHAMAN AOE ROTATION
-For Elemental Shaman there is effectively no overlap between Single Target and AoE. AoE starts at 2 targets and focusses on spamming  Chain Lightning and [
+For Elemental Shaman there is very little overlap between Single Target and AoE. AoE starts at 3 targets where we replace  Lightning Bolt with  Chain Lightning. The breakpoint for your spenders depends on your chosen talents.
 With  Stormbringer selected, the priority is as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
-{{Replace the list items below for stormbringer in aoe, adhering to your mythic+ build for stormbringer. If stormbringer is not remotely viable in mythic+, you have the option to make the rotation reflect a raid encounter with aoe using your stormbringer mythic+ build, but make sure to add a mention into the box directly above this making note of that}}
 PRIORITY
 Remember to use  Spiritwalker's Grace and  Nature's Swiftness for movement events.
 Cast  Stormkeeper on cooldown.
@@ -429,8 +428,8 @@ OPENER SEQUENCE
  Stormkeeper
  Lava Burst
  Ascendance
- Tempest
  Lava Burst
+ Tempest
  Lightning Bolt
 Continue with normal priority
 
@@ -702,10 +701,9 @@ Replies
 
 #### AoE Priority
 BEST ELEMENTAL SHAMAN AOE ROTATION
-For Elemental Shaman there is effectively no overlap between Single Target and AoE. AoE starts at 2 targets and focusses on spamming  Chain Lightning and [
+For Elemental Shaman there is very little overlap between Single Target and AoE. AoE starts at 3 targets where we replace  Lightning Bolt with  Chain Lightning. The breakpoint for your spenders depends on your chosen talents.
 With  Stormbringer selected, the priority is as follows:
 The builds used below are covered in the Talents page. Anywhere you see the  icon, you can hover over it for additional notes.
-{{Replace the list items below for stormbringer in aoe, adhering to your mythic+ build for stormbringer. If stormbringer is not remotely viable in mythic+, you have the option to make the rotation reflect a raid encounter with aoe using your stormbringer mythic+ build, but make sure to add a mention into the box directly above this making note of that}}
 PRIORITY
 Remember to use  Spiritwalker's Grace and  Nature's Swiftness for movement events.
 Cast  Stormkeeper on cooldown.
@@ -750,8 +748,8 @@ OPENER SEQUENCE
  Stormkeeper
  Lava Burst
  Ascendance
- Tempest
  Lava Burst
+ Tempest
  Lightning Bolt
 Continue with normal priority
 

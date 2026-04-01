@@ -186,13 +186,33 @@ Talent hill-climbing and APL mutation optimization.
 | `scripts/audit_class_spells.py` | Level 1.5 direct effectN + missing spell check |
 
 ### Wowhead Data (reference game data)
+
+**Extraction policy — when to re-extract each page type:**
+
+| Page | Script consumer | Re-extract when |
+|------|----------------|-----------------|
+| `rotation.md` | `llm_apl_advisor.py` (Layer 3 LLM context, 3000-char trim) | Rotation guide revisions (major patches) |
+| `talents.md` | `talent_build_compare.py` (seed screening only) | **NEVER** post-v0.3 — our optimizer beats Wowhead builds. `update_talents_from_extracted.py` would OVERWRITE optimized strings. Do not run it. |
+| `bis.md` | None | New raid tier releases only |
+| `consumables.md` | None | New raid tier releases only |
+| `tier.md` | None | New raid tier releases only |
+
+**Do not run `--all` extraction.** Only extract `--pages rotation` when rotation guides change.
+
+```bash
+# Correct command — rotation only
+python3 wowhead/extract_wowhead_tabs.py --all --pages rotation
+# Single spec
+python3 wowhead/extract_wowhead_tabs.py warrior fury --pages rotation
+```
+
 | Path | What |
 |------|------|
-| `wowhead/{class}/{spec}/extracted/rotation.md` | Rotation priorities (all hero talents × tabs) |
-| `wowhead/{class}/{spec}/extracted/talents.md` | Talent builds with export codes |
-| `wowhead/{class}/{spec}/extracted/bis.md` | BiS gear by slot |
-| `wowhead/{class}/{spec}/extracted/tier.md` | Tier set bonus effects |
-| `wowhead/{class}/{spec}/extracted/consumables.md` | Enchants, gems, potions, food |
+| `wowhead/{class}/{spec}/extracted/rotation.md` | Rotation priorities (all hero talents × tabs) — LLM Layer 3 context |
+| `wowhead/{class}/{spec}/extracted/talents.md` | Historical — Wowhead talent codes (DO NOT use to update profiles post-v0.3) |
+| `wowhead/{class}/{spec}/extracted/bis.md` | BiS gear — re-extract on new raid tier only |
+| `wowhead/{class}/{spec}/extracted/tier.md` | Tier set bonuses — re-extract on new raid tier only |
+| `wowhead/{class}/{spec}/extracted/consumables.md` | Enchants/gems/food — re-extract on new raid tier only |
 | `wowhead/extract_wowhead_tabs.py` | Browser extractor (Playwright/Chromium) |
 | `wowhead/gen_apl_diff.py` | APL diff generator script |
 

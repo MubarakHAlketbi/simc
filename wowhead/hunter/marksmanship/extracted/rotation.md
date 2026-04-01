@@ -1,6 +1,6 @@
 # hunter/marksmanship — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/hunter/marksmanship/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:04
+Generated: 2026-04-01 16:05
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sentinel', 'Dark Ranger']

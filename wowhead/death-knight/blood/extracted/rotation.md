@@ -1,6 +1,6 @@
 # death-knight/blood — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/death-knight/blood/rotation-cooldowns-pve-tank
-Generated: 2026-03-22 23:57
+Generated: 2026-04-01 15:47
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Deathbringer', "San'layn"]
@@ -240,7 +240,7 @@ Cast  Blood Boil if the  Blood Plague copy from  Dancing Rune Weapon is not curr
 Cast  Death and Decay if you have a  Crimson Scourge proc
 Fill with  Vampiric Strike
 If you run out of runes, cast  Blood Boil
-OUTSIDE  DANCING RUNE WEAPON
+OUTSIDE  GIFT OF THE SAN'LAYN
 Cast  Death Strike if you need the healing or are above 75 Runic PowerWhy 75?
 Maintain at least 5 charges of  Bone Shield. If  Bone Shield is about to expire, press  Marrowrend Are there other generators?
 Cast  Death and Decay and stand in it if you are not currently affected by the buff it provides, or if you get a  Crimson Scourge proc.

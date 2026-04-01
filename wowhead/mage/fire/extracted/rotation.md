@@ -1,6 +1,6 @@
 # mage/fire — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/mage/fire/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:05
+Generated: 2026-04-01 16:09
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Sunfury', 'Frostfire']

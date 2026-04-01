@@ -1,6 +1,6 @@
 # priest/shadow — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/priest/shadow/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:08
+Generated: 2026-04-01 16:18
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Archon', 'Voidweaver']

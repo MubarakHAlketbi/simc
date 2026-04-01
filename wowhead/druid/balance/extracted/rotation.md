@@ -1,6 +1,6 @@
 # druid/balance — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/druid/balance/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:01
+Generated: 2026-04-01 15:57
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Keeper of the Grove', "Elune's Chosen"]
@@ -81,8 +81,10 @@ Apply  Sunfire when all targets are gathered
 Press  Force of Nature if you have  Incarnation: Chosen of Elune available or if  Force of Nature will be available again before  Incarnation: Chosen of Elune
 Press  Incarnation: Chosen of Elune if you just used  Force of Nature
 Cast  Starsurge to consume  Starweaver's Weft
+Cast  Starfall to consume  Starweaver's Warp
 Cast  Starfire at the start of  Incarnation: Chosen of Elune to consume  Ascendant Fires
-Cast  Starfallto prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Starfall on 3 or more targets to prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Starsurge on 2 targets to prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
 Cast  Wrath outside of  Eclipse up to and including 6 targets.
 Cast  Starfire in  Lunar Eclipse and  Wrath in  Solar Eclipse
  Further Details
@@ -481,7 +483,10 @@ Apply  Sunfire when all targets are gathered
 Press  Fury of Elune off cooldown
 Press  Incarnation: Chosen of Elune on the GCD after using  Fury of Elune
 Enter  Lunar Eclipse if you're above 90%  Astral Power and you're either about to overcap on charges or  Fury of Elune is also available
-Cast  Starfallto prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Starsurge to consume  Starweaver's Weft
+Cast  Starfall to consume  Starweaver's Warp
+Cast  Starfall on 3 or more targets to prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
+Cast  Starsurge on 2 targets to prevent capping on  Astral Power or to consume  Ascendant Eclipses at the start of  Eclipse
 Cast  Starfire to generate  Astral Power
 
 CELESTIAL ALIGNMENT

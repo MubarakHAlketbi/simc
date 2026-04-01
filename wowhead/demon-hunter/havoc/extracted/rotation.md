@@ -1,6 +1,6 @@
 # demon-hunter/havoc — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/demon-hunter/havoc/rotation-cooldowns-pve-dps
-Generated: 2026-03-24 00:22
+Generated: 2026-04-01 15:51
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Fel-Scarred', 'Aldrachi Reaver']

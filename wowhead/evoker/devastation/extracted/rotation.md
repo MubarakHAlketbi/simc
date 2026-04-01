@@ -1,6 +1,6 @@
 # evoker/devastation — Rotation (Browser Extracted)
 Source: https://www.wowhead.com/guide/classes/evoker/devastation/rotation-cooldowns-pve-dps
-Generated: 2026-03-23 00:02
+Generated: 2026-04-01 16:01
 
 ## Discovered Page Structure
 Hero Talent Switches: ['Scalecommander', 'Flameshaper']
@@ -58,7 +58,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -254,6 +254,7 @@ PRIORITY
  Fire Breath Rank 1.
  Eternity Surge Rank 1.
  Deep Breath with  Strafing Run.
+ Pyre with >= 18 stacks of  Charged Blast at 4+ targets.
 Channel  Disintegrate with  Mass Disintegrate. - 
  Pyre at 4+ targets.
 Otherwise, channel  Disintegrate. - 
@@ -288,7 +289,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -518,7 +519,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -734,7 +735,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -952,7 +953,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -1170,7 +1171,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -1381,7 +1382,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -1597,7 +1598,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -1807,7 +1808,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -2019,7 +2020,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -2225,7 +2226,7 @@ Another trick is to  Glide to gain altitude before  Deep Breath. This helps grea
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -2435,7 +2436,7 @@ Chaining Example
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -2664,7 +2665,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -2891,7 +2892,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -3117,7 +3118,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -3333,7 +3334,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -3551,7 +3552,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -3769,7 +3770,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -3980,7 +3981,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -4196,7 +4197,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -4406,7 +4407,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -4618,7 +4619,7 @@ Aside from  Eternity Surge and  Fire Breath, all spells can be cast on the move 
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -4824,7 +4825,7 @@ Another trick is to  Glide to gain altitude before  Deep Breath. This helps grea
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
@@ -5034,7 +5035,7 @@ Chaining Example
 
 This is a bit convoluted and tough to read, need a simplified version too look at quickly
 
-1
+2
 
 TheLaxx on 2022/11/20 (Patch 10.0.2)
 
