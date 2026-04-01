@@ -219,7 +219,11 @@ warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
 - **Multi-target scaling unverified** — need 1/3/5/10 target sweeps.
 - **Proc rates unverified** — need JSON execute count vs RPPM/ICD comparison.
 - **Baselines stale** — 126 baselines predate v0.3 talent/APL changes.
-- **Layer 2+3 not yet run** — signal_apl_optimizer.py implemented but not run on all specs.
+- **Layer 2+3 not yet run on all specs** — first run completed on warlock_affliction (2026-04-01).
+  PW: LLM produced 2 high-confidence CHANGE blocks, neither survived Stage 2. HAC: LLM call
+  intermittently fails (openrouter/free rate-limited on second call). No improvements found —
+  warlock_affliction APL is at signal optimum. Layer 1 gains (+3.63% HAC) came from talent
+  optimization, not APL structure. Ready to run --all once LLM reliability is confirmed.
 - **Wowhead rotation validator false positives** — 6 specs produce "MISSING HERO TALENTS"
   warnings that are false positives. Cause: build-variant button names ('Templar RG',
   'Farseer AoE') used as content keys don't match HERO_TALENTS slug list. Content is
