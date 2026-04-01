@@ -68,8 +68,7 @@ def _load_wowhead_context(spec_name: str) -> str:
         path = _WOWHEAD_DIR / cls_alt / spec / "extracted" / "rotation.md"
     if path.exists():
         content = path.read_text()
-        # Trim to first 3000 chars to fit context
-        return content[:3000]
+        return content
     return "(Wowhead rotation data not available — use general class knowledge)"
 
 
@@ -93,10 +92,16 @@ def _format_ability_table(sim: SimResult, top_n: int = 20) -> str:
     return "\n".join(lines)
 
 
+BUFF_WASTE_THRESHOLD = 0.40  # must match Step 1 of analysis protocol
+
 def _format_buff_table(sim: SimResult, signals: list[OptimizationSignal]) -> str:
-    """Format buff waste signals as a compact table."""
+    """Format buff waste signals as a compact table.
+
+    Uses BUFF_WASTE_THRESHOLD (0.40) — same threshold Step 1 of the analysis
+    protocol acts on, so the table contains exactly the buffs the LLM reasons about.
+    """
     waste_buffs = [b for b in sim.buff_stats
-                   if b.expire_rate > 0.30 and b.start_count >= 2]
+                   if b.expire_rate > BUFF_WASTE_THRESHOLD and b.start_count >= 2]
     waste_buffs.sort(key=lambda x: -x.expire_rate)
     if not waste_buffs:
         return "  No significant buff waste detected."
@@ -188,7 +193,7 @@ ANALYSIS PROTOCOL — follow these steps IN ORDER
 ═══════════════════════════════════════════════════════
 
 STEP 1 — BUFF WASTE (highest priority, especially APL_Ref=NONE)
-For each buff with expire_rate > 40%:
+For each buff listed in Section B (all have expire_rate > 40%):
   a) If APL_Ref=NONE: which APL action consumes this buff?
      Write the exact action name and the exact new APL line to add.
      If you don't know the consumer with high confidence, skip it.
