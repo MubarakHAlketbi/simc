@@ -269,15 +269,19 @@ def _load_env() -> dict:
 # LLM caller
 # ---------------------------------------------------------------------------
 
-def call_llm(prompt: str) -> str:
+def call_llm(prompt: str, max_retries: int = 4, base_delay: float = 15.0) -> str:
     """Call the LLM API and return the response text.
 
     Priority:
       1. OpenRouter  — OPENROUTER_API_KEY + OPENROUTER_MODEL from .env
       2. OpenAI      — OPENAI_API_KEY from env
       3. Anthropic   — ANTHROPIC_API_KEY from env
+
+    Retries up to max_retries times with exponential backoff on rate-limit
+    (429), null content, or empty choices. Delays: 15s, 30s, 60s, 120s.
     """
     import requests as _requests
+    import time as _time
 
     env = _load_env()
 
@@ -285,35 +289,53 @@ def call_llm(prompt: str) -> str:
     or_key   = env.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY", "")
     or_model = env.get("OPENROUTER_MODEL")   or os.environ.get("OPENROUTER_MODEL", "openai/gpt-4o")
     if or_key:
-        try:
-            resp = _requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {or_key}",
-                    "X-OpenRouter-Title": "SimC-MID1-APL-Optimizer",
-                },
-                json={
-                    "model": or_model,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 2000,
-                    "temperature": 0.1,
-                },
-                timeout=120,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            # Guard: choices may be empty or content may be null (rate-limit / context overflow)
-            choices = data.get("choices") or []
-            if not choices:
-                err = data.get("error") or data
-                print(f"  [LLM] OpenRouter returned no choices: {err}")
-            else:
+        for attempt in range(max_retries):
+            delay = base_delay * (2 ** attempt)  # 15, 30, 60, 120
+            try:
+                resp = _requests.post(
+                    "https://openrouter.ai/api/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {or_key}",
+                        "X-OpenRouter-Title": "SimC-MID1-APL-Optimizer",
+                    },
+                    json={
+                        "model": or_model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": 4000,
+                        "temperature": 0.1,
+                    },
+                    timeout=180,
+                )
+                # 429 rate-limit: wait and retry
+                if resp.status_code == 429:
+                    print(f"  [LLM] OpenRouter 429 rate-limit (attempt {attempt+1}/{max_retries}), waiting {delay:.0f}s...")
+                    _time.sleep(delay)
+                    continue
+                resp.raise_for_status()
+                data = resp.json()
+                # Guard: choices may be empty or content may be null
+                choices = data.get("choices") or []
+                if not choices:
+                    err = data.get("error") or data
+                    code = (data.get("error") or {}).get("code", 0)
+                    if code == 429 or "rate" in str(err).lower():
+                        print(f"  [LLM] OpenRouter rate-limit in body (attempt {attempt+1}/{max_retries}), waiting {delay:.0f}s...")
+                        _time.sleep(delay)
+                        continue
+                    print(f"  [LLM] OpenRouter returned no choices: {str(err)[:120]}")
+                    break
                 content = choices[0].get("message", {}).get("content")
                 if content is not None:
                     return content
-                print(f"  [LLM] OpenRouter returned null content: finish_reason={choices[0].get('finish_reason')}")
-        except Exception as e:
-            print(f"  [LLM] OpenRouter error: {e}")
+                fr = choices[0].get("finish_reason")
+                print(f"  [LLM] OpenRouter null content: finish_reason={fr} (attempt {attempt+1}/{max_retries}), waiting {delay:.0f}s...")
+                _time.sleep(delay)
+            except Exception as e:
+                print(f"  [LLM] OpenRouter error (attempt {attempt+1}/{max_retries}): {e}")
+                if attempt < max_retries - 1:
+                    _time.sleep(delay)
+        else:
+            print(f"  [LLM] OpenRouter exhausted {max_retries} attempts")
 
     # --- Fallback: OpenAI ---
     oai_key = os.environ.get("OPENAI_API_KEY", "")
