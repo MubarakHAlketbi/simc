@@ -267,8 +267,11 @@ warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
 | `project_structure.md` | Codebase navigation |
 | `docs/internal/signal_guided_apl_design.md` | Layer 2 signal system design |
 | `docs/internal/llm_apl_advisor_design.md` | Layer 3 LLM advisor design |
-| `docs/internal/engine_audit_2026-03-31.md` | DBC audit findings |
-| `docs/internal/behavioral_audit_2026-03-31.md` | Tier set behavioral audit |
+| `docs/internal/behavioral_audit_checklist.md` | **USE FOR ALL C++ WORK** — 5-step per-modifier protocol (bounds, accessor, semantic, double-apply, tier delta) |
+| `docs/internal/bug_postmortem_2026-04-01.md` | Why 5 bugs passed prior audits + which checklist step catches each |
+| `docs/internal/engine_audit_2026-03-31.md` | DBC audit findings (v0.2) |
+| `docs/internal/behavioral_audit_2026-03-31.md` | Tier set behavioral audit (v0.2, some entries superseded by 2026-04-01 fixes) |
 | `docs/internal/darkmoon_investigation.md` | Darkmoon trinket investigation (Issue #81) |
+| `docs/analysis/reference_comparison_findings.md` | Reference profile comparison findings — bugs, talent failures, NYI gaps |
 | `FORK_VS_UPSTREAM_REVIEW.md` | Fork vs upstream post-mortem |
 | `docs/archive/` | Historical audit data, APL diff reports |
