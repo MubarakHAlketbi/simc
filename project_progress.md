@@ -37,7 +37,7 @@ Last updated: 2026-03-31 — **v0.4 Signal-Guided + LLM APL Optimizer**
 | ~~7b~~ | ~~APL Layer 2 implementation~~ — signal-guided optimizer | Optimization | **DONE (v0.4)** |
 | ~~7c~~ | ~~APL Layer 3 implementation~~ — LLM advisor | Optimization | **DONE (v0.4)** |
 | **7d** | **Run Layer 2+3 on all 33 specs** — `signal_apl_optimizer.py --all --llm` | Optimization | READY |
-| **4** | **Re-extract Wowhead data** (build changed 66384→66709) | Data | PENDING |
+| ~~4~~ | ~~Re-extract Wowhead data~~ — rotation.md only (33 specs, build 66709) | Data | **DONE** |
 | 5 | Multi-target sweeps (1,3,5,10 targets) for AoE scaling verification | Testing | PENDING |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD | Testing | PENDING |
 | 8 | Trinket combinatorics | Optimization | PENDING |
@@ -216,11 +216,18 @@ warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
 - **Darkmoon Deck sigil stacking** — Issue #81, blocked on live data.
   See `docs/internal/darkmoon_investigation.md`.
 - **Priest Shadowfiend effectN(4)** — OOB on 3-effect spell. Healer sim only, low impact.
-- **Wowhead data stale** — extracted on Build 66384, current is 66709.
 - **Multi-target scaling unverified** — need 1/3/5/10 target sweeps.
 - **Proc rates unverified** — need JSON execute count vs RPPM/ICD comparison.
 - **Baselines stale** — 126 baselines predate v0.3 talent/APL changes.
 - **Layer 2+3 not yet run** — signal_apl_optimizer.py implemented but not run on all specs.
+- **Wowhead rotation validator false positives** — 6 specs produce "MISSING HERO TALENTS"
+  warnings that are false positives. Cause: build-variant button names ('Templar RG',
+  'Farseer AoE') used as content keys don't match HERO_TALENTS slug list. Content is
+  complete. Affected: monk/brewmaster, monk/windwalker, dk/unholy, druid/guardian,
+  paladin/retribution, mage/arcane. Safe to ignore.
+- **DANGER: update_talents_from_extracted.py must NOT be run post-v0.3.** It overwrites
+  `talents=` lines with Wowhead's Build 1 — which our optimizer already beats for 27/33
+  specs. This script was for project initialization only. Running it now = silent regression.
 
 ### Resolved (v0.4)
 - APL Layer 2+3 implemented and smoke tested

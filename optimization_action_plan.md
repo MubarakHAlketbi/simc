@@ -117,6 +117,10 @@ Hero trees are shared between 2 specs. Key discoveries:
 **Phase 1 — Seed Screening** (`talent_build_compare.py`):
 - Sim all Wowhead builds (4-16 per spec) at 1000 iter × both fight styles
 - Rank per fight style independently, pick top 3 seeds
+- **Post-v0.3 note:** seed screening from Wowhead is obsolete — our optimized profiles
+  already start ahead of every Wowhead build. Re-run seeding only when starting fresh
+  (new expansion, new spec). Do NOT run `update_talents_from_extracted.py` — it would
+  overwrite optimized strings with Wowhead's Build 1 (silent regression for 27/33 specs).
 
 **Phase 2 — Neighborhood Generation** (`talent_validator.py :: generate_neighbors()`):
 
@@ -223,3 +227,5 @@ All 33 specs × 2 styles: ~8 hours. With 2x parallelism: ~4 hours.
 4. All talent strings pass `validate_all_profiles.py` — **89/89 PASS (v0.3)**
 5. All generated builds pass SimC smoke test — **MET (v0.3)**
 6. Pipeline runs end-to-end: `python3 scripts/optimize_all_specs.py` — **MET (v0.3)**
+7. Layer 2+3 run on all 33 specs — **PENDING (v0.4 implemented, not yet run)**
+8. Baselines refreshed post-Layer-2+3 — **PENDING**

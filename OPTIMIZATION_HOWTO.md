@@ -375,29 +375,40 @@ git commit -m "optimize(warrior_fury): +X.XX% PW via talent swap / APL threshold
 
 ---
 
-## Step 3b: Signal-Guided APL Optimization (Layer 2)
+## Step 3b: Signal-Guided APL Optimization (Layer 2+3) — IMPLEMENTED
 
-After Layer 1 APL optimization converges, run the signal-guided optimizer.
-It reads per-ability APS, buff expire rates, and resource flow from sim output
-to generate targeted mutations — non-adjacent promotes, buff gates, resource dumps.
+After Layer 1 APL optimization converges, run the signal-guided optimizer (Layer 2)
+and optionally the LLM semantic advisor (Layer 3). Both are fully implemented as of v0.4.
+
+Layer 2 reads per-ability APS, buff expire rates, and resource flow from sim JSON output
+and generates targeted mutations — non-adjacent promotes, buff gates, resource dumps.
+~20-40 targeted candidates vs 200 blind mutations in Layer 1.
+
+Layer 3 is called automatically when a buff has no APL consumer that Layer 2 can identify
+programmatically — it requires semantic knowledge (e.g. which action consumes a trinket proc).
+It uses `wowhead/{class}/{spec}/extracted/rotation.md` as mechanic context (3000-char trim).
 
 ```bash
-# Single spec, both fight styles
+# Single spec, both fight styles, Layer 2 only
 python3 scripts/signal_apl_optimizer.py warrior_fury
 
-# Single spec, signal-only (faster, no blind mutations)
+# Single spec, signal-only (no blind mutations, faster)
 python3 scripts/signal_apl_optimizer.py warrior_fury --no-blind
 
-# With LLM advisor (Layer 3) — requires API key
+# Single spec with Layer 3 LLM advisor
 python3 scripts/signal_apl_optimizer.py warrior_fury --llm
+
+# All 33 specs, both layers (~4-8 hours)
+python3 scripts/signal_apl_optimizer.py --all --llm
 ```
 
-The LLM advisor (Layer 3) is called automatically when:
-- A buff has high expire rate but no consumer found in the APL
-- Resource overcap > 15% that signal mutations didn't fix
+Layer 3 triggers automatically when:
+- A buff expires >40% of the time and has zero APL references (no consumer found)
+- Resource overcap >15% that signal mutations didn't resolve
 - Layers 1+2 converge at 0 improvement
 
 Set OPENAI_API_KEY or ANTHROPIC_API_KEY in environment to enable LLM calls.
+All LLM suggestions go through the same 300→3k→10k iteration validation funnel — no special trust.
 
 ---
 
@@ -434,6 +445,40 @@ done
 # Final report
 python3 scripts/optimize_all.py --report
 ```
+
+### Wowhead data — what to re-extract and when
+
+Wowhead extraction is NOT part of the regular optimization pipeline post-v0.3.
+
+| Page | Who reads it | Re-extract when |
+|------|-------------|-----------------|
+| `rotation.md` | `llm_apl_advisor.py` (Layer 3, 3000-char trim) | Rotation guides change (major patches) |
+| `talents.md` | `talent_build_compare.py` (seed screening) | **NEVER post-v0.3** — see danger below |
+| `bis.md` | Nobody | New raid tier only |
+| `consumables.md` | Nobody | New raid tier only |
+| `tier.md` | Nobody | New raid tier only |
+
+```bash
+# CORRECT — rotation context only, ~15 minutes
+python3 wowhead/extract_wowhead_tabs.py --all --pages rotation
+```
+
+**DANGER — do NOT run:**
+```bash
+# This overwrites optimized talent strings with Wowhead's Build 1 — silent regression
+python3 wowhead/update_talents_from_extracted.py   # DO NOT RUN post-v0.3
+python3 wowhead/extract_wowhead_tabs.py --all      # --pages default includes talents
+```
+
+Our optimizer beats Wowhead talent builds for 27/33 specs. Running `update_talents_from_extracted.py`
+erases those gains. The script was designed for project initialization only.
+
+**Why not wago.tools?**
+wago.tools provides raw DB2 data (TraitNode IDs, positions, spell effect values) — exactly
+what we already use for TraitEdge.csv, TraitCond.csv etc. It does NOT have guide text (rotation
+priorities, mechanic explanations, proc interactions). For talent strings specifically, it has
+tree structure but not curator-chosen "best build" export codes in SimC format. The two tools
+serve completely different purposes and neither replaces the other.
 
 ---
 
