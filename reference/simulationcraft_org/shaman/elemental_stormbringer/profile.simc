@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2,if=!talent.flametongue_weap
 #
 #
 #
-actions
 #
 actions.precombat=snapshot_stats
 actions.precombat+=/flametongue_weapon,if=talent.flametongue_weapon

@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix
 #
 #
 #
-actions
 #
 actions.precombat=snapshot_stats
 actions.precombat+=/potion

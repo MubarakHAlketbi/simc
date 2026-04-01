@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 actions.precombat=summon_pet
 actions.precombat+=/variable,name=trinket_1_buffs,value=trinket.1.has_use_buff
 actions.precombat+=/variable,name=trinket_2_buffs,value=trinket.2.has_use_buff

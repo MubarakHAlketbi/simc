@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix
 #
 #
 #
-actions
 #
 actions.precombat=snapshot_stats
 actions.precombat+=/use_item,name=algethar_puzzle_box,if=!talent.flurry_strikes&(trinket.1.is.algethar_puzzle_box|trinket.2.is.algethar_puzzle_box)

@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 actions.precombat=snapshot_stats
 actions.precombat+=/shadowform,if=!buff.shadowform.up
 actions.precombat+=/variable,name=trinket_1_buffs,value=(trinket.1.has_buff.intellect|trinket.1.has_buff.mastery|trinket.1.has_buff.versatility|trinket.1.has_buff.haste|trinket.1.has_buff.crit|trinket.1.is.signet_of_the_priory)&(trinket.1.cooldown.duration>=20)

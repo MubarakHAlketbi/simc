@@ -22,11 +22,9 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 #
 actions.precombat=snapshot_stats
 #
-actions
 actions.precombat+=/bear_form,if=buff.bear_form.down&!talent.heart_of_the_wild.enabled
 actions.precombat+=/cat_form,if=buff.bear_form.down&talent.heart_of_the_wild.enabled
 actions.precombat+=/variable,name=algethar_puzzle_box_precombat_cast,value=3,if=equipped.algethar_puzzle_box

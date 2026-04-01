@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 actions.precombat=arcane_intellect
 actions.precombat+=/variable,name=opener,op=set,value=1
 actions.precombat+=/variable,name=pulse_aoe_count,op=set,value=3+talent.orb_mastery
@@ -60,7 +59,6 @@ actions+=/variable,name=time_for_pooling,op=set,if=!variable.opener,value=1
 #
 actions+=/variable,name=sunfury_hold_for_cds,op=set,value=((buff.arcane_surge.down&cooldown.touch_of_the_magi.remains>gcd.max*(4-(active_enemies>=3)-((2*(buff.overpowered_missiles.react&buff.clearcasting.react))<?((cooldown.arcane_orb.charges_fractional>0.95|buff.clearcasting.react)&active_enemies>=3)))&cooldown.arcane_surge.remains>gcd.max*(4-(active_enemies>=3)-((2*(buff.overpowered_missiles.react&buff.clearcasting.react))<?((cooldown.arcane_orb.charges_fractional>0.95|buff.clearcasting.react)&active_enemies>=3))))|((buff.clearcasting.react|((buff.arcane_salvo.react=25|cooldown.arcane_orb.charges_fractional>0.95)&active_enemies>=3))&buff.arcane_surge.remains>gcd.max*(6-(2*(buff.overpowered_missiles.react<?(active_enemies>=3))))))
 #
-actions
 actions+=/call_action_list,name=cooldowns
 actions+=/call_action_list,name=spellslinger_orbm,if=talent.splintering_sorcery&talent.orb_mastery
 actions+=/call_action_list,name=spellslinger,if=talent.splintering_sorcery&!talent.orb_mastery

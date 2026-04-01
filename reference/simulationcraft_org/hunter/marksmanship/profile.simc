@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 actions.precombat=snapshot_stats
 actions.precombat+=/summon_pet,if=talent.unbreakable_bond
 actions.precombat+=/use_item,name=algethar_puzzle_box

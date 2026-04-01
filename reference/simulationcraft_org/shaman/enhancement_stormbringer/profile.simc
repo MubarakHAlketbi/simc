@@ -21,7 +21,6 @@ temporary_enchant=disabled
 #
 #
 #
-actions
 actions.precombat=windfury_weapon
 actions.precombat+=/flametongue_weapon
 actions.precombat+=/lightning_shield

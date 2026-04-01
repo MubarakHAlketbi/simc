@@ -20,7 +20,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix
 #
 #
 #
-actions
 actions.precombat=snapshot_stats
 actions.precombat+=/variable,name=tab_target_burning_wound,op=reset,default=1
 actions.precombat+=/variable,name=rg_ds,default=0,op=reset

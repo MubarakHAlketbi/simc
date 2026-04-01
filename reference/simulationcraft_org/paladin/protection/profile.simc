@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2,if=!(talent.rite_of_adjurat
 #
 #
 #
-actions
 actions.precombat=rite_of_sanctification
 actions.precombat+=/rite_of_adjuration
 actions.precombat+=/snapshot_stats

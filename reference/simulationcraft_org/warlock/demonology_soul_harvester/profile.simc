@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2
 #
 #
 #
-actions
 actions.precombat=summon_pet
 actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=in_opener,op=set,value=1

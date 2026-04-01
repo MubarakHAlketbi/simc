@@ -21,7 +21,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix
 #
 #
 #
-actions
 actions.precombat=apply_poison
 actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=priority_rotation,value=priority_rotation

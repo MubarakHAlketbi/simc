@@ -20,7 +20,6 @@ temporary_enchant=main_hand:thalassian_phoenix_oil_2/off_hand:thalassian_phoenix
 #
 #
 #
-actions
 actions.precombat=snapshot_stats
 actions.precombat+=/variable,name=trinket_1_mastery,value=trinket.1.has_use_buff&trinket.1.has_buff.mastery
 actions.precombat+=/variable,name=trinket_2_mastery,value=trinket.2.has_use_buff&trinket.2.has_buff.mastery
