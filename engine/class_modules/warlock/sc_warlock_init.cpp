@@ -730,7 +730,14 @@ namespace warlock
     hero.eternal_hunger = find_talent_spell( talent_tree::HERO, "Eternal Hunger" ); // Should be ID 1268903
 
     // Initialize some default values for pet spawners
-    warlock_pet_list.demonic_souls.set_default_duration( hero.manifested_avarice_spell->duration() );
+    // Eternal Hunger (1268903) effectN(1): +5000ms to Manifested Demonic Soul (1269042) duration
+    // effectN(1) Aura 219 (A_ADD_FLAT_LABEL_MODIFIER) base_value=5000 -> time_value()=5s
+    // Not auto-applied (label modifier, not ClassMask-based); manual duration addition required.
+    // effectN(2) Aura 4 (Dummy) base_value=10 -> 10% Soul Swipe damage bonus (implemented in sc_warlock_pets.cpp)
+    timespan_t demonic_soul_duration = hero.manifested_avarice_spell->duration();
+    if ( hero.eternal_hunger.ok() )
+      demonic_soul_duration += hero.eternal_hunger->effectN( 1 ).time_value();
+    warlock_pet_list.demonic_souls.set_default_duration( demonic_soul_duration );
   }
 
   void warlock_t::init_base_stats()
