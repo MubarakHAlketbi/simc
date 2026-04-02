@@ -44,7 +44,7 @@ actions.precombat+=/starfire,if=hero_tree.elunes_chosen
 # ECLIPSE & CA CONDITIONS
 actions=variable,name=eclipse_condition,value=(variable.starweaver&buff.starlord.stack<3|!variable.starweaver&astral_power>=60)&((buff.touch_the_cosmos.up|buff.starweavers_weft.up|buff.starweavers_warp.up)|(cooldown.force_of_nature.remains>15|buff.harmony_of_the_grove.up))|fight_remains<20
 actions+=/variable,name=kotg_cd_condition,value=hero_tree.keeper_of_the_grove&!buff.ca_inc.up&variable.eclipse_down&buff.harmony_of_the_grove.up&(cooldown.convoke_the_spirits.remains<4|!talent.convoke_the_spirits)|fight_remains<10
-actions+=/variable,name=ec_cd_condition,value=!buff.eclipse_lunar.up&hero_tree.elunes_chosen&!buff.ca_inc.up&(!talent.convoke_the_spirits&hero_tree.elunes_chosen&(trinket.1.cooldown.duration<=100&trinket.1.cooldown.remains>cooldown.ca_inc.full_recharge_time-cooldown.ca_inc.duration|trinket.1.cooldown.duration>=100&cooldown.ca_inc.charges_fractional=1&(trinket.1.cooldown.duration>?cooldown.ca_inc.full_recharge_time)))|fight_remains<10
+actions+=/variable,name=ec_cd_condition,value=hero_tree.elunes_chosen&!buff.ca_inc.up&cooldown.ca_inc.charges_fractional>=1|fight_remains<10
 # VARIABLES
 actions+=/variable,name=starweaver,value=talent.starweaver&talent.hail_of_stars&talent.touch_the_cosmos
 actions+=/variable,name=eclipse_remains,value=buff.eclipse_lunar.remains<?buff.eclipse_solar.remains

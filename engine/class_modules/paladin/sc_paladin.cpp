@@ -36,7 +36,10 @@ paladin_t::paladin_t( sim_t* sim, util::string_view name, race_e r )
     random_weapon_target( nullptr ),
     random_bulwark_target( nullptr ),
     divine_inspiration_next( -1 ),
-    reflection_of_radiance_proc_chance( .2 ) // ToDo Fluttershy: Find out real proc chance
+    reflection_of_radiance_proc_chance( .2 ) // DBC audit 2026-04-02: spell 1271466 effectN(1) Dummy, base_value=3.
+    // Grand Crusader (85043) stores its 15% proc as base_value=15 (same encoding).
+    // By that convention, base_value=3 = 3% — but 3% seems too low for a hero talent.
+    // Code uses 20% as a best-guess estimate. Verify via combat logs before changing.
 {
   active_consecration = nullptr;
   active_boj_cons = nullptr;

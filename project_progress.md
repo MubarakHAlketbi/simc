@@ -34,7 +34,42 @@ Last updated: 2026-04-02 — **v0.5.2 Eternal Hunger fix + full session complete
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD | Testing | PENDING |
 | 8 | Trinket combinatorics | Optimization | PENDING |
 | 9 | Final docs + cleanup + contribute fixes upstream | Maintenance | PENDING |
-| 10 | Investigate outliers: Druid_Balance_Elune PW=53k (vs base 76k), Paladin_Prot_Lightsmith PW=42k | Engine/APL | PENDING |
+| ~~10~~ | ~~Investigate outliers~~ — both resolved (see v0.5.3 below) | Engine/APL | **DONE** |
+| 10b | Verify reflection_of_radiance proc chance via combat log (Lightsmith 11% residual gap) | Testing | PENDING |
+
+---
+
+## v0.5.3 — Outlier Investigation (2026-04-02)
+
+### Druid Balance Elune: APL Bug Fixed (+32% DPS)
+
+**Root cause:** `ec_cd_condition` variable had `!buff.eclipse_lunar.up` as a leading guard.
+For Elune's Chosen, CA/Incarnation should be cast freely on cooldown — ideally *during* Lunar Eclipse.
+The inversion blocked CA from firing ~40% of fight time, reducing usage from ~4 to ~2 per fight.
+
+Old: `!buff.eclipse_lunar.up & hero_tree.elunes_chosen & !buff.ca_inc.up & (complex trinket-sync)`
+Fixed: `hero_tree.elunes_chosen & !buff.ca_inc.up & cooldown.ca_inc.charges_fractional>=1 | fight_remains<10`
+
+Results: 53,857 → 71,193 DPS (+32.2%). Remaining -6.4% vs base Balance is **expected** — Wowhead
+explicitly notes Elune's Chosen is not optimal for single-target (it's an AoE-focused tree).
+
+### Paladin Protection Lightsmith: Expected Gap + Minor Engine Issue
+
+**Root cause of 28% gap:** Templar vs Lightsmith are completely different hero trees. The base Prot
+profile uses Templar. Templar-exclusive abilities contribute ~29,500 DPS (empyrean_hammer 13.6k +
+hammer_of_light 10k + sacrosanct_crusade 6k). Lightsmith-exclusive abilities contribute ~22,100 DPS.
+The net ~7,400 DPS hero talent gap plus Templar buff amplification on Avenger's Shield/Divine Toll
+explains most of the gap. **Not a bug — expected behavior.**
+
+**Residual 11% gap (engine issue):** Reference comparison shows ~11% gap even after substituting
+reference talents+APL. Suspected causes:
+- `reflection_of_radiance_proc_chance` hardcoded at 0.2 (20%) with a TODO — DBC base_value=3
+  for the Dummy effect. Grand Crusader encodes 15% as base_value=15, so by same convention
+  base_value=3 = 3% — but that seems too low. Actual value unverified.
+- Solo-sim approximation of `fake_solidarity` (group Sacred Weapon scaling) may underestimate DPS.
+
+**Action:** Updated the TODO comment in sc_paladin.cpp with DBC audit findings. Verified proc chance
+needed via combat log (task 10b).
 
 ---
 
@@ -167,7 +202,7 @@ Talent hill-climbing local search. req_points gate bug fixed.
 | Demon_Hunter_Vengeance | 56,621 | 96,716 |
 | Demon_Hunter_Vengeance_Aldrachi_Reaver | 56,081 | 93,338 |
 | Druid_Balance | 76,067 | 111,335 |
-| Druid_Balance_Elune | 53,857 | 86,209 |
+| Druid_Balance_Elune | 71,193 | 86,209 |
 | Druid_Balance_Keeper | 74,941 | 105,262 |
 | Druid_Feral | 110,569 | 191,466 |
 | Druid_Guardian | 79,241 | 128,578 |
@@ -221,8 +256,7 @@ HAC-optimized profiles (_HAC.simc) may show lower PW numbers — they are separa
 
 ### Open
 
-- **Druid Balance Elune** PW=53k vs base Balance 76k — significant gap, likely APL or talent issue. Needs investigation.
-- **Paladin Protection Lightsmith** PW=42k vs base Prot 59k — hero tree may be poorly configured. Needs talent re-run.
+- **Paladin Protection Lightsmith** residual 11% gap vs reference even with ref talents+APL — `reflection_of_radiance_proc_chance` hardcoded at 20%, DBC base_value=3 (unverified, could be 3% or 30%). Verify via combat log (task 10b).
 - **Priest Shadowfiend effectN(4)** — OOB on 3-effect spell. Healer sim only, low DPS impact.
 - **Darkmoon Deck sigil stacking** — Issue #81, blocked on live data. See `docs/internal/darkmoon_investigation.md`.
 - **Proc rates unverified** — need JSON execute count vs RPPM/ICD comparison.
@@ -231,6 +265,7 @@ HAC-optimized profiles (_HAC.simc) may show lower PW numbers — they are separa
 
 ### Resolved
 
+- v0.5.3: Druid Balance Elune ec_cd_condition inverted gate (-32% DPS, APL bug)
 - v0.5.2: Eternal Hunger duration extension missing (demonic_soul pet 9s not 14s)
 - v0.5: Warlock Affliction Hellcaller drain_life APL bug (+17.2%)
 - v0.5: Paladin Ret Herald 4pc double expurgation (+12.9%)
