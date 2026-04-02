@@ -1,6 +1,6 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-04-01 — **v0.5 Upstream sync + APL ports + re-baseline**
+Last updated: 2026-04-02 — **v0.5.2 Full optimization pass complete**
 
 **Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
 
@@ -36,10 +36,10 @@ Last updated: 2026-04-01 — **v0.5 Upstream sync + APL ports + re-baseline**
 | ~~7~~ | ~~Talent + APL Layer 1 optimization~~ — 33/33 specs | Optimization | **DONE (v0.3)** |
 | ~~7b~~ | ~~APL Layer 2 implementation~~ — signal-guided optimizer | Optimization | **DONE (v0.4)** |
 | ~~7c~~ | ~~APL Layer 3 implementation~~ — LLM advisor | Optimization | **DONE (v0.4)** |
-|| **7d** | **Run Layer 2+3 on all 33 specs** — `signal_apl_optimizer.py --all --llm` | Optimization | **RUNNING** (pid 1895302, /tmp/layer23_all.log) |
-|| **7e** | **Re-run talent optimizer** — 9 underperforming specs post-engine fixes | Optimization | **RUNNING** (pid 1894446, /tmp/talent_optimizer.log) |
+|| ~~7d~~ | ~~Run Layer 2+3 on all 33 specs~~ — all complete, gains committed | Optimization | **DONE (v0.5)** |
+|| ~~7e~~ | ~~Re-run talent optimizer~~ — 9 specs, gains committed | Optimization | **DONE (v0.5)** |
 | ~~4~~ | ~~Re-extract Wowhead data~~ — rotation.md only (33 specs, build 66709) | Data | **DONE** |
-| 5 | Multi-target sweeps (1,3,5,10 targets) for AoE scaling verification | Testing | PENDING |
+| ~~5~~ | ~~Multi-target sweeps~~ — 56 specs × 4 targets = 224 sims, no anomalies | Testing | **DONE (v0.5)** |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD | Testing | PENDING |
 | 8 | Trinket combinatorics | Optimization | PENDING |
 | 9 | Final docs + cleanup + contribute fixes back upstream | Maintenance | PENDING |
