@@ -92,11 +92,11 @@ actions.high_prio_actions+=/dancing_rune_weapon,if=!buff.exterminate.up&!debuff.
 actions.san_gift=/heart_strike,if=buff.essence_of_the_blood_queen.remains<1.5&buff.essence_of_the_blood_queen.remains
 actions.san_gift+=/heart_strike,if=buff.essence_of_the_blood_queen.stack<7
 actions.san_gift+=/death_strike
+actions.san_gift+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
 actions.san_gift+=/death_strike,if=runic_power.deficit<36
 actions.san_gift+=/blood_boil,if=!drw.bp_ticking
-actions.san_gift+=/any_dnd,if=buff.crimson_scourge.remains
-actions.san_gift+=/blood_boil,if=buff.boiling_point.up&!buff.boiling_point_echo.up
 actions.san_gift+=/heart_strike
+actions.san_gift+=/any_dnd,if=buff.crimson_scourge.remains
 actions.san_gift+=/blood_boil
 actions.sanlayn=/deaths_caress,if=!buff.bone_shield.up|buff.bone_shield.remains<1.5|buff.bone_shield.stack<=1
 actions.sanlayn+=/blood_boil,if=dot.blood_plague.remains<3
@@ -112,3 +112,4 @@ actions.sanlayn+=/death_strike
 actions.sanlayn+=/heart_strike,if=rune>=2
 actions.sanlayn+=/blood_boil
 actions.sanlayn+=/heart_strike
+actions.sanlayn+=/any_dnd,if=!buff.death_and_decay.up

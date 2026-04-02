@@ -209,7 +209,7 @@ actions.anni_voidfall+=/fracture,if=buff.voidfall_building.stack=2&fury>=70
 actions.ar=/call_action_list,name=trinkets
 actions.ar+=/potion,if=((buff.rending_strike.up&buff.glaive_flurry.up)|prev_gcd.1.reavers_glaive)&(!variable.is_dungeon|in_boss_encounter),use_off_gcd=1
 actions.ar+=/call_action_list,name=externals,if=(buff.rending_strike.up&buff.glaive_flurry.up)|prev_gcd.1.reavers_glaive
-actions.ar+=/fiery_brand,if=!dot.fiery_brand.ticking&(cooldown.fiery_brand.charges>=2|!talent.fiery_demise)&variable.cd_ready
+actions.ar+=/fiery_brand,if=!dot.fiery_brand.ticking&(cooldown.fiery_brand.charges>=1|!talent.fiery_demise)&variable.cd_ready
 actions.ar+=/fiery_brand,if=talent.fiery_demise&!dot.fiery_brand.ticking&variable.meta_ready&!buff.metamorphosis.up&cooldown.metamorphosis.ready&variable.fire_cd_soon
 actions.ar+=/metamorphosis,if=buff.untethered_rage.up,use_off_gcd=1
 actions.ar+=/metamorphosis,if=!buff.metamorphosis.up&variable.meta_ready,use_off_gcd=1

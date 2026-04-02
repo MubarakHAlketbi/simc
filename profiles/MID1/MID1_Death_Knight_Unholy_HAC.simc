@@ -113,7 +113,7 @@ actions.single_target+=/festering_strike,if=talent.festering_scythe&(buff.fester
 actions.single_target+=/scourge_strike,if=buff.lesser_ghoul_ready.stack>=1
 actions.single_target+=/death_coil,if=variable.spending_rp
 actions.single_target+=/festering_strike,if=buff.lesser_ghoul_ready.stack=0
-actions.single_target+=/putrefy,if=!talent.soul_reaper&cooldown.dark_transformation.remains>12
+actions.single_target+=/putrefy,if=!talent.soul_reaper&(cooldown.dark_transformation.remains<=12|!talent.dark_transformation)
 actions.single_target+=/death_coil
 actions.trinkets=/use_item,if=variable.trinket_1_buffs&(variable.trinket_priority=1|!variable.trinket_2_buffs|!trinket.2.has_cooldown)&(variable.cds_active),slot=trinket1
 actions.trinkets+=/use_item,if=variable.trinket_2_buffs&(variable.trinket_priority=2|!variable.trinket_1_buffs|!trinket.1.has_cooldown)&(variable.cds_active),slot=trinket2
