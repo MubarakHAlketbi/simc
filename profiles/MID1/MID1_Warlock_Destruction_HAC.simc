@@ -59,7 +59,7 @@ main_hand=belomelorn_the_shattered_talon,id=249283,bonus_id=13355/13468/13469,en
 # set_bonus=midnight_season_1_2pc=1
 # set_bonus=midnight_season_1_4pc=1
 warlock.soul_shards=0
-default_pet=sayaad
+warlock.default_pet=sayaad
 actions.precombat=/summon_pet
 actions.precombat+=/variable,name=trinket_1_buffs,value=trinket.1.has_use_buff
 actions.precombat+=/variable,name=trinket_2_buffs,value=trinket.2.has_use_buff
