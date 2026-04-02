@@ -512,6 +512,7 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   (base_value=4000 → 4000ms). `from_seconds(4000)` = 4000 seconds = permanent buff.
   **Always use `time_value()` for duration effects** — it calls `from_millis()` internally.
   Found: Rogue Sub 4pc (permanent Shadow Blades, -19.6% DPS correction).
+  Found again: Eternal Hunger effectN(1) base_value=5000 = 5000ms = 5s — `time_value()` correct.
 - **effectN(N) OOB returns 0 silently.** No crash, no warning — just wrong values.
   A spell with 4 effects returns 0 for effectN(5). Found: Shaman Storm Elemental
   Elemental Unity TA bonus was silently 0% instead of +6%.
@@ -525,6 +526,33 @@ Use `players[0]` for single-actor sims, NOT `sim.statistics.raid_dps`.
   while `find_talent_spell("Name")` returns the talent version — same name, different
   spell IDs, different effect counts. Audit scanners must trace the actual variable
   assignment, not just match by name.
+
+### Engine Audit Lessons (v0.5, 2026-04-01 / 2026-04-02)
+- **Aura 219 (A_ADD_FLAT_LABEL_MODIFIER) is NOT auto-applied by ClassMask.** It modifies
+  spells by label, not class family flags. Unlike Aura 107/108 which match via ClassMask
+  and are auto-applied, Aura 219 requires manual code. Found: Eternal Hunger (1268903)
+  effectN(1) modifies Manifested Demonic Soul duration (Label 5915) — must be manually
+  applied in `set_default_duration()`, not via `apply_affecting_auras()`.
+- **`set_default_duration()` is static at init time.** Pet spawner durations are set once
+  during `init_spells_X()`. Talent-conditional duration extensions must be applied at that
+  point — the spawner does not re-read the duration during encounters. Pattern:
+  ```cpp
+  timespan_t dur = base_spell->duration();
+  if ( hero.eternal_hunger.ok() )
+    dur += hero.eternal_hunger->effectN( 1 ).time_value();
+  pet_list.set_default_duration( dur );
+  ```
+- **Aura 107 with MiscValue=11 (Spell Cooldown) IS auto-applied.** Eternal Servitude (449707)
+  reduces Fel Domination by 90s via this path — confirmed by spell_query showing it in
+  Affecting Spells for Fel Domination (333889). No manual code needed.
+- **Utility CDs have zero DPS impact in sim.** Fel Domination (pet summon utility) is never
+  cast in the APL sim. CDR from Eternal Servitude has no DPS value. Always check whether
+  a talent's target spell is actually simulated before writing code for it.
+- **Aura 218 (A_ADD_PCT_LABEL_MODIFIER) can double a modifier while a buff is active.**
+  Shared Vessel base mastery is auto-applied (Aura 318). The doubling-while-soul-active
+  mechanic is implemented via 1269042 effect#2 (Aura 218, Label 5914 → Shared Vessel).
+  The manual block in `composite_mastery()` correctly adds the doubled bonus. The pattern:
+  base effect auto-applied + manual conditional code for the amplified portion.
 
 ### Engine & C++ Work
 - **The engine is not a black box.** Proc chains, scaling formulas, event sequencing, and

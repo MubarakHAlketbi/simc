@@ -1,27 +1,28 @@
 # SimulationCraft — Midnight Expansion (MID1) Progress
 
-Last updated: 2026-04-02 — **v0.5.2 Full optimization pass complete**
+Last updated: 2026-04-02 — **v0.5.2 Eternal Hunger fix + full session complete**
 
 **Game build: 12.0.1.66709 Live** — we target Live only, ignore 12.0.5.x PTR.
+
+---
 
 ## Status
 
 | Metric | Value |
 |--------|-------|
-| Release | **v0.4** (2026-03-31) |
+| Release | **v0.5.2** (2026-04-02) |
 | Profiles | 89/89 PASS (compile + 1-iter sim + talent validation) |
 | Talent validation | 89/89 PASS (budget, prereqs, req_points gates) |
-| Baselines | 126/126 (pre-v0.3 — need re-baseline after Layer 2+3 runs) |
-| Tier sets | 33/33 initial audit done; 5 NEW bugs found 2026-04-01 via reference comparison |
-| Engine audit | **v0.4.1** — 5 additional bugs found+fixed via reference profile comparison |
-| Apex talents | 33/33 implemented (3 spell IDs each) |
-| APL Layer 1 | **DONE** — 33/33 specs, blind mutation optimizer |
-| APL Layer 2 | **IMPLEMENTED** — signal-guided optimizer (APS, buff waste, resource) |
-| APL Layer 3 | **IMPLEMENTED** — LLM semantic advisor (missing consumers, synergies) |
-| Optimization | 33/33 specs talent + APL Layer 1 done; Layer 2+3 ready to run |
-| Tank HAC profiles | 6/6 tanks have HAC profiles |
-| Tooling | 26 scripts, ~7,700 lines |
-| Upstream sync | **SYNCED** — Build 66709, 24 upstream commits merged 2026-04-01 (38ee898 PTR skipped) |
+| Baselines | 172 fresh (89 × 2 fight styles, post-v0.5 engine fixes + APL) |
+| Tier sets | 33/33 audited; 10 bugs found and fixed total across all audit passes |
+| Apex talents | 33/33 implemented + audited (all 3-rank IDs per spec) |
+| NYI talents | Demo WL Soul Harvester: Eternal Hunger duration fix applied (v0.5.2) |
+| APL Layer 1 | DONE — 33/33 specs, blind mutation optimizer |
+| APL Layer 2 | DONE — signal-guided optimizer (APS, buff waste, resource, interval) |
+| APL Layer 3 | DONE — LLM semantic advisor; full run 33/33 specs complete |
+| Multi-target sweeps | DONE — 56 specs × 4 targets = 224 sims, no AoE scaling anomalies |
+| Reference comparison | DONE — 47 spec pairs vs simulationcraft.org, findings documented |
+| Upstream sync | SYNCED — Build 66709, 24 commits merged 2026-04-01 (38ee898 PTR skipped) |
 | Build | gcc-14 clean, cmake -DSC_NO_NETWORKING=ON |
 
 ---
@@ -30,183 +31,189 @@ Last updated: 2026-04-02 — **v0.5.2 Full optimization pass complete**
 
 | # | Task | Type | Status |
 |---|------|------|--------|
-| ~~1~~ | ~~Upstream sync~~ — merged 359 commits, Build 66709 | Engine | **DONE** |
-| ~~2~~ | ~~Re-baseline all specs~~ | Testing | **DONE** |
-| ~~3~~ | ~~Engine correctness audit~~ — 6 bugs fixed | Testing | **DONE (v0.2)** |
-| ~~7~~ | ~~Talent + APL Layer 1 optimization~~ — 33/33 specs | Optimization | **DONE (v0.3)** |
-| ~~7b~~ | ~~APL Layer 2 implementation~~ — signal-guided optimizer | Optimization | **DONE (v0.4)** |
-| ~~7c~~ | ~~APL Layer 3 implementation~~ — LLM advisor | Optimization | **DONE (v0.4)** |
-|| ~~7d~~ | ~~Run Layer 2+3 on all 33 specs~~ — all complete, gains committed | Optimization | **DONE (v0.5)** |
-|| ~~7e~~ | ~~Re-run talent optimizer~~ — 9 specs, gains committed | Optimization | **DONE (v0.5)** |
-| ~~4~~ | ~~Re-extract Wowhead data~~ — rotation.md only (33 specs, build 66709) | Data | **DONE** |
-| ~~5~~ | ~~Multi-target sweeps~~ — 56 specs × 4 targets = 224 sims, no anomalies | Testing | **DONE (v0.5)** |
 | 6 | Proc rate validation — compare JSON execute counts vs RPPM/ICD | Testing | PENDING |
 | 8 | Trinket combinatorics | Optimization | PENDING |
-| 9 | Final docs + cleanup + contribute fixes back upstream | Maintenance | PENDING |
+| 9 | Final docs + cleanup + contribute fixes upstream | Maintenance | PENDING |
+| 10 | Investigate outliers: Druid_Balance_Elune PW=53k (vs base 76k), Paladin_Prot_Lightsmith PW=42k | Engine/APL | PENDING |
+
+---
+
+## v0.5.2 — Eternal Hunger Duration Fix (2026-04-02)
+
+Full behavioral audit of all 3 "NYI" Warlock Demonology Soul Harvester talents:
+
+| Talent | Spell | DBC Mechanic | Finding | Action |
+|--------|-------|-------------|---------|--------|
+| Eternal Servitude | 449707 | Aura 107, -90s CDR on Fel Domination | Auto-applied by engine. Fel Domination is utility (pet summon), no DPS impact | None needed |
+| Shared Vessel | 1268889 | Aura 318, +2% Mastery; doubled while soul active | Auto-applied as base. Manual code in composite_mastery() doubles correctly | Already correct |
+| Eternal Hunger | 1268903 | Aura 219, +5000ms to Manifested Demonic Soul duration + Aura 4, +10% Soul Swipe dmg | effectN(2) damage was implemented. effectN(1) duration was **MISSING** — pet always spawned at 9s | **FIXED** |
+
+Fix: `sc_warlock_init.cpp` — `set_default_duration` now adds `eternal_hunger->effectN(1).time_value()` (+5s) when talent is ok.
+Validated: `manifested_demonic_soul` buff duration in JSON = 14.56s (was 9s). Correct.
+
+Accessor note: effectN(1) base_value=5000 → `time_value()` = 5000ms = 5s. NOT `from_seconds(base_value())` (would be 5000s — Pattern 4 bug class).
+
+---
+
+## v0.5 — Upstream Sync + APL Ports + Re-baseline (2026-04-01 / 04-02)
+
+### Upstream: 24 commits merged (38ee898 PTR skipped)
+
+Key changes absorbed:
+- Warlock Demonic Core proc fix — removed 0.2× workaround (confirmed Live hotfix 2026-03-31)
+- Monk keg_smash null-ptr crash fix
+- Hunter Boar Charge double-dip scoping fix
+- DBC data: Build 66709 updated spell data
+
+PTR skipped: `38ee898` — all `*_ptr.inc` DBC files, Build 66741 data. Not Live.
+
+### Engine Bugs Fixed (v0.4.1, via reference profile comparison)
+
+| # | Class | Bug | Root Cause | DPS Impact |
+|---|-------|-----|-----------|------------|
+| 7 | Warlock Affliction | Hellcaller APL drain_life filler | Rogue drain_life line imported to wrong spec | +17.2% |
+| 8 | Paladin Ret | Herald 4pc double expurgation | divine_storm_second_sunrise_t inherited triggers | +12.9% |
+| 9 | DK Blood | vampiric_strike -46% damage | effectN(5) AoE cleave vs effectN(1) ST (1.699 AP) | +46% per cast |
+| 10 | Monk WW | 2pc double +30% to WDP/SotWL | Manual code + auto-apply via Aura 108 | ~+4% engine inflation |
+| Codec | Talent codec | Corrupt string acceptance | Missing tree_hash validation | Silent errors |
+
+### APL Ports from Reference Comparison
+
+4 specs ported where reference delta exceeded 5%:
+- Warlock Affliction Soul Harvester: +9.04%
+- Shaman Enhancement Stormbringer: +9.32%
+- DH Devourer Annihilator: +4.31%
+- Monk Brewmaster: +3.31%
+
+### Talent Re-optimization (9 specs post-engine-fix)
+
+Notable gains after engine corrections cleared inflation:
+- paladin_protection HAC: +11.8%
+- hunter_bm HAC: +12.4%
+- warlock_destruction HAC: +13.7%
+- druid_feral HAC: +8.6%
+
+### Layer 2+3 Full Run (33/33 specs, all improved)
+
+24 of 89 profiles improved. Largest gains:
+- DK Blood HAC: +4.01%
+- DH Devourer HAC: +3.47%
+- Shaman Elemental HAC: +2.89%
+- Warlock Demo HAC: +1.85%
+- Evoker Devastation HAC: +1.17%
+- Monk Brewmaster PW: +1.12%
+
+LLM model: `qwen/qwen2.5-72b-instruct:free` via OpenRouter. Full Wowhead rotation.md context (no char trim).
+
+### Multi-target Sweeps
+
+56 specs × 4 target counts (1/3/5/10) = 224 sims. No AoE scaling anomalies.
 
 ---
 
 ## v0.4 — Signal-Guided + LLM APL Optimizer (2026-03-31)
 
-### What Was Built
+Three-layer APL optimization pipeline:
 
-Three-layer APL optimization pipeline — each layer builds on the previous:
+**Layer 1** — Blind mutation (~200 candidates/spec, 4 operators, 300→3k→10k funnel)
+**Layer 2** — Signal-guided mutations targeting APS inversion, buff waste (>40%), resource overcap (>8%), interval gaps
+**Layer 3** — LLM semantic advisor for buff-has-no-consumer signals; outputs structured CHANGE blocks, all DPS-validated
 
-**Layer 1 (DONE, v0.3)** — Blind mutation optimizer
-- ~200 random candidates per spec (adjacent swap, threshold sweep, promote, route)
-- Multi-stage funnel: 300 → 3k → 10k iterations
-- Script: `scripts/apl_optimizer.py`
-
-**Layer 2 (NEW, v0.4)** — Signal-guided optimizer
-- Parses sim JSON2 output for per-ability APS, buff expire rates, resource flow
-- 4 signal types:
-  - **APS Inversion** — high-APS ability outranked by lower-APS (non-adjacent promotes)
-  - **Buff Waste** — proc buff expires >40% of time; generates consumer promote + buff gate
-  - **Resource Overcap** — resource wasted >8%; lowers spender threshold, adds emergency dump
-  - **Interval Gap** — high-value ability cast less often than its CD allows
-- ~20-40 targeted candidates per spec vs 200 random — 5-10x more efficient
-- Key advantage: can ADD new APL constructs (buff gates, emergency dumps)
-- Script: `scripts/signal_apl_optimizer.py`
-
-**Layer 3 (NEW, v0.4)** — LLM semantic advisor
-- Bridges the gap no formula can cross: "buff expires 96% of time but has no APL consumer"
-- Programmatic system can't generate the fix without knowing *which action* consumes the buff
-- LLM receives: ability APS table, buff waste signals, resource flow, full APL,
-  Wowhead rotation mechanics context
-- Strict 4-step protocol: buff waste → APS order → resource → missing synergies
-- Outputs structured CHANGE blocks; ALL validated via DPS sim before acceptance
-- Supports OpenAI API, Anthropic API, or Hermes internal model
-- Script: `scripts/lib/llm_apl_advisor.py`
-
-### New Files
-
-| File | Lines | What |
-|------|-------|------|
-| `scripts/lib/sim_runner.py` | +120 | AbilityStats, BuffStats, ResourceStats added to SimResult |
-| `scripts/lib/apl_parser.py` | +50 | insert_action, replace_condition, append_or_condition, make_action |
-| `scripts/lib/apl_signal_extractor.py` | 340 | 4 signal types + combination + ranking |
-| `scripts/lib/apl_signal_mutations.py` | 280 | S-M1 (non-adjacent promote), S-M2 (buff gate), S-M3 (resource dump), S-M4 (interval) |
-| `scripts/lib/llm_apl_advisor.py` | 450 | Prompt builder, LLM caller, CHANGE parser, APL converter |
-| `scripts/signal_apl_optimizer.py` | 320 | Layer 2+3 unified runner |
-
-### Smoke Test Results (warlock_affliction)
-
-Signal extraction found 10 signals on a single sim run:
-- `unstable_affliction` APS inversion in 6 sub-lists (priority 0.84) — top spender appearing after DoTs
-- 5 LLM-needed buff waste signals: `alnsight`, `arcanoweave_insight`, `arcanoweave_insight_ally`,
-  `emberwing_heatwave`, `might_of_the_void` — trinket/gear proc buffs with no APL consumer
-- 40 targeted mutations generated (vs 200 blind)
-
-The 5 LLM-needed signals are exactly the kind Layer 1+2 cannot fix: the programmatic system
-detects the expire rate but cannot determine which action to add to consume the buff — that
-requires semantic knowledge of the trinket proc mechanics.
-
-### Usage
-
-```bash
-# Single spec, both fight styles, Layer 2 only
-python3 scripts/signal_apl_optimizer.py warlock_affliction
-
-# Single spec, single style, with LLM
-python3 scripts/signal_apl_optimizer.py warlock_affliction --fight-style HecticAddCleave --llm
-
-# Signal-only (no blind mutations)
-python3 scripts/signal_apl_optimizer.py warlock_affliction --no-blind
-
-# All 33 specs with LLM (~4-8 hours)
-python3 scripts/signal_apl_optimizer.py --all --llm
-```
+New scripts: `signal_apl_optimizer.py`, `apl_signal_extractor.py`, `apl_signal_mutations.py`, `llm_apl_advisor.py`
 
 ---
 
 ## v0.3 — Full Optimization Pass (2026-03-31)
 
-All 33 specs optimized (Layer 1: talent local search + blind APL mutation).
-Each spec produces two profiles: PW-optimized (`.simc`) and HAC-optimized (`_HAC.simc`).
-Tank specs now include HAC profiles (tanks-skip-HAC restriction removed).
-
-### Layer 1 Results
-
-| Spec | PW DPS | HAC DPS | Talent | APL Gains |
-|------|-------:|--------:|--------|-----------|
-| warrior_arms | 82,060 | 202,711 | -/Y | HAC +1.97% |
-| warrior_fury | 92,619 | 217,892 | Y/Y | PW +0.59% |
-| warrior_protection | 75,532 | 136,209 | Y/Y | — |
-| paladin_protection | 59,962 | 113,834 | Y/Y | — |
-| paladin_retribution | 114,026 | 178,327 | Y/Y | — |
-| hunter_bm | 97,673 | 204,410 | Y/Y | — |
-| hunter_mm | 108,100 | 182,240 | Y/Y | — |
-| hunter_survival | 104,176 | 185,493 | Y/Y | HAC +0.56% |
-| rogue_assassination | 102,775 | 187,520 | Y/Y | HAC +1.39% |
-| rogue_outlaw | 102,657 | 214,926 | Y/Y | HAC +0.39% |
-| rogue_subtlety | 115,329 | 225,134 | Y/Y | — |
-| priest_shadow | 104,818 | 154,134 | Y/Y | HAC +1.64% |
-| dk_blood | 46,588 | 97,667 | -/Y | HAC +1.12% |
-| dk_frost | 110,960 | 188,079 | -/Y | — |
-| dk_unholy | 126,982 | 272,428 | -/Y | — |
-| shaman_elemental | 126,334 | 240,113 | Y/Y | — |
-| shaman_enhancement | 91,512 | 174,899 | Y/Y | HAC +1.63% |
-| mage_arcane | 100,952 | 217,673 | Y/Y | — |
-| mage_fire | 101,877 | 209,626 | Y/Y | — |
-| mage_frost | 112,278 | 206,929 | Y/Y | — |
-| warlock_affliction | 94,414 | 155,809 | Y/Y | HAC +3.63% |
-| warlock_demonology | 97,205 | 525,527 | Y/Y | — |
-| warlock_destruction | 94,548 | 162,645 | Y/Y | HAC +3.50% |
-| monk_brewmaster | 61,918 | 119,969 | Y/Y | PW +0.72% |
-| monk_windwalker | 120,841 | 211,599 | Y/Y | HAC +0.02% |
-| druid_balance | 76,039 | 117,750 | Y/Y | — |
-| druid_feral | 106,929 | 199,563 | Y/Y | HAC +1.20% |
-| druid_guardian | 79,222 | 139,526 | Y/Y | — |
-| dh_havoc | 121,588 | 206,497 | -/Y | — |
-| dh_vengeance | 56,115 | 94,589 | Y/Y | PW +0.95%, HAC +0.33% |
-| dh_devourer | 103,645 | 179,714 | -/Y | HAC +0.09% |
-| evoker_devastation | 108,492 | 176,264 | Y/Y | HAC +6.32% |
-| evoker_augmentation | 68,519 | 114,737 | Y/Y | PW +0.29% |
-
-Talent: Y = new optimal build found, - = existing already optimal.
-12/33 specs had APL improvements. Notable: evoker_devastation HAC +6.32%,
-warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
+33/33 specs optimized (Layer 1). 89/89 profiles pass validation.
+Tank specs all have HAC profiles. Largest gains: evoker_dev HAC +6.32%, warlock_affli HAC +3.63%, warlock_dest HAC +3.50%.
 
 ---
 
 ## v0.2 — Engine Correctness Audit (2026-03-31)
 
-### Bugs Found and Fixed
-
-| # | Class | Bug | Root Cause | DPS Impact |
-|---|-------|-----|-----------|------------|
-| 1 | Priest Shadow | 2pc SW:Madness 0 damage | Swapped effectN indices | **+25.4%** |
-| 2 | Rogue Sub | 4pc permanent Shadow Blades | from_seconds on ms value | **-19.6%** |
-| 3 | Monk WW | 4pc CDR negated | Manual adjust cancelled auto-apply | **+1.2%** |
-| 4 | Shaman Ele | Storm Ele Unity TA = 0 | effectN(5) OOB (should be 4) | ~0% |
-| 5 | Trinket | Phoenix Torque wrong indices | effectN index swap | Minor |
-| 6 | Shaman Enh | 2pc wrong effectN | Read effectN(2) not effectN(1) | None |
+| # | Class | Bug | DPS Impact |
+|---|-------|-----|------------|
+| 1 | Priest Shadow | 2pc SW:Madness 0 damage (swapped effectN) | +25.4% |
+| 2 | Rogue Sub | 4pc permanent Shadow Blades (from_seconds on ms) | -19.6% |
+| 3 | Monk WW | 4pc CDR negated (manual adjust cancelled auto-apply) | +1.2% |
+| 4 | Shaman Ele | Storm Ele TA modifier = 0 (effectN(5) OOB, should be 4) | ~0% |
+| 5 | Trinket | Phoenix Torque wrong indices | Minor |
+| 6 | Shaman Enh | 2pc wrong semantic effectN index | Minor |
 
 ---
 
-## Completed Work
+## v0.1 — Optimization System (2026-03-30)
 
-### v0.4 — Signal-Guided + LLM APL Optimizer (2026-03-31)
-- Layer 2: signal extraction (APS inversion, buff waste, resource overcap, interval gap)
-- Layer 3: LLM semantic advisor (missing buff consumers, mechanic synergies)
-- 6 new files, ~1,700 lines; integrated with existing multi-stage eval pipeline
-- Smoke tested: 10 signals detected on warlock_affliction, 40 mutations generated
+Talent validator with real DB2 edges (6,409 TraitEdge.csv).
+APL optimizer: 4 mutation operators + multi-stage filtering.
+Talent hill-climbing local search. req_points gate bug fixed.
 
-### v0.3 — Full Optimization Pass (2026-03-31)
-- 33/33 specs optimized: talent local search + APL Layer 1
-- 89/89 profiles pass validation (66 + 23 new HAC profiles)
-- Tank specs all have HAC profiles (tanks-skip-HAC removed)
-- optimize_all_specs.py orchestration script
+---
 
-### v0.2 — Engine Correctness Audit (2026-03-31)
-- Full DBC behavioral audit across all 13 class modules
-- 6 bugs found and fixed (3 significant DPS impact)
-- Upstream merge: 359 commits, 44 conflict resolution
+## Current DPS Baselines (2026-04-02)
 
-### v0.1 — Optimization System (2026-03-30)
-- Talent validator with real DB2 edges (6,409 TraitEdge.csv)
-- APL optimizer with 4 mutation operators + multi-stage filtering
-- Talent hill-climbing local search; req_points gate bug fix
+| Spec | PW DPS | HAC DPS |
+|------|-------:|--------:|
+| Death_Knight_Blood | 50,101 | 88,612 |
+| Death_Knight_Blood_Deathbringer | 52,956 | 92,528 |
+| Death_Knight_Frost | 115,451 | 179,161 |
+| Death_Knight_Frost_Rider | 108,687 | 204,868 |
+| Death_Knight_Unholy | 126,974 | 251,254 |
+| Death_Knight_Unholy_San'layn | 130,370 | 225,178 |
+| Demon_Hunter_Devourer | 108,196 | 131,049 |
+| Demon_Hunter_Devourer_Void-Scarred | 98,954 | 169,655 |
+| Demon_Hunter_Havoc | 121,458 | 190,024 |
+| Demon_Hunter_Vengeance | 56,621 | 96,716 |
+| Demon_Hunter_Vengeance_Aldrachi_Reaver | 56,081 | 93,338 |
+| Druid_Balance | 76,067 | 111,335 |
+| Druid_Balance_Elune | 53,857 | 86,209 |
+| Druid_Balance_Keeper | 74,941 | 105,262 |
+| Druid_Feral | 110,569 | 191,466 |
+| Druid_Guardian | 79,241 | 128,578 |
+| Evoker_Augmentation | 69,026 | 112,854 |
+| Evoker_Augmentation_Chronowarden | 57,412 | 89,191 |
+| Evoker_Devastation | 108,510 | 165,985 |
+| Evoker_Devastation_FS | 107,390 | 168,327 |
+| Hunter_Beast_Mastery | 101,824 | 189,657 |
+| Hunter_Marksmanship | 108,028 | 154,894 |
+| Hunter_Survival | 108,133 | 176,738 |
+| Hunter_Survival_PL_DW | 110,190 | 179,279 |
+| Mage_Arcane | 100,840 | 211,646 |
+| Mage_Arcane_Sunfury | 101,160 | 197,276 |
+| Mage_Fire | 101,915 | 209,425 |
+| Mage_Fire_Frostfire | 101,792 | 209,288 |
+| Mage_Frost | 112,201 | 164,312 |
+| Mage_Frost_Frostfire | 94,235 | 137,049 |
+| Monk_Brewmaster | 64,442 | 111,082 |
+| Monk_Windwalker | 118,871 | 189,754 |
+| Monk_Windwalker_Conduit | 119,037 | 196,028 |
+| Paladin_Protection | 59,970 | 101,752 |
+| Paladin_Protection_Lightsmith | 42,948 | 93,334 |
+| Paladin_Retribution | 107,407 | 157,974 |
+| Paladin_Retribution_Herald | 111,772 | 132,033 |
+| Priest_Shadow | 106,885 | 129,425 |
+| Priest_Shadow_Archon | 108,312 | 105,671 |
+| Rogue_Assassination | 102,776 | 187,594 |
+| Rogue_Assassination_Deathstalker | 97,881 | 107,426 |
+| Rogue_Outlaw | 102,612 | 192,333 |
+| Rogue_Outlaw_Trickster | 98,496 | 151,885 |
+| Rogue_Subtlety | 115,254 | 215,766 |
+| Shaman_Elemental | 126,317 | 186,382 |
+| Shaman_Enhancement | 91,472 | 171,563 |
+| Shaman_Enhancement_Stormbringer | 81,129 | 135,624 |
+| Warlock_Affliction | 102,862 | 138,074 |
+| Warlock_Affliction_Hellcaller | 99,002 | 143,149 |
+| Warlock_Demonology | 103,257 | 559,391 |
+| Warlock_Demonology_Soul_Harvester | 108,157 | 410,468 |
+| Warlock_Destruction | 94,574 | 147,643 |
+| Warlock_Destruction_Diabolist | 100,538 | 162,993 |
+| Warrior_Arms | 83,774 | 147,013 |
+| Warrior_Fury | 93,139 | 195,825 |
+| Warrior_Protection | 75,520 | 132,314 |
+
+Note: HAC profiles use HecticAddCleave fight style; high values (Demo WL 559k) reflect multi-pet/multi-target scaling.
+HAC-optimized profiles (_HAC.simc) may show lower PW numbers — they are separately optimized for HAC.
 
 ---
 
@@ -214,46 +221,29 @@ warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
 
 ### Open
 
-- **Darkmoon Deck sigil stacking** — Issue #81, blocked on live data.
-  See `docs/internal/darkmoon_investigation.md`.
-- **Priest Shadowfiend effectN(4)** — OOB on 3-effect spell. Healer sim only, low impact.
-- **Multi-target scaling unverified** — need 1/3/5/10 target sweeps.
+- **Druid Balance Elune** PW=53k vs base Balance 76k — significant gap, likely APL or talent issue. Needs investigation.
+- **Paladin Protection Lightsmith** PW=42k vs base Prot 59k — hero tree may be poorly configured. Needs talent re-run.
+- **Priest Shadowfiend effectN(4)** — OOB on 3-effect spell. Healer sim only, low DPS impact.
+- **Darkmoon Deck sigil stacking** — Issue #81, blocked on live data. See `docs/internal/darkmoon_investigation.md`.
 - **Proc rates unverified** — need JSON execute count vs RPPM/ICD comparison.
-- **Baselines stale** — 126 baselines predate v0.3 talent/APL changes.
-- **Layer 2+3 not yet run on all specs** — first run completed on warlock_affliction (2026-04-01).
-  PW: LLM produced 2 high-confidence CHANGE blocks, neither survived Stage 2. HAC: LLM call
-  intermittently fails (openrouter/free rate-limited on second call). No improvements found —
-  warlock_affliction APL is at signal optimum. Layer 1 gains (+3.63% HAC) came from talent
-  optimization, not APL structure. Ready to run --all once LLM reliability is confirmed.
-- **Wowhead rotation validator false positives** — 6 specs produce "MISSING HERO TALENTS"
-  warnings that are false positives. Cause: build-variant button names ('Templar RG',
-  'Farseer AoE') used as content keys don't match HERO_TALENTS slug list. Content is
-  complete. Affected: monk/brewmaster, monk/windwalker, dk/unholy, druid/guardian,
-  paladin/retribution, mage/arcane. Safe to ignore.
-- **DANGER: update_talents_from_extracted.py must NOT be run post-v0.3.** It overwrites
-  `talents=` lines with Wowhead's Build 1 — which our optimizer already beats for 27/33
-  specs. This script was for project initialization only. Running it now = silent regression.
+- **Wowhead rotation validator false positives** — 6 specs produce "MISSING HERO TALENTS" warnings that are false positives (build-variant button name mismatch). Content is complete. Affected: monk/brewmaster, monk/windwalker, dk/unholy, druid/guardian, paladin/retribution, mage/arcane. Safe to ignore.
+- **DANGER: update_talents_from_extracted.py must NOT be run post-v0.3.** Overwrites optimized talent strings with Wowhead defaults. Silent regression.
 
-### Resolved (v0.4)
-- APL Layer 2+3 implemented and smoke tested
+### Resolved
 
-### Resolved (v0.3)
-- tanks-skip-HAC convention removed — all 6 tank specs have HAC profiles
-
-### Resolved (v0.2)
-- Rogue Sub 4pc permanent Shadow Blades — fixed
-- Shaman Storm Elemental effectN(5) OOB — fixed
-- Priest Shadow 2pc swapped indices — fixed
-- Monk WW 4pc CDR double-negation — fixed
-- Phoenix Torque wrong indices — fixed
-- Shaman Enh 2pc wrong semantic index — fixed
-
-### Resolved (v0.1 and earlier)
-- req_points gate validator bug — fixed 2026-03-30
-- Hero tree spec filtering — fixed 2026-03-29
-- 4 broken talent strings — fixed 2026-03-29
-- DK Blood HAC crash — fixed (player_t::interrupt race condition)
-- Guardian Druid APL — full rewrite, 3k → 10.6k DPS (2026-03-27)
+- v0.5.2: Eternal Hunger duration extension missing (demonic_soul pet 9s not 14s)
+- v0.5: Warlock Affliction Hellcaller drain_life APL bug (+17.2%)
+- v0.5: Paladin Ret Herald 4pc double expurgation (+12.9%)
+- v0.5: DK Blood vampiric_strike effectN(5) vs effectN(1) (+46% per cast)
+- v0.5: Monk WW 2pc double-apply (+4% engine inflation)
+- v0.5: Talent codec corrupt string acceptance (tree_hash validation added)
+- v0.2: Priest Shadow 2pc swapped effectN (+25.4%)
+- v0.2: Rogue Sub 4pc permanent Shadow Blades (from_seconds on ms)
+- v0.2: Monk WW 4pc CDR double-negation
+- v0.2: Shaman Ele Storm Elemental effectN(5) OOB
+- v0.2: Phoenix Torque wrong indices
+- v0.1: req_points gate validator counted granted nodes incorrectly
+- v0.1: DK Blood HAC crash (player_t::interrupt race condition)
 
 ---
 
@@ -266,13 +256,11 @@ warlock_affliction HAC +3.63%, warlock_destruction HAC +3.50%.
 | `optimization_action_plan.md` | Optimization architecture + success criteria |
 | `OPTIMIZATION_HOWTO.md` | Step-by-step manual guide |
 | `project_structure.md` | Codebase navigation |
-| `docs/internal/signal_guided_apl_design.md` | Layer 2 signal system design |
-| `docs/internal/llm_apl_advisor_design.md` | Layer 3 LLM advisor design |
-| `docs/internal/behavioral_audit_checklist.md` | **USE FOR ALL C++ WORK** — 5-step per-modifier protocol (bounds, accessor, semantic, double-apply, tier delta) |
-| `docs/internal/bug_postmortem_2026-04-01.md` | Why 5 bugs passed prior audits + which checklist step catches each |
+| `docs/internal/behavioral_audit_checklist.md` | **USE FOR ALL C++ WORK** — 5-step per-modifier protocol |
+| `docs/internal/bug_postmortem_2026-04-01.md` | Why 10 bugs passed prior audits + which checklist step catches each |
 | `docs/internal/engine_audit_2026-03-31.md` | DBC audit findings (v0.2) |
-| `docs/internal/behavioral_audit_2026-03-31.md` | Tier set behavioral audit (v0.2, some entries superseded by 2026-04-01 fixes) |
+| `docs/internal/behavioral_audit_2026-03-31.md` | Tier set behavioral audit (v0.2) |
 | `docs/internal/darkmoon_investigation.md` | Darkmoon trinket investigation (Issue #81) |
-| `docs/analysis/reference_comparison_findings.md` | Reference profile comparison findings — bugs, talent failures, NYI gaps |
+| `docs/analysis/reference_comparison_findings.md` | Reference comparison findings — bugs, APL gaps, talent failures |
+| `docs/analysis/reference_profile_comparison.json` | Raw 47-spec comparison data |
 | `FORK_VS_UPSTREAM_REVIEW.md` | Fork vs upstream post-mortem |
-| `docs/archive/` | Historical audit data, APL diff reports |

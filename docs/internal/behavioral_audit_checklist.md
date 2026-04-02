@@ -114,6 +114,8 @@ creates a double-apply. The ONLY reliable detection is the spell_query check.
 List of confirmed auto-applies found in Midnight:
 - Monk WW 2pc (1264842): auto-applies +30% to WDP and SotWL
 - Monk WW 4pc (1264843): auto-applies -5s CDR to WDP and SotWL
+- Eternal Servitude (449707): auto-applies -90s CDR to Fel Domination (333889) via Aura 107 Misc=11. Verified 2026-04-02.
+- Shared Vessel (1268889): base +2% mastery auto-applied via Aura 318. Manual code in composite_mastery() only handles the doubling-when-soul-active. Verified 2026-04-02.
 - DK Blood 2pc (verified correct, data-driven)
 - DH Havoc 2pc (verified correct, data-driven)
 - Shaman Ele 2pc (verified correct, data-driven)
