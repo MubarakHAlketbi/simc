@@ -458,6 +458,7 @@ public:
     cooldown_t* secret_technique;
     cooldown_t* shadow_blades;
     cooldown_t* shadow_dance;
+    cooldown_t* shadow_techniques_icd;
     cooldown_t* shadowstep;
     cooldown_t* shiv;
     cooldown_t* sprint;
@@ -1140,6 +1141,7 @@ public:
     cooldowns.secret_technique          = get_cooldown( "secret_technique" );
     cooldowns.shadow_blades             = get_cooldown( "shadow_blades" );
     cooldowns.shadow_dance              = get_cooldown( "shadow_dance" );
+    cooldowns.shadow_techniques_icd     = get_cooldown( "shadow_techniques_icd" );
     cooldowns.shadowstep                = get_cooldown( "shadowstep" );
     cooldowns.shiv                      = get_cooldown( "shiv" );
     cooldowns.sprint                    = get_cooldown( "sprint" );   
@@ -4465,17 +4467,6 @@ struct garrote_t : public rogue_attack_t
     }
 
     trigger_deathstalkers_mark_debuff( execute_state );
-  }
-
-  virtual void update_state( action_state_t* s, unsigned flags, result_amount_type rt ) override
-  {
-    // 2026-03-24 -- Improved Garrote causes the entire damage calculation to snapshot
-    if ( p()->talent.assassination.improved_garrote->ok() && s->persistent_multiplier > 1.0 )
-    {
-      flags &= ~( STATE_AP | STATE_VERSATILITY | STATE_MUL_TA );
-    }
-
-    rogue_attack_t::update_state( s, flags, rt );
   }
 
   void update_ready( timespan_t cd_duration = timespan_t::min() ) override
@@ -7848,11 +7839,22 @@ void actions::rogue_action_t<Base>::trigger_shadow_techniques( const action_stat
   const unsigned shadowcraft_adjustment = ( p()->talent.subtlety.shadowcraft->ok() && p()->buffs.shadow_dance->check() ) ? 1 : 0;
   const unsigned shadow_techniques_upper = 4 - shadowcraft_adjustment;
   const unsigned shadow_techniques_lower = 3 - shadowcraft_adjustment;
-  if ( ++p()->shadow_techniques_counter >= shadow_techniques_upper || ( p()->shadow_techniques_counter == shadow_techniques_lower && p()->rng().roll( 0.5 ) ) )
+  if ( ++p()->shadow_techniques_counter >= shadow_techniques_upper ||
+       ( p()->shadow_techniques_counter == shadow_techniques_lower && p()->rng().roll( 0.5 ) ) )
   {
-    p()->sim->print_debug( "{} trigger_shadow_techniques proc'd at {}, resetting counter to 0", *p(), p()->shadow_techniques_counter );
-    p()->shadow_techniques_counter = 0;
+    // Trigger ICD only appears to be enforced on AA triggers, not Apex-triggered stacks
+    if ( p()->cooldowns.shadow_techniques_icd->down() )
+    {
+      p()->sim->print_debug( "{} trigger_shadow_techniques from {} skipped due to internal cooldown ({} remains)",
+                             *p(), *this, p()->cooldowns.shadow_techniques_icd->remains() );
+      return;
+    }
+
     trigger_shadow_techniques_buff( state );
+    p()->sim->print_debug( "{} trigger_shadow_techniques proc'd at {}, resetting counter to 0", *p(), p()->shadow_techniques_counter );
+
+    p()->shadow_techniques_counter = 0;
+    p()->cooldowns.shadow_techniques_icd->start();
   }
 }
 
@@ -7867,13 +7869,14 @@ void actions::rogue_action_t<Base>::trigger_shadow_techniques_buff( const action
                                             p()->buffs.shadow_dance->check() &&
                                             !ignore_shadowcraft ) ? 1 : 0;
 
+  // Trigger the buff stacks for Combo Point storage 
+  p()->buffs.shadow_techniques->trigger( 1 + shadowcraft_adjustment );
   p()->resource_gain( RESOURCE_ENERGY, energy_gain, p()->gains.shadow_techniques, state->action );
   // 2024-11-28 -- Shadowcraft's implementation appears to trigger the energize twice
   if ( shadowcraft_adjustment > 0 )
   {
     p()->resource_gain( RESOURCE_ENERGY, energy_gain, p()->gains.shadow_techniques, state->action );
   }
-  p()->buffs.shadow_techniques->trigger( 1 + shadowcraft_adjustment ); // Combo Point storage
 }
 
 template <typename Base>
@@ -10196,6 +10199,8 @@ void rogue_t::init_spells()
 
     active.shadow_clone_attack.eviscerate->affected_by.darkest_night = true;
     active.shadow_clone_attack.eviscerate->affected_by.darkest_night_crit = true;
+
+    cooldowns.shadow_techniques_icd->duration = spec.shadow_techniques_energize->internal_cooldown();
   }
 
   if ( talent.subtlety.weaponmaster->ok() )
@@ -10480,6 +10485,7 @@ void rogue_t::create_buffs()
   if ( talent.outlaw.deadly_pursuit->ok() )
   {
     buffs.deadly_pursuit_tracker
+      ->set_proc_callbacks( false )
       ->set_max_stack( as<int>( talent.outlaw.deadly_pursuit->effectN( 1 ).base_value() ) )
       ->set_expire_at_max_stack( true )
       ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT )
@@ -10721,13 +10727,16 @@ void rogue_t::create_buffs()
 
   buffs.implacable = make_buff( this, "implacable", spec.implacable_buff );
   buffs.implacable_tracker = make_buff( this, "implacable_tracker", spec.implacable_tracker_buff )
+    ->set_proc_callbacks( false )
     ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT )
     ->set_duration( sim->max_time / 2 ); // Set to 14s in spell data to match Envenom, makes timing easier this way
 
   // Part of the Envenom buff in effects 8-10 but entirely scripted in-game, handle as a distinct buff in sims for tracking
   // Use the Envenom whitelists for the damage buff and sync up on trigger and expire
   buffs.inspiring_strike = make_buff<damage_buff_t>( this, "inspiring_strike", talent.assassination.inspiring_strike, false );
-  buffs.inspiring_strike->set_refresh_behavior( buff_refresh_behavior::DURATION );
+  buffs.inspiring_strike
+    ->set_proc_callbacks( false )
+    ->set_refresh_behavior( buff_refresh_behavior::DURATION );
   if ( talent.assassination.inspiring_strike->ok() )
   {
     const double talent_value = talent.assassination.inspiring_strike->effectN( 1 ).percent();
@@ -10809,6 +10818,7 @@ void rogue_t::create_buffs()
     ->set_duration( sim->max_time / 2 );
 
   buffs.secret_technique = make_buff( this, "secret_technique", spec.secret_technique )
+    ->set_proc_callbacks( false )
     ->set_cooldown( timespan_t::zero() )
     ->set_quiet( true );
 
@@ -11062,8 +11072,8 @@ void rogue_t::init_special_effects()
 
     callbacks.register_callback_trigger_function(
       448000, dbc_proc_callback_t::trigger_fn_type::CONDITION,
-      [ poison_ids ]( const dbc_proc_callback_t*, action_t* a, const action_state_t* ) {
-        return !a->special || range::contains( poison_ids, a->data().id() );
+      [ poison_ids ]( const dbc_proc_callback_t*, const proc_data_t& data, player_t*, action_state_t* s, proc_trigger_type_e ) {
+        return !s->action->special || range::contains( poison_ids, data->id() );
     } );
   }
 
@@ -11105,9 +11115,9 @@ void rogue_t::init_special_effects()
       {
       }
 
-      void execute( action_t* a, action_state_t* s ) override
+      void execute( const spell_data_t* spell, player_t* t, action_state_t* s ) override
       {
-        dbc_proc_callback_t::execute( a, s );
+        dbc_proc_callback_t::execute( spell, t, s );
         rogue->buffs.unseen_blade_cd->expire();
       }
     };
@@ -11135,15 +11145,15 @@ void rogue_t::init_special_effects()
       {
       }
 
-      void execute( action_t* a, action_state_t* s ) override
+      void execute( const spell_data_t* spell, player_t* t, action_state_t* s ) override
       {
-        dbc_proc_callback_t::execute( a, s );
+        dbc_proc_callback_t::execute( spell, t, s );
 
         if ( rogue->sim->active_enemies == 1 )
           return;
 
         buff_t* debuff = rogue->deathstalkers_mark_debuff;
-        if ( !debuff || !debuff->check() || debuff->player == s->target || debuff->player->is_sleeping() )
+        if ( !debuff || !debuff->check() || debuff->player == t || debuff->player->is_sleeping() )
           return;
 
         if ( !rogue->active.deathstalker.singular_focus )

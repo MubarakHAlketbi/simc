@@ -351,6 +351,7 @@ public:
     cooldown_t* demolish;
     cooldown_t* burst_of_power_icd;
     cooldown_t* slayers_dominance_icd;
+    cooldown_t* hack_and_slash_icd;
   } cooldown;
 
   // Gains
@@ -2501,7 +2502,7 @@ struct bloodthirst_t : public warrior_attack_t
       gushing_wound = new gushing_wound_dot_t( p );
     }
 
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_bloodthirst", p );
       add_child( reap_the_storm );
@@ -2542,7 +2543,7 @@ struct bloodthirst_t : public warrior_attack_t
       gushing_wound = new gushing_wound_dot_t( p );
     }
 
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       std::string s = "reap_the_storm_";
       s += name;
@@ -2675,7 +2676,7 @@ struct bloodthirst_t : public warrior_attack_t
     if ( p()->talents.fury.bloodborne->ok() )
       p()->buff.bloodborne->trigger();
 
-    if ( p()->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() >= wowv_t( 12, 0, 1 ) )
+    if ( p()->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.reap_the_storm->effectN( 4 ).percent() ) )
       {
@@ -2756,7 +2757,7 @@ struct bloodbath_t : public warrior_attack_t
 
     bloodbath_dot = new bloodbath_dot_t( p );
 
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_bloodbath", p );
       add_child( reap_the_storm );
@@ -2800,7 +2801,7 @@ struct bloodbath_t : public warrior_attack_t
 
     bloodbath_dot = new bloodbath_dot_t( p );
 
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       std::string s = "reap_the_storm_";
       s += name;
@@ -2932,7 +2933,7 @@ struct bloodbath_t : public warrior_attack_t
     if ( p()->talents.fury.bloodborne->ok() )
       p()->buff.bloodborne->trigger();
 
-    if ( p()->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() >= wowv_t( 12, 0, 1 ) )
+    if ( p()->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.reap_the_storm->effectN( 4 ).percent() ) )
       {
@@ -2976,7 +2977,7 @@ struct mortal_strike_t : public warrior_attack_t
     weapon           = &( p->main_hand_weapon );
     cooldown->hasted = true;  // Doesn't show up in spelldata for some reason.
     rend_dot = new rend_dot_t( p );
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_mortal_strike", p );
       add_child( reap_the_storm );
@@ -2994,7 +2995,7 @@ struct mortal_strike_t : public warrior_attack_t
     background = true;
     rend_dot = new rend_dot_t( p );
     cooldown->duration = 0_s;
-    if ( p->talents.slayer.reap_the_storm->ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       std::string s = "reap_the_storm_";
       s += name;
@@ -3052,7 +3053,7 @@ struct mortal_strike_t : public warrior_attack_t
 
     p()->buff.celeritous_conclusion_crit->expire();
 
-    if ( p()->talents.slayer.reap_the_storm->ok() )
+    if ( p()->talents.slayer.reap_the_storm->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.reap_the_storm->effectN( 3 ).percent() ) )
       {
@@ -3458,6 +3459,9 @@ struct slam_base_t : public warrior_attack_t
       p()->buff.master_of_warfare_proc->trigger();
       p()->master_of_warfare_attempts_since_last_proc = 0;
     }
+
+    if ( state->result == RESULT_CRIT && p()->talents.arms.mortal_wounds->ok() && sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+      p()->active.deep_wounds->execute_on_target( state->target );
   }
 
   void execute() override
@@ -3599,7 +3603,7 @@ struct cleave_t : public warrior_attack_t
   void impact( action_state_t* s ) override
   {
     warrior_attack_t::impact( s );
-    if ( execute_state->result == RESULT_CRIT && p()->talents.arms.mortal_wounds->ok() )
+    if ( execute_state->result == RESULT_CRIT && p()->talents.arms.mortal_wounds->ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
       p()->active.deep_wounds->execute_on_target( s->target );
 
     auto target_data = td( s->target );
@@ -4074,9 +4078,11 @@ struct execute_damage_t : public warrior_attack_t
   double max_rage;
   double cost_rage;
   finishing_wound_t* finishing_wound;
+  action_t* reap_the_storm;
   execute_damage_t( warrior_t* p, util::string_view options_str )
     : warrior_attack_t( "execute_damage", p, p->spell.execute->effectN( 1 ).trigger() ), max_rage( 40 ),
-    finishing_wound( nullptr )
+    finishing_wound( nullptr ),
+    reap_the_storm( nullptr )
   {
     parse_options( options_str );
     weapon = &( p->main_hand_weapon );
@@ -4087,6 +4093,12 @@ struct execute_damage_t : public warrior_attack_t
     if ( p->talents.protection.heavy_handed->ok() )
     {
       base_aoe_multiplier = p->talents.protection.heavy_handed->effectN( 2 ).percent();
+    }
+
+    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+    {
+      reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_execute", p );
+      add_child( reap_the_storm );
     }
   }
 
@@ -4116,6 +4128,25 @@ struct execute_damage_t : public warrior_attack_t
     {
       p()->buff.master_of_warfare_proc->trigger();
       p()->master_of_warfare_attempts_since_last_proc = 0;
+    }
+  }
+
+  void execute() override
+  {
+    warrior_attack_t::execute();
+
+    if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() &&
+          p()->buff.sudden_death->up() )
+    {
+      if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+      {
+        if ( execute_state->n_targets > 1 && p()->cooldown.reap_the_storm_icd->is_ready() &&
+        rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+        {
+          reap_the_storm->execute();
+          p()->cooldown.reap_the_storm_icd->start();
+        }
+      }
     }
   }
 };
@@ -4166,7 +4197,7 @@ struct execute_arms_t : public warrior_attack_t
       shield_slam_reset = p->spell.devastator->effectN( 2 ).percent();
     }
 
-    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_execute", p );
       add_child( reap_the_storm );
@@ -4210,12 +4241,15 @@ struct execute_arms_t : public warrior_attack_t
       if ( p()->talents.slayer.imminent_demise->ok() && p()->talents.shared.sudden_death->ok() )
         p()->buff.imminent_demise->trigger();
 
-      if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() > wowv_t( 12, 0, 1 ) )
+      if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() )
       {
-        if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+        if ( sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
         {
-          reap_the_storm->execute();
-          p()->cooldown.reap_the_storm_icd->start();
+          if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+          {
+            reap_the_storm->execute();
+            p()->cooldown.reap_the_storm_icd->start();
+          }
         }
       }
 
@@ -4288,15 +4322,23 @@ struct fatality_t : public warrior_attack_t
 struct execute_main_hand_t : public warrior_attack_t
 {
   int aoe_targets;
+  action_t* reap_the_storm;
   execute_main_hand_t( warrior_t* p, const char* name, const spell_data_t* s )
     : warrior_attack_t( name, p, s ),
-      aoe_targets( as<int>( p->spell.whirlwind_buff->effectN( 1 ).base_value() ) )
+      aoe_targets( as<int>( p->spell.whirlwind_buff->effectN( 1 ).base_value() ) ),
+      reap_the_storm( nullptr )
   {
     background = true;
     dual   = true;
     weapon = &( p->main_hand_weapon );
     radius = 5;
     base_aoe_multiplier = p->spell.whirlwind_buff->effectN( 2 ).percent();
+
+    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+    {
+      reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_execute", p );
+      add_child( reap_the_storm );
+    }
   }
 
   int n_targets() const override
@@ -4314,6 +4356,25 @@ struct execute_main_hand_t : public warrior_attack_t
 
     if( p()->talents.shared.deep_wounds->ok() )
       p()->active.deep_wounds->execute_on_target( state->target );
+  }
+
+  void execute() override
+  {
+    warrior_attack_t::execute();
+
+    if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() &&
+          p()->buff.sudden_death->up() )
+    {
+      if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+      {
+        if ( execute_state->n_targets > 1 && p()->cooldown.reap_the_storm_icd->is_ready() &&
+        rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+        {
+          reap_the_storm->execute();
+          p()->cooldown.reap_the_storm_icd->start();
+        }
+      }
+    }
   }
 };
 
@@ -4385,21 +4446,12 @@ struct execute_fury_t : public warrior_attack_t
       add_child( lightning_strike );
     }
 
-    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() )
+    if ( p->talents.slayer.reap_the_storm->ok() && p->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
     {
       reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_execute", p );
       add_child( reap_the_storm );
     }
   }
-
-//  double cost() const override
-//  {
-//    double c = warrior_attack_t::cost();
-
-//    c = std::min( max_rage, std::max( p()->resources.current[ RESOURCE_RAGE ], c ) );
-
-//    return c;
-//  }
 
   void execute() override
   {
@@ -4420,12 +4472,15 @@ struct execute_fury_t : public warrior_attack_t
       if ( p()->talents.slayer.imminent_demise->ok() && p()->talents.shared.sudden_death->ok() )
         p()->buff.imminent_demise->trigger();
 
-      if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() && sim->dbc->wowv() > wowv_t( 12, 0, 1 ) )
+      if ( p()->talents.slayer.reap_the_storm->ok() && p()->talents.slayer.imminent_demise.ok() )
       {
-        if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+        if ( sim->dbc->wowv() < wowv_t( 12, 0, 5 ) )
         {
-          reap_the_storm->execute();
-          p()->cooldown.reap_the_storm_icd->start();
+          if ( p()->cooldown.reap_the_storm_icd->is_ready() && rng().roll( p()->talents.slayer.imminent_demise->effectN( 2 ).percent() ) )
+          {
+            reap_the_storm->execute();
+            p()->cooldown.reap_the_storm_icd->start();
+          }
         }
       }
 
@@ -5381,7 +5436,8 @@ struct rampage_attack_base_t : public warrior_attack_t
        // continue. The animations and timing of everything else still occur, so we can't just cancel rampage.
       warrior_attack_t::impact( s );
 
-      if ( p()->talents.fury.hack_and_slash->ok() && rng().roll( hack_and_slash_chance ) )
+      if ( sim->dbc->wowv() < wowv_t( 12, 0, 5 ) &&
+      p()->talents.fury.hack_and_slash->ok() && rng().roll( hack_and_slash_chance ) )
       {
         p()->cooldown.raging_blow->reset( true );
         p()->cooldown.crushing_blow->reset( true );
@@ -5392,12 +5448,23 @@ struct rampage_attack_base_t : public warrior_attack_t
 
 struct rampage_attack_t : public rampage_attack_base_t
 {
+  action_t* reap_the_storm;
   rampage_attack_t( util::string_view name, warrior_t* p, const spell_data_t* rampage )
-    : rampage_attack_base_t( name, p, rampage )
+    : rampage_attack_base_t( name, p, rampage ),
+    reap_the_storm( nullptr )
   {
     base_aoe_multiplier = p->spell.whirlwind_buff->effectN( 2 ).percent();
     if ( p->talents.fury.rampage->effectN( 2 ).trigger() == rampage )
       first_attack = true;
+
+    // Set up reap to trigger off the 4th hit
+    if( p->talents.fury.rampage->effectN( 5 ).trigger()->id() == data().id() &&
+        sim->dbc->wowv() >= wowv_t( 12, 0, 5 )  && p->talents.slayer.reap_the_storm.ok() &&
+        p->talents.fury.improved_whirlwind.ok() )
+    {
+      reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_rampage", p );
+      add_child( reap_the_storm );
+    }
   }
 
   void execute() override
@@ -5412,6 +5479,24 @@ struct rampage_attack_t : public rampage_attack_base_t
 
       if ( p()->talents.fury.frenzy->ok() )
         p()->buff.frenzy->trigger();
+
+      if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) && p()->talents.fury.improved_whirlwind.ok() &&
+          p()->cooldown.reap_the_storm_icd->is_ready() && reap_the_storm &&
+          execute_state->n_targets >= p()->talents.slayer.reap_the_storm->effectN( 2 ).base_value() &&
+          rng().roll( p()->talents.slayer.reap_the_storm->effectN( 4 ).percent() ) )
+      {
+        reap_the_storm->execute();
+        p()->cooldown.reap_the_storm_icd->start();
+      }
+    }
+
+    if ( first_attack && sim->dbc->wowv() >= wowv_t( 12, 0, 5 )  &&
+          p()->talents.fury.hack_and_slash.ok() &&
+          p()->cooldown.hack_and_slash_icd->up() )
+    {
+      p()->cooldown.raging_blow->reset( true );
+      p()->cooldown.crushing_blow->reset( true );
+      p()->cooldown.hack_and_slash_icd->start();
     }
   }
 
@@ -5427,14 +5512,25 @@ struct rampage_attack_t : public rampage_attack_base_t
 
 struct rampage_attack_aoe_t : public rampage_attack_base_t
 {
+  action_t* reap_the_storm;
   rampage_attack_aoe_t( util::string_view name, warrior_t* p, const spell_data_t* rampage )
-    : rampage_attack_base_t( name, p, rampage )
+    : rampage_attack_base_t( name, p, rampage ),
+    reap_the_storm( nullptr )
   {
     if ( p->talents.fury.rampage->effectN( 6 ).trigger() == rampage )
       first_attack = true;
 
     aoe = -1;
     reduced_aoe_targets = p->talents.fury.rampage->effectN( 10 ).base_value();
+
+     // Set up reap to trigger off the 4th hit
+    if( p->talents.fury.rampage->effectN( 9 ).trigger()->id() == data().id() &&
+        sim->dbc->wowv() >= wowv_t( 12, 0, 5 )  && p->talents.slayer.reap_the_storm.ok() &&
+        p->talents.fury.improved_whirlwind.ok() )
+    {
+      reap_the_storm = get_action<reap_the_storm_t>( "reap_the_storm_rampage_aoe", p );
+      add_child( reap_the_storm );
+    }
   }
 
   void execute() override
@@ -5449,6 +5545,15 @@ struct rampage_attack_aoe_t : public rampage_attack_base_t
 
       if ( p()->talents.fury.frenzy->ok() )
         p()->buff.frenzy->trigger();
+
+      if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) && p()->talents.fury.improved_whirlwind.ok() &&
+          p()->cooldown.reap_the_storm_icd->is_ready() && reap_the_storm &&
+          execute_state->n_targets >= p()->talents.slayer.reap_the_storm->effectN( 2 ).base_value() &&
+          rng().roll( p()->talents.slayer.reap_the_storm->effectN( 4 ).percent() ) )
+      {
+        reap_the_storm->execute();
+        p()->cooldown.reap_the_storm_icd->start();
+      }
     }
   }
 };
@@ -6193,12 +6298,27 @@ struct victory_rush_t : public warrior_attack_t
 
 struct whirlwind_fury_damage_t : public warrior_attack_t
 {
+  warrior_attack_t* rend;
   whirlwind_fury_damage_t( util::string_view name, warrior_t* p, const spell_data_t* whirlwind )
-    : warrior_attack_t( name, p, whirlwind )
+    : warrior_attack_t( name, p, whirlwind ),
+    rend( nullptr )
   {
     background = true;
     aoe = -1;
     reduced_aoe_targets = 5.0;
+
+    if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) && p->talents.warrior.rend.ok() && p->talents.fury.improved_whirlwind.ok() )
+      rend = new rend_dot_t( p );
+  }
+
+  void impact( action_state_t* state ) override
+  {
+    warrior_attack_t::impact( state );
+
+    if ( p()->talents.warrior.rend.ok() && p()->talents.fury.improved_whirlwind.ok() &&
+          rend && data().id() == p()->spec.whirlwind->effectN( 4 ).trigger()->id() &&
+          sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+      rend->execute_on_target( state->target );
   }
 
   double composite_da_multiplier( const action_state_t* state ) const override
@@ -7476,9 +7596,18 @@ void warrior_t::init_spells()
                                        : effect_mask_t( false ).enable( 5, 6 ) );
 
 
-  register_passive_effect_mask( talents.colossus.practiced_strikes,
+  if ( sim->dbc->wowv() >= wowv_t( 12, 0, 5 ) )
+  {
+    register_passive_effect_mask( talents.colossus.practiced_strikes,
+    specialization() == WARRIOR_ARMS ? effect_mask_t( true ).disable( 3, 4, 5 )
+                                     : effect_mask_t( true ).disable( 1, 2 ) );
+  }
+  else
+  {
+    register_passive_effect_mask( talents.colossus.practiced_strikes,
     specialization() == WARRIOR_ARMS ? effect_mask_t( true ).disable( 2, 3 )
                                      : effect_mask_t( true ).disable( 1 ) );
+  }
 
   register_passive_effect_mask( talents.mountain_thane.avatar_of_the_storm,
     specialization() == WARRIOR_FURY ? effect_mask_t( true ).disable( 4 )
@@ -7600,6 +7729,11 @@ void warrior_t::init_spells()
   cooldown.burst_of_power_icd -> duration = find_spell( 437121 )->internal_cooldown();
   cooldown.slayers_dominance_icd            = get_cooldown( "slayers_dominance" );
   cooldown.slayers_dominance_icd -> duration = find_spell( 444767 )->internal_cooldown();
+  if( sim->dbc->wowv() >= wowv_t( 12, 0, 5) )
+  {
+    cooldown.hack_and_slash_icd               = get_cooldown( "hack_and_slash" );
+    cooldown.hack_and_slash_icd->duration = talents.fury.hack_and_slash->internal_cooldown();
+  }
 }
 
 // warrior_t::init_items ===============================================

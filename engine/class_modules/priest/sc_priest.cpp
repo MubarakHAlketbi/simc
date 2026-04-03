@@ -2803,16 +2803,16 @@ void priest_t::init_special_effects()
     {
       callbacks.register_callback_trigger_function(
           452030, dbc_proc_callback_t::trigger_fn_type::CONDITION,
-          []( const dbc_proc_callback_t*, action_t* a, const action_state_t* ) {
-            return a->data().id() == 585 || a->data().id() == 450215;
+          []( const dbc_proc_callback_t*, const proc_data_t& data, player_t*, action_state_t*, proc_trigger_type_e ) {
+            return data->id() == 585 || data->id() == 450215;
           } );
     }
     if ( specialization() == PRIEST_SHADOW )
     {
       callbacks.register_callback_trigger_function(
           452030, dbc_proc_callback_t::trigger_fn_type::CONDITION,
-          []( const dbc_proc_callback_t*, action_t* a, const action_state_t* ) {
-            return a->data().id() == 8092 || a->data().id() == 450983;
+          []( const dbc_proc_callback_t*, const proc_data_t& data, player_t*, action_state_t*, proc_trigger_type_e ) {
+            return data->id() == 8092 || data->id() == 450983;
           } );
     }
   }
@@ -2820,7 +2820,7 @@ void priest_t::init_special_effects()
   if ( unique_gear::find_special_effect( this, 443393 ) && talents.twist_of_fate.enabled() )
   {
     callbacks.register_callback_execute_function(
-        443393, [ this ]( const dbc_proc_callback_t* cb, action_t*, const action_state_t* s ) {
+        443393, [ this ]( const dbc_proc_callback_t* cb, const spell_data_t*, player_t* t, action_state_t* s ) {
           if ( rng().roll( options.synergistic_brewterializer_tof_chance ) )
           {
             buffs.twist_of_fate->trigger();
@@ -2828,7 +2828,7 @@ void priest_t::init_special_effects()
 
           if ( rng().roll( options.synergistic_brewterializer_barrel_hit_chance ) )
           {
-            cb->proc_action->set_target( cb->target( s ) );
+            cb->proc_action->set_target( cb->get_target( t, s ) );
             auto proc_state    = cb->proc_action->get_state();
             proc_state->target = cb->proc_action->target;
             cb->proc_action->snapshot_state( proc_state, cb->proc_action->amount_type( proc_state ) );
@@ -2841,7 +2841,9 @@ void priest_t::init_special_effects()
   // as casts for Burst of Knowledge
   callbacks.register_callback_trigger_function(
       469925, dbc_proc_callback_t::trigger_fn_type::CONDITION,
-      []( const dbc_proc_callback_t*, action_t* a, const action_state_t* ) { return a->data().id() != 447448; } );
+      []( const dbc_proc_callback_t*, const proc_data_t& data, player_t*, action_state_t*, proc_trigger_type_e ) {
+        return data->id() != 447448;
+      } );
 
   init_special_effects_shadow();
   base_t::init_special_effects();
@@ -3068,11 +3070,13 @@ void priest_t::create_buffs()
                             ->add_invalidate( CACHE_PLAYER_HEAL_MULTIPLIER );
 
   buffs.twist_of_fate_heal_ally_fake = make_buff( this, "twist_of_fate_can_trigger_on_ally_heal" )
-                                           ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT );
+                                           ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT )
+                                           ->set_proc_callbacks( false );
 
   // TODO: Extend functionality to use this.
   buffs.twist_of_fate_heal_self_fake = make_buff( this, "twist_of_fate_can_trigger_on_self_heal" )
-                                           ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT );
+                                           ->set_constant_behavior( buff_constant_behavior::NEVER_CONSTANT )
+                                           ->set_proc_callbacks( false );
 
   buffs.protective_light =
       make_buff( this, "protective_light", talents.protective_light_buff )->set_default_value_from_effect( 1 );

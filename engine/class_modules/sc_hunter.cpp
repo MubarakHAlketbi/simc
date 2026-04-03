@@ -1501,10 +1501,14 @@ public:
   {
     ab::tick( dot );
 
-    if ( p()->rng().roll( dire_beast_chance ) && p()->cooldowns.dire_beast->up() )
+    // 2026-04-03: Dire Beast seems to start it's internal cooldown on any bleed tick if the ICD isn't already running regardless of proc or not.
+    if ( p()->cooldowns.dire_beast->up() && dire_beast_chance > 0 )
     {
-      p()->spawn_dire_beast( p()->talents.dire_beast_summon->duration() );
       p()->cooldowns.dire_beast->start();
+      if ( p()->rng().roll( dire_beast_chance ) )
+      {
+        p()->spawn_dire_beast( p()->talents.dire_beast_summon->duration() );
+      }
     }
   }
 
@@ -2681,10 +2685,14 @@ public:
   {
     ab::tick( dot );
 
-    if ( o()->rng().roll( dire_beast_chance ) && o()->cooldowns.dire_beast->up() )
+    // 2026-04-03: Dire Beast seems to start it's internal cooldown on any bleed tick if the ICD isn't already running regardless of proc or not.
+    if ( o()->cooldowns.dire_beast->up() && dire_beast_chance > 0 )
     {
-      o()->spawn_dire_beast( o()->talents.dire_beast_summon->duration() );
       o()->cooldowns.dire_beast->start();
+      if ( o()->rng().roll( dire_beast_chance ) )
+      {
+        o()->spawn_dire_beast( o()->talents.dire_beast_summon->duration() );
+      }
     }
   }
 
@@ -3503,16 +3511,16 @@ void hunter_main_pet_base_t::init_special_effects()
       {
       }
 
-      void execute( action_t*, action_state_t* s ) override
+      void execute( const spell_data_t*, player_t* t, action_state_t* s ) override
       {
-        if ( s && s->target->is_sleeping() )
+        if ( t && t->is_sleeping() )
           return;
 
         if ( s )
         {
           double amount = s->result_amount * bleed_amount;
           if ( amount > 0 )
-            residual_action::trigger( bleed, s->target, amount );
+            residual_action::trigger( bleed, t, amount );
         }
       }
     };
@@ -8427,12 +8435,12 @@ void hunter_t::init_special_effects()
       {
       }
 
-      void trigger( action_t* a, action_state_t* state ) override
+      void trigger( const proc_data_t& data, player_t* t, action_state_t* s, proc_trigger_type_e type ) override
       {
-        if ( state -> target -> health_percentage() >= threshold )
+        if ( t -> health_percentage() >= threshold )
           return;
 
-        dbc_proc_callback_t::trigger( a, state );
+        dbc_proc_callback_t::trigger( data, t, s, type );
       }
     };
 
@@ -8459,9 +8467,9 @@ void hunter_t::init_special_effects()
       {
       }
 
-      void execute( action_t* a, action_state_t* s ) override
+      void execute( const spell_data_t* spell, player_t* t, action_state_t* s ) override
       {
-        dbc_proc_callback_t::execute( a, s );
+        dbc_proc_callback_t::execute( spell, t, s );
 
         double amount = s -> result_amount * bleed_amount;
         if ( amount > 0 )

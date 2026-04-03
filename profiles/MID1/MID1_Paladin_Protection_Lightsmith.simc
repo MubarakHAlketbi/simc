@@ -61,7 +61,7 @@ actions+=/consecration
 head=luminant_verdicts_unwavering_gaze,id=249961,bonus_id=1808/13575/13575/13575/13575,ilevel=289,gem_id=240983
 neck=eternal_voidsong_chain,id=249368,bonus_id=4786/4800/12806/13668,gem_id=240890
 shoulders=luminant_verdicts_providence_watch,id=249959,bonus_id=13574/13574/13574/13574,ilevel=289
-back=soulhunters_mask,id=251161,bonus_id=4786/12806
+back=shroud_of_the_soulhunter,id=251161,bonus_id=4786/12806
 chest=luminant_verdicts_divine_warplate,id=249964,bonus_id=13575/13575/13575,ilevel=289,enchant_id=7987
 wrists=lights_march_bracers,id=249326,bonus_id=13355/13468/13469,gem_id=240890
 hands=voidclaw_gauntlets,id=151332,bonus_id=13574,ilevel=289

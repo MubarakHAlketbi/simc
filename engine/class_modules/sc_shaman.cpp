@@ -6955,13 +6955,13 @@ struct lava_burst_t : public shaman_spell_t
 
     if ( !is_variant( spell_variant::NORMAL ) )
     {
-      aoe = -1;
       background = true;
       base_execute_time = 0_s;
       cooldown->duration = 0_s;
 
       if ( is_variant( spell_variant::ASCENDANCE ) )
       {
+        aoe = 6;
         auto asc_action = p()->find_action( "ascendance" );
         if ( p()->talent.ascendance->ok() && asc_action )
         {
@@ -6971,7 +6971,13 @@ struct lava_burst_t : public shaman_spell_t
 
       if ( is_variant( spell_variant::PURGING_FLAMES ) )
       {
-        aoe = 5;
+        // If anyone knows which spelldata to use here, that would be great.
+        // Currently there exists a stackable ingame bug to apply this ms gain 
+        // to the base lvb cast AND ALSO with additional stacks decrease ms 
+        // gain further to 1 and 0. Which makes me believe this would need to 
+        // be an ms gain multiplier instead of a fixed value. But this is now 
+        // still better than not lowering ms gain.
+        maelstrom_gain = 2;
         if ( auto vb = p()->find_action( "voltaic_blaze" ) )
         {
           vb->add_child( this );
@@ -10709,7 +10715,7 @@ struct maelstrom_weapon_cb_t : public dbc_proc_callback_t
   { }
 
   // Fully override trigger + execute behavior of the proc
-  void trigger( action_t* /* a */, action_state_t* state ) override
+  void trigger( const proc_data_t&, player_t*, action_state_t* state, proc_trigger_type_e ) override
   {
     auto override_state = shaman->get_mw_proc_state( state->action );
     assert( override_state != mw_proc_state::DEFAULT );
@@ -12775,10 +12781,11 @@ void shaman_t::init_special_effects()
 {
   callbacks.register_callback_trigger_function(
       452030, dbc_proc_callback_t::trigger_fn_type::CONDITION,
-      [ id = 51505U ]( const dbc_proc_callback_t*, action_t* a, action_state_t*) {
-        if ( a->data().id() == id )
+      [ id = 51505U ]( const dbc_proc_callback_t*, const proc_data_t& data, player_t*, action_state_t* s,
+                       proc_trigger_type_e ) {
+        if ( data->id() == id )
         {
-          lava_burst_t* lvb = debug_cast<lava_burst_t*>(a);
+          lava_burst_t* lvb = debug_cast<lava_burst_t*>( s->action );
           return lvb->is_variant( spell_variant::NORMAL );
         }
         return false;
