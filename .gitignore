@@ -144,6 +144,7 @@ Release/
 # ignore common python virtual environments
 env/
 .env/
+.env
 
 # Python bytecode
 __pycache__/
