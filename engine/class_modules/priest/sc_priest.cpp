@@ -1256,7 +1256,7 @@ public:
 
       if ( priest().talents.shared.shadowfiend.enabled() )
       {
-        double chance = priest().talents.shared.shadowfiend->effectN( 3 ).percent();
+        double chance = priest().talents.shared.shadowfiend->effectN( 2 ).percent();
 
         if ( cast_state( s )->chain_number > 0 )
         {
